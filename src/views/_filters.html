@@ -1,0 +1,519 @@
+<div class="slds-panel slds-grid">
+    <div class="slds-form--stacked slds-grow slds-scrollable--y slds-grid slds-grid--vertical">
+        <div class="slds-filters">
+            <div class="slds-filters__header slds-grid slds-has-divider--bottom-space">
+                <h4 class="slds-align-middle slds-text-heading--small">Filters</h4>
+                <button class="slds-button slds-col--bump-left slds-button--icon slds-button--icon-small" title="Close Filter Panel" id="filterbutton">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#forward"></use>
+                </svg> <span class="slds-assistive-text">Close Filter Panel</span> </button>
+            </div>
+            <div class="slds-filters__body" id="filter-request">
+                <!-- section -->
+                <div class="slds-section slds-is-open slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>REQUEST</button>
+                        <span class="slds-badge slds-float--right slds-m-left--medium">2 selected</span>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-101"  />
+                                <label class="slds-checkbox__label" for="checkbox-101">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">HTTP</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- CHILD ELEMENTS -->
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-102" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-102">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SF_PAGE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-103"  />
+                                <label class="slds-checkbox__label" for="checkbox-103">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">BMP_PAGE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-104"  />
+                                <label class="slds-checkbox__label" for="checkbox-104">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">FILE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-105" checked=""  />
+                                <label class="slds-checkbox__label" for="checkbox-105">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">ONREQUEST</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-106"  />
+                                <label class="slds-checkbox__label" for="checkbox-106">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_SHOP</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-107"  />
+                                <label class="slds-checkbox__label" for="checkbox-107">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_DATA</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-108"  />
+                                <label class="slds-checkbox__label" for="checkbox-108">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_META</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-109"  />
+                                <label class="slds-checkbox__label" for="checkbox-109">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_BATCH</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /CHILD ELEMENTS END -->
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-200"  />
+                                <label class="slds-checkbox__label" for="checkbox-200">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">EVENT</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /section -->
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>JOB</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-101"  />
+                                <label class="slds-checkbox__label" for="checkbox-101">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">JOB</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->                
+                
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>VIEW</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-301"  />
+                                <label class="slds-checkbox__label" for="checkbox-301">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">ISML</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-302"  />
+                                <label class="slds-checkbox__label" for="checkbox-302">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">VELOCITY</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->                
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>PIPELINE</button>
+                        <span class="slds-badge slds-float--right slds-m-left--medium">1 selected</span>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-401" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-401">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">PIPELINE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->               
+
+                               
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>SCRIPT</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-501"  />
+                                <label class="slds-checkbox__label" for="checkbox-501">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SCRIPT_EXPRESSION</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-502"  />
+                                <label class="slds-checkbox__label" for="checkbox-502">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SCRIPT_CONTROLLER</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-503"  />
+                                <label class="slds-checkbox__label" for="checkbox-503">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SCRIPT_LINE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-504"  />
+                                <label class="slds-checkbox__label" for="checkbox-504">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SCRIPT_FUNCTION</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /section -->
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>OBJECT_PATH</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-601"  />
+                                <label class="slds-checkbox__label" for="checkbox-601">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">OBJECT_PATH</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->        
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>SERVICE</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-701"  />
+                                <label class="slds-checkbox__label" for="checkbox-701">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SERVICE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->        
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>METHOD</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-801"  />
+                                <label class="slds-checkbox__label" for="checkbox-801">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">METHOD</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->        
+
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-border--bottom slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>RESOURCE</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-901"  />
+                                <label class="slds-checkbox__label" for="checkbox-901">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">SQL</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- CHILD ELEMENTS -->
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-902"  />
+                                <label class="slds-checkbox__label" for="checkbox-902">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">DML</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-903"  />
+                                <label class="slds-checkbox__label" for="checkbox-903">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">DDL</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-904"  />
+                                <label class="slds-checkbox__label" for="checkbox-904">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">TCL</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-905"  />
+                                <label class="slds-checkbox__label" for="checkbox-905">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">STORED_PROCEDURE</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-906"  />
+                                <label class="slds-checkbox__label" for="checkbox-906">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_SHOP</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-907"  />
+                                <label class="slds-checkbox__label" for="checkbox-907">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_DATA</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-908"  />
+                                <label class="slds-checkbox__label" for="checkbox-908">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_META</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-p-left--large">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-909"  />
+                                <label class="slds-checkbox__label" for="checkbox-909">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">REST_BATCH</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /CHILD ELEMENTS END -->
+                    </div>
+                </div>
+                <!-- /section -->
+
+
+
+
+                <!-- section -->
+                <div class="slds-section slds-is-closed slds-p-bottom--small">
+                    <h3 class="slds-section__title slds-color--weak">
+                        <button class="slds-button">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon--left" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                        </svg>RPC</button>
+                    </h3>
+                    <div class="slds-section__content">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-1001"  />
+                                <label class="slds-checkbox__label" for="checkbox-1001">
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label">RPC</span>
+                                </label>
+                                </span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- /section -->        
+
+
+
+
+                <!--ol class="slds-list--vertical slds-list--vertical-space">
+                    <li class="slds-item slds-hint-parent">
+                        <div class="slds-filters__item slds-grid slds-grid--vertical-align-center">
+                            <a href="javascript:void(0);" class="slds-grow slds-has-blur-focus">
+                                <p class="slds-text-body--small">Clear All Filters</p>
+                            </a>
+                        </div>
+                    </li>
+                </ol-->
+            </div>
+            <!--div class="slds-filters__footer slds-grid slds-shrink-none"><a href="javascript:void(0);">Add All Filters</a><a href="javascript:void(0);" class="slds-col--bump-left">Reset All Filters</a></div-->
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    var checkbox = document.getElementById('checkbox-101');checkbox.indeterminate = true;
+</script>
+

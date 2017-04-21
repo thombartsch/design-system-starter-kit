@@ -1,0 +1,244 @@
+{% extends "_template.html" %}
+{% block content %}
+
+<!--
+  Boilerplate for the Dreamforce 2016 workshop:
+  "Rapid prototyping with the Design System Starter Kit and UI Kit"
+  http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/
+-->
+
+<!-- PAGE HEADER: https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home -->
+<div class="slds-page-header" role="banner">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-user slds-icon--large">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-text-title--caps slds-line-height--reset">Donation Match FY 2017</p>
+          <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="(RED) at Dreamforce">(RED) at Dreamforce</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /PAGE HEADER -->
+
+
+<!-- WIZARD: https://www.lightningdesignsystem.com/components/process/#flavor-wizard -->
+<div class="slds-wizard slds-m-around--large" role="navigation">
+  <ol class="slds-wizard__list">
+    <li class="slds-wizard__item slds-is-active">
+      <a href="javascript:void(0);" class="slds-wizard__link">
+        <span class="slds-wizard__marker"></span>
+        <span class="slds-wizard__label slds-text-title--caps slds-truncate">Created</span>
+      </a>
+    </li>
+    <li class="slds-wizard__item slds-is-active">
+      <a href="javascript:void(0);" class="slds-wizard__link">
+        <span class="slds-wizard__marker"></span>
+        <span class="slds-wizard__label slds-text-title--caps slds-truncate">Verified</span>
+      </a>
+    </li>
+    <li class="slds-wizard__item slds-is-active">
+      <a href="javascript:void(0);" class="slds-wizard__link">
+        <span class="slds-wizard__marker"></span>
+        <span class="slds-wizard__label slds-text-title--caps slds-truncate">Pledged</span>
+      </a>
+    </li>
+    <li class="slds-wizard__item">
+      <a href="javascript:void(0);" class="slds-wizard__link">
+        <span class="slds-wizard__marker"></span>
+        <span class="slds-wizard__label slds-text-title--caps slds-truncate">Approved</span>
+      </a>
+    </li>
+    <li class="slds-wizard__item">
+      <a href="javascript:void(0);" class="slds-wizard__link">
+        <span class="slds-wizard__marker"></span>
+        <span class="slds-wizard__label slds-text-title--caps slds-truncate">Disbursed</span>
+      </a>
+    </li>
+  </ol>
+  <span class="slds-wizard__progress">
+    <span class="slds-wizard__progress-bar" style="width:50%;"></span>
+  </span>
+</div>
+<!-- /WIZARD -->
+
+<!-- COLUMNS - already populated for you: https://www.lightningdesignsystem.com/components/utilities/grid/#flavor-manual-sizing -->
+<div class="slds-grid">
+
+  <!-- COLUMN #1 -->
+  <div class="slds-col slds-size--3-of-4 slds-col--padded">
+
+    <!-- TABS: https://www.lightningdesignsystem.com/components/tabs/#flavor-default -->
+    <div class="slds-tabs--default">
+      <ul class="slds-tabs--default__nav" role="tablist">
+        <li class="slds-tabs--default__item slds-text-title--caps slds-active" title="Detail" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Detail</a></li>
+        <li class="slds-tabs--default__item slds-text-title--caps" title="Collaboration"
+          role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Collaboration</a></li>
+      </ul>
+      <div id="tab-default-1" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+
+        <img src="/assets/workshop-salesforce-red.jpg" alt="" class="slds-size--2-of-3 slds-m-bottom--large" />
+
+        <!-- DESCRIPTION LIST: https://www.lightningdesignsystem.com/components/utilities/lists/#flavor-description-list -->
+        <div class="slds-grid">
+          <dl class="slds-size--1-of-2">
+            <dt class="slds-text-color--weak">Organization</dt>
+            <dd class="slds-m-bottom--small">(RED) at Dreamforce</dd>
+            <dt class="slds-text-color--weak">Donation amount</dt>
+            <dd class="slds-m-bottom--small">$500</dd>
+            <dt class="slds-text-color--weak">Donation balance</dt>
+            <dd class="slds-m-bottom--small">Donation Match FY 2017</dd>
+            <dt class="slds-text-color--weak">Check number</dt>
+            <dd class="slds-m-bottom--small">1466</dd>
+          </dl>
+          <dl class="slds-size--1-of-2">
+            <dt class="slds-text-color--weak">Date of donation</dt>
+            <dd class="slds-m-bottom--small">October 10, 2016</dd>
+            <dt class="slds-text-color--weak">Method</dt>
+            <dd class="slds-m-bottom--small">Credit Card</dd>
+            <dt class="slds-text-color--weak">Match Amount</dt>
+            <dd class="slds-m-bottom--small">$500</dd>
+            <dt class="slds-text-color--weak">Reference Number</dt>
+            <dd class="slds-m-bottom--small">FD-54048</dd>
+          </dl>
+        </div>
+        <!-- /DESCRIPTION LIST -->
+
+      </div>
+      <div id="tab-default-2" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
+        <p>TODO: add some content here!</p>
+      </div>
+    </div>
+    <!-- /TABS -->
+
+  </div>
+  <!-- /COLUMN #1 -->
+
+  <!-- COLUMN #2 -->
+  <div class="slds-col slds-size--1-of-4 slds-col--padded">
+
+    <!-- NARROW CARD: https://www.lightningdesignsystem.com/components/cards/#flavor-related-list-narrow -->
+    <article class="slds-card slds-card--narrow">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media--center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+            </svg>
+          </div>
+          <div class="slds-media__body slds-truncate">
+            <h2>
+              <a href="javascript:void(0);" class="slds-text-link--reset">
+                <span class="slds-text-heading--small">Contacts (3)</span>
+              </a>
+            </h2>
+          </div>
+        </header>
+        <div class="slds-no-flex">
+          <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true">
+            <svg aria-hidden="true" class="slds-button__icon">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+            </svg>
+            <span class="slds-assistive-text">More Options</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-card__body">
+        <div class="slds-card__body--inner">
+          <div class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <a href="javascript:void(0);" class="slds-avatar slds-avatar--medium">
+                <img src="/assets/images/avatar2.jpg" alt="Lei Chan" />
+              </a>
+            </div>
+            <div class="slds-media__body">
+              <h3 class="slds-truncate" title="Lei Chan"><a href="javascript:void(0);">Lei Chan</a> <span class="slds-badge">Primary</span></h3>
+              <div class="slds-tile__detail slds-text-body--small">
+                <dl class="slds-dl--horizontal">
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Role">Role:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="Donation Manager">Donation Manager</span>
+                  </dd>
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Title">Title:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="President, Operations">President, Operations</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <a href="javascript:void(0);" class="slds-avatar slds-avatar--medium">
+                <img src="/assets/images/avatar2.jpg" alt="Gwen Jones" />
+              </a>
+            </div>
+            <div class="slds-media__body">
+              <h3 class="slds-truncate" title="Gwen Jones"><a href="javascript:void(0);">Gwen Jones</a></h3>
+              <div class="slds-tile__detail slds-text-body--small">
+                <dl class="slds-dl--horizontal">
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Role">Role:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="Executive Buyer">Executive Buyer</span>
+                  </dd>
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Title">Title:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="President, Operations">President, Operations</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="slds-tile slds-media">
+            <div class="slds-media__figure">
+              <a href="javascript:void(0);" class="slds-avatar slds-avatar--medium">
+                <img src="/assets/images/avatar1.jpg" alt="Pete Schaffer" />
+              </a>
+            </div>
+            <div class="slds-media__body">
+              <h3 class="slds-truncate" title="Pete Schaffer"><a href="javascript:void(0);">Pete Schaffer</a></h3>
+              <div class="slds-tile__detail slds-text-body--small">
+                <dl class="slds-dl--horizontal">
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Role">Role:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="Marketing Contact">Marketing Contact</span>
+                  </dd>
+                  <dt class="slds-dl--horizontal__label">
+                    <span class="slds-truncate" title="Title">Title:</span>
+                  </dt>
+                  <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                    <span class="slds-truncate" title="Director, Marketing">Director, Marketing</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-card__footer"><a href="javascript:void(0);">View All <span class="slds-assistive-text">entity type</span></a></div>
+    </article>
+    <!-- /NARROW CARD -->
+
+  </div>
+  <!-- /COLUMN #2 -->
+
+</div>
+<!-- /COLUMNS -->
+
+{% endblock %}
