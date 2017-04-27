@@ -370,6 +370,128 @@
   </div>
 </section>
 
+<div class="slds-hide" id="edit-table-entry">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal" title="Close">
+                    <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading--medium slds-hyphenate">Edit Hostname Entry</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+                <div class="slds-form slds-form--compound">
+                    <fieldset class="slds-form-element">
+                        <div class="slds-form-element__group">
+                            <div class="slds-form-element__row">
+                                <div class="slds-form-element slds-size--1-of-2">
+                                    <label class="slds-form-element__label" for="input-01">Hostname</label>
+                                    <input type="text" id="input-01" class="slds-input" value="adidas.com">
+                                </div>
+                                <div class="slds-form-element slds-size--1-of-2">
+                                    <label class="slds-form-element__label" for="input-02">Default Path</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-select_container">
+                                            <select class="slds-select" id="select-02">
+                                                <option selected="selected">Site 1 / en_US</option>
+                                                <option>Site 2 / en_EN</option>
+                                                <option>Site 1 / de_DE</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row">
+                                <div class="slds-form-element slds-size--1-of-2">
+                                    <label class="slds-form-element__label" for="input-03">Map</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-select_container">
+                                            <select class="slds-select" id="select-03">
+                                                <option>American Stores</option>
+                                                <option selected="selected">European Map</option>
+                                                <option>Asian Market</option>
+                                                <option>Promotions</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-size--1-of-2">
+                                    <label class="slds-form-element__label" for="input-03">Redirect</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-select_container">
+                                            <select class="slds-select" id="select-03">
+                                                <option>None</option>
+                                                <option>www.adidas.com / en_US</option>
+                                                <option selected="selected">www.adidas.de / en_EN</option>
+                                                <option>www.adidas.ch / de_DE</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="slds-form-element">
+                        <div class="slds-form-element__group">
+                            <div class="slds-form-element__row">
+                                <div class="slds-form-element slds-size--1-of-1">
+                                    <label class="slds-form-element__label" for="combobox-unique-id">Tags</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-combobox_container slds-has-object-switcher">
+                                            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon--right">
+                                                    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Tags">
+                                                    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon--right" title="Description of icon when needed">
+            <svg class="slds-icon slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+            </svg>
+            <span class="slds-assistive-text">Description of icon</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul id="listbox-selections-unique-id" class="slds-listbox slds-listbox--inline slds-p-top--xxx-small" role="listbox" aria-orientation="horizontal" aria-label="Selected Options:">
+                                            <li role="presentation" class="slds-listbox__item">
+                                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+              <span class="slds-pill__label" title="Acme">Europe</span>
+                                                <span class="slds-icon_container slds-pill__remove" title="Remove">
+                      <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Press delete or backspace to remove</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                            <li role="presentation" class="slds-listbox__item">
+                                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+              <span class="slds-pill__label" title="Acme">Sports</span>
+                                                <span class="slds-icon_container slds-pill__remove" title="Remove">
+                      <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Press delete or backspace to remove</span>
+                                                </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button--neutral js-close-modal">Cancel</button>
+                <button class="slds-button slds-button--brand js-close-modal">Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop--open"></div>
+</div>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="/scripts/tether.js"></script>
   <script src="/scripts/app.js"></script>
@@ -398,6 +520,11 @@
                     pin: true
                 }]
             });
+        });
+
+
+        $('.trigger-edit, .js-close-modal').click(function() {
+            $('#edit-table-entry').toggleClass('slds-hide');
         });
 
     });
