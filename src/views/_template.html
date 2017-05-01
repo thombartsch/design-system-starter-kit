@@ -228,14 +228,27 @@
         });
 
         $('.close_modal').click(function(){
-            //alert("The paragraph was clicked.");
             $('#data_modal').toggleClass('slds-hide');
             $('#data_modal').toggleClass('slds-show');
         });
 
 
+        $('.toggle-tooltip').click(function(){
+            $('#tooltip-content').toggleClass('slds-hide');
+            $('#tooltip-content').toggleClass('slds-show');
+        });
 
 
+
+/*
+        $('.toggle-tooltip').click(function){
+            alert("The paragraph was clicked.");
+            //$('.tooltip-content').toggleClass('slds-hide');
+            //$('.tooltip-content').toggleClass('slds-show');
+        });
+*/        
+
+/*
         //connect popover to related buttons
         new Tether({
             element: '#filter-request-popover',
@@ -247,6 +260,22 @@
                 attachment: 'together'
             }]
         });
+*/
+
+/*
+        //title_tootltip
+        new Tether({
+            element: '#title_tootltip-popover',
+            target: '#title_tootltip',
+            attachment: 'top left',
+            targetAttachment: 'top right',
+            constraints: [{
+                to: 'window',
+                attachment: 'together'
+            }]
+        });
+*/
+
     </script>
 
     <style>

@@ -9,16 +9,25 @@
   <div class="slds-grid">
     <div class="slds-col slds-has-flexi-truncate">
       <div class="slds-media slds-no-space slds-grow">
-        <div class="slds-media__figure">
+        <!-- div class="slds-media__figure">
           <span class="slds-icon_container slds-icon-standard-case">
             <svg class="slds-icon" aria-hidden="true">
               <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
             </svg>
           </span>
-        </div>
+        </div -->
         <div class="slds-media__body">
           <p class="slds-text-title--caps slds-line-height--reset">Code Profiler</p>
           <h1 class="slds-page-header__title slds-p-right--x-small">
+              <button class="slds-button slds-button slds-button--icon toggle-tooltip" aria-describedby="help" title="Help">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                </svg>
+                <span class="slds-assistive-text">Help</span>
+              </button>
+              <div class="slds-popover slds-popover--tooltip slds-nubbin--top-left slds-hide tooltip-content" role="tooltip" id="tooltip-content" style="position:absolute;top:60px;left:8px;">
+                <div class="slds-popover__body">Running in production mode will use sampling to trace every 20th request and provide aggregated runtime data only.</div>
+              </div>              
 
             <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="true">
               <button class="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
