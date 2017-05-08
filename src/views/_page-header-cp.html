@@ -19,20 +19,11 @@
         <div class="slds-media__body">
           <p class="slds-text-title--caps slds-line-height--reset">Code Profiler</p>
           <h1 class="slds-page-header__title slds-p-right--x-small">
-              <button class="slds-button slds-button slds-button--icon toggle-tooltip" aria-describedby="help" title="Help">
-                <svg class="slds-button__icon" aria-hidden="true">
-                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                </svg>
-                <span class="slds-assistive-text">Help</span>
-              </button>
-              <div class="slds-popover slds-popover--tooltip slds-nubbin--top-left slds-hide tooltip-content" role="tooltip" id="tooltip-content" style="position:absolute;top:60px;left:8px;">
-                <div class="slds-popover__body">Running in production mode will use sampling to trace every 20th request and provide aggregated runtime data only.</div>
-              </div>              
 
             <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="true">
               <button class="slds-button slds-button--reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
                 <span class="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
-                  <span class="slds-truncate">Production Mode</span>
+                  <span class="slds-truncate">Development Mode</span>
                   <svg class="slds-button__icon slds-button__icon--right slds-no-flex" aria-hidden="true">
                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
@@ -45,7 +36,7 @@
                         <span class="slds-truncate">
                             <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-                            </svg>Production Mode</span>
+                            </svg>Development Mode</span>
                         </a>
                     </li>
                     <li class="slds-dropdown__item  slds-has-divider--top-space" role="presentation">
@@ -53,7 +44,7 @@
                             <span class="slds-truncate">
                             <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-                            </svg>Development Mode</span>
+                            </svg>Production Mode</span>
                         </a>
                     </li>                    
                   </ul>
@@ -71,6 +62,22 @@
       <p class="slds-text-body--small">3 Filter(s) applied. • <a href="">Clear All</a>
     </div>
     <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+
+
+  <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small" aria-expanded="false">
+      <button class="slds-button slds-button--icon-more toggle-tooltip" aria-describedby="help" title="Help">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+        </svg>
+        <span class="slds-assistive-text">Help</span>
+      </button>
+</div>      
+      <div class="slds-popover slds-popover--tooltip slds-nubbin--top-right slds-hide tooltip-content" role="tooltip" id="tooltip-content" style="position:absolute;top:100px;right:140px;">
+        <div class="slds-popover__body">Running in production mode will use sampling to trace every 20th request and provide aggregated runtime data only.</div>
+      </div>              
+
+
+
       <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small" aria-expanded="false">
         <button class="slds-button slds-button--icon-more" aria-haspopup="true" title="Settings">
           <svg class="slds-button__icon" aria-hidden="true">
