@@ -14,38 +14,34 @@
                                 <nav role="navigation" aria-label="Breadcrumbs">
                                     <ol class="slds-breadcrumb slds-list--horizontal">
                                         <li class="slds-breadcrumb__item slds-text-title--caps"><a href="javascript:void(0);">Admin</a></li>
-                                        <li class="slds-breadcrumb__item slds-text-title--caps"><a href="javascript:void(0);">Site URLs</a></li>
+                                        <li class="slds-breadcrumb__item slds-text-title--caps"><a href="javascript:void(0);">Search</a></li>
                                     </ol>
                                 </nav>
                             </nav>
-                            <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Hostnames">Hostnames</h1></div>
+                            <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Dictionary">Dictionary</h1></div>
                     </div>
                 </div>
             </div>
             <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
-                <div class="slds-button-group" role="group">
-                    <button class="slds-button slds-button--neutral trigger-add">Add New</button>
-                    <div class="slds-button--last">
-                        <button class="slds-button slds-button--icon-border-filled">
-                            <svg aria-hidden="true" class="slds-button__icon" viewBox="0 0 24 24" name="down">
-                                <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
-                            </svg><span class="slds-assistive-text">More Actions</span></button>
-                    </div>
-                </div>
+                    <button class="slds-button slds-button--neutral trigger-add">New</button>
             </div>
         </div>
         <div class="slds-grid">
             <div class="slds-col slds-align-bottom">
-                <p class="slds-page-header__info">10 items • sorted by name</p>
+                <p class="slds-page-header__info">125 items • sorted by date</p>
             </div>
+
             <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
-                <div class="slds-grid">
-                    <button class="slds-button slds-button--icon-border slds-m-left--xx-small">
-                        <svg class="slds-button__icon" aria-hidden="true">
+
+                    <div class="slds-form-element__control">
+                        <div class="slds-input-has-icon slds-input-has-icon--right">
+                        <svg aria-hidden="true" class="slds-input__icon">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
                         </svg>
-                        <span class="slds-assistive-text">Search</span>
-                    </button>
+                        <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Dictionary" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+                        </div>
+                    </div>
+
                     <div class="slds-button-group" role="group">
                         <button class="slds-button slds-button--icon-border slds-m-left--xx-small">
                             <svg class="slds-button__icon" aria-hidden="true">
@@ -67,9 +63,10 @@
                                 </svg>
                             </button>
                         </div>
-                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </div>

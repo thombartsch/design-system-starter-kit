@@ -18,23 +18,8 @@
 {% include "_page-header.html" %}
 
 <div class="page-content">
-<div class="sidebar">
-    <nav class="slds-nav-vertical" aria-label="Sub page">
-        <div class="slds-nav-vertical__section">
-            <ul>
-                <li class="slds-nav-vertical__item slds-is-active"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header" aria-current="page">Hostnames</a></li>
-                <li class="slds-nav-vertical__item"><a href="sites.html" class="slds-nav-vertical__action" aria-describedby="entity-header">Sites</a></li>
-                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Default Paths</a></li>
-                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Redirects</a></li>
-                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Site Paths</a></li>
-                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">User Agent Rules</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
 <div>
-<table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout" role="grid">
+<table class="slds-table slds-table--bordered slds-table--striped slds-table--resizable-cols slds-table--fixed-layout" role="grid">
   <thead>
     <tr class="slds-line-height--reset">
       <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
@@ -51,7 +36,7 @@
       <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Name">Development</span>
+          <span class="slds-truncate" title="Name">Value</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -70,7 +55,7 @@
       <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Account Name">Staging</span>
+          <span class="slds-truncate" title="Account Name">Type</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -89,7 +74,7 @@
       <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Close Date">Production</span>
+          <span class="slds-truncate" title="Close Date">Locale</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -105,82 +90,6 @@
           </span>
         </div>
       </th>
-      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
-        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
-          <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Stage">Default Path</span>
-          <div class="slds-icon_container">
-            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-            </svg>
-          </div>
-          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-        </a>
-        <div class="slds-resizable">
-          <label for="cell-resize-handle-570" class="slds-assistive-text">Stage column width</label>
-          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-570" tabindex="0" />
-          <span class="slds-resizable__handle">
-            <span class="slds-resizable__divider"></span>
-          </span>
-        </div>
-      </th>
-      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
-        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
-          <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Confidence">Map</span>
-          <div class="slds-icon_container">
-            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-            </svg>
-          </div>
-          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-        </a>
-        <div class="slds-resizable">
-          <label for="cell-resize-handle-571" class="slds-assistive-text">Confidence column width</label>
-          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-571" tabindex="0" />
-          <span class="slds-resizable__handle">
-            <span class="slds-resizable__divider"></span>
-          </span>
-        </div>
-      </th>
-      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
-        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
-          <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Amount">Redirect</span>
-          <div class="slds-icon_container">
-            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-            </svg>
-          </div>
-          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-        </a>
-        <div class="slds-resizable">
-          <label for="cell-resize-handle-572" class="slds-assistive-text">Amount column width</label>
-          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-572" tabindex="0" />
-          <span class="slds-resizable__handle">
-            <span class="slds-resizable__divider"></span>
-          </span>
-        </div>
-      </th>
-      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
-        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
-          <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Contact">Tags</span>
-          <div class="slds-icon_container">
-            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-            </svg>
-          </div>
-          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-        </a>
-        <div class="slds-resizable">
-          <label for="cell-resize-handle-573" class="slds-assistive-text">Contact column width</label>
-          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-573" tabindex="0" />
-          <span class="slds-resizable__handle">
-            <span class="slds-resizable__divider"></span>
-          </span>
-        </div>
-      </th>
       <th scope="col" style="width:3.25rem;">
         <div class="slds-th__action">
           <span class="slds-assistive-text">Actions</span>
@@ -189,6 +98,8 @@
     </tr>
   </thead>
   <tbody>
+
+{% for dictionary in dictionaries %}
 <tr class="slds-hint-parent">
     <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
         <span class="slds-checkbox">
@@ -199,26 +110,14 @@
         </label>
         </span>
     </td>
-    <th scope="row">
-        <div class="slds-truncate" title="test.adidas.de"></div>
-    </th>
-    <td role="gridcell">
-        <div class="slds-truncate" title="staging.adidas.de"></div>
+    <td scope="row">
+        <div class="slds-truncate" title="test.adidas.de">{{ dictionary.value }}</div>
     </td>
     <td role="gridcell">
-        <div class="slds-truncate" title="adidas.com">adidas.com</div>
+        <div class="slds-truncate" title="staging.adidas.de">{{ dictionary.type }}</div>
     </td>
     <td role="gridcell">
-        <div class="slds-truncate" title="Site 2 / en_EN"><a href="javascript:void(0);">Site 1 / en_US</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Map 3"><a href="javascript:void(0);">Map 2</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="www.adidas.com"></div>
-    </td>
-    <td role="gridcell">
-        <span class="slds-badge">Sports</span>
+        <div class="slds-truncate" title="Site 2 / en_EN">{{ dictionary.locale }}</div>
     </td>
     <td role="gridcell" style="width:3.25rem;">
         <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
@@ -236,11 +135,6 @@
                         </a>
                     </li>
                     <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
-                            <span class="slds-truncate" title="Menu Item One">Copy</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
                         <a href="javascript:void(0);" role="menuitem" tabindex="-1">
                             <span class="slds-truncate" title="Menu Item Two">Delete</span>
                         </a>
@@ -250,130 +144,15 @@
         </div>
     </td>
 </tr>
+ {% endfor %}
 
-<tr class="slds-hint-parent">
-    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
-        <span class="slds-checkbox">
-          <input type="checkbox" name="options" id="checkbox-173" />
-          <label class="slds-checkbox__label" for="checkbox-173">
-            <span class="slds-checkbox--faux"></span>
-        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
-        </label>
-        </span>
-    </td>
-    <th scope="row">
-        <div class="slds-truncate" title="test.adidas.de">dev.adidas.de</div>
-    </th>
-    <td role="gridcell">
-        <div class="slds-truncate" title="staging.adidas.de">staging.adidas.de</div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="adidas.de">adidas.de</div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Site 2 / en_EN"><a href="javascript:void(0);">Site 2 / de_DE</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Map 3"><a href="javascript:void(0);">Map 3</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="www.adidas.com"><a href="javascript:void(0);">www.adidas.com</a></div>
-    </td>
-    <td role="gridcell">
-        <span class="slds-badge">Adidas</span>
-    </td>
-    <td role="gridcell" style="width:3.25rem;">
-        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                <svg class="slds-button__icon" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                </svg>
-                <span class="slds-assistive-text">Show More</span>
-            </button>
-            <div class="slds-dropdown slds-dropdown--right">
-                <ul class="slds-dropdown__list" role="menu">
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
-                            <span class="slds-truncate" title="Menu Item One">Edit</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
-                            <span class="slds-truncate" title="Menu Item One">Copy</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </td>
-</tr>
+ <tr>
+   <td  role="gridcell" colspan="5">Text</td>
+ </tr>
 
-<tr class="slds-hint-parent">
-    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
-        <span class="slds-checkbox">
-          <input type="checkbox" name="options" id="checkbox-172" />
-          <label class="slds-checkbox__label" for="checkbox-172">
-            <span class="slds-checkbox--faux"></span>
-        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
-        </label>
-        </span>
-    </td>
-    <th scope="row">
-        <div class="slds-truncate" title="test.adidas.de">dev.adidas.de</div>
-    </th>
-    <td role="gridcell">
-        <div class="slds-truncate" title="staging.adidas.de">staging.adidas.de</div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="adidas.de">adidas.de</div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Site 2 / en_EN"><a href="javascript:void(0);">Site 2 / en_EN</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Map 3"><a href="javascript:void(0);">Map 3</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="www.adidas.com"><a href="javascript:void(0);">www.adidas.com</a></div>
-    </td>
-    <td role="gridcell">
-        <span class="slds-badge">Adidas</span>
-    </td>
-    <td role="gridcell" style="width:3.25rem;">
-        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                <svg class="slds-button__icon" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                </svg>
-                <span class="slds-assistive-text">Show More</span>
-            </button>
-            <div class="slds-dropdown slds-dropdown--right">
-                <ul class="slds-dropdown__list" role="menu">
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
-                            <span class="slds-truncate" title="Menu Item One">Edit</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0">
-                            <span class="slds-truncate" title="Menu Item One">Copy</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </td>
-</tr>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 
   </tbody>
 </table>
