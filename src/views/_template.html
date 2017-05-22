@@ -372,125 +372,63 @@
 
 <!-- Start Edit Entry -->
 <div class="slds-hide" id="edit-table-entry">
-    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
             <header class="slds-modal__header">
-                <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal" title="Close">
+                <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
                     <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
                     </svg>
                     <span class="slds-assistive-text">Close</span>
                 </button>
-                <h2 id="modal-heading-01" class="slds-text-heading--medium slds-hyphenate">Edit Hostname Entry</h2>
+                <h2 id="header43" class="slds-text-heading--medium">Edit Dictionary Entry</h2>
             </header>
             <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
-                <div class="slds-form slds-form--compound">
-                    <fieldset class="slds-form-element">
-                        <div class="slds-form-element__group">
-                            <div class="slds-form-element__row">
-                                <div class="slds-form-element slds-size--1-of-2">
-                                    <label class="slds-form-element__label" for="input-01">Hostname</label>
-                                    <input type="text" id="input-01" class="slds-input" value="adidas.com">
-                                </div>
-                                <div class="slds-form-element slds-size--1-of-2">
-                                    <label class="slds-form-element__label" for="input-02">Default Path</label>
-                                      <div class="slds-form-element__icon">
-                                        <button aria-describedby="help" class="slds-button slds-button--icon">
-                                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Help</span>
-                                        </button>
-                                      </div>
-                                    <div class="slds-form-element__control">
-                                        <div class="slds-select_container">
-                                            <select class="slds-select" id="select-02">
-                                                <option selected="selected">Site 1 / en_US</option>
-                                                <option>Site 2 / en_EN</option>
-                                                <option>Site 1 / de_DE</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slds-form-element__row">
-                                <div class="slds-form-element slds-size--1-of-2">
-                                    <label class="slds-form-element__label" for="input-03">Map</label>
-                                    <div class="slds-form-element__control">
-                                        <div class="slds-select_container">
-                                            <select class="slds-select" id="select-03">
-                                                <option>American Stores</option>
-                                                <option selected="selected">European Map</option>
-                                                <option>Asian Market</option>
-                                                <option>Promotions</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slds-form-element slds-size--1-of-2">
-                                    <label class="slds-form-element__label" for="input-03">Redirect</label>
-                                    <div class="slds-form-element__control">
-                                        <div class="slds-select_container">
-                                            <select class="slds-select" id="select-03">
-                                                <option>None</option>
-                                                <option>www.adidas.com / en_US</option>
-                                                <option selected="selected">www.adidas.de / en_EN</option>
-                                                <option>www.adidas.ch / de_DE</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="slds-form slds-form_stacked">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-01">Type</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="select-01">
+                                    <option>Stop Word</option>
+                                    <option selected="selected">Synonym</option>
+                                    <option>Compound Word</option>
+                                    <option>Hypernym Word</option>
+                                    <option>Common Phrase Word</option>
+                                </select>
                             </div>
                         </div>
-                    </fieldset>
-                    <fieldset class="slds-form-element">
-                        <div class="slds-form-element__group">
-                            <div class="slds-form-element__row">
-                                <div class="slds-form-element slds-size--1-of-1">
-                                    <label class="slds-form-element__label" for="combobox-unique-id">Tags</label>
-                                    <div class="slds-form-element__control">
-                                        <div class="slds-combobox_container slds-has-object-switcher">
-                                            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon--right">
-                                                    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Tags">
-                                                    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon--right" title="Description of icon when needed">
-            <svg class="slds-icon slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-            </svg>
-            <span class="slds-assistive-text">Description of icon</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul id="listbox-selections-unique-id" class="slds-listbox slds-listbox--inline slds-p-top--xxx-small" role="listbox" aria-orientation="horizontal" aria-label="Selected Options:">
-                                            <li role="presentation" class="slds-listbox__item">
-                                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
-              <span class="slds-pill__label" title="Acme">Europe</span>
-                                                <span class="slds-icon_container slds-pill__remove" title="Remove">
-                      <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                      </svg>
-                      <span class="slds-assistive-text">Press delete or backspace to remove</span>
-                                                </span>
-                                                </span>
-                                            </li>
-                                            <li role="presentation" class="slds-listbox__item">
-                                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
-              <span class="slds-pill__label" title="Acme">Sports</span>
-                                                <span class="slds-icon_container slds-pill__remove" title="Remove">
-                      <svg class="slds-icon slds-icon--x-small slds-icon-text-default" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                      </svg>
-                      <span class="slds-assistive-text">Press delete or backspace to remove</span>
-                                                </span>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-021">Locale</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="select-021">
+                                    <option value="default" selected="selected">Default&nbsp;</option>
+                                    <option value="zh">Chinese&nbsp;</option>
+                                    <option value="zh_CN">Chinese (China)&nbsp;</option>
+                                    <option value="nl">Dutch&nbsp;</option>
+                                    <option value="en">English&nbsp;</option>
+                                    <option value="en_CA">English (Canada)&nbsp;</option>
+                                    <option value="en_US">English (United States)&nbsp;</option>
+                                    <option value="fr">French&nbsp;</option>
+                                    <option value="fr_CA">French (Canada)&nbsp;</option>
+                                    <option value="fr_FR">French (France)&nbsp;</option>
+                                    <option value="de">German&nbsp;</option>
+                                    <option value="de_DE">German (Germany)&nbsp;</option>
+                                    <option value="it">Italian&nbsp;</option>
+                                    <option value="it_IT">Italian (Italy)&nbsp;</option>
+                                    <option value="ja">Japanese&nbsp;</option>
+                                    <option value="ja_JP">Japanese (Japan)&nbsp;</option>
+                                    <option value="es">Spanish&nbsp;</option>
+                                </select>
                             </div>
                         </div>
-                    </fieldset>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="input-013">Value</label>
+                        <input type="text" id="input-013" class="slds-input" value="a, ab, abc">
+                    </div>
                 </div>
             </div>
             <footer class="slds-modal__footer">
@@ -506,148 +444,74 @@
 <!-- Add New Wizard Start-->
 <div class="slds-hide" id="add-table-entry">
     <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
-    <div class="slds-modal__container">
-      <header class="slds-modal__header">
-        <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
-          <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>
-          <span class="slds-assistive-text">Close</span>
-        </button>
-        <h2 id="header43" class="slds-text-heading--medium">Create New Hostname</h2>
-      </header>
-      <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
-      <h3 id="header44" class="slds-text-heading--large slds-text-align--center slds-m-bottom--x-large">Default site path settings</h3>
-<div class="slds-form slds-form--compound">
-    <fieldset class="slds-form-element">
-      <div class="slds-form-element__group">
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label" for="select-01">Site</label>
-            <div class="slds-form-element__control">
-                <div class="slds-select_container">
-                    <select class="slds-select" id="select-01">
-                        <option>Site 1</option>
-                        <option selected="selected">Site 2</option>
-                        <option>Site 3</option>
-                    </select>
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
+                    <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="header43" class="slds-text-heading--medium">Create New Dictionary Entry</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+                <div class="slds-form slds-form_stacked">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-01">Type</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="select-01">
+                                    <option>Stop Word</option>
+                                    <option selected="selected">Synonym</option>
+                                    <option>Compound Word</option>
+                                    <option>Hypernym Word</option>
+                                    <option>Common Phrase Word</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-021">Locale</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="select-021">
+                                    <option value="default" selected="selected">Default&nbsp;</option>
+                                    <option value="zh">Chinese&nbsp;</option>
+                                    <option value="zh_CN">Chinese (China)&nbsp;</option>
+                                    <option value="nl">Dutch&nbsp;</option>
+                                    <option value="en">English&nbsp;</option>
+                                    <option value="en_CA">English (Canada)&nbsp;</option>
+                                    <option value="en_US">English (United States)&nbsp;</option>
+                                    <option value="fr">French&nbsp;</option>
+                                    <option value="fr_CA">French (Canada)&nbsp;</option>
+                                    <option value="fr_FR">French (France)&nbsp;</option>
+                                    <option value="de">German&nbsp;</option>
+                                    <option value="de_DE">German (Germany)&nbsp;</option>
+                                    <option value="it">Italian&nbsp;</option>
+                                    <option value="it_IT">Italian (Italy)&nbsp;</option>
+                                    <option value="ja">Japanese&nbsp;</option>
+                                    <option value="ja_JP">Japanese (Japan)&nbsp;</option>
+                                    <option value="es">Spanish&nbsp;</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="input-013">Value</label>
+                        <input type="text" id="input-013" class="slds-input" value="a, ab, abc">
+                    </div>
                 </div>
             </div>
-          </div>
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label" for="select-021">Locale</label>
-            <div class="slds-form-element__control">
-                <div class="slds-select_container">
-                    <select class="slds-select" id="select-021">
-                        <option>en_US</option>
-                        <option selected="selected">en_EN</option>
-                        <option>de_DE</option>
-                    </select>
-                </div>
-            </div>
-          </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button--neutral js-close-modal-2">Cancel</button>
+                <button class="slds-button slds-button--brand js-close-modal-2">Save</button>
+            </footer>
         </div>
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label" for="input-013">ID</label>
-            <input type="text" id="input-013" class="slds-input" value="Site 2 / en_US">
-          </div>
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label" for="select-12">Custom Redirect Handling</label>
-            <div class="slds-form-element__control">
-                <div class="slds-select_container">
-                    <select class="slds-select" id="select-12">
-                        <option>enabled</option>
-                        <option selected="selected">disabled</option>
-                    </select>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-1">
-            <label class="slds-form-element__label" for="input-031">Pipeline</label>
-            <input type="text" id="input-031" class="slds-input" value="Search-Show">
-          </div>
-        </div>
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label" for="input-04">Parameter Key</label>
-            <input type="text" id="input-04" class="slds-input" value="cgid">
-          </div>
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label " for="input-05">Parameter Value</label>
-            <input type="text" id="input-05" class="slds-input" value="electronics">
-          </div>
-        </div>
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label slds-assistive-text" for="input-04">Parameter Key</label>
-            <input type="text" id="input-04" class="slds-input" value="cgid">
-          </div>
-          <div class="slds-form-element slds-size--1-of-2">
-            <label class="slds-form-element__label slds-assistive-text" for="input-05">Parameter Value</label>
-            <input type="text" id="input-05" class="slds-input" value="shirts">
-          </div>
-        </div>
-        <div class="slds-form-element__row">
-          <div class="slds-form-element slds-size--1-of-2">
-<button class="slds-button slds-align--absolute-center">
-  <svg class="slds-button__icon slds-button__icon--left" aria-hidden="true">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-  </svg>Add more</button>
-
-          </div>
-          </div>
-      </div>
-    </fieldset>
-  </div>
-      </div>
-      <footer class="slds-modal__footer slds-grid slds-grid--align-spread">
-        <button class="slds-button slds-button--neutral">Back</button>
-        <div class="slds-progress slds-progress--shade">
-          <ol class="slds-progress__list">
-            <li class="slds-progress__item slds-is-completed">
-              <button class="slds-button slds-button--icon slds-button--icon slds-progress__marker slds-progress__marker--icon" title="Step 1 - Completed">
-                <svg class="slds-button__icon" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
-                </svg>
-                <span class="slds-assistive-text">Step 1 - Completed</span>
-              </button>
-            </li>
-            <li class="slds-progress__item slds-is-active">
-              <button class="slds-button slds-progress__marker">
-                <span class="slds-assistive-text">Step 2 - Active</span>
-              </button>
-            </li>
-            <li class="slds-progress__item">
-              <button class="slds-button slds-progress__marker">
-                <span class="slds-assistive-text">Step 3 </span>
-              </button>
-            </li>
-            <li class="slds-progress__item">
-              <button class="slds-button slds-progress__marker">
-                <span class="slds-assistive-text">Step 4 </span>
-              </button>
-            </li>
-            <li class="slds-progress__item">
-              <button class="slds-button slds-progress__marker">
-                <span class="slds-assistive-text">Step 5 </span>
-              </button>
-            </li>
-          </ol>
-          <div class="slds-progress-bar slds-progress-bar--x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
-            <span class="slds-progress-bar__value" style="width:25%;">
-              <span class="slds-assistive-text">Progress: 25%</span>
-            </span>
-          </div>
-        </div>
-        <button class="slds-button slds-button--brand">Next</button>
-      </footer>
-    </div>
-  </section>
+    </section>
     <div class="slds-backdrop slds-backdrop--open"></div>
 </div>
+
+
 <!-- Add New Wizard End -->
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="/scripts/tether.js"></script>
