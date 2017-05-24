@@ -18,6 +18,30 @@
 {% include "_page-header-filtered.html" %}
 
 <div class="page-content">
+<ul class="slds-listbox slds-listbox_horizontal slds-p-top_xxx-small" role="group" aria-label="Selected Options:">
+        <li role="presentation" class="slds-listbox__item">
+          <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+            <span class="slds-pill__label" title="Option A">English</span>
+            <span class="slds-icon_container slds-pill__remove" title="Remove">
+              <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+              </svg>
+              <span class="slds-assistive-text">Press delete or backspace to remove</span>
+            </span>
+          </span>
+        </li>
+        <li role="presentation" class="slds-listbox__item">
+          <span class="slds-pill" role="option" aria-selected="true">
+            <span class="slds-pill__label" title="Option B">Stop Words</span>
+            <span class="slds-icon_container slds-pill__remove" title="Remove">
+              <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+              </svg>
+              <span class="slds-assistive-text">Press delete or backspace to remove</span>
+            </span>
+          </span>
+        </li>
+      </ul>
 <div>
 <table class="slds-table slds-table--bordered slds-table--striped slds-table--resizable-cols slds-table--fixed-layout" role="grid">
   <thead>
