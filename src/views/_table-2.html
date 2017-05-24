@@ -1,159 +1,269 @@
-<div class="slds-max-medium-table--stacked ">
-    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--col-bordered slds-table--striped slds-max-medium-table--stacked">
-        <thead>
-            <tr class="slds-text-title--caps slds-line-height--reset">
-                <th rowspan="2">Type</th>
-                <th rowspan="2">Name</th>
-                <th rowspan="2">
-                    <div class="slds-truncate slds-text-align--right" title="">Hits</div>
-                </th>
-                <th colspan="2">
-                    <div class="slds-truncate slds-text-align--center" title="">Elapsed Time Own</div>
-                </th>
-                <th colspan="2">
-                    <div class="slds-truncate slds-text-align--center" title="">Elapsed Time Total</div>
-                </th>
-                <th colspan="2">
-                    <div class="slds-truncate slds-text-align--center" title="">CPU Time Own</div>
-                </th>
-                <th colspan="2">
-                    <div class="slds-truncate slds-text-align--center" title="">CPU Time Total</div>
-                </th>
-            </tr>
-            <tr class="slds-text-title--caps slds-line-height--reset">
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">Sum</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">AVG</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">SUM</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">AVG</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">SUM</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">AVG</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">SUM</div>
-                </th>
-                <th>
-                    <div class="slds-truncate slds-text-align--right" title="">AVG</div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="slds-truncate" title="">SF_PAGE</div>
-                </td>
-                <td>
-                    <div class="slds-truncate" title="">/Sites-SiteGenesis-Site/default/Home-IncludeHeaderMenu</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">1</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.60</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.60</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">209.39</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">209.39</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.60</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.60</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">150.12</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">150.12</div>
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <div class="slds-truncate" title="">ONREQUEST</div>
-                </td>
-                <td>
-                    <div class="slds-truncate" title="">/Sites-SiteGenesis-Site/default/__Analytics-Tracking</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">2</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">6.06</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">3.03</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">6.31</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">3.16</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">6.07</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">3.04</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">6.28</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">3.14</div>
-                </td>
-            </tr>            
+<table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout" role="grid">
+  <thead>
+    <tr>
+        <th></th>        
+        <th class="slds-size--2-of-12 slds-m-vertical--small"></th>        
+        <th></th>        
+        <th colspan="2" class="slds-text-align--center"><div class="slds-m-around--small">Elapsed Time Own<div></th>
+        <th colspan="2" class="slds-text-align--center"><div class="slds-m-around--small">Elapsed Time Total<div></th>
+        <th colspan="2" class="slds-text-align--center"><div class="slds-m-around--small">CPU Time Own<div></th>
+        <th colspan="2" class="slds-text-align--center"><div class="slds-m-around--small">CPU Time Total<div></th>
+</tr>
+<tr class="slds-line-height--reset slds-text-title--caps">
+        <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+            <span class="slds-assistive-text">Sort </span>
+            <span class="slds-truncate" title="Type">Type</span>
+            <div class="slds-icon_container">
+                <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+            </div>
+            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+            </a>
+            <div class="slds-resizable">
+            <label for="cell-resize-handle-595" class="slds-assistive-text">Type</label>
+            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+            <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+            </span>
+            </div>        
+        </th>
+        <th class="slds-size--4-of-12 slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+            <span class="slds-assistive-text">Sort </span>
+            <span class="slds-truncate" title="Type">Name</span>
+            <div class="slds-icon_container">
+                <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+            </div>
+            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+            </a>
+            <div class="slds-resizable">
+            <label for="cell-resize-handle-595" class="slds-assistive-text">Name</label>
+            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+            <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+            </span>
+            </div>                
+        </th>
+        <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+            <div class="slds-icon_container">
+                <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+            </div>
+            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+            <span class="slds-assistive-text">Sort </span>
+            <span class="slds-truncate" title="Type">Hits</span>
+            </a>
+            <div class="slds-resizable">
+            <label for="cell-resize-handle-595" class="slds-assistive-text">Hits</label>
+            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+            <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+            </span>
+            </div>                
+        </th>
 
-            <tr>
-                <td>
-                    <div class="slds-truncate" title="">PIPELINE</div>
-                </td>
-                <td>
-                    <div class="slds-truncate" title="">sitegenesis_storefront_pipelines:OnRequest-Do</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">2</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.25</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.13</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.25</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.13</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.21</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.11</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.21</div>
-                </td>
-                <td>
-                    <div class="slds-truncate slds-text-align--right" title="">0.11</div>
-                </td>
-            </tr>     
-    </table>
-</div>
+
+      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps slds-is-sorted slds-is-sorted--desc slds-theme--shade" aria-sort="descending" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Sum</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">Sum</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>   
+    <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">AVG</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">AVG</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+
+
+   <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Sum</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">Sum</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+    <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">AVG</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">AVG</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+ 
+
+    <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Sum</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">Sum</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+    <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">AVG</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">AVG</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+
+  <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Sum</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">Sum</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>   
+    <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset slds-float--right" tabindex="0">
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">AVG</span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-595" class="slds-assistive-text">AVG</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-595" tabindex="0" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>  
+    
+</tr>
+  </thead>
+  <tbody>
+    <tr class="slds-hint-parent slds-table--col-bordered">
+      <td role="gridcell" class="slds-">
+        <div class="slds-truncate slds-text-align--left" title="BM_PAGE">BM_PAGE</div>
+      </td>
+      <th scope="row">
+        <div class="slds-truncate slds-text-align--left" title="/Sites-Storefront"><a href="javascript:void(0);" class="show_modal">/Sites-Storefront</a></div>
+      </th>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="45">45</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="45390717">45390717</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="45390717">45390717</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="1008682.6">1008682.6</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="1008682.6">1008682.6</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="576848636">576848636</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="576848636">576848636</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="12818858.58">12818858.58</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate slds-text-align--right" title="12818858.58">12818858.58</div>
+      </td>
+    </tr>
+  </tbody>
+</table>    
