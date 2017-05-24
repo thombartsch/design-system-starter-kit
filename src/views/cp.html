@@ -1,0 +1,29 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template_cp.html" %}
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %} 
+  {% include "_page-header-cp.html" %}
+    <!-- {% block header %} This is the default content {% endblock %} -->
+    <div class="slds-grid 2slds-wrap 2slds-grid--pull-padded">
+        <div class="pageBody filterOpen slds-size--1-of-2 slds-medium-size--4-of-6 slds-large-size--9-of-12 slds-border--right" id="datatable">
+          {% include "_filter_badges.html" %}
+          {% include "_table-1.html" %}
+        </div>
+        <div class="slds-size--1-of-2 slds-medium-size--2-of-6 slds-large-size--3-of-12 display-inline" id="filtersection">
+          {% include "_filters.html" %}
+        </div>
+    </div>  
+  {% include "_modal1.html"%}
+{% endblock %}
