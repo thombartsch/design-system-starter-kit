@@ -15,6 +15,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
 @import 'footer';
+@import 'layout';
 
 //
 // We can also add styles directly in this file, like so:
@@ -33,16 +34,17 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 }
 
 // Wrap the prototype in a scrollable container
-.app-wrapper, .page-content {
-  overflow: auto;
-  position: absolute;
-  -webkit-overflow-scrolling: touch;
-  top: $height-context-bar + $height-header;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
+// .app-wrapper, .page-content {
+//   overflow: auto;
+//   position: absolute;
+//   -webkit-overflow-scrolling: touch;
+//   top: $height-context-bar + $height-header;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+// }
 
-.page-content {
-  top: 105px;
-}
+// .page-content {
+//   top: 105px;
+// }
+

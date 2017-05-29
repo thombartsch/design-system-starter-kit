@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
+
+<div class="slds-layout-frame">
+    <div class="slds-layout">
+    <div class="slds-layout-header">
+
   <!--
     Base Global Header component
     https://www.lightningdesignsystem.com/components/global-header/
@@ -246,13 +251,16 @@
                 </div>
             </div>
             <!-- / MASTHEAD -->
-
+</div>
+<div class="slds-layout-content">
   <main class="app-wrapper viewport">
     {% block content %}
       <!-- Content from HTML files gets injected here -->
     {% endblock %}
   </main>
-
+    </div>
+    </div>
+</div>
 
 <section class="slds-hide slds-popover slds-nubbin--top-left" role="dialog" aria-describedby="dialog-body-id-40" id="app-switch">
   <div class="slds-popover__body slds-p-horizontal--none" id="dialog-body-id-40">
