@@ -3,28 +3,33 @@
         <div class="slds-modal__container">
             <header class="slds-modal__header">
                 <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
-          <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>
-          <span class="slds-assistive-text">Close</span>
-        </button>
+                    <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
                 <h2 id="header43" class="slds-text-heading--medium">Create New Page</h2>
             </header>
-            <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+            <div  class="slds-modal__content slds-text-align--center slds-p-around--medium slds-border_bottom">
+                <!--h1 class="slds-text-heading_large slds-hyphenate">Page Name & Title</h1-->
+                <p class="2slds-m-top_x-small">Give your page a name and title. <br />The page name will appear in the navigation while the page title will be shown ...</p>                                    
+            </div>                
+            
+            <div class="slds-modal__content slds-p-around--medium slds-p-bottom--large" id="modal-content-id-1">
                 <!-- FORM 1 -->
                 <div class="slds-form slds-form_stacked" id="form_step-1">
                     <div class="slds-form-element">
                         <label class="slds-form-element__label" for="input-id-01">
                                 <abbr class="slds-required" title="required">*</abbr> Page Name
                         </label>
-                        <div class="slds-form-element__icon slds-align-middle">
+                        <!--div class="slds-form-element__icon slds-align-middle">
                             <button class="slds-button slds-button_icon slds-button slds-button_icon" aria-describedby="help" title="Help">
                                 <svg class="slds-button__icon" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
                                 </svg>
                                 <span class="slds-assistive-text">Help</span>
-                            </button>
-                        </div>
+                            </button>                            
+                        </div-->
 
                         <div class="slds-form-element__control">
                             <input type="text" id="input-id-01" class="slds-input" placeholder="">
@@ -35,14 +40,14 @@
                             <abbr class="slds-required" title="required">*</abbr>
                             Page Title
                         </label>
-                        <div class="slds-form-element__icon slds-align-middle">
+                        <!--div class="slds-form-element__icon slds-align-middle">
                             <button class="slds-button slds-button_icon slds-button slds-button_icon" aria-describedby="help" title="Help">
                                 <svg class="slds-button__icon" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
                                 </svg>
                                 <span class="slds-assistive-text">Help</span>
                             </button>
-                        </div>
+                        </div-->
 
 
                         <div class="slds-form-element__control">
@@ -50,83 +55,73 @@
                         </div>
                     </div>
 
-                    <fieldset class="slds-form-element">
+                    <!--fieldset class="slds-form-element">
                         <legend class="slds-form-element__legend slds-form-element__label">Select a Page Type</legend>
                         <div class="slds-form-element__control">
                             <div class="slds-visual-picker slds-visual-picker_medium">
                                 <input type="radio" id="visual-picker-301" name="options">
                                 <label for="visual-picker-301">
-                                    <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
-                                    <span class="slds-is-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
-                                        <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
-                                    </span>
-                                    <span class="slds-is-not-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
-                                        <svg class="slds-icon slds-icon-utility-connected_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                        <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
+                                        </svg>                                    
                                     </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Page Type A</span>
+                                        <span class="slds-text-title"></span>
                                     </span>
-                                    <span class="slds-visual-picker__body">Page Type A</span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
                                 </label>
-                            </div>
+                             </div>
+
+
                             <div class="slds-visual-picker slds-visual-picker_medium">
                                 <input type="radio" id="visual-picker-302" name="options">
                                 <label for="visual-picker-302">
-                                    <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
-                                    <span class="slds-is-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
-                                        <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
-                                    </span>
-                                    <span class="slds-is-not-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
                                         <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
+                                        </svg>                                    
                                     </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Page Type B</span>
+                                        <span class="slds-text-title"></span>
                                     </span>
-                                    <span class="slds-visual-picker__body">Page Type B</span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
                                 </label>
-                            </div>
+                             </div>
+
                             <div class="slds-visual-picker slds-visual-picker_medium">
                                 <input type="radio" id="visual-picker-303" name="options">
                                 <label for="visual-picker-303">
-                                    <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
-                                    <span class="slds-is-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
-                                        <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
-                                    </span>
-                                    <span class="slds-is-not-selected">
-                                        <span class="slds-icon_container" title="description of icon when needed">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
                                         <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Provide description of icon</span>
-                                        </span>
+                                        </svg>                                    
                                     </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Page Type C</span>
+                                        <span class="slds-text-title"></span>
                                     </span>
-                                    <span class="slds-visual-picker__body">Page Type C</span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
                                 </label>
-                            </div>
+                             </div>                             
+
+
                         </div>
-                    </fieldset>
+                    </fieldset -->
 
 
 
@@ -161,7 +156,7 @@
                         </span>
                     </div>
                 </div>
-                <a href="create_page-summary.html"><button class="slds-button slds-button--brand">Next</button></a>
+                <a href="create_page-template.html"><button class="slds-button slds-button--brand">Next</button></a>
             </footer>
         </div>
     </section>
