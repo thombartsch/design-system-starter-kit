@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="slds-layout-frame">
+<div class="slds-layout-frame slds-theme--shade">
     <div class="slds-layout">
     <div class="slds-layout-header">
 
@@ -575,6 +575,18 @@
 
         $('.delete-trigger, .js-close-modal-3').click(function() {
             $('#page-delete').toggleClass('slds-hide');
+        });
+
+        $('#trigger-phone').click(function() {
+            $('.page-content').css('max-width', '320px');
+        });
+
+        $('#trigger-tablet').click(function() {
+            $('.page-content').css('max-width', '800px');
+        });
+
+        $('#trigger-desktop').click(function() {
+            $('.page-content').css('max-width', '100%');
         });
     });
     </script>
