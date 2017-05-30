@@ -30,14 +30,21 @@ $static-font-path: '/assets/fonts/webfonts';
   height: $height-header;
 }
 
-// Wrap the prototype in a scrollable container
-.app-wrapper {
-  overflow: auto;
-  position: absolute;
-  -webkit-overflow-scrolling: touch;
-  top: $height-context-bar + $height-header;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.content-frame-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
 }
 
+.content-frame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.app-wrapper {
+  min-height: calc(100vh - #{$height-context-bar + $height-header});
+}

@@ -124,7 +124,7 @@
                 </div>
           </div>
         </div>
-        
+
         <nav class="slds-context-bar__secondary" role="navigation">
             <ul class="slds-grid">
                 <li class="slds-context-bar__item slds-is-active">
@@ -175,7 +175,7 @@
 
     </div>
 
-    <main class="app-wrapper">
+    <main class="slds-grid slds-grid_vertical app-wrapper">
         {% block content %}
         <!-- Content from HTML files gets injected here -->
         {% endblock %}
@@ -200,7 +200,7 @@
 
     <script>
         $('#filtertoggle').click(function(event) {
-            $("#filtersection").toggleClass("display-inline display-none");
+            $("#filtersection").toggleClass("slds-hide");
             $("#filtertoggle").toggleClass("slds-is-selected slds-not-selected");
             $("#datatable").toggleClass("slds-size--1-of-1 slds-size--1-of-2");
             $("#datatable").toggleClass("slds-medium-size--6-of-6 slds-medium-size--5-of-6");
@@ -246,7 +246,7 @@
             //$('.tooltip-content').toggleClass('slds-hide');
             //$('.tooltip-content').toggleClass('slds-show');
         });
-*/        
+*/
 
 /*
         //connect popover to related buttons
@@ -277,39 +277,6 @@
 */
 
     </script>
-
-    <style>
-        #filtersection {
-            display: inline;
-        }
-        
-        .display-none {
-            display: none !important;
-        }
-        
-        .display-inline {
-            display: inline !important;
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        .visible {
-            display: block;
-        }
-        .slds-context-bar{
-            border-bottom: 3px solid #84BD00;
-        }
-        .slds-context-bar__item.slds-is-active:before, 
-        .slds-context-bar__item.slds-is-active:after {
-            background: #84BD00;
-        }
-       .slds-table--bordered thead > tr + tr > th {
-            border-top: 1px solid #d8dde6;
-            border-left: 1px solid #d8dde6;
-        } 
-    </style>
 
 
     <!-- / JAVASCRIPT -->
