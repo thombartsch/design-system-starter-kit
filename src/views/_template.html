@@ -251,15 +251,15 @@
                 </div>
             </div>
             <!-- / MASTHEAD -->
-</div>
-<div class="slds-layout-content">
-  <main class="app-wrapper viewport">
-    {% block content %}
-      <!-- Content from HTML files gets injected here -->
-    {% endblock %}
-  </main>
     </div>
+    <div class="slds-layout-content">
+        <main class="app-wrapper viewport">
+            {% block content %}
+            <!-- Content from HTML files gets injected here -->
+            {% endblock %}
+        </main>
     </div>
+  </div>
 </div>
 
 <section class="slds-hide slds-popover slds-nubbin--top-left" role="dialog" aria-describedby="dialog-body-id-40" id="app-switch">
@@ -562,7 +562,8 @@
         });
 
         $('.trigger-edit, .js-close-modal-2').click(function() {
-            $('#edit-table-entry').toggleClass('slds-hide');
+            //$('#edit-table-entry').toggleClass('slds-hide');
+            $('#page-form').toggleClass('slds-hide');
         });
 
         $('.trigger-add, .js-close-modal').click(function() {
