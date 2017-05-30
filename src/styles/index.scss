@@ -48,3 +48,21 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 //   top: 105px;
 // }
 
+.content-frame-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.content-frame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.app-wrapper {
+  min-height: calc(100vh - #{$height-context-bar + $height-header});
+}
