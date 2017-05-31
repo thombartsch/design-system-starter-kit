@@ -1,0 +1,7 @@
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
+{
+    "recordTitle": "Record Title",
+    "dictionaries": [{ "name": "Page Name", "type": "Campaign", "author": "Hans Moleman", "date": "01.01.12","tags": "Tag 1, Sports, Shoes" }, ]
+}
