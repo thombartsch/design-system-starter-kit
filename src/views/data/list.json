@@ -3,5 +3,7 @@
 // e.g. {{ recordTitle }}
 {
     "recordTitle": "Record Title",
-    "dictionaries": [{ "name": "Page Name", "type": "Campaign", "author": "Hans Moleman", "date": "01.01.12","tags": "Tag 1, Sports, Shoes" }, ]
+    "dictionaries": [{ "name": "Sprint Campaign", "type": "Campaign", "author": "Hans Moleman", "date": "01.01.12","tags": "Tag 1, Sports, Shoes" },
+    { "name": "Summer Campaign", "type": "Campaign", "author": "Hans Moleman", "date": "01.11.12","tags": "Sports, Shoes" },
+    { "name": "Winter Campaign", "type": "Campaign", "author": "Hans Moleman", "date": "11.03.12","tags": "" }]
 }
