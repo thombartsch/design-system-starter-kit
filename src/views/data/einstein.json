@@ -1,0 +1,58 @@
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
+{
+  "recordTitle": "Record Title",
+  "dictionaries":
+  [{
+  "group": "sodales sed",
+  "type": "Synonym",
+  "gain": 15,
+  "change": "+3"
+}, {
+  "group": "nulla quisque arcu libero rutrum",
+  "gain": 29,
+  "type": "Synonym",
+  "change": "+2"
+}, {
+  "group": "a",
+  "gain": 17,
+  "type": "Synonym",
+  "change": "+4"
+}, {
+  "group": "morbi a ipsum integer a nibh",
+  "gain": 30,
+  "type": "Synonym",
+  "change": "+1"
+}, {
+  "group": "erat fermentum justo nec condimentum neque",
+  "gain": 25,
+  "type": "Synonym",
+  "change": "+2"
+}, {
+  "group": "amet",
+  "gain": 74,
+  "type": "Synonym",
+  "change": "+1"
+}, {
+  "group": "odio condimentum id luctus",
+  "gain": 20,
+  "type": "Synonym",
+  "change": "+3"
+}, {
+  "group": "vivamus in felis eu",
+  "gain": 17,
+  "type": "Synonym",
+  "change": "+2"
+}, {
+  "group": "lacus curabitur at ipsum ac",
+  "gain": 1,
+  "type": "Synonym",
+  "change": "+3"
+}, {
+  "group": "mauris lacinia sapien quis libero nullam",
+  "gain": 31,
+  "type": "Synonym",
+  "change": "+4"
+}]
+}

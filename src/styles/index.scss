@@ -66,3 +66,41 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 .app-wrapper {
   min-height: calc(100vh - #{$height-context-bar + $height-header});
 }
+
+
+.is-disabled {
+  opacity: .4;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.slds-icon {
+  transition: all .2s ease;
+}
+
+#gain-value {
+    &::before {
+    content: "25%";
+  }
+
+> span {
+  margin-left: .1em;
+  display: inline-block;
+  height: 1rem;
+  width: 25%;
+  background-color: #04844b;
+  transition: all .2s ease;
+  }
+}
+
+#gain-value.new > span {
+  width: 12%;
+}
+
+#gain-value.new {
+    &::before {
+    content: "12%";
+  }
+}
