@@ -104,3 +104,20 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
     content: "12%";
   }
 }
+
+.value-mods {
+  > li {
+      &::before {
+        content: "+";
+        width: .75rem;
+        text-align: center;
+        display: inline-block;
+      }
+  }
+
+   > li.neg-value {
+      &::before {
+        content: "-";
+      }
+  }
+}

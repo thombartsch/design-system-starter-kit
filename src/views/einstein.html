@@ -90,60 +90,6 @@
   </thead>
   <tbody>
 
-{% for dictionary in dictionaries %}
-<tr class="slds-hint-parent">
-    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
-        <span class="slds-checkbox">
-          <input type="checkbox" name="options" id="id-{{ dictionary.value }}" />
-          <label class="slds-checkbox__label" for="id-{{ dictionary.value }}">
-            <span class="slds-checkbox--faux"></span>
-        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
-        </label>
-        </span>
-    </td>
-    <td scope="gridcell">
-        <div class="slds-truncate trigger-einstein-detail" title="{{ dictionary.group }}"><a href="javascript:void(0);">{{ dictionary.group }}</a></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.type }}">{{ dictionary.type }}</div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.change }}"><span class="slds-button slds-button_success">{{ dictionary.change }}</span></div>
-    </td>
-    <td role="gridcell">
-        <div class="slds-truncate" title="Site 2 / en_EN">{{ dictionary.gain }}% <span style="margin-left: .1em; display: inline-block; height: 1rem; width: {{ dictionary.gain }}%; background-color: #04844b;"></span></div>
-    </td>
-    <td role="gridcell" style="width:3.25rem;">
-        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                <svg class="slds-button__icon" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                </svg>
-                <span class="slds-assistive-text">Show More</span>
-            </button>
-            <div class="slds-dropdown slds-dropdown--right">
-                <ul class="slds-dropdown__list" role="menu">
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
-                            <span class="slds-truncate" title="Menu Item One">Accept</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
-                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
-                        </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
-                            <span class="slds-truncate" title="Menu Item Two">Save for later</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </td>
-</tr>
- {% endfor %}
 <tr class="slds-hint-parent">
     <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
         <span class="slds-checkbox">
@@ -248,6 +194,61 @@
         </div>
     </td>
 </tr>
+
+{% for dictionary in dictionaries %}
+<tr class="slds-hint-parent">
+    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+        <span class="slds-checkbox">
+          <input type="checkbox" name="options" id="id-{{ dictionary.value }}" />
+          <label class="slds-checkbox__label" for="id-{{ dictionary.value }}">
+            <span class="slds-checkbox--faux"></span>
+        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+        </label>
+        </span>
+    </td>
+    <td scope="gridcell">
+        <div class="slds-truncate trigger-einstein-detail" title="{{ dictionary.group }}"><a href="javascript:void(0);">{{ dictionary.group }}</a></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{{ dictionary.type }}">{{ dictionary.type }}</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{{ dictionary.change }}"><span class="slds-button slds-button_success">{{ dictionary.change }}</span></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="Site 2 / en_EN">{{ dictionary.gain }}% <span style="margin-left: .1em; display: inline-block; height: 1rem; width: {{ dictionary.gain }}%; background-color: #04844b;"></span></div>
+    </td>
+    <td role="gridcell" style="width:3.25rem;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">Show More</span>
+            </button>
+            <div class="slds-dropdown slds-dropdown--right">
+                <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Accept</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
+                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
+                            <span class="slds-truncate" title="Menu Item Two">Save for later</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </td>
+</tr>
+ {% endfor %}
   </tbody>
 </table>
 </div>
