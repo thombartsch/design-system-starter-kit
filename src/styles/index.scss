@@ -107,6 +107,8 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 
 .value-mods {
   > li {
+      display: inline;
+
       &::before {
         content: "+";
         width: .75rem;

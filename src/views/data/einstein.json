@@ -8,51 +8,61 @@
   "group": "sodales sed",
   "type": "Synonym",
   "gain": 15,
+  "locale":"English (United States)",
   "change": "+3"
 }, {
   "group": "nulla quisque arcu libero rutrum",
   "gain": 29,
+  "locale":"Default",
   "type": "Synonym",
   "change": "+2"
 }, {
   "group": "a",
   "gain": 17,
   "type": "Synonym",
+  "locale":"Chinese",
   "change": "+4"
 }, {
   "group": "morbi a ipsum integer a nibh",
   "gain": 30,
   "type": "Synonym",
-  "change": "+1"
+  "change": "+1",
+  "locale":"Dutch"
 }, {
   "group": "erat fermentum justo nec condimentum neque",
   "gain": 25,
+  "locale":"Italian",
   "type": "Synonym",
   "change": "+2"
 }, {
   "group": "amet",
   "gain": 74,
   "type": "Synonym",
+  "locale":"English (Canada)",
   "change": "+1"
 }, {
   "group": "odio condimentum id luctus",
   "gain": 20,
   "type": "Synonym",
+  "locale":"English",
   "change": "+3"
 }, {
   "group": "vivamus in felis eu",
   "gain": 17,
   "type": "Synonym",
+  "locale":"Default",
   "change": "+2"
 }, {
   "group": "lacus curabitur at ipsum ac",
   "gain": 1,
   "type": "Synonym",
+  "locale":"Default",
   "change": "+3"
 }, {
   "group": "mauris lacinia sapien quis libero nullam",
   "gain": 31,
   "type": "Synonym",
+  "locale":"Default",
   "change": "+4"
 }]
 }

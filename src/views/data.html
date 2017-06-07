@@ -115,6 +115,11 @@
                         </a>
                     </li>
                     <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="trigger-duplicate">
+                            <span class="slds-truncate" title="Menu Item Two">Duplicate</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
                         <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
                             <span class="slds-truncate" title="Menu Item Two">Delete</span>
                         </a>
@@ -130,4 +135,5 @@
 <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium"><button class="slds-button slds-button_neutral">Show more</button></div>
 </div>
 {% include "_modal-edit.html" %}
+{% include "_modal-duplicate.html" %}
 {% endblock %}
