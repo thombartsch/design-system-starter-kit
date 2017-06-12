@@ -503,6 +503,22 @@
             });
         });
 
+        $('#trigger-change').click(function() {
+            $('#id-263').toggleClass('slds-hide');
+            new Tether({
+                element: '#id-263',
+                target: '#trigger-change',
+                attachment: 'center right',
+                targetAttachment: 'center left',
+                targetOffset: '0 0',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
+        });
+
         $('.trigger-edit, .js-close-modal-2').click(function() {
             $('#edit-table-entry').toggleClass('slds-hide');
         });
