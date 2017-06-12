@@ -589,7 +589,74 @@
         $('#trigger-desktop').click(function() {
             $('.page-content').css('max-width', '100%');
         });
+
+        $('.show_component').click(function() {
+            $('#sidebar').toggleClass('slds-hide');
+            $(event.target).closest('.slds-dropdown-trigger').toggleClass('slds-is-open');
+        });
+
+        $('.hide_component').click(function() {
+            $('#sidebar').toggleClass('slds-hide');
+        });
+        
+
+
+        $('#tab-1').click(function() {            
+            $('#tab-1').removeClass('slds-is-active');
+            $('#tab-2').removeClass('slds-is-active');
+            $('#tab-3').removeClass('slds-is-active');
+            
+            $('#tab-1').addClass('slds-is-active');
+
+            $('#tab-default-1').removeClass('slds-show');
+            $('#tab-default-2').removeClass('slds-show');
+            $('#tab-default-3').removeClass('slds-show');
+
+            $('#tab-default-1').addClass('slds-show');
+            $('#tab-default-2').addClass('slds-hide');
+            $('#tab-default-3').addClass('slds-hide');
+        });
+
+        $('#tab-2').click(function() {
+            $('#tab-1').removeClass('slds-is-active');
+            $('#tab-2').removeClass('slds-is-active');
+            $('#tab-3').removeClass('slds-is-active');
+            
+            $('#tab-2').addClass('slds-is-active');
+
+            $('#tab-default-1').removeClass('slds-show');
+            $('#tab-default-2').removeClass('slds-show');
+            $('#tab-default-3').removeClass('slds-show');
+
+            $('#tab-default-1').addClass('slds-hide');
+            $('#tab-default-2').addClass('slds-show');
+            $('#tab-default-3').addClass('slds-hide');
+        });
+
+        $('#tab-3').click(function() {
+            $('#tab-1').removeClass('slds-is-active');
+            $('#tab-2').removeClass('slds-is-active');
+            $('#tab-3').removeClass('slds-is-active');
+            
+            $('#tab-3').addClass('slds-is-active');
+
+            $('#tab-default-1').removeClass('slds-show');
+            $('#tab-default-2').removeClass('slds-show');
+            $('#tab-default-3').removeClass('slds-show');
+
+            $('#tab-default-1').addClass('slds-hide');
+            $('#tab-default-2').addClass('slds-hide');
+            $('#tab-default-3').addClass('slds-show');
+        });
+
+
+    
     });
     </script>
+
+    
+
+
+
 </body>
 </html>

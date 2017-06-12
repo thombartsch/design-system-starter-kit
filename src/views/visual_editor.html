@@ -1,0 +1,26 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+{#{% include "_page-header-filtered.html" %}#}
+
+<div class="page-content" style="margin: 0 auto;">
+  <!--iframe src="http://localhost:3000/iframe.html" width="100%" height="100%" style="height: calc(100vh - 195px);"></iframe-->
+  <!--iframe src="http://puma.com/de/de/select/stampd" width="100%" height="100%" style="border: 0; height: calc(100vh - 195px); pointer-events: none;"></iframe-->  
+  <!-- <iframe src="composer_files/saved_resource.html" width="100%" height="100%" style="border: 0; height: calc(100vh - 195px); pointer-events: none;"></iframe>   -->
+</div>
+
+{% endblock %}

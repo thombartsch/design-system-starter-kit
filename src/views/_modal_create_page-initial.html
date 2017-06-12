@@ -10,11 +10,110 @@
                 </button>
                 <h2 id="header43" class="slds-text-heading--medium">New Page</h2>
             </header>
-            <div  class="slds-modal__content slds-text-align--center slds-p-around--medium slds-border_bottom">
-                <!--h1 class="slds-text-heading_large slds-hyphenate">Page Name & Title</h1-->
+
+
+
+
+            <div class="slds-modal__content slds-p-around--medium slds-p-bottom--large" id="modal-content-id-1">
+                <!-- FORM 1 -->
+                <div class="slds-form slds-form_stacked slds-p-bottom_small" id="form_step-1">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="input-id-02">
+                            <abbr class="slds-required" title="required">*</abbr>
+                            Page Name
+                        </label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="input-id-02" class="slds-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <!-- /FORM 1 -->
+                <!-- FORM 2 -->
+                <div class="slds-form slds-form_stacked" id="form_step-1">
+                    <label>Select a Page Type</label>
+                    <fieldset class="slds-form-element slds-p-top_small">
+                        <!-- legend class="slds-form-element__legend slds-form-element__label">Select a Page Type</legend -->
+                        <div class="slds-form-element__control">
+                            <div class="slds-visual-picker slds-visual-picker_medium slds-m-right--small">
+                                <input type="radio" id="visual-picker-301" name="options">
+                                <label for="visual-picker-301">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                        <span class="">
+                                            <img src="/assets/layout_1.svg" alt="layout text" width="120" />
+                                        </span>
+                                    </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Campaign Landing Page</span>
+                                        <span class="slds-text-title">Full-width header above a left sidebar and main column.</span>
+                                    </span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="slds-visual-picker slds-visual-picker_medium slds-m-right--small">
+                                <input type="radio" id="visual-picker-302" name="options">
+                                <label for="visual-picker-302">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                        <span class="">
+                                            <img src="/assets/layout_2.svg" alt="layout text" width="120" />
+                                        </span>
+                                    </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Category Landing Page</span>
+                                        <span class="slds-text-title">Full-width header above a right sidebar and main column.</span>
+                                    </span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="slds-visual-picker slds-visual-picker_medium">
+                                <input type="radio" id="visual-picker-303" name="options">
+                                <label for="visual-picker-303">
+                                    <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                        <span class="">
+                                            <img src="/assets/layout_3.svg" alt="layout text" width="120" />
+                                        </span>                                        
+                                    </span>
+                                    <span class="slds-visual-picker__body">
+                                        <span class="slds-text-heading_small">Product Details Page</span>
+                                        <span class="slds-text-title">Full-width header with a subheader above a right sidebar and main column.</span>
+                                    </span>
+                                    <span class="slds-icon_container slds-visual-picker__text-check">
+                                    <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- /FORM 2 -->
+
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral">Cancel</button>
+                <a href="editor.html">
+                    <button class="slds-button slds-button--brand">Save & Create</button>
+                </a>
+            </footer>
+
+
+
+            {#
+            <div class="slds-modal__content slds-text-align--center slds-p-around--medium slds-border_bottom">
+                <h1 class="slds-text-heading_large slds-hyphenate">Page Name & Title</h1>
                 <p class="2slds-m-top_x-small">Give your page a Name. <br />The Name will appear ... Is this necessary here?</p>
-            </div>                
-            
+            </div>
+
             <div class="slds-modal__content slds-p-around--medium slds-p-bottom--large" id="modal-content-id-1">
                 <!-- FORM 1 -->
                 <div class="slds-form slds-form_stacked" id="form_step-1">
@@ -44,7 +143,7 @@
                         <input type="checkbox" name="options" id="checkbox-01">
                         <label class="slds-checkbox__label" for="checkbox-01">
                             <span class="slds-checkbox_faux"></span>
-                            <span class="slds-form-element__label">Searchable</span>
+                        <span class="slds-form-element__label">Searchable</span>
                         </label>
                         </span>
                     </div>
@@ -55,58 +154,49 @@
                         <input type="checkbox" name="options" id="checkbox-02">
                         <label class="slds-checkbox__label" for="checkbox-02">
                             <span class="slds-checkbox_faux"></span>
-                            <span class="slds-form-element__label">Include in Sitemap</span>
+                        <span class="slds-form-element__label">Include in Sitemap</span>
                         </label>
                         </span>
                     </div>
                 </div>
-
-
                 <!-- TAG CONTROL -->
                 <div class="slds-form-element slds-m-top_small slds-border_top slds-p-top_small">
-                <label class="slds-form-element__label" for="combobox-unique-id">Tags</label>
-                <div class="slds-form-element__control">
-                    <div class="slds-combobox_container slds-has-object-switcher">
-                    <div class="slds-listbox_object-switcher slds-dropdown-trigger slds-dropdown-trigger_click">
-                        <button class="slds-button slds-button_icon" aria-haspopup="true" title="Select object to search in">
+                    <label class="slds-form-element__label" for="combobox-unique-id">Tags</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-combobox_container slds-has-object-switcher">
+                            <div class="slds-listbox_object-switcher slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button class="slds-button slds-button_icon" aria-haspopup="true" title="Select object to search in">
                         <span class="slds-icon_container slds-icon-standard-account" title="Accounts">
                             <span class="slds-assistive-text">Add Tags</span>
                         </span>
                         </button>
-                    </div>
-                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" 
-                        autocomplete="off" role="textbox" placeholder="Add Tag">
+                            </div>
+                            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                                    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Add Tag">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div id="listbox-selections-unique-id" role="listbox" aria-orientation="horizontal">
-                    <ul class="slds-listbox slds-listbox_inline slds-p-top_xxx-small" role="group" aria-label="Selected Options:">
-                        <li role="presentation" class="slds-listbox__item">
-                            <span class="slds-pill slds-pill_link">
+                        <div id="listbox-selections-unique-id" role="listbox" aria-orientation="horizontal">
+                            <ul class="slds-listbox slds-listbox_inline slds-p-top_xxx-small" role="group" aria-label="Selected Options:">
+                                <li role="presentation" class="slds-listbox__item">
+                                    <span class="slds-pill slds-pill_link">
                             <a href="javascript:void(0);" class="slds-pill__action" title="Full pill label verbiage mirrored here">
                                 <span class="slds-pill__label">Tag Label</span>
-                            </a>
-                            <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+                                    </a>
+                                    <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
                                 <svg class="slds-button__icon" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
                                 </svg>
                                 <span class="slds-assistive-text">Remove</span>
                             </button>
-                            </span>
-                        </li>
-                    </ul>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                </div>
-                    
-
-
-
-                
                 <!-- /FORM 1 -->
-
             </div>
             <footer class="slds-modal__footer slds-grid slds-grid--align-spread">
                 <button class="slds-button slds-button--neutral">Close</button>
@@ -135,9 +225,14 @@
                     </div>
                 </div>
                 <a href="create_page-template.html">
-                <button class="slds-button slds-button--brand">Next</button>
+                    <button class="slds-button slds-button--brand">Next</button>
                 </a>
             </footer>
+            #}
+
+
+
+
         </div>
     </section>
     <div class="slds-backdrop slds-backdrop--open"></div>
