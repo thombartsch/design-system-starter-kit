@@ -532,6 +532,8 @@
 
 {% include "_delete-modal.html" %}
 
+{% include "_delete-component.html"%}
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="/scripts/tether.js"></script>
   <script src="/scripts/app.js"></script>
@@ -593,12 +595,28 @@
         $('.show_component').click(function() {
             $('#sidebar').toggleClass('slds-hide');
             $(event.target).closest('.slds-dropdown-trigger').toggleClass('slds-is-open');
+            $('.component-placeholder').toggleClass('slds-hide');
+            $('.component-select').toggleClass('slds-hide');
+
         });
 
         $('.hide_component').click(function() {
             $('#sidebar').toggleClass('slds-hide');
         });
+
+        $('.component-plus').click(function() {
+            $('.component-select').toggleClass('slds-hide');
+        });
         
+
+        $('.add_component').click(function() {
+            $('.component-in-page').removeClass('slds-hide');
+            $('.component-placeholder').toggleClass('slds-hide');
+        });
+
+        $('.remove_component').click(function() {
+            $('.component-in-page').addClass('slds-hide');
+        });
 
 
         $('#tab-1').click(function() {            
@@ -648,6 +666,25 @@
             $('#tab-default-2').addClass('slds-hide');
             $('#tab-default-3').addClass('slds-show');
         });
+
+        $('.component-edit').click(function() {
+            $('#sidebar').toggleClass('slds-hide');
+            $('.flyout').toggleClass('slds-hide');
+            //$('.component-placeholder').toggleClass('slds-hide');
+        });
+
+        $('.component-delete').click(function() {
+            $('#sidebar').toggleClass('slds-hide');
+            $('.flyout').toggleClass('slds-hide');
+        });
+
+
+
+        $(".component-placeholder").hover(function(){
+            $('.flyout').toggleClass('slds-hide');
+        },function(){
+        $('.flyout').toggleClass('slds-hide');
+});
 
 
     
