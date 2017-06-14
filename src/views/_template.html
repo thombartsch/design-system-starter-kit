@@ -21,7 +21,7 @@
     Base Global Header component
     https://www.lightningdesignsystem.com/components/global-header/
   -->
- <header class="slds-global-header_container"><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+ <header class="slds-global-header_container slds-hide"><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
             <div class="slds-global-header slds-grid slds-grid--align-spread">
                 <div class="slds-global-header__item">
                     <div class="slds-global-header__logo">
@@ -165,7 +165,7 @@
   <!--
     Placeholder to push the context bar down
   -->
-  <div class="app-header-placeholder"></div>
+  <div class="app-header-placeholder slds-hide"></div>
 
   <!--
     Navigation Bar component
@@ -173,7 +173,7 @@
   -->
 
    <!-- MASTHEAD -->
-            <div class="slds-context-bar">
+            <div class="slds-context-bar slds-hide">
                 <div class="slds-context-bar__primary slds-context-bar__item--divider-right">
                     <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click slds-no-hover">
                         <div class="slds-context-bar__icon-action">
@@ -607,7 +607,7 @@
         $('.component-plus').click(function() {
             $('.component-select').toggleClass('slds-hide');
         });
-        
+
 
         $('.add_component').click(function() {
             $('.component-in-page').removeClass('slds-hide');
@@ -619,11 +619,11 @@
         });
 
 
-        $('#tab-1').click(function() {            
+        $('#tab-1').click(function() {
             $('#tab-1').removeClass('slds-is-active');
             $('#tab-2').removeClass('slds-is-active');
             $('#tab-3').removeClass('slds-is-active');
-            
+
             $('#tab-1').addClass('slds-is-active');
 
             $('#tab-default-1').removeClass('slds-show');
@@ -639,7 +639,7 @@
             $('#tab-1').removeClass('slds-is-active');
             $('#tab-2').removeClass('slds-is-active');
             $('#tab-3').removeClass('slds-is-active');
-            
+
             $('#tab-2').addClass('slds-is-active');
 
             $('#tab-default-1').removeClass('slds-show');
@@ -655,7 +655,7 @@
             $('#tab-1').removeClass('slds-is-active');
             $('#tab-2').removeClass('slds-is-active');
             $('#tab-3').removeClass('slds-is-active');
-            
+
             $('#tab-3').addClass('slds-is-active');
 
             $('#tab-default-1').removeClass('slds-show');
@@ -687,11 +687,11 @@
 });
 
 
-    
+
     });
     </script>
 
-    
+
 
 
 
