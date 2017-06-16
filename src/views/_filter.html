@@ -19,11 +19,11 @@
                   <p class="slds-text-body_small">Type</p>
                   <p>Stop Words</p>
                 </button>
-                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove equals THIS WEEK">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove filter: Type Stop Word">
                   <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
                   </svg>
-                  <span class="slds-assistive-text">Remove filter: Created Date equals THIS WEEK</span>
+                  <span class="slds-assistive-text">Remove filter: Type Stop Words</span>
                 </button>
               </div>
             </li>
@@ -34,19 +34,34 @@
                   <p class="slds-text-body_small">Locale</p>
                   <p>English</p>
                 </button>
-                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove greater than Locale English">
                   <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
                   </svg>
-                  <span class="slds-assistive-text">Remove filter: List Price greater than "500"</span>
+                  <span class="slds-assistive-text">Remove filter: Locale English</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-item slds-hint-parent slds-hide" id="new-filter">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center slds-is-new">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Type</p>
+                  <p>Synonym</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove greater than Locale English">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: Locale English</span>
                 </button>
               </div>
             </li>
           </ol>
         </div>
         <div class="slds-filters__footer slds-grid slds-shrink-none">
-          <button class="slds-button_reset slds-text-link" href="javascript:void(0);">Add Filter</button>
-          <button class="slds-button_reset slds-text-link slds-col_bump-left" href="javascript:void(0);">Remove All</button>
+          <button class="slds-button_reset slds-text-link" href="javascript:void(0);" id="show-new-filter">Add Filter</button>
+          <button class="slds-button_reset slds-text-link slds-col_bump-left" href="javascript:void(0);"  id="delete-filters">Remove All</button>
         </div>
       </div>
     </div>

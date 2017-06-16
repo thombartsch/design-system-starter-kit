@@ -548,7 +548,35 @@
        $('.filter-trigger').click(function() {
             $('#filter-trigger').toggleClass('is-active');
             $('#filtersection').toggleClass('slds-hide');
+        });
 
+       $('.slds-popover__close, .hide-filter-popover').click(function() {
+            $('#id-263').toggleClass('slds-hide');
+        });
+
+       $('.remove-filter-button').click(function() {
+            $(this).parent().parent().toggleClass('slds-hide');
+        });
+
+       $('#delete-filters').click(function() {
+            $('.slds-item').not('#new-filter').toggleClass('slds-hide');
+        });
+
+       $('#show-new-filter').click(function() {
+            $('#new-filter').toggleClass('slds-hide');
+            $('#id-263').toggleClass('slds-hide');
+            new Tether({
+                element: '#id-263',
+                target: '#new-filter',
+                attachment: 'center right',
+                targetAttachment: 'center left',
+                targetOffset: '0 0',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
         });
 
     });

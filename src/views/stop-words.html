@@ -14,6 +14,7 @@
 -->
 {% block content %}
 {% include "_page-header-filtered.html" %}
+
 <div class="content-frame-container slds-grow">
     <div class="content-frame">
         <div class="slds-grid slds-scrollable_y">
@@ -22,14 +23,15 @@
                     {% include "_table-stop-words.html" %}
                 </div>
             </div>
-        <div id="filtersection">
-            <div class="slds-scrollable_y">
-                {% include "_filter.html" %}
+            <div id="filtersection">
+                <div class="slds-scrollable_y">
+                    {% include "_filter.html" %}
+                </div>
             </div>
         </div>
     </div>
 </div>
-        </div>
+
 {% include "_modal-edit.html" %}
 {% include "_modal-duplicate.html" %}
 {% include "_popover-filter.html" %}
