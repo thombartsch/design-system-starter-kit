@@ -17,9 +17,8 @@
 {% block content %}
 {% include "_page-header-filtered.html" %}
 
-
-
 {% include "_include_component_details.html" %}
+{% include "_sidebar-product-tile.html" %}
 
 
 <div class="page_content">
@@ -60,7 +59,7 @@
                   </div>
                 </div>
               </div>
-          </div>        
+          </div>
         <!-- /LOCALE SELECT -->
       </div>
       <div class="slds-col slds-p-horizontal_small">
@@ -122,9 +121,9 @@
                   </div>
                 </div>
               </div>
-            </div>        
+            </div>
         <!-- /CUSTOMER GROUPS SELECT -->
-      </div>      
+      </div>
       <div class="slds-col slds-p-horizontal_small">
         <!-- DATE SELECT -->
           <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed">
@@ -321,9 +320,9 @@
                 </tbody>
               </table>
             </div>
-          </div>          
+          </div>
         <!-- /DATE SELECT -->
-      </div>      
+      </div>
       <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_9-of-12">
         <!-- TIMELINE -->
         <div class="slds-form-element">
@@ -339,7 +338,9 @@
       </div>
     </div>
     <!-- /TOP SECTION -->
-    
+
+       {% include "_placeholder-product-tile.html" %}
+
     <!-- REGION 1 -->
     <div class="slds-grid slds-wrap slds-grid_pull-padded slds-border_bottom slds-m-top_none" id="Region_1">
         <div class="slds-p-horizontal_small slds-size_1-of-1 slds-hide component-placeholder">
@@ -371,8 +372,9 @@
         </div>
         <!-- /FLYOUT -->
         <!-- PLACEHOLDER -->
+
         <div class="slds-p-horizontal_small slds-size_1-of-1">
-          <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap slds-grid_pull-padded">                  
+          <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap slds-grid_pull-padded">
             <div class="slds-size_1-of-1 slds-align_absolute-center">
               <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
                 <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
@@ -404,10 +406,10 @@
                 <li>Unordered list item</li>
                 <li>Unordered list item</li>
                 <li>Unordered list item</li>
-            </ul>                                                
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam,
-                <a href="#">https://url.com/document/d/1dSOGKlCQtSG73NcSJB7qCJVjvjGNqc3L2Rw/ed</a>            
+                <a href="#">https://url.com/document/d/1dSOGKlCQtSG73NcSJB7qCJVjvjGNqc3L2Rw/ed</a>
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
@@ -423,7 +425,7 @@
               </button>
               <div class="slds-dropdown slds-dropdown--center slds-dropdown—fluid slds-nubbin_top slds-dropdown_large slds-p-around_small slds-hide component-select">
                 <!-- SEARCH -->
-                <div class="slds-form-element"> 
+                <div class="slds-form-element">
                   <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id">Search</label>
                   <div class="slds-form-element__control">
                     <div class="slds-combobox_container">
@@ -436,7 +438,7 @@
                             </svg>
                             <span class="slds-assistive-text">Description of icon</span>
                           </span>
-                        </div>                    
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -446,7 +448,7 @@
                 <ul class="slds-dropdown__list" role="menu">
                   <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
                     <span class="slds-text-title_caps">Text</span>
-                  </li>                
+                  </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" class="show_component" role="menuitem" class="show_component"  tabindex="0">
                       <span class="slds-truncate" title="Table View">Rich Text Block</span>
@@ -456,8 +458,19 @@
                     </a>
                   </li>
                   <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
+                    <span class="slds-text-title_caps">Commerce</span>
+                  </li>
+                  <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" class="select-product"  tabindex="0">
+                      <span class="slds-truncate" title="Table View">Product Tile</span>
+                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#process"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
                     <span class="slds-text-title_caps">Banners</span>
-                  </li>                
+                  </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" class="show_component" role="menuitem" class="show_component"  tabindex="0">
                       <span class="slds-truncate" title="Table View">Simple Banner</span>
@@ -483,7 +496,7 @@
                     </a>
                   </li>
                 </ul>
-                
+
               </div>
 
 
@@ -519,7 +532,7 @@
                             </svg>
                             <span class="slds-assistive-text">Description of icon</span>
                           </span>
-                        </div>                    
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -529,7 +542,7 @@
                 <ul class="slds-dropdown__list" role="menu">
                   <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
                     <span class="slds-text-title_caps">Banners</span>
-                  </li>                
+                  </li>
                   <li class="slds-dropdown__item" role="presentation">
                     <a href="javascript:void(0);" role="menuitem" class="show_component"  tabindex="0">
                       <span class="slds-truncate" title="Table View">Simple Banner</span>
@@ -555,9 +568,9 @@
                     </a>
                   </li>
                 </ul>
-                
+
               </div>
-          </div>      
+          </div>
       </div>
     </div>
     <!-- /REGION 2 -->
@@ -570,8 +583,8 @@
 
 
 <style>
-#sidebar{
-  z-index: 10000;
+.sidebar{
+  z-index: 10;
   /*background: #fff;*/
   position: absolute;
   right: 0px;
@@ -581,12 +594,12 @@
   min-width: 300px;
   /*box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);*/
 }
-#sidebar div.slds-panel{
+.sidebar div.slds-panel{
   height:100%;
 }
 
 .component-placeholder:hover{
-  
+
 }
 
 .flyout {
@@ -605,6 +618,7 @@
 
 </style>
 
+{% include "_modal-select-product.html" %}
 
 {% endblock %}
 

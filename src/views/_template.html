@@ -568,6 +568,18 @@
             $('#page-form').toggleClass('slds-hide');
         });
 
+        $('.select-product, .hide-select-product').click(function() {
+            $('#select-product').toggleClass('slds-hide');
+        });
+
+        $('.hide-select-product').click(function() {
+            $('#sidebar2, #product-tile').toggleClass('slds-hide');
+        });
+
+        $('.select-product').click(function() {
+            $('.component-select').toggleClass('slds-hide');
+        });
+
         $('.trigger-add, .js-close-modal').click(function() {
             $('#add-table-entry').toggleClass('slds-hide');
         });
@@ -597,7 +609,6 @@
             $(event.target).closest('.slds-dropdown-trigger').toggleClass('slds-is-open');
             $('.component-placeholder').toggleClass('slds-hide');
             $('.component-select').toggleClass('slds-hide');
-
         });
 
         $('.hide_component').click(function() {

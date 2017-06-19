@@ -1,0 +1,31 @@
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
+{
+  "recordTitle": "Record Title",
+  "products": [{"name":"Wikido","sku":"3542007519271955","category":"Klein, Windler and Larson","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$186.57"},
+{"name":"Quinu","sku":"3535889719644761","category":"Schmitt, Zulauf and Erdman","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$179.57"},
+{"name":"Realmix","sku":"5610015711406990","category":"Orn-Hilll","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$125.72"},
+{"name":"Realmix","sku":"5641820717976045180","category":"Wintheiser LLC","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$128.64"},
+{"name":"Jayo","sku":"3585002467990829","category":"Leannon Inc","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$179.48"},
+{"name":"Devbug","sku":"5100172170611821","category":"Schimmel and Sons","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$105.41"},
+{"name":"Buzzster","sku":"676757463628928329","category":"McLaughlin, Hilpert and Harber","img":"http://dummyimage.com/100x100.png/5fa2dd/ffffff","price":"$174.23"},
+{"name":"Fadeo","sku":"564182161586637774","category":"Strosin, Bergstrom and Labadie","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$98.48"},
+{"name":"Edgewire","sku":"3539042483649832","category":"Eichmann LLC","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$137.42"},
+{"name":"Voomm","sku":"3529058603793484","category":"Runolfsson Group","img":"http://dummyimage.com/100x100.png/5fa2dd/ffffff","price":"$130.88"},
+{"name":"Vidoo","sku":"201517264647553","category":"Reichel-Terry","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$45.00"},
+{"name":"Yadel","sku":"3556682468402869","category":"Jacobs LLC","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$7.03"},
+{"name":"Chatterpoint","sku":"5602240472629800","category":"Fisher-Denesik","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$149.56"},
+{"name":"Janyx","sku":"201849763448229","category":"Jaskolski, Dietrich and Bechtelar","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$125.01"},
+{"name":"Trudeo","sku":"3538620364358515","category":"Ortiz Inc","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$64.58"},
+{"name":"Lazz","sku":"5602252485961039","category":"Nienow LLC","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$138.70"},
+{"name":"Bluejam","sku":"6763742458166999","category":"Hane-Murray","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$142.43"},
+{"name":"Rooxo","sku":"3554504265460563","category":"Bradtke, Reilly and Nikolaus","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$110.31"},
+{"name":"Topicware","sku":"6761757749699840","category":"Pacocha, Hoppe and Romaguera","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$93.94"},
+{"name":"Mynte","sku":"3546597307174284","category":"Heidenreich Inc","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$56.76"},
+{"name":"Linklinks","sku":"4175000615842482","category":"Koelpin, Daugherty and Gleason","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$106.61"},
+{"name":"Midel","sku":"3530685374301563","category":"Little Inc","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$128.89"},
+{"name":"Trilith","sku":"5100177748166182","category":"Kirlin, Fisher and Konopelski","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$76.67"},
+{"name":"Teklist","sku":"3554991362020608","category":"Rempel, Ratke and Rice","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$87.22"},
+{"name":"Oloo","sku":"3577201206462799","category":"Lynch, McGlynn and Luettgen","img":"http://dummyimage.com/100x100.png/5fa2dd/ffffff","price":"$71.22"}]
+}
