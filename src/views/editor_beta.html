@@ -9,17 +9,20 @@
 <!--
   Extend the global template
 -->
-{% extends "_template.html" %}
+{% extends "_template-beta.html" %}
 
 <!--
   Page content (gets injected into the template)
 -->
 {% block content %}
-{% include "_page-header-filtered.html" %}
-
-
-
+{% include "_page-header_beta.html" %}
 {% include "_include_component_details.html" %}
+
+
+
+
+
+
 
 
 <div class="page_content">
@@ -125,7 +128,7 @@
             </div>        
         <!-- /CUSTOMER GROUPS SELECT -->
       </div>      
-      <div class="slds-col slds-p-horizontal_small">
+      <div class="slds-col slds-p-horizontal_small slds-hide">
         <!-- DATE SELECT -->
           <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed">
             <label class="slds-form-element__label" for="date-input-id">Page is visible</label>
@@ -340,12 +343,110 @@
     </div>
     <!-- /TOP SECTION -->
     
-
     <div class="slds-grid">
-        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_1-of-12 slds-border_right">tools</div>
-        <div class="slds-col slds-size_1-of-3 slds-medium-size_4-of-6 slds-large-size_8-of-12">
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_2-of-12 slds-border_right 2slds-panel slds-m-right_none" style="min-height:800px">
+
+          <div class="slds-grid">
+            <div class="slds-col slds-p-around_medium slds-text-align_center"  id="tab_menu_components">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#puzzle"></use>
+                </svg>
+            </div>
+            <div class="slds-col slds-p-around_medium background_inactive slds-text-align_center"  id="tab_menu_navigator">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#summary"></use>
+                </svg>
+            </div>
+          </div>
+          <!-- TOOLS AREA -->
+            <div class="init slds-p-around_small 2slds-panel" id="menu_components">
+              <!-- COMPONENTS -->
+                <div class="slds-p-bottom_small">
+                    <span class="slds-media slds-listbox__option slds-listbox__option_plain">
+                    <h3 class="slds-text-title_caps" role="presentation">Media Components</h3>
+                    </span>                          
+                </div>
+                <div id="text1" class="block slide">
+                    <!-- SMALL -->
+                    <div class="small slds-p-around_small">
+                            <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                            <svg class="slds-icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Description of icon</span>
+                            </span>
+                            <span class="slds-truncate" title="Table View">Simple Banner</span>
+                    </div>
+                    <!-- /SMALL -->
+                    <!-- LARGE -->              
+                    <div class="slds-hide large slds-p-around_small slds-grid">        
+                        <div class="slds-col">
+                            <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                <svg class="slds-icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Description of icon</span>
+                            </span>
+                            <span class="slds-truncate" title="Table View">Simple Banner</span>
+                        </div>
+                        <div class="slds-col_bump-left">
+                            <div class="slds-button-group" role="group">
+                            <button class="slds-button slds-button_icon slds-button_icon-border" aria-pressed="false" title="Edit" id="edit_this">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Edit A</span>
+                            </button>
+                            <button class="slds-hide slds-button slds-button_icon slds-button_icon-border" aria-pressed="false" title="Copy">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#copy"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Duplicate</span>
+                            </button>
+                            <button class="slds-button slds-button_icon slds-button_icon-more delete_component" aria-haspopup="true" title="Delete">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Provide description of action</span>
+                            </button>
+                            </div>            
+                        </div>            
+
+                    </div>
+                    <!-- /LARGE -->                            
+                    <!-- CONTENT -->              
+                    <div class="slds-hide content image slds-p-around_small slds-grid">
+                    </div>
+                    <!-- /CONTENT -->
+                </div>
+              <!-- /COMPONENTS -->
+            </div>
+            <div class="init slds-p-around_small 2slds-panel slds-hide" id="menu_navigator">
+              <!-- NAVIGATOR -->
+                <div id="tab-default-2" class="slds-tabs_default__content slds-hide slds-show dom-tree" role="tabpanel" aria-labelledby="tab-default-2__item">
+                    <ul>
+                        <li class="ui-block slds-theme_shade slds-box slds-box_x-small">Body</li>
+                        <ul class="slds-is-nested">
+                            <li class="ui-block slds-theme_shade slds-box slds-box_x-small slds-m-top_small">Text Block</li>
+                        </ul>    
+                    </ul>
+                </div>
+              <!-- /NAVIGATOR -->
+            </div>
+          <!-- /TOOLS AREA -->  
+
+        </div>
+
+
+
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_5-of-6 slds-large-size_10-of-12">
             <!-- REGION 1 -->
             <div class="slds-grid slds-border_bottom slds-m-top_none region" id="Region_1">
+              <div class="region_marker"><span class="slds-p-around_small slds-text-body_small">Region 1</span></div>
+                <div class="list slds-col slds-border-top slds-border-left slds-border-right slds-border-bottom"></div>
+                <div id="helper"></div>
+
+            {#
             <div class="slds-col slds-align_absolute-center slds-m-around_none">
                 <div class="slds-context-bar__icon-action slds-dropdown-trigger slds-dropdown-trigger--click  slds-p-around_medium" aria-expanded="true">
                     <button class="slds-button slds-button--icon-container slds-button_icon-border slds-button_icon-border-filled" aria-haspopup="true" title="Add Component" id="Region_1_Add">
@@ -409,12 +510,18 @@
                     </div>
                 </div>      
             </div>
+            #}
             </div>
             <!-- /REGION 1 -->
 
             <!-- REGION 2 -->
-            <div class="slds-grid slds-border_bottom slds-m-top_none region" id="Region_1">
-            <div class="slds-col slds-align_absolute-center slds-m-around_none">
+            <div class="slds-grid slds-border_bottom slds-m-top_none region" id="Region_2">
+              <div class="region_marker"><span class="slds-p-around_small slds-text-body_small">Region 2</span></div>
+                <div class="list slds-col slds-border-top slds-border-left slds-border-right slds-border-bottom"></div>
+                <div id="helper"></div>
+
+            {#
+            <div class="slds-col slds-align_absolute-center slds-m-around_none">            
                 <div class="slds-context-bar__icon-action slds-dropdown-trigger slds-dropdown-trigger--click  slds-p-around_medium" aria-expanded="true">
                     <button class="slds-button slds-button--icon-container slds-button_icon-border slds-button_icon-border-filled" aria-haspopup="true" title="Add Component" id="Region_1_Add">
                         <svg class="slds-button__icon" aria-hidden="true">
@@ -477,10 +584,11 @@
                     </div>
                 </div>      
             </div>
+            #}
             </div>
             <!-- /REGION 2 -->
         </div>
-        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_3-of-12 slds-border_left  ">settings</div>
+        <!-- div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_3-of-12 slds-panel slds-border_left slds-theme_shade"></div -->
     </div>
 
   <!-- iframe src="http://puma.com/de/de/select/stampd" width="100%" height="100%" style="border: 0; height: calc(100vh - 195px); pointer-events: none;"></iframe -->
@@ -516,8 +624,86 @@
 
 }
 
+.ui-draggable-helper{
+
+}
+
+
+.block.ui-draggable.ui-draggable-handle.block_dropped {
+    background: #fff;
+    /*border: 1px dashed blue;*/
+    border-bottom: 1px dashed #d8edff;
+}
+
+
+.ui-sortable-helper {
+  transition: none !important;
+  animation: pulse 0.4s alternate infinite;
+}
+
+.sortable-placeholder {
+  height: 60px;
+  width: 5px;
+  border-left: 2px solid #4999DA; 
+  margin: 0 0 0.75rem 0;
+  position: relative;
+  z-index: 6;
+}
+
+@keyframes pulse {
+  100% { transform: scale(1.1); } 
+}
+
+.cloned-slides {
+  .slide {
+    position: absolute;
+    z-index: 1;
+    &:before {
+      content: attr(data-pos);
+    }
+  }
+}
+.content .image{
+  min-height: 120px;
+  background:yellow;
+}
+
+#menu_components:hover,
+#menu_navigator:hover{
+  cursor:pointer;
+}
+
+
+.region_marker{
+    position: absolute;
+    z-index: 1000;
+    background: #0070d2;
+    padding: 3px;
+    color: #fff;
+    opacity: 0.5;
+    left: 55%;
+}
+
+.background_inactive{
+  background: #e0e5ee;
+}
+
+
+.list{
+  min-height: 50px;
+}
+
+
+.component-menu{
+  position:absolute;
+  margin-left: 49%;
+  z-index:10000;
+}
 
 </style>
+
+
+
 
 
 {% endblock %}

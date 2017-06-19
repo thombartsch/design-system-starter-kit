@@ -544,165 +544,11 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-
-        $('.app-trigger').click(function() {
-            $(this).toggleClass('slds-is-open');
-        });
-
-        $('#app-switch-trigger').click(function() {
-            $('#app-switch').toggleClass('slds-hide');
-            new Tether({
-                element: '#app-switch',
-                target: '#app-switch-trigger',
-                attachment: 'top left',
-                targetAttachment: 'bottom left',
-                targetOffset: '0 0',
-                constraints: [{
-                    to: 'window',
-                    attachment: 'target',
-                    pin: true
-                }]
-            });
-        });
-
-        $('.trigger-edit, .js-close-modal-2').click(function() {
-            //$('#edit-table-entry').toggleClass('slds-hide');
-            $('#page-form').toggleClass('slds-hide');
-        });
-
-        $('.select-product, .hide-select-product').click(function() {
-            $('#select-product').toggleClass('slds-hide');
-        });
-
-        $('.hide-select-product').click(function() {
-            $('#sidebar2, #product-tile').toggleClass('slds-hide');
-        });
-
-        $('.hide-product-panel').click(function() {
-            $('#sidebar2').toggleClass('slds-hide');
-        });
-
-        $('.select-product').click(function() {
-            $('.component-select').toggleClass('slds-hide');
-        });
-
-        $('.trigger-add, .js-close-modal').click(function() {
-            $('#add-table-entry').toggleClass('slds-hide');
-        });
-
-        $('#page-settings-trigger, .js-close-modal-4').click(function() {
-            $('#page-settings').toggleClass('slds-hide');
-        });
-
-        $('.delete-trigger, .js-close-modal-3').click(function() {
-            $('#page-delete').toggleClass('slds-hide');
-        });
-
-        $('#trigger-phone').click(function() {
-            $('.page-content').css('max-width', '320px');
-        });
-
-        $('#trigger-tablet').click(function() {
-            $('.page-content').css('max-width', '800px');
-        });
-
-        $('#trigger-desktop').click(function() {
-            $('.page-content').css('max-width', '100%');
-        });
-
-        $('.show_component').click(function() {
-            $('#sidebar').toggleClass('slds-hide');
-            $(event.target).closest('.slds-dropdown-trigger').toggleClass('slds-is-open');
-            $('.component-placeholder').toggleClass('slds-hide');
-            $('.component-select').toggleClass('slds-hide');
-        });
-
-        $('.hide_component').click(function() {
+        $('.delete_component').click(function() {
             $('#sidebar').toggleClass('slds-hide');
         });
 
-        $('.component-plus').click(function() {
-            $('.component-select').toggleClass('slds-hide');
-        });
-
-
-        $('.add_component').click(function() {
-            $('.component-in-page').removeClass('slds-hide');
-            $('.component-placeholder').toggleClass('slds-hide');
-        });
-
-        $('.remove_component').click(function() {
-            $('.component-in-page').addClass('slds-hide');
-        });
-
-
-        $('#tab-1').click(function() {
-            $('#tab-1').removeClass('slds-is-active');
-            $('#tab-2').removeClass('slds-is-active');
-            $('#tab-3').removeClass('slds-is-active');
-
-            $('#tab-1').addClass('slds-is-active');
-
-            $('#tab-default-1').removeClass('slds-show');
-            $('#tab-default-2').removeClass('slds-show');
-            $('#tab-default-3').removeClass('slds-show');
-
-            $('#tab-default-1').addClass('slds-show');
-            $('#tab-default-2').addClass('slds-hide');
-            $('#tab-default-3').addClass('slds-hide');
-        });
-
-        $('#tab-2').click(function() {
-            $('#tab-1').removeClass('slds-is-active');
-            $('#tab-2').removeClass('slds-is-active');
-            $('#tab-3').removeClass('slds-is-active');
-
-            $('#tab-2').addClass('slds-is-active');
-
-            $('#tab-default-1').removeClass('slds-show');
-            $('#tab-default-2').removeClass('slds-show');
-            $('#tab-default-3').removeClass('slds-show');
-
-            $('#tab-default-1').addClass('slds-hide');
-            $('#tab-default-2').addClass('slds-show');
-            $('#tab-default-3').addClass('slds-hide');
-        });
-
-        $('#tab-3').click(function() {
-            $('#tab-1').removeClass('slds-is-active');
-            $('#tab-2').removeClass('slds-is-active');
-            $('#tab-3').removeClass('slds-is-active');
-
-            $('#tab-3').addClass('slds-is-active');
-
-            $('#tab-default-1').removeClass('slds-show');
-            $('#tab-default-2').removeClass('slds-show');
-            $('#tab-default-3').removeClass('slds-show');
-
-            $('#tab-default-1').addClass('slds-hide');
-            $('#tab-default-2').addClass('slds-hide');
-            $('#tab-default-3').addClass('slds-show');
-        });
-
-        $('.component-edit').click(function() {
-            $('#sidebar').toggleClass('slds-hide');
-            $('.flyout').toggleClass('slds-hide');
-            //$('.component-placeholder').toggleClass('slds-hide');
-        });
-
-        $('.component-delete').click(function() {
-            $('#sidebar').toggleClass('slds-hide');
-            $('.flyout').toggleClass('slds-hide');
-        });
-
-        $(".component-placeholder").hover(function(){
-            $('.flyout').toggleClass('slds-hide');
-                },function(){
-            $('.flyout').toggleClass('slds-hide');
-        });
-
-
-        //->drag drop editor
+        //drag drop editor
         $( '.init .block' ).draggable({
             helper: 'clone',
             connectToSortable: '.list'
@@ -720,31 +566,24 @@
             },
             beforeStop: function (event, ui) { 
                 newItem = ui.item;
-            }
+            }            
         });
-        //<-drag drop editor
 
-        //->tab menu left
+        //tab menu left
         $('#tab_menu_components').click(function() {
-            $('#tab_menu_components').toggleClass('slds-panel');
-            $('#tab_menu_navigator').toggleClass('slds-panel');
+            $('#tab_menu_components').toggleClass('background_inactive');
+            $('#tab_menu_navigator').toggleClass('background_inactive');
             $('#menu_components').toggleClass('slds-hide');
             $('#menu_navigator').toggleClass('slds-hide');
             
         });
         $('#tab_menu_navigator').click(function() {
-            $('#tab_menu_components').toggleClass('slds-panel');
-            $('#tab_menu_navigator').toggleClass('slds-panel');
+            $('#tab_menu_components').toggleClass('background_inactive');
+            $('#tab_menu_navigator').toggleClass('background_inactive');
             $('#menu_components').toggleClass('slds-hide');
-            $('#menu_navigator').toggleClass('slds-hide');
+            $('#menu_navigator').toggleClass('slds-hide');            
         });
        //<- tab menu left 
-
-
-
-
-
-
 
     });
     </script>
