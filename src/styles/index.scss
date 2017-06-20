@@ -47,5 +47,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 .page-content {
   transform: translate3d(0,0,0);
   transition: max-width .5s;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
