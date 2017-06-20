@@ -578,6 +578,14 @@
             $('#sidebar2, #product-tile').toggleClass('slds-hide');
         });
 
+        $('#product-tile').click(function() {
+            $('#sidebar2').toggleClass('slds-hide');
+        });
+
+
+
+
+
         $('.hide-product-panel').click(function() {
             $('#sidebar2').toggleClass('slds-hide');
         });
@@ -742,8 +750,34 @@
 
 
 
+    //show banner select
+        $('.select-banner-simple, .hide-banner-simple').click(function() {
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
+            $('.component-select').toggleClass('slds-hide');
+            $('#banner-simple-placeholder').toggleClass('slds-hide');
+        });
+
+        $('.hide-banner-panel').click(function() {
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
+        });
+
+        $('#banner-simple').click(function() {
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
+        });
 
 
+        $('#add_banner, #reselect-banner-simple').click(function() {
+            $('.banner-plus').toggleClass('slds-hide');
+            $('.banner-done').toggleClass('slds-hide');
+            $('#banner-simple-placeholder').toggleClass('slds-hide');
+            $('#banner-simple').toggleClass('slds-hide');
+        });
+
+    //sortable
+    $(".sortable").sortable({
+        containment: "parent",
+        placeholder: "ui-state-highlight"
+    });
 
 
     });

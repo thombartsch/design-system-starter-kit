@@ -19,6 +19,7 @@
 
 {% include "_include_component_details.html" %}
 {% include "_sidebar-product-tile.html" %}
+{% include "_sidebar-banner-simple.html" %}
 
 
 <div class="page_content">
@@ -124,7 +125,7 @@
             </div>
         <!-- /CUSTOMER GROUPS SELECT -->
       </div>
-      <div class="slds-col slds-p-horizontal_small">
+      <div class="slds-col slds-p-horizontal_small slds-hide">
         <!-- DATE SELECT -->
           <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed">
             <label class="slds-form-element__label" for="date-input-id">Page is visible</label>
@@ -341,9 +342,10 @@
 
 <div class="page-content">
        {% include "_placeholder-product-tile.html" %}
+       {% include "_placeholder-banner-simple.html" %}
 
     <!-- REGION 1 -->
-    <div class="slds-grid slds-wrap slds-grid_pull-padded slds-border_bottom slds-m-top_none" id="Region_1">
+    <div class="slds-grid slds-wrap slds-grid_pull-padded slds-border_bottom slds-m-top_none sortable" id="Region_1">
         <div class="slds-p-horizontal_small slds-size_1-of-1 slds-hide component-placeholder">
         <!-- FLYOUT -->
         <div class="flyout slds-hide slds-grid slds-wrap slds-grid_pull-padded  slds-grid_align-center slds-p-around_medium slds-align_absolute-center">
@@ -473,7 +475,7 @@
                     <span class="slds-text-title_caps">Banners</span>
                   </li>
                   <li class="slds-dropdown__item" role="presentation">
-                    <a href="javascript:void(0);" class="show_component" role="menuitem" class="show_component"  tabindex="0">
+                    <a href="javascript:void(0);" role="menuitem" class="select-banner-simple"  tabindex="0">
                       <span class="slds-truncate" title="Table View">Simple Banner</span>
                       <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
@@ -616,6 +618,13 @@
   background: rgba(255,255,255,0.9);
   border-radius: 4px;
   min-width:200px;
+}
+
+
+#banner-simple:hover,
+#product-tile:hover{
+  border:1px dashed blue;
+  cursor: pointer;
 }
 
 </style>
