@@ -539,10 +539,10 @@
             $('#einstein-modal').toggleClass('slds-hide');
         });
 
-        $('#value-trigger').click(function() {
+        $('.value-trigger').click(function() {
             $(this).toggleClass('is-disabled');
-            $("#value-trigger .slds-icon").toggleClass('rotate-45');
-            $("#gain-value").toggleClass('new');
+            $(this).find(".slds-icon").toggleClass('rotate-45');
+            // $("#gain-value").toggleClass('new');
         });
 
        $('.filter-trigger').click(function() {

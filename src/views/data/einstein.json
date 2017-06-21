@@ -5,64 +5,74 @@
   "recordTitle": "Record Title",
   "dictionaries":
   [{
-  "group": "sodales sed",
+  "group": "jumpsuit, onepiece, onesies, onsie, ramper, romper, rompers, rumpbers, rumper, rumpors",
   "type": "Synonym",
+  "date": "02.06.17",
   "gain": 15,
   "locale":"English (United States)",
   "change": "+3"
 }, {
-  "group": "nulla quisque arcu libero rutrum",
+  "group": "aubergine, eggplant, grape, lavendar, lavendar, lig, lilac, lilas, plum, purpe, purple, puyple, reddish blue, violet",
   "gain": 29,
   "locale":"Default",
   "type": "Synonym",
+  "date": "02.06.17",
   "change": "+2"
 }, {
-  "group": "a",
+  "group": "knee high, knee high, over the knee, over the knee",
   "gain": 17,
   "type": "Synonym",
   "locale":"Chinese",
+  "date": "02.08.17",
   "change": "+4"
 }, {
-  "group": "morbi a ipsum integer a nibh",
+  "group": "browm, brown, chocolate, coffee, cognac, marron",
   "gain": 30,
   "type": "Synonym",
   "change": "+1",
+  "date": "02.08.17",
   "locale":"Dutch"
 }, {
-  "group": "erat fermentum justo nec condimentum neque",
+  "group": "kiks, seankers, sneaker, sneakers, snecker, sneeker, sneekers, sneker, snekers, zapatilla",
   "gain": 25,
   "locale":"Italian",
   "type": "Synonym",
+  "date": "02.08.17",
   "change": "+2"
 }, {
-  "group": "amet",
+  "group": "army, cammo, camo, camo, camoflauge, camoflauge, camoflouge, camouflage, camouflauge, camuflage",
   "gain": 74,
   "type": "Synonym",
   "locale":"English (Canada)",
+  "date": "02.08.17",
   "change": "+1"
 }, {
-  "group": "odio condimentum id luctus",
+  "group": "laether, leather, lether, pleather",
   "gain": 20,
   "type": "Synonym",
   "locale":"English",
+  "date": "02.08.17",
   "change": "+3"
 }, {
-  "group": "vivamus in felis eu",
+  "group": "fucha, fucshia, fuschia, fuschia, fuscia, fushia, magenta, pink",
   "gain": 17,
   "type": "Synonym",
   "locale":"Default",
+  "date": "02.08.17",
   "change": "+2"
 }, {
-  "group": "lacus curabitur at ipsum ac",
+  "group": "caci, kahki, kaki, khacki, khaki, tan",
   "gain": 1,
   "type": "Synonym",
   "locale":"Default",
+  "date": "02.08.17",
   "change": "+3"
 }, {
-  "group": "mauris lacinia sapien quis libero nullam",
+  "group": "chanclas, dandals, sadals, samdals, sandal, sandalias, sandals, sandel, sandels, sandlas, sandle, sandles",
   "gain": 31,
   "type": "Synonym",
   "locale":"Default",
+  "date": "02.08.17",
   "change": "+4"
 }]
 }

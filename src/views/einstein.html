@@ -12,9 +12,7 @@
 <!--
   Page content (gets injected into the template)
 -->
-{% block content %}
-{% include "_page-header-einstein.html" %}
-
+{% block content %} {% include "_page-header-einstein.html" %}
 <div class="content-frame-container slds-grow">
     <div class="content-frame">
         <div class="slds-grid slds-scrollable_y">
@@ -33,6 +31,18 @@
                                         </label>
                                         </span>
                                     </div>
+                                </th>
+                                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width:9em;">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                                        <span class="slds-assistive-text">Sort </span>
+                                        <span class="slds-truncate" title="Name">Added</span>
+                                        <div class="slds-icon_container">
+                                            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                    </a>
                                 </th>
                                 <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
                                     <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
@@ -90,7 +100,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="slds-hint-parent">
+                            <tr class="slds-hint-parent is-new">
                                 <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
                                     <span class="slds-checkbox">
           <input type="checkbox" name="options" id="id-">
@@ -100,8 +110,11 @@
                                     </label>
                                     </span>
                                 </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
+                                </td>
                                 <td scope="row">
-                                    <div class="slds-truncate trigger-einstein-detail" title="test.adidas.de"><a href="javascript:void(0);">vivamus in felis eu</a></div>
+                                    <div class="slds-truncate trigger-einstein-detail" title="test.adidas.de"><a href="javascript:void(0);">avocado, emerald, forest, green, jade, lime, limegreen, mint, mint, moss, olive, sage, seafoam, seafom, verde</a></div>
                                 </td>
                                 <td role="gridcell">
                                     <div class="slds-truncate" title="Gibberish">Synonym</div>
@@ -137,7 +150,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="slds-hint-parent">
+                            <tr class="slds-hint-parent is-new">
                                 <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
                                     <span class="slds-checkbox">
           <input type="checkbox" name="options" id="id-">
@@ -147,8 +160,11 @@
                                     </label>
                                     </span>
                                 </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
+                                </td>
                                 <td scope="row">
-                                    <div class="slds-truncate trigger-einstein-detail" title="test.adidas.de"><a href="javascript:void(0);">viva in felis eu</a></div>
+                                    <div class="slds-truncate trigger-einstein-detail" title="test.adidas.de"><a href="javascript:void(0);">babies, baby, infant, infants, newborn, newborns</a></div>
                                 </td>
                                 <td role="gridcell">
                                     <div class="slds-truncate" title="Gibberish">Synonym</div>
@@ -195,6 +211,9 @@
                                     </label>
                                     </span>
                                 </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="{{ dictionary.date }}">{{ dictionary.date }}</div>
+                                </td>
                                 <td scope="gridcell">
                                     <div class="slds-truncate trigger-einstein-detail" title="{{ dictionary.group }}"><a href="javascript:void(0);">{{ dictionary.group }}</a></div>
                                 </td>
@@ -237,15 +256,12 @@
                     </table>
                 </div>
             </div>
-                <div id="filtersection" class="slds-hide">
-                    <div class="slds-scrollable_y">
-                        {% include "_filter.html" %}
-                    </div>
+            <div id="filtersection" class="slds-hide">
+                <div class="slds-scrollable_y">
+                    {% include "_filter.html" %}
                 </div>
+            </div>
         </div>
     </div>
 </div>
-
-{% include "_modal-einstein.html" %}
-{% include "_popover-filter.html" %}
-{% endblock %}
+{% include "_modal-einstein.html" %} {% include "_popover-filter.html" %} {% endblock %}
