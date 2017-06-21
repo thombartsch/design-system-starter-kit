@@ -1,36 +1,30 @@
 //
 // Prototype styles (using the Sass CSS preprocessor)
 //
-
 //
 // First, we're importing the design system from the npm package
 //
 $static-font-path: '/assets/fonts/webfonts';
-
 $color-background-context-bar-brand-accent: rgb(132, 189, 0);
-
 @import 'node_modules/@salesforce-ux/design-system/scss/index';
-
 //
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
 @import 'footer';
 @import 'layout';
-
 //
 // We can also add styles directly in this file, like so:
 //
-
 // Push down the global navigation below the header using a placeholder element
 .app-header-placeholder {
-  // A note on Design Tokens in Sass:
-  //
-  // $height-header is a Sass variable pointing to a Design Token
-  // Design tokens are listed at:
-  // https://www.lightningdesignsystem.com/design-tokens/
-  //
-  // This is how you leverage Design Tokens in Sass:
-  height: $height-header;
+    // A note on Design Tokens in Sass:
+    //
+    // $height-header is a Sass variable pointing to a Design Token
+    // Design tokens are listed at:
+    // https://www.lightningdesignsystem.com/design-tokens/
+    //
+    // This is how you leverage Design Tokens in Sass:
+    height: $height-header;
 }
 
 // Wrap the prototype in a scrollable container
@@ -43,11 +37,83 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 //   right: 0;
 //   left: 0;
 // }
-
 .page-content {
-  transform: translate3d(0,0,0);
-  transition: max-width .5s;
-  margin: 0 auto;
-  background-color: #fff;
+    transform: translate3d(0, 0, 0);
+    transition: max-width .5s;
+    margin: 0 auto;
+    background-color: #fff;
 }
 
+.sidebar {
+    z-index: 100;
+    /*background: #fff;*/
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30%;
+    height: 100%;
+    min-width: 300px;
+    /*box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.16);*/
+}
+
+.sidebar div.slds-panel {
+    height: 100%;
+}
+
+.component-placeholder:hover {}
+
+.flyout {
+    z-index: 10;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+.popmenu {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.menu-border {
+    border: 1px dashed #0070d2;
+    /*cursor: pointer;*/
+}
+
+
+/*mini menu for widget*/
+
+.mini-menu svg {
+    fill: #fff;
+}
+
+.mini-menu {
+    background: #0070d2;
+    border-radius: 0 0 4px 4px;
+}
+
+
+/* drag drop placeholder*/
+
+.test-placeholder {
+    border: 1px solid #ccc;
+    visibility: visible !important;
+    background-color: #eee;
+    /* sorting */
+    .sort-stop .slide {
+        transition: none; //prevent slide transition at end
+    }
+    .sorting .sortable-placeholder {
+        transition: height 0.3s linear; //compensate slide transition at begin
+        height: 0px;
+    }
+    .sortable-placeholder {
+        height: 60px;
+    }
+    .slide.ui-sortable-helper {
+        transition: none;
+    }
+    .sortable-placeholder ~ .slide:not(.ui-sortable-helper) {
+        transform: translateY(60px);
+    }
+}
