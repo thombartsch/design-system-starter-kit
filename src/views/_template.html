@@ -583,9 +583,6 @@
         });
 
 
-
-
-
         $('.hide-product-panel').click(function() {
             $('#sidebar2').toggleClass('slds-hide');
         });
@@ -732,6 +729,65 @@
         });
         //<-drag drop editor
 
+/*
+        $('.page-content').sortable({
+            items: '.draggable',
+            axis: 'y',
+            revert: true,
+            scroll: false,
+            placeholder: 'sortable-placeholder',
+            cursor: 'move'
+        });
+        $('.page-content .draggable').disableSelection();        
+*/
+
+        // sorting 1
+
+        $('.page-content').sortable({
+            axis: 'y',
+            cursor: 'row-resize',
+            opacity: 0.5,
+            placeholder: 'test-placeholder',
+            over: function() {
+            $('.test-placeholder').stop().animate({
+                height: 0
+            }, 400);
+            },
+            change: function() {
+            $('.test-placeholder').stop().animate({
+                height: 50
+            }, 400);
+            }
+        });
+        //
+
+        // sorting 2
+        /*
+        var slides = $('.page-content')
+        slides.sortable({
+        axis:'y',
+        revert: 300,
+        placeholder: 'sortable-placeholder',
+        cursor: 'move',
+        tolerance:'pointer',
+        start: function(){
+            slides.addClass('sorting');
+        },
+        stop: function(){
+            slides
+            .addClass('sort-stop')
+            .removeClass('sorting');
+            setTimeout(function(){
+            slides.removeClass('sort-stop'); //:( ugly hack
+            }, 310);
+        }
+        });
+        */        
+        //
+
+
+
+
         //->tab menu left
         $('#tab_menu_components').click(function() {
             $('#tab_menu_components').toggleClass('slds-panel');
@@ -749,19 +805,41 @@
        //<- tab menu left 
 
 
+    //show textbox
+        $('.select-textbox, .hide-textbox').click(function() {
+            $('.component-select').toggleClass('slds-hide');
+            $('#sidebar-textbox').toggleClass('slds-hide');
+            $('#textbox-placeholder').toggleClass('slds-hide');
+        });
+
+        $('.hide-textbox-panel').click(function() {
+            $('#sidebar-textbox').toggleClass('slds-hide');
+        });
+
+
+        $('#textinputA').click(function() {
+            $('#textbox-placeholder').toggleClass('slds-hide');
+            $('#textbox-content').toggleClass('slds-hide');
+
+            $('#textinputA').on('keyup', function(e) {
+                //$('#textoutputA').text('hier der string');
+                $('#textoutputA').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textinputA').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+            });
+                
+
+        });
+        
+
 
     //show banner select
         $('.select-banner-simple, .hide-banner-simple').click(function() {
-            $('#sidebar-banner-simple').toggleClass('slds-hide');
             $('.component-select').toggleClass('slds-hide');
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
             $('#banner-simple-placeholder').toggleClass('slds-hide');
         });
 
         $('.hide-banner-panel').click(function() {
-            $('#sidebar-banner-simple').toggleClass('slds-hide');
-        });
-
-        $('#banner-simple').click(function() {
             $('#sidebar-banner-simple').toggleClass('slds-hide');
         });
 
@@ -770,14 +848,131 @@
             $('.banner-plus').toggleClass('slds-hide');
             $('.banner-done').toggleClass('slds-hide');
             $('#banner-simple-placeholder').toggleClass('slds-hide');
-            $('#banner-simple').toggleClass('slds-hide');
+            $('#banner-simple-content').toggleClass('slds-hide');
         });
 
-    //sortable
-    $(".sortable").sortable({
-        containment: "parent",
-        placeholder: "ui-state-highlight"
-    });
+
+
+        //mini menu - textbox
+        $('#textbox-placeholder .delete').click(function() {                        
+            new Tether({
+            element: '.delete-dialog',
+            //element: '#Region_1',
+            target: '#textbox-placeholder .mini-menu',
+            attachment: 'bottom center',
+            targetAttachment: 'bottom left',
+            targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+            $('#bt-cancel').click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $('#bt-delete').click(function () {
+                $('#sidebar-textbox').removeClass('slds-hide');
+                $('#sidebar-textbox').addClass('slds-hide');
+                $('#textbox-placeholder').toggleClass('slds-hide');            
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+
+
+        $('#textbox-placeholder .edit').click(function() {                        
+            $('#sidebar-textbox').toggleClass('slds-hide');
+        });
+        $('#textbox-content .delete').click(function() {                        
+            new Tether({
+            element: '.delete-dialog',
+            //element: '#Region_1',
+            target: '#textbox-content .mini-menu',
+            attachment: 'bottom center',
+            targetAttachment: 'bottom left',
+            targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+
+            $('#bt-cancel').click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $('#bt-delete').click(function () {
+                $('#sidebar-textbox').removeClass('slds-hide');
+                $('#sidebar-textbox').addClass('slds-hide');
+                $('#textbox-content').toggleClass('slds-hide');                
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+        $('#textbox-content .edit').click(function() {                        
+            $('#sidebar-textbox').toggleClass('slds-hide');            
+        });
+
+        //mini menu - banner
+        $('#banner-simple-placeholder .delete').click(function() {                        
+            new Tether({
+            element: '.delete-dialog',
+            //element: '#Region_1',
+            target: '#banner-simple-placeholder .mini-menu',
+            attachment: 'bottom center',
+            targetAttachment: 'bottom left',
+            targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+            $("#bt-cancel").click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $("#bt-delete").click(function () {
+                $('#sidebar-banner-simple').removeClass('slds-hide');
+                $('#sidebar-banner-simple').addClass('slds-hide');
+                $('#banner-simple-placeholder').toggleClass('slds-hide');            
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+
+
+        $('#banner-simple-placeholder .edit').click(function() {                        
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
+        });
+
+
+        $('#banner-simple-content .delete').click(function() {                        
+            new Tether({
+            element: '.delete-dialog',
+            //element: '#Region_1',
+            target: '#banner-simple-content .mini-menu',
+            attachment: 'bottom center',
+            targetAttachment: 'bottom left',
+            targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+            $("#bt-cancel").click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $("#bt-delete").click(function () {
+                $('#sidebar-banner-simple').removeClass('slds-hide');
+                $('#sidebar-banner-simple').addClass('slds-hide');
+                $('#banner-simple-content').toggleClass('slds-hide');
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+
+        $('#bt-preview').click(function() {                        
+            $('.mini-menu').toggleClass('slds-hide');            
+            $('#banner-simple-placeholder, #banner-simple-content, #product-tile, #textbox-placeholder, #textbox-content').toggleClass('menu-border');
+        });
+
+        //sortable alternativ 
+        /*
+        $('.sortable').sortable({
+            axis: 'y',
+            containment: 'parent' 
+        }).disableSelection();
+        */
+
+        $('bt-preview').click(function() {                        
+            //$('#sidebar-banner-simple').toggleClass('slds-hide');            
+        });
 
 
     });

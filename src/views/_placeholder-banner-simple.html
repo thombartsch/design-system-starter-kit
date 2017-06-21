@@ -1,26 +1,30 @@
-<div class="slds-p-horizontal_none slds-size_1-of-1 slds-hide draggable  slds-theme_shade" id="banner-simple-placeholder">
-        <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap">
-            <div class="slds-size_1-of-1 slds-align_absolute-center">
-                <svg class="slds-button__icon slds-button__icon--large  slds-icon_large" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                </svg>
+<div id="banner-simple" class="draggable">
+    <div class="slds-p-horizontal_none slds-size_1-of-1 slds-hide slds-theme_shade image menu-border" id="banner-simple-placeholder">
+    {% include "_inc-box-menu.html" %}
+            <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap">
+                <div class="slds-size_1-of-1 slds-align_absolute-center">
+                    <svg class="slds-button__icon slds-button__icon--large  slds-icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                    </svg>
+                </div>
+                <div>
+                Simple Banner
+                </div>
+                
             </div>
-            <div>
-            Simple Banner
-            </div>
-            
-        </div>
-</div>
-<div class="slds-p-horizontal_none slds-size_1-of-1 slds-hide" id="banner-simple">
-    <!-- PLACEHOLDER -->
-    <div class="slds-p-horizontal_small slds-size_1-of-1">
-        <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap">
-            <div class="slds-size_1-of-1 slds-align_absolute-center" style="background:url('https://unsplash.it/1000/200/?random') no-repeat; background-size: 100% 100%; min-height:200px; color: #fff;">
-                <div class="slds-text-body_regular"><h1 class="slds-text-heading--large">Header</h1></div>
-                <hr>
-                <div class="slds-text-body_regular"><h3 class="slds-text-heading--medium">Some basic text in here and so on ...</h3></div>
-            </div>
-        </div>
     </div>
-    <!-- /PLACEHOLDER -->
+    <div class="slds-p-horizontal_none slds-size_1-of-1 slds-hide banner menu-border" id="banner-simple-content">
+    {% include "_inc-box-menu.html" %}
+        <!-- PLACEHOLDER -->
+        <div class="slds-p-horizontal_small slds-size_1-of-1">
+            <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap">
+                <div class="slds-size_1-of-1 2slds-align_absolute-center slds-p-vertical--x-large slds-m-bottom--medium" style="background:url('https://unsplash.it/2000/200/?random') no-repeat; background-size: 100% auto; min-height:200px; color: #fff; text-align: center;">
+                    <h5 class="slds-text-heading--large slds-m-bottom--x-small" style="background: rgba(0,0,0, 0.3)">Heading</h5>
+                    <p class="site-text-heading--label slds-m-top--none" style="background: rgba(0,0,0, 0.3)">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        <!-- /PLACEHOLDER -->
+    </div>
+
 </div>

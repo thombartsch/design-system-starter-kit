@@ -20,6 +20,8 @@
 {% include "_include_component_details.html" %}
 {% include "_sidebar-product-tile.html" %}
 {% include "_sidebar-banner-simple.html" %}
+{% include "_sidebar-textbox.html" %}
+{% include "_inc_modal-delete.html" %}
 
 
 <div class="page_content">
@@ -343,6 +345,7 @@
 <div class="page-content">
        {% include "_placeholder-product-tile.html" %}
        {% include "_placeholder-banner-simple.html" %}
+       {% include "_placeholder-textbox.html" %}
 
     <!-- REGION 1 -->
     <div class="slds-grid slds-wrap slds-grid_pull-padded slds-border_bottom slds-m-top_none sortable" id="Region_1">
@@ -453,7 +456,7 @@
                     <span class="slds-text-title_caps">Text</span>
                   </li>
                   <li class="slds-dropdown__item" role="presentation">
-                    <a href="javascript:void(0);" class="show_component" role="menuitem" class="show_component"  tabindex="0">
+                    <a href="javascript:void(0);" class="select-textbox" role="menuitem" class="show_component"  tabindex="0">
                       <span class="slds-truncate" title="Table View">Rich Text Block</span>
                       <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_color"></use>
@@ -620,12 +623,48 @@
   min-width:200px;
 }
 
-
-#banner-simple:hover,
-#product-tile:hover{
-  border:1px dashed blue;
-  cursor: pointer;
+.menu-border{
+  border:1px dashed #0070d2;
+  /*cursor: pointer;*/
 }
+
+/*mini menu for widget*/
+.mini-menu svg{
+  fill: #fff;
+}
+.mini-menu{
+  background: #0070d2;
+  border-radius: 0 0 4px 4px;
+}
+
+
+/* drag drop placeholder*/
+.test-placeholder {
+    border:1px solid #ccc
+    visibility:visible !important;
+    background-color:#eee;
+
+/* sorting */
+.sort-stop .slide{
+  transition: none; //prevent slide transition at end 
+}
+.sorting .sortable-placeholder{ 
+  transition: height 0.3s linear; //compensate slide transition at begin
+  height: 0px;
+}
+.sortable-placeholder{
+  height: 60px;
+}
+.slide.ui-sortable-helper{
+  transition: none;
+}
+.sortable-placeholder ~ .slide:not(.ui-sortable-helper){
+  transform: translateY(60px);
+}
+
+
+}
+
 
 </style>
 

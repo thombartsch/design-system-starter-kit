@@ -1,0 +1,157 @@
+<!-- COMPONENT DETAILS -->
+<div id="sidebar-textbox" class="sidebar slds-p-around_none slds-m-around_none slds-hide">
+    <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters">
+        <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y slds-grid slds-grid_vertical">
+            <div class="slds-filters">
+                <div class="slds-filters__header slds-grid slds-has-divider_bottom-space">
+                    <h2 class="slds-align-middle slds-text-heading_small">Rich Text</h2>
+                    <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small hide-textbox-panel" title="Close Filter Panel">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#forward"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close Filter Panel</span>
+                    </button>
+                </div>
+                <div class="slds-filters__body">
+                    <div class="slds-p-horizontal_small slds-size_1-of-1">
+                        <div class="slds-tabs_default">
+                            <ul class="slds-tabs_default__nav" role="tablist">
+                                <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation" id="tab-1">
+                                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Content</a>
+                                </li>
+                                <li class="slds-tabs_default__item" title="Item Three" role="presentation" id="tab-3">
+                                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Rules</a>
+                                </li>
+                            </ul>
+                           
+                            <div class="slds-p-top_medium">
+                            <div class="slds-form-element" style="min-height:200px;">
+                                <label class="slds-form-element__label" for="text-input-id-1">Rich Text Box</label>                                
+                                <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
+                                    <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+                                    <ul aria-label="Format text" class="slds-button-group-list">
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="0" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#bold"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Bold</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#italic"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Italic</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#underline"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Underline</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Strike Through</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                    <ul aria-label="Format body" class="slds-button-group-list">
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextbulletedlist"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Bulleted List</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextnumberedlist"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Numbered List</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextindent"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Indent</span>
+                                        </button>
+                                        </li>
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextoutdent"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Outdent</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                    <ul aria-label="Remove Formatting" class="slds-button-group-list">
+                                        <li>
+                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#remove_formatting"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Remove Formatting</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                    <div class="slds-rich-text-editor__textarea slds-grid">
+                                    <div aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow" id="textinputA">Compose text...</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+
+
+                            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
+                                <ul>
+                                    <li class="ui-block slds-theme_shade slds-box slds-box_x-small">Body</li>
+                                    <ul class="slds-is-nested">
+                                        <li class="ui-block slds-theme_shade slds-box slds-box_x-small slds-m-top_small">Text Block</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div id="tab-default-32" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">
+                                <h1>Schedule<h1>
+                                <div class="slds-theme_shade slds-box slds-box_x-small slds-m-bottom_small">
+                                    10.16. 2017 - 12.31. 2017
+                                    MO, TUE, FRI
+                                    11:00 AM - 12:30 PM
+                                </div>
+                                <h1>Show for<h1>
+                                <div class="slds-theme_shade slds-box slds-box_x-small slds-m-bottom_small">Locale: en-US</div>
+                                <div class="slds-theme_shade slds-box slds-box_x-small slds-m-bottom_small">User: is logged in</div>
+                                <div class="slds-theme_shade slds-box slds-box_x-small slds-m-bottom_small">Customer Groups: all</div>
+
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="slds-filters__footer slds-grid slds-shrink-none">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
