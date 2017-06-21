@@ -562,6 +562,10 @@
             $('.slds-item').not('#new-filter').toggleClass('slds-hide');
         });
 
+       $('tr.is-new').click(function() {
+            $(this).removeClass('is-new');
+        });
+
        $('#show-new-filter').click(function() {
             $('#new-filter').toggleClass('slds-hide');
             $('#id-263').toggleClass('slds-hide');
