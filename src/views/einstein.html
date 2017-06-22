@@ -33,19 +33,7 @@
                                         </span>
                                     </div>
                                 </th>
-                                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width:9em;">
-                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
-                                        <span class="slds-assistive-text">Sort </span>
-                                        <span class="slds-truncate" title="Name">Added</span>
-                                        <div class="slds-icon_container">
-                                            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                                            </svg>
-                                        </div>
-                                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
-                                    </a>
-                                </th>
-                                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+                                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width:50%;">
                                     <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
                                         <span class="slds-assistive-text">Sort </span>
                                         <span class="slds-truncate" title="Name">Value Group</span>
@@ -93,6 +81,18 @@
                                         <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
                                     </a>
                                 </th>
+                                <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                                        <span class="slds-assistive-text">Sort </span>
+                                        <span class="slds-truncate" title="Name">Added</span>
+                                        <div class="slds-icon_container">
+                                            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                                    </a>
+                                </th>
                                 <th scope="col" style="width:3.25rem;">
                                     <div class="slds-th__action">
                                         <span class="slds-assistive-text">Actions</span>
@@ -111,9 +111,6 @@
                                     </label>
                                     </span>
                                 </td>
-                                <td role="gridcell">
-                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
-                                </td>
                                 <td scope="row">
                                     <div class="slds-truncate trigger-einstein-detail" title="test.adidas.de"><a href="javascript:void(0);">avocado, emerald, forest, green, jade, lime, limegreen, mint, mint, moss, olive, sage, seafoam, seafom, verde</a></div>
                                 </td>
@@ -125,6 +122,9 @@
                                 </td>
                                 <td role="gridcell">
                                     <div class="slds-truncate" title="Site 2 / en_EN"><span class="slds-text-color_error">-2</span></div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
                                 </td>
                                 <td role="gridcell" style="width:3.25rem;">
                                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
@@ -161,9 +161,6 @@
                                     </label>
                                     </span>
                                 </td>
-                                <td role="gridcell">
-                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
-                                </td>
                                 <td scope="row">
                                     <div class="slds-truncate trigger-einstein-detail-new" title="test.adidas.de"><a href="javascript:void(0);">babies, baby, infant, infants, newborn, newborns</a></div>
                                 </td>
@@ -175,6 +172,9 @@
                                 </td>
                                 <td role="gridcell">
                                     <div class="slds-truncate" title="Site 2 / en_EN"><span>New</span></div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="02.06.17">02.06.17</div>
                                 </td>
                                 <td role="gridcell" style="width:3.25rem;">
                                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
@@ -212,9 +212,6 @@
                                     </label>
                                     </span>
                                 </td>
-                                <td role="gridcell">
-                                    <div class="slds-truncate" title="{{ dictionary.date }}">{{ dictionary.date }}</div>
-                                </td>
                                 <td scope="gridcell">
                                     <div class="slds-truncate trigger-einstein-detail" title="{{ dictionary.group }}"><a href="javascript:void(0);">{{ dictionary.group }}</a></div>
                                 </td>
@@ -226,6 +223,9 @@
                                 </td>
                                 <td role="gridcell">
                                     <div class="slds-truncate" title="{{ dictionary.change }}"><span style="color: #04844b;">{{ dictionary.change }}</span></div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="{{ dictionary.date }}">{{ dictionary.date }}</div>
                                 </td>
                                 <td role="gridcell" style="width:3.25rem;">
                                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
