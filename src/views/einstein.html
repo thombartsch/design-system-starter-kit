@@ -12,7 +12,8 @@
 <!--
   Page content (gets injected into the template)
 -->
-{% block content %} {% include "_page-header-einstein.html" %}
+{% block content %}
+{% include "_page-header-einstein.html" %}
 <div class="content-frame-container slds-grow">
     <div class="content-frame">
         <div class="slds-grid slds-scrollable_y">
@@ -237,7 +238,7 @@
                                         <div class="slds-dropdown slds-dropdown--right">
                                             <ul class="slds-dropdown__list" role="menu">
                                                 <li class="slds-dropdown__item" role="presentation">
-                                                    <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                                                    <a href="javascript:void(0);" role="menuitem" tabindex="0" class="accept-trigger">
                                                         <span class="slds-truncate" title="Menu Item One">Accept</span>
                                                     </a>
                                                 </li>
@@ -267,4 +268,5 @@
 {% include "_modal-einstein.html" %}
 {% include "_modal-einstein-new.html" %}
 {% include "_popover-filter.html" %}
+{% include "_modal-accept.html" %}
 {% endblock %}
