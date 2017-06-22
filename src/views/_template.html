@@ -751,6 +751,7 @@
             axis: 'y',
             cursor: 'row-resize',
             opacity: 0.5,
+            //handle:'div.dragdrop',
             placeholder: 'test-placeholder',
             over: function() {
             $('.test-placeholder').stop().animate({
@@ -834,6 +835,8 @@
 
         });
 
+
+
     //show 3 column textbox
         $('.select-textbox-3, .hide-textbox').click(function() {
             $('.component-select').toggleClass('slds-hide');
@@ -864,6 +867,7 @@
         });
 
 
+
     //show banner select
         $('.select-banner-simple, .hide-banner-simple').click(function() {
             $('.component-select').toggleClass('slds-hide');
@@ -888,12 +892,12 @@
         //mini menu - textbox
         $('#textbox-placeholder .delete').click(function() {
             new Tether({
-            element: '.delete-dialog',
-            //element: '#Region_1',
-            target: '#textbox-placeholder .mini-menu',
-            attachment: 'bottom center',
-            targetAttachment: 'bottom left',
-            targetOffset: '10px -100px'
+                element: '.delete-dialog',
+                //element: '#Region_1',
+                target: '#textbox-placeholder .mini-menu',
+                attachment: 'bottom center',
+                targetAttachment: 'bottom left',
+                targetOffset: '10px -100px'
             });
             $('.delete-dialog').toggleClass('slds-hide');
 
@@ -938,15 +942,73 @@
             $('#sidebar-textbox').toggleClass('slds-hide');
         });
 
-        //mini menu - banner
-        $('#banner-simple-placeholder .delete').click(function() {
+
+
+
+        //mini menu - textbox3
+        $('#textbox-3-placeholder .delete').click(function() {
+            new Tether({
+                element: '.delete-dialog',
+                //element: '#Region_1',
+                target: '#textbox-3-placeholder .mini-menu',
+                attachment: 'bottom center',
+                targetAttachment: 'bottom left',
+                targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+            $('#bt-cancel').click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $('#bt-delete').click(function () {
+                $('#sidebar-textbox-3').removeClass('slds-hide');
+                $('#sidebar-textbox-3').addClass('slds-hide');
+                $('#textbox-3-placeholder').toggleClass('slds-hide');
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+
+
+        $('#textbox-3-placeholder .edit').click(function() {
+            $('#sidebar-textbox-3').toggleClass('slds-hide');
+        });
+        $('#textbox-3-content .delete').click(function() {
             new Tether({
             element: '.delete-dialog',
             //element: '#Region_1',
-            target: '#banner-simple-placeholder .mini-menu',
+            target: '#textbox-3-content .mini-menu',
             attachment: 'bottom center',
             targetAttachment: 'bottom left',
             targetOffset: '10px -100px'
+            });
+            $('.delete-dialog').toggleClass('slds-hide');
+
+
+            $('#bt-cancel').click(function () {
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+            $('#bt-delete').click(function () {
+                $('#sidebar-textbox-3').removeClass('slds-hide');
+                $('#sidebar-textbox-3').addClass('slds-hide');
+                $('#textbox-content-3').toggleClass('slds-hide');
+                $('.delete-dialog').toggleClass('slds-hide');
+            });
+        });
+        $('#textbox-3-content .edit').click(function() {
+            $('#sidebar-textbox-3').toggleClass('slds-hide');
+        });
+
+
+
+        //mini menu - banner
+        $('#banner-simple-placeholder .delete').click(function() {
+            new Tether({
+                element: '.delete-dialog',
+                //element: '#Region_1',
+                target: '#banner-simple-placeholder .mini-menu',
+                attachment: 'bottom center',
+                targetAttachment: 'bottom left',
+                targetOffset: '10px -100px'
             });
             $('.delete-dialog').toggleClass('slds-hide');
 
@@ -966,15 +1028,19 @@
             $('#sidebar-banner-simple').toggleClass('slds-hide');
         });
 
+        $('#banner-simple-content .edit').click(function() {
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
+        });
+
 
         $('#banner-simple-content .delete').click(function() {
             new Tether({
-            element: '.delete-dialog',
-            //element: '#Region_1',
-            target: '#banner-simple-content .mini-menu',
-            attachment: 'bottom center',
-            targetAttachment: 'bottom left',
-            targetOffset: '10px -100px'
+                element: '.delete-dialog',
+                //element: '#Region_1',
+                target: '#banner-simple-content .mini-menu',
+                attachment: 'bottom center',
+                targetAttachment: 'bottom left',
+                targetOffset: '10px -100px'
             });
             $('.delete-dialog').toggleClass('slds-hide');
 
@@ -1006,10 +1072,6 @@
 
         $('bt-preview').click(function() {
             //$('#sidebar-banner-simple').toggleClass('slds-hide');
-        });
-
-        $('#banner-simple-content .edit').click(function() {
-            $('#sidebar-banner-simple').toggleClass('slds-hide');
         });
 
 
