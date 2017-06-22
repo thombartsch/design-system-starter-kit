@@ -834,6 +834,34 @@
 
         });
 
+    //show 3 column textbox
+        $('.select-textbox-3, .hide-textbox').click(function() {
+            $('.component-select').toggleClass('slds-hide');
+            $('#sidebar-textbox-3').toggleClass('slds-hide');
+            $('#textbox-3-placeholder').toggleClass('slds-hide');
+        });
+
+        $('.hide-textbox-3-panel').click(function() {
+            $('#sidebar-textbox-3').toggleClass('slds-hide');
+        });
+
+
+        $('#textinput3A').click(function() {
+            $('#textbox-3-placeholder').toggleClass('slds-hide');
+            $('#textbox-3-content').toggleClass('slds-hide');
+
+            $('#textinput3A, #textinput3C').on('keyup', function(e) {
+                //$('#textoutputA').text('hier der string');
+                $('#textoutput3A').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textinput3A').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textoutput3B').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textinput3B').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textoutput3C').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+                $('#textinput3C').html('<h1 class=\'slds-text-heading_large\'>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>');
+            });
+
+
+        });
 
 
     //show banner select
@@ -962,8 +990,10 @@
         });
 
         $('#bt-preview').click(function() {
+            $('#bt-preview').toggleClass('slds-button_brand');
             $('.mini-menu').toggleClass('slds-hide');
-            $('#banner-simple-placeholder, #banner-simple-content, #product-tile, #textbox-placeholder, #textbox-content').toggleClass('menu-border');
+            $('#banner-simple-placeholder, #banner-simple-content, #product-tile, #textbox-placeholder, #textbox-content, #textbox-3-placeholder, #textbox-3-content').toggleClass('menu-border');
+            $('.component-plus').toggleClass('slds-hide');
         });
 
         //sortable alternativ
@@ -976,6 +1006,10 @@
 
         $('bt-preview').click(function() {
             //$('#sidebar-banner-simple').toggleClass('slds-hide');
+        });
+
+        $('#banner-simple-content .edit').click(function() {
+            $('#sidebar-banner-simple').toggleClass('slds-hide');
         });
 
 
