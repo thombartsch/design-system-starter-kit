@@ -375,6 +375,7 @@
   </div>
 </section>
 
+ {% include "_modal-new-dashboard.html" %}
  {% include "_modal-new-entry.html" %}
  {% include "_modal-delete.html" %}
 
@@ -437,6 +438,10 @@
 
         $('.trigger-add, .js-close-modal').click(function() {
             $('#add-table-entry').toggleClass('slds-hide');
+        });
+
+        $('.create-new, .js-close-modal-34').click(function() {
+            $('#add-table-entry-dashboard').toggleClass('slds-hide');
         });
 
         $('.delete-trigger, .js-close-modal-3').click(function() {
