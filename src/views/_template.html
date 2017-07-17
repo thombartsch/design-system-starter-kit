@@ -387,9 +387,29 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
-
         $('.app-trigger').click(function() {
             $(this).toggleClass('slds-is-open');
+        });
+
+        $('.hide-assign-to').click(function() {
+            $('#assign-to').toggleClass('slds-hide');
+        });
+
+
+        $('#assign-to-trigger').click(function() {
+            $('#assign-to').toggleClass('slds-hide');
+            new Tether({
+                element: '#assign-to',
+                target: '#assign-to-trigger',
+                attachment: 'center left',
+                targetAttachment: 'center right',
+                targetOffset: '0 0',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
         });
 
         $('#app-switch-trigger').click(function() {

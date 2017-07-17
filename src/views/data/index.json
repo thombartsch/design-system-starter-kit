@@ -1,0 +1,8 @@
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
+{
+  "recordTitle": "Record Title",
+  "dictionaries":
+  [{"value":"if {this} than {that}","type":"Product Detail Page","locale":"Spanish", "productid": "008884303996", "metaid": "revisit-after", "assignments": "2"},]
+}

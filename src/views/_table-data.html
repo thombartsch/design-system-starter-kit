@@ -12,10 +12,10 @@
           </span>
         </div>
       </th>
-      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width: 50%;">
+      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width: 30%;">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Name">Value</span>
+          <span class="slds-truncate" title="Name">Rule</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -27,7 +27,7 @@
       <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Account Name">Type</span>
+          <span class="slds-truncate" title="Account Name">Scope</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -40,6 +40,42 @@
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
           <span class="slds-truncate" title="Close Date">Locale</span>
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Close Date">Page Meta Tag ID</span>
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Close Date">Product ID</span>
+          <div class="slds-icon_container">
+            <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+            </svg>
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Close Date">Assignments</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -76,6 +112,15 @@
     </td>
     <td role="gridcell">
         <div class="slds-truncate" title="{{ dictionary.locale }}">{{ dictionary.locale }}</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{{ dictionary.metaid }}">{{ dictionary.metaid }}</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{{ dictionary.productid }}">{{ dictionary.productid }}</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="{{ dictionary.assignments }}"><a href="javascript:void(0);" class="trigger-edit">{{ dictionary.assignments }}</a></div>
     </td>
     <td role="gridcell" style="width:3.25rem;">
         <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
