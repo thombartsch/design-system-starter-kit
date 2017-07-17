@@ -3,6 +3,21 @@
 // e.g. {{ recordTitle }}
 {
   "recordTitle": "Record Title",
-  "dictionaries":
-  [{"value":"if {this} than {that}","type":"Product Detail Page","locale":"Spanish", "productid": "008884303996", "metaid": "revisit-after", "assignments": "2"},]
+  "dictionaries": [
+  {
+    "value": "if {this} than {that}",
+    "type": "Product Detail Page",
+    "locale": "Spanish",
+    "productid": "008884303996",
+    "metaid": "description",
+    "assignments": "2"
+  },
+  {
+    "value": "if {this} than {that}",
+    "type": "Product Listing Page",
+    "locale": "Default",
+    "productid": "",
+    "metaid": "revisit-after",
+    "assignments": "1"
+  }]
 }
