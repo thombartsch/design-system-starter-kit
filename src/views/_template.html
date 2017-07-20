@@ -395,6 +395,21 @@
             $('#assign-to').toggleClass('slds-hide');
         });
 
+        $('#assign-to-trigger-2').click(function() {
+            $('#assign-to').toggleClass('slds-hide');
+            new Tether({
+                element: '#assign-to',
+                target: '#assign-to-trigger-2',
+                attachment: 'center left',
+                targetAttachment: 'center right',
+                targetOffset: '0 0',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
+        });
 
         $('#assign-to-trigger').click(function() {
             $('#assign-to').toggleClass('slds-hide');
