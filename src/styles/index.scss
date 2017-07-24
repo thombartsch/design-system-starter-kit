@@ -142,3 +142,19 @@ tr.is-new {
 .popover-footer-trigger {
   text-align: right;
 }
+
+.slds-tree__item {
+  position: relative;
+}
+
+.slds-button_assign {
+  // display: none;
+    padding: 0 .5rem;
+    font-size: 0.65rem;
+        position: absolute;
+    right: 1rem;
+
+  .slds-tree__item:hover & {
+    display: inline-block;
+  }
+}
