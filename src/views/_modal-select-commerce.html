@@ -1,4 +1,4 @@
-<div class="slds-hide2" id="select-product">
+<div class="slds-hide1" id="select-product">
     <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
             <header class="slds-modal__header">
@@ -8,9 +8,20 @@
                     </svg>
                     <span class="slds-assistive-text">Close</span>
                 </button>
-                <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Select Products</h2>
+                <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Select Assignments</h2>
             </header>
             <div class="slds-modal__content slds-grid slds-grow" id="modal-content-id-1">
+<div class="sidebar">
+    <nav class="slds-nav-vertical" aria-label="Sub page">
+        <div class="slds-nav-vertical__section">
+            <ul>
+                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header" aria-current="page">Products</a></li>
+                <li class="slds-nav-vertical__item  slds-is-active"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Categories</a></li>
+                <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Content</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
                 <div class="slds-grid slds-grid_vertical">
                     <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
                         <div class="slds-form-element">
@@ -19,7 +30,7 @@
                                 <div class="slds-combobox_container">
                                     <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
                                         <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-                                            <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Catalog">
+                                            <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Categories">
                                             <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
                         <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
@@ -71,6 +82,253 @@
                     </div>
                     <div class="slds-scrollable slds-grow slds-grid">
                         <div>
+
+<table class="slds-table slds-table_bordered slds-tree slds-table_tree" role="treegrid" aria-owns="tree0-node0 tree0-node1 tree0-node2 tree0-node3" aria-readonly="true">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th class="slds-cell-buffer_left" scope="col">
+        <div class="slds-grid slds-grid_vertical-align-center">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-m-right_x-small slds-shrink-none slds-table_tree__toggle" title="Toggle">
+            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+            </svg>
+            <span class="slds-assistive-text">Toggle</span>
+          </button>
+          <div class="slds-truncate" title="Account Name">Account Name</div>
+        </div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Employees">Employees</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Phone Number">Phone Number</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Account Owner">Account Owner</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Billing City">Billing City</div>
+      </th>
+      <th class="slds-cell-shrink" scope="col">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" title="Provide description of action">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="slds-hint-parent" id="tree0-node0" role="row" aria-level="1">
+      <th data-label="Account Name" scope="row" class="slds-tree__item">
+        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Rewis Inc"><a href="javascript:void(0);">Rewis Inc</a></div>
+      </th>
+      <td data-label="Employees">
+        <div class="slds-truncate" title="3,100">3,100</div>
+      </td>
+      <td data-label="Phone Number">
+        <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+      </td>
+      <td data-label="Account Owner">
+        <div class="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div>
+      </td>
+      <td class="slds-cell-shrink">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" title="Provide description of action">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+    <tr class="slds-hint-parent" id="tree0-node1" role="row" aria-level="1" aria-owns="tree0-node1-0" aria-expanded="true">
+      <th data-label="Account Name" scope="row" class="slds-tree__item">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small" aria-controls="tree0-node1" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Acme Corporation"><a href="javascript:void(0);">Acme Corporation</a></div>
+      </th>
+      <td data-label="Employees">
+        <div class="slds-truncate" title="10,000">10,000</div>
+      </td>
+      <td data-label="Phone Number">
+        <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+      </td>
+      <td data-label="Account Owner">
+        <div class="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="San Francisco, CA">San Francisco, CA</div>
+      </td>
+      <td class="slds-cell-shrink">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" title="Provide description of action">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+    <tr class="slds-hint-parent" id="tree0-node1-0" role="row" aria-level="2">
+      <th data-label="Account Name" scope="row" class="slds-tree__item">
+        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Acme Corporation (Oakland)"><a href="javascript:void(0);">Acme Corporation (Oakland)</a></div>
+      </th>
+      <td data-label="Employees">
+        <div class="slds-truncate" title="745">745</div>
+      </td>
+      <td data-label="Phone Number">
+        <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+      </td>
+      <td data-label="Account Owner">
+        <div class="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="New York, NY">New York, NY</div>
+      </td>
+      <td class="slds-cell-shrink">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" title="Provide description of action">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+    <tr class="slds-hint-parent" id="tree0-node2" role="row" aria-level="1" aria-expanded="false">
+      <th data-label="Account Name" scope="row" class="slds-tree__item">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small" aria-controls="tree0-node2" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Rohde Enterprises"><a href="javascript:void(0);">Rohde Enterprises</a></div>
+      </th>
+      <td data-label="Employees">
+        <div class="slds-truncate" title="6,000">6,000</div>
+      </td>
+      <td data-label="Phone Number">
+        <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+      </td>
+      <td data-label="Account Owner">
+        <div class="slds-truncate" title="John Doe"><a href="javascript:void(0);">John Doe</a></div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="New York, NY">New York, NY</div>
+      </td>
+      <td class="slds-cell-shrink">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" title="Provide description of action">
+          <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          </svg>
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+    <tr class="slds-hint-parent" id="tree0-node3" role="row" aria-level="1">
+      <th data-label="Account Name" scope="row" class="slds-tree__item">
+        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Cheese Corp"><a href="javascript:void(0);">Cheese Corp</a></div>
+      </th>
+      <td data-label="Employees">
+        <div class="slds-truncate" title="1,234">1,234</div>
+      </td>
+      <td data-label="Phone Number">
+        <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+      </td>
+      <td data-label="Account Owner">
+        <div class="slds-truncate" title="Jane Doe"><a href="javascript:void(0);">Jane Doe</a></div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Paris, France">Paris, France</div>
+      </td>
+      <td role="gridcell" class="slds-text-align_right" style="width: 3.25rem;">
+        <span class="slds-checkbox">
+          <input type="checkbox" name="options" id="checkbox-2" value="on">
+          <label class="slds-checkbox__label" for="checkbox-2">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+          </label>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout slds-tree slds-table_tree" role="treegrid">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col" class="">
+        <div class="slds-truncate" title="Opportunity Name">Name</div>
+      </th>
+      <th scope="col" class="">
+        <div class="slds-truncate" title="Account Name">ID</div>
+      </th>
+      <th scope="col" class="">
+        <div class="slds-truncate" title="Close Date">Description</div>
+      </th>
+      <th scope="col" class="">
+        <div class="slds-truncate" title="Stage">Status</div>
+      </th>
+      <th scope="col" style="width: 3.75rem;"">
+        <div class="slds-truncate" title="Select"></div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="slds-hint-parent" aria-selected="true">
+      <th scope="row" class="slds-tree__item">
+      <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small" aria-controls="tree0-node1" title="Toggle">
+          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+          </svg>
+          <span class="slds-assistive-text">Toggle</span>
+        </button>
+        <div class="slds-truncate" title="Analytics">Analytics</div>
+      </th>
+      <td role="gridcell">
+        <div class="slds-truncate" title="ANTLY">ANTLY</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate" title="5000.00">5000.00</div>
+      </td>
+      <td role="gridcell">
+        <div class="slds-truncate" title="Analytics Product">Analytics Product</div>
+      </td>
+      <td role="gridcell" tabindex="0">
+<button class="slds-button slds-button-neutral" title="Provide description of action">
+          Assign
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
                         </div>
                         <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters slds-border_top" style="min-width: 300px;">

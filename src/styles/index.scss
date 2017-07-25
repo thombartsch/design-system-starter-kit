@@ -158,3 +158,12 @@ tr.is-new {
     display: inline-block;
   }
 }
+
+
+.sidebar {
+      flex: 1 1;
+      min-width: 15rem;
+      max-width: 15rem;
+    border-right: 1px solid #d8dde6;
+}
+
