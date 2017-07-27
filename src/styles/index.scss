@@ -161,9 +161,13 @@ tr.is-new {
 
 
 .sidebar {
-      flex: 1 1;
-      min-width: 15rem;
-      max-width: 15rem;
-    border-right: 1px solid #d8dde6;
+  flex: 1 1;
+  min-width: 15rem;
+  max-width: 15rem;
+  border-right: 1px solid #d8dde6;
 }
 
+#select-product .slds-modal__container {
+  transform: translate3d(0,0,0);
+  transition: all 0.2s;
+}
