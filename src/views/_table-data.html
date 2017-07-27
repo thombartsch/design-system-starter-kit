@@ -15,7 +15,7 @@
       <th class="slds-is-sortable slds-is-resizable slds-text-title--caps" scope="col" style="width: 30%;">
         <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
           <span class="slds-assistive-text">Sort </span>
-          <span class="slds-truncate" title="Name">Rule</span>
+          <span class="slds-truncate" title="Name">Rule Name</span>
           <div class="slds-icon_container">
             <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -123,6 +123,11 @@
                         </a>
                     </li>
                     <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Duplicate</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
                         <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
                             <span class="slds-truncate" title="Menu Item Two">Delete</span>
                         </a>
@@ -135,6 +140,3 @@
  {% endfor %}
   </tbody>
 </table>
-
-<div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium"><button class="slds-button slds-button_neutral">Show more</button></div>
-<div class="slds-checkbox_add-button"><input type="checkbox" class="slds-assistive-text" id="add-checkbox-2" value="on"><label for="add-checkbox-2" class="slds-checkbox_faux"><span class="slds-assistive-text">Add product</span></label></div>

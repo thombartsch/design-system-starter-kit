@@ -1,19 +1,26 @@
 <!-- Start Edit Entry -->
 <div class="slds-hide" id="edit-table-entry">
-    <section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
-        <div class="slds-modal__container">
-            <header class="slds-modal__header">
-                <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
-                    <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                    </svg>
-                    <span class="slds-assistive-text">Close</span>
-                </button>
-                <h2 id="header43" class="slds-text-heading--medium">Edit Meta Tag Rule</h2>
-            </header>
-            <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
+          <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="header43" class="slds-text-heading--medium">Edit Meta Tag Rule</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
         <div class="slds-form slds-form_compound">
           <div class="slds-form-element__row">
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="select-01">
+                <abbr class="slds-required" title="required">*</abbr>Name</label>
+              <div class="slds-form-element__control">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text">
+              </div>
+            </div>
             <div class="slds-form-element">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Scope</label>
@@ -28,6 +35,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="slds-form-element__row">
             <div class="slds-form-element">
               <label class="slds-form-element__label" for="select-021">
                 <abbr class="slds-required" title="required">*</abbr>Locale</label>
@@ -128,42 +137,20 @@
           </div>
           <div class="slds-form-element__row">
             <div class="slds-form-element">
-              <button class="slds-button slds-button_neutral" id="assign-to-trigger">Assigned to</button>
-
-                <ul class="slds-listbox slds-listbox_horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal">
-                  <li role="presentation">
-                    <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
-        <span class="slds-pill__label" title="Full pill label verbiage mirrored here">Gazelle</span>
-                    <span class="slds-icon_container slds-pill__remove" title="Remove">
-          <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>
-          <span class="slds-assistive-text">Press delete or backspace to remove</span>
-                    </span>
-                    </span>
-                  </li>
-                  <li role="presentation">
-                    <span class="slds-pill" role="option" aria-selected="true">
-        <span class="slds-pill__label" title="Full pill label verbiage mirrored here">Superstar</span>
-                    <span class="slds-icon_container slds-pill__remove" title="Remove">
-          <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>
-          <span class="slds-assistive-text">Press delete or backspace to remove</span>
-                    </span>
-                    </span>
-                  </li>
-                </ul>
+              <label class="slds-form-element__label" for="input-unique-id">Description</label>
+              <div class="slds-form-element__control">
+                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+              </div>
             </div>
           </div>
         </div>
       </div>
-            <footer class="slds-modal__footer">
-                <button class="slds-button slds-button--neutral js-close-modal-2">Cancel</button>
-                <button class="slds-button slds-button--brand js-close-modal-2">Save</button>
-            </footer>
-        </div>
-    </section>
-    <div class="slds-backdrop slds-backdrop--open"></div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button--neutral js-close-modal-2">Cancel</button>
+        <button class="slds-button slds-button--brand js-close-modal-2">Save</button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop--open"></div>
 </div>
 <!-- End Edit Entry -->
