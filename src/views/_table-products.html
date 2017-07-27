@@ -5,7 +5,7 @@
                                     <th aria-label="Product Code" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="-1">
                                             <span class="slds-assistive-text">Sort </span>
-                                            <span class="slds-truncate" title="Product Image">Image</span>
+                                            <span class="slds-truncate" title="Product Image">Name</span>
                                             <div class="slds-icon_container">
                                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -24,7 +24,7 @@
                                     <th aria-label="Name" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="-1">
                                             <span class="slds-assistive-text">Sort </span>
-                                            <span class="slds-truncate" title="Name">Name</span>
+                                            <span class="slds-truncate" title="Name">Image</span>
                                             <div class="slds-icon_container">
                                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
@@ -110,12 +110,12 @@
                                             </label>
                                         </div>
                                     </td>
-                                    <td role="gridcell">
-                                        <div class="slds-truncate" title="Analytics Product"><img style="width: 60px; height: 60px;" src="{{ product.img }}" /></div>
-                                    </td>
                                     <th scope="row">
                                         <div class="slds-truncate" title="Analytics">{{ product.name }}</div>
                                     </th>
+                                  <td role="gridcell">
+                                        <div class="slds-truncate" title="Analytics Product"><img style="width: 60px; height: 60px;" src="{{ product.img }}" /></div>
+                                    </td>
                                     <td role="gridcell">
                                         <div class="slds-truncate" title="ANTLY">{{ product.sku }}</div>
                                     </td>

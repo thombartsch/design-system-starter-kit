@@ -80,6 +80,66 @@
     </tr>
   </thead>
   <tbody>
+<tr class="slds-hint-parent slds-hide" id="new-rule">
+    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+        <span class="slds-checkbox">
+          <input type="checkbox" name="options" id="id-New Meta Tag Rule">
+          <label class="slds-checkbox__label" for="id-New Meta Tag Rule">
+            <span class="slds-checkbox--faux"></span>
+        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+        </label>
+        </span>
+    </td>
+    <td scope="row">
+        <div class="slds-truncate" title="New Meta Tag Rule"><a href="javascript:void(0);" class="trigger-edit">New Meta Tag Rule</a></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="Product Detail Page">Library Folder</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="Spanish">Default</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="description">description</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="2"><a href="javascript:void(0);" class="trigger-assign">0</a></div>
+    </td>
+    <td role="gridcell" style="width:3.25rem;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">Show More</span>
+            </button>
+            <div class="slds-dropdown slds-dropdown--right">
+                <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Edit</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-assign">
+                            <span class="slds-truncate" title="Menu Item One">Assign</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Duplicate</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
+                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </td>
+</tr>
 
 {% for dictionary in dictionaries %}
 <tr class="slds-hint-parent">
@@ -105,7 +165,7 @@
         <div class="slds-truncate" title="{{ dictionary.metaid }}">{{ dictionary.metaid }}</div>
     </td>
     <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.assignments }}"><a href="javascript:void(0);" class="trigger-edit">{{ dictionary.assignments }}</a></div>
+        <div class="slds-truncate" title="{{ dictionary.assignments }}"><a href="javascript:void(0);" class="trigger-assign">{{ dictionary.assignments }}</a></div>
     </td>
     <td role="gridcell" style="width:3.25rem;">
         <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
@@ -120,6 +180,11 @@
                     <li class="slds-dropdown__item" role="presentation">
                         <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
                             <span class="slds-truncate" title="Menu Item One">Edit</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-assign">
+                            <span class="slds-truncate" title="Menu Item One">Assign</span>
                         </a>
                     </li>
                     <li class="slds-dropdown__item" role="presentation">

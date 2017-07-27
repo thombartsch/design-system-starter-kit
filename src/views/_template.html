@@ -396,6 +396,14 @@
             $('#assign-to').toggleClass('slds-hide');
         });
 
+       $('.trigger-assign, .hide-select-product').click(function() {
+            $('#select-product').toggleClass('slds-hide');
+        });
+
+        $('.close-create').click(function() {
+            $('#new-rule, #add-table-entry').toggleClass('slds-hide');
+        });
+
         $('#assign-to-trigger-2').click(function() {
             $('#assign-to').toggleClass('slds-hide');
             new Tether({
@@ -460,7 +468,7 @@
             });
         });
 
-        $('.show-created-toast, .close-toast-2').click(function() {
+        $('.show-created-toast, .close-toast-2, .close-create').click(function() {
             $('#created-toast').toggleClass('slds-hide');
         });
 
