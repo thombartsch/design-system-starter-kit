@@ -472,6 +472,11 @@
             $('#created-toast').toggleClass('slds-hide');
         });
 
+        $('#advanced-search').click(function() {
+            $('#select-product .slds-modal').toggleClass('slds-modal_large');
+            $('#step-1, #step-2').toggleClass('slds-hide');
+        });
+
         $('.trigger-edit, .js-close-modal-2').click(function() {
             $('#edit-table-entry').toggleClass('slds-hide');
         });
