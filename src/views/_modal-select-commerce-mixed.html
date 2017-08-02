@@ -1,4 +1,4 @@
-<div class="slds-hide" id="select-product-23">
+<div class="slds-hide2" id="select-product-232">
   <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
       <header class="slds-modal__header">
@@ -83,30 +83,38 @@
             <!-- <button class="slds-button slds-button_neutral" id="advanced-search">Advanced Search</button> -->
           </div>
         </div>
-
-<div class="product-list slds-scrollable_y" style="max-height: 50vh;">
-          {% for product in lol %}
-          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_large slds-border_bottom">
-            <div class="slds-media__figure">
-              <span class="slds-avatar slds-avatar_large"><img alt="Person name" src="{{ product.img }}" title="{{ product.name }}"></span>
-            </div>
-            <div class="slds-media__body">
-              <p class="slds-text-heading_xsmall">{{ product.name }}</p>
-            </div>
-            <div class="slds-media__figure slds-media__figure_reverse">
-              <div class="slds-checkbox_add-button">
-                <input type="checkbox" class="slds-assistive-text" id="add-{{ product.name }}1" value="on">
-                <label for="add-{{ product.name }}1" class="slds-checkbox_faux">
-                  <span class="slds-assistive-text">Add product</span>
-                </label>
+        <div class="slds-tabs_default">
+          <ul class="slds-tabs_default__nav slds-p-horizontal_large" role="tablist">
+            <li class="slds-tabs_default__item  slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-1" id="tab-default-1__item">Products  <span class="slds-badge slds-badge_inverse">12425</span></a></li>
+            <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-2" id="tab-default-2__item">Categories <span class="slds-badge slds-badge_inverse">25</span></a></li>
+          </ul>
+          <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+            <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
+              {% for product in lol %}
+              <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_large slds-border_bottom">
+                <div class="slds-media__figure">
+                  <span class="slds-avatar slds-avatar_large"><img alt="Person name" src="{{ product.img }}" title="{{ product.name }}"></span>
+                </div>
+                <div class="slds-media__body">
+                  <p class="slds-text-heading_xsmall">{{ product.name }}</p>
+                </div>
+                <div class="slds-media__figure slds-media__figure_reverse">
+                  <div class="slds-checkbox_add-button">
+                    <input type="checkbox" class="slds-assistive-text" id="add-{{ product.name }}" value="on">
+                    <label for="add-{{ product.name }}" class="slds-checkbox_faux">
+                      <span class="slds-assistive-text">Add product</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium">
+                <button class="slds-button slds-button_neutral">Show more</button>
               </div>
             </div>
           </div>
-          {% endfor %}
-
-<div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium"><button class="slds-button slds-button_neutral">Show more</button></div>
-</div>
-
+          <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+        </div>
       </div>
       <footer class="slds-modal__footer ">
         <button class="slds-button slds-button_brand hide-select-product">Select</button>

@@ -171,3 +171,9 @@ tr.is-new {
   transform: translate3d(0,0,0);
   transition: all 0.2s;
 }
+
+.product-list {
+  > .slds-media:nth-child(even) {
+    // background-color: #f4f6f9;
+  }
+}
