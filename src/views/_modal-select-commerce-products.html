@@ -1,8 +1,8 @@
-<div class="slds-hide" id="select-product-23">
+<div class="slds-hide2" id="select-product-23">
   <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
       <header class="slds-modal__header">
-        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse hide-select-product show_component" title="Close">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse hide-select-product-2 show_component" title="Close">
           <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
           </svg>
@@ -18,7 +18,7 @@
               <div class="slds-combobox_container">
                 <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
                   <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-                    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search by name or ID">
+                    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id2" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search by name or ID">
                     <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
                         <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
@@ -66,7 +66,7 @@
               </div>
             </div>
           </div>
-          <div class="slds-pill_container slds-pill_container_bare">
+          <div id="items-selected" class="slds-pill_container slds-pill_container_bare slds-hide">
             <div id="listbox-unique-id" role="listbox" aria-orientation="horizontal">
               <ul class="slds-listbox slds-listbox_horizontal" role="presentation">
                 <li role="presentation" class="slds-listbox__item"><span class="slds-pill" role="option" tabindex="0" aria-selected="true"><span class="slds-pill__label" title="Option A">Flat Front Slim Pant</span><span class="slds-icon_container slds-pill__remove" title="Remove"><svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use></svg><span class="slds-assistive-text">Press delete or backspace to remove</span></span>
@@ -78,15 +78,18 @@
               </ul>
             </div>
           </div>
-          <div class="slds-grid slds-grid_align-spread">
+          <div class="slds-grid slds-grid_align-spread slds-hide" id="item-counter">
             <div class="slds-text-title slds-m-top_x-small" aria-live="polite">125 items • 2 Item(s) Selected</div>
             <!-- <button class="slds-button slds-button_neutral" id="advanced-search">Advanced Search</button> -->
           </div>
         </div>
 
 <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
+
+<img id="placeholder-img" class="slds-m-vertical_medium slds-align_absolute-center" src="assets/empty.svg" />
+
           {% for product in lol %}
-          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_large slds-border_bottom">
+          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_large slds-border_bottom slds-hide product-tile">
             <div class="slds-media__figure">
               <span class="slds-avatar slds-avatar_large"><img alt="Person name" src="{{ product.img }}" title="{{ product.name }}"></span>
             </div>
@@ -104,12 +107,12 @@
           </div>
           {% endfor %}
 
-<div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium"><button class="slds-button slds-button_neutral">Show more</button></div>
+<div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium slds-hide"><button class="slds-button slds-button_neutral">Show more</button></div>
 </div>
 
       </div>
       <footer class="slds-modal__footer ">
-        <button class="slds-button slds-button_brand hide-select-product">Select</button>
+        <button class="slds-button slds-button_brand hide-select-product-2" disabled="">Select</button>
       </footer>
     </div>
   </section>
