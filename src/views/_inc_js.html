@@ -1,0 +1,245 @@
+//BACK TO LIST
+$('#back-to-list').click(function () {
+    location.href = 'page-list.html';
+});
+//SCREEN SIZES
+$('#trigger-phone').click(function () {
+    $('.page-content').css('max-width', '320px');
+    //$(this).elem.setAttribute("aria-hidden", "true");
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+});
+$('#trigger-tablet').click(function () {
+    $('.page-content').css('max-width', '800px');
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+});
+$('#trigger-desktop').click(function () {
+    $('.page-content').css('max-width', '100%');
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+});
+
+//TRIGGER DELETE PAGE
+$('.js-open-modal-id-1').click(function () {
+    $('.modal-id-1').toggleClass('slds-hide');
+    $('.slds-dropdown-trigger').removeClass('slds-is-open');
+    $('.slds-dropdown-trigger').addClass('slds-is-closed');
+});
+
+//DELETE PAGE MODAL
+$('.modal-id-1 button.js-close-modal-id-1').click(function () {
+    $('.modal-id-1').toggleClass('slds-hide');
+    $('#toast-id-1').toggleClass('slds-hide');
+});
+
+//CLOSE DELETE TOAST
+$('#js-close-toast-id-1').click(function () {
+    $('#toast-id-1').toggleClass('slds-hide');
+});
+
+//TRIGGER NEW PAGE
+$('#js-open-modal-id-2').click(function () {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+
+//NEW PAGE MODAL
+$('.js-close-modal-id-2').click(function () {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+$('.js-close-modal-id-100').click(function () {
+    $('.modal-id-100').toggleClass('slds-hide');
+});
+$('#js-open-modal-100').click(function () {
+    alert();
+    $('.modal-id-100').toggleClass('slds-hide');
+});
+
+//SIDEBAR
+$('#button-page-navigator').click(function () {
+    $('#sidebar-navigator').toggleClass('slds-hide');
+});
+$('#button-close-navigator').click(function () {
+    $('#modal-page-navigator').toggleClass('slds-hide');
+});
+$('#button-preview-settings').click(function () {
+    $('#modal-id-102').toggleClass('slds-hide');
+});
+
+//MODAL PREVIEW SETTINGS
+$('#modal-id-102 .js-close-modal-id-102').click(function () {
+    $('#modal-id-102').toggleClass('slds-hide');
+});
+
+//REGION A
+    //TEXT
+    $('#regionA .js-trigger-modal-id-4').click(function () {
+        $('.modal-id-4').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-4').click(function () {
+        $('#regionA .modal-id-4').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-4').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-4 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-4').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-4').click(function () {
+        $('#regionA .modal-id-4').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-4 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-4-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-4-delete button.js-close-modal-id-4-delete').click(function () {
+        $('#regionA #modal-id-4-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-4-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-4-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-4').appendTo('#regionA .placeholder-library');
+    })
+
+
+    //BANNER
+    $('#regionA .js-trigger-modal-id-5').click(function () {
+        $('.modal-id-5').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-5').click(function () {
+        $('#regionA .modal-id-5').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-5').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-5 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-5').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-5').click(function () {
+        $('#regionA .modal-id-5').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-5 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-5-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-5-delete button.js-close-modal-id-5-delete').click(function () {
+        $('#regionA #modal-id-5-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-5-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-5-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-5').appendTo('#regionA .placeholder-library');
+    })
+
+
+    //CATEGORY TILES
+    $('#regionA .js-trigger-modal-id-6').click(function () {
+        $('.modal-id-6').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-6').click(function () {
+        $('#regionA .modal-id-6').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-6').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-6 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-6').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-6').click(function () {
+        $('#regionA .modal-id-6').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-6 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-6-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-6-delete button.js-close-modal-id-6-delete').click(function () {
+        $('#regionA #modal-id-6-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-6-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-6-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-6').appendTo('#regionA .placeholder-library');
+    })
+
+
+    //USP
+    $('#regionA .js-trigger-modal-id-7').click(function () {
+        $('.modal-id-7').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-7').click(function () {
+        $('#regionA .modal-id-7').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-7').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-7 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-7').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-7').click(function () {
+        $('#regionA .modal-id-7').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-7 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-7-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-7-delete button.js-close-modal-id-7-delete').click(function () {
+        $('#regionA #modal-id-7-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-7-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-7-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-7').appendTo('#regionA .placeholder-library');
+    })
+
+
+    //Targeted Banner
+    $('#regionA .js-trigger-modal-id-8').click(function () {
+        $('.modal-id-8').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-8').click(function () {
+        $('#regionA .modal-id-8').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-8').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-8 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-8').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-8').click(function () {
+        $('#regionA .modal-id-8').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-8 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-8-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-8-delete button.js-close-modal-id-8-delete').click(function () {
+        $('#regionA #modal-id-8-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-8-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-8-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-8').appendTo('#regionA .placeholder-library');
+    })
+
+
+
+    //Carousel/Slider
+    $('#regionA .js-trigger-modal-id-9').click(function () {
+        $('.modal-id-9').toggleClass('slds-hide');
+        $('#regionA .slds-dropdown-trigger:first').toggleClass('slds-is-open');
+    });
+    $('#regionA .js-save-modal-id-9').click(function () {
+        $('#regionA .modal-id-9').toggleClass('slds-hide');
+        $('#regionA .placeholder-component-9').appendTo('#regionA .placeholder-container');
+    });
+    $('.placeholder-component-9 .js-trigger-edit-component').click(function () {
+        $('#regionA .modal-id-9').toggleClass('slds-hide');
+    })
+    $('#regionA .js-close-modal-id-9').click(function () {
+        $('#regionA .modal-id-9').toggleClass('slds-hide');
+    });
+    $('#regionA .placeholder-component-9 .js-trigger-delete-component').click(function () {
+        $('#regionA #modal-id-9-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-9-delete button.js-close-modal-id-9-delete').click(function () {
+        $('#regionA #modal-id-9-delete').toggleClass('slds-hide');
+    })
+
+    $('#modal-id-9-delete button.action-delete-component').click(function () {
+        $('#regionA #modal-id-9-delete').toggleClass('slds-hide');
+        $('#regionA .placeholder-container .placeholder-component-9').appendTo('#regionA .placeholder-library');
+    })
+

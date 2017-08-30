@@ -1,0 +1,63 @@
+{#
+<div class="slds-button-group" role="group">
+    <button class="slds-button slds-button--icon-border slds-m-left--xx-small" id="trigger-phone">
+        <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+        </svg>
+        <span class="slds-assistive-text">Portrait</span>
+    </button>
+    <button class="slds-button slds-button--icon-border slds-m-left--xx-small" id="trigger-tablet">
+        <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
+        </svg>
+        <span class="slds-assistive-text">Landscape</span>
+    </button>
+    <button class="slds-button slds-button--icon-border slds-m-left--xx-small" id="trigger-desktop">
+        <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+        </svg>
+        <span class="slds-assistive-text">Desktop</span>
+    </button>
+</div>
+#}
+
+
+<div class="slds-dropdown slds-dropdown--left">
+    <ul class="slds-dropdown__list" role="menu">
+      <li class="slds-dropdown__item slds-is-selected" role="presentation">
+        <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0" id="trigger-phone">
+          <span class="slds-truncate" title="Table View">
+            <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+            </svg>Portrait</span>
+          <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="slds-dropdown__item" role="presentation">
+        <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-tablet">
+          <span class="slds-truncate" title="Kanban Board">
+            <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+            </svg>Landscape</span>
+          <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="slds-dropdown__item" role="presentation">
+        <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-desktop">
+          <span class="slds-truncate" title="List View">
+            <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+            </svg>Desktop</span>
+          <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+</div>
+
+

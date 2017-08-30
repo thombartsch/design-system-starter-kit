@@ -1,0 +1,76 @@
+<!-- CAROUSEL COMPONENT -->
+<div class="2slds-hide slds-p-horizontal_none slds-size_1-of-1 slds-theme_shade image menu-border placeholder placeholder-component-9" id="placeholder-component-9">
+    <!-- mini menu -->
+    <div class="slds-grid slds-grid_align-center">
+        <div class="mini-menu 2slds-hide slds-grid slds-grid_align-center">
+            <div>
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right slds-p-around_small js-trigger-dragdrop-component" title="Move">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
+                    </svg> <span class="slds-assistive-text">Move</span> </button>
+            </div>
+            <div>
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right slds-p-around_small js-trigger-edit-component" title="Edit">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                    </svg> <span class="slds-assistive-text">Edit</span> </button>
+            </div>
+            <div>
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right slds-p-around_small js-trigger-delete-component" title="Delete">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                    </svg> <span class="slds-assistive-text">Delete</span> </button>
+            </div>
+        </div>
+    </div>
+    <!-- /mini menu -->
+    <div class="slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap 2placeholder slds-grid_vertical">
+
+        <div class="slds-grid slds-grid_vertical-align-center" id="slider">
+            <div class="">
+                <button class="slds-button previous_btn">
+                    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronleft"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Description of icon</span>
+                    </span>
+                </button>
+            </div>
+            <div class="slds-col slds-text-align_center region" style="width:100%; min-height:200px">
+
+
+
+                <div id="slider-wrapper">
+                    <div class="inner-wrapper">
+                        <label for="Slide1" id="s1"></label>
+                        <div class="overflow-wrapper">
+                            <a class="slide" href=""><img src="https://dummyimage.com/1200x300/666/fff.png&text=Banner+Placeholder" /></a>
+                        </div>
+                        <input checked type="radio" name="slide" class="control" id="Slide1" />
+                    </div>
+                </div>
+
+                {% include "_inc_menu-components-carousel.html" ignore missing %}
+
+
+
+
+            </div>
+            <div class="slds-col">
+                <button class="slds-button next_btn">
+                    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Description of icon</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+    {% include "_inc_modal-delete-component.html" ignore missing %}
+    {% include "_inc_modal-properties-component-2column.html" ignore missing %} </div>
+<!-- /CAROUSEL COMPONENT -->

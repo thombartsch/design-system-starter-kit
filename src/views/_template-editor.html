@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.: Page Editor :.</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <!--
+    Navigation Bar component
+    https://www.lightningdesignsystem.com/components/global-navigation/
+  -->
+ <div class="slds-context-bar slds-p-left_none  slds-m-left_none">
+  <div class="slds-context-bar__primary">
+    <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover slds-context-bar__item_divider-right2">
+      <div class="slds-context-bar__icon-action 2slds-context-bar__item_divider-right">
+        <button class="slds-button slds-icon-waffle_container slds-context-bar__button   slds-p-left_small   slds-p-right_small" title="Description of the icon when needed" id="back-to-list">
+          <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronleft"></use>
+            </svg>
+            <span class="slds-assistive-text">Description of icon</span>
+          </span>
+        </button>
+      </div>
+      <span class="slds-context-bar__label-action slds-context-bar__app-name slds-p-left--small">
+        <span class="slds-truncate" title="App Name">Page Name</span>
+      </span>
+    </div>
+  </div>
+  <nav class="slds-context-bar__secondary" role="navigation">
+    <ul class="slds-grid">
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right2">
+          <span class="slds-truncate slds-context-bar__label-action slds-text-color_weak" title="Tools">SiteGenesis</span>
+      </li>
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right2">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Locale">
+          <span class="slds-truncate" title="Tools">(en-US)</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
+    <ul class="slds-grid">
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-hide" id="trigger-back-to-edit">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Back to Edit">
+          <span class="slds-truncate" title="Tools">Back to Edit</span>
+        </a>
+      </li>
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right" id="trigger-preview">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Preview">
+          <span class="slds-truncate" title="Tools">Preview</span>
+        </a>
+      </li>
+      <li class="slds-context-bar__item" id="trigger-publish">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Publish">
+          <span class="slds-truncate" title="Tools">Publish</span>
+        </a>
+      </li>
+      <li class="slds-hide slds-context-bar__item" id="trigger-update">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Update">
+          <span class="slds-truncate" title="Tools">Update</span>
+        </a>
+      </li>
+      <li class="slds-context-bar__item slds-button_destructive slds-hide" id="trigger-published">
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Offline">
+          <span class="slds-truncate" title="Tools">Set Offline</span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+
+  <main class="app-wrapper" id="noglobalheader">
+    {% block content %}
+      <!-- Content from HTML files gets injected here -->
+    {% endblock %}
+  </main>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
+    <!-- JAVASCRIPT -->
+    <script src = '/scripts/jquery-3.2.1.min.js'></script>
+    <script src = '/scripts/jquery-ui.min.js'> </script>
+    <script>
+        {% include "_inc_js.html" %}
+    </script>
+    <!-- /JAVASCRIPT -->
+
+
+
+
+    {% include "_inc_modal-delete-page.html" %}
+    {% include "_inc_toast-page-deleted.html" %}
+
+</body>
+</html>
+
+
