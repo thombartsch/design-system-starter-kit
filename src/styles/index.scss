@@ -98,13 +98,27 @@
 
     .region {
         -webkit-transition-duration: 0.4s;
-        background: rgba(0, 0, 0, 0.1);
+        /*background: rgba(0, 0, 0, 0.01);*/
         border: 2px solid rgba(255, 165, 0, 0.1);
     }
-
     .region:hover {
-        border-bottom: 2px solid rgba(255, 165, 0, 1);
-        background: rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(255, 165, 0, 1);
+        /*background: rgba(0, 0, 0, 0.2);*/
+    }
+
+
+
+    .region-off {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+    }
+
+    .region-off:hover {
+
+    }
+
+    .editor-off{
+
     }
 
     #editor {
@@ -217,16 +231,29 @@
 
     .placeholder {
         -webkit-transition-duration: 0.4s;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(200, 200, 200, 0.2);
         /*color: #fff;*/
-        border: 1px dashed rgba(255, 255, 255, 0.3);
+        border: 1px dashed rgba(100, 100, 100, 0.5);
     }
 
     .placeholder:hover {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(200, 200, 200, 0.4);
         /*color: #fff;*/
-        border: 1px dashed rgba(255, 255, 255, 1);
+        border: 1px dashed rgba(100, 100, 100, 0.5);
     }
+
+
+
+    .placeholder-off {
+        -webkit-transition-duration: 0.4s;
+        background: #fff;
+        /*color: #fff;*/
+        border: none;
+    }
+
+    .placeholder-off:hover {
+    }
+
 
     .orange {
         background: orange !important;
@@ -236,6 +263,14 @@
     .slds-show {
         -webkit-transition-duration: 0.4s;
     }
+
+
+/*SIDEBAR */
+#sidebar-navigator{
+    min-width: 230px;
+}
+
+
 
 
 /* SLIDER STLYE */

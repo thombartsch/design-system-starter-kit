@@ -17,6 +17,7 @@
                         <li class="slds-tabs_default__item" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-default-11" id="tab-default-11__item">General</a></li>
                         <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-21" id="tab-default-21__item">Dependencies</a></li>
                         <li class="slds-tabs_default__item" title="Item Three" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-31" id="tab-default-31__item">SEO Settings</a></li>
+                        <li class="slds-tabs_default__item" title="Item Four" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-32" id="tab-default-32__item">Rules</a></li>
                     </ul>
                     <div id="tab-default-11" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-11__item">
                         <!-- GENERAL -->
@@ -171,9 +172,55 @@
                                 </div>
                                 </fieldset>
                             </div>
-
                     <!-- /SEO -->
                     </div>
+
+                    <div id="tab-default-32" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
+                        <!-- RULES -->
+
+                        <div class="slds-p-bottom_small">
+                            <div class="slds-form slds-form_compound">
+                                <div class="slds-form-element__row slds-grid">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="select-01">
+                                            <!--abbr class="slds-required" title="required">*</abbr-->Customer Groups:</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <select class="slds-select" id="select-01">
+                                                    <option selected="selected">Everyone</option>
+                                                    <option>Customer Group A</option>
+                                                    <option>Customer Group B</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="select-01">
+                                            Display from:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="select-01">
+                                            Display to:</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- /RULES -->
+                    </div>
+
+
+
+
+
                 </div>
                 </div>
 

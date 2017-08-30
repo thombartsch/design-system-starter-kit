@@ -1,16 +1,24 @@
-<footer class="slds-hide slds-utility-bar_container" aria-label="Utility Bar">
+<footer class="2slds-hide slds-utility-bar_container" aria-label="Utility Bar" id="page_footer">
   <h2 class="slds-assistive-text">Utility Bar</h2>
   <ul class="slds-utility-bar">
-    <li class="slds-utility-bar__item">
-      <button class="slds-button slds-utility-bar__action" aria-pressed="false">
-        <svg class="slds-button__icon slds-button__icon_left slds-button_success" aria-hidden="true">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record"></use>
-        </svg>
-        <span class="slds-utility-bar__text">Page is not published</span>
-      </button>
-    </li>
-  </ul>
-  <section class="slds-utility-panel slds-grid slds-grid_vertical" role="dialog" aria-labelledby="panel-heading-01">
+      <li class="slds-utility-bar__item" id="not_published">
+          <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+              <svg class="slds-button__icon slds-button__icon_left slds-button_success" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record"></use>
+              </svg>
+              <span class="slds-utility-bar__text">Page is not published</span>
+          </button>
+      </li>
+      <li class="slds-hide slds-utility-bar__item" id="page_published">
+          <button class="slds-button slds-utility-bar__action" aria-pressed="false">
+              <svg class="slds-button__icon slds-button__icon_left slds-button_destructive" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record"></use>
+              </svg>
+              <span class="slds-utility-bar__text">Page is published</span>
+          </button>
+      </li>
+    </ul>
+<section class="slds-utility-panel slds-grid slds-grid_vertical" role="dialog" aria-labelledby="panel-heading-01">
     <header class="slds-utility-panel__header slds-grid slds-shrink-none">
       <div class="slds-media slds-media_center slds-size_1-of-1">
         <div class="slds-media__figure slds-m-right_x-small">

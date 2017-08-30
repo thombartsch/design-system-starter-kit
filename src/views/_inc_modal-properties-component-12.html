@@ -8,33 +8,112 @@
                     </svg>
                     <span class="slds-assistive-text">Close</span>
                 </button>
-                <h2 id="header66" class="slds-text-heading--medium">Carousel/Slider</h2>
+                <h2 id="header66" class="slds-text-heading--medium">Category Tiles</h2>
             </header>
             <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-12">
                 <div class="slds-border_bottom slds-p-bottom_small">
                     <div class="slds-form-element">
                         <label class="slds-form-element__label" for="text-input-id-1">Component Name</label>
                         <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="Carousel/Slider">
+                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="Category Tiles">
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="slds-form-element">
-                        <label class="slds-form-element__label" for="select-01">Number of Slides</label>
-                        <div class="slds-form-element__control">
-                            <div class="slds-select_container">
-                                <select class="slds-select" id="select-01">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
+                <div class="slds-tabs_default">
+                    <ul class="slds-tabs_default__nav" role="tablist">
+                        <li class="slds-tabs_default__item" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-default-121" id="tab-default-121__item">Content</a></li>
+                        <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-122" id="tab-default-122__item">Rules</a></li>
+                    </ul>
+                    <div id="tab-default-121" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-121__item">
+                        <!-- 1 -->
+                        <div class="slds-grid">
+                            <div class="slds-col slds-border_right" style="min-width: 200px;">
+                                <!-- NAV TAB -->
+                                <nav class="slds-nav-vertical" aria-label="Sub page">
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps"><!--Slide 1--></h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item slds-is-active"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    {#
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 2</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 3</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 4</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 5</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 6</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 7</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Slide 8</h2>
+                                        <ul>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Image</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Text</a></li>
+                                            <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    #}
+                                </nav>
+                                <!-- /NAV TAB -->
+                            </div>
+                            <div class="slds-p-around_small">
+                                <!-- CONTENT TAB -->
+                                {% include "_inc_gallery.html" ignore missing %}
+                                <!-- /CONTENT TAB -->
                             </div>
                         </div>
-                    </div>
+                        <!-- /1 -->
 
-                    <label class="slds-p-top_small slds-form-element__label" for="input-unique-id">Rules</label>
-                    <div class="slds-p-bottom_small">
+
+
+                    </div>
+                    <div id="tab-default-122" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-122__item">
+                        <!-- 2 -->
+
+                        <div class="slds-p-bottom_small">
                             <div class="slds-form slds-form_compound">
                                 <div class="slds-form-element__row slds-grid">
                                     <div class="slds-form-element">
@@ -71,6 +150,8 @@
                         </div>
 
 
+                        <!-- /2 -->
+                    </div>
                 </div>
             </div>
             <footer class="slds-modal__footer">
@@ -81,9 +162,5 @@
     </section>
     <div class="slds-backdrop slds-backdrop--open"></div>
 </div>
-
-
-
-
 
 
