@@ -10,42 +10,46 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Prototype styles -->
     <link rel="stylesheet" href="/styles/index.css" />
-
     <script>
-        (function(apiKey){
-            (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-                                 v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
-                                     o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-                                 y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-                                 z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-
+        (function (apiKey) {
+            (function (p, e, n, d, o) {
+                var v, w, x, y, z;
+                o = p[d] = p[d] || {};
+                o._q = [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
+                for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                    o[m] = o[m] || function () {
+                        o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                    };
+                })(v[w]);
+                y = e.createElement(n);
+                y.async = !0;
+                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                z = e.getElementsByTagName(n)[0];
+                z.parentNode.insertBefore(y, z);
+            })(window, document, 'script', 'pendo');
             // Call this whenever information about your visitors becomes available
             // Please use Strings, Numbers, or Bools for value types.
             pendo.initialize({
                 visitor: {
-                    id:              'VISITOR-UNIQUE-ID'   // Required if user is logged in
-                    // email:        // Optional
-                    // role:         // Optional
-
-                    // You can add any additional visitor level key-values here,
-                    // as long as it's not one of the above reserved names.
-                },
-
-                account: {
+                    id: 'VISITOR-UNIQUE-ID' // Required if user is logged in
+                        // email:        // Optional
+                        // role:         // Optional
+                        // You can add any additional visitor level key-values here,
+                        // as long as it's not one of the above reserved names.
+                }
+                , account: {
                     // id:           'ACCOUNT-UNIQUE-ID' // Highly recommended
                     // name:         // Optional
                     // planLevel:    // Optional
                     // planPrice:    // Optional
                     // creationDate: // Optional
-
                     // You can add any additional account level key-values here,
                     // as long as it's not one of the above reserved names.
                 }
             });
         })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
     </script>
-
-
 </head>
 
 <body>
@@ -219,7 +223,48 @@
                                 </span>
                             </td>
                             <td scope="row">
-                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Spring Campaign 2017</a></div>
+                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Spring Campaign 2017</a>
+                                    <div class="slds-form-element__icon">
+                                        <button aria-describedby="help" class="slds-button slds-button_icon">
+                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+
+                                    <section class="slds-popover slds-nubbin_left" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6">
+                                        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Close dialog</span>
+                                        </button>
+                                        <header class="slds-popover__header">
+                                            <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2017</h2>
+                                        </header>
+                                        <div class="slds-popover__body" id="dialog-body-id-6">
+                                            <div class="slds-grid">
+                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-1">
+                                                    <label>Library</label>
+                                                    Library Name
+                                                </div>
+                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                                                    <label>Sites</label>
+                                                    Site Name
+                                                </div>
+                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                                                    <label>Status</label>
+                                                    Online
+                                                </div>
+                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                                                    <label>Is Searchable</label>
+                                                    Yes
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
                             </td>
                             <td role="gridcell">
                                 <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
@@ -260,7 +305,9 @@
                                 </span>
                             </td>
                             <td scope="row">
-                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Summer Campaign 2017</a></div>
+                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Summer Campaign 2017</a>
+                                    {% include "_inc_list_item-popover.html" ignore missing %}
+                                </div>
                             </td>
                             <td role="gridcell">
                                 <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
@@ -301,7 +348,9 @@
                                 </span>
                             </td>
                             <td scope="row">
-                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Fall Campaign 2017</a></div>
+                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Fall Campaign 2017</a>
+                                    {% include "_inc_list_item-popover.html" ignore missing %}
+                                </div>
                             </td>
                             <td role="gridcell">
                                 <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
@@ -338,25 +387,21 @@
                 </table>
             </div>
         </div>
-        <!-- /PAGES LIST -->
-        {% include "_inc_modal-delete-page.html" %}
-        {% include "_inc_modal-newpage.html" %}
-        {% include "_inc_toast-page-deleted.html" %}
-    </main>
+        <!-- /PAGES LIST -->{% include "_inc_modal-delete-page.html" %} {% include "_inc_modal-newpage.html" %} {% include "_inc_toast-page-deleted.html" %} </main>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script>
         svg4everybody();
     </script>
-
     <!-- JAVASCRIPT -->
-    <script src = '/scripts/jquery-3.2.1.min.js'></script>
-    <script src = '/scripts/jquery-ui.min.js'> </script>
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'>
+    </script>
     <script>
-        {% include "_inc_js.html" %}
+        { % include "_inc_js.html" %
+        }
     </script>
     <!-- /JAVASCRIPT -->
-
-    </body>
+</body>
 
 </html>

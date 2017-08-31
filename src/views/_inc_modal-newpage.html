@@ -11,22 +11,40 @@
                 <h2 id="header43" class="slds-text-heading--medium">New Page</h2>
             </header>
 
-
-
-
             <div class="slds-modal__content slds-p-around--medium slds-p-bottom--large" id="modal-content-id-2">
                 <!-- FORM 1 -->
-                <div class="slds-form slds-form_stacked slds-p-bottom_small" id="form_step-1">
-                    <div class="slds-form-element">
-                        <label class="slds-form-element__label" for="input-id-02">
-                            <abbr class="slds-required" title="required">*</abbr>
-                            Page Name
-                        </label>
-                        <div class="slds-form-element__control">
-                            <input type="text" id="input-id-02" class="slds-input" placeholder="Page Name">
-                        </div>
+                    <div class="slds-form slds-form_compound">
+                        <fieldset class="slds-form-element">
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <label class="slds-form-element__label" for="input-013"><abbr class="slds-required" title="required">*</abbr>Page Name</label>
+                                        <div class="slds-form-element__icon">
+                                            <button aria-describedby="help" class="slds-button slds-button_icon">
+                                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Help</span>
+                                            </button>
+                                        </div>
+                                        <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <label class="slds-form-element__label" for="input-013"><abbr class="slds-required" title="required">*</abbr>ID (URL Suffix)</label>
+                                        <div class="slds-form-element__icon">
+                                            <button aria-describedby="help" class="slds-button slds-button_icon">
+                                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                                </svg>
+                                                <span class="slds-assistive-text">Help</span>
+                                            </button>
+                                        </div>
+                                        <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
-                </div>
                 <!-- /FORM 1 -->
                 <!-- FORM 2 -->
                 <div class="slds-form slds-form_stacked slds-scrollable_y" id="form_step-1">
@@ -222,7 +240,6 @@
                     </fieldset>
                 </div>
                 <!-- /FORM 2 -->
-
             </div>
             <footer class="slds-modal__footer">
                 <button class="slds-button slds-button_neutral js-close-modal-id-2">Cancel</button>

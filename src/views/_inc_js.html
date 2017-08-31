@@ -343,3 +343,15 @@ $('#modal-id-12-delete button.action-delete-component').click(function () {
     $('#sub-left .placeholder-container .placeholder-component-12').appendTo('#sub-left .placeholder-library');
 })
 */
+
+$(function() {
+    $('.placeholder-container').sortable(
+        /*{
+        connectWith: ".placeholder-container",
+        handle: ".js-trigger-dragdrop-component",
+        cancel: ".portlet-toggle",
+        placeholder: "portlet-placeholder ui-corner-all"
+    }*/
+    );
+    $('.placeholder-container').disableSelection();
+} );
