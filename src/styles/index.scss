@@ -409,3 +409,113 @@
     float: left;
 }
 */
+
+/*PINGER */
+/* Create as many divs as you would like in your pinger */
+/*Give each of them this class*/
+
+.propagating-circle {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+/*delay classes. One for each div*/
+
+.delay-p5s {
+    -webkit-animation-delay: 0.5s;
+}
+
+.delay-1s {
+    -webkit-animation-delay: 1s;
+}
+
+.delay-1p5s {
+    -webkit-animation-delay: 1.5s;
+}
+
+.delay-2s {
+    -webkit-animation-delay: 2s;
+}
+
+/*Give this class to each pinger circle as well*/
+.ping {
+    animation-name: ping;
+    -webkit-animation-name: ping;
+
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+
+    visibility: visible;
+}
+
+/*expand the circle from zero to 100px*/
+@-webkit-keyframes ping {
+    0% {
+        height: 0;
+        width: 0;
+        bottom: 0;
+    }
+
+    100% {
+        height: 100px;
+        width: 100px;
+        top: 150px;
+        left: 150px;
+    }
+}
+
+@keyframes pinger {
+    0% {
+        height: 0;
+        width: 0;
+        bottom: 0;
+    }
+
+    100% {
+        height: 100px;
+        width: 100px;
+        top: 150px;
+        left: 150px;
+    }
+}
+
+
+
+//hover over same list element
+/*
+[class^="item"]:hover{
+    background: red;
+}
+*/
+
+
+//LI ITEMS NAVIGATOR
+
+#navigator li{
+    background: #fff;
+}
+
+//SORTABLE UI
+/*
+.ui-sortable-placeholder {
+    border: 3px dashed #aaa;
+    height: 45px;
+    width: 344px;
+    background: red !Important;
+}
+*/
+
+
+//SLIDER CSS
+
+

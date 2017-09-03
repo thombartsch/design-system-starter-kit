@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Prototype styles -->
     <link rel="stylesheet" href="/styles/index.css" />
+
     <script>
         (function (apiKey) {
             (function (p, e, n, d, o) {
@@ -225,45 +226,13 @@
                             <td scope="row">
                                 <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Spring Campaign 2017</a>
                                     <div class="slds-form-element__icon">
-                                        <button aria-describedby="help" class="slds-button slds-button_icon">
+                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipA">
                                             <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
                                             </svg>
                                             <span class="slds-assistive-text">Help</span>
                                         </button>
                                     </div>
-
-                                    <section class="slds-popover slds-nubbin_left" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6">
-                                        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
-                                            <svg class="slds-button__icon" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                            </svg>
-                                            <span class="slds-assistive-text">Close dialog</span>
-                                        </button>
-                                        <header class="slds-popover__header">
-                                            <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2017</h2>
-                                        </header>
-                                        <div class="slds-popover__body" id="dialog-body-id-6">
-                                            <div class="slds-grid">
-                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-1">
-                                                    <label>Library</label>
-                                                    Library Name
-                                                </div>
-                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
-                                                    <label>Sites</label>
-                                                    Site Name
-                                                </div>
-                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
-                                                    <label>Status</label>
-                                                    Online
-                                                </div>
-                                                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
-                                                    <label>Is Searchable</label>
-                                                    Yes
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
                                 </div>
                             </td>
                             <td role="gridcell">
@@ -306,6 +275,15 @@
                             </td>
                             <td scope="row">
                                 <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Summer Campaign 2017</a>
+                                    <div class="slds-form-element__icon">
+                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
+                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+
                                     {% include "_inc_list_item-popover.html" ignore missing %}
                                 </div>
                             </td>
@@ -350,6 +328,15 @@
                             <td scope="row">
                                 <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Fall Campaign 2017</a>
                                     {% include "_inc_list_item-popover.html" ignore missing %}
+                                    <div class="slds-form-element__icon">
+                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipC">
+                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+
                                 </div>
                             </td>
                             <td role="gridcell">
@@ -387,7 +374,32 @@
                 </table>
             </div>
         </div>
-        <!-- /PAGES LIST -->{% include "_inc_modal-delete-page.html" %} {% include "_inc_modal-newpage.html" %} {% include "_inc_toast-page-deleted.html" %} </main>
+
+
+
+
+{#
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small slds-is-open" aria-expanded="false">
+            <button class="slds-button slds-button--icon-more toggle-tooltip" aria-describedby="help" title="Help">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                </svg>
+                <span class="slds-assistive-text">Help</span>
+            </button>
+        </div>
+
+        <div class="slds-popover slds-popover--tooltip slds-nubbin--top-right tooltip-content slds-show" role="tooltip" id="tooltip-content" style="">
+            <div class="slds-popover__body">Running in production mode will use sampling to trace every 20th request and provide aggregated runtime data only.</div>
+        </div>
+
+#}
+
+        <!-- /PAGES LIST -->
+        {% include "_inc_modal-delete-page.html" %}
+        {% include "_inc_modal-newpage.html" %}
+        {% include "_inc_toast-page-deleted.html" %}
+
+    </main>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script>
@@ -398,10 +410,152 @@
     <script src='/scripts/jquery-ui.min.js'>
     </script>
     <script>
-        { % include "_inc_js.html" %
-        }
+        {% include "_inc_js.html" %}
     </script>
     <!-- /JAVASCRIPT -->
+
+
+    <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinA">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+            <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2017</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+            <div class="slds-grid">
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-1">
+                    <label>Library</label>
+                    Library Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Sites</label>
+                    Site Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Status</label>
+                    Online
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Is Searchable</label>
+                    Yes
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinB">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+            <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Summer Campaign 2017</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+            <div class="slds-grid">
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-1">
+                    <label>Library</label>
+                    Library Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Sites</label>
+                    Site Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Status</label>
+                    Online
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Is Searchable</label>
+                    Yes
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinC">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+            <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Fall Campaign 2017</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+            <div class="slds-grid">
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-1">
+                    <label>Library</label>
+                    Library Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Sites</label>
+                    Site Name
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Status</label>
+                    Online
+                </div>
+                <div class="slds-p-around_small slds-border_bottom slds-size-1-of-3">
+                    <label>Is Searchable</label>
+                    Yes
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script>
+    {#
+    var reference = document.querySelector('#list_tooltip');
+    new Popper(reference, {allow: 'node', content: '.list-element-popover'}, {placement: 'right'})
+     #}
+</script>
+
+
+<script>
+
+    $('#list_tooltipA').click(function() {
+        //alert( "Handler for .click() called." );
+        $('#poppinA').toggleClass('slds-hide');
+    });
+    $('#list_tooltipB').click(function() {
+        //alert( "Handler for .click() called." );
+        $('#poppinB').toggleClass('slds-hide');
+    });
+    $('#list_tooltipC').click(function() {
+        //alert( "Handler for .click() called." );
+        $('#poppinC').toggleClass('slds-hide');
+    });
+
+    $('.slds-popover__close').click(function() {
+        //$('#poppinC').toggleClass('slds-hide');
+        $(this).closest('.slds-popover').toggleClass('slds-hide');
+    });
+
+
+</script>
+
+<style>
+    #poppinA{
+        top: 140px;
+        left: 230px;
+    }
+    #poppinB{
+        left: 250px;
+        top: 180px;
+    }
+    #poppinC{
+        left: 210px;
+        top: 220px;
+    }
+    </style>
+
 </body>
 
 </html>

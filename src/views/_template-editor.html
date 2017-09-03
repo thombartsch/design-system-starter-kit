@@ -51,7 +51,7 @@
     https://www.lightningdesignsystem.com/components/global-navigation/
   -->
  <div class="slds-context-bar slds-p-left_none  slds-m-left_none">
-  <div class="slds-context-bar__primary">
+     <div class="slds-context-bar__primary slds-context-bar__item_divider-right" style="min-width:275px">
     <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover slds-context-bar__item_divider-right2">
       <div class="slds-context-bar__icon-action 2slds-context-bar__item_divider-right">
         <button class="slds-button slds-icon-waffle_container slds-context-bar__button   slds-p-left_small   slds-p-right_small" title="Description of the icon when needed" id="back-to-list">
@@ -70,10 +70,10 @@
   </div>
   <nav class="slds-context-bar__secondary" role="navigation">
     <ul class="slds-grid">
-      <li class="slds-context-bar__item slds-context-bar__item_divider-right2">
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right">
           <span class="slds-truncate slds-context-bar__label-action slds-text-color_weak" title="Tools">SiteGenesis</span>
       </li>
-      <li class="slds-context-bar__item slds-context-bar__item_divider-right2">
+      <li class="slds-context-bar__item slds-context-bar__item_divider-right">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Locale">
           <span class="slds-truncate" title="Tools">(en-US)</span>
         </a>
@@ -88,6 +88,14 @@
               <div class="slds-dropdown slds-dropdown--right">
                   <ul class="dropdown__list" role="menu">
                       <li class="slds-dropdown__item slds-is-selected" role="presentation">
+                          <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0">
+                              <span class="slds-truncate">
+                                  <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                  </svg>en-US</span>
+                          </a>
+                      </li>
+                      <li class="slds-dropdown__item slds-has-divider--top-space" role="presentation">
                           <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0">
                               <span class="slds-truncate">
                                   <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
@@ -107,7 +115,51 @@
               </div>
           </div>
       </li>
-    </ul>
+        <li class="slds-context-bar__item slds-context-bar__item_divider-right">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Locale" id="trigger_preview">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+                </svg>
+            </a>
+            <div class="slds-hide slds-context-bar__icon-action slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="true">
+
+                <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="settings">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Open object switcher menu</span>
+                </button>
+                <div class="slds-dropdown slds-dropdown--right">
+                    <ul class="dropdown__list" role="menu">
+                        <li class="slds-dropdown__item slds-is-selected" role="presentation">
+                            <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0">
+                                <span class="slds-truncate">
+                                    <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>en-US</span>
+                            </a>
+                        </li>
+                        <li class="slds-dropdown__item slds-has-divider--top-space" role="presentation">
+                            <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0">
+                                <span class="slds-truncate">
+                                    <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>fr-FRA</span>
+                            </a>
+                        </li>
+                        <li class="slds-dropdown__item  slds-has-divider--top-space" role="presentation">
+                            <a href="javascript:void(0);" role="menuitemcheckbox" tabindex="-1">
+                                <span class="slds-truncate">
+                                    <svg class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>de-DE</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+      </ul>
   </nav>
   <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
     <ul class="slds-grid">
@@ -122,8 +174,8 @@
         </a>
       </li>
       <li class="slds-context-bar__item" id="trigger-publish">
-        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Publish">
-          <span class="slds-truncate" title="Tools">Publish</span>
+        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Online">
+          <span class="slds-truncate" title="Tools">Set Online</span>
         </a>
       </li>
       <li class="slds-hide slds-context-bar__item" id="trigger-update">
@@ -140,6 +192,64 @@
 
   </div>
 </div>
+
+
+
+    <section class="slds-hide slds-popover slds-nubbin_top list-element-popover" role="dialog"
+             aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinD"
+             style="min-width:520px; left: 233px; top: 5px;">
+        <div class="2slds-hide slds-p-around_small slds-grid modal" style="min-height:90px;" id="">
+            <div class="slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                <div class="slds-form slds-form_compound">
+                    <div class="slds-form-element__row slds-grid">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="select-01">
+                                <!--abbr class="slds-required" title="required">*</abbr-->Customer Groups:</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <select class="slds-select" id="select-01">
+                                        <option selected="selected">Everyone</option>
+                                        <option>Customer Group A</option>
+                                        <option>Customer Group B</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="select-01">
+                                Display from:</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="select-01">
+                                Display to:</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slds-p-left_small slds-p-right_small slds-p-bottom_small">
+                <button class="slds-button slds-button_neutral slds-m-top_large">Apply</button>
+            </div>
+            <div class="2slds-col">
+                <div class="">
+                    <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small js-close-modal-id-102 js-close-filter-view" title="Close Filter Panel">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close Filter Panel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -161,13 +271,20 @@
     </script>
 
 
-
+    <script>
+        new Tether({
+            element: '.element',
+            target: '.target',
+            attachment: 'top left',
+            targetAttachment: 'top right',
+            constraints: [{
+                to: 'window',
+                attachment: 'together'
+            }]
+        });
+    </script>
 
     <!-- /JAVASCRIPT -->
-
-
-
-
     {% include "_inc_modal-delete-page.html" %}
     {% include "_inc_toast-page-deleted.html" %}
 
