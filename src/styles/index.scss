@@ -99,10 +99,10 @@
     .region {
         -webkit-transition-duration: 0.4s;
         /*background: rgba(0, 0, 0, 0.01);*/
-        border: 2px solid rgba(255, 165, 0, 0.1);
+        border: 1px solid rgba(255, 165, 0, 0.1);
     }
     .region:hover {
-        border: 2px solid rgba(255, 165, 0, 1);
+        border: 1px solid rgba(255, 165, 0, 1);
         /*background: rgba(0, 0, 0, 0.2);*/
     }
 
@@ -206,13 +206,13 @@
         -webkit-transition-duration: 0.4s;
         background: rgba(0, 0, 0, 0.4);
         min-height: 100px;
-        border: 2px solid rgba(255, 165, 0, 0.4);
+        border: 1px solid rgba(255, 165, 0, 0.4);
         background: rgba(0, 0, 0, 0.2);
     }
 
     #header:hover,
     #footer:hover {
-        border: 2px solid rgba(255, 165, 0, 1);
+        border: 1px solid rgba(255, 165, 0, 1);
         background: rgba(0, 0, 0, 0.4);
     }
 
@@ -518,4 +518,19 @@
 
 //SLIDER CSS
 
+.sliderButton {
+    background: rgba(0,0,0,0.2);
+    text-indent: -9999px;
+    /*display: block;*/
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 
+.sliderButton.active{
+    background: rgba(0,0,0,1);
+}
