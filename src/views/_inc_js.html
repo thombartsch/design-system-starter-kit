@@ -717,28 +717,14 @@ $('.add-product-dummy').click(function(){
 
     return false;
 });
-$('.product-component button.js-trigger-edit-component').click(function(){
+$('.product-component-placeholder button.js-trigger-edit-component').click(function(){
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
-    alert(activeComponent);
-    //$('.product-component-editor').toggleClass('slds-hide');
+    $('.product-component-editor').toggleClass('slds-hide');
     return false;
 });
 $('.product-component-editor button.trigger-save-modal').click(function(){
-    /*
-    selected_product_combined = 'by:' +selected_product_brand+ '<br>price:' +selected_product_price;
-
-    $(class_activeComponent +' .text-holder').html(selected_product_combined);
-    $(class_activeComponent +' .header-holder').html(selected_product_name);
-
-    selected_product_name
-    selected_product_brand
-    selected_product_price
-    */
-
-
     $('.product-component-editor').toggleClass('slds-hide');
-
     return false;
 });
 
@@ -790,6 +776,7 @@ $('.add-sub-text-dummy').click(function(){
     var subgoal = $(this).closest('.sub-container').find('.sub')
     component_text.appendTo(subgoal).hide().fadeIn(600);
 
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
     return false;
 });
@@ -799,12 +786,12 @@ $('.add-sub-text-dummy').click(function(){
 
 //SUB IMAGE COMPONENT
 $('.add-sub-image-dummy').click(function(){
-    alert('sub image');
     var component_text = $('#dummy_container .my_image_dummy li').clone(true,true).addClass('item'+ cloneCountA++);
     var navigator_text = $('#dummy_container .my_image_navigator li').clone(true,true).addClass('item'+ cloneCountB++);
     var subgoal = $(this).closest('.sub-container').find('.sub')
     component_text.appendTo(subgoal).hide().fadeIn(600);
 
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
     return false;
 });
@@ -817,6 +804,7 @@ $('.add-sub-video-dummy').click(function(){
     var subgoal = $(this).closest('.sub-container').find('.sub')
     component_text.appendTo(subgoal).hide().fadeIn(600);
 
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
     return false;
 });
