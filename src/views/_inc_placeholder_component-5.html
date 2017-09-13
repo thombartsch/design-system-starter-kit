@@ -27,9 +27,30 @@
 
     <div class="slds-align_absolute-center slds-align_absolute-center slds-p-around_medium slds-grid slds-wrap">
         <div class="slds-size_1-of-1 slds-align_absolute-center">
-            <img class="image-holder" src="http://fakeimg.pl/800x200/?text=Image-Placeholder" style="width:100%" />
+            <div class="slds-col">
+                <img src="images/3754004820_91a5c238a0.jpg" alt="" class="image-holder" />
+                <h2 class="slds-m-bottom_xxsmall slds-text-heading--large image-header-holder"></h2>
+                <span class="image-text-holder"></span>
+            </div>
         </div>
     </div>
+
+    <style>
+        .image-holder{
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+        }
+        div h2.image-header-holder,
+        div h2.image-text-holder{
+            position: absolute;
+            top: 50%;
+            left:0;
+            width: 100%;
+        }
+    </style>
+
+
     {#{% include "_inc_modal-delete-component.html" ignore missing %}#}
 <!-- /IMAGE COMPONENT PLACEHOLDER -->
 </div>

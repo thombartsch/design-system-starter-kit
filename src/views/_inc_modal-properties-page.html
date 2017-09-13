@@ -153,19 +153,35 @@
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
                                             <label class="slds-form-element__label" for="input-03">Page Address (URL)</label>
-                                            <input type="text" id="input-03" class="slds-input" placeholder="Given Page Name">
+                                            <input type="text" id="input-03" class="slds-input" placeholder="">
                                         </div>
                                     </div>
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
-                                            <label class="slds-form-element__label" for="input-03">Meta Description</label>
-                                            <input type="text" id="input-03" class="slds-input" placeholder="Category Name">
+                                            <label class="slds-form-element__label" for="input-03">Page Title</label>
+                                            <span id="spn-id-seo_title" class="slds-float_right slds-form-element__label"></span>
+                                            <input type="text" id="input-seo_title" class="slds-input" placeholder="">
+                                        </div>
+                                    </div>
+                                    {#
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size_1-of-1">
+                                            <label class="slds-form-element__label" for="input-03">Meta Description (160 chars)</label>
+                                            <input type="text" id="input-03" class="slds-input" placeholder="">
+                                        </div>
+                                    </div>
+                                    #}
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="textarea-id-01">Meta Description</label>
+                                        <span id="spn-id-seo_description" class="slds-float_right slds-form-element__label"></span>
+                                        <div class="slds-form-element__control">
+                                            <textarea id="textarea-id-seo_description" class="slds-textarea" placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
-                                            <label class="slds-form-element__label" for="input-03">Meta Keywords</label>
-                                            <input type="text" id="input-03" class="slds-input" placeholder="category/page-title">
+                                            <label class="slds-form-element__label" for="input-03">Meta Keywords (10 keywords)</label>
+                                            <input type="text" id="input-03" class="slds-input" placeholder="">
                                         </div>
                                     </div>
 
