@@ -395,9 +395,9 @@
 #}
 
         <!-- /PAGES LIST -->
-        {% include "_inc_modal-delete-page.html" %}
-        {% include "_inc_modal-newpage.html" %}
-        {% include "_inc_toast-page-deleted.html" %}
+        {% include "_inc_modal-delete-page.html" ignore missing %}
+        {% include "_inc_modal-newpage.html" ignore missing %}
+        {% include "_inc_toast-page-deleted.html" ignore missing %}
 
     </main>
     <script src="/scripts/app.js"></script>
@@ -410,7 +410,7 @@
     <script src='/scripts/jquery-ui.min.js'>
     </script>
     <script>
-        {% include "_inc_js.html" %}
+        {% include "_inc_js.html" ignore missing %}
     </script>
     <!-- /JAVASCRIPT -->
 

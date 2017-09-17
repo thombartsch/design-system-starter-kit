@@ -19,7 +19,7 @@
                 <!--  EDITOR CONTENT-->
 
 
-                <div class="editor">
+                <div class="editor slds-col sldsgrid">
                     <div class="slds-tabs_default">
                         <ul class="slds-tabs_default__nav" role="tablist">
                             <li class="slds-tabs_default__item 2slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-351" id="tab-default-351__item">Content</a></li>
@@ -199,7 +199,7 @@
                                                             </div>
                                                         </td>
                                                         <td role="gridcell">
-                                                            <div class="slds-truncate product-image" title="Image"><img src="{{ product.Image }}" /></div>
+                                                            <div class="slds-truncate product-image" title="Image"><img class="prod_img" src="{{ product.Image }}" /></div>
                                                         </td>
                                                         <th scope="row">
                                                             <div class="slds-truncate product-name" title="Product">{{ product.Product }}</div>
@@ -208,7 +208,7 @@
                                                             <div class="slds-truncate product-brand" title="Brand">{{ product.Brand }}</div>
                                                         </td>
                                                         <td role="gridcell">
-                                                            <div class="slds-truncate product-price" title="Price"><span class="slds-text-color_weak">$</span> {{ product.Price }}</div>
+                                                            <div class="slds-truncate product-price" title="Price">{{ product.Price }}</div>
                                                         </td>
                                                     </tr>
                                                     {% endfor %}
@@ -332,11 +332,3 @@
     </section>
     <div class="slds-backdrop slds-backdrop_open"></div>
 </div>
-
-
-
-
-
-
-
-
