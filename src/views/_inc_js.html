@@ -135,6 +135,17 @@ $('#input-seo_title').keyup(function () {
 });
 
 
+//CREATE PAGE TOAST
+$('button.js-save-modal-id-2').click(function () {
+    $('.modal-id-2').toggleClass('slds-hide');
+    $('#created-toast').toggleClass('slds-hide');
+});
+
+
+$('button.close-toast-2').click(function () {
+    $('#created-toast').toggleClass('slds-hide');
+});
+
 
 
 //BACK TO LIST
@@ -533,7 +544,7 @@ $('.product-component-editor button.trigger-save-modal').click(function(){
     //$('.'+activeComponent +' img.prod_img').src(selected_product_image);
     $('.'+activeComponent +' .slds-text-heading_small').html(selected_product_name);
     $('.'+activeComponent +' .slds-text-title').html(selected_product_price);
-    //$('.'+activeComponent +' .header-holder').html(selected_header);
+    $('.'+activeComponent +' .header-holder').html(selected_header);
 
     //$('.image-component-editor').addClass('slds-hide');
 
