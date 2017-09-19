@@ -17,6 +17,21 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 @import 'footer';
 @import 'layout';
 
+
+html {
+  background-color: #afc5de;
+}
+
+
+.slds-brand-band:before {
+  background-image: url('/assets/banner-brand-default.png'),linear-gradient(to top,rgba(32, 92, 159, 0), #205c9f);
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+
+.slds-brand-band:after {
+  background-image: none;
+}
 //
 // We can also add styles directly in this file, like so:
 //

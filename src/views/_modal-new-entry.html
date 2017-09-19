@@ -14,13 +14,23 @@
       <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
         <div class="slds-form slds-form_compound">
           <div class="slds-form-element__row">
-            <div class="slds-form-element slds-size_1-of-2">
+            <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Name</label>
               <div class="slds-form-element__control">
                 <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text">
               </div>
             </div>
+          </div>
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-1">
+              <label class="slds-form-element__label" for="input-unique-id">Description</label>
+              <div class="slds-form-element__control">
+                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="slds-form-element__row">
             <div class="slds-form-element slds-size_1-of-2">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Scope</label>
@@ -31,35 +41,6 @@
                     <option selected="selected">Product Listing Page</option>
                     <option>Content Detail</option>
                     <option>Content Listing</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slds-form-element__row">
-            <div class="slds-form-element slds-size_1-of-2">
-              <label class="slds-form-element__label" for="select-021">
-                <abbr class="slds-required" title="required">*</abbr>Locale</label>
-              <div class="slds-form-element__control">
-                <div class="slds-select_container">
-                  <select class="slds-select" id="select-021">
-                    <option value="default" selected="selected">Default&nbsp;</option>
-                    <option value="zh">Chinese&nbsp;</option>
-                    <option value="zh_CN">Chinese (China)&nbsp;</option>
-                    <option value="nl">Dutch&nbsp;</option>
-                    <option value="en">English&nbsp;</option>
-                    <option value="en_CA">English (Canada)&nbsp;</option>
-                    <option value="en_US">English (United States)&nbsp;</option>
-                    <option value="fr">French&nbsp;</option>
-                    <option value="fr_CA">French (Canada)&nbsp;</option>
-                    <option value="fr_FR">French (France)&nbsp;</option>
-                    <option value="de">German&nbsp;</option>
-                    <option value="de_DE">German (Germany)&nbsp;</option>
-                    <option value="it">Italian&nbsp;</option>
-                    <option value="it_IT">Italian (Italy)&nbsp;</option>
-                    <option value="ja">Japanese&nbsp;</option>
-                    <option value="ja_JP">Japanese (Japan)&nbsp;</option>
-                    <option value="es">Spanish&nbsp;</option>
                   </select>
                 </div>
               </div>
@@ -106,11 +87,37 @@
             </div>
           </div>
           <div class="slds-form-element__row">
-            <div class="slds-form-element">
+            <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
               <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
                 <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+                  <div class="slds-form-element slds-m-right_large">
+                    <label class="slds-form-element__label slds-float_left" for="select-01">Locale</label>
+                    <div class="slds-form-element__control slds-float_left">
+                      <div class="slds-select_container">
+                        <select class="slds-select" id="select-01">
+                          <option value="default" selected="selected">Default&nbsp;</option>
+                          <option value="zh">Chinese&nbsp;</option>
+                          <option value="zh_CN">Chinese (China)&nbsp;</option>
+                          <option value="nl">Dutch&nbsp;</option>
+                          <option value="en">English&nbsp;</option>
+                          <option value="en_CA">English (Canada)&nbsp;</option>
+                          <option value="en_US">English (United States)&nbsp;</option>
+                          <option value="fr">French&nbsp;</option>
+                          <option value="fr_CA">French (Canada)&nbsp;</option>
+                          <option value="fr_FR">French (France)&nbsp;</option>
+                          <option value="de">German&nbsp;</option>
+                          <option value="de_DE">German (Germany)&nbsp;</option>
+                          <option value="it">Italian&nbsp;</option>
+                          <option value="it_IT">Italian (Italy)&nbsp;</option>
+                          <option value="ja">Japanese&nbsp;</option>
+                          <option value="ja_JP">Japanese (Japan)&nbsp;</option>
+                          <option value="es">Spanish&nbsp;</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   <ul aria-label="Format text" class="slds-button-group-list">
                     <li>
                       <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button-tool" tabindex="0" title="Provide description of action">
@@ -135,19 +142,11 @@
               </div>
             </div>
           </div>
-          <div class="slds-form-element__row">
-            <div class="slds-form-element">
-              <label class="slds-form-element__label" for="input-unique-id">Description</label>
-              <div class="slds-form-element__control">
-                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <footer class="slds-modal__footer slds-grid slds-grid_align-spread">
-        <button class="slds-button slds-button_neutral close-create">Cancel</button>
-        <button class="slds-button slds-button_brand close-create">Save</button>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral js-close-modal-34">Cancel</button>
+        <a class="slds-button slds-button--brand js-close-modal-34 show-created-toast" href="data.html">Save</a>
       </footer>
     </div>
   </section>
