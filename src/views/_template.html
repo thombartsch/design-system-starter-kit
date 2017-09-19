@@ -382,7 +382,7 @@
  {% include "_modal-select-commerce-products.html" %}
  {% include "_modal-select-commerce-mixed.html" %}
 
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="/scripts/tether.js"></script>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
@@ -398,13 +398,13 @@
             $('#select-product-23').toggleClass('slds-hide');
         });
 
-        $('.slds-checkbox_faux').click(function() {
+        $('.slds-checkbox_faux, .einstein-item').click(function() {
             $('#items-selected').removeClass('slds-hide');
             $('.hide-select-product-2').removeAttr('disabled');
         });
 
         $('#combobox-unique-id2').change(function() {
-            $('.product-tile, #placeholder-img, #item-counter').toggleClass('slds-hide');
+            $('.product-tile, #placeholder-img, #item-counter, #picker-tabs, .einstein-placeholder-item, .einstein-item, #empty-state-text').toggleClass('slds-hide');
         });
 
         $('.hide-assign-to').click(function() {
@@ -412,11 +412,27 @@
         });
 
        $('.trigger-assign, .hide-select-product').click(function() {
-            $('#select-product').toggleClass('slds-hide');
+            $('#select-product-23').toggleClass('slds-hide');
         });
 
         $('.close-create').click(function() {
             $('#new-rule, #add-table-entry').toggleClass('slds-hide');
+        });
+
+        $('#trigger-assign-tooltip').hover(function() {
+            $('#tooltip-assignments').toggleClass('slds-hide');
+            new Tether({
+                element: '#tooltip-assignments',
+                target: '#trigger-assign-tooltip',
+                attachment: 'center right',
+                targetAttachment: 'center left',
+                targetOffset: '0 -10px',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
         });
 
         $('#assign-to-trigger-2').click(function() {
@@ -481,6 +497,10 @@
                     pin: true
                 }]
             });
+        });
+
+        $('#close-assigned-toast, #assign-success').click(function() {
+            $('#assigned-toast').toggleClass('slds-hide');
         });
 
         $('.show-created-toast, .close-toast-2, .close-create').click(function() {

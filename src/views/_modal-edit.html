@@ -1,5 +1,5 @@
 <!-- Start Edit Entry -->
-<div class="slds-hide" id="edit-table-entry">
+<div class="slds-hide slds-modal--medium" id="edit-table-entry">
   <section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
       <header class="slds-modal__header">
@@ -11,17 +11,29 @@
         </button>
         <h2 id="header43" class="slds-text-heading--medium">Edit Meta Tag Rule</h2>
       </header>
-      <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+
+<div class="slds-modal__content slds-p-around--medium" id="modal-content-id-21">
         <div class="slds-form slds-form_compound">
           <div class="slds-form-element__row">
-            <div class="slds-form-element">
+            <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Name</label>
               <div class="slds-form-element__control">
-                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" value="User-friendly 5th generation secured line">
               </div>
             </div>
-            <div class="slds-form-element">
+          </div>
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-1">
+              <label class="slds-form-element__label" for="input-unique-id">Description</label>
+              <div class="slds-form-element__control">
+                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text">I didn't ask for a completely reasonable excuse! I asked you to get busy! You are the last hope of the universe. You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.
+                </textarea>
+              </div>
+            </div>
+          </div>
+          <div class="slds-form-element__row">
+            <div class="slds-form-element slds-size_1-of-2">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Scope</label>
               <div class="slds-form-element__control">
@@ -35,36 +47,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="slds-form-element__row">
-            <div class="slds-form-element">
-              <label class="slds-form-element__label" for="select-021">
-                <abbr class="slds-required" title="required">*</abbr>Locale</label>
-              <div class="slds-form-element__control">
-                <div class="slds-select_container">
-                  <select class="slds-select" id="select-021">
-                    <option value="default" selected="selected">Default&nbsp;</option>
-                    <option value="zh">Chinese&nbsp;</option>
-                    <option value="zh_CN">Chinese (China)&nbsp;</option>
-                    <option value="nl">Dutch&nbsp;</option>
-                    <option value="en">English&nbsp;</option>
-                    <option value="en_CA">English (Canada)&nbsp;</option>
-                    <option value="en_US">English (United States)&nbsp;</option>
-                    <option value="fr">French&nbsp;</option>
-                    <option value="fr_CA">French (Canada)&nbsp;</option>
-                    <option value="fr_FR">French (France)&nbsp;</option>
-                    <option value="de">German&nbsp;</option>
-                    <option value="de_DE">German (Germany)&nbsp;</option>
-                    <option value="it">Italian&nbsp;</option>
-                    <option value="it_IT">Italian (Italy)&nbsp;</option>
-                    <option value="ja">Japanese&nbsp;</option>
-                    <option value="ja_JP">Japanese (Japan)&nbsp;</option>
-                    <option value="es">Spanish&nbsp;</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="slds-form-element">
+            <div class="slds-form-element slds-size_1-of-2">
               <label class="slds-form-element__label" for="select-0212">
                 <abbr class="slds-required" title="required">*</abbr>Page Meta Tag ID</label>
               <div class="slds-form-element__control">
@@ -106,11 +89,37 @@
             </div>
           </div>
           <div class="slds-form-element__row">
-            <div class="slds-form-element">
+            <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
               <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
                 <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+                  <div class="slds-form-element slds-m-right_large">
+                    <label class="slds-form-element__label slds-float_left" for="select-01">Locale</label>
+                    <div class="slds-form-element__control slds-float_left">
+                      <div class="slds-select_container">
+                        <select class="slds-select" id="select-01">
+                          <option value="default" selected="selected">Default&nbsp;</option>
+                          <option value="zh">Chinese&nbsp;</option>
+                          <option value="zh_CN">Chinese (China)&nbsp;</option>
+                          <option value="nl">Dutch&nbsp;</option>
+                          <option value="en">English&nbsp;</option>
+                          <option value="en_CA">English (Canada)&nbsp;</option>
+                          <option value="en_US">English (United States)&nbsp;</option>
+                          <option value="fr">French&nbsp;</option>
+                          <option value="fr_CA">French (Canada)&nbsp;</option>
+                          <option value="fr_FR">French (France)&nbsp;</option>
+                          <option value="de">German&nbsp;</option>
+                          <option value="de_DE">German (Germany)&nbsp;</option>
+                          <option value="it">Italian&nbsp;</option>
+                          <option value="it_IT">Italian (Italy)&nbsp;</option>
+                          <option value="ja">Japanese&nbsp;</option>
+                          <option value="ja_JP">Japanese (Japan)&nbsp;</option>
+                          <option value="es">Spanish&nbsp;</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   <ul aria-label="Format text" class="slds-button-group-list">
                     <li>
                       <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button-tool" tabindex="0" title="Provide description of action">
@@ -135,16 +144,9 @@
               </div>
             </div>
           </div>
-          <div class="slds-form-element__row">
-            <div class="slds-form-element">
-              <label class="slds-form-element__label" for="input-unique-id">Description</label>
-              <div class="slds-form-element__control">
-                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
       <footer class="slds-modal__footer">
         <button class="slds-button slds-button--neutral js-close-modal-2">Cancel</button>
         <button class="slds-button slds-button--brand js-close-modal-2">Save</button>

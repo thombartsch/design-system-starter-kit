@@ -140,7 +140,66 @@
         </div>
     </td>
 </tr>
-
+<tr class="slds-hint-parent">
+    <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+        <span class="slds-checkbox">
+          <input type="checkbox" name="options" id="id-Triple-buffered hybrid capability">
+          <label class="slds-checkbox__label" for="id-Triple-buffered hybrid capability">
+            <span class="slds-checkbox--faux"></span>
+        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+        </label>
+        </span>
+    </td>
+    <td scope="row">
+        <div class="slds-truncate" title="Triple-buffered hybrid capability"><a href="javascript:void(0);" class="trigger-edit">Triple-buffered hybrid capability</a></div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="Content Listing">Content Listing</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="French (Canada)">French (Canada)</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="og:description">og:description</div>
+    </td>
+    <td role="gridcell">
+        <div class="slds-truncate" title="46"><a id="trigger-assign-tooltip" href="javascript:void(0);" class="trigger-assign">46</a></div>
+    </td>
+    <td role="gridcell" style="width:3.25rem;">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">Show More</span>
+            </button>
+            <div class="slds-dropdown slds-dropdown--right">
+                <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Edit</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-assign">
+                            <span class="slds-truncate" title="Menu Item One">Assign</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="0" class="trigger-edit">
+                            <span class="slds-truncate" title="Menu Item One">Duplicate</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="delete-trigger">
+                            <span class="slds-truncate" title="Menu Item Two">Delete</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </td>
+</tr>
 {% for dictionary in dictionaries %}
 <tr class="slds-hint-parent">
     <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
@@ -205,3 +264,18 @@
  {% endfor %}
   </tbody>
 </table>
+
+
+<section class="slds-popover slds-nubbin_right slds-hide" role="dialog" aria-describedby="dialog-body-id-18" aria-label="Dialog Title" id="tooltip-assignments">
+  <div class="slds-popover__body" id="dialog-body-id-18">
+
+
+<ul class="slds-has-dividers_around-space">
+
+  <li class="slds-item"><p class="slds-text-title_caps">Assigned Products: <span class="slds-badge slds-badge_inverse">12</span></p></li>
+  <li class="slds-item"><p class="slds-text-title_caps">Assigned Categories: <span class="slds-badge slds-badge_inverse">2</span></p></li>
+</ul>
+
+
+  </div>
+</section>

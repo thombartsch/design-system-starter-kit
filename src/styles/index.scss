@@ -199,3 +199,14 @@ tr.is-new {
     max-width: 840px;
     min-width: 480px
 }
+
+
+.slds-tabs_default__link .slds-badge {
+  margin-left: .5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.slds-filters__body_empty {
+  background-color: red;
+}
