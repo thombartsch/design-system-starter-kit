@@ -20,25 +20,21 @@
     {% include "_page-header.html" %}
   </div>
 
-  <div class="slds-card slds-has-top-magnet">
-<div class="slds-grow">
-
-        <div class="slds-grid slds-scrollable_y">
-            <div class="pageBody slds-border--right" id="datatable">
-                <div class="slds-scrollable_y">
-                    {% include "_table-data.html" %}
-                </div>
-            </div>
-            <div id="filtersection" class="slds-hide">
-                <div class="slds-scrollable_y">
-                    {% include "_filter.html" %}
-                </div>
-            </div>
-        </div>
+<div class="slds-card slds-has-top-magnet slds-grid slds-scrollable_y">
+  <div class="slds-grow">
+    <div class="slds-border--right" id="datatable">
+      <div class="slds-scrollable_y">
+        {% include "_table-data.html" %}
+      </div>
     </div>
- </div>
-
+    <div id="filtersection" class="slds-hide">
+      <div class="slds-scrollable_y">
+        {% include "_filter.html" %}
+      </div>
+    </div>
+  </div>
 </div>
+
 {% include "_modal-edit.html" %}
 {% include "_modal-duplicate.html" %}
 {% include "_popover-filter.html" %}
