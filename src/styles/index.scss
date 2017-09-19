@@ -207,6 +207,19 @@ tr.is-new {
   display: inline-block;
 }
 
-.slds-filters__body_empty {
-  background-color: red;
+
+
+// .slds-visual-picker_medium .slds-visual-picker__figure,
+// .slds-visual-picker_medium .slds-visual-picker__body {
+//   width: 100%;
+//   height: auto;
+//   padding: .5rem;
+// }
+
+.slds-tabs_default__content {
+  min-height: 50vh;
+}
+
+.product-tile:hover {
+  background-color: #fafaf9;
 }
