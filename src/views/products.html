@@ -220,12 +220,25 @@
                                 </div>
                                 <div class="slds-col slds-border_left">
                                     <!-- RECOMMENDATIOn -->
-                                    <div class="slds-col product-recommendation slds-border-left slds-p-around_small slds-hide slds-text-align_center" style="min-width:300px">
+                                    <div class="slds-col product-recommendation slds-border-left 2slds-p-around_small slds-hide slds-text-align_center" style="min-width:300px">
+
+                                        <div class="slds-filters__header slds-grid slds-has-divider_bottom-space">
+                                                <h2 class="slds-align-middle slds-text-heading_medium">Recommendations</h2>
+                                                <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small" title="Close Filter Panel">
+                                                  <svg class="slds-button__icon" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#forward" />
+                                                  </svg>
+                                                  <span class="slds-assistive-text">Close Recommendations Panel</span>
+                                                </button>
+                                        </div>
+
+                                      {#
                                         <div class="slds-grid">
                                             <div class="slds-col"><h2 class="slds-text-heading--medium slds-m-bottom--x-small slds-text-align_center slds-p-left_small">Recommendation</h2></div>
                                         </div>
+                                        #}
 
-                                        <fieldset class="slds-form-element">
+                                        <fieldset class="slds-form-element slds-p-top_small">
                                             <div class="slds-form-element__control">
                                                 <div class="slds-visual-picker slds-visual-picker_large">
                                                     <input type="radio" id="visual-picker-17" name="options" value="on" />
