@@ -464,12 +464,18 @@ $('.video-component button.js-trigger-edit-component').click(function(){
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
     class_activeComponent = '.' +activeComponent;
+
+    //www.youtube.com/watch?v=ScMzIvxBSi4
+    //$('.'+activeComponent +' .video-holder').attr('data', '//www.youtube.com/watch?v=ScMzIvxBSi4');
+
+
     $('.video-component-editor').toggleClass('slds-hide');
     return false;
 });
 $('.video-component-editor button.trigger-save-modal').click(function(){
     $('.video-component-editor').toggleClass('slds-hide');
-    $('.'+activeComponent +' .video-holder').attr('src', '/assets/' +selected_video);
+    //$('.'+activeComponent +' .video-holder').attr('src', '/assets/' +selected_video);
+      $('.'+activeComponent +' .video-holder').attr('src', '//player.vimeo.com/video/53873232');
     return false;
 });
 
@@ -537,7 +543,7 @@ $('.product-component-editor button.trigger-save-modal').click(function(){
     alert(selected_product_price);
     alert(selected_product_image);
     */
-    //alert(selected_product_image);
+    $('.targeted_banner-component-editor').addClass('slds-hide');
     $('.product-component-editor').toggleClass('slds-hide');
 
 
