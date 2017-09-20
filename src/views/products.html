@@ -190,16 +190,8 @@
                                                 <tbody>
                                                     {% for product in products %}
                                                     <tr class="product-row{{ product.id }}">
-                                                        <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
-                                                            <div class="slds-checkbox_add-button">
-                                                                <input type="checkbox" class="slds-assistive-text" id="product-row{{ product.id }}" tabindex="-1" value="on" />
-                                                                <label for="product-row{{ product.id }}" class="slds-checkbox_faux">
-                                                                    <span class="slds-assistive-text">Select item 1</span>
-                                                                </label>
-                                                            </div>
-                                                        </td>
                                                         <td role="gridcell">
-                                                            <div class="slds-truncate product-image" title="Image"><img class="prod_img" src="{{ product.Image }}" /></div>
+                                                            <div class="slds-truncate product-image" title="Image"><img class="prod_img" src="{{ product.Image }}" style="height:80px; width: auto;" /></div>
                                                         </td>
                                                         <th scope="row">
                                                             <div class="slds-truncate product-name" title="Product">{{ product.Product }}</div>
@@ -209,6 +201,14 @@
                                                         </td>
                                                         <td role="gridcell">
                                                             <div class="slds-truncate product-price" title="Price">{{ product.Price }}</div>
+                                                        </td>
+                                                        <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                                                            <div class="slds-checkbox_add-button">
+                                                                <input type="checkbox" class="slds-assistive-text" id="product-row{{ product.id }}" tabindex="-1" value="on" />
+                                                                <label for="product-row{{ product.id }}" class="slds-checkbox_faux">
+                                                                    <span class="slds-assistive-text">Select item 1</span>
+                                                                </label>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     {% endfor %}

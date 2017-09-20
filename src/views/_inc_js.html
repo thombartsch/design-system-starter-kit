@@ -465,16 +465,11 @@ $('.video-component button.js-trigger-edit-component').click(function(){
     activeComponent = $(this).closest('li').attr('class');
     class_activeComponent = '.' +activeComponent;
 
-    //www.youtube.com/watch?v=ScMzIvxBSi4
-    //$('.'+activeComponent +' .video-holder').attr('data', '//www.youtube.com/watch?v=ScMzIvxBSi4');
-
-
     $('.video-component-editor').toggleClass('slds-hide');
     return false;
 });
 $('.video-component-editor button.trigger-save-modal').click(function(){
     $('.video-component-editor').toggleClass('slds-hide');
-    //$('.'+activeComponent +' .video-holder').attr('src', '/assets/' +selected_video);
       $('.'+activeComponent +' .video-holder').attr('src', '//player.vimeo.com/video/53873232');
     return false;
 });
@@ -595,6 +590,13 @@ $('.add-sub-text-dummy').click(function(){
 
     $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.text-component-editor').toggleClass('slds-hide');
+
+
     return false;
 });
 //SUB IMAGE COMPONENT
@@ -606,6 +608,14 @@ $('.add-sub-image-dummy').click(function(){
 
     $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    class_activeComponent = '.' +activeComponent;
+    $('.image-component-editor').toggleClass('slds-hide');
+
+
     return false;
 });
 //SUB VIDEO COMPONENT
@@ -616,6 +626,14 @@ $('.add-sub-video-dummy').click(function(){
     component_text.appendTo(subgoal).hide().fadeIn(600);
 
     $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    $('.video-component-editor').toggleClass('slds-hide');
+
+    
 
     return false;
 });
