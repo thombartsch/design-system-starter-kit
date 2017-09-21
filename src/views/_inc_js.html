@@ -156,15 +156,24 @@ $('#back-to-list').click(function () {
 
 //SCREEN SIZES
 $('#trigger-phone').click(function () {
-    $('.page-content').css('max-width', '320px');
-    //$(this).elem.setAttribute('aria-hidden', 'true');
+    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
+    $('.page-content').css('max-width', '320px');    
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+
 });
 $('#trigger-tablet').click(function () {
+    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
     $('.page-content').css('max-width', '800px');
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
 });
 $('#trigger-desktop').click(function () {
+    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
     $('.page-content').css('max-width', '100%');
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
 });
@@ -633,7 +642,7 @@ $('.add-sub-video-dummy').click(function(){
 
     $('.video-component-editor').toggleClass('slds-hide');
 
-    
+
 
     return false;
 });
