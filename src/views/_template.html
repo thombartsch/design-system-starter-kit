@@ -378,9 +378,8 @@
  {% include "_modal-new-dashboard.html" %}
  {% include "_modal-new-entry.html" %}
  {% include "_modal-delete.html" %}
- {% include "_modal-select-commerce.html" %}
  {% include "_modal-select-commerce-products.html" %}
- {% include "_modal-select-commerce-mixed.html" %}
+ {% include "_modal-select-commerce-2.html" %}
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="/scripts/tether.js"></script>
@@ -390,6 +389,12 @@
 
     <script type="text/javascript">
     $(document).ready(function() {
+
+// Nested Categories Commerce Selector
+        $('#trigger-nested').click(function() {
+            $('.slds-is-child').toggleClass('slds-hide');
+            $(this).toggleClass('is-opened');
+        });
 
 // Tabs Commerce Selector
         $('#tab-default-1__item').click(function() {
@@ -422,12 +427,23 @@
 
         $('.slds-checkbox_faux').click(function() {
             $('#items-selected').removeClass('slds-hide');
-            $('.einstein-placeholder-item, .einstein-item').toggleClass('slds-hide');
+            $('.einstein-placeholder-item').addClass('slds-hide');
+            $('.einstein-item').removeClass('slds-hide');
             $('.hrhr-1').removeAttr('disabled');
         });
 
         $('#combobox-unique-id2').change(function() {
             $('.product-tile, #placeholder-img, #item-counter, #picker-tabs, #einstein-says, #empty-state-text').toggleClass('slds-hide');
+        });
+
+        $('#combobox-unique-id22').change(function() {
+            $('.product-tile[aria-level="2"], .product-tile[aria-level="3"]').removeAttr('aria-level');
+            $('.trigger-nested').toggleClass('slds-hide');
+        });
+
+        $('.hrhr').click(function() {
+            var $checkbox = $('input.is-child');
+            $checkbox.prop('checked', !$checkbox[0].checked);
         });
 
         $('.hide-assign-to').click(function() {

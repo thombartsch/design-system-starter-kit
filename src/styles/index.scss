@@ -220,6 +220,32 @@ tr.is-new {
   min-height: 50vh;
 }
 
-.product-tile:hover {
+.product-tile {
+  &[aria-level="2"] {
+    // background-color: red;
+    padding-left: 2rem;
+  }
+
+  &[aria-level="3"] {
+    // background-color: red;
+    padding-left: 4.5rem;
+  }
+
+  &:hover {
   background-color: #fafaf9;
+  }
+}
+
+
+.trigger-nested.is-opened {
+  transform: rotate(90deg);
+}
+
+.page-content.fix-layout {
+  margin-right: -$spacing-small;
+  margin-left: -$spacing-small;
+}
+
+.no-padding {
+  padding-left: 0!important;
 }
