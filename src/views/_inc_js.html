@@ -159,7 +159,7 @@ $('#trigger-phone').click(function () {
     $('#side_device_selector ul li').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
 
-    $('.page-content').css('max-width', '320px');    
+    $('.page-content').css('max-width', '320px');
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
 
 });
@@ -353,8 +353,6 @@ $('.add-slider-dummy').click(function(){
 
 });
 $('.slider-component button.js-trigger-edit-component').click(function(){
-    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
-    //$(this).closest('#region').find('li').attr('class');
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
 
