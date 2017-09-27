@@ -1,7 +1,7 @@
 
     <ul>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-hide">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
           <div class="slds-media__body">
             <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested">
               <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
@@ -19,7 +19,7 @@
         </div>
         <ul>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide2" aria-level="2">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide" aria-level="2">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">
               <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested is-opened" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-2">
@@ -38,7 +38,7 @@
         </div>
       </li>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide2" aria-level="3">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide" aria-level="3">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">Running Shoes</p>
           </div>
@@ -53,7 +53,7 @@
         </div>
       </li>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide2" aria-level="2">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide" aria-level="2">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">
               <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested is-opened" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-2">
@@ -72,7 +72,7 @@
         </div>
       </li>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide2" aria-level="3">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide" aria-level="3">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">4K Televisions</p>
           </div>
@@ -87,7 +87,7 @@
         </div>
       </li>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide2" aria-level="3">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child slds-hide" aria-level="3">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">Televisions</p>
           </div>
@@ -104,7 +104,7 @@
         </ul>
       </li>
       <li>
-        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-hide">
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
           <div class="slds-media__body">
             <p class="slds-text-heading_xsmall2">
               <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-h">
@@ -123,3 +123,12 @@
         </div>
       </li>
     </ul>
+
+ <script type="text/javascript">
+    $(document).ready(function() {
+      $('.is-child.is-inhereted + .slds-checkbox_faux').click(function() {
+        $(this).removeClass('is-inhereted');
+      });
+    });
+
+    </script>

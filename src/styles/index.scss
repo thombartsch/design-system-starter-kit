@@ -253,3 +253,38 @@ tr.is-new {
 .slds-section__content {
   overflow: hidden;
 }
+
+
+// Checkbox Inheretance
+
+.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
+.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux,
+.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
+.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux {
+  background-color: $color-background-path-incomplete-hover;
+
+  &:before,
+  &:after {
+    background-color: #fff;
+  }
+
+  &:before {
+    top: -0.125rem;
+    left: 0.4375rem;
+    width: 0.1875rem;
+    height: 1.0625rem;
+    transform: rotate(40deg);
+  }
+
+  &:after {
+    top: 0.3125rem;
+    left: -0.625rem;
+    width: 0.625rem;
+    height: 0.1875rem;
+    transform: rotate(36deg);
+  }
+}

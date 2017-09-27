@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,6 @@
     {% include "_modal-delete.html" %}
     {% include "_modal-select-commerce-products.html" %}
     {% include "_modal-app-launcher.html" %}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/scripts/tether.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
@@ -99,7 +99,7 @@
       });
 
       $('#combobox-unique-id2').change(function() {
-        $('.product-tile, #placeholder-img, #item-counter, #picker-tabs, #einstein-says, #empty-state-text').toggleClass('slds-hide');
+        $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
       });
 
       $('#combobox-unique-id22').change(function() {
@@ -109,7 +109,7 @@
 
       $('.hrhr').click(function() {
         var $checkbox = $('input.is-child');
-        $checkbox.prop('checked', !$checkbox[0].checked);
+        $checkbox.toggleClass('is-inhereted');
       });
 
       $('.hide-assign-to').click(function() {
