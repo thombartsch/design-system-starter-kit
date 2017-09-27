@@ -1,9 +1,5 @@
 <div class="slds-tabs_default slds-hide" id="picker-tabs">
-  <ul class="slds-tabs_default__nav slds-p-horizontal_medium" role="tablist">
-    <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation" id="item-one"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Products<span class="slds-badge">56</span></a></li>
-    <li class="slds-tabs_default__item" title="Item Two" role="presentation" id="item-two"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Categories<span class="slds-badge">8</span></a></li>
-  </ul>
-  <div id="tab-default-1" class="slds-tabs_default__content slds-show slds-p-top_none" role="tabpanel" aria-labelledby="tab-default-1__item">
+  <div id="tab-default-1" class="slds-tabs_default__content slds-show slds-p-top_none slds-p-bottom_none" role="tabpanel" aria-labelledby="tab-default-1__item">
     <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
       {% for product in lol %}
       <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom slds-hide product-tile">
@@ -34,5 +30,8 @@
 
   </div>
 </div>
+
+<div id="empty-state" class="slds-hide">
 <img id="placeholder-img" class="slds-align_absolute-center slds-m-top_medium slds-m-bottom_xx-large" src="assets/empty-2.svg" />
 <p id="empty-state-text" class="slds-text-heading_large slds-text-align_center slds-m-bottom_large" style="width: 100%;">Start a search for products or categories.</p>
+</div>
