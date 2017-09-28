@@ -648,6 +648,14 @@ $('.product-component-editor button.trigger-save-modal').click(function(){
     return false;
 });
 
+
+$('.remove-products').click(function(){
+  $('.productpicker-component-editor div.list-empty').toggleClass('slds-hide');
+  $('.productpicker-component-editor div.list-full').toggleClass('slds-hide');
+
+})
+
+
 $('.productpicker-component-editor .trigger-close-modal').click(function(){
       $(this).find('.editor').toggleClass('slds-hide');
     return false;
@@ -660,7 +668,6 @@ $('.productpicker-component-editor .trigger-save-modal').click(function(){
 
 
 $('.productpicker-component-editor .add-products').click(function(){
-
   $('.product-component-editor').toggleClass('slds-hide');
   return false;
 });
