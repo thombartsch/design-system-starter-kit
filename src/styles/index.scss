@@ -19,7 +19,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 
 
 html {
-  background-color: #afc5de;
+  // background-color: #afc5de;
 }
 
 
@@ -254,17 +254,15 @@ tr.is-new {
   overflow: hidden;
 }
 
-
 // Checkbox Inheretance
-
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux {
+input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+input:not(:checked).is-inhereted + .slds-checkbox_faux,
+input:not(:checked).is-inhereted + .slds-checkbox--faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+input:not(:checked).is-inhereted + .slds-checkbox_faux,
+input:not(:checked).is-inhereted + .slds-checkbox--faux {
   background-color: $color-background-path-incomplete-hover;
 
   &:before,

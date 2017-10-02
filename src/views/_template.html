@@ -14,32 +14,9 @@
 </head>
 
 <body>
-  <div class="slds-layout-frame">
-    <div class="slds-layout">
-      <div class="slds-layout-header">
-        <!--
-    Base Global Header component
-    https://www.lightningdesignsystem.com/components/global-header/
-  -->
-{% include "_header.html" %}
-        <!--
-    Placeholder to push the context bar down
-  -->
-        <div class="app-header-placeholder"></div>
-        <!--
-    Navigation Bar component
-    https://www.lightningdesignsystem.com/components/global-navigation/
-  -->
-        <!-- MASTHEAD -->
-{% include "_nav.html" %}
-        <!-- / MASTHEAD -->
-      </div>
-      <div class="slds-grid slds-grid_vertical app-wrapper">
-        {% block content %}
-        <!-- Content from HTML files gets injected here -->
-        {% endblock %}
-      </div>
-    </div>
+<div class="slds-layout-frame">
+
+</div>
 
     {% include "_modal-new-dashboard.html" %}
     {% include "_modal-new-entry.html" %}
@@ -102,7 +79,7 @@
         $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
       });
 
-      $('#combobox-unique-id22').change(function() {
+      $('#combobox-unique-id2').change(function() {
         $('.product-tile[aria-level="2"], .product-tile[aria-level="3"]').removeAttr('aria-level');
         $('.trigger-nested').toggleClass('slds-hide');
       });
