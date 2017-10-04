@@ -438,7 +438,8 @@ $('.image-component button.js-trigger-edit-component').click(function(){
 $('.image-component-editor button.trigger-save-modal').click(function(){
 
     $('.image-component-editor').toggleClass('slds-hide');
-    $('.'+activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    //$('.'+activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    $('.'+activeComponent +' .image-holder').attr('src', selected_image);
     return false;
 });
 
@@ -477,7 +478,8 @@ $('.target-component button.js-trigger-edit-component').click(function(){
 $('.targeted_banner-component-editor button.trigger-save-modal').click(function(){
 
     $('.targeted_banner-component-editor').toggleClass('slds-hide');
-    $(class_activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    //$(class_activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    $(class_activeComponent +' .image-holder').attr('src', selected_image);
 
     return false;
 });
@@ -868,8 +870,9 @@ $('.trigger-close-modal').click(function(){
 
  //IMAGE SELECT
  $('.image-thumb').click(function() {
-     selected_image = $(this).find('h2').text();
-     //var selected_image = document.getElementsByClassName('this_selected_item').src;
+     //selected_image = $(this).find('h2').text();
+     selected_image = $(this).closest('a').find('img').attr('src');
+
      return false;
  });
 

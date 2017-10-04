@@ -51,13 +51,17 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        /*
         height: 2.5rem;
+        */
         background-color: white;
         border-top: 1px solid #d8dde6;
         border-bottom: 3px solid #84bd00;
         color: #16325c;
         position: relative;
+        /*
         padding: 0 0 0 1.5rem;
+        */
     }
 
     .slds-context-bar__item.slds-is-active:before,

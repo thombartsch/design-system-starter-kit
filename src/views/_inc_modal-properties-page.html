@@ -62,32 +62,10 @@
                                     </div>
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
-                                            <label class="slds-form-element__label" for="input-03">Page Decription</label>
+                                            <label class="slds-form-element__label" for="input-03">Page Description</label>
                                             <textarea id="textarea-id-01" class="slds-textarea" placeholder="Placeholder Text"></textarea>
                                         </div>
                                     </div>
-                                    <div class="slds-form-element__row">
-                                        <div class="slds-form-element slds-size_1-of-2">
-                                            <span class="slds-checkbox">
-                                            <input type="checkbox" name="options" id="checkbox-1" value="on" checked>
-                                            <label class="slds-checkbox__label" for="checkbox-1">
-                                                <span class="slds-checkbox_faux"></span>
-                                                <span class="slds-form-element__label">Include in Sitemap</span>
-                                            </label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="slds-form-element__row">
-                                    <div class="slds-form-element slds-size_1-of-2">
-                                        <label class="slds-form-element__label" for="input-013">Change Frequency</label>
-                                        <input type="text" id="input-01" class="slds-input" readonly placeholder="Selected Page Type">
-                                    </div>
-                                    <div class="slds-form-element slds-size_1-of-2">
-                                        <label class="slds-form-element__label" for="input-013">Priority</label>
-                                        <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
-                                    </div>
-                                    </div>
-
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-2">
                                             <span class="slds-checkbox">
@@ -99,6 +77,34 @@
                                             </span>
                                         </div>
                                     </div>
+
+
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size_1-of-2">
+                                            <span class="slds-checkbox">
+                                            <input type="checkbox" name="options" id="checkbox-1" value="on" checked>
+                                            <label class="slds-checkbox__label" for="checkbox-1">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <span class="slds-form-element__label">Include in Sitemap</span>
+                                            </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element__row slds-m-left_large slds-m-right_largebtw">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <label class="slds-form-element__label" for="input-013">Change Frequency</label>
+                                            <select class="slds-select" id="select-01">
+                                              <option selected>Please select</option>
+                                              <option>1</option>
+                                              <option>2</option>
+                                            </select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <label class="slds-form-element__label" for="input-013">Priority</label>
+                                        <input type="text" id="input-02" class="slds-input" placeholder="0.00">
+                                    </div>
+                                    </div>
+
                                 </div>
                                 </fieldset>
                             </div>
@@ -180,7 +186,7 @@
                           </button>
                       </div>
                       #}
-                      
+
                       <h3 class="slds-text-heading--small slds-m-bottom--x-small">Shared Sites</h3>
 
                       <ul class="slds-has-dividers_bottom-space">
