@@ -20,6 +20,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 
 html {
   // background-color: #afc5de;
+  // border-top: $spacing-medium solid red;
 }
 
 
@@ -263,7 +264,7 @@ input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
 input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
 input:not(:checked).is-inhereted + .slds-checkbox_faux,
 input:not(:checked).is-inhereted + .slds-checkbox--faux {
-  background-color: $color-background-path-incomplete-hover;
+  background-color: $color-gray-6;
 
   &:before,
   &:after {
