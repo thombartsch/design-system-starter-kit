@@ -231,7 +231,7 @@
 
   "products": [{"name":"Wikido","sku":"3542007519271955","category":"Klein, Windler and Larson","img":"http://dummyimage.com/100x100.png/ff4444/ffffff","price":"$186.57"},
 {"name":"Quinu","sku":"3535889719644761","category":"Schmitt, Zulauf and Erdman","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$179.57"},
-{"name":"Realmix","sku":"5610015711406990","category":"Orn-Hilll","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$125.72"},
+{"name":"Realmix","sku":"5610015711406990","category":"Orn-Hilll","price":"$125.72"},
 {"name":"Realmix","sku":"5641820717976045180","category":"Wintheiser LLC","img":"http://dummyimage.com/100x100.png/dddddd/000000","price":"$128.64"},
 {"name":"Jayo","sku":"3585002467990829","category":"Leannon Inc","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$179.48"},
 {"name":"Devbug","sku":"5100172170611821","category":"Schimmel and Sons","img":"http://dummyimage.com/100x100.png/cc0000/ffffff","price":"$105.41"},
@@ -259,8 +259,7 @@
   "name": "Red Snapper - Fresh, Whole",
   "img": "http://lorempixel.com/100/100/sports"
 }, {
-  "name": "Beer - Camerons Cream Ale",
-  "img": "http://lorempixel.com/100/100/cats"
+  "name": "Beer - Camerons Cream Ale"
 }, {
   "name": "Sansho Powder",
   "img": "http://lorempixel.com/100/100/business"
@@ -268,8 +267,7 @@
   "name": "Chocolate - Milk",
   "img": "http://lorempixel.com/100/100/technics/"
 }, {
-  "name": "Pasta - Fett Alfredo, Single Serve",
-  "img": "http://lorempixel.com/100/100/business"
+  "name": "Pasta - Fett Alfredo, Single Serve"
 }, {
   "name": "Lemonade - Island Tea, 591 Ml",
   "img": "http://lorempixel.com/100/100/fashion"
@@ -283,14 +281,12 @@
   "name": "Coffee - Frthy Coffee Crisp",
   "img": "http://lorempixel.com/100/100/fashion"
 }, {
-  "name": "Bread - Onion Focaccia",
-  "img": "http://lorempixel.com/100/100/business"
+  "name": "Bread - Onion Focaccia"
 }, {
   "name": "Crawfish",
   "img": "http://lorempixel.com/100/100/cats"
 }, {
-  "name": "Soup - Verve - Chipotle Chicken",
-  "img": "http://lorempixel.com/100/100/fashion"
+  "name": "Soup - Verve - Chipotle Chicken"
 }, {
   "name": "Eggroll",
   "img": "http://lorempixel.com/100/100/business"

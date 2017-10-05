@@ -4,7 +4,14 @@
       {% for product in lol %}
       <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
         <div class="slds-media__figure">
-          <span class="slds-avatar slds-avatar_medium"><img alt="Person name" src="{{ product.img }}" title="{{ product.name }}"></span>
+          <span class="slds-avatar slds-avatar_medium">
+            {% if product.img %}
+<img alt="Person name" src="{{ product.img }}" title="{{ product.name }}">
+{% else %}
+<span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use></svg></span>
+{% endif %}
+
+          </span>
         </div>
         <div class="slds-media__body">
           <p>{{ product.name }} <br/><span class="slds-text-body_small slds-color__text_gray-8">SKU 2493765494984</span>
