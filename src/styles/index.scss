@@ -25,8 +25,18 @@
         height: $height-header;
     }
 
-html {
+html:not(.editor) {
     background-color: #afc5de;
+}
+
+.slds-brand-band:before {
+  background-image: url('/assets/banner-brand-default.png'),linear-gradient(to top,rgba(32, 92, 159, 0), #205c9f);
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+
+.slds-brand-band:after {
+  background-image: none;
 }
 
     // Wrap the prototype in a scrollable container
