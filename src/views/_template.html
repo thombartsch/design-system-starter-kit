@@ -32,26 +32,6 @@
         $(this).toggleClass('is-opened');
       });
 
-      // Tabs Commerce Selector
-      $('#tab-default-1__item').click(function() {
-        $('#tab-default-1').removeClass('slds-hide');
-        $('#tab-default-1').addClass('slds-show');
-        $('#tab-default-2').removeClass('slds-show');
-        $('#tab-default-2').addClass('slds-hide');
-        $('#item-two').removeClass('slds-is-active');
-        $('#item-one').addClass('slds-is-active');
-
-      });
-
-      $('#tab-default-2__item').click(function() {
-        $('#tab-default-2').removeClass('slds-hide');
-        $('#tab-default-2').addClass('slds-show');
-        $('#tab-default-1').removeClass('slds-show');
-        $('#tab-default-1').addClass('slds-hide');
-        $('#item-one').removeClass('slds-is-active');
-        $('#item-two').addClass('slds-is-active');
-      });
-
       $('.app-trigger').click(function() {
         $(this).toggleClass('slds-is-open');
       });
@@ -68,7 +48,7 @@
         $('.hrhr-1').removeAttr('disabled');
       });
 
-      $('#combobox-unique-id2').change(function() {
+      $('#combobox-unique-id1').change(function() {
         $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
       });
 
@@ -86,195 +66,15 @@
         $('#assign-to').toggleClass('slds-hide');
       });
 
-      $('.trigger-assign, .hrhr-1').click(function() {
-        $('#select-product-23').toggleClass('slds-hide');
-      });
-
-      $('.close-create').click(function() {
-        $('#new-rule, #add-table-entry').toggleClass('slds-hide');
-      });
-
       $('.slds-section__title-action').click(function() {
         $(this).parent().parent().toggleClass('slds-is-open');
       });
 
-      $('#trigger-assign-tooltip').hover(function() {
-        $('#tooltip-assignments').toggleClass('slds-hide');
-        new Tether({
-          element: '#tooltip-assignments',
-          target: '#trigger-assign-tooltip',
-          attachment: 'center right',
-          targetAttachment: 'center left',
-          targetOffset: '0 -10px',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
+
+      $('#assign-success, .hrhr-1').click(function() {
+        $('#select-product-23').toggleClass('slds-hide');
       });
 
-      $('#assign-to-trigger-2').click(function() {
-        $('#assign-to').toggleClass('slds-hide');
-        new Tether({
-          element: '#assign-to',
-          target: '#assign-to-trigger-2',
-          attachment: 'center left',
-          targetAttachment: 'center right',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('#assign-to-trigger').click(function() {
-        $('#assign-to').toggleClass('slds-hide');
-        new Tether({
-          element: '#assign-to',
-          target: '#assign-to-trigger',
-          attachment: 'center left',
-          targetAttachment: 'center right',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('.app-switch-trigger').click(function() {
-        $('#apps').toggleClass('slds-hide');
-      });
-
-      // $('#app-switch-trigger').click(function() {
-      //     $('#app-switch').toggleClass('slds-hide');
-      //     $('#app-switch').toggleClass('slds-hide');
-      //     new Tether({
-      //         element: '#app-switch',
-      //         target: '#app-switch-trigger',
-      //         attachment: 'top left',
-      //         targetAttachment: 'bottom left',
-      //         targetOffset: '0 0',
-      //         constraints: [{
-      //             to: 'window',
-      //             attachment: 'target',
-      //             pin: true
-      //         }]
-      //     });
-      // });
-
-      $('#trigger-change').click(function() {
-        $('#id-263').toggleClass('slds-hide');
-        new Tether({
-          element: '#id-263',
-          target: '#trigger-change',
-          attachment: 'center right',
-          targetAttachment: 'center left',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('#close-assigned-toast, #assign-success').click(function() {
-        $('#assigned-toast').toggleClass('slds-hide');
-      });
-
-      $('.show-created-toast, .close-toast-2, .close-create').click(function() {
-        $('#created-toast').toggleClass('slds-hide');
-      });
-
-      $('#advanced-search, #advanced-search-2').click(function() {
-        $('#select-product .slds-modal').toggleClass('slds-modal_large');
-        $('#step-1, #step-2').toggleClass('slds-hide');
-      });
-
-      $('.trigger-edit, .js-close-modal-2').click(function() {
-        $('#edit-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.trigger-duplicate, .js-close-modal-12').click(function() {
-        $('#copy-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.trigger-add, .js-close-modal').click(function() {
-        $('#add-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.create-new, .js-close-modal-34').click(function() {
-        $('#add-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.delete-trigger, .js-close-modal-3').click(function() {
-        $('#delete').toggleClass('slds-hide');
-      });
-
-      $('.accept-trigger, .js-close-modal-13').click(function() {
-        $('#accept').toggleClass('slds-hide');
-      });
-
-      $('.toast-success, .close-toast').click(function() {
-        $('#success-toast').toggleClass('slds-hide');
-      });
-
-      $('.trigger-einstein-detail, .js-close-modal-6').click(function() {
-        $('#einstein-modal').toggleClass('slds-hide');
-      });
-
-      $('.trigger-einstein-detail-new, .js-close-modal-16').click(function() {
-        $('#einstein-modal-new').toggleClass('slds-hide');
-      });
-
-      $('.value-trigger').click(function() {
-        $(this).toggleClass('is-disabled');
-        $(this).find(".slds-icon").toggleClass('rotate-45');
-        // $("#gain-value").toggleClass('new');
-      });
-
-      $('.filter-trigger').click(function() {
-        $('#filter-trigger').toggleClass('is-active');
-        $('#filtersection').toggleClass('slds-hide');
-      });
-
-      $('.slds-popover__close, .hide-filter-popover').click(function() {
-        $('#id-263').toggleClass('slds-hide');
-      });
-
-      $('.remove-filter-button').click(function() {
-        $(this).parent().parent().toggleClass('slds-hide');
-      });
-
-      $('#delete-filters').click(function() {
-        $('.slds-item').not('#new-filter').toggleClass('slds-hide');
-      });
-
-      $('tr.is-new').click(function() {
-        $(this).removeClass('is-new');
-      });
-
-      $('#show-new-filter').click(function() {
-        $('#new-filter').toggleClass('slds-hide');
-        $('#id-263').toggleClass('slds-hide');
-        new Tether({
-          element: '#id-263',
-          target: '#new-filter',
-          attachment: 'center right',
-          targetAttachment: 'center left',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
 
     });
 
