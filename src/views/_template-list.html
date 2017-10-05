@@ -108,6 +108,8 @@
         </div>
     </header>
     <main class="app-wrapper">
+
+<div class="slds-brand-band slds-brand-band_medium slds-template_default">
         <div class="slds-page-header slds-page-header--object-home">
             <div>
                 <div class="slds-grid">
@@ -142,7 +144,7 @@
             </div>
         </div>
         <!-- PAGES LIST -->
-        <div class="page-content ui-sortable">
+        <div class="page-content ui-sortable slds-card slds-has-top-magnet">
             <div class="ui-sortable-handle">
                 <table class="slds-table slds-table--bordered slds-table--striped slds-table--resizable-cols 2slds-table_fixed-layout" role="grid">
                     <thead>
@@ -400,7 +402,7 @@
         {% include "_inc_toast-page-deleted.html" ignore missing %}
         {% include "_inc_toast-page-created.html" ignore missing %}
 
-
+</div>
     </main>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>

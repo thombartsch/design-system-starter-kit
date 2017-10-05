@@ -25,6 +25,10 @@
         height: $height-header;
     }
 
+html {
+    background-color: #afc5de;
+}
+
     // Wrap the prototype in a scrollable container
     .app-wrapper {
         overflow: auto;
@@ -147,10 +151,6 @@
         -webkit-transition: max-width .5s;
         transition: max-width .5s;
         margin: 0 auto;
-    }
-
-    .app-wrapper {
-        background-color: #f4f6f9;
     }
 
     //sidebar navigator
