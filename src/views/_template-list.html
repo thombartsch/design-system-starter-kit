@@ -139,7 +139,7 @@
     </div>
     <div class="slds-grid">
       <div class="slds-col slds-align-bottom">
-        <p class="slds-page-header__info">3 items • sorted by create date</p>
+        <p class="slds-page-header__info">1003 pages found. • sorted by create date</p>
       </div>
       <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
         <div class="slds-form-element__control">
@@ -172,16 +172,28 @@
 </div>
     </div>
         <!-- PAGES LIST -->
+
+
+
+
+
+
+
+
+
         <div class="page-content ui-sortable slds-card slds-has-top-magnet">
             <div class="ui-sortable-handle">
                 <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid">
                     <thead>
                         <tr class="slds-line-height--reset">
                             <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
-                                <div class="slds-th__action slds-th__action--form"> <span class="slds-checkbox">
-                      <input type="checkbox" name="options" id="checkbox-170">
-                      <label class="slds-checkbox__label" for="checkbox-170">
-                        <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select All</span> </label>
+                                <div class="slds-th__action slds-th__action--form">
+                                  <span class="slds-checkbox">
+                                      <input type="checkbox" name="options" id="checkbox-170">
+                                      <label class="slds-checkbox__label" for="checkbox-170">
+                                        <span class="slds-checkbox--faux"></span>
+                                        <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                                      </label>
                                     </span>
                                 </div>
                             </th>
@@ -245,13 +257,15 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table-pages">
                         <tr class="slds-hint-parent">
-                            <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                        <input type="checkbox" name="options" id="id-">
-                        <label class="slds-checkbox__label" for="id-">
-                          <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                </span>
+                            <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+                              <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="id-">
+                                <label class="slds-checkbox__label" for="id-">
+                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                                </label>
+                              </span>
                             </td>
                             <td scope="row">
                                 <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Spring Campaign 2017</a>
@@ -298,25 +312,24 @@
                         </tr>
                         <tr class="slds-hint-parent">
                             <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                        <input type="checkbox" name="options" id="id-">
-                        <label class="slds-checkbox__label" for="id-">
-                          <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                </span>
-                            </td>
-                            <td scope="row">
-                                <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Summer Campaign 2017</a>
-                                    <div class="slds-form-element__icon">
-                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
-                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                            </svg>
-                                            <span class="slds-assistive-text">Help</span>
-                                        </button>
-                                    </div>
-
-                                    {% include "_inc_list_item-popover.html" ignore missing %}
-                                </div>
-                            </td>
+                              <input type="checkbox" name="options" id="id-">
+                              <label class="slds-checkbox__label" for="id-">
+                                <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                      </span>
+                                  </td>
+                                  <td scope="row">
+                                      <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Summer Campaign 2017</a>
+                                          <div class="slds-form-element__icon">
+                                              <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
+                                                  <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                                  </svg>
+                                                  <span class="slds-assistive-text">Help</span>
+                                              </button>
+                                          </div>
+                                          {% include "_inc_list_item-popover.html" ignore missing %}
+                                      </div>
+                                  </td>
                             <td role="gridcell">
                                 <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
                             </td>
@@ -350,10 +363,10 @@
                         </tr>
                         <tr class="slds-hint-parent">
                             <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                        <input type="checkbox" name="options" id="id-">
-                        <label class="slds-checkbox__label" for="id-">
-                          <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                </span>
+                                <input type="checkbox" name="options" id="id-">
+                                <label class="slds-checkbox__label" for="id-">
+                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                        </span>
                             </td>
                             <td scope="row">
                                 <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">Fall Campaign 2017</a>
@@ -400,8 +413,22 @@
                                 </div>
                             </td>
                         </tr>
+
+
+                        {% include "page-table.html" ignore missing %}
+
+
                     </tbody>
                 </table>
+
+                <div class="slds-grid slds-grid_align-center">
+                  <div class="slds-col slds-p-around_small">
+                    <button class="slds-button slds-button--neutral" id="loadMore">Load More</button>
+                    <div class="slds-hide" id="showLess">Show less</div>
+                  </div>
+                </div>
+
+
             </div>
         </div>
 

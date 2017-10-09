@@ -965,3 +965,19 @@ $('#visual-picker-17').click(function() {
 
     return false;
 });
+
+
+//LOAD MORE PAGE LIST
+$(function(){
+size_tr = $("#table-pages tr").length;
+    x=15;
+    $('#table-pages tr:lt('+x+')').fadeIn();
+    $('#loadMore').click(function () {
+        x= (x+15 <= size_tr) ? x+15 : size_tr;
+        $('#table-pages tr:lt('+x+')').fadeIn();
+    });
+    $('#showLess').click(function () {
+        x=(x-15<0) ? 15 : x-15;
+        $('#table-pages tr').not(':lt('+x+')').fadeOut();
+    });
+});
