@@ -1,0 +1,55 @@
+
+
+<div class="slds-hide media-picker picker" style="height: 640px;">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content -id-39">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse trigger-close-modal" title="Close">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Media Picker</h2>
+                {#<p class="slds-m-top_x-small">Pricebook: Salesforce Products</p>#}
+            </header>
+            <div class="slds-modal__content slds-grid 2slds-nowrap" id="modal-content-id-39">
+                <!-- MODAL CONTENT -->
+
+                <!--  EDITOR CONTENT-->
+
+
+                <div class="editor slds-col sldsgrid">
+                    <div class="slds-tabs_default">
+
+                        <div id="tab-default-391" class="slds-tabs_default__content slds-show slds-grid slds-p-top_none slds-p-left_small" role="tabpanel" aria-labelledby="tab-default-391__item">
+                            <!-- CONTENT -->
+
+
+                            <div class="slds-grid">
+                                <div class="slds-col">
+                                  <!-- ASSET LIBRARY TREE -->
+                                    {% include "_inc_image.html" ignore missing%}
+                                  <!-- /ASSET LIBRARY TREE -->
+                                </div>
+                            </div>
+
+                            <!-- /CONTENT -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--  /EDITOR CONTENT-->
+
+
+                <!-- /MODAL CONTENT -->
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral trigger-close-modal">Cancel</button>
+                <button class="slds-button slds-button_brand trigger-save-modal">Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</div>

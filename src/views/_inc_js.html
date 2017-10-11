@@ -651,6 +651,16 @@ $('.product-component-editor button.trigger-save-modal').click(function(){
 });
 
 
+$('.product-component-editor button.trigger-close-modal').click(function(){
+
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+    $('.product-component-editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+
 $('.remove-products').click(function(){
   $('.productpicker-component-editor div.list-empty').toggleClass('slds-hide');
   $('.productpicker-component-editor div.list-full').toggleClass('slds-hide');
@@ -673,6 +683,34 @@ $('.productpicker-component-editor .add-products').click(function(){
   $('.product-component-editor').toggleClass('slds-hide');
   return false;
 });
+
+
+
+//ADD MEDIA
+$('.image-component-editor .add-medias').click(function(){
+  alert('add media');
+  //$('.product-component-editor').toggleClass('slds-hide');
+  $('.media-picker').toggleClass('slds-hide');
+  return false;
+});
+
+//MEDIA SELECTOR
+/*
+$('.media-picker .trigger-close-modal').click(function(){
+  $('div.media-picker').toggleClass('slds-hide');
+  //return false;
+});
+*/
+$('.picker .trigger-close-modal').click(function(){
+  alert('close');
+  //$(this).closest('.picker').toggleClass('slds-hide');
+  $(this).css("background-color");
+});
+
+
+
+
+
 
 
 
@@ -872,6 +910,8 @@ $('.trigger-close-modal').click(function(){
  $('.image-thumb').click(function() {
      //selected_image = $(this).find('h2').text();
      selected_image = $(this).closest('a').find('img').attr('src');
+     $('.slds-file_card').removeClass('selected');
+     $(this).closest('.slds-file_card').addClass('selected');
 
      return false;
  });
@@ -910,26 +950,7 @@ $.extend($.expr[":"],{
 });
 
 
-/*
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("kwd_search");
-  filter = input.value.toUpperCase();
-  //table = document.getElementById("myTable");
-  table = document.getElementsByClassName('slds-table')
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-*/
+
 
 
 //SELECT PRODUCT

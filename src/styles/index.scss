@@ -620,3 +620,12 @@ html.list-view {
 .scrollable td, .scrollable th{
   max-width: 200px;
 }
+
+
+.selected{
+  border:2px solid blue;
+  /*
+  outline: 1px dashed #fff;
+  outline-offset: -10px;
+  */
+}
