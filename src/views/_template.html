@@ -46,6 +46,7 @@
     {% include "_modal-delete.html" %}
     {% include "_modal-select-commerce-products.html" %}
     {% include "_modal-app-launcher.html" %}
+    {% include "_page-header-menu.html" %}
     <script src="/scripts/tether.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
@@ -55,6 +56,23 @@
     </script>
     <script type="text/javascript">
     $(document).ready(function() {
+
+// Page Header Menu
+        $('.page-header-trigger').click(function() {
+            $('#iweurtz').toggleClass('slds-hide');
+            new Tether({
+                element: '#iweurtz',
+                target: '.page-header-trigger',
+                attachment: 'top left',
+                targetAttachment: 'bottom left',
+                targetOffset: '0 0',
+                constraints: [{
+                    to: 'window',
+                    attachment: 'target',
+                    pin: true
+                }]
+            });
+        });
 
       // Nested Categories Commerce Selector
       $('#trigger-nested').click(function() {
