@@ -1,5 +1,6 @@
 //DUMMY PAGE FUNCTIONALITY
 var activeComponent = undefined;
+var activePickerbase = undefined;
 
 var cloneCountA = 1;
 var cloneCountB = 1;
@@ -688,25 +689,86 @@ $('.productpicker-component-editor .add-products').click(function(){
 
 //ADD MEDIA
 $('.image-component-editor .add-medias').click(function(){
-  alert('add media');
   //$('.product-component-editor').toggleClass('slds-hide');
   $('.media-picker').toggleClass('slds-hide');
   return false;
 });
 
-//MEDIA SELECTOR
-/*
-$('.media-picker .trigger-close-modal').click(function(){
-  $('div.media-picker').toggleClass('slds-hide');
-  //return false;
-});
-*/
 $('.picker .trigger-close-modal').click(function(){
-  alert('close');
   //$(this).closest('.picker').toggleClass('slds-hide');
-  $(this).css("background-color");
+  $('.media-picker').toggleClass('slds-hide');
 });
 
+
+$('.picker .trigger-save-modal').click(function(){
+  //$(this).closest('.picker').toggleClass('slds-hide');
+  $('.'+activeComponent +' .image-holder').attr('src', selected_image);
+  $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
+  $('.mediaselector-component-editor .file-name').text(selected_image);
+
+  $('.media-picker').addClass('slds-hide');
+
+  /*
+  alert(activePickerbase);
+  $('.'+activePickerbase +' .image-holder-thumb').attr('src', selected_image);
+  */
+});
+
+
+$('.mediaselector-component-editor .trigger-save-modal').click(function(){
+  $('.mediaselector-component-editor').toggleClass('slds-hide');
+});
+
+
+$('.placeholder-component-37 .js-trigger-edit-component').click(function(){
+  $('.mediaselector-component-editor').toggleClass('slds-hide');
+  $('.targeted_banner-component-editor').addClass('slds-hide');
+});
+
+
+//MEDIA SELECTOR
+
+$('.add-mediaselector-dummy').click(function(){
+    var component_text = $('#dummy_container .my_mediaselector_dummy li').clone(true,true).addClass('item'+ cloneCountA++);
+    var navigator_text = $('#dummy_container .my_mediaselector_navigator li').clone(true,true).addClass('item'+ cloneCountB++);
+
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+ $('.mediaselector-component-editor .image-figure').click(function(){
+    //open dialog for selecting an image
+    $('.media-picker').toggleClass('slds-hide');
+});
+
+$('.media-component button.js-trigger-edit-component').click(function(){
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+$('.media-component-editor button.trigger-save-modal').click(function(){
+    selected_text = $('.slds-rich-text-area__content').html();
+    selected_header = $('.slds-input-header').val();
+
+    $('.'+activeComponent +' .text-holder').html(selected_text);
+    $('.'+activeComponent +' .header-holder').html(selected_header);
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
 
 
 
@@ -862,7 +924,7 @@ $('.delete-component .js-close-modal-id-0').click(function(){
 
 //MODAL HANDLERS
 $('.trigger-close-modal').click(function(){
-    $(this).closest('.editor').toggleClass('slds-hide');
+    $(this).closest('body .editor').toggleClass('slds-hide');
 
     return false;
 });
@@ -991,14 +1053,14 @@ $('#visual-picker-17').click(function() {
 //LOAD MORE PAGE LIST
 $(function(){
 size_tr = $("#table-pages tr").length;
-    x=15;
+    x=197;
     $('#table-pages tr:lt('+x+')').fadeIn();
     $('#loadMore').click(function () {
-        x= (x+15 <= size_tr) ? x+15 : size_tr;
+        x= (x+197 <= size_tr) ? x+197 : size_tr;
         $('#table-pages tr:lt('+x+')').fadeIn();
     });
     $('#showLess').click(function () {
-        x=(x-15<0) ? 15 : x-15;
+        x=(x-197<0) ? 197 : x-197;
         $('#table-pages tr').not(':lt('+x+')').fadeOut();
     });
 });

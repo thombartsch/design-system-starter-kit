@@ -1,0 +1,151 @@
+<section class="slds-hide slds-popover slds-nubbin_top list-element-popover" role="dialog" aria-describedby="dialog-body-id-editorview" aria-labelledby="dialog-heading-id-editorview" id="poppinD"
+style="left: 335px; top: 5px;"
+>
+  <div class="slds-grid slds-p-around_small slds-border_bottom">
+    <div class="slds-col">
+      <h2 class="slds-text-heading_medium">Switch Editor View</h2>
+    </div>
+    <div>
+      <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small js-close-modal-id-102 js-close-filter-view" title="Close Filter Panel">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+        </svg>
+        <span class="slds-assistive-text">Close Filter Panel</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="slds-grid">
+    <!-- SELECT RESOLUTION/DEVICE -->
+    {#
+    <div class="slds-border_right">
+      <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-p-around_small" id="device-selecta">
+        <ul class="slds-dropdown__list" role="menu">
+          <li>
+            <h3 class="slds-text-heading_small">Resolution</h3>
+          </li>
+          <li class="slds-dropdown__item" role="presentation">
+            <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0" id="trigger-phone">
+              <span class="slds-truncate" title="Table View">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Edit Mobile - Portrait View</span>
+              <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="slds-dropdown__item" role="presentation">
+            <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-tablet">
+              <span class="slds-truncate" title="Kanban Board">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Edit Mobile - Landscape View</span>
+              <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="slds-dropdown__item slds-is-selected" role="presentation">
+            <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-desktop">
+              <span class="slds-truncate" title="List View">
+                <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                </svg>Edit Desktop View</span>
+              <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <button class="slds-hide slds-button slds-button--icon slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+          <span class="slds-icon_container slds-icon-utility-announcement" title="Device Settings">
+            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+            </svg>
+            <span class="slds-assistive-text">Device Settings</span>
+          </span>
+        </button>
+        <div class="slds-dropdown slds-dropdown--left">
+          <ul class="slds-dropdown__list" role="menu">
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0" id="trigger-phone">
+                <span class="slds-truncate" title="Table View">
+                  <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                  </svg>Edit Mobile - Portrait View</span>
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-tablet">
+                <span class="slds-truncate" title="Kanban Board">
+                  <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                  </svg>Edit Mobile - Landscape View</span>
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="slds-dropdown__item slds-is-selected" role="presentation">
+              <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="false" tabindex="0" id="trigger-desktop">
+                <span class="slds-truncate" title="List View">
+                  <svg class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                  </svg>Edit Desktop View</span>
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    #}
+    <!-- /SELECT RESOLUTION/DEVICE -->
+
+    <!-- SELECT RULES -->
+    <div class="slds-col">
+        <div class="slds-p-around_small slds-grid modal" id="">
+            <ul class="slds-col">
+              <li class="slds-p-bottom_small">
+                <label class="slds-form-element__label" for="select-01">Customer Groups:</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-select_container">
+                    <select class="slds-select" id="select-01">
+                      <option selected="selected">Everyone</option>
+                      <option>Customer Group A</option>
+                      <option>Customer Group B</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="select-01">Display:</label>
+                  <div class="slds-form-element__control">
+                    <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="slds-form-element__row">
+                  <button class="slds-button slds-button_neutral slds-m-top_large">Apply</button>
+                </div>
+              </li>
+            </ul>
+
+        </div>
+      </div>
+    <!-- /SELECT RULES -->
+
+
+  </div>
+
+</section>
