@@ -37,10 +37,9 @@
               <div class="slds-form-element__control">
                 <div class="slds-select_container">
                   <select class="slds-select" id="select-01">
-                    <option>Product Details Page</option>
-                    <option selected="selected">Product Listing Page</option>
-                    <option>Content Detail</option>
-                    <option>Content Listing</option>
+                    {% for scope in shared.scopes %}
+                    <option value="{{ scope.label }}">{{ scope.label }}</option>
+                    {% endfor %}
                   </select>
                 </div>
               </div>
@@ -51,36 +50,9 @@
               <div class="slds-form-element__control">
                 <div class="slds-select_container">
                   <select class="slds-select" id="select-0212">
-                    <option value="description">
-                      description
-                    </option>
-                    <option value="keywords">
-                      keywords
-                    </option>
-                    <option value="og:description">
-                      og:description
-                    </option>
-                    <option value="og:image">
-                      og:image
-                    </option>
-                    <option value="og:title">
-                      og:title
-                    </option>
-                    <option value="og:url">
-                      og:url
-                    </option>
-                    <option value="revisit-after" selected="selected">
-                      revisit-after
-                    </option>
-                    <option value="robots">
-                      robots
-                    </option>
-                    <option value="title">
-                      title
-                    </option>
-                    <option value="twitter:image">
-                      twitter:image
-                    </option>
+                    {% for type in shared.metatype %}
+                    <option value="{{ type.label }}">{{ type.label }}</option>
+                    {% endfor %}
                   </select>
                 </div>
               </div>

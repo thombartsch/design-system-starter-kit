@@ -288,5 +288,25 @@
 }, {
   "name": "Cheese - Parmigiano Reggiano",
   "img": "http://lorempixel.com/100/100/cats"
-}]
+}],
+
+"scopes": [
+{"label": "Home Page"},
+{"label": "Product Detail Page"},
+{"label": "Product Listing Page"},
+{"label": "Content Detail Page"},
+{"label": "Content Listing Page"},
+{"label": "Content Experience Page"}],
+
+"metatype": [
+{"label": "description"},
+{"label": "keywords"},
+{"label": "og:description"},
+{"label": "og:image"},
+{"label": "og:title"},
+{"label": "og:url"},
+{"label": "revisit-after"},
+{"label": "robots"},
+{"label": "title"},
+{"label": "twitter:image"}]
 }

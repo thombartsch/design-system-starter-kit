@@ -200,31 +200,31 @@
         </div>
       </td>
     </tr>
-    {% for dictionary in dictionaries %}
+    {% for rule in metarules %}
     <tr class="slds-hint-parent">
       <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
         <span class="slds-checkbox">
-          <input type="checkbox" name="options" id="id-{{ dictionary.value }}" />
-          <label class="slds-checkbox__label" for="id-{{ dictionary.value }}">
+          <input type="checkbox" name="options" id="id-{{ rule.value }}" />
+          <label class="slds-checkbox__label" for="id-{{ rule.value }}">
             <span class="slds-checkbox--faux"></span>
         <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
         </label>
         </span>
       </td>
       <td scope="row">
-        <div class="slds-truncate" title="{{ dictionary.value }}"><a href="javascript:void(0);" class="trigger-edit">{{ dictionary.value }}</a></div>
+        <div class="slds-truncate" title="{{ rule.value }}"><a href="javascript:void(0);" class="trigger-edit">{{ rule.value }}</a></div>
       </td>
       <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.type }}">{{ dictionary.type }}</div>
+        <div class="slds-truncate" title="{{ rule.type }}">{{ rule.type }}</div>
       </td>
       <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.metaid }}">{{ dictionary.metaid }}</div>
+        <div class="slds-truncate" title="{{ rule.metaid }}">{{ rule.metaid }}</div>
       </td>
       <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.locale }}">{{ dictionary.locale }}</div>
+        <div class="slds-truncate" title="{{ rule.locale }}">{{ rule.locale }}</div>
       </td>
       <td role="gridcell">
-        <div class="slds-truncate" title="{{ dictionary.assignments }}"><a href="javascript:void(0);" class="trigger-assign">{{ dictionary.assignments }}</a></div>
+        <div class="slds-truncate" title="{{ rule.assignments }}"><a href="javascript:void(0);" class="trigger-assign">{{ rule.assignments }}</a></div>
       </td>
       <td role="gridcell" style="width:3.25rem;">
         <div class="slds-dropdown-trigger slds-dropdown-trigger--click">

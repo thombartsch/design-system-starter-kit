@@ -2,306 +2,355 @@
 // and is accessible using double brackets:
 // e.g. {{ recordTitle }}
 {
-  "recordTitle": "Record Title",
-  "dictionaries": [{
+  "metarules": [{
   "value": "Optimized even-keeled product",
   "type": "Content Detail",
   "locale": "English (Canada)",
   "metaid": "keywords",
-  "assignments": "92"
+  "assignments": "92",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Multi-lateral client-server leverage",
   "type": "Content Listing",
   "locale": "German (Germany)",
   "metaid": "og:image",
-  "assignments": "96"
+  "assignments": "96",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Customer-focused uniform interface",
   "type": "Content Detail",
   "locale": "Japanese (Japan)",
   "metaid": "description",
-  "assignments": "78"
+  "assignments": "78",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Intuitive homogeneous alliance",
   "type": "Product Detail",
   "locale": "French (France)",
   "metaid": "revisit-after",
-  "assignments": "12"
+  "assignments": "12",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Team-oriented intermediate throughput",
   "type": "Product Listing",
   "locale": "Italian (Italy)",
   "metaid": "og:url",
-  "assignments": "51"
+  "assignments": "51",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Stand-alone value-added structure",
   "type": "Content Listing",
   "locale": "French (Canada)",
   "metaid": "keywords",
-  "assignments": "28"
+  "assignments": "28",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Automated intangible functionalities",
   "type": "Product Listing",
   "locale": "Italian",
   "metaid": "title",
-  "assignments": "100"
+  "assignments": "100",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Cloned analyzing alliance",
   "type": "Content Listing",
   "locale": "Chinese (China)",
   "metaid": "keywords",
-  "assignments": "3"
+  "assignments": "3",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Secured holistic concept",
   "type": "Content Detail",
   "locale": "Japanese (Japan)",
   "metaid": "og:title",
-  "assignments": "47"
+  "assignments": "47",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "User-friendly 5th generation secured line",
   "type": "Product Listing",
   "locale": "Dutch",
   "metaid": "keywords",
-  "assignments": "39"
+  "assignments": "39",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Mandatory 3rd generation algorithm",
   "type": "Product Detail",
   "locale": "Dutch",
   "metaid": "og:title",
-  "assignments": "20"
+  "assignments": "20",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Upgradable 6th generation focus group",
   "type": "Product Detail",
   "locale": "Japanese",
   "metaid": "og:description",
-  "assignments": "25"
+  "assignments": "25",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Cross-platform uniform extranet",
   "type": "Content Detail",
   "locale": "French (France)",
   "metaid": "og:image",
-  "assignments": "28"
+  "assignments": "28",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Switchable systematic functionalities",
   "type": "Product Listing",
   "locale": "Italian (Italy)",
   "metaid": "og:description",
-  "assignments": "14"
+  "assignments": "14",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Advanced didactic migration",
   "type": "Content Listing",
   "locale": "Japanese",
   "metaid": "og:title",
-  "assignments": "14"
+  "assignments": "14",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Stand-alone explicit system engine",
   "type": "Product Detail",
   "locale": "Chinese (China)",
   "metaid": "og:description",
-  "assignments": "30"
+  "assignments": "30",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Multi-lateral intangible database",
   "type": "Product Detail",
   "locale": "Chinese (China)",
   "metaid": "og:url",
-  "assignments": "38"
+  "assignments": "38",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Advanced empowering task-force",
   "type": "Product Listing",
   "locale": "French (France)",
   "metaid": "keywords",
-  "assignments": "52"
+  "assignments": "52",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Multi-lateral asymmetric intranet",
   "type": "Product Listing",
   "locale": "Japanese",
   "metaid": "og:url",
-  "assignments": "23"
+  "assignments": "23",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Expanded mission-critical info-mediaries",
   "type": "Content Detail",
   "locale": "Chinese (China)",
   "metaid": "keywords",
-  "assignments": "40"
+  "assignments": "40",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Vision-oriented discrete productivity",
   "type": "Content Listing",
   "locale": "German",
   "metaid": "og:title",
-  "assignments": "63"
+  "assignments": "63",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Seamless stable matrix",
   "type": "Product Detail",
   "locale": "Italian (Italy)",
   "metaid": "og:description",
-  "assignments": "100"
+  "assignments": "100",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Universal high-level structure",
   "type": "Content Listing",
   "locale": "English (United States)",
   "metaid": "og:image",
-  "assignments": "96"
+  "assignments": "96",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Managed cohesive access",
   "type": "Content Listing",
   "locale": "Spanish",
   "metaid": "robots",
-  "assignments": "97"
+  "assignments": "97",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Up-sized static emulation",
   "type": "Product Listing",
   "locale": "Italian (Italy)",
   "metaid": "revisit-after",
-  "assignments": "68"
+  "assignments": "68",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Up-sized non-volatile toolset",
   "type": "Product Detail",
   "locale": "Japanese",
   "metaid": "title",
-  "assignments": "90"
+  "assignments": "90",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Multi-lateral client-server attitude",
   "type": "Product Detail",
   "locale": "Japanese (Japan)",
   "metaid": "robots",
-  "assignments": "63"
+  "assignments": "63",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Self-enabling responsive protocol",
   "type": "Content Detail",
   "locale": "French (France)",
   "metaid": "title",
-  "assignments": "37"
+  "assignments": "37",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Re-engineered context-sensitive alliance",
   "type": "Product Listing",
   "locale": "Italian (Italy)",
   "metaid": "keywords",
-  "assignments": "8"
+  "assignments": "8",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Triple-buffered coherent hub",
   "type": "Product Listing",
   "locale": "Italian",
   "metaid": "description",
-  "assignments": "2"
+  "assignments": "2",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Configurable even-keeled intranet",
   "type": "Content Detail",
   "locale": "Italian (Italy)",
   "metaid": "og:url",
-  "assignments": "13"
+  "assignments": "13",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Public-key actuating product",
   "type": "Product Detail",
   "locale": "Chinese",
   "metaid": "keywords",
-  "assignments": "48"
+  "assignments": "48",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Digitized responsive strategy",
   "type": "Content Listing",
   "locale": "German",
   "metaid": "og:image",
-  "assignments": "40"
+  "assignments": "40",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Multi-channelled incremental solution",
   "type": "Product Detail",
   "locale": "German (Germany)",
   "metaid": "og:image",
-  "assignments": "35"
+  "assignments": "35",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Secured modular synergy",
   "type": "Content Listing",
   "locale": "English (United States)",
   "metaid": "og:url",
-  "assignments": "18"
+  "assignments": "18",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Triple-buffered methodical hub",
   "type": "Product Listing",
   "locale": "Japanese",
   "metaid": "description",
-  "assignments": "20"
+  "assignments": "20",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Integrated value-added structure",
   "type": "Product Detail",
   "locale": "French (France)",
   "metaid": "robots",
-  "assignments": "47"
+  "assignments": "47",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Extended zero tolerance support",
   "type": "Product Detail",
   "locale": "Spanish",
   "metaid": "revisit-after",
-  "assignments": "4"
+  "assignments": "4",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Reverse-engineered high-level workforce",
   "type": "Product Listing",
   "locale": "English",
   "metaid": "og:url",
-  "assignments": "60"
+  "assignments": "60",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Object-based foreground middleware",
   "type": "Product Listing",
   "locale": "Japanese",
   "metaid": "og:description",
-  "assignments": "37"
+  "assignments": "37",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Synchronised dynamic encryption",
   "type": "Product Detail",
   "locale": "English",
   "metaid": "revisit-after",
-  "assignments": "86"
+  "assignments": "86",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Streamlined coherent service-desk",
   "type": "Content Listing",
   "locale": "Italian",
   "metaid": "revisit-after",
-  "assignments": "74"
+  "assignments": "74",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Versatile grid-enabled archive",
   "type": "Content Listing",
   "locale": "German",
   "metaid": "keywords",
-  "assignments": "50"
+  "assignments": "50",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Extended tertiary encryption",
   "type": "Content Detail",
   "locale": "Chinese (China)",
   "metaid": "og:image",
-  "assignments": "9"
+  "assignments": "9",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Proactive zero tolerance analyzer",
   "type": "Product Listing",
   "locale": "German (Germany)",
   "metaid": "revisit-after",
-  "assignments": "14"
+  "assignments": "14",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Profit-focused neutral policy",
   "type": "Content Detail",
   "locale": "Japanese",
   "metaid": "title",
-  "assignments": "78"
+  "assignments": "78",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Triple-buffered hybrid capability",
   "type": "Content Listing",
   "locale": "French (Canada)",
   "metaid": "og:description",
-  "assignments": "46"
+  "assignments": "46",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Right-sized demand-driven flexibility",
   "type": "Content Detail",
   "locale": "French (Canada)",
   "metaid": "og:image",
-  "assignments": "5"
+  "assignments": "5",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Exclusive high-level benchmark",
   "type": "Product Detail",
   "locale": "Japanese (Japan)",
   "metaid": "og:description",
-  "assignments": "57"
+  "assignments": "57",
+  "date": "12.31.2017 21:21 PM"
 }, {
   "value": "Distributed stable model",
   "type": "Product Detail",
   "locale": "German",
   "metaid": "robots",
-  "assignments": "26"
+  "assignments": "26",
+  "date": "12.31.2017 21:21 PM"
 }]
 }
