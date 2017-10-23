@@ -1,0 +1,43 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+<div class="slds-grid slds-grid_vertical slds-brand-band slds-brand-band_medium slds-template_default slds-template_bottom-magnet">
+  <div class="slds-card slds-has-bottom-magnet">
+    {% include "_page-header.html" %}
+  </div>
+
+<div class="slds-card slds-has-top-magnet slds-grid">
+  <div class="slds-grow slds-grid slds-scrollable_y">
+    <div class="slds-border--right" id="datatable">
+      <div class="slds-scrollable_y">
+        {% include "_table-data.html" %}
+      </div>
+    </div>
+    <div id="filtersection" class="slds-hide">
+      <div class="slds-scrollable_y">
+        {% include "_filter.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "_modal-edit.html" %}
+{% include "_modal-duplicate.html" %}
+{% include "_popover-filter.html" %}
+{% include "_toast-created.html" %}
+{% include "_toast-assigned.html" %}
+{% endblock %}

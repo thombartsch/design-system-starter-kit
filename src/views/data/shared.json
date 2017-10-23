@@ -297,39 +297,44 @@
   "target": "data.html",
   "count": "5"
 }, {
-  "title": "Product Detail Page",
+  "title": "Product Detail",
   "icon": "product",
   "target": "data.html",
   "count": "24"
 }, {
-  "title": "Product Listing Page",
+  "title": "Product Listing",
   "icon": "timesheet",
   "target": "data.html",
   "count": "12"
 }, {
-  "title": "Content Detail Page",
+  "title": "Content Detail",
   "icon": "record",
   "target": "data.html",
   "count": "17"
 }, {
-  "title": "Content Listing Page",
+  "title": "Content Listing",
   "icon": "insights",
   "target": "data.html",
   "count": "12"
 }, {
-  "title": "Content Experience Page",
+//   "title": "Page Meta Tags",
+//   "icon": "custom",
+//   "target": "meta.html",
+//   "count": "4"
+// }, {
+  "title": "Experience Editor",
   "icon": "cms",
   "target": "data.html",
   "count": "9"
 }],
 
 "scopes": [
-{"label": "Home Page"},
-{"label": "Product Detail Page"},
-{"label": "Product Listing Page"},
-{"label": "Content Detail Page"},
-{"label": "Content Listing Page"},
-{"label": "Content Experience Page"}],
+{"label": "Home"},
+{"label": "Product Detail"},
+{"label": "Product Listing"},
+{"label": "Content Detail"},
+{"label": "Content Listing"},
+{"label": "Experience Editor"}],
 
 "metatype": [
 {"label": "description"},
