@@ -17,73 +17,26 @@
         </a>
       </li>
       <li class="slds-has-divider_top-space" role="separator"></li>
-      <li class="slds-dropdown__item" role="presentation">
-        <a href="data.html" role="menuitem" tabindex="0">
-          <div class="slds-media slds-media_center">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-custom-custom93" title="description of icon when needed">
-          <svg class="slds-icon slds-icon_small" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
-          </svg>
-        </span>
-            </div>
-            <div class="slds-media__body">
-              <span class="slds-truncate" title="Product Detail Page">Product Detail Page</span>
-            </div>
-          </div>
-        </a>
-      </li>
 
-      <li class="slds-dropdown__item" role="presentation">
-        <a href="data.html" role="menuitem" tabindex="0">
-          <div class="slds-media slds-media_center">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-standard-cms" title="description of icon when needed">
+{% for card in shared.cards %}
+<li class="slds-dropdown__item" role="presentation">
+  <a href="{{ card.target }}" role="menuitem" tabindex="0">
+    <div class="slds-media slds-media_center">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-{{ card.icon }}" title="description of icon when needed">
           <svg class="slds-icon slds-icon_small" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#cms"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#{{ card.icon }}"></use>
           </svg>
         </span>
-            </div>
-            <div class="slds-media__body">
-              <span class="slds-truncate" title="Content Detail Page">Content Detail Page</span>
-            </div>
-          </div>
-        </a>
-      </li>
+      </div>
+      <div class="slds-media__body">
+        <span class="slds-truncate" title="{{ card.title }}">{{ card.title }}</span>
+      </div>
+    </div>
+  </a>
+</li>
+{% endfor %}
 
-      <li class="slds-dropdown__item" role="presentation">
-        <a href="data.html" role="menuitem" tabindex="0">
-          <div class="slds-media slds-media_center">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-standard-timesheet" title="description of icon when needed">
-          <svg class="slds-icon slds-icon_small" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#timesheet"></use>
-          </svg>
-        </span>
-            </div>
-            <div class="slds-media__body">
-              <span class="slds-truncate" title="Product Listing Page">Product Listing Page</span>
-            </div>
-          </div>
-        </a>
-      </li>
-
-      <li class="slds-dropdown__item" role="presentation">
-        <a href="data.html" role="menuitem" tabindex="0">
-          <div class="slds-media slds-media_center">
-            <div class="slds-media__figure">
-              <span class="slds-icon_container slds-icon-standard-lead-list" title="description of icon when needed">
-          <svg class="slds-icon slds-icon_small" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead_list"></use>
-          </svg>
-        </span>
-            </div>
-            <div class="slds-media__body">
-              <span class="slds-truncate" title="Content Listing Page">Content Listing Page</span>
-            </div>
-          </div>
-        </a>
-      </li>
     </ul>
   </div>
 </section>

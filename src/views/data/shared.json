@@ -290,6 +290,39 @@
   "img": "http://lorempixel.com/100/100/cats"
 }],
 
+// Dashboard Cards
+"cards": [{
+  "title": "Home Page",
+  "icon": "home",
+  "target": "data.html",
+  "count": "5"
+}, {
+  "title": "Product Detail Page",
+  "icon": "product",
+  "target": "data.html",
+  "count": "24"
+}, {
+  "title": "Product Listing Page",
+  "icon": "timesheet",
+  "target": "data.html",
+  "count": "12"
+}, {
+  "title": "Content Detail Page",
+  "icon": "record",
+  "target": "data.html",
+  "count": "17"
+}, {
+  "title": "Content Listing Page",
+  "icon": "insights",
+  "target": "data.html",
+  "count": "12"
+}, {
+  "title": "Content Experience Page",
+  "icon": "cms",
+  "target": "data.html",
+  "count": "9"
+}],
+
 "scopes": [
 {"label": "Home Page"},
 {"label": "Product Detail Page"},
@@ -309,4 +342,5 @@
 {"label": "robots"},
 {"label": "title"},
 {"label": "twitter:image"}]
+
 }
