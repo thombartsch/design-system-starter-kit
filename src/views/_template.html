@@ -18,29 +18,17 @@
   <div class="slds-layout-frame">
     <div class="slds-layout">
       <div class="slds-layout-header">
-        <!--
-    Base Global Header component
-    https://www.lightningdesignsystem.com/components/global-header/
-  -->
-{% include "_header.html" %}
-        <!--
-    Placeholder to push the context bar down
-  -->
+        {% include "_header.html" %}
         <div class="app-header-placeholder"></div>
-        <!--
-    Navigation Bar component
-    https://www.lightningdesignsystem.com/components/global-navigation/
-  -->
-        <!-- MASTHEAD -->
-{% include "_nav.html" %}
-        <!-- / MASTHEAD -->
+        {% include "_nav.html" %}
       </div>
-      <div class="slds-grid slds-grid_vertical app-wrapper">
-        {% block content %}
-        <!-- Content from HTML files gets injected here -->
-        {% endblock %}
-      </div>
+        <div class="slds-grid slds-grid_vertical slds-brand-band slds-brand-band_medium slds-template_default slds-template_bottom-magnet">
+          {% block content %}
+          <!-- Content from HTML files gets injected here -->
+          {% endblock %}
+        </div>
     </div>
+  </div>
 
     {% include "_modal-new-dashboard.html" %}
     {% include "_modal-new-entry.html" %}

@@ -15,19 +15,15 @@
   Page content (gets injected into the template)
 -->
 {% block content %}
-<div class="slds-grid slds-grid_vertical slds-brand-band slds-brand-band_medium slds-template_default slds-template_bottom-magnet">
-  <div class="slds-card slds-has-bottom-magnet">
-    {% include "_page-header.html" %}
-  </div>
 
-<div class="slds-card slds-has-top-magnet slds-grid">
-  <div class="slds-grow slds-grid slds-scrollable_y">
-    <div class="slds-border--right" id="datatable">
-      <div class="slds-scrollable_y">
-        {% include "_table-data.html" %}
-      </div>
+{% include "_page-header.html" %}
+
+<div class="slds-has-top-magnet slds-grid slds-grow">
+  <div class="slds-grow slds-grid layout-table-fix">
+    <div class="slds-scrollable_y">
+      {% include "_table-data.html" %}
     </div>
-    <div id="filtersection" class="slds-hide">
+    <div id="filtersection" class="slds-border--left slds-hide">
       <div class="slds-scrollable_y">
         {% include "_filter.html" %}
       </div>

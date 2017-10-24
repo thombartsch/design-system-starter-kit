@@ -78,10 +78,25 @@ html {
   margin: 0;
 }
 
-.app-wrapper {
+.app-wrapper,
+.slds-brand-band {
   min-height: calc(100vh - #{$height-context-bar + $height-header});
+  position: relative;
 }
 
+.layout-table-fix {
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: calc(100% - (5 * #{$spacing-small}));
+    top: calc(5 * #{$spacing-small});
+    left: #{$spacing-small};
+    width: calc(100% - (2 * #{$spacing-small}));
+    background-color: $split-view-color-background;
+    z-index: -1;
+  }
+}
 
 .is-disabled {
   opacity: .4;

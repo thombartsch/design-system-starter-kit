@@ -13,7 +13,7 @@
   Page content (gets injected into the template)
 -->
 {% block content %}
-<div class="slds-brand-band slds-brand-band_medium slds-template_default">
+
   <div class="slds-card">
     {% include "_page-header_index.html" %}
   </div>
@@ -50,39 +50,9 @@
           </article>
         </div>
 {% endfor %}
-
-<div class="slds-p-horizontal_x-small slds-size_1-of-1 slds-medium-size_2-of-6">
-                <article class="slds-card slds-m-bottom_medium slds-is-relative" id="einstein-tile">
-                  <div class="slds-card__header slds-grid is-disabled">
-                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
-                      <div class="slds-media__figure slds-is-relative">
-                        <img src="/assets/einstein_logo.svg" class="slds-hidden" style="height: 1.25rem; width: auto;">
-                      </div>
-                      <div class="slds-media__body">
-                        <h2>
-                          <a href="einstein.html" class="slds-card__header-link slds-truncate" title="[object Object]">
-                            <span class="slds-text-heading_small">Content Experience Page</span>
-                          </a>
-                        </h2>
-                      </div>
-                    </header>
-                                  <div class="slds-no-flex">
-                <button class="slds-button slds-button_neutral slds-hidden">New</button>
-              </div>
-                  </div>
-                  <div class="slds-card__body slds-card__body_inner is-disabled slds-hidden">
-                    <h1 class="slds-text-align_center slds-text-heading_large"><a href="einstein.html">5</a></h1>
-                </div>
-                <div class="slds-is-absolute slds-hide2" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                  <button id="start" class="slds-button slds-button_brand">Coming soon</button>
-                </div>
-                </article>
-            </div>
-
       </div>
     </div>
   </div>
-</div>
 
 {% include "_modal-new-dashboard.html" %}
 {% endblock %}

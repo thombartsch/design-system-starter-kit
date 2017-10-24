@@ -292,7 +292,7 @@
 
 // Dashboard Cards
 "cards": [{
-  "title": "Home Page",
+  "title": "Homepage",
   "icon": "home",
   "target": "data.html",
   "count": "5"
@@ -316,25 +316,31 @@
   "icon": "insights",
   "target": "data.html",
   "count": "12"
-}, {
+// }, {
 //   "title": "Page Meta Tags",
 //   "icon": "custom",
 //   "target": "meta.html",
 //   "count": "4"
 // }, {
-  "title": "Experience Editor",
-  "icon": "cms",
-  "target": "data.html",
-  "count": "9"
+//   "title": "Experience Editor",
+//   "icon": "cms",
+//   "target": "data.html",
+//   "count": "9"
 }],
 
+"editmodal": {
+  "name": "Triple-buffered hybrid capability",
+  "description": "I didn't ask for a completely reasonable excuse! I asked you to get busy! You are the last hope of the universe. You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.",
+  "rule": "data.html"
+},
+
 "scopes": [
-{"label": "Home"},
+// {"label": "Experience Editor"},
+{"label": "Homepage"},
 {"label": "Product Detail"},
 {"label": "Product Listing"},
 {"label": "Content Detail"},
-{"label": "Content Listing"},
-{"label": "Experience Editor"}],
+{"label": "Content Listing"}],
 
 "metatype": [
 {"label": "description"},
