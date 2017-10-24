@@ -65,7 +65,7 @@
               <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
               <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
-                <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+                <div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
                   <div class="slds-form-element slds-m-right_large">
                     <label class="slds-form-element__label slds-float_left editor-label" for="select-01">Locale</label>
                     <div class="slds-form-element__control slds-float_left">
@@ -120,12 +120,35 @@
 <!-- End Edit Entry -->
 
 <script type="text/javascript">
+var contentArea = document.getElementById('content-area');
+
+function isChild (obj, parentObj){
+    while (obj != undefined && obj != null){
+        if (obj == parentObj){
+            return true;
+        }
+        obj = obj.parentNode;
+    }
+    return false;
+}
+
 function insertTextAtCursor(text) {
     var sel, range, html;
     sel = window.getSelection();
+
+    if (!sel.anchorNode) {
+      return;
+    }
+
     range = sel.getRangeAt(0);
+
+    if (!isChild(range.startContainer, contentArea)) {
+      return;
+    }
+
     range.deleteContents();
     text = text.replace(/&#39;/g, "'");
+
     var textNode = document.createTextNode(text);
     range.insertNode(textNode);
     range.setStartAfter(textNode);
@@ -136,6 +159,7 @@ function insertTextAtCursor(text) {
 $(document).ready(function() {
 {% for button in shared.buttons %}
   $('#{{ button.id }}').click(function() {
+
     insertTextAtCursor('{{ button.value }}');
   });
 {% endfor %}
