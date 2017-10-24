@@ -165,7 +165,7 @@ tr.is-new {
 
  .slds-button-tool {
   width: auto;
-  padding: 0 .2rem;
+  padding: 0 .4rem;
  }
 
 
@@ -211,10 +211,13 @@ tr.is-new {
 
 .slds-modal--medium .slds-modal__container {
     width: 70%;
-    max-width: 840px;
+    max-width: 960px;
     min-width: 480px
 }
 
+.editor-label {
+  padding-top: $spacing-x-small;
+}
 
 .slds-tabs_default__link .slds-badge {
   margin-left: .5em;

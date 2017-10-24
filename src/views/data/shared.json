@@ -328,12 +328,45 @@
 //   "count": "9"
 }],
 
+// Content for Edit Modal
 "editmodal": {
   "name": "Triple-buffered hybrid capability",
   "description": "I didn't ask for a completely reasonable excuse! I asked you to get busy! You are the last hope of the universe. You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.",
-  "rule": "data.html"
+  "rule": "Find ${IF SearchPhrase THEN SearchPhrase ELSE Constant('products')} in ${Category.displayName}."
 },
 
+// Editor Shortcodes
+"buttons": [{
+  "label": "Product Name",
+  "value": "${Product.name}",
+  "id": "rte-btn-1"
+}, {
+  "label": "Category Name",
+  "value": "${Category.displayName}",
+  "id": "rte-btn-2"
+}, {
+  "label": "Image",
+  "value": "${ProductImageURL.medium}",
+  "id": "rte-btn-3"
+}, {
+  "label": "URL",
+  "value": "${OriginalRequestURL}",
+  "id": "rte-btn-4"
+}, {
+  "label": "If-Then-Else",
+  "value": "${IF SearchRefinement.refinementColor THEN Constant('noindex, nofollow, noarchive') ELSE Constant('index, follow, archive')}",
+  "id": "rte-btn-5"
+}, {
+  "label": "Page Title",
+  "value": "Buy ${Product.name} for ${ProductPrice.min} ${ProductPrice.currency} | ${Site.displayName}",
+  "id": "rte-btn-6"
+}, {
+  "label": "Search Title",
+  "value": "Find ${IF SearchPhrase THEN SearchPhrase ELSE Constant('products')} in ${Category.displayName}.",
+  "id": "rte-btn-7"
+}],
+
+// Select Scope Option
 "scopes": [
 // {"label": "Experience Editor"},
 {"label": "Homepage"},
@@ -342,6 +375,7 @@
 {"label": "Content Detail"},
 {"label": "Content Listing"}],
 
+// Select Meta ID Type Options
 "metatype": [
 {"label": "description"},
 {"label": "robots"},
