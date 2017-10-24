@@ -306,3 +306,18 @@ tr.is-new {
     transform: rotate(36deg);
   }
 }
+
+//
+#filtersection {
+  background-color: white;
+}
+
+//
+// Fixes issue form layout compund
+// Origin:
+// salesforce-ux/design-system/scss/utilities/sizing/_index.scss
+// Last Line
+[class*="slds-size_"],
+[class*="slds-size--"] {
+  flex: 0 1 auto;
+}
