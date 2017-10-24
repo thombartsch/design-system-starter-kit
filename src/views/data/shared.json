@@ -338,14 +338,20 @@
 
 "metatype": [
 {"label": "description"},
-{"label": "keywords"},
+{"label": "robots"},
+{"label": "og:url"},
+{"label": "og:title"},
 {"label": "og:description"},
 {"label": "og:image"},
-{"label": "og:title"},
-{"label": "og:url"},
+{"label": "og:type"},
+{"label": "og:video"},
+{"label": "og:image"},
+{"label": "fb:app_id"},
+{"label": "twitter:card"},
+{"label": "twitter:site"},
+{"label": "twitter:title"},
 {"label": "revisit-after"},
-{"label": "robots"},
-{"label": "title"},
-{"label": "twitter:image"}]
-
+{"label": "author"},
+{"label": "viewport"},
+{"label": "google-site-verification"}]
 }
