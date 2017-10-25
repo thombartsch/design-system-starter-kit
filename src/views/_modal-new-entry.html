@@ -11,14 +11,14 @@
         </button>
         <h2 id="header432" class="slds-text-heading--medium">Create New Meta Tag Rule</h2>
       </header>
-      <div class="slds-modal__content slds-p-around--medium" id="modal-content-id-1">
+<div class="slds-modal__content slds-p-around--medium" id="modal-content-id-21">
         <div class="slds-form slds-form_compound">
           <div class="slds-form-element__row">
             <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="select-01">
                 <abbr class="slds-required" title="required">*</abbr>Name</label>
               <div class="slds-form-element__control">
-                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Name">
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@
             <div class="slds-form-element slds-size_1-of-1">
               <label class="slds-form-element__label" for="input-unique-id">Description</label>
               <div class="slds-form-element__control">
-                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+                <textarea id="input-unique-id" class="slds-textarea" placeholder="Placeholder Description"></textarea>
               </div>
             </div>
           </div>
@@ -64,9 +64,9 @@
               <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
               <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
-                <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+                <div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
                   <div class="slds-form-element slds-m-right_large">
-                    <label class="slds-form-element__label slds-float_left" for="select-01">Locale</label>
+                    <label class="slds-form-element__label slds-float_left editor-label" for="select-01">Locale</label>
                     <div class="slds-form-element__control slds-float_left">
                       <div class="slds-select_container">
                         <select class="slds-select" id="select-01">
@@ -92,25 +92,15 @@
                     </div>
                   </div>
                   <ul aria-label="Format text" class="slds-button-group-list">
-                    <li>
-                      <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button-tool" tabindex="0" title="Provide description of action">
-                        If or
-                      </button>
-                    </li>
-                    <li>
-                      <button class="slds-button slds-button_icon slds-button_icon-border-filled  slds-button-tool" tabindex="0" title="Provide description of action">
-                        Else
-                      </button>
-                    </li>
-                    <li>
-                      <button class="slds-button slds-button_icon slds-button_icon-border-filled  slds-button-tool" tabindex="0" title="Provide description of action">
-                        Then
-                      </button>
-                    </li>
+{% for button in shared.buttons %}
+    <li>
+      <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button-tool" tabindex="0" title="{{ button.label }}" id="{{ button.id }}">{{ button.label }}</button>
+    </li>
+{% endfor %}
                   </ul>
                 </div>
                 <div class="slds-rich-text-editor__textarea slds-grid">
-                  <div aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow">Compose text...</div>
+                  <div id="content-area" aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
                 </div>
               </div>
             </div>
@@ -126,3 +116,64 @@
   <div class="slds-backdrop slds-backdrop--open"></div>
 </div>
 <!-- Add New Wizard End -->
+
+
+<script type="text/javascript">
+var contentArea = document.getElementById('content-area');
+
+function isChild (obj, parentObj){
+    while (obj != undefined && obj != null){
+        if (obj == parentObj){
+            return true;
+        }
+        obj = obj.parentNode;
+    }
+    return false;
+}
+
+function insertTextAtCursor(text) {
+    var sel, range, html;
+    sel = window.getSelection();
+
+    if (!sel.anchorNode) {
+      return;
+    }
+
+    range = sel.getRangeAt(0);
+
+    if (!isChild(range.startContainer, contentArea)) {
+      return;
+    }
+
+    range.deleteContents();
+    text = text.replace(/&#39;/g, "'");
+
+    var textNode = document.createTextNode(text);
+    range.insertNode(textNode);
+    range.setStartAfter(textNode);
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+
+$(document).ready(function() {
+
+$( "#content-area" ).focusin(function() {
+  $('.slds-rich-text-editor').addClass('slds-has-focus');
+});
+
+$( "#content-area" ).focusout(function() {
+  $('.slds-rich-text-editor').removeClass('slds-has-focus');
+});
+
+
+ // Button Loop
+{% for button in shared.buttons %}
+  $('#{{ button.id }}').click(function() {
+
+    insertTextAtCursor('{{ button.value }}');
+  });
+{% endfor %}
+
+});
+
+</script>
