@@ -321,3 +321,7 @@ tr.is-new {
 [class*="slds-size--"] {
   flex: 0 1 auto;
 }
+
+.slds-rich-text-editor {
+  transition: border 0.1s linear, background-color 0.1s linear;
+}

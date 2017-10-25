@@ -157,6 +157,17 @@ function insertTextAtCursor(text) {
 }
 
 $(document).ready(function() {
+
+$( "#content-area" ).focusin(function() {
+  $('.slds-rich-text-editor').addClass('slds-has-focus');
+});
+
+$( "#content-area" ).focusout(function() {
+  $('.slds-rich-text-editor').removeClass('slds-has-focus');
+});
+
+
+ // Button Loop
 {% for button in shared.buttons %}
   $('#{{ button.id }}').click(function() {
 
