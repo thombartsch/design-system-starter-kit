@@ -322,6 +322,13 @@ tr.is-new {
   flex: 0 1 auto;
 }
 
+// Add Transition
 .slds-rich-text-editor {
   transition: border 0.1s linear, background-color 0.1s linear;
+}
+
+// Position Toasts
+.slds-notify-container,
+.slds-notify_container {
+  padding-top: $spacing-medium;
 }
