@@ -233,7 +233,7 @@
   "img": "http://lorempixel.com/100/100/sports"
 }, {
   "name": "Beer - Camerons Cream Ale",
-  "img": "http://lorempixel.com/100/100/cats"
+  "img": "http://lorempixel.com/100/100/food"
 }, {
   "name": "Sansho Powder",
   "img": "http://lorempixel.com/100/100/business"
@@ -259,8 +259,7 @@
   "name": "Bread - Onion Focaccia",
   "img": "http://lorempixel.com/100/100/business"
 }, {
-  "name": "Crawfish",
-  "img": "http://lorempixel.com/100/100/cats"
+  "name": "Crawfish"
 }, {
   "name": "Soup - Verve - Chipotle Chicken",
   "img": "http://lorempixel.com/100/100/fashion"
@@ -275,7 +274,7 @@
   "img": "http://lorempixel.com/100/100/sports"
 }, {
   "name": "Pate - Cognac",
-  "img": "http://lorempixel.com/100/100/cats"
+  "img": "http://lorempixel.com/100/100/food"
 }, {
   "name": "Wanton Wrap",
   "img": "http://lorempixel.com/100/100/business"
@@ -283,11 +282,10 @@
   "name": "Puree - Strawberry",
   "img": "http://lorempixel.com/100/100/technics/"
 }, {
-  "name": "Wine - Riesling Alsace Ac 2001",
-  "img": "http://lorempixel.com/100/100/people"
+  "name": "Wine - Riesling Alsace Ac 2001"
 }, {
   "name": "Cheese - Parmigiano Reggiano",
-  "img": "http://lorempixel.com/100/100/cats"
+  "img": "http://lorempixel.com/100/100/food"
 }],
 
 // Dashboard Cards
