@@ -330,8 +330,8 @@
 
 // Content for Edit Modal
 "editmodal": {
-  "name": "Triple-buffered hybrid capability",
-  "description": "I didn't ask for a completely reasonable excuse! I asked you to get busy! You are the last hope of the universe. You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.",
+  "name": "Product Title for Products on Sale",
+  "description": "This Meta Tag rule generates SEO optimized page titles for all our products on sale.",
   "rule": "Find ${IF SearchPhrase THEN SearchPhrase ELSE Constant('products')} in ${Category.displayName}."
 },
 

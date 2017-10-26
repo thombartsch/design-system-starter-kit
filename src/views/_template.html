@@ -72,11 +72,11 @@
         $(this).parent().parent().toggleClass('slds-is-open');
       });
 
-      $('#trigger-assign-tooltip').hover(function() {
+      $('.trigger-assign').hover(function() {
         $('#tooltip-assignments').toggleClass('slds-hide');
         new Tether({
           element: '#tooltip-assignments',
-          target: '#trigger-assign-tooltip',
+          target: $(this),
           attachment: 'center right',
           targetAttachment: 'center left',
           targetOffset: '0 -10px',
