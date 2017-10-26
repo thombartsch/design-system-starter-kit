@@ -272,9 +272,7 @@ tr.is-new {
   overflow: hidden;
 }
 
-
-// Checkbox Inheretance
-
+// Checkbox Inheritance
 .slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
 .slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
 .slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
@@ -305,7 +303,18 @@ tr.is-new {
     height: 0.1875rem;
     transform: rotate(36deg);
   }
+
+  &:hover {
+    background-color: $color-gray-8;
+
+    &:before,
+    &:after {
+      background-color: white;
+    }
+  }
 }
+
+
 
 //
 #filtersection {
