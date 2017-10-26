@@ -18,10 +18,12 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 @import 'layout';
 
 
+// Custom:
+$width-filter-panel: 280px;
+
 html {
   background-color: #afc5de;
 }
-
 
 .slds-brand-band:before {
   background-image: url('/assets/banner-brand-default.png'),linear-gradient(to top,rgba(32, 92, 159, 0), #205c9f);
@@ -142,9 +144,9 @@ html {
 }
 
 .slds-panel_filters {
-  min-width: 300px;
-  max-width: 300px;
-  width: 300px;
+  min-width: $width-filter-panel;
+  max-width: $width-filter-panel;
+  width: $width-filter-panel;
   // margin-left: 0;
 }
 
@@ -314,13 +316,6 @@ tr.is-new {
   }
 }
 
-
-
-//
-#filtersection {
-  background-color: white;
-}
-
 //
 // Fixes issue form layout compund
 // Origin:
@@ -340,4 +335,33 @@ tr.is-new {
 .slds-notify-container,
 .slds-notify_container {
   padding-top: 5.5rem;
+}
+
+
+// Sidebar Animation Test
+#grid-content {
+  transition: width .2s;
+  will-change: width;
+}
+
+#filtersection {
+  background-color: #fff;
+  transition: width .2s;
+  width: 0;
+  will-change: width;
+
+  &.filter-visible {
+    width: $width-filter-panel;
+  }
+}
+
+#filters {
+  transition: all .2s;
+  background-color: white;
+  will-change: transform;
+  transform: translate3d(100%,0,0);
+
+  &.filter-visible {
+    transform: translate3d(0,0,0);
+  }
 }
