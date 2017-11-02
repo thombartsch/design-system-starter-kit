@@ -287,12 +287,29 @@ background-image: none;
 }
 
 
+.slds-grow {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+
 /*SIDEBAR */
 #sidebar-navigator{
 min-width: 230px;
 }
 
-
+.layout-table-fix::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: calc(100% - (5 * 0.75rem));
+    top: calc(5 * 0.75rem);
+    left: 0.75rem;
+    width: calc(100% - (2 * 0.75rem));
+    background-color: #fafaf9;
+    z-index: -1;
+}
 
 
 /* SLIDER STLYE */
@@ -566,4 +583,19 @@ background: rgba(0,0,0,1);
 //IMAGE SELECTED
 .selected {
     border: 2px solid #0070D2;
+}
+
+
+//POPPINS Page list-view
+#poppinA {
+  top: 145px;
+  left: 230px;
+}
+#poppinB {
+  left: 250px;
+  top: 175px;
+}
+#poppinC {
+  left: 215px;
+  top: 208px;
 }
