@@ -365,6 +365,18 @@
 }],
 
 // Select Scope Option
+"locales": [
+{"label": "Default"},
+{"label": "Chinese"},
+{"label": "Dutch"},
+{"label": "English"},
+{"label": "French"},
+{"label": "German"},
+{"label": "Italian"},
+{"label": "Japanese"},
+{"label": "Spanish"}],
+
+// Select Scope Option
 "scopes": [
 // {"label": "Experience Editor"},
 {"label": "Homepage"},
