@@ -12,44 +12,42 @@
     <link rel="stylesheet" href="/styles/index.css" />
 
     <script>
-        (function (apiKey) {
-            (function (p, e, n, d, o) {
-                var v, w, x, y, z;
-                o = p[d] = p[d] || {};
-                o._q = [];
-                v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
-                for (w = 0, x = v.length; w < x; ++w)(function (m) {
-                    o[m] = o[m] || function () {
-                        o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
-                    };
-                })(v[w]);
-                y = e.createElement(n);
-                y.async = !0;
-                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-                z = e.getElementsByTagName(n)[0];
-                z.parentNode.insertBefore(y, z);
-            })(window, document, 'script', 'pendo');
-            // Call this whenever information about your visitors becomes available
-            // Please use Strings, Numbers, or Bools for value types.
-            pendo.initialize({
-                visitor: {
-                    id: 'VISITOR-UNIQUE-ID' // Required if user is logged in
-                        // email:        // Optional
-                        // role:         // Optional
-                        // You can add any additional visitor level key-values here,
-                        // as long as it's not one of the above reserved names.
-                }
-                , account: {
-                    // id:           'ACCOUNT-UNIQUE-ID' // Highly recommended
-                    // name:         // Optional
-                    // planLevel:    // Optional
-                    // planPrice:    // Optional
-                    // creationDate: // Optional
-                    // You can add any additional account level key-values here,
-                    // as long as it's not one of the above reserved names.
-                }
-            });
-        })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
+      (function (apiKey) {
+        (function (p, e, n, d, o) {
+          var v,
+            w,
+            x,
+            y,
+            z;
+          o = p[d] = p[d] || {};
+          o._q = [];
+          v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
+          for (w = 0, x = v.length; w < x; ++w)
+            (function (m) {
+              o[m] = o[m] || function () {
+                o._q[m === v[0]
+                    ? 'unshift'
+                    : 'push']([m].concat([].slice.call(arguments, 0)));
+              };
+            })(v[w]);
+          y = e.createElement(n);
+          y.async = !0;
+          y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+          z = e.getElementsByTagName(n)[0];
+          z.parentNode.insertBefore(y, z);
+        })(window, document, 'script', 'pendo');
+        // Call this whenever information about your visitors becomes available Please use Strings, Numbers, or Bools for value types.
+        pendo.initialize({
+          visitor: {
+            id: 'VISITOR-UNIQUE-ID' // Required if user is logged in
+            // email:        // Optional role:         // Optional You can add any additional visitor level key-values here, as long as it's not one of the above reserved names.
+          },
+          account: {
+            // id:           'ACCOUNT-UNIQUE-ID' // Highly recommended name:         // Optional planLevel:    // Optional planPrice:    // Optional creationDate: // Optional You can add any additional account level key-values here, as long as it's not one of
+            // the above reserved names.
+          }
+        });
+      })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
     </script>
 </head>
 
@@ -58,167 +56,200 @@
     Base Global Header component
     https://www.lightningdesignsystem.com/components/global-header/
   -->
-    <header class="slds-global-header_container"><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a><a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
-        <div class="slds-global-header slds-grid slds-grid--align-spread">
-            <div class="slds-global-header__item">
-                <div class="slds-global-header__logo"> <img src="/assets/images/logo-noname.svg" alt="" /> </div>
-            </div>
-            <div class="slds-global-header__item slds-global-header__item--search">
-                <div class="slds-form-element slds-lookup">
-                    <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
-                    <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
-                        <svg aria-hidden="true" class="slds-input__icon">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                        </svg>
-                        <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search" /> </div>
-                </div>
-            </div>
-            <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
-                <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
-                    <button class="slds-button" title="peredleten name" aria-haspopup="true"> <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
-              <img src="/assets/images/avatar2.jpg" alt="peredleten name" />
-            </span> </button>
-                </li>
-            </ul>
-        </div>
-        <!--
-    Navigation Bar component
-    https://www.lightningdesignsystem.com/components/global-navigation/
-  -->
-        <div class="slds-context-bar">
-            <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
-                <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
-                    <div class="slds-context-bar__icon-action">
-                        <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed"> <span class="slds-icon-waffle">
-              <span class="slds-r1"></span> <span class="slds-r2"></span> <span class="slds-r3"></span> <span class="slds-r4"></span> <span class="slds-r5"></span> <span class="slds-r6"></span> <span class="slds-r7"></span> <span class="slds-r8"></span> <span class="slds-r9"></span> </span> <span class="slds-assistive-text">Open App Launcher</span> </button>
-                    </div> <span class="slds-context-bar__label-action slds-context-bar__app-name">
-          <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span> </span>
-                </div>
-            </div>
-            <nav class="slds-context-bar__secondary" role="navigation">
-                <ul class="slds-grid">
-                    <li class="slds-context-bar__item">
-                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home"> <span class="slds-truncate">Business Manager</span> </a>
-                    </li>
-                    <li class="slds-context-bar__item slds-is-active">
-                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home"> <span class="slds-truncate">Pages</span> </a>
-                    </li>
-                </ul>
-            </nav>
-
-
-            <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
-                <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
-                                    <span class="slds-truncate">Site Genesis</span>
-                                </a>
-                <div class="slds-context-bar__icon-action">
-                  <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
-                    <svg class="slds-button__icon" aria-hidden="true">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
-                    </svg>
-                    <span class="slds-assistive-text">Open object switcher menu</span>
-                  </button>
-                </div>
-                <div class="slds-dropdown slds-dropdown--right">
-                  <ul class="slds-dropdown__list" role="menu">
-                    <li class="slds-dropdown__item" role="presentation">
-                      <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                                                <span class="slds-truncate">
-                                    <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
-                                    </svg>Site Genesis</span>
-                                            </a>
-                    </li>
-                    <li class="slds-dropdown__item" role="presentation">
-                      <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                                                <span class="slds-truncate">
-                                    <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
-                                    </svg>Site Genesis Global</span>
-                                            </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-
-        </div>
-    </header>
-    <main class="app-wrapper">
-
-<div class="slds-brand-band slds-brand-band_medium slds-template_default">
-    <div class="slds-card slds-has-bottom-magnet">
-<div class="slds-page-header slds-page-header--object-home">
-  <div>
-    <div class="slds-grid">
-      <div class="slds-col slds-has-flexi-truncate">
-        <div class="slds-media slds-no-space slds-media_center slds-grow">
-          <div class="slds-media__figure">
-
-<span class="slds-icon_container slds-icon-standard-cms"><svg class="slds-icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#cms"></use></svg></span>
-          </div>
-          <div class="slds-media__body">
-            <div>
-              <nav role="navigation" aria-label="Breadcrumbs">
-                <ol class="slds-breadcrumb slds-line-height_reset">
-                   <li class="slds-breadcrumb__item"><span>Experience Editor</span></li>
-                </ol>
-              </nav>
-              <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Meta Tag Rules">Pages</h1></div>
-          </div>
+  <header class="slds-global-header_container">
+    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
+    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+    <div class="slds-global-header slds-grid slds-grid--align-spread">
+      <div class="slds-global-header__item">
+        <div class="slds-global-header__logo">
+          <img src="/assets/images/logo-noname.svg" alt=""/>
         </div>
       </div>
-      <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
-        <div class="slds-button-group" role="group">
-          <button class="slds-button slds-button--neutral trigger-add" id="js-open-modal-id-2">New</button>
-        </div>
-      </div>
-    </div>
-    <div class="slds-grid">
-      <div class="slds-col slds-align-bottom">
-        <p class="slds-page-header__info">3 pages • <span id="sorted_txt">sorted by date</span></p>
-      </div>
-      <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
-        <div class="slds-form-element__control">
-          <div class="slds-input-has-icon slds-input-has-icon--right">
+      <div class="slds-global-header__item slds-global-header__item--search">
+        <div class="slds-form-element slds-lookup">
+          <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+          <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
             <svg aria-hidden="true" class="slds-input__icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
             </svg>
-            <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Editor Pages" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+            <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search"/>
           </div>
         </div>
-        <div class="slds-button-group" role="group">
-          <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1">
-            <svg class="slds-button__icon" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-            </svg><span class="slds-assistive-text">Delete</span></button>
-          <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" id="HkBUxsHK3x">
-            <button aria-expanded="false" aria-haspopup="true" class="slds-hide slds-button slds-button--icon-more ignore-click-HkBUxsHK3x" tabindex="0">
-              <svg class="slds-button__icon" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
-              </svg>
-              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small" viewBox="0 0 24 24" name="down">
-                <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
-              </svg>
+      </div>
+      <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+        <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
+          <button class="slds-button" title="peredleten name" aria-haspopup="true">
+            <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
+              <img src="/assets/images/avatar2.jpg" alt="peredleten name"/>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+      <!--
+      Navigation Bar component
+      https://www.lightningdesignsystem.com/components/global-navigation/
+      -->
+    <div class="slds-context-bar">
+      <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
+        <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+          <div class="slds-context-bar__icon-action">
+            <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+              <span class="slds-icon-waffle">
+                <span class="slds-r1"></span>
+                <span class="slds-r2"></span>
+                <span class="slds-r3"></span>
+                <span class="slds-r4"></span>
+                <span class="slds-r5"></span>
+                <span class="slds-r6"></span>
+                <span class="slds-r7"></span>
+                <span class="slds-r8"></span>
+                <span class="slds-r9"></span>
+              </span>
+              <span class="slds-assistive-text">Open App Launcher</span>
             </button>
           </div>
+          <span class="slds-context-bar__label-action slds-context-bar__app-name">
+            <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span>
+          </span>
+        </div>
+      </div>
+      <nav class="slds-context-bar__secondary" role="navigation">
+        <ul class="slds-grid">
+          <li class="slds-context-bar__item">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+              <span class="slds-truncate">Business Manager</span>
+            </a>
+          </li>
+          <li class="slds-context-bar__item slds-is-active">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+              <span class="slds-truncate">Pages</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
+        <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
+          <span class="slds-truncate">Site Genesis</span>
+        </a>
+        <div class="slds-context-bar__icon-action">
+          <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+            </svg>
+            <span class="slds-assistive-text">Open object switcher menu</span>
+          </button>
+        </div>
+        <div class="slds-dropdown slds-dropdown--right">
+          <ul class="slds-dropdown__list" role="menu">
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate">
+                  <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+                  </svg>Site Genesis</span>
+              </a>
+            </li>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate">
+                  <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
+                  </svg>Site Genesis Global</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+    <main class="app-wrapper">
+
+      <div class="slds-brand-band slds-brand-band_medium slds-template_default">
+        <div class="slds-card slds-has-bottom-magnet">
+          <div class="slds-page-header slds-page-header--object-home">
+      <div>
+        <div class="slds-grid">
+          <div class="slds-col slds-has-flexi-truncate">
+            <div class="slds-media slds-no-space slds-media_center slds-grow">
+              <div class="slds-media__figure">
+
+                <span class="slds-icon_container slds-icon-standard-cms">
+                  <svg class="slds-icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#cms"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <div>
+                  <nav role="navigation" aria-label="Breadcrumbs">
+                    <ol class="slds-breadcrumb slds-line-height_reset">
+                       <li class="slds-breadcrumb__item"><span>Experience Editor</span></li>
+                    </ol>
+                  </nav>
+                  <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Meta Tag Rules">Pages</h1></div>
+              </div>
+            </div>
+          </div>
+          <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+            <div class="slds-button-group" role="group">
+              <button class="slds-button slds-button--neutral trigger-add" id="js-open-modal-id-2">New</button>
+            </div>
+          </div>
+        </div>
+        <div class="slds-grid">
+          <div class="slds-col slds-align-bottom">
+            <p class="slds-page-header__info">3 pages • <span id="sorted_txt">sorted by date</span></p>
+          </div>
+          <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+            <div class="slds-form-element__control">
+              <div class="slds-input-has-icon slds-input-has-icon--right">
+                <svg aria-hidden="true" class="slds-input__icon">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                </svg>
+                <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Editor Pages" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+              </div>
+            </div>
+            <div>
+              <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                </svg><span class="slds-assistive-text">Delete</span></button>
+              <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" id="HkBUxsHK3x">
+                <button aria-expanded="false" aria-haspopup="true" class="slds-hide slds-button slds-button--icon-more ignore-click-HkBUxsHK3x" tabindex="0">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                  </svg>
+                  <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small" viewBox="0 0 24 24" name="down">
+                    <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-    </div>
+        </div>
         <!-- PAGES LIST -->
-        <div class="page-content ui-sortable slds-card slds-has-top-magnet">
-            <div class="ui-sortable-handle">
-                <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid" id="page_list">
+
+          <div class="slds-has-top-magnet slds-grid slds-grow">
+            <div class="slds-grow slds-grid layout-table-fix">
+              <div class="slds-scrollable_y">
+                <div class="slds-text-align_center">
+                  <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid" id="page_list">
                     <thead>
                         <tr class="slds-line-height--reset">
                             <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
-                                <div class="slds-th__action slds-th__action--form"> <span class="slds-checkbox">
-                      <input type="checkbox" name="options" id="checkbox-170">
-                      <label class="slds-checkbox__label" for="checkbox-170">
-                        <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select All</span> </label>
+                                <div class="slds-th__action slds-th__action--form">
+                                    <span class="slds-checkbox">
+                                      <input type="checkbox" name="options" id="checkbox-170">
+                                        <label class="slds-checkbox__label" for="checkbox-170">
+                                            <span class="slds-checkbox--faux"></span>
+                                            <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                                        </label>
                                     </span>
                                 </div>
                             </th>
@@ -322,7 +353,7 @@
                                         </svg> <span class="slds-assistive-text">Show More</span> </button>
                                     <div class="slds-dropdown slds-dropdown--right">
                                         <ul class="slds-dropdown__list" role="menu">
-                                            <li class="slds-dropdown__item" role="presentation"> '
+                                            <li class="slds-dropdown__item" role="presentation">
                                                 <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
                                             </li>
                                             <li class="slds-dropdown__item" role="presentation">
@@ -374,7 +405,7 @@
                                         </svg> <span class="slds-assistive-text">Show More</span> </button>
                                     <div class="slds-dropdown slds-dropdown--right">
                                         <ul class="slds-dropdown__list" role="menu">
-                                            <li class="slds-dropdown__item" role="presentation"> '
+                                            <li class="slds-dropdown__item" role="presentation">
                                                 <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
                                             </li>
                                             <li class="slds-dropdown__item" role="presentation">
@@ -437,29 +468,69 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr class="slds-hint-parent">
+                            <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+                                <span class="slds-checkbox">
+                                    <input type="checkbox" name="options" id="id-">
+                                    <label class="slds-checkbox__label" for="id-">
+                                        <span class="slds-checkbox--faux"></span>
+                                        <span class="slds-form-element__label slds-assistive-text">Select item 4</span>
+                                    </label>
+                                </span>
+                            </td>
+                            <td scope="row">
+                                <div class="slds-truncate" title="Error Page">
+                                    <div class="slds-form-element__icon">
+                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipC">
+                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+                                            </svg>
+                                            <span class="slds-assistive-text">Help</span>
+                                        </button>
+                                    </div>
+                                    Error Page
+                                    {% include "_inc_list_item-popover.html" ignore missing %}
+                                </div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title="Site 2 / en_EN">Error-Campaign-2017-ID</div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title="Site 2 / en_EN">online</div>
+                            </td>
+                            <td role="gridcell">
+                                <div class="slds-truncate" title="Site 2 / en_EN">12.31.2017 21:21 PM</div>
+                            </td>
+                            <td role="gridcell" style="width:3.25rem;">
+                                <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                    <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                        <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                        </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                    <div class="slds-dropdown slds-dropdown--right">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li class="slds-dropdown__item" role="presentation">
+                                                <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+    </main>
 
 
 
-
-{#
-        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--xx-small slds-is-open" aria-expanded="false">
-            <button class="slds-button slds-button--icon-more toggle-tooltip" aria-describedby="help" title="Help">
-                <svg class="slds-button__icon" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                </svg>
-                <span class="slds-assistive-text">Help</span>
-            </button>
-        </div>
-
-        <div class="slds-popover slds-popover--tooltip slds-nubbin--top-right tooltip-content slds-show" role="tooltip" id="tooltip-content" style="">
-            <div class="slds-popover__body">Running in production mode will use sampling to trace every 20th request and provide aggregated runtime data only.</div>
-        </div>
-
-#}
 
         <!-- /PAGES LIST -->
         {% include "_inc_modal-delete-page.html" ignore missing %}
@@ -467,8 +538,7 @@
         {% include "_inc_toast-page-deleted.html" ignore missing %}
         {% include "_inc_toast-page-created.html" ignore missing %}
 
-</div>
-    </main>
+
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script>
@@ -681,12 +751,6 @@
 
 
 
-<script>
-    {#
-    var reference = document.querySelector('#list_tooltip');
-    new Popper(reference, {allow: 'node', content: '.list-element-popover'}, {placement: 'right'})
-     #}
-</script>
 
 
 <script>
