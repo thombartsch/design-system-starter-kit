@@ -1,6 +1,6 @@
 <!-- Start Edit Entry -->
-<div class="slds-hide slds-modal--medium" id="edit-table-entry">
-<section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
+<div class="slds-hide2 slds-modal--medium" id="edit-table-entry2">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open " aria-labelledby="header43" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
       <header class="slds-modal__header">
         <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-2" title="Close">
@@ -114,9 +114,7 @@
     </div>
 </div>
     </div>
-    <div id="tab-assingments" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
-      <button class="slds-button slds-button--neutral trigger-assign-action">Assign</button>
-    </div>
+    <div id="tab-assingments" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
   </div>
 </div>
 
@@ -237,7 +235,7 @@ $( "#content-area" ).focusout(function() {
 
 <div class="slds-dropdown slds-dropdown_left slds-dropdown_small slds-hide" id="locales">
   <ul class="slds-dropdown__list" role="menu">
-  {% for locale in shared.locales %}
+{% for locale in shared.locales %}
     <li class="slds-dropdown__item slds-is-relative" role="presentation" id="{{ locale.label }}">
       <a href="javascript:void(0);" role="menuitemcheckbox" aria-checked="true" tabindex="0">
         <span class="slds-truncate" title="{{ locale.label }}">
@@ -246,6 +244,6 @@ $( "#content-area" ).focusout(function() {
         </span>
       </a>
     </li>
-  {% endfor %}
+{% endfor %}
   </ul>
 </div>

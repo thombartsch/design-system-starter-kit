@@ -20,4 +20,3 @@ dist
 
 # Ignore logs
 *.log
-package-lock.json

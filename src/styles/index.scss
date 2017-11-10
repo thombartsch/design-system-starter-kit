@@ -374,14 +374,29 @@ tr.is-new {
   .slds-has-data {
     &::after {
       content: '';
-      display: inline-block;
+      // display: inline-block;
+      // position: absolute;
+      // top: $spacing-small;
+      // right: $spacing-small;
+      // height: $spacing-x-small;
+      // width: $spacing-x-small;
+      // background-color: $color-text-brand;
+      // border-radius: $spacing-x-small;
+
+      @include square(8px);
       position: absolute;
-      top: $spacing-small;
-      right: $spacing-small;
-      height: $spacing-x-small;
-      width: $spacing-x-small;
-      background-color: $color-background-modal-brand;
-      border-radius: $spacing-x-small;
+      top: $spacing-medium;
+      right: $spacing-x-small;
+      display: block;
+      border-radius: $border-radius-circle;
+      background-color: $color-text-brand;
     }
   }
 }
+
+
+#select-product-23 {
+  position: relative;
+  z-index: 9002;
+}
+
