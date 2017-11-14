@@ -38,10 +38,15 @@ $(document).ready(function() {
       $('#filter-trigger').toggleClass('is-active');
       // $('#filtersection').toggleClass('slds-hide');
     });
+
+    $('.trigger-657').click(function() {
+      $('#select-product-232').toggleClass('slds-hide');
+    });
 });
 </script>
 
 {% include "_modal-edit.html" %}
+{% include "_modal-selected.html" %}
 {% include "_modal-duplicate.html" %}
 {% include "_popover-filter.html" %}
 {% include "_toast-created.html" %}

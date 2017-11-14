@@ -30,57 +30,6 @@
       <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium slds-hide">
         <button class="slds-button slds-button_neutral">Show more</button>
       </div>
-
-<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout slds-hide">
-  <thead>
-    <tr class="slds-text-title_caps">
-      <th scope="col" style="width: 4em;">
-        <div class="slds-assistive-text" title="Opportunity Name">Img</div>
-      </th>
-      <th scope="col" style="width: 45%;">
-        <div class="slds-truncate" title="Account Name">Name</div>
-      </th>
-      <th scope="col">
-        <div class="slds-truncate" title="Close Date">SKU</div>
-      </th>
-      <th scope="col">
-        <div class="slds-truncate" title="Stage">Price</div>
-      </th>
-      <th scope="col" style="width: 4em;">
-        <div class="slds-assistive-text" title="Confidence">Select</div>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for product2 in shared.lol %}
-    <tr>
-      <th scope="row" data-label="Opportunity Name">
-        <span class="slds-avatar slds-avatar_medium"><img alt="Person name" src="{{ product2.img }}" title="{{ product2.name }}"></span>
-      </th>
-      <td data-label="Account Name">
-        <div class="slds-truncate" title="Cloudhub">{{ product2.name }}</div>
-      </td>
-      <td data-label="Close Date">
-        <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
-      </td>
-      <td data-label="Confidence">
-        <div class="slds-truncate" title="20%">20€</div>
-      </td>
-      <td data-label="Amount">
-          <div class="slds-checkbox_add-button">
-            <input type="checkbox" class="slds-assistive-text" id="add-{{ product.name }}1" value="on">
-            <label for="add-{{ product.name }}1" class="slds-checkbox_faux">
-              <span class="slds-assistive-text">Add product</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-
     </div>
   </div>
   <div id="tab-default-2" class="slds-tabs_default__content slds-hide slds-p-top_none" role="tabpanel" aria-labelledby="tab-default-2__item">

@@ -288,6 +288,20 @@
   "img": "http://lorempixel.com/100/100/food"
 }],
 
+  "assigned": [{
+  "name": "Red Snapper - Fresh, Whole",
+  "img": "http://www.fillmurray.com/200/200"
+}, {
+  "name": "Beer - Camerons Cream Ale",
+  "img": "http://www.fillmurray.com/150/150"
+}, {
+  "name": "Sansho Powder",
+  "img": "http://www.fillmurray.com/100/100"
+}, {
+  "name": "Cheese - Parmigiano Reggiano",
+  "img": "http://www.fillmurray.com/110/110"
+}],
+
 // Dashboard Cards
 "cards": [{
   "title": "Homepage",
