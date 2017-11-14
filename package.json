@@ -2,6 +2,9 @@
   "name": "design-system-starter-kit",
   "repository": "https://github.com/salesforce-ux/design-system-starter-kit",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.1"
+  }
   "description": "Boilerplate to get started with a local Lightning Design System installation",
   "main": "",
   "scripts": {

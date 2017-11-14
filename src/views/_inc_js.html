@@ -32,6 +32,7 @@ var $boxe = $('.sub-right .slds-dropdown-trigger');
 var show_recommendation = false;
 
 //var $box = $('.slds-dropdown-trigger');
+var copytext = undefined;
 
 
 //HIDE ALL MENUS
@@ -1108,3 +1109,67 @@ $(document).click(function (e) {
      $('#page_list').delay(4000).fadeIn('slow');
  });
 
+
+ //OCAPI modal__close
+ $('.js-close-modalA').click(function(){
+    //open dialog for selecting an image
+    $('#modalA').toggleClass('slds-hide');
+ });
+
+ $('.js-run-modalB').click(function(){
+    //open dialog for selecting an image
+    $('#modalB').toggleClass('slds-hide');
+    //$('#modal-content-id-1B-loader').delay(6000).toggleClass('slds-hide');
+    //$('#modal-content-id-1B-stuff').delay(4000).toggleClass('slds-hide');
+ });
+
+ $('.js-close-modalB').click(function(){
+    //open dialog for selecting an image
+    $('#modalB').toggleClass('slds-hide');
+ });
+
+
+ $('.action_level_1').click(function(){
+    //open dialog for selecting an image
+    $('#row-2').toggleClass('slds-hide');
+ });
+
+
+
+$('.action_level_2').click(function(){
+   //open dialog for selecting an image
+   $('#row-3').toggleClass('slds-hide');
+   $('#row-loader').toggleClass('slds-hide');
+});
+
+
+$('.js-copy-modalA').click(function(){
+   //open dialog for selecting an image
+   $('#textarea-body').toggleClass('slds-hide');
+   $('#textarea-empty').toggleClass('slds-hide');
+   $('#modalA').toggleClass('slds-hide');
+});
+
+$('#author').click(function(){
+   $('#help').toggleClass('slds-hide');
+});
+
+$(document).ready(function(){
+    $("#filter-ocapi").keyup(function(){
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+        // Loop through the comment list
+        $("nav ul li").each(function(){
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+        // Update the count
+        var numberItems = count;
+    });
+});
