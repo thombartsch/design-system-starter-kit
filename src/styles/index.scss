@@ -16,6 +16,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 //
 @import 'footer';
 @import 'layout';
+@import 'cc-selector';
 
 
 html {
@@ -188,19 +189,11 @@ tr.is-new {
   transition: all 0.2s;
 }
 
-.product-list {
-  > .slds-media:nth-child(even) {
-    // background-color: #f4f6f9;
-  }
-}
-
-
 .slds-modal--medium .slds-modal__container {
     width: 70%;
     max-width: 840px;
     min-width: 480px
 }
-
 
 .slds-tabs_default__link .slds-badge {
   margin-left: .5em;
@@ -209,90 +202,6 @@ tr.is-new {
 }
 
 
-
-// .slds-visual-picker_medium .slds-visual-picker__figure,
-// .slds-visual-picker_medium .slds-visual-picker__body {
-//   width: 100%;
-//   height: auto;
-//   padding: .5rem;
-// }
-
 .slds-tabs_default__content {
   min-height: 50vh;
-}
-
-.product-tile {
-  &[aria-level="2"] {
-    // background-color: red;
-    padding-left: 2rem;
-  }
-
-  &[aria-level="3"] {
-    // background-color: red;
-    padding-left: 4.5rem;
-  }
-
-  &:hover {
-  background-color: #fafaf9;
-  }
-}
-
-
-.trigger-nested.is-opened {
-  transform: rotate(90deg);
-}
-
-.page-content.fix-layout {
-  margin-right: -$spacing-small;
-  margin-left: -$spacing-small;
-}
-
-.no-padding {
-  padding-left: 0!important;
-}
-
-.slds-section__content {
-  overflow: hidden;
-}
-
-// Checkbox Inheretance
-input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-input:not(:checked).is-inhereted + .slds-checkbox_faux,
-input:not(:checked).is-inhereted + .slds-checkbox--faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-input:not(:checked).is-inhereted + .slds-checkbox_faux,
-input:not(:checked).is-inhereted + .slds-checkbox--faux {
-  background-color: $color-gray-6;
-
-  &:before,
-  &:after {
-    background-color: #fff;
-  }
-
-  &:before {
-    top: -0.125rem;
-    left: 0.4375rem;
-    width: 0.1875rem;
-    height: 1.0625rem;
-    transform: rotate(40deg);
-  }
-
-  &:after {
-    top: 0.3125rem;
-    left: -0.625rem;
-    width: 0.625rem;
-    height: 0.1875rem;
-    transform: rotate(36deg);
-  }
-
-  &:hover {
-    background-color: $color-gray-8;
-
-    &:before,
-    &:after {
-      background-color: white;
-    }
-  }
 }
