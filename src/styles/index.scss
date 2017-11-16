@@ -16,6 +16,7 @@ $color-background-context-bar-brand-accent: rgb(132, 189, 0);
 //
 @import 'footer';
 @import 'layout';
+@import 'cc-selector';
 
 
 // Custom:
@@ -210,7 +211,6 @@ tr.is-new {
   }
 }
 
-
 .slds-modal--medium .slds-modal__container {
     width: 70%;
     max-width: 960px;
@@ -228,92 +228,8 @@ tr.is-new {
 }
 
 
-
-// .slds-visual-picker_medium .slds-visual-picker__figure,
-// .slds-visual-picker_medium .slds-visual-picker__body {
-//   width: 100%;
-//   height: auto;
-//   padding: .5rem;
-// }
-
 .slds-tabs_default__content {
   min-height: 50vh;
-}
-
-.product-tile {
-  &[aria-level="2"] {
-    // background-color: red;
-    padding-left: 2rem;
-  }
-
-  &[aria-level="3"] {
-    // background-color: red;
-    padding-left: 4.5rem;
-  }
-
-  &:hover {
-  background-color: #fafaf9;
-  }
-}
-
-
-.trigger-nested.is-opened {
-  transform: rotate(90deg);
-}
-
-.page-content.fix-layout {
-  margin-right: -$spacing-x-small;
-  margin-left: -$spacing-x-small;
-}
-
-.no-padding {
-  padding-left: 0!important;
-}
-
-.slds-section__content {
-  overflow: hidden;
-}
-
-// Checkbox Inheritance
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
-.slds-checkbox_add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox_faux,
-.slds-checkbox--add-button input[type="checkbox"]:not(:checked).is-inhereted + .slds-checkbox--faux {
-  background-color: $color-background-path-incomplete-hover;
-
-  &:before,
-  &:after {
-    background-color: #fff;
-  }
-
-  &:before {
-    top: -0.125rem;
-    left: 0.4375rem;
-    width: 0.1875rem;
-    height: 1.0625rem;
-    transform: rotate(40deg);
-  }
-
-  &:after {
-    top: 0.3125rem;
-    left: -0.625rem;
-    width: 0.625rem;
-    height: 0.1875rem;
-    transform: rotate(36deg);
-  }
-
-  &:hover {
-    background-color: $color-gray-8;
-
-    &:before,
-    &:after {
-      background-color: white;
-    }
-  }
 }
 
 //
@@ -324,6 +240,12 @@ tr.is-new {
 [class*="slds-size_"],
 [class*="slds-size--"] {
   flex: 0 1 auto;
+}
+
+// Layout columns & cards fix
+.page-content.fix-layout {
+  margin-right: -$spacing-x-small;
+  margin-left: -$spacing-x-small;
 }
 
 // Add Transition
@@ -374,14 +296,6 @@ tr.is-new {
   .slds-has-data {
     &::after {
       content: '';
-      // display: inline-block;
-      // position: absolute;
-      // top: $spacing-small;
-      // right: $spacing-small;
-      // height: $spacing-x-small;
-      // width: $spacing-x-small;
-      // background-color: $color-text-brand;
-      // border-radius: $spacing-x-small;
 
       @include square(8px);
       position: absolute;
