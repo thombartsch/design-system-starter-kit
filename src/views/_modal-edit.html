@@ -26,11 +26,11 @@
     </div>
     <div class="slds-form-element__row">
         <div class="slds-form-element slds-size_1-of-2">
-            <label class="slds-form-element__label" for="select-01">
+            <label class="slds-form-element__label" for="select-011">
                 <abbr class="slds-required" title="required">*</abbr>Scope</label>
             <div class="slds-form-element__control">
                 <div class="slds-select_container">
-                    <select class="slds-select" id="select-01">
+                    <select class="slds-select" id="select-011">
                         {% for scope in shared.scopes %}
                         <option value="{{ scope.label }}">{{ scope.label }}</option>
                         {% endfor %}
@@ -96,6 +96,8 @@
                 <div class="slds-rich-text-editor__textarea slds-grid">
                     <div id="content-area" aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
                 </div>
+
+<div id="rte-error-01" class="slds-form-element__help slds-p-around_small slds-hide">This rule is invalid.</div>
             </div>
         </div>
     </div>
@@ -229,6 +231,14 @@ $( "#content-area" ).focusout(function() {
       $('#tab-settings').addClass('slds-hide');
       $('#tab-settings').removeClass('slds-show');
     });
+
+
+// Scope Change Validation
+$( "#select-011" ).change(function() {
+  $('.slds-rich-text-editor').toggleClass('slds-has-error');
+  $('#rte-error-01').toggleClass('slds-hide');
+});
+
 });
 
 </script>
