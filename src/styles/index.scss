@@ -604,3 +604,10 @@ background: rgba(0,0,0,1);
 #page_list{
     display: none;
 }
+
+
+#combobox-version:hover,
+#combobox-tags:hover,
+#combobox-operations:hover,{
+  cursor: hand;
+}

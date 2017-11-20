@@ -57,7 +57,7 @@
       <div class="slds-form-element">
         <div class="slds-form-element__control">
           <div class="slds-combobox_container slds-size_small">
-            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-versions">
               <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                 <input type="text" class="slds-input slds-combobox__input" id="combobox-version" aria-controls="listbox-version" autocomplete="off" role="textbox" placeholder="Version" readonly="" />
                 <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
@@ -77,7 +77,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option A"> Option A</span>
+                        <span class="slds-truncate" title="Option A">17.8 (current)</span>
                       </span>
                     </span>
                   </li>
@@ -89,7 +89,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option B"> Option B</span>
+                        <span class="slds-truncate" title="Option B">17.7</span>
                       </span>
                     </span>
                   </li>
@@ -101,7 +101,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ"> Option ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                        <span class="slds-truncate" title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ">17.6</span>
                       </span>
                     </span>
                   </li>
@@ -119,9 +119,9 @@
         <div class="slds-form-element">
           <div class="slds-form-element__control">
             <div class="slds-combobox_container slds-size_small">
-              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-tags">
                 <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                  <input type="text" class="slds-input slds-combobox__input" id="combobox-version" aria-controls="listbox-tags" autocomplete="off" role="textbox" placeholder="Tags" readonly="" />
+                  <input type="text" class="slds-input slds-combobox__input" id="combobox-tags" aria-controls="listbox-tags" autocomplete="off" role="textbox" placeholder="Tags" readonly="" />
                   <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
                     <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
@@ -139,31 +139,7 @@
                           </svg>
                         </span>
                         <span class="slds-media__body">
-                          <span class="slds-truncate" title="Option A"> Option A</span>
-                        </span>
-                      </span>
-                    </li>
-                    <li role="presentation" class="slds-listbox__item">
-                      <span id="listbox-option-tags-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                        <span class="slds-media__figure">
-                          <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                          </svg>
-                        </span>
-                        <span class="slds-media__body">
-                          <span class="slds-truncate" title="Option B"> Option B</span>
-                        </span>
-                      </span>
-                    </li>
-                    <li role="presentation" class="slds-listbox__item">
-                      <span id="listbox-option-tags-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                        <span class="slds-media__figure">
-                          <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                          </svg>
-                        </span>
-                        <span class="slds-media__body">
-                          <span class="slds-truncate" title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ"> Option ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                          <span class="slds-truncate" title="Option A">catalog_search</span>
                         </span>
                       </span>
                     </li>
@@ -181,9 +157,9 @@
         <label class="slds-form-element__label slds-hide" for="combobox-version">Search</label>
         <div class="slds-form-element__control">
           <div class="slds-combobox_container slds-size_small">
-            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-operations">
               <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                <input type="text" class="slds-input slds-combobox__input" id="combobox-version" aria-controls="listbox-operations" autocomplete="off" role="textbox" placeholder="Operations" readonly="" />
+                <input type="text" class="slds-input slds-combobox__input" id="combobox-operations" aria-controls="listbox-operations" autocomplete="off" role="textbox" placeholder="Operations" readonly="" />
                 <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
                   <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
@@ -201,7 +177,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option A"> Option A</span>
+                        <span class="slds-truncate" title="Option A">catalogs</span>
                       </span>
                     </span>
                   </li>
@@ -213,7 +189,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option B"> Option B</span>
+                        <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span></span>
                       </span>
                     </span>
                   </li>
@@ -225,7 +201,7 @@
                         </svg>
                       </span>
                       <span class="slds-media__body">
-                        <span class="slds-truncate" title="Option ABCDEFGHIJKLMNOPQRSTUVWXYZ"> Option ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                        <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span>categories</span>
                       </span>
                     </span>
                   </li>
