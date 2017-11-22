@@ -42,6 +42,22 @@ $(document).ready(function() {
     $('.trigger-657').click(function() {
       $('#select-product-232').toggleClass('slds-hide');
     });
+
+     $('#help-trigger').click(function() {
+          $('#id-help').toggleClass('slds-hide');
+          new Tether({
+              element: '#id-help',
+              target: '#help-trigger',
+              attachment: 'top right',
+              targetAttachment: 'bottom right',
+              targetOffset: '8px 10px',
+              constraints: [{
+                  to: 'window',
+                  attachment: 'target',
+                  pin: true
+              }]
+          });
+      });
 });
 </script>
 
@@ -49,6 +65,7 @@ $(document).ready(function() {
 {% include "_modal-selected.html" %}
 {% include "_modal-duplicate.html" %}
 {% include "_popover-filter.html" %}
+{% include "_popover-help.html" %}
 {% include "_toast-created.html" %}
 {% include "_toast-assigned.html" %}
 {% include "_toast-modified.html" %}
