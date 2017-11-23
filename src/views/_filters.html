@@ -1,0 +1,79 @@
+<div class="slds-grid" style="2height: 800px; max-width: 420px; overflow: hidden;">
+  <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters slds-m-left_none">
+    <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y slds-grid slds-grid_vertical">
+      <div class="slds-filters">
+        <div class="slds-filters__header slds-grid slds-has-divider_bottom-space slds-grid_align-spread slds-hide" id="filter_buttons">
+          <button class="slds-button slds-button_neutral" id="filter_cancel">Cancel</button>
+          <button class="slds-button slds-button_brand" id="filter_save">Save</button>
+        </div>
+        <div class="slds-filters__header slds-grid slds-has-divider_bottom-space slds-grid_align-spread" id="filter_title">
+          <h2 class="slds-align-middle slds-text-heading_small slds-p-bottom--xsmall  slds-p-top--xsmall">Filter</h2>
+        </div>
+        <div class="slds-filters__body">
+          <ol class="slds-list_vertical slds-list_vertical-space">
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Show Me</p>
+                  <p>All Entries</p>
+                </button>
+              </div>
+            </li>
+          </ol>
+          <h3 class="slds-text-body_small slds-m-vertical_x-small">Matching all these filters</h3>
+          <ul class="slds-list_vertical slds-list_vertical-space">
+            <li class="slds-item slds-hint-parent slds-hide" id="filter_set">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Field</p>
+                  <p>equals VALUE</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove equals THIS WEEK">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: Created Date equals THIS WEEK</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-item slds-hint-parent slds-hide" id="filter_new">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center slds-is-new">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p>New Filter</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove New Filter">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: New Filter</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="slds-filters__footer slds-grid slds-shrink-none">
+          <button class="slds-button_reset slds-text-link" href="javascript:void(0);" id="filter_add">Add Filter</button>
+          <button class="slds-button_reset slds-text-link slds-col_bump-left" href="javascript:void(0);" id="filter_remove">Remove All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var checkbox = document.getElementById('checkbox-101');checkbox.indeterminate = true;
+</script>
