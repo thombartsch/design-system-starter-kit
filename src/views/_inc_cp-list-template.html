@@ -1,0 +1,22 @@
+<div class="slds-grid slds-">
+  <div class="slds-col slds-border--right slds-scrollable_y slds-col" style="background:#fff" id="panel_table">
+    {% include "_table-1.html"  ignore missing %}
+  </div>
+  <div class="" style="min-width:240px; background:#fff;" id="panel_filters">
+    {% include "_filters.html"  ignore missing %}
+  </div>
+</div>
+
+{#
+  <div class="slds-grid slds-wrap slds-hide">
+      <div class="pageBody filterOpen" id="datatable">
+        {% include "_filter_badges.html"  ignore missing %}
+        {% include "_table-1.html"  ignore missing %}
+      </div>
+      <div class="display-inline slds-col" id="filtersection">
+        {% include "_filters.html"  ignore missing %}
+      </div>
+  </div>
+  #}
+  {% include "_modal1.html" ignore missing %}
+  {% include "_inc_modal-filters.html" ignore missing %}

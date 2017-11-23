@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>.: Page List :.</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+
+{#
+        <script>
+            (function (apiKey) {
+                (function (p, e, n, d, o) {
+                    var v,
+                        w,
+                        x,
+                        y,
+                        z;
+                    o = p[d] = p[d] || {};
+                    o._q = [];
+                    v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
+                    for (w = 0, x = v.length; w < x; ++w)
+                        (function (m) {
+                            o[m] = o[m] || function () {
+                                o._q[m === v[0]
+                                     ? 'unshift'
+                                     : 'push']([m].concat([].slice.call(arguments, 0)));
+                            };
+                        })(v[w]);
+                    y = e.createElement(n);
+                    y.async = !0;
+                    y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                    z = e.getElementsByTagName(n)[0];
+                    z.parentNode.insertBefore(y, z);
+                })(window, document, 'script', 'pendo');
+                // Call this whenever information about your visitors becomes available Please use Strings, Numbers, or Bools for value types.
+                pendo.initialize({
+                    visitor: {
+                        id: 'VISITOR-UNIQUE-ID' // Required if user is logged in
+                        // email:        // Optional role:         // Optional You can add any additional visitor level key-values here, as long as it's not one of the above reserved names.
+                    },
+                    account: {
+                        // id:           'ACCOUNT-UNIQUE-ID' // Highly recommended name:         // Optional planLevel:    // Optional planPrice:    // Optional creationDate: // Optional You can add any additional account level key-values here, as long as it's not one of
+                        // the above reserved names.
+                    }
+                });
+            })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
+        </script>
+#}        
+    </head>
+
+    <body>
+        {% include "_inc_global-header.html" ignore missing %}
+
+        <main class="app-wrapper">
+            <div class="slds-brand-band slds-brand-band_medium slds-template_default">
+              {% include "_inc_cp-list-header.html" ignore missing %}
+              {% include "_inc_cp-list-template.html" ignore missing %}
+            </div>
+        </main>
+        {% include "_inc_modal-delete-page.html" ignore missing %}
+        {% include "_inc_modal-newpage.html" ignore missing %}
+        {% include "_inc_toast-page-deleted.html" ignore missing %}
+        {% include "_inc_toast-page-created.html" ignore missing %}
+
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>
+            svg4everybody();
+        </script>
+        <!-- JAVASCRIPT -->
+        <script src='/scripts/jquery-3.2.1.min.js'></script>
+        <script src='/scripts/jquery-ui.min.js'></script>
+        <script src='/scripts/stupidtable.min.js'></script>
+        <script>
+            <!-- START SCRIPT -->
+            {% include '_inc_js.html' ignore missing %}
+                <!-- END SCRIPT -->
+        </script>
+        <!-- /JAVASCRIPT -->
+
+        {#
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinA">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinB">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Summer Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinC">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Fall Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <script>
+            $('#list_tooltipA').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinA').toggleClass('slds-hide');
+            });
+            $('#list_tooltipB').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinB').toggleClass('slds-hide');
+            });
+            $('#list_tooltipC').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinC').toggleClass('slds-hide');
+            });
+
+            $('.slds-popover__close').click(function() {
+                //$('#poppinC').toggleClass('slds-hide');
+                $(this).closest('.slds-popover').toggleClass('slds-hide');
+            });
+            $(function(){
+                $('#page_list').stupidtable();
+            });
+        </script>
+        <style>
+            #poppinA{
+                top: 145px;
+                left: 230px;
+            }
+            #poppinB{
+                left: 250px;
+                top: 175px;
+            }
+            #poppinC{
+                left: 215px;
+                top: 208px;
+            }
+        </style>
+        #}
+        <script>
+            $(function(){
+                $('#page_list').stupidtable();
+            });
+        </script>
+
+    </body>
+
+</html>
