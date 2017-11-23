@@ -1,0 +1,63 @@
+<div class="slds-hide"
+style="
+z-index: 1000;
+position: absolute;
+right: 250px;
+top: 180px;
+" id="filter_modal">
+  <section class="slds-popover slds-nubbin_right" role="dialog" aria-label="Dialog Title" aria-describedby="selecct-filters">
+    <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+      </svg>
+      <span class="slds-assistive-text">Close dialog</span>
+    </button>
+    <div class="slds-popover__body" id="dialog-body-id-9">
+      <div class="slds-form">
+        <div class="slds-form-element">
+          <label class="slds-form-element__label" for="select-01">Field</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select class="slds-select" id="select-01">
+                <option>Any</option>
+                <option>Name</option>
+                <option>Type</option>
+                <option>Hits</option>
+                <option>Elapsed Time Own - SUM</option>
+                <option>Elapsed Time Own - AVG</option>
+                <option>Elapsed Time Total - SUM</option>
+                <option>Elapsed Time Total - AVG</option>
+                <option>CPU Time Own - SUM</option>
+                <option>CPU Time Own - AVG</option>
+                <option>CPU Time Total - SUM</option>
+                <option>CPU Time Total - AVG</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="select-02">Operator</label>
+        <div class="slds-form-element__control">
+          <div class="slds-select_container">
+            <select class="slds-select" id="select-02">
+              <option>equals</option>
+              <option>Name</option>
+              <option>Type</option>
+              <option>Hits</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-3">Value</label>
+        <div class="slds-form-element__control">
+          <input type="text" id="text-input-id-3" class="slds-input" placeholder="" />
+        </div>
+      </div>
+      <div class="slds-float--right slds-p-top--small slds-p-bottom--small">
+        <button class="slds-button slds-button--neutral" id="filter_done">Done</button>
+      </div>
+    </div>
+  </section>
+</div>
