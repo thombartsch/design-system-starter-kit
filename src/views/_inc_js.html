@@ -1105,8 +1105,8 @@ $(document).click(function (e) {
 
 //LOADER PAGE LIST
  $(function(){
-     $('.spinner').delay(3000).fadeOut('slow');
-     $('#page_list').delay(4000).fadeIn('slow');
+     $('#spinner').delay(3000).fadeOut('slow');
+     $('#page_list').delay(3000).fadeIn('slow');
  });
 
 
@@ -1172,4 +1172,43 @@ $(document).ready(function(){
         // Update the count
         var numberItems = count;
     });
+
+});
+
+
+
+
+
+
+$('#filter_add').click(function(){
+   $('#filter_modal').toggleClass('slds-hide');
+   $('#filter_new').toggleClass('slds-hide');
+   $('#filter_title').toggleClass('slds-hide');
+});
+
+$('#filter_remove').click(function(){
+   $('#filter_modal').addClass('slds-hide');
+   $('#filter_new').addClass('slds-hide');
+   $('#filter_set').addClass('slds-hide');
+   $('#filter_title').addClass('slds-show');
+   $('#filter-name').text('0');
+});
+
+
+$('#filter_done').click(function(){
+  $('#filter_modal').addClass('slds-hide');
+  $('#filter_new').addClass('slds-hide');
+  $('#filter_title').toggleClass('slds-hide');
+  $('#filter_set').toggleClass('slds-hide');
+
+  $('#page_list').fadeOut('slow');
+  $('#spinner').fadeIn('slow');
+  $('#spinner').delay(3000).fadeOut('slow');
+  $('#page_list').delay(3000).fadeIn('slow');
+  $('#filter-name').text('1');
+});
+
+$('#filtertoggle').click(function(){
+  $('#panel_filters').toggleClass('slds-hide');
+  $('#filtertoggle').toggleClass('slds-is-selected');
 });
