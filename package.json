@@ -29,7 +29,6 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "express": "^4.15.2",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",
     "gulp-load-plugins": "^1.5.0",
@@ -48,6 +47,7 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
     "stylelint": "^7.10.1",
     "stylelint-config-slds": "^1.0.6"
   }
