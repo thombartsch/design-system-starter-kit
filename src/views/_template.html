@@ -42,10 +42,16 @@
       });
 
       $('.slds-checkbox_faux').click(function() {
-        $('#items-selected').removeClass('slds-hide');
+        $('#items-selected, #remove-all-trigger').removeClass('slds-hide');
         $('.einstein-placeholder-item').addClass('slds-hide');
         $('.einstein-item').removeClass('slds-hide');
         $('.hrhr-1').removeAttr('disabled');
+      });
+
+      $('#remove-all-trigger').click(function() {
+        $('#remove-all-trigger, #items-selected').addClass('slds-hide');
+        $('.product-list .slds-checkbox_add-button input').prop('checked', false);
+        $('.hrhr-1').prop('disabled', true);
       });
 
       $('#combobox-unique-id1').change(function() {
