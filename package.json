@@ -12,9 +12,10 @@
     "lint:css": "stylelint src/styles/**/*.scss"
   },
   "engines": {
-    "node": "^9.2.0",
-    "npm": "^5.5.1"
+    "node": "^6.5.0",
+    "npm": "^3.10.5"
   },
+
   "keywords": [
     "lightning",
     "design",
