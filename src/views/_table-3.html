@@ -1,3 +1,275 @@
+<div class="slds-max-medium-table--stacked">
+    <table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout" role="grid" id="2spinner">
+        <thead>
+        <tr>
+            <th style=""></th>
+            <th style="width:300px"></th>
+            <th style=""></th>
+            <th colspan="2" class="slds-text-align--center slds-border_left" style="">
+                <div class="slds-m-around--small">Elapsed Time Own</div>
+            </th>
+            <th colspan="2" class="slds-text-align--center slds-border_left" style="">
+                <div class="slds-m-around--small">Elapsed Time Total</div>
+            </th>
+            <th colspan="2" class="slds-text-align--center slds-border_left" style="">
+                <div class="slds-m-around--small">CPU Time Own</div>
+            </th>
+            <th colspan="2" class="slds-text-align--center slds-border_left" style="">
+                <div class="slds-m-around--small">CPU Time Total</div>
+            </th>
+        </tr>
+        </thead>
+    </table>
+
+    <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid">
+        <thead>
+            <tr>
+                <th style="">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                       role="button" tabindex="-1">
+                        <div class="slds-grid slds-col">
+                            <div class="slds-col slds-text-align--left">
+                                <span class="slds-assistive-text">Sort by: </span>
+                                <span class="slds-truncate" title="Name">Type</span>
+                                <div class="slds-icon_container">
+                                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                 </th>
+                 <th style="width:300px">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--left">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">Name</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+                             </div>
+                         </div>
+
+                     </a>
+                 </th>
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">Hits</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">AVG</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">SUM</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">AVG</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">SUM</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="false">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">AVG</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">SUM</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">AVG</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+                <th style="">
+                     <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);"
+                        role="button" tabindex="-1">
+                         <div class="slds-grid slds-col">
+                             <div class="slds-col slds-text-align--right">
+                                 <span class="slds-assistive-text">Sort by: </span>
+                                 <span class="slds-truncate" title="Name">SUM</span>
+                                 <div class="slds-icon_container">
+                                     <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                                     </svg>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </a>
+                 </th>
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent slds-table--col-bordered">
+                <td role="gridcell" class="slds-truncate">SF_PAGE</td>
+                <td scope="row" class="slds-truncate">
+                    <a href="javascript:void(0);" class="show_modal slds-truncate">/Sites-SiteGenesis-Site/default/Product-Detail/sdsdasdasdad</a>
+                </td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="2">2</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="1.401">1.401</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="701">701</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="5,299,475">5,299,475</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="2,649,738">2,649,738</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="1">1</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="0">0</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="4,654,047">4,654,047</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="2,327,023">2,327,023</td>
+            </tr>
+            {% for account in accounts %}
+            <tr class="slds-hint-parent slds-table--col-bordered">
+                <td role="gridcell" class="slds-truncate">{{ account.type }}</td>
+                <td scope="row" class="slds-truncate"><a href="javascript:void(0);" class="show_modal
+                    slds-truncate">{{ account.name }}</a></td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.hits }}">{{ account.hits }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.etosum }}">{{ account.etosum }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.etoavg }}">{{ account.etoavg }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.ettsum }}">{{ account.ettsum }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.ettavg }}">{{ account.ettavg }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputosum }}">{{ account.cputosum }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputoavg }}">{{ account.cputoavg }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputtsum }}">{{ account.cputtsum }}</td>
+                <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputtavg }}">{{ account.cputtavg }}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+{#
 <div class="slds-max-medium-table--stacked 2slds-hide">
   <table class="slds-hide slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout slds-hide" role="grid" id="2spinner">
     <thead>
@@ -256,63 +528,15 @@
           </div>
         </td>
       </tr>
-        #}
-    </tbody>
+
+      </tbody>
   </table>
 
 
 
-<table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout" role="grid">
-    <thead>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <th colspan="2" scope="colgroup">Mars</th>
-            <th colspan="2" scope="colgroup">Venus</th>
-            <th colspan="2" scope="colgroup">Mars</th>
-            <th colspan="2" scope="colgroup">Venus</th>
-        </tr>
-        <tr>
-            <td>Type</td>
-            <td>Name</td>
-            <td>Hits</td>
-            <th scope="col">Produced</th>
-            <th scope="col">Sold</th>
-            <th scope="col">Produced</th>
-            <th scope="col">Sold</th>
-            <th scope="col">Produced</th>
-            <th scope="col">Sold</th>
-            <th scope="col">Produced</th>
-            <th scope="col">Sold</th>
-        </tr>
-    </thead>
 
 
 
-    <tbody>
-        <tr class="slds-hint-parent slds-table--col-bordered">
-            <td role="gridcell" class="slds-">
-                <span class="slds-truncate">SF_PAGE</span>
-            </td>
-            <th scope="row">
-                <a href="javascript:void(0);" class="show_modal slds-truncate"><span class="slds-truncate">/Sites-SiteGenesis-Site/default/Product-Detail</span></a>
-            </th>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="2"><span class="slds-truncate">2</span></td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="1.401"><span class="slds-truncate">1.401</span></td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="701"><span class="slds-truncate">701</span></td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="5,299,475">5,299,475</td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="2,649,738">2,649,738</td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="1">1</td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="0">0</td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="4,654,047">4,654,047</td>
-            <td class="slds-text-align--right" role="gridcell" data-sort-value="2,327,023">2,327,023</td>
-        </tr>
-    </tbody>
-
-</table>
-
-{#
   <table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout" role="grid" id="page_list">
       <col>
       <col>
@@ -833,20 +1057,20 @@
       {% for account in accounts %}
       <tr class="slds-hint-parent slds-table--col-bordered">
         <td role="gridcell" class="slds-">
-            <span class="slds-truncate">{{ account.type }}</span>
+            {{ account.type }}</span>
         </td>
         <th scope="row">
-            <a href="javascript:void(0);" class="show_modal slds-truncate"><span class="slds-truncate">{{ account.name }}</span></a>
+            <a href="javascript:void(0);" class="show_modal slds-truncate">{{ account.name }}</span></a>
         </th>
-          <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.hits }}"><span class="slds-truncate">{{ account.hits }}</span></td>
-          <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.etosum }}"><span class="slds-truncate">{{ account.etosum }}</span></td>
-          <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.etoavg }}"><span class="slds-truncate">{{ account.etoavg }}</span></td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.ettsum }}">{{ account.ettsum }}</td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.ettavg }}">{{ account.ettavg }}</td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.cputosum }}">{{ account.cputosum }}</td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.cputoavg }}">{{ account.cputoavg }}</td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.cputtsum }}">{{ account.cputtsum }}</td>
-        <td class="slds-text-align--right" role="gridcell" data-sort-value="{{ account.cputtavg }}">{{ account.cputtavg }}</td>
+          <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.hits }}">{{ account.hits }}</td>
+          <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.etosum }}">{{ account.etosum }}</td>
+          <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.etoavg }}">{{ account.etoavg }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.ettsum }}">{{ account.ettsum }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.ettavg }}">{{ account.ettavg }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputosum }}">{{ account.cputosum }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputoavg }}">{{ account.cputoavg }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputtsum }}">{{ account.cputtsum }}</td>
+        <td class="slds-text-align--right slds-truncate" role="gridcell" data-sort-value="{{ account.cputtavg }}">{{ account.cputtavg }}</td>
       </tr>
       {% endfor %}
     </tbody>
@@ -896,4 +1120,4 @@
     </table>
 #}
 
-  </div>
+
