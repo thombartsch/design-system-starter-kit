@@ -1,0 +1,268 @@
+<div class="slds-grid">
+    <div class="slds-col">
+        <h2 class="slds-text-heading--medium slds-m-bottom--x-small">Table of contents</h2>
+        <ul>
+            <li><a href="#implementation">Implementation Notes</a></li>
+            <li><a href="#request">Request</a></li>
+            <li>
+                <ul class="slds-is-nested">
+                    <li><a href="#path">Path Parameters</a></li>
+                    <li><a href="#body">Body Parameter</a></li>
+                </ul>
+            </li>
+            <li><a href="#response">Response</a></li>
+            <li>
+                <ul class="slds-is-nested">
+                    <li><a href="#model">Model</a></li>
+                    <li><a href="#messages">Messages</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="slds-hide">
+        <button class="slds-button slds-button--brand">Try it now!</button>
+    </div>
+</div>
+
+<div class="slds-grid slds-p-top--medium">
+    <div>
+        <h2 class="slds-text-heading--medium slds-m-bottom--x-small" id="implementation">Implementation Notes</h2>
+        <p>
+            Searches for catalogs.
+
+            The query attribute specifies a complex query that can be used to narrow down the search. These are the list of searchable attributes:
+
+            id - String name - String description - String creation_date - DateTime
+
+            There are two additional fields that can be used as search filters. They are not attributes in CatalogWO object, but can be used as filters to query catalogs based on site assignments.
+
+            is_master_catalog - Boolean is_storefront_catalog - Boolean
+
+            On using is_master_catalog in the search query, catalogs without any site assignments are returned. On using is_storefront_catalog in the search query, catalogs with one or more site assignments are returned.
+
+            The output of the query can also be sorted. These are the list of sortable attributes:
+
+            id - String name - String description - String creation_date - DateTime
+        </p>
+    </div>
+</div>
+
+<div class="slds-grid slds-p-top--medium">
+    <div class="slds-col">
+        <h2 class="slds-text-heading--medium slds-m-bottom--x-small" id="request">Request</h2>
+        <h3 class="slds-text-heading--small slds-m-bottom--x-small" id="path">Path Parameters</h3>
+        <p>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="width: 100%">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Opportunity Name">Parameter</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Description</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Close Date">Data Type</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">catalog_id</div>
+                    </th>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">The id of the source catalog</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015">string</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">category_id</div>
+                    </th>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">The id of the source category</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015">string</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">target_catalog_id</div>
+                    </th>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">The id of the target catalog</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015">string</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">target_category_id</div>
+                    </th>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">The id of the source catalog</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015">string</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">type</div>
+                    </th>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">The type of ...</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015">string</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        </p>
+</div>
+</div>
+
+
+<div>
+    <div class="slds-p-top--medium">
+        <h3 class="slds-text-heading--small slds-m-bottom--x-small" id="body">Body Parameter</h3>
+        <div class="slds-box">
+            <code><pre>{
+  "count": 0,
+  "data": [
+    {}
+  ],
+  "expand": [
+    "string"
+  ],
+  "hits": [
+    {
+      "assigned_product_count": 0,
+      "assigned_sites": [
+        {
+          "customer_list_link": {
+            "customer_list_id": "string",
+            "link": "string",
+            "title": {}
+          },
+          "description": {},
+          "display_name": {},
+          "id": "string",
+          "in_deletion": true,
+          "link": "string",
+          "storefront_status": "online"
+        }
+      ],
+      "category_count": 0,
+      "creation_date": "2017-11-20T10:34:40.343Z",
+      "description": {},
+      "id": "string",
+      "last_modified": "2017-11-20T10:34:40.343Z",
+      "link": "string",
+      "name": {},
+      "online": true,
+      "owned_product_count": 0,
+      "recommendation_count": 0,
+      "root_category": "string"
+    }
+  ],
+  "next": {
+    "count": 0,
+    "start": 0
+  },
+  "previous": {
+    "count": 0,
+    "start": 0
+  },
+  "query": {},
+  "select": "string",
+  "sorts": [
+    {
+      "field": "string",
+      "sort_order": "asc"
+    }
+  ],
+  "start": 0,
+  "total": 0
+}
+</pre>
+            </code>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="slds-grid slds-p-top--medium">
+    <div class="slds-col">
+        <h2 class="slds-text-heading--medium slds-m-bottom--x-small" id="response">Response</h2>
+
+        <h3 class="slds-text-heading--small slds-m-bottom--x-small" id="model">Model</h3>
+        <div class="slds-box">
+            <pre><code>{
+                                                "count": 0,
+                                                "expand": [
+                                                  "string"
+                                                ],
+                                                "query": {},
+                                                "select": "string",
+                                                "sorts": [
+                                                  {
+                                                    "field": "string",
+                                                    "sort_order": "asc"
+                                                  }
+                                                ],
+                                                "start": 0
+                                              }</code></pre>
+        </div>
+
+
+
+        <h3 class="slds-text-heading--small slds-p-top--medium slds-m-bottom--x-small" id="messages">Messages</h3>
+        <p>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="width: 100%">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Opportunity Name">HTTP Status Code</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Reason</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Close Date">Response Model</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Close Date">Headers</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" data-label="Opportunity Name">
+                        <div class="slds-truncate" title="Cloudhub">404</div>
+                    </th>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td data-label="Account Name">
+                        <div class="slds-truncate" title="Cloudhub">Thrown in case the source catalog or the target catalog do not exist</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate" title="4/14/2015"></div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        </p>
+</div>
+</div>

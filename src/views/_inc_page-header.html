@@ -51,12 +51,19 @@
       </div>
     </div>
   </div>
-  <ul class="slds-grid slds-page-header__detail-row">
+
+    <div class="slds-grid slds-wrap slds-grid_pull-padded-medium slds-page-header__detail-row">
+        {% include "_inc_dropdownA.html" ignore missing %}
+        {% include "_inc_dropdownB.html" ignore missing %}
+        {% include "_inc_dropdownC.html" ignore missing %}
+    </div>
+
+  <ul class="slds-grid slds-page-header__detail-row slds-hide">
     <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small slds-hide" title="Field 1">Version</p>
+      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small slds-hide" title="Field 1">Tags</p>
       <div class="slds-form-element">
         <div class="slds-form-element__control">
-          <div class="slds-combobox_container slds-size_small">
+          <div class="slds-combobox_container slds-size_xsmall">
             <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-versions">
               <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                 <input type="text" class="slds-input slds-combobox__input" id="combobox-version" aria-controls="listbox-version" autocomplete="off" role="textbox" placeholder="Version" readonly="" />
@@ -118,7 +125,7 @@
         <label class="slds-form-element__label slds-hide" for="select-02">Tags</label>
         <div class="slds-form-element">
           <div class="slds-form-element__control">
-            <div class="slds-combobox_container slds-size_small">
+            <div class="slds-combobox_container slds-size_xsmall">
               <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-tags">
                 <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                   <input type="text" class="slds-input slds-combobox__input" id="combobox-tags" aria-controls="listbox-tags" autocomplete="off" role="textbox" placeholder="Tags" readonly="" />
@@ -156,7 +163,7 @@
       <div class="slds-form-element">
         <label class="slds-form-element__label slds-hide" for="combobox-version">Search</label>
         <div class="slds-form-element__control">
-          <div class="slds-combobox_container slds-size_small">
+          <div class="slds-combobox_container slds-size_xsmall">
             <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-operations">
               <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                 <input type="text" class="slds-input slds-combobox__input" id="combobox-operations" aria-controls="listbox-operations" autocomplete="off" role="textbox" placeholder="Operations" readonly="" />
