@@ -11,14 +11,24 @@ https://www.lightningdesignsystem.com/components/global-header/
                 <img src="/assets/images/logo-noname.svg" alt=""/>
             </div>
         </div>
-        <div class="slds-global-header__item slds-global-header__item--search">
-            <div class="slds-form-element slds-lookup">
-                <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
-                <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
-                    <svg aria-hidden="true" class="slds-input__icon">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                    </svg>
-                    <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search"/>
+        <div class="slds-grid">
+            <div>
+                <div class="slds-global-header__item 2slds-global-header__item--search slds-size_large">
+                    <div class="slds-form-element slds-lookup">
+                        <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+                        <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control 2slds-input-has-icon 2slds-input-has-icon--left">
+                            <svg aria-hidden="true" class="slds-input__icon slds-hide">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                            </svg>
+                            <input id="global-search-01" class="slds-input slds-lookup__search-input slds-m-left--none" type="search" placeholder="https://demo-ocapi.demandware.net/s/-/dw/meta/v1/rest/data/v17_8"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button class="slds-button slds-button_neutral">Authorize</button>
+                    <button class="slds-button slds-button_neutral">Explore</button>
                 </div>
             </div>
         </div>
@@ -62,7 +72,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
         </div>
         <nav class="slds-context-bar__secondary" role="navigation">
             <ul class="slds-grid">
-                <li class="slds-context-bar__item">
+                <li class="slds-context-bar__item slds-hide">
                     <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
                         <span class="slds-truncate">Business Manager</span>
                     </a>

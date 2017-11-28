@@ -2,7 +2,7 @@
     <div class="slds-form-element">
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">
-                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-operations">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click 2slds-is-open" aria-expanded="false" aria-haspopup="listbox" role="combobox" id="slds-combobox-picklist-operations">
                     <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                         <input type="text" class="slds-input slds-combobox__input" id="combobox-operations" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Operations" readonly="" />
                         <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
@@ -15,7 +15,7 @@
                     <div id="listbox-unique-id" role="listbox">
                         <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
                             <li>
-                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-p-around_small" role="none">
+                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right slds-p-around_small slds-border--bottom" role="none">
                                     <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="" />
                                     <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right slds-m-right_small">
                                         <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -26,40 +26,97 @@
                             </li>
 
                             <li role="presentation" class="slds-listbox__item">
-                                <span id="listbox-option-operations-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                    <span class="slds-media__figure">
-                                        <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                                        </svg>
-                                    </span>
-                                    <span class="slds-media__body">
-                                        <span class="slds-truncate" title="Option A">catalogs</span>
-                                    </span>
-                                </span>
+                                <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around--small slds-p-bottom--none">
+                                    <div class="slds-col slds-p-around--small slds-p-bottom--none">
+                                        <div class="slds-grid slds-wrap slds-grid_pull-padded">
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2">
+                                                <span class="slds-truncate" title="Option B">catalogs</span>
+                                            </div>
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2 slds-text-align--right">
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon orange" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon blue" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon red" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li role="presentation" class="slds-listbox__item">
-                                <span id="listbox-option-operations-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                    <span class="slds-media__figure">
-                                        <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                                        </svg>
-                                    </span>
-                                    <span class="slds-media__body">
-                                        <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span></span>
-                                    </span>
-                                </span>
+                                <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around--small slds-p-bottom--none">
+                                    <div class="slds-col slds-p-around--small slds-p-bottom--none">
+                                        <div class="slds-grid slds-wrap slds-grid_pull-padded">
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2">
+                                                <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span></span>
+                                            </div>
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2 slds-text-align--right">
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon orange" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon blue" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon red" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li role="presentation" class="slds-listbox__item">
-                                <span id="listbox-option-operations-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                    <span class="slds-media__figure">
-                                        <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                                        </svg>
-                                    </span>
-                                    <span class="slds-media__body">
-                                        <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span>categories</span>
-                                    </span>
-                                </span>
+                                <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around--small slds-p-bottom--none">
+                                    <div class="slds-col slds-p-around--small slds-p-bottom--none">
+                                        <div class="slds-grid slds-wrap slds-grid_pull-padded">
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2">
+                                                <span class="slds-truncate" title="Option B">catalogs/<span style="color:#ccc">{catalogs_id}</span>categories</span>
+                                            </div>
+                                            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2 slds-text-align--right">
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon orange" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon blue" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                                <button class="slds-button slds-button_icon" title="Provide description of action">
+                                                    <svg class="slds-button__icon red" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Provide description of action</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -69,3 +126,20 @@
     </div>
 
 </div>
+
+
+<style>
+    .red{
+        fill: #C23934;
+    }
+    .orange{
+        fill: #FFB75D;
+    }
+    .blue{
+        fill: #0070D2;
+    }
+    .green{
+        fill: #04844B;
+    }
+
+</style>
