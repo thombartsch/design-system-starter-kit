@@ -1173,3 +1173,58 @@ $(document).ready(function(){
         var numberItems = count;
     });
 });
+
+
+
+$('#app-switch-trigger').click(function(){
+ $('#apps').toggleClass('slds-hide');
+});
+
+ $('#app-close').click(function(){
+     $('#apps').toggleClass('slds-hide');
+ });
+
+ $('.slds-section__title-action').click(function() {
+     $(this).parent().parent().toggleClass('slds-is-open');
+ });
+
+ $('.app-trigger').click(function() {
+     $(this).toggleClass('slds-is-open');
+ });
+
+ $('#tooltip-locale').hover(function() {
+     $('#help').toggleClass('slds-hide');
+     new Tether({
+         element: '#help',
+         target: '#tooltip-locale',
+         attachment: 'bottom center',
+         targetAttachment: 'top center',
+         targetOffset: '-10px 0',
+         constraints: [{
+             to: 'window',
+             attachment: 'target',
+             pin: true
+         }]
+     });
+ });
+
+
+ function searchApps() {
+     // Declare variables
+     var input, filter, ul, li, a, i;
+     input = document.getElementById('2app-launcher-search');
+     filter = input.value.toUpperCase();
+     ul = document.getElementById("myapps");
+     //ul = document.getElementById("myappsB");
+     li = ul.getElementsByTagName('li');
+
+     // Loop through all list items, and hide those who don't match the search query
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("a")[0];
+         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
