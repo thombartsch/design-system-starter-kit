@@ -1,15 +1,16 @@
-<div class="button-container">
-    <div class="slds-dropdown-trigger slds-p-around_small  slds-dropdown-trigger--click slds-m-left--xx-small 2slds-align_absolute-center" aria-expanded="false" id="component-selecta">
-        <button class="slds-button slds-button_neutral slds-button--icon-more toggle-tooltip orange" aria-describedby="title" title="Add">
-            <svg class="slds-button__icon" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-            </svg>
-            <span class="slds-assistive-text">Add Component</span>
-        </button>
-
-        {#
-        <div class="region_component_selector">
-            <div class="slds-dropdown slds-hide slds-dropdown--center slds-dropdown—fluid slds-nubbin_top slds-dropdown_large slds-p-around_small">
+<div class="region_component_selector slds-hide" style="height: 640px;">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-dropdown-components" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" id="js-close-dropdown">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Components</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-dropdown-components">
                 <ul class="slds-dropdown__list" role="menu">
                     <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
                         <span class="slds-text-title_caps">Layout Components</span>
@@ -86,14 +87,6 @@
                 </ul>
             </div>
         </div>
-        #}
-        {% include "_inc_dropdowncomponents.html"  ignore missing %}
-    </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
 </div>
-
-
-
-
-
-
-
