@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>.: Navigation Sample :.</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+
+    </head>
+
+    <body>
+        <div class="slds-layout-frame">
+            <div class="slds-layout">
+                {% include "_inc_global-header.html" ignore missing %}
+                {% include "_inc_page-navigation-v2.html" ignore missing %}
+                {% include "_inc_page-content.html" ignore missing%}
+            </div>
+        </div>
+    </body>
+
+
+{% include "_inc_app-menu.html" ignore missing %}
+
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/vendor/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- JAVASCRIPT -->
+    <script src = '/scripts/jquery-3.2.1.min.js'></script>
+    <script src = '/scripts/jquery-ui.min.js'> </script>
+    <script>
+        {% include '_inc_js.html' ignore missing %}
+    </script>
+
+
+</html>
