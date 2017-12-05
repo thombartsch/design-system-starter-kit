@@ -70,7 +70,7 @@ background-image: none;
     */
     background-color: white;
     border-top: 1px solid #d8dde6;
-    border-bottom: 3px solid #84bd00;
+    border-bottom: 3px solid #416437;
     color: #16325c;
     position: relative;
     /*
@@ -80,7 +80,7 @@ background-image: none;
 
 .slds-context-bar__item.slds-is-active:before,
 .slds-context-bar__item.slds-is-active:after {
-    background: #84BD00;
+    background: #416437;
     position: absolute;
     top: 0;
     left: -1px;
@@ -89,7 +89,7 @@ background-image: none;
 
 .slds-context-bar__item:not(.slds-no-hover):hover,
 .slds-context-bar__item.slds-is-active {
-    border-bottom: 3px solid #84BD00;
+    border-bottom: 3px solid #416437;
 }
 
 .slds-context-bar__item.slds-is-active {
