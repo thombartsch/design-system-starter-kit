@@ -157,7 +157,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
             </ul>
         </nav>
 
-        <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
+        <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger  slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_3-of-12">
             <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
                 <span class="slds-truncate">https://demo-ocapi.demandware.net/s/-/dw/meta/v1/rest/data/v17_8</span>
             </a>
@@ -169,17 +169,23 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                     <span class="slds-assistive-text">Open object switcher menu</span>
                 </button>
             </div>
-            <div class="slds-dropdown slds-dropdown--right">
+            <div class="slds-dropdown slds-dropdown--right" style="
+                                                                   background: none;
+                                                                   border: none;
+                                                                   box-shadow: none;
+                                                                   ">
+                {#
                 <ul class="slds-dropdown__list  slds-is-open" role="menu">
                     <li class="slds-dropdown__item" role="presentation">
-                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                            <span class="slds-truncate">
-                                <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
-                                </svg>Site Genesis</span>
-                        </a>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">API Connection</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text-input-id-1" class="slds-input" placeholder="" value="https://demo-ocapi.demandware.net/s/-/dw/meta/v1/rest/data/v17_8" />
+                            </div>
+
+                        </div>
                     </li>
-                    <li class="slds-dropdown__item" role="presentation">
+                    <li class="slds-dropdown__item slds-hide" role="presentation">
                         <a href="javascript:void(0);" role="menuitem" tabindex="-1">
                             <span class="slds-truncate">
                                 <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
@@ -188,6 +194,34 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                         </a>
                     </li>
                 </ul>
+                #}
+                <section class="slds-popover 2slds-popover_walkthrough slds-nubbin_top-right"
+                         role="dialog" aria-labelledby="dialog-heading-id-01" aria-describedby="dialog-body-id-5" style="right:110px; min-width:420px">
+                    <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                        </svg>
+                        <span class="slds-assistive-text">Close dialog</span>
+                    </button>
+                    <header class="slds-popover__header slds-p-vertical_medium slds-hide">
+                        <h2 id="dialog-heading-id-01" class="slds-text-heading_medium">Enter ...</h2>
+                    </header>
+                    <div class="slds-popover__body" id="dialog-body-id-5" style="width:300px">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Target System</label>
+                            <div class="slds-form-element__control">
+                                <input type="text" id="text-input-id-1" class="slds-input" placeholder="" value="https://demo-ocapi.demandware.net/s/-/dw/meta/v1/rest/data/v17_8"  style="width:395px" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <footer class="slds-popover__footer">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <span class="slds-text-title"></span>
+                            <button class="slds-button slds-button_brand slds-col_bump-left">Authorize</button>
+                        </div>
+                    </footer>
+                </section>
             </div>
         </div>
 
