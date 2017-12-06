@@ -221,7 +221,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action">
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Provide description of action" id="rtf_button_link">
                         <svg class="slds-button__icon" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#link"></use>
                         </svg>
@@ -244,4 +244,46 @@
             <div aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
         </div>
     </div>
+</div>
+
+
+<div class="slds-hide rtf-link" style="height: 640px;">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add Link</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-grid">
+                    <div>
+                        <div class="demo-only" style="width: 320px;">
+                            <nav class="slds-nav-vertical" aria-label="Sub page">
+                                <div class="slds-nav-vertical__section">
+                                    <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Reports</h2>
+                                    <ul>
+                                        <li class="slds-nav-vertical__item slds-is-active"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header" aria-current="page">Recent</a></li>
+                                        <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Web Link</a></li>
+                                        <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Products/Catalogs</a></li>
+                                        <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Pages</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral">Cancel</button>
+                <button class="slds-button slds-button_brand">Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
 </div>
