@@ -328,16 +328,11 @@
   "icon": "insights",
   "target": "data.html",
   "count": "12"
-// }, {
-//   "title": "Page Meta Tags",
-//   "icon": "custom",
-//   "target": "meta.html",
-//   "count": "4"
-// }, {
-//   "title": "Experience Editor",
-//   "icon": "cms",
-//   "target": "data.html",
-//   "count": "9"
+}, {
+  "title": "Meta Tag Definitions",
+  "icon": "entity",
+  "target": "meta.html",
+  "count": "2"
 }],
 
 // Content for Edit Modal
