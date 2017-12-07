@@ -15,28 +15,52 @@
   Page content (gets injected into the template)
 -->
 {% block content %}
-<div class="slds-grid slds-grid_vertical slds-brand-band slds-brand-band_medium slds-template_default slds-template_bottom-magnet">
-  <div class="slds-card slds-has-bottom-magnet">
-    {% include "_page-header.html" %}
-  </div>
 
-<div class="slds-card slds-has-top-magnet slds-grid">
-  <div class="slds-grow slds-grid slds-scrollable_y">
-    <div class="slds-border--right" id="datatable">
-      <div class="slds-scrollable_y">
-        {% include "_table-data.html" %}
-      </div>
+{% include "_page-header.html" %}
+
+<div class="slds-has-top-magnet slds-grid slds-grow" style="overflow-x: hidden;">
+  <div class="slds-grow slds-grid layout-table-fix">
+    <div class="slds-scrollable_y" id="grid-content">
+      {% include "_table-meta.html" %}
     </div>
-    <div id="filtersection" class="slds-hide">
-      <div class="slds-scrollable_y">
+    <div id="filtersection" class="slds-border--left">
+      <div class="slds-scrollable_y" id="filters">
         {% include "_filter.html" %}
       </div>
     </div>
   </div>
 </div>
 
-{% include "_modal-edit.html" %}
-{% include "_modal-duplicate.html" %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.filter-trigger').click(function() {
+      $('#grid-content, #filters, #filtersection').toggleClass('filter-visible');
+      $('#filter-trigger').toggleClass('is-active');
+      // $('#filtersection').toggleClass('slds-hide');
+    });
+
+    $('.trigger-657').click(function() {
+      $('#select-product-232').toggleClass('slds-hide');
+    });
+
+     $('#help-trigger').click(function() {
+          $('#id-help').toggleClass('slds-hide');
+          new Tether({
+              element: '#id-help',
+              target: '#help-trigger',
+              attachment: 'top right',
+              targetAttachment: 'bottom right',
+              targetOffset: '8px 10px',
+              constraints: [{
+                  to: 'window',
+                  attachment: 'target',
+                  pin: true
+              }]
+          });
+      });
+});
+</script>
+
 {% include "_popover-filter.html" %}
 {% include "_toast-created.html" %}
 {% include "_toast-assigned.html" %}

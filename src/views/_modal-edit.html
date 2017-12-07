@@ -1,5 +1,5 @@
 <!-- Start Edit Entry -->
-<div class="slds-hide slds-modal--medium" id="edit-table-entry">
+<div class="slds-hide2 slds-modal--medium" id="edit-table-entry">
 <section role="dialog" tabindex="-1" class="slds-modal slds-modal--large slds-fade-in-open" aria-labelledby="header43" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
       <header class="slds-modal__header">
@@ -58,7 +58,14 @@
             <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
             <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
-                <div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
+
+                <div class="slds-rich-text-editor__textarea slds-grid">
+                    <div id="content-area" aria-label="Compose text" contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
+                </div>
+
+<div id="rte-error-01" class="slds-form-element__help slds-p-around_small slds-hide">This rule is invalid.</div>
+
+<div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none slds-rich-text-editor__toolbar_bottom">
                     <div class="slds-form-element slds-m-right_large">
                         <!-- <label class="slds-form-element__label slds-float_left editor-label" for="select-01">Locale</label> -->
                         <div class="slds-form-element__control slds-float_left">
@@ -93,11 +100,6 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="slds-rich-text-editor__textarea slds-grid">
-                    <div id="content-area" aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
-                </div>
-
-<div id="rte-error-01" class="slds-form-element__help slds-p-around_small slds-hide">This rule is invalid.</div>
             </div>
         </div>
     </div>
