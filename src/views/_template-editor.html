@@ -211,28 +211,42 @@
       </li>
     </ul>
   </nav>
-  <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click">
+     <div class="2slds-context-bar__item slds-grid slds-grid_vertical-align-center slds-p-right--small" style="margin-top:-5px" id="badge-offline">
+         <div class="slds-col">
+             <span class="slds-badge slds-badge_inverse slds-m-top--small">Page is offline</span>
+         </div>
+     </div>
+     <div class="slds-grid slds-grid_vertical-align-center slds-p-right--small slds-hide" style="margin-top:-5px" id="badge-online">
+         <div class="slds-col">
+             <span class="slds-badge slds-badge_inverse slds-m-top--small" style="background:#a61a14">Page is online</span>
+         </div>
+     </div>
+
+     {#
+     slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click
+     #}
+<div class="slds-context-bar__item">
     <ul class="slds-grid">
-      <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-hide" id="trigger-back-to-edit">
+        <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-hide" id="trigger-back-to-edit">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Back to Edit">
           <span class="slds-truncate" title="Tools">Back to Edit</span>
         </a>
-      </li>
-      <li class="slds-context-bar__item slds-context-bar__item_divider-right" id="trigger-preview">
+        </li>
+        <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-context-bar__item_divider-left" id="trigger-preview">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Preview">
           <span class="slds-truncate" title="Tools">Preview</span>
         </a>
-      </li>
-      <li class="slds-context-bar__item" id="trigger-publish">
+        </li>
+        <li class="slds-context-bar__item" id="trigger-publish">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Online">
           <span class="slds-truncate" title="Tools">Set Online</span>
         </a>
-      </li>
-      <li class="slds-context-bar__item slds-button_destructive slds-hide" id="trigger-published">
+        </li>
+        <li class="slds-context-bar__item slds-hide  slds-context-bar__item_divider-left" id="trigger-published">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Offline">
           <span class="slds-truncate" title="Tools">Set Offline</span>
         </a>
-      </li>
+        </li>
     </ul>
 
   </div>
