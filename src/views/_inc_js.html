@@ -1,4 +1,6 @@
 //DUMMY PAGE FUNCTIONALITY
+var allcomponents = 0;
+
 var activeComponent = undefined;
 var activePickerbase = undefined;
 
@@ -190,7 +192,7 @@ $('button.close-toast-2').click(function () {
 
 //BACK TO LIST
 $('#back-to-list').click(function () {
-    location.href = 'page-list.html';
+    location.href = 'index.html';
 });
 
 
@@ -354,8 +356,6 @@ $('.add-text-dummy').click(function(){
     activeComponent = undefined;
     activeComponent = $(component_text).attr('class');
     $('.text-component-editor').toggleClass('slds-hide');
-
-
     return false;
 });
 $('.text-component button.js-trigger-edit-component').click(function(){
@@ -375,6 +375,15 @@ $('.text-component-editor button.trigger-save-modal').click(function(){
     $('.'+activeComponent +' .header-holder').html(selected_header);
 
     $('.text-component-editor').toggleClass('slds-hide');
+
+    allcomponents += 1;
+
+    if(allcomponents == 3){
+        //alert("too many!")
+        $('#region-alert').toggleClass('slds-hide');
+    }
+
+
     return false;
 });
 
@@ -822,6 +831,13 @@ $('.add-sub-video-dummy').click(function(){
 });
 
 
+//MINI CART COMPONENT
+$('.toggle-minicart').click(function(){
+    $('#mini-cart').toggleClass('slds-hide');
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    return false;
+});
+
 //DELETE COMPONENT
 $('button.js-trigger-delete-component').click(function(){
     //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
@@ -950,6 +966,7 @@ $('.trigger-close-modal').click(function(){
 
 
  //HOVER LI ITEM
+/*
  $('.list>li').hover(function() {
      var myClass = $(this).attr('class');
      $('.' + myClass).css({
@@ -957,7 +974,7 @@ $('.trigger-close-modal').click(function(){
          color : 'red'
      });
  });
-
+*/
 
 //FILTER PRODUCT TABLE
 
@@ -1154,4 +1171,6 @@ $('#rtf_button_link').click(function(){
     $('#link-menu').toggleClass('slds-is-open');
 });
 
-
+$('#close-alert-region').click(function(){
+    $('#region-alert').toggleClass('slds-hide');
+});

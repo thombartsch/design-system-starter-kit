@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="editor">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>.: Shoppable :.</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+    </head>
+    <body>
+
+
+<style>
+</style>
+
+
+
+
+
+
+        <div>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal Header</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div id="clickmap">
+                            <div class="hotspot 2slds-hide">
+                                <div class="button-wrap">
+                                    <button class="pulse-button">+</button>
+                                    <section class="slds-popover slds-nubbin_top slds-hide" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-4" style="left:-175px; top: 130px;">
+                                        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                                            </svg>
+                                            <span class="slds-assistive-text">Close dialog</span>
+                                        </button>
+                                        <div class="slds-popover__body" id="dialog-body-id-4">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                        <footer class="slds-popover__footer">
+                                            <button class="slds-button slds-button_neutral">Remove Hotspot</button>
+                                        </footer>
+                                    </section>
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <button class="slds-button slds-button_brand" id="button-add-hotspot">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                                    </svg>Add Hotspot
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral">Cancel</button>
+                        <button class="slds-button slds-button_brand">Save</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- JAVASCRIPT -->
+        <script src = '/scripts/jquery-3.2.1.min.js'></script>
+        <script src = '/scripts/jquery-ui.min.js'> </script>
+        <!-- /JAVASCRIPT -->
+
+
+
+    </body>
+
+
+    <script>
+        var cloneCountA = 0;
+        /*
+        $('#clickmap').click(function (e) { //Offset mouse Position
+            event.stopPropagation();
+            var posX = $(this).offset().left,
+                posY = $(this).offset().top;
+            //alert((e.pageX - posX) + ' , ' + (e.pageY - posY));
+
+
+            var hotspot = $('.hotspot').clone(true,true).addClass('hotspot'+ cloneCountA++).css({top:(e.pageY - posY), left:(e.pageX - posX), position:'absolute'});
+            $('.hotspot'+cloneCountA).toggleClass('slds-hide');
+            hotspot.appendTo('#clickmap').hide().fadeIn(600);
+
+        });
+        */
+        $('#button-add-hotspot').click(function(){
+            var hotspot = $('.hotspot').clone(true,true).addClass('hotspot'+ cloneCountA++);
+            hotspot.appendTo('#clickmap').hide().fadeIn(600);
+            return false;
+        });
+        /*
+        $('.pulse-button').click(function(){
+            event.stopPropagation();
+            $(this).next('.slds-popover').toggleClass('slds-hide');
+        });
+        */
+
+        $('.hotspot').draggable();
+
+    </script>
+
+
+
+</html>

@@ -11,8 +11,22 @@
         </div>
 
 
-    <ul id="navigator" class="list slds-has-dividers_bottom-space">
+    <ul id="navigator-holder" class="list slds-has-dividers_bottom-space slds-tree">
+        <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch" class="slds-p-left--small">
+            <div class="slds-tree__item slds-p-left_none">
+                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                    </svg>
+                    <span class="slds-assistive-text">Expand Tree Branch</span>
+                </button>
+                <span class="slds-truncate" title="Tree Branch">Region</span>
+            </div>
+            <ul role="group" id="navigator">
 
+
+            </ul>
+        </li>
     </ul>
 
 
