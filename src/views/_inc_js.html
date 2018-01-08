@@ -741,13 +741,12 @@ $('.media-component-editor button.trigger-save-modal').click(function(){
 
 //2COL COMPONENT
 $('.add-2col-dummy').click(function(){
-    var component_text = $('#dummy_container>ul.my_2col_dummy>li').clone(true).addClass('item'+ cloneCountA++);
-    var navigator_text = $('#dummy_container .my_2col_navigator li').clone(true,true).addClass('item'+ cloneCountB++);
+    var clonenumber = cloneCountA++;
+    //alert(clonenumber);
 
+    var component_text = $('#dummy_container>ul.my_2col_dummy>li').clone(true).addClass('item'+clonenumber).attr('id',clonenumber);
+    var navigator_text = $('#dummy_container .my_2col_navigator li').clone(true,true).addClass('item'+clonenumber).attr('id','navigatoritem'+clonenumber);
 
-    //navigator_text.('.title').text('navigator'+cloneCountB);
-
-    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
     $('.region_component_selector').toggleClass('slds-hide');
 
     component_text.appendTo('#region').hide().fadeIn(600);
@@ -764,14 +763,14 @@ $('.add-sub-text-dummy').click(function(){
     var component_text = $('#dummy_container .my_text_dummy li').clone(true,true).addClass('item'+ cloneCountA++);
     var navigator_text = $('#dummy_container .my_text_navigator li').clone(true,true).addClass('item'+ cloneCountB++);
 
-    //$(this).closest('.sub').append(component_text);
-    //$(this).closest('.sub').css('background-color', 'yellow');
-    //component_text.appendTo('.sub').hide().fadeIn(600);
-
-    //$(this).closest('.sub-container').find('.sub').css('background', 'red');
     var subgoal = $(this).closest('.sub-container').find('.sub')
     component_text.appendTo(subgoal).hide().fadeIn(600);
 
+    var mosa = $(this).closest('#region>li').attr('id');
+    var subnavigator = 'li#navigatoritem'+mosa;
+
+
+    //$(this).parent('li').css( "background-color", "red" );
     $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
 
@@ -781,14 +780,20 @@ $('.add-sub-text-dummy').click(function(){
     $('.text-component-editor').toggleClass('slds-hide');
 
 
+    navigator_text.appendTo(subnavigator).hide().fadeIn(600);
+
+
     return false;
 });
 //SUB IMAGE COMPONENT
 $('.add-sub-image-dummy').click(function(){
     var component_text = $('#dummy_container .my_image_dummy li').clone(true,true).addClass('item'+ cloneCountA++);
     var navigator_text = $('#dummy_container .my_image_navigator li').clone(true,true).addClass('item'+ cloneCountB++);
+    //navigator_text.appendTo(subgoal).hide().fadeIn(600);
+
     var subgoal = $(this).closest('.sub-container').find('.sub')
     component_text.appendTo(subgoal).hide().fadeIn(600);
+
 
     $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
 
