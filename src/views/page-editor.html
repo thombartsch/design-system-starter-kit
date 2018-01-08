@@ -32,13 +32,16 @@ Page content (gets injected into the template)
             {% include "_inc_header-editor.html" ignore missing %}
             <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
-                <ul id="region" class="list slds-has-dividers_bottom-space">
-
-                </ul>
+                <ul id="region" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
                 {% include "_inc_dropdown_components.html" ignore missing %}
             </div>
-
+            <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+                <!-- REGION-->
+                <ul id="regionB" class="list slds-has-dividers_bottom-space"></ul>
+                <!-- /REGION-->
+                {% include "_inc_dropdown_componentsb.html" ignore missing %}
+            </div>
 
         </div>
     </div>
@@ -91,12 +94,160 @@ Page content (gets injected into the template)
 {% include "_inc_modal_36_editor.html" ignore missing %}
 
 {% include "_inc_modal_37_editor.html" ignore missing %}
+{% include "_inc_modal_38_editor.html" ignore missing %}
 
 {% include "_inc_modal_media-picker.html" ignore missing %}
 
 {% include "products.html" ignore missing %}
 
 </div>
+
+
+{# ADD STYLE FOR LIMITING DISPLAY OF COMPONENTS IN REGION 1 #}
+
+
+<style>
+    #region li{
+        display:none !important;
+    }
+    #region li:nth-child(1) {
+        display:block !important;
+    }
+    #region li:nth-child(2) {
+        display:block !important;
+    }
+    .hasrules{
+        a::before {content: "•"; color: red;
+            display: inline-block; width: 1em;
+            margin-left: -1em}
+
+    }
+    .shopableback{
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height:20rem;
+    }
+    .clickspot{
+        background: white;
+        width: 20px;
+        border-radius: 100%;
+        text-align: center;
+        height: 20px;
+        padding-top: 20px;
+        border: 10px;
+        border-color: rgba(255,255,255,0.5);
+    }
+
+    .clickspot .mini-menu button{
+        padding: 0.3rem;
+        border: 1px solid #fff;
+        margin: 3px;
+        border-radius: 5px;
+
+    }
+    .clickspot .mini-menu{
+        border-radius: 8px;
+
+    }
+
+
+    div.ring {
+        display: block;
+        /*float: left;*/
+        position: absolute;
+        border-radius: 40px;
+        padding: 40px;
+        transform: scale(.25);
+        -ms-transform: scale(.25);
+        /* IE 9 */
+        -webkit-transform: scale(.25);
+        /* Safari and Chrome */
+        -o-transform: scale(.25);
+        /* Opera */
+        -moz-transform: scale(.25);
+        /* Firefox */
+        -webkit-transform-origin: center;
+        animation-iteration-count: infinite;
+        /* W3C and Opera */
+        -moz-animation-iteration-count: infinite;
+        /* Firefox */
+        -webkit-animation-iteration-count: infinite;
+        /*Safari and Chrome*/
+        -webkit-transform-origin: center;
+    }
+    .ping {
+        top: -33px;
+        left: -33px;
+        border: solid #FFF 3px;
+        -moz-animation-duration: 3s;
+        -webkit-animation-duration: 3s;
+        -moz-animation-name: ping;
+        -webkit-animation-name: ping;
+    }
+    .small-ping {
+        top: -42px;
+        left: -42px;
+        border: double #77d2ff 10px;
+        -moz-animation-duration: .75s;
+        -webkit-animation-duration: .75s;
+        -moz-animation-name: smallping;
+        -webkit-animation-name: smallping;
+    }
+    @-webkit-keyframes ping {
+        from {
+            transform: scale(.25);
+            -ms-transform: scale(.25);
+            /* IE 9 */
+            -webkit-transform: scale(.25);
+            /* Safari and Chrome */
+            -o-transform: scale(.25);
+            /* Opera */
+            -moz-transform: scale(.25);
+            /* Firefox */
+            opacity: 1;
+        }
+        to {
+            transform: scale(1);
+            -ms-transform: scale(1);
+            /* IE 9 */
+            -webkit-transform: scale(1);
+            /* Safari and Chrome */
+            -o-transform: scale(1);
+            /* Opera */
+            -moz-transform: scale(1);
+            /* Firefox */
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes smallping {
+        from {
+            transform: scale(.1);
+            -ms-transform: scale(.1);
+            /* IE 9 */
+            -webkit-transform: scale(.1);
+            /* Safari and Chrome */
+            -o-transform: scale(.1);
+            /* Opera */
+            -moz-transform: scale(.1);
+            /* Firefox */
+            opacity: 1;
+        }
+        to {
+            color: white;
+            transform: scale(.55);
+            -ms-transform: scale(.55);
+            /* IE 9 */
+            -webkit-transform: scale(.55);
+            /* Safari and Chrome */
+            -o-transform: scale(.55);
+            /* Opera */
+            -moz-transform: scale(.55);
+            /* Firefox */
+            opacity: 0;
+        }
+    }
+
+</style>
 
 
 
