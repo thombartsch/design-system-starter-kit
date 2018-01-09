@@ -540,9 +540,40 @@ background: red;
 
 //LI ITEMS NAVIGATOR
 
-#navigator li{
-background: #fff;
+#region li{
+    background: #fff;
+    display: none !important;
 }
+
+
+#region li:nth-child(1) {
+    display:block !important;
+}
+#region li:nth-child(2) {
+    display:block !important;
+}
+
+#region li li{
+    display: block !important;
+}
+
+
+#navigator li{
+    opacity: 0.5;
+}
+
+
+#navigator li:nth-child(1) {
+    opacity: 1;
+}
+#navigator li:nth-child(2) {
+    opacity: 1;
+}
+
+
+
+
+
 
 //SORTABLE UI
 /*
@@ -603,4 +634,150 @@ background: rgba(0,0,0,1);
 /* HIDE PAGE LIST */
 #page_list{
     display: none;
+}
+
+
+
+//ADD ONS FOR POST MVP
+.hasrules{
+    a::before {content: "•"; color: red;
+        display: inline-block; width: 1em;
+        margin-left: -1em}
+
+}
+.shopableback,
+.image-back{
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height:20rem;
+}
+.clickspot{
+    background: #ff7a7a;
+    width: 20px;
+    border-radius: 100%;
+    text-align: center;
+    height: 20px;
+    padding-top: 20px;
+}
+
+.clickspot .mini-menu button{
+    padding: 0.3rem;
+    border: 1px solid #ff7a7a;
+    margin: 3px;
+    border-radius: 5px;
+
+}
+.clickspot .mini-menu{
+    border-radius: 8px;
+
+}
+
+
+div.ring {
+    display: block;
+    /*float: left;*/
+    position: absolute;
+    border-radius: 40px;
+    padding: 40px;
+    transform: scale(.25);
+    -ms-transform: scale(.25);
+    /* IE 9 */
+    -webkit-transform: scale(.25);
+    /* Safari and Chrome */
+    -o-transform: scale(.25);
+    /* Opera */
+    -moz-transform: scale(.25);
+    /* Firefox */
+    -webkit-transform-origin: center;
+    animation-iteration-count: infinite;
+    /* W3C and Opera */
+    -moz-animation-iteration-count: infinite;
+    /* Firefox */
+    -webkit-animation-iteration-count: infinite;
+    /*Safari and Chrome*/
+    -webkit-transform-origin: center;
+}
+.ping {
+    top: -33px;
+    left: -33px;
+    border: solid #ff7a7a 3px;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: ping;
+    -webkit-animation-name: ping;
+}
+.small-ping {
+    top: -42px;
+    left: -42px;
+    border: double #77d2ff 10px;
+    -moz-animation-duration: .75s;
+    -webkit-animation-duration: .75s;
+    -moz-animation-name: smallping;
+    -webkit-animation-name: smallping;
+}
+@-webkit-keyframes ping {
+    from {
+        transform: scale(.25);
+        -ms-transform: scale(.25);
+        /* IE 9 */
+        -webkit-transform: scale(.25);
+        /* Safari and Chrome */
+        -o-transform: scale(.25);
+        /* Opera */
+        -moz-transform: scale(.25);
+        /* Firefox */
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari and Chrome */
+        -o-transform: scale(1);
+        /* Opera */
+        -moz-transform: scale(1);
+        /* Firefox */
+        opacity: 0;
+    }
+}
+@-webkit-keyframes smallping {
+    from {
+        transform: scale(.1);
+        -ms-transform: scale(.1);
+        /* IE 9 */
+        -webkit-transform: scale(.1);
+        /* Safari and Chrome */
+        -o-transform: scale(.1);
+        /* Opera */
+        -moz-transform: scale(.1);
+        /* Firefox */
+        opacity: 1;
+    }
+    to {
+        color: white;
+        transform: scale(.55);
+        -ms-transform: scale(.55);
+        /* IE 9 */
+        -webkit-transform: scale(.55);
+        /* Safari and Chrome */
+        -o-transform: scale(.55);
+        /* Opera */
+        -moz-transform: scale(.55);
+        /* Firefox */
+        opacity: 0;
+    }
+}
+
+.product-tile{
+    width: 80%;
+    background: #ddd;
+    height: 20rem;
+    text-align: left;
+    z-index: 6000000;
+    position: absolute;
+}
+
+.placeholder-component-37{
+    height: 25rem;
 }

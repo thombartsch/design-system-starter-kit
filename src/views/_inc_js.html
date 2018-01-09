@@ -206,7 +206,7 @@ $('#back-to-list').click(function () {
 
 //SCREEN SIZES
 $('#trigger-phone').click(function () {
-    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $('#device-selecta li').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
 
     $('.page-content').css('max-width', '320px');
@@ -214,19 +214,38 @@ $('#trigger-phone').click(function () {
 
 });
 $('#trigger-tablet').click(function () {
-    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $('#device-selecta li').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
 
     $('.page-content').css('max-width', '800px');
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
 });
 $('#trigger-desktop').click(function () {
-    $('#side_device_selector ul li').removeClass('slds-is-selected');
+    $('#device-selecta li').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
 
     $('.page-content').css('max-width', '100%');
     $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
 });
+
+
+//LOCALES
+$('#trigger-us').click(function () {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+});
+$('#trigger-fr').click(function () {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+    $('#locale-warning').toggleClass('slds-hide');
+
+});
+$('#trigger-de').click(function () {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+});
+
+
 
 
 
@@ -252,6 +271,7 @@ $('#trigger-preview').click(function () {
     $('.placeholder').toggleClass('placeholder placeholder-off');
     $('#trigger-publish').toggleClass('slds-hide');
     $('#sidebar-navigator').toggleClass('slds-hide');
+    $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 $('#trigger-back-to-edit').click(function () {
     $('.slds-button--icon-more').toggleClass('slds-hide');
@@ -265,6 +285,7 @@ $('#trigger-back-to-edit').click(function () {
     $('.placeholder-off').toggleClass('placeholder-off placeholder');
     $('#trigger-publish').toggleClass('slds-hide');
     $('#sidebar-navigator').toggleClass('slds-hide');
+    $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
 
@@ -713,6 +734,8 @@ $('.product-component-editor button.trigger-save-modal').click(function(){
     $('.productpicker-component-editor div.list-empty').toggleClass('slds-hide');
     $('.productpicker-component-editor div.list-full').toggleClass('slds-hide');
 
+    $('.image-component-editor').addClass('slds-hide');
+
 
     //$('.'+activeComponent +' img.prod_img').src(selected_product_image);
     $('.'+activeComponent +' .slds-text-heading_small').html(selected_product_name);
@@ -749,7 +772,9 @@ $('.productpicker-component-editor .trigger-close-modal').click(function(){
 
 $('.productpicker-component-editor .trigger-save-modal').click(function(){
       $(this).find('.editor').toggleClass('slds-hide');
-    return false;
+      $('.modal-editor-5').addClass('slds-hide');
+      $('.image-component-editor').addClass('slds-hide');
+      return false;
 });
 
 
@@ -776,6 +801,7 @@ $('.picker .trigger-close-modal').click(function(){
 $('.picker .trigger-save-modal').click(function(){
   //$(this).closest('.picker').toggleClass('slds-hide');
   $('.'+activeComponent +' .image-holder').attr('src', selected_image);
+  $('.'+activeComponent +' .image-back').css('background-image', 'url(' + selected_image + ')');
   $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
   $('.mediaselector-component-editor .file-name').text(selected_image);
 
@@ -896,6 +922,18 @@ $('.add-shopableselector-dummy').click(function(){
 
     return false;
 });
+
+$('.placeholder-component-38 .js-trigger-edit-component').click(function(){
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.shopableselector-component-editor').toggleClass('slds-hide');
+    $('.mediaselector-component-editor').addClass('slds-hide');
+    return false;
+
+});
+
+
 
 $('.shopableselector-component-editor .image-figure').click(function(){
     //open dialog for selecting an image
@@ -1379,25 +1417,77 @@ $('.input-rules-from').blur(function()
 
 //edit rules from click on clock
 $('.rules-text-icon button').click(function(){
-    $('.help-text').toggleClass('slds-hide');
-});
-
-
-$('.rules-icon-media button').click(function(){
     /*
-    activeComponent = undefined;
-    activeComponent = $(this).closest('li').attr('class');
+    new Tether({
+        element: '.help-text',
+        target: '.rules-text-icon button',
+        attachment: 'bottom center',
+        targetAttachment: 'bottom center'
+    });
     */
-
+    $('.help-text').toggleClass('slds-hide');
+    //now attach here the popover and show it!
 });
 
 
 $( function() {
     $( ".clickspot" ).draggable();
+    //$('.clickspot').drag().drag();
 } );
 
+
+/*
+$('.clickspot').drag("init", function(ev, dd) {
+    if (this.id == "test-drag") {
+        return $(".clickspot").addClass("selected");
+    }
+}).drag(function(ev, dd) {
+    if (ev.target.id == "test-drag") {
+        $(this).css({
+            top: dd.offsetY,
+            left: dd.offsetX
+        });
+    }
+});
+*/
 
 
 $('.shopableback .js-trigger-edit-component').click(function(){
     $('.product-component-editor').toggleClass('slds-hide');
+});
+
+
+$('.placeholder .clickspot, .product-tile .close-tile').click(function(){
+    $('.product-tile').toggleClass('slds-hide');
+});
+
+
+$('.button-add-clickspot').click(function(){
+    $('.clickspot').addClass('slds-show');
+});
+
+$('.clickspot .js-trigger-delete-component').click(function(){
+  $('.shopableback .clickspot').removeClass('slds-show');
+});
+
+
+$('#locale-warning .js-trigger-close').click(function(){
+    $('#locale-warning').toggleClass('slds-hide');
+});
+
+
+//rules page
+//check rules
+$('#page-rule-from').blur(function()
+                            {
+    if( !$(this).val() ) {
+        //$(this).parents('p').addClass('warning');
+    }else{
+        $('#toast-rules').toggleClass('slds-hide');
+    }
+});
+
+
+$('#toast-rules .close-toast-2').click(function(){
+    $('#toast-rules').toggleClass('slds-hide');
 });
