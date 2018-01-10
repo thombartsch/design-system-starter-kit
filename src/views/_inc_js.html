@@ -1491,3 +1491,54 @@ $('#page-rule-from').blur(function()
 $('#toast-rules .close-toast-2').click(function(){
     $('#toast-rules').toggleClass('slds-hide');
 });
+
+
+
+
+//MINI CART COMPONENT
+//ADD MINI BASKET
+
+$('#trigger-minibasket').click(function(){
+    /*
+    $('#mini-cart').toggleClass('slds-hide');
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    */
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+$('.toggle-minicart').click(function(){
+    /*
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    */
+    $('#basket_component_selector').toggleClass('slds-hide');
+
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+$('#basket_component_selector .js-close-dropdown').click(function(){
+    $('#basket-editor').toggleClass('slds-hide');
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+
+$('#basket_component_selector .trigger-close-modal').click(function(){
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+$('#basket-editor .trigger-save-modal').click(function(){
+    $('#mini-cart').toggleClass('slds-hide');
+    $('#editor-header #region-header').toggleClass('slds-hide');
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+$('#basket-editor .trigger-close-modal, #mini-cart').click(function(){
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+

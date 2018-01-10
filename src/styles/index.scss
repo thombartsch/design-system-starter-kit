@@ -662,7 +662,7 @@ background: rgba(0,0,0,1);
 
 .clickspot .mini-menu button{
     padding: 0.3rem;
-    border: 1px solid #ff7a7a;
+    /*border: 1px solid #ff7a7a;*/
     margin: 3px;
     border-radius: 5px;
 
@@ -769,14 +769,27 @@ div.ring {
     }
 }
 
+
 .product-tile{
+    /*
     width: 80%;
     background: #ddd;
     height: 20rem;
     text-align: left;
     z-index: 6000000;
     position: absolute;
+    */
+    width: 45rem;
+    background: #ddd;
+    height: 11rem;
+    text-align: left;
+    z-index: 6000000;
+    position: absolute;
+    padding-left: 0.4rem;
+    margin-top: 4rem;
+    margin-left: 30%;
 }
+
 
 .placeholder-component-37{
     height: 25rem;

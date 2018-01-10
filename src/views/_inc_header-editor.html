@@ -1,5 +1,5 @@
 <!-- EDITOR HEADER -->
-<div class="slds-grid slds-wrap 2slds-grid_pull-padded slds-p-around--small  slds-grid_vertical-align-center">
+<div class="slds-grid slds-wrap 2slds-grid_pull-padded slds-p-around--small  slds-grid_vertical-align-center" id="editor-header">
     <div class="slds-p-horizontal_small 2slds-size_1-of-5 2slds-medium-size_1-of-6 2slds-large-size_2-of-12">
         <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
             <img src="/assets/sign-in.svg" style="height:20px;" />
@@ -20,6 +20,19 @@
                 <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Keywords, Brands etc" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
             </div>
         </div>
+    </div>
+    <div class="region" id="region-header" style="
+                               width: 6rem;
+                               text-align: center;
+                               height: 4rem;
+                               padding-top: 1rem;
+                               ">
+        <button class="slds-button slds-button_neutral slds-button--icon-more toggle-tooltip orange" aria-describedby="title" title="Add Component" id="trigger-minibasket">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+            </svg>
+            <span class="slds-assistive-text">Add Component</span>
+        </button>
     </div>
     <div class="slds-p-horizontal_small 2slds-size_1-of-5 2slds-large-size_1-of-6 slds-hide" id="mini-cart">
         <img src="/assets/shopping-bag.svg" style="height:20px; width:auto" />
