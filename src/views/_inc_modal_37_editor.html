@@ -1,5 +1,5 @@
 <!-- EDITOR -->
-<div class="modal-editor-37 editor 2slds-hide mediaselector-component-editor">
+<div class="modal-editor-37 editor slds-hide mediaselector-component-editor">
     <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-37" class="slds-modal slds-modal_large slds-fade-in-open">
         <div class="slds-modal__container">
             <header class="slds-modal__header">
@@ -29,7 +29,7 @@
                                   <li class="slds-p-bottom_small">
                                     <div class="slds-form-element">
                                     <label class="slds-form-element__label" for="text-input-id-1">Media</label>
-                                    <div style="width: 20rem;">
+                                    <div style="2width: 20rem;" class="slds-size_large">
                                       <div class="slds-file slds-file_card">
                                         <figure>
                                           <a href="javascript:void(0);" class="slds-file__crop image-figure">
@@ -37,22 +37,27 @@
                                           </a>
                                           <figcaption class="slds-file__title slds-file__title_card">
                                             <div class="slds-media slds-media_small slds-media_center">
-                                              <div class="slds-media__figure slds-line-height_reset">
-                                                <span class="slds-icon_container" title="pdf">
-                                                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image" />
-                                                  </svg>
-                                                  <span class="slds-assistive-text">pdf</span>
-                                                </span>
-                                              </div>
                                               <div class="slds-media__body">
+                                                {#
                                                 <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
+                                                #}
+                                                <input type="text" class="slds-input slds-size--medium file-name" value="" placeholder="">
+                                              </div>
+                                                <div class="slds-media__figure slds-p-left--large">
+                                                  <div class="slds-text-align_center">
+                                                          <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
+                                                              <svg class="slds-button__icon" aria-hidden="true">
+                                                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                                                              </svg>
+                                                              <span class="slds-assistive-text">Insert Image</span>
+                                                          </button>
+                                                  </div>
                                               </div>
                                             </div>
                                           </figcaption>
                                         </figure>
 
-                                          <div class="slds-file__actions-menu">
+                                          <div class="slds-hide slds-file__actions-menu">
                                               <div class="2slds-button-group" role="group">
                                                   <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
                                                       <svg class="slds-button__icon" aria-hidden="true">
@@ -60,7 +65,7 @@
                                                       </svg>
                                                       <span class="slds-assistive-text">Insert Image</span>
                                                   </button>
-                                                  <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small edit-image-link" aria-haspopup="true" title="Link to external image">
+                                                  <button class="slds-hide slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small edit-image-link" aria-haspopup="true" title="Link to external image">
                                                       <svg class="slds-button__icon" aria-hidden="true">
                                                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#link" />
                                                       </svg>

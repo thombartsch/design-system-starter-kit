@@ -693,7 +693,8 @@ $('.picker .trigger-save-modal').click(function(){
   //$(this).closest('.picker').toggleClass('slds-hide');
   $('.'+activeComponent +' .image-holder').attr('src', selected_image);
   $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
-  $('.mediaselector-component-editor .file-name').text(selected_image);
+    $('.mediaselector-component-editor .file-name').val(selected_image);
+    //$('.mediaselector-component-editor .file-name').text(selected_image);
 
   $('.media-picker').addClass('slds-hide');
 
@@ -1197,3 +1198,7 @@ $('#rtf_button_link').click(function(){
 });
 
 
+//MEDIA PICKER URL EDITOR
+$('.media-url-editor .trigger-close-modal, .media-url-editor .trigger-save-modal').click(function(){
+    $('.media-url-editor').toggleClass('slds-hide');
+});
