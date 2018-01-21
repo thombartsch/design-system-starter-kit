@@ -735,10 +735,18 @@ $('.add-mediaselector-dummy').click(function(){
     return false;
 });
 
- $('.mediaselector-component-editor .image-figure').click(function(){
+$('.mediaselector-component-editor .image-figure, .mediaselector-component-editor .add-image').click(function(){
     //open dialog for selecting an image
     $('.media-picker').toggleClass('slds-hide');
 });
+
+
+$('.mediaselector-component-editor .edit-image-link').click(function(){
+    //open dialog editing/adding image url
+    $('.media-url-editor').toggleClass('slds-hide');
+});
+
+
 
 $('.media-component button.js-trigger-edit-component').click(function(){
     //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
