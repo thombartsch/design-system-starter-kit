@@ -794,3 +794,23 @@ div.ring {
 .placeholder-component-37{
     height: 25rem;
 }
+
+
+/*HOTSPOT*/
+.hotspot {
+    text-align: center;
+}
+.marker{
+    background:#fff;
+    border-radius:100%;
+    /*position: absolute;*/
+    width: 1.5rem;
+    margin:auto;
+
+}
+.hotspot button{
+    opacity: 0.3;
+}
+.hotspot button:hover{
+    opacity: 1.0;
+}

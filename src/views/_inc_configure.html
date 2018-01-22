@@ -1,0 +1,191 @@
+<div class="slds-grid">
+    <div class="2slds-border_right slds-p-right_small image-settings" style="min-width:200px;">
+
+        <div class="slds-border_bottom slds-p-bottom_small 2slds-p-top_small slds-margin-bottom_medium">
+            <h4 class="slds-text-title_caps slds-p-bottom_small" id="treeheading">Image Settings</h4>
+            <div class="slds-col">
+
+                <div class="slds-button-group" role="group">
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop" />
+                        </svg>
+                        <span class="slds-assistive-text">Provide description of action</span>
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_portrait" />
+                        </svg>
+                        <span class="slds-assistive-text">Provide description of action</span>
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape" />
+                        </svg>
+                        <span class="slds-assistive-text">Provide description of action</span>
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait" />
+                        </svg>
+                        <span class="slds-assistive-text">Provide description of action</span>
+                    </button>
+                </div>
+            </div>
+            <div class="slds-col">
+                <span class="slds-text--italic slds-color_weak">Visible for all Devices</span>
+            </div>
+        </div>
+
+
+        <div class="slds-border_bottom slds-p-bottom_small slds-p-top_small slds-margin-bottom_medium">
+            <h4 class="slds-text-title_caps slds-p-bottom_small" id="treeheading">Size & Dimensions</h4>
+            <div class="slds-col">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-1">Width</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-1" class="slds-input slds-size_xx-small" placeholder="Auto" /> PX
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-1">Height</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-1" class="slds-input slds-size_xx-small" placeholder="Auto" /> PX
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-border_bottom slds-p-bottom_small slds-p-top_small slds-margin-bottom_medium">
+            <h4 class="slds-text-title_caps slds-p-bottom_small" id="treeheading">Image Resizing</h4>
+            <div class="slds-col">
+                <div class="slds-button-group" role="group">
+                    <button class="slds-button slds-button_neutral slds-button_success">Auto</button>
+                    <button class="slds-button slds-button_neutral">Stretch</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="slds-p-left--small slds-p-right--small slds-grid slds-col  slds-grid_vertical">
+
+        <div class="slds-form-element slds-col image-save slds-hide">
+            <label class="slds-form-element__label" for="text-input-id-1">Image Name</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-1" class="slds-input" placeholder="Image Name" />
+            </div>
+        </div>
+
+        <div class="slds-col">
+            <div style="z-index:100000; position:absolute" class="hotspot slds-grid slds-grid_vertical slds-align_absolute-center slds-hide">
+                    <div class="slds-button-group slds-col" role="group">
+                        <button class="slds-button slds-button_icon slds-button_icon-border-filled moveit" title="" aria-pressed="false">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move" />
+                            </svg>
+                            <span class="slds-assistive-text">Move</span>
+                        </button>
+                        <button class="slds-button slds-button_icon slds-button_icon-border-filled link" title="" aria-pressed="false">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#link" />
+                            </svg>
+                            <span class="slds-assistive-text">Edit Linked Content</span>
+                        </button>
+                        <button class="slds-button slds-button_icon slds-button_icon-border-filled remove-hotspot" title="" aria-pressed="false">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete" />
+                            </svg>
+                            <span class="slds-assistive-text">Remove Hotspot</span>
+                        </button>
+                    </div>
+                    <div class="marker slds-col">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                        </svg>
+                    </div>
+                    <div class="slds-col slds-tex-align_center hotspot-selection slds-hide">
+                        <section class="slds-popover slds-nubbin_top slds-popover_small link-types" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-6">
+                            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                                </svg>
+                                <span class="slds-assistive-text">Close dialog</span>
+                            </button>
+                            <header class="slds-popover__header">
+                                <h2 id="dialog-heading-id-7" class="slds-text-heading_small">Choose linked content</h2>
+                            </header>
+                            <div class="slds-popover__body" id="dialog-body-id-6">
+                                <ul class="slds-has-dividers_bottom slds-has-block-links_space">
+                                    <li class="slds-item"><a href="javascript:void(0);">Products</a></li>
+                                    <li class="slds-item"><a href="javascript:void(0);">Categories</a></li>
+                                    <li class="slds-item"><a href="javascript:void(0);">Static Pages</a></li>
+                                    <li class="slds-item"><a href="javascript:void(0);">External Links</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="slds-popover slds-nubbin_top slds-popover_small slds-hide hotspot-product" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-6">
+                            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                                </svg>
+                                <span class="slds-assistive-text">Close dialog</span>
+                            </button>
+                            <header class="slds-popover__header">
+                                <h2 id="dialog-heading-id-7" class="slds-text-heading_small">Product Name</h2>
+                            </header>
+                            <div class="slds-popover__body" id="dialog-body-id-6">
+                                <p><img class="prod_img" src="/assets/product_image_1.jpg" style="height:80px; width: auto;"></p>
+                                <p>Brand</p>
+                                <p>12.99</p>
+                                <p>
+                                    <button class="slds-button slds-button_neutral">More Details...</button>
+                                    <button class="slds-button slds-button_neutral">Add to Basket...</button>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+            <div class="slds-file slds-file_card">
+                    <figure>
+                        <img src="/assets/slide1.jpg" alt="" class="myimage" />
+                      <figcaption class="slds-file__title slds-file__title_card">
+                        <div class="slds-media slds-media_small slds-media_center">
+                          <div class="slds-media__figure slds-line-height_reset">
+                            <span class="slds-icon_container" title="pdf">
+                              <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image" />
+                              </svg>
+                              <span class="slds-assistive-text">jpg</span>
+                            </span>
+                          </div>
+                          <div class="slds-media__body">
+                            <span class="slds-file__text slds-truncate" title="slide1.jpgf">slide1.jpg</span>
+                          </div>
+                        </div>
+                      </figcaption>
+                    </figure>
+                <div class="slds-file__actions-menu">
+                    <div class="slds-button-group" role="group">
+                        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small add-hotspot" title="Download">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                            </svg>
+                            <span class="slds-assistive-text">Add</span>
+                        </button>
+                    </div>
+                </div>
+                  </div>
+
+              </div>
+
+        <!-- /IMAGES -->
+    </div>
+
+</div>
