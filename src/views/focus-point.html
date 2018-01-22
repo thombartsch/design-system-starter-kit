@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="editor">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>.: Page Editor :.</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+
+        {#
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>FocusPoint Helper Tool</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!-- REQUIRED STYLES -->
+        <link rel="stylesheet" type="text/css" href="/assets/focuspoint.css">
+
+        <!-- DEMO STYLES -->
+        <link rel="stylesheet" type="text/css" href="../demo.css">
+        <link rel="stylesheet" type="text/css" href="../grid/grid.css">
+        <link rel="stylesheet" type="text/css" href="helper-tool.css">
+        #}
+
+        <!-- REQUIRED SCRIPTS -->
+        <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="/scripts/jquery.focuspoint.js"></script>
+
+        <!-- DEMO SCRIPTS -->
+        <script type="text/javascript" src="/scripts/jquery.focuspoint.helpertool.js"></script>
+
+    </head>
+    <body>
+
+        <div id="Frames">
+        </div>
+
+        <div id="Info">
+            <div class="helper-tool">
+                <h1 class="slds-text-heading--medium slds-m-bottom--x-small">Configure resizing of image
+                    <div style="float:right;">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__icon slds-align-middle">
+                                <button class="slds-button slds-button_icon slds-button slds-button_icon" aria-describedby="button-help" id="helper-button" title="Help">
+                                    <svg class="slds-button__icon" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info" />
+                                    </svg>
+                                    <span class="slds-assistive-text">Help</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left slds-hide button-help" role="tooltip" id="button-help" style="position: absolute; top: 0px; left: 15px;">
+                            <div class="slds-popover__body">Click the image below to set the FocusPoint. Review the adjustments in the image tiles.</div>
+                        </div>
+                    </div>
+                </h1>
+                <!-- <img class="focus-target-reticle" src='../img/focuspoint-target.png' /> -->
+                <div class="helper-tool-target">
+                    <img class="helper-tool-img">
+                    <img class="reticle" src="/assets/focuspoint-target.png">
+                    <img class="target-overlay">
+                </div>
+                <p class="slds-hide">
+                    <label for="set-src">Paste in a URL to change the image</label>
+                    <input name="set-src" id="set-src" class='helper-tool-set-src' type='text'>
+                </p>
+                <p class="slds-hide">
+                    <label for="data-attr">FocusPoint data- attributes:</label>
+                    <input class='helper-tool-data-attr' id="data-attr" name="data-attr" type='text' placeholder='data-focus-x="0" data-focus-y="0" '>
+                </p>
+                <p class="slds-hide">
+                    <label for="css3-val">CSS3 Background Position:</label>
+                    <input class='helper-tool-css3-val' id="css3-val" name="css3-val" type='text' placeholder='background-position:'>
+                </p>
+            </div><!-- End Helper Tool -->
+        </div>
+
+    </body>
+</html>

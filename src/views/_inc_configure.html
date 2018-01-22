@@ -1,7 +1,7 @@
 <div class="slds-grid">
-    <div class="2slds-border_right slds-p-right_small image-settings" style="min-width:200px;">
+    <div class="slds-p-right_small image-settings" style="min-width:200px;">
 
-        <div class="slds-border_bottom slds-p-bottom_small 2slds-p-top_small slds-margin-bottom_medium">
+        <div class="slds-hide slds-border_bottom slds-p-bottom_small 2slds-p-top_small slds-margin-bottom_medium">
             <h4 class="slds-text-title_caps slds-p-bottom_small" id="treeheading">Image Settings</h4>
             <div class="slds-col">
 
@@ -69,13 +69,9 @@
 
 
     </div>
-
-
-
-
     <div class="slds-p-left--small slds-p-right--small slds-grid slds-col  slds-grid_vertical">
 
-        <div class="slds-form-element slds-col image-save slds-hide">
+        <div class="slds-form-element slds-col image-save slds-hide slds-m-bottom_small">
             <label class="slds-form-element__label" for="text-input-id-1">Image Name</label>
             <div class="slds-form-element__control">
                 <input type="text" id="text-input-id-1" class="slds-input" placeholder="Image Name" />
@@ -109,7 +105,7 @@
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
                         </svg>
                     </div>
-                    <div class="slds-col slds-tex-align_center hotspot-selection slds-hide">
+                    <div class="slds-col slds-tex-align_center hotspot-selection">
                         <section class="slds-popover slds-nubbin_top slds-popover_small link-types" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-6">
                             <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
                                 <svg class="slds-button__icon" aria-hidden="true">
@@ -152,11 +148,11 @@
                         </section>
                     </div>
             </div>
-            <div class="slds-file slds-file_card">
+            <div class="slds-hide slds-file slds-file_card">
                     <figure>
                         <img src="/assets/slide1.jpg" alt="" class="myimage" />
-                      <figcaption class="slds-file__title slds-file__title_card">
-                        <div class="slds-media slds-media_small slds-media_center">
+                      <figcaption class="slds-file__title slds-file__title_card slds-grid">
+                        <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
                           <div class="slds-media__figure slds-line-height_reset">
                             <span class="slds-icon_container" title="pdf">
                               <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
@@ -165,27 +161,66 @@
                               <span class="slds-assistive-text">jpg</span>
                             </span>
                           </div>
-                          <div class="slds-media__body">
+                          <div class="slds-media__body slds-col">
                             <span class="slds-file__text slds-truncate" title="slide1.jpgf">slide1.jpg</span>
+                          </div>
+                          <div>
+                              <div class="1slds-button-group" role="group">
+                                  <button class="slds-hide slds-button slds-button_neutral  add-hotspot">Add Hotspot</button>
+                                  <button class="slds-button slds-button_neutral  add-hotspot">Add Focuspoint</button>
+                              </div>
                           </div>
                         </div>
                       </figcaption>
                     </figure>
-                <div class="slds-file__actions-menu">
-                    <div class="slds-button-group" role="group">
-                        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small add-hotspot" title="Download">
-                            <svg class="slds-button__icon" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
-                            </svg>
-                            <span class="slds-assistive-text">Add</span>
-                        </button>
-                    </div>
-                </div>
-                  </div>
+                    <div class="slds-file__actions-menu"></div>
+
 
               </div>
+
+
+            <!-- PLUG IN CONFIG IMAGE -->
+
+            <div class="slds-file slds-file_card slds-hide">
+                <div id="Frames">
+                </div>
+
+                <div id="Info">
+                    <div class="helper-tool">
+                        <h1>Click the image to set the FocusPoint.</h1>
+                        <!-- <img class="focus-target-reticle" src='../img/focuspoint-target.png' /> -->
+                        <div class="helper-tool-target">
+                            <img class="helper-tool-img">
+                            <img class="reticle" src="/assets/slide1.jpg">
+                            <img class="target-overlay">
+                        </div>
+                        <p>
+                            <label for="set-src">Paste in a URL to change the image</label>
+                            <input name="set-src" id="set-src" class='helper-tool-set-src' type='text'>
+                        </p>
+                        <p>
+                            <label for="data-attr">FocusPoint data- attributes:</label>
+                            <input class='helper-tool-data-attr' id="data-attr" name="data-attr" type='text' placeholder='data-focus-x="0" data-focus-y="0" '>
+                        </p>
+                        <p>
+                            <label for="css3-val">CSS3 Background Position:</label>
+                            <input class='helper-tool-css3-val' id="css3-val" name="css3-val" type='text' placeholder='background-position:'>
+                        </p>
+                    </div><!-- End Helper Tool -->
+                </div>
+            </div>
+
+            <div class="slds-file_card slds-file">
+                <iframe id="" class="iframer" src="focus-point.html" style="min-height:800px; min-width: 100%; border: none"></iframe>
+            </div>
+
+
+
+            <!-- /PLUG IN CONFIG IMAGE -->
+
 
         <!-- /IMAGES -->
     </div>
 
+</div>
 </div>
