@@ -58,14 +58,7 @@
             <label class="slds-form-element__label" for="input-013">
                 <abbr class="slds-required" title="required">*</abbr>Rule</label>
             <div class="slds-rich-text-editor slds-form-element slds-grid slds-grid_vertical slds-nowrap">
-
-                <div class="slds-rich-text-editor__textarea slds-grid">
-                    <div id="content-area" aria-label="Compose text" contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
-                </div>
-
-<div id="rte-error-01" class="slds-form-element__help slds-p-around_small slds-hide">This rule is invalid.</div>
-
-<div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none slds-rich-text-editor__toolbar_bottom">
+<div role="toolbar" id="content-toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none slds-rich-text-editor__toolbar_top">
                     <div class="slds-form-element slds-m-right_large">
                         <!-- <label class="slds-form-element__label slds-float_left editor-label" for="select-01">Locale</label> -->
                         <div class="slds-form-element__control slds-float_left">
@@ -100,6 +93,13 @@
                         {% endfor %}
                     </ul>
                 </div>
+
+
+                <div class="slds-rich-text-editor__textarea slds-grid">
+                    <div id="content-area" aria-label="Compose text" contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
+                </div>
+
+<div id="rte-error-01" class="slds-form-element__help slds-p-around_small slds-hide">This rule is invalid.</div>
             </div>
         </div>
     </div>
@@ -117,7 +117,8 @@
   <footer class="slds-modal__footer">
     <div class="slds-grid slds-grid_align-spread" id="item-counter">
       <div class="slds-col">
-        <button class="slds-button slds-button--neutral trigger-657">Assignments (12)</button>
+        <button class="slds-button slds-button--neutral trigger-657">Folders (2)</button>
+        <button class="slds-button slds-button--neutral trigger-657">Products (6)</button>
       </div>
       <div class="slds-col">
         <button class="slds-button slds-button--neutral js-close-modal-2">Cancel</button>
