@@ -2,7 +2,7 @@
   "metarules": [{
   "value": "Product Title for Products on Sale",
   "type": "Product Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "title",
   "assignments": "52",
   "date": "11/06/2017 06:00 AM"
@@ -10,7 +10,7 @@
 {
   "value": "Product Keywords for Upcoming Sales Campaign",
   "type": "Product Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "keywords",
   "assignments": "25",
   "date": "11/06/2017 06:00 AM"
@@ -18,7 +18,7 @@
 {
   "value": "Facebook campaign - Open Graph Product URL",
   "type": "Product Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "og:url",
   "assignments": "150",
   "date": "11/06/2017 06:00 AM"
@@ -26,7 +26,7 @@
 {
   "value": "Facebook campaign - Open Graph Product Image",
   "type": "Product Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "og:image",
   "assignments": "150",
   "date": "11/06/2017 06:00 AM"
@@ -34,7 +34,7 @@
 {
   "value": "Mens Shoes Product Listing Page Description (Canada)",
   "type": "Product Listing",
-  "locale": "English (Canada)",
+  "locale": "Name",
   "metaid": "description",
   "assignments": "10",
   "date": "11/06/2017 06:00 AM"
@@ -42,7 +42,7 @@
 {
   "value": "Meta Description in our German Blog",
   "type": "Content Detail",
-  "locale": "German",
+  "locale": "Title",
   "metaid": "description",
   "assignments": "5",
   "date": "12.31.2017 21:21 PM"
@@ -50,7 +50,7 @@
 {
   "value": "Meta Robots for Refined Searches",
   "type": "Product Listing",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "robots",
   "assignments": "92",
   "date": "11/06/2017 06:00 AM"
@@ -58,7 +58,7 @@
 {
   "value": "Meta Robots for Refined Categories",
   "type": "Product Listing",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "robots",
   "assignments": "120",
   "date": "11/06/2017 06:00 AM"
@@ -66,7 +66,7 @@
 {
   "value": "APP ID for our Facebook Channel",
   "type": "Content Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "fb:app_id",
   "assignments": "23",
   "date": "11/06/2017 06:00 AM"
@@ -74,7 +74,7 @@
 {
   "value": "Product Video for Sharing on Facebook",
   "type": "Product Detail",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "fb:video",
   "assignments": "23",
   "date": "11/06/2017 06:00 AM"
@@ -82,7 +82,7 @@
 {
   "value": "Twitter card tag for Spanish Channel",
   "type": "Product Detail",
-  "locale": "Spanish",
+  "locale": "Title",
   "metaid": "twitter:card",
   "assignments": "55",
   "date": "11/06/2017 06:00 AM"
@@ -90,7 +90,7 @@
 {
   "value": "Twitter title tag for Spanish Channel",
   "type": "Product Detail",
-  "locale": "Spanish",
+  "locale": "Title",
   "metaid": "twitter:title",
   "assignments": "55",
   "date": "11/06/2017 06:00 AM"
@@ -98,7 +98,7 @@
 {
   "value": "Twitter image tag for Spanish Channel",
   "type": "Product Detail",
-  "locale": "Spanish",
+  "locale": "Title",
   "metaid": "twitter:image",
   "assignments": "55",
   "date": "11/06/2017 06:00 AM"
@@ -106,7 +106,7 @@
 {
   "value": "Google Site Verification on Homepage",
   "type": "Homepage",
-  "locale": "Default",
+  "locale": "Name",
   "metaid": "site-verification",
   "assignments": "1",
   "date": "11/06/2017 06:00 AM"
@@ -114,7 +114,7 @@
 {
   "value": "Control revisits of search crawlers",
   "type": "Product Listing",
-  "locale": "English",
+  "locale": "Property",
   "metaid": "revisit-after",
   "assignments": "35",
   "date": "11/06/2017 06:00 AM"
