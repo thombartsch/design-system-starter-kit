@@ -1,0 +1,33 @@
+<section class="slds-popover slds-nubbin_bottom slds-hide" role="dialog" aria-describedby="dialog-body-id-18" aria-label="Dialog Title" id="tooltip-sites">
+    <div class="slds-popover__body" id="dialog-body-id-18">
+      <ul class="slds-has-dividers_around-space">
+        <li class="slds-item">
+          <p class="slds-text-title_caps2">Assigned Products: <span class="slds-badge slds-badge_inverse">12</span></p>
+        </li>
+        <li class="slds-item">
+          <p class="slds-text-title_caps2">Assigned Categories: <span class="slds-badge slds-badge_inverse">2</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.show-sites-tooltip').hover(function() {
+        $('#tooltip-sites').toggleClass('slds-hide');
+        new Tether({
+          element: '#tooltip-sites',
+          target: $(this),
+          attachment: 'bottom center',
+          targetAttachment: 'top center',
+          targetOffset: '-10px 0',
+          constraints: [{
+            to: 'window',
+            attachment: 'target',
+            pin: true
+          }]
+        });
+      });
+    });
+
+    </script>
