@@ -190,9 +190,9 @@ tr.is-new {
 }
 
 .slds-modal--medium .slds-modal__container {
-    width: 70%;
-    max-width: 840px;
-    min-width: 480px
+    // width: 70%;
+    // max-width: 840px;
+    // min-width: 480px
 }
 
 .slds-tabs_default__link .slds-badge {
@@ -204,4 +204,16 @@ tr.is-new {
 
 .slds-tabs_default__content {
   min-height: 50vh;
+}
+
+.slds-popover {
+  z-index: 10000;
+}
+
+.slds-backdrop_top {
+  z-index: 9002;
+}
+
+#create-collection .slds-fade-in-open {
+  z-index: 9005;
 }
