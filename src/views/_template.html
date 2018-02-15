@@ -11,7 +11,6 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -21,6 +20,7 @@
     {% include "_modal-create-collection.html" %}
     {% include "_popover-sites.html" %}
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script src="/scripts/tether.min.js"></script>
     <script>
@@ -80,11 +80,9 @@
         $(this).parent().parent().toggleClass('slds-is-open');
       });
 
-
       $('#assign-success, .hrhr-1').click(function() {
         $('#select-product-23').toggleClass('slds-hide');
       });
-
 
     });
 
