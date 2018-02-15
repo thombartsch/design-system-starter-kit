@@ -11,16 +11,16 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
-<div class="slds-layout-frame"></div>
 
+    {% include "_screen-layout.html" %}
     {% include "_modal-select-commerce-products.html" %}
     {% include "_modal-create-collection.html" %}
     {% include "_popover-sites.html" %}
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script src="/scripts/tether.min.js"></script>
     <script>
