@@ -25,6 +25,12 @@ html {
 }
 
 
+// Layout columns & cards fix
+.page-content.fix-layout {
+  margin-right: -$spacing-x-small;
+  margin-left: -$spacing-x-small;
+}
+
 .slds-brand-band:before {
   background-image: url('/assets/banner-brand-default.png'),linear-gradient(to top,rgba(32, 92, 159, 0), #205c9f);
   background-repeat: repeat-x;
