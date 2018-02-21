@@ -239,3 +239,15 @@ tr.is-new {
 .slds-notify_container {
   padding-top: 5.5rem;
 }
+
+// Faux Button within media utility
+
+.slds-media_center .slds-checkbox_add-button {
+  margin-bottom: -5px; // TODO why 5px?
+}
+
+.selector-item {
+  &.is-selected {
+    background-color: $color-background-row-hover;
+  }
+}

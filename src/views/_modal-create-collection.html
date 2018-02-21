@@ -27,7 +27,7 @@
           <div class="slds-col slds-size_3-of-5">
             <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
               {% for name in shared.sitenames %}              
-              <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+              <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom selector-item">
                 <div class="slds-media__body">
                   <p class="slds-text-heading_small2">{{ name.site }}</p>
                 </div>
@@ -59,6 +59,7 @@
       });
 
       $('.slds-checkbox_faux.collection').click(function() {
+        $(this).closest('.selector-item').toggleClass('is-selected');
         $('.items-selected').removeClass('slds-hide');
         $('.toggle-create-collection-modal').removeAttr('disabled');
       });
