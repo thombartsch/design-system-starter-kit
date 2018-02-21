@@ -1,96 +1,252 @@
-<div class="slds-tabs_default slds-hide" id="picker-tabs">
-  <div id="tab-default-1" class="slds-tabs_default__content slds-hide slds-p-top_none slds-p-bottom_none" role="tabpanel" aria-labelledby="tab-default-1__item">
-    <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
-      {% for product in lol %}
-      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
-        <div class="slds-media__figure">
-          <span class="slds-avatar slds-avatar_medium">
-            {% if product.img %}
-<img alt="Person name" src="{{ product.img }}" title="{{ product.name }}">
-{% else %}
-<span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use></svg></span>
-{% endif %}
-
-          </span>
+<div class="slds-hide" id="select-sites">
+  <div class="slds-p-vertical_x-small slds-p-horizontal_medium slds-shrink-none slds-theme_shade slds-border_bottom">
+    <div class="slds-form-element">
+      <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id">Search</label>
+      <div class="slds-form-element__control">
+        <div class="slds-combobox_container">
+          <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox"
+            role="combobox">
+            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id1" aria-autocomplete="list" aria-controls="listbox-unique-id"
+                autocomplete="off" role="textbox" placeholder="Search by name or ID">
+              <input type="text" class="slds-input slds-combobox__input slds-hide" id="combobox-unique-id2" aria-autocomplete="list" aria-controls="listbox-unique-id"
+                autocomplete="off" role="textbox" placeholder="Search by name or ID">
+              <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                </svg>
+                <span class="slds-assistive-text">Description of icon</span>
+              </span>
+            </div>
+            <div id="listbox-unique-id" role="listbox">
+              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                <li role="presentation" class="slds-listbox__item">
+                  <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                    role="option">
+                    <span class="slds-media__figure">
+                      <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Description of icon</span>
+                      </span>
+                    </span>
+                    <span class="slds-media__body">
+                      <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                      <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                    </span>
+                  </span>
+                </li>
+                <li role="presentation" class="slds-listbox__item">
+                  <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                    role="option">
+                    <span class="slds-media__figure">
+                      <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Description of icon</span>
+                      </span>
+                    </span>
+                    <span class="slds-media__body">
+                      <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                      <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div id="items-selected" class="slds-pill_container slds-pill_container_bare slds-hide">
+      <div id="listbox-unique-id" role="listbox" aria-orientation="horizontal">
+        <ul class="slds-listbox slds-listbox_horizontal" role="presentation">
+          <li role="presentation" class="slds-listbox__item">
+            <span class="slds-pill">
+              <span class="slds-pill__label">adidas.com</span>
+              <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Remove</span>
+              </button>
+            </span>
+          </li>
+          <li role="presentation" class="slds-listbox__item">
+            <span class="slds-pill">
+              <span class="slds-pill__label">adidas.co.uk</span>
+              <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Remove</span>
+              </button>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="slds-grid slds-grid_align-spread slds-hide2" id="item-counter">
+      <div class="slds-text-title slds-m-top_x-small" aria-live="polite">23 items
+        <span class="slds-hide items-selected">• 2 Item(s) Selected</span>
+      </div>
+      <div class="slds-text-title slds-m-top_x-small">
+        <button id="select-all-products" class="slds-button slds-text-link_reset" title="Select all">
+          <span class="slds-text-link">Select all</span>
+        </button>
+        <button id="deselect-all-products" class="slds-button slds-text-link_reset slds-hide" title="Deselect all">
+          <span class="slds-text-link">Deselect all</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+      <div class="slds-media__body">
+        <p class="slds-text-heading_small2">adidas.com</p>
+      </div>
+      <div class="slds-media__figure slds-media__figure_reverse">
+        <div class="slds-checkbox_add-button">
+          <input type="checkbox" class="slds-assistive-text" id="site-1" value="on">
+          <label for="site-1" class="slds-checkbox_faux collection">
+            <span class="slds-assistive-text">Add Collection</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+      <div class="slds-media__body">
+        <p class="slds-text-heading_small2">adidas.co.uk</p>
+      </div>
+      <div class="slds-media__figure slds-media__figure_reverse">
+        <div class="slds-checkbox_add-button">
+          <input type="checkbox" class="slds-assistive-text" id="site-2" value="on">
+          <label for="site-2" class="slds-checkbox_faux collection">
+            <span class="slds-assistive-text">Add Collection</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+      <div class="slds-media__body">
+        <p class="slds-text-heading_small2">adidas.de</p>
+      </div>
+      <div class="slds-media__figure slds-media__figure_reverse">
+        <div class="slds-checkbox_add-button">
+          <input type="checkbox" class="slds-assistive-text" id="site-3" value="on">
+          <label for="site-3" class="slds-checkbox_faux collection">
+            <span class="slds-assistive-text">Add Collection</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+      <div class="slds-media__body">
+        <p class="slds-text-heading_small2">adidas.ca</p>
+      </div>
+      <div class="slds-media__figure slds-media__figure_reverse">
+        <div class="slds-checkbox_add-button">
+          <input type="checkbox" class="slds-assistive-text" id="site-4" value="on">
+          <label for="site-4" class="slds-checkbox_faux collection">
+            <span class="slds-assistive-text">Add Collection</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+      <div class="slds-media__body">
+        <p class="slds-text-heading_small2">adidas.com </p>
+      </div>
+      <div class="slds-media__figure slds-media__figure_reverse">
+        <div class="slds-checkbox_add-button">
+          <input type="checkbox" class="slds-assistive-text" id="" value="on">
+          <label for="" class="slds-checkbox_faux collection">
+            <span class="slds-assistive-text">Add Collection</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
         <div class="slds-media__body">
-          <p>{{ product.name }} <br/><span class="slds-text-body_small slds-color__text_gray-8">SKU 2493765494984</span>
-          </p>
+          <p class="slds-text-heading_small2">adidas.com </p>
         </div>
         <div class="slds-media__figure slds-media__figure_reverse">
           <div class="slds-checkbox_add-button">
-            <input type="checkbox" class="slds-assistive-text" id="add-{{ product.name }}1" value="on">
-            <label for="add-{{ product.name }}1" class="slds-checkbox_faux">
-              <span class="slds-assistive-text">Add product</span>
+            <input type="checkbox" class="slds-assistive-text" id="" value="on">
+            <label for="" class="slds-checkbox_faux collection">
+              <span class="slds-assistive-text">Add Collection</span>
             </label>
           </div>
         </div>
       </div>
-      {% endfor %}
-      <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium slds-hide">
-        <button class="slds-button slds-button_neutral">Show more</button>
-      </div>
-
-<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout slds-hide">
-  <thead>
-    <tr class="slds-text-title_caps">
-      <th scope="col" style="width: 4em;">
-        <div class="slds-assistive-text" title="Opportunity Name">Img</div>
-      </th>
-      <th scope="col" style="width: 45%;">
-        <div class="slds-truncate" title="Account Name">Name</div>
-      </th>
-      <th scope="col">
-        <div class="slds-truncate" title="Close Date">SKU</div>
-      </th>
-      <th scope="col">
-        <div class="slds-truncate" title="Stage">Price</div>
-      </th>
-      <th scope="col" style="width: 4em;">
-        <div class="slds-assistive-text" title="Confidence">Select</div>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for product2 in lol %}
-    <tr>
-      <th scope="row" data-label="Opportunity Name">
-        <span class="slds-avatar slds-avatar_medium"><img alt="Person name" src="{{ product2.img }}" title="{{ product2.name }}"></span>
-      </th>
-      <td data-label="Account Name">
-        <div class="slds-truncate" title="Cloudhub">{{ product2.name }}</div>
-      </td>
-      <td data-label="Close Date">
-        <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
-      </td>
-      <td data-label="Confidence">
-        <div class="slds-truncate" title="20%">20€</div>
-      </td>
-      <td data-label="Amount">
-          <div class="slds-checkbox_add-button">
-            <input type="checkbox" class="slds-assistive-text" id="add-{{ product.name }}1" value="on">
-            <label for="add-{{ product.name }}1" class="slds-checkbox_faux">
-              <span class="slds-assistive-text">Add product</span>
-            </label>
+      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+          <div class="slds-media__body">
+            <p class="slds-text-heading_small2">adidas.com </p>
+          </div>
+          <div class="slds-media__figure slds-media__figure_reverse">
+            <div class="slds-checkbox_add-button">
+              <input type="checkbox" class="slds-assistive-text" id="" value="on">
+              <label for="" class="slds-checkbox_faux collection">
+                <span class="slds-assistive-text">Add Collection</span>
+              </label>
+            </div>
           </div>
         </div>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-
-    </div>
+        <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+            <div class="slds-media__body">
+              <p class="slds-text-heading_small2">adidas.com </p>
+            </div>
+            <div class="slds-media__figure slds-media__figure_reverse">
+              <div class="slds-checkbox_add-button">
+                <input type="checkbox" class="slds-assistive-text" id="" value="on">
+                <label for="" class="slds-checkbox_faux collection">
+                  <span class="slds-assistive-text">Add Collection</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+              <div class="slds-media__body">
+                <p class="slds-text-heading_small2">adidas.com </p>
+              </div>
+              <div class="slds-media__figure slds-media__figure_reverse">
+                <div class="slds-checkbox_add-button">
+                  <input type="checkbox" class="slds-assistive-text" id="" value="on">
+                  <label for="" class="slds-checkbox_faux collection">
+                    <span class="slds-assistive-text">Add Collection</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+                <div class="slds-media__body">
+                  <p class="slds-text-heading_small2">adidas.com </p>
+                </div>
+                <div class="slds-media__figure slds-media__figure_reverse">
+                  <div class="slds-checkbox_add-button">
+                    <input type="checkbox" class="slds-assistive-text" id="" value="on">
+                    <label for="" class="slds-checkbox_faux collection">
+                      <span class="slds-assistive-text">Add Collection</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
+                  <div class="slds-media__body">
+                    <p class="slds-text-heading_small2">adidas.com </p>
+                  </div>
+                  <div class="slds-media__figure slds-media__figure_reverse">
+                    <div class="slds-checkbox_add-button">
+                      <input type="checkbox" class="slds-assistive-text" id="" value="on">
+                      <label for="" class="slds-checkbox_faux collection">
+                        <span class="slds-assistive-text">Add Collection</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>                                                                                                                  
   </div>
-  <div id="tab-default-2" class="slds-tabs_default__content slds-hide slds-p-top_none" role="tabpanel" aria-labelledby="tab-default-2__item">
 
-{% include "_commerce-selector-content-2.html" %}
 
-  </div>
-</div>
-
-<div id="empty-state" class="slds-hide">
-<img id="placeholder-img" class="slds-align_absolute-center slds-m-top_medium slds-m-bottom_xx-large" src="assets/empty-2.svg" />
-<p id="empty-state-text" class="slds-text-heading_large slds-text-align_center slds-m-bottom_large" style="width: 100%;">Start a search for products.</p>
 </div>
