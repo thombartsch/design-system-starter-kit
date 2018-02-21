@@ -25,124 +25,23 @@
             </div>
           </div>
           <div class="slds-col slds-size_3-of-5">
-            <div class="slds-p-vertical_x-small slds-p-horizontal_medium slds-shrink-none slds-theme_shade slds-border_bottom" id="select-search">
-              <div class="slds-form-element">
-                <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id">Search</label>
-                <div class="slds-form-element__control">
-                  <div class="slds-combobox_container">
-                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox"
-                      role="combobox">
-                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id1" aria-autocomplete="list" aria-controls="listbox-unique-id"
-                          autocomplete="off" role="textbox" placeholder="Search by name or ID">
-                        <input type="text" class="slds-input slds-combobox__input slds-hide" id="combobox-unique-id2" aria-autocomplete="list" aria-controls="listbox-unique-id"
-                          autocomplete="off" role="textbox" placeholder="Search by name or ID">
-                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                          <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Description of icon</span>
-                        </span>
-                      </div>
-                      <div id="listbox-unique-id" role="listbox">
-                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                          <li role="presentation" class="slds-listbox__item">
-                            <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                              role="option">
-                              <span class="slds-media__figure">
-                                <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Description of icon</span>
-                                </span>
-                              </span>
-                              <span class="slds-media__body">
-                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
-                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-                              </span>
-                            </span>
-                          </li>
-                          <li role="presentation" class="slds-listbox__item">
-                            <span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                              role="option">
-                              <span class="slds-media__figure">
-                                <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-                                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Description of icon</span>
-                                </span>
-                              </span>
-                              <span class="slds-media__body">
-                                <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
-                                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-                              </span>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="items-selected" class="slds-pill_container slds-pill_container_bare slds-hide">
-                <div id="listbox-unique-id" role="listbox" aria-orientation="horizontal">
-                  <ul class="slds-listbox slds-listbox_horizontal" role="presentation">
-                    <li role="presentation" class="slds-listbox__item">
-                      <span class="slds-pill">
-                        <span class="slds-pill__label">adidas.com</span>
-                        <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
-                          <svg class="slds-button__icon" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Remove</span>
-                        </button>
-                      </span>
-                    </li>
-                    <li role="presentation" class="slds-listbox__item">
-                      <span class="slds-pill">
-                        <span class="slds-pill__label">adidas.co.uk</span>
-                        <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
-                          <svg class="slds-button__icon" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Remove</span>
-                        </button>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="slds-grid slds-grid_align-spread slds-hide2" id="item-counter">
-                <div class="slds-text-title slds-m-top_x-small" aria-live="polite">23 items
-                  <span class="slds-hide items-selected">• 2 Item(s) Selected</span>
-                </div>
-                <div class="slds-text-title slds-m-top_x-small">
-                  <button id="select-all-products" class="slds-button slds-text-link_reset" title="Select all">
-                    <span class="slds-text-link">Select all</span>
-                  </button>
-                  <button id="deselect-all-products" class="slds-button slds-text-link_reset slds-hide" title="Deselect all">
-                    <span class="slds-text-link">Deselect all</span>
-                  </button>
-                </div>
-              </div>
-            </div>
             <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
+              {% for name in shared.sitenames %}              
               <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
                 <div class="slds-media__body">
-                  <p class="slds-text-heading_small2">adidas.com</p>
+                  <p class="slds-text-heading_small2">{{ name.site }}</p>
                 </div>
                 <div class="slds-media__figure slds-media__figure_reverse">
                   <div class="slds-checkbox_add-button">
-                    <input type="checkbox" class="slds-assistive-text" id="site-1" value="on">
-                    <label for="site-1" class="slds-checkbox_faux collection">
+                    <input type="checkbox" class="slds-assistive-text" id="{{ name.site }}" value="on">
+                    <label for="{{ name.site }}" class="slds-checkbox_faux collection">
                       <span class="slds-assistive-text">Add Collection</span>
                     </label>
                   </div>
                 </div>
               </div>
-          </div>
+              {% endfor %}              
+            </div>
         </div>
         <footer class="slds-modal__footer">
           <button class="slds-button slds-button_neutral toggle-create-collection-modal">Cancel</button>
