@@ -232,11 +232,42 @@
           <span class="slds-truncate" title="Tools">Back to Edit</span>
         </a>
         </li>
+        {#
         <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-context-bar__item_divider-left" id="trigger-preview">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Preview">
           <span class="slds-truncate" title="Tools">Preview</span>
         </a>
         </li>
+        #}
+        <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item"  id="trigger-preview">
+                <span class="slds-truncate" title="Menu Item">Preview</span>
+            </a>
+            <div class="slds-context-bar__icon-action slds-p-left_none">
+                <button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Open menu item submenu</span>
+                </button>
+            </div>
+            <div class="slds-dropdown slds-dropdown_right">
+                <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item slds-border_bottom" role="presentation">
+                        <div class="slds-p-around_small">
+                            <p class="slds-p-bottom_small">Scan QR code to preview page</p>
+                            <img src="assets/qr.png" border="0" />
+                        </div>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Menu Item One">Preview in Storefront</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </li>
+
         <li class="slds-context-bar__item" id="trigger-publish">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Online">
           <span class="slds-truncate" title="Tools">Set Online</span>
@@ -270,6 +301,10 @@
     {% block content %}
       <!-- Content from HTML files gets injected here -->
     {% endblock %}
+
+        {% include "_inc_dropdowncomponents.html"  ignore missing %}
+
+
   </main>
 
 
