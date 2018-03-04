@@ -35,7 +35,7 @@
                                           <a href="javascript:void(0);" class="slds-file__crop image-figure">
                                               <img src="/assets/placeholder.png" alt="+" class="image-figure-thumb" style="font-size: 39px;" />
                                           </a>
-                                          <figcaption class="slds-file__title slds-file__title_card">
+                                          <figcaption class="slds-hide slds-file__title slds-file__title_card">
                                             <div class="slds-media slds-media_small slds-media_center">
                                               <div class="slds-media__figure slds-line-height_reset">
                                                 <span class="slds-icon_container" title="pdf">
@@ -50,6 +50,37 @@
                                               </div>
                                             </div>
                                           </figcaption>
+                                          <figcaption class="slds-file__title slds-file__title_card">
+                                                  <div class="slds-media slds-media_small slds-media_center slds-grid">
+                                                      <div class="slds-media__body slds-col" style="width:570px">
+
+                                                          <input type="text" class="slds-input slds-size--medium file-name" value="" placeholder="Image Path">
+                                                      </div>
+                                                      <div class="slds-media__figure slds-p-left--large">
+                                                          <div class="slds-text-align_center">
+                                                              <button class="slds-button icon-add slds-button_icon 2slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
+                                                                  <svg class="slds-button__icon" aria-hidden="true">
+                                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                                                  </svg>
+                                                                  <span class="slds-assistive-text">Add Image</span>
+                                                              </button>
+
+                                                              <button class="slds-hide icon-edit slds-button slds-button_icon slds-button_icon slds-button_icon-x-small select-image" title="Select Image">
+                                                                  <svg class="slds-button__icon" aria-hidden="true">
+                                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                                                  </svg>
+                                                                  <span class="slds-assistive-text">Edit Image</span>
+                                                              </button>
+                                                              <button class="slds-hide icon-clear slds-button slds-button_icon slds-button_icon slds-button_icon-x-small add-image" title="Add Image">
+                                                                  <svg class="slds-button__icon" aria-hidden="true">
+                                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
+                                                                  </svg>
+                                                                  <span class="slds-assistive-text">Clear Image</span>
+                                                              </button>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </figcaption>
                                         </figure>
                                       </div>
                                     </div>
