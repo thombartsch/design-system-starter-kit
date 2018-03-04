@@ -1562,3 +1562,43 @@ $('#basket-editor .trigger-close-modal, #mini-cart').click(function() {
     $('#basket-editor').toggleClass('slds-hide');
     return false;
 });
+
+
+
+//SET FOCAL Point
+// Credit: https://github.com/jonom/jquery-focuspoint
+// Credit: https://github.com/jonom/jquery-focuspoint
+
+$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+
+$('.set-focal-point').click(function(e){
+
+  var imageW = $(this).width();
+  var imageH = $(this).height();
+
+  //Calculate FocusPoint coordinates
+  var offsetX = e.pageX - $(this).offset().left;
+  var offsetY = e.pageY - $(this).offset().top;
+
+  //Calculate CSS Percentages
+  var percentageX = (offsetX/imageW)*100;
+  var percentageY = (offsetY/imageH)*100;
+  var backgroundPosition = percentageX.toFixed(0) + '% ' + percentageY.toFixed(0) + '%';
+
+  // Set positioning
+  $('.focal-holder').css('background-position',backgroundPosition);
+
+});
+
+// Hide image while resizing
+var resizing = false;
+$(window).resize(function(){
+  if(resizing !== false) {
+    clearTimeout(resizing);
+    $('img').css('opacity', 0);
+ }
+ resizing = setTimeout(function() {
+   $('img').css('opacity', 1);
+ }, 1000);
+
+});
