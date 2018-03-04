@@ -802,11 +802,14 @@ div.ring {
 
 /* FOCAL POINT */
 .set-focal-point {
+  /*
   position: absolute;
   top: 10px;
   left: 10px;
   border: 5px solid white;
   width: 400px;
+  */
+  height: 200px;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -818,5 +821,22 @@ div.ring {
   top: 0;
   left: 0;
   position: absolute;
-  transition: background-position 0.3s ease-in-out; 
+  transition: background-position 0.3s ease-in-out;
+}
+
+
+//circle
+.circle {
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    border: 2px solid #fff;
+    z-index: 2000;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 47%;
+}
+.circle-in{
+  /*background: red;*/
 }

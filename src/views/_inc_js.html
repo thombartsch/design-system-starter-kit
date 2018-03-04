@@ -542,7 +542,10 @@ $('.image-component-editor button.trigger-save-modal').click(function() {
 
     $('.image-component-editor').toggleClass('slds-hide');
     //$('.'+activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
-    $('.' + activeComponent + ' .image-holder').attr('src', selected_image);
+    //$('.' + activeComponent + ' .image-holder').attr('src', selected_image);
+    //$('.' + activeComponent + ' .image-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+    $('.' + activeComponent + ' .image-holder').css('background-image','url('+selected_image+')');
+    //$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
     return false;
 });
 
@@ -797,8 +800,10 @@ $('.picker .trigger-close-modal').click(function() {
 
 $('.picker .trigger-save-modal').click(function() {
     //$(this).closest('.picker').toggleClass('slds-hide');
-    $('.' + activeComponent + ' .image-holder').attr('src', selected_image);
+    //$('.' + activeComponent + ' .image-holder').attr('src', selected_image);
     $('.' + activeComponent + ' .image-back').css('background-image', 'url(' + selected_image + ')');
+    $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
+
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
     $('.mediaselector-component-editor .file-name').text(selected_image);
 
@@ -1569,7 +1574,7 @@ $('#basket-editor .trigger-close-modal, #mini-cart').click(function() {
 // Credit: https://github.com/jonom/jquery-focuspoint
 // Credit: https://github.com/jonom/jquery-focuspoint
 
-$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+//$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
 
 $('.set-focal-point').click(function(e){
 
@@ -1582,11 +1587,18 @@ $('.set-focal-point').click(function(e){
 
   //Calculate CSS Percentages
   var percentageX = (offsetX/imageW)*100;
-  var percentageY = (offsetY/imageH)*100;
+  //var percentageY = (offsetY/imageH)*100;
+  //there must be a bug in here ... why is *10 working???
+  var percentageY = (offsetY/imageH)*10;
   var backgroundPosition = percentageX.toFixed(0) + '% ' + percentageY.toFixed(0) + '%';
 
+  //Move indicator
+  $('.circle').css('top',(offsetY-10)+'px');
+  $('.circle').css('left',(offsetX-10)+'px');
   // Set positioning
   $('.focal-holder').css('background-position',backgroundPosition);
+
+  //alert(offsetY+'px');
 
 });
 
