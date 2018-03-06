@@ -254,6 +254,10 @@ $('.js-close-filter-view').click(function() {
     $('#poppinD').toggleClass('slds-hide');
 });
 
+$('#poppinD button').click(function() {
+    $('#poppinD').toggleClass('slds-hide');
+});
+
 
 //PREVIEW
 $('#trigger-preview').click(function() {
@@ -1420,10 +1424,18 @@ $('#component-selecta').click(function() {
 });
 
 
+$('.region_component_selector .js-close-dropdown').click(function() {
+    //$(this'.region_component_selector').addClass('slds-hide');
+    //$(this).closest('.region_component_selector').addClass('slds-hide');
+    $('.region_component_selector').toggleClass('slds-hide');
+});
+
+/*
 $('.js-close-dropdown').click(function() {
     //$(this'.region_component_selector').addClass('slds-hide');
     //$(this).closest('.region_component_selector').addClass('slds-hide');
 });
+*/
 
 $('#rtf_button_link').click(function() {
     $('#link-menu').toggleClass('slds-is-open');
