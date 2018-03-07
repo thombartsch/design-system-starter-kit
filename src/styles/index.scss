@@ -315,3 +315,10 @@ tr.is-new {
   z-index: 9002;
 }
 
+#mega {
+  width: auto;
+
+  .slds-dropdown__item > a {
+    padding: $spacing-xx-small $spacing-small;
+  }
+}
