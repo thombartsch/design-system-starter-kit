@@ -802,6 +802,12 @@ $('.picker .trigger-close-modal').click(function() {
 });
 
 
+$('.remove-image').click(function() {
+  alert('remove image from selection');
+  //$('.media-picker').toggleClass('slds-hide');
+});
+
+
 $('.picker .trigger-save-modal').click(function() {
     //$(this).closest('.picker').toggleClass('slds-hide');
     //$('.' + activeComponent + ' .image-holder').attr('src', selected_image);
@@ -810,6 +816,9 @@ $('.picker .trigger-save-modal').click(function() {
 
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
     $('.mediaselector-component-editor .file-name').text(selected_image);
+
+    $('.circle').toggleClass('slds-hide');
+    $('.remove-image').toggleClass('slds-hide');
 
 
     //$('.shopableselector-component-editor .image-figure-thumb').attr('src', selected_image);
