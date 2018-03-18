@@ -803,8 +803,12 @@ $('.picker .trigger-close-modal').click(function() {
 
 
 $('.remove-image').click(function() {
-  alert('remove image from selection');
-  //$('.media-picker').toggleClass('slds-hide');
+  //remove image from selection
+  $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
+  $('.mediaselector-component-editor .file-name').text('No Image selected');
+  $('.circle').toggleClass('slds-hide');
+  $('.remove-image').toggleClass('slds-hide');
+
 });
 
 
@@ -1587,6 +1591,11 @@ $('#basket-editor .trigger-save-modal').click(function() {
 $('#basket-editor .trigger-close-modal, #mini-cart').click(function() {
     $('#basket-editor').toggleClass('slds-hide');
     return false;
+});
+
+
+$('a[href="#close_notification"]').click(function(){
+      alert('Sign new href executed.');
 });
 
 
