@@ -43,7 +43,7 @@ $('#regionlimit').text(regionlimit);
 
 
 
-
+{#
 
 //HIDE ALL MENUS
 $(function() {
@@ -182,16 +182,7 @@ $('#input-seo_title').keyup(function() {
 });
 
 
-//CREATE PAGE TOAST
-$('button.js-save-modal-id-2').click(function() {
-    $('.modal-id-2').toggleClass('slds-hide');
-    $('#created-toast').toggleClass('slds-hide');
-});
 
-
-$('button.close-toast-2').click(function() {
-    $('#created-toast').toggleClass('slds-hide');
-});
 
 
 
@@ -361,21 +352,9 @@ $('#js-close-toast-id-1').click(function() {
     $('#toast-id-1').toggleClass('slds-hide');
 });
 
-//TRIGGER NEW PAGE
-$('#js-open-modal-id-2').click(function() {
-    $('.modal-id-2').toggleClass('slds-hide');
-});
 
-//NEW PAGE MODAL
-$('.js-close-modal-id-2').click(function() {
-    $('.modal-id-2').toggleClass('slds-hide');
-});
-$('.js-close-modal-id-100').click(function() {
-    $('.modal-id-100').toggleClass('slds-hide');
-});
-$('#js-open-modal-100').click(function() {
-    $('.modal-id-100').toggleClass('slds-hide');
-});
+
+
 
 //SIDEBAR
 $('#button-page-navigator').click(function() {
@@ -1359,11 +1338,6 @@ $(document).click(function(e) {
 
 });
 
-//LOADER PAGE LIST
-$(function() {
-    $('.spinner').delay(3000).fadeOut('slow');
-    $('#page_list').delay(4000).fadeIn('slow');
-});
 
 
 //OCAPI modal__close
@@ -1643,4 +1617,42 @@ $(window).resize(function(){
    $('img').css('opacity', 1);
  }, 1000);
 
+});
+
+#}
+
+
+//TRIGGER NEW AB/TEST
+$('#js-open-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+
+//CREATE PAGE TOAST
+$('button.js-save-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+    $('#created-toast').toggleClass('slds-hide');
+});
+
+
+$('button.close-toast-2').click(function() {
+    $('#created-toast').toggleClass('slds-hide');
+});
+
+
+//NEW PAGE MODAL
+$('.js-close-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+
+
+$('#ab-test--list-actions-trigger').click(function(){
+      //alert();
+      $('#ab-test--list-actions').toggleClass('slds-is-closed slds-is-open');
+});
+
+
+//LOADER PAGE LIST
+$(function() {
+    $('.spinner').delay(2000).fadeOut('slow');
+    $('#page_list').delay(3000).fadeIn('slow');
 });
