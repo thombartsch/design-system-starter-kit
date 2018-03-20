@@ -56,97 +56,8 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-      // Page Header Menu
-        $('.page-header-trigger').click(function() {
-            $('#iweurtz').toggleClass('slds-hide');
-            new Tether({
-                element: '#iweurtz',
-                target: '.page-header-trigger',
-                attachment: 'top left',
-                targetAttachment: 'bottom left',
-                targetOffset: '0 0',
-                constraints: [{
-                    to: 'window',
-                    attachment: 'target',
-                    pin: true
-                }]
-            });
-        });
-
-      $('.close-create').click(function() {
-        $('#new-rule, #add-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.trigger-assign').hover(function() {
-        $('#tooltip-assignments').toggleClass('slds-hide');
-        new Tether({
-          element: '#tooltip-assignments',
-          target: $(this),
-          attachment: 'bottom center',
-          targetAttachment: 'top center',
-          targetOffset: '-10px 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('#assign-to-trigger-2').click(function() {
-        $('#assign-to').toggleClass('slds-hide');
-        new Tether({
-          element: '#assign-to',
-          target: '#assign-to-trigger-2',
-          attachment: 'center left',
-          targetAttachment: 'center right',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('#assign-to-trigger').click(function() {
-        $('#assign-to').toggleClass('slds-hide');
-        new Tether({
-          element: '#assign-to',
-          target: '#assign-to-trigger',
-          attachment: 'center left',
-          targetAttachment: 'center right',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
-        });
-      });
-
-      $('.app-switch-trigger').click(function() {
-        $('#apps').toggleClass('slds-hide');
-      });
-
-      // $('#app-switch-trigger').click(function() {
-      //     $('#app-switch').toggleClass('slds-hide');
-      //     $('#app-switch').toggleClass('slds-hide');
-      //     new Tether({
-      //         element: '#app-switch',
-      //         target: '#app-switch-trigger',
-      //         attachment: 'top left',
-      //         targetAttachment: 'bottom left',
-      //         targetOffset: '0 0',
-      //         constraints: [{
-      //             to: 'window',
-      //             attachment: 'target',
-      //             pin: true
-      //         }]
-      //     });
-      // });
-
       $('#trigger-mega').click(function() {
+        $('#mega2:not(.slds-hide)').toggleClass('slds-hide');
         $('#mega').toggleClass('slds-hide');
         new Tether({
           element: '#mega',
@@ -157,134 +68,16 @@
         });
       });
 
-      $('#close-assigned-toast, #assign-success').click(function() {
-        $('#assigned-toast').toggleClass('slds-hide');
-      });
-
-      $('.show-created-toast, .close-toast-2, .close-create').click(function() {
-        $('#created-toast').toggleClass('slds-hide');
-      });
-
-      $('.trigger-edit, .js-close-modal-2').click(function() {
-        $('#edit-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.trigger-duplicate, .js-close-modal-12').click(function() {
-        $('#copy-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.trigger-add, .js-close-modal').click(function() {
-        $('#add-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.create-new, .js-close-modal-34').click(function() {
-        $('#add-table-entry').toggleClass('slds-hide');
-      });
-
-      $('.delete-trigger, .js-close-modal-3').click(function() {
-        $('#delete').toggleClass('slds-hide');
-      });
-
-      $('.accept-trigger, .js-close-modal-13').click(function() {
-        $('#accept').toggleClass('slds-hide');
-      });
-
-      $('.toast-success, .close-toast').click(function() {
-        $('#success-toast').toggleClass('slds-hide');
-      });
-
-      $('.slds-popover__close, .hide-filter-popover').click(function() {
-        $('#id-263').toggleClass('slds-hide');
-      });
-
-      $('.remove-filter-button').click(function() {
-        $(this).parent().parent().toggleClass('slds-hide');
-      });
-
-      $('#delete-filters').click(function() {
-        $('.slds-item').not('#new-filter').toggleClass('slds-hide');
-      });
-
-      $('#show-new-filter').click(function() {
-        $('#new-filter').toggleClass('slds-hide');
-        $('#id-263').toggleClass('slds-hide');
+      $('#trigger-admin').click(function() {
+        $('#mega:not(.slds-hide)').toggleClass('slds-hide');
+        $('#mega2').toggleClass('slds-hide');
         new Tether({
-          element: '#id-263',
-          target: '#new-filter',
-          attachment: 'center right',
-          targetAttachment: 'center left',
-          targetOffset: '0 0',
-          constraints: [{
-            to: 'window',
-            attachment: 'target',
-            pin: true
-          }]
+          element: '#mega2',
+          target: '#trigger-admin',
+          attachment: 'top left',
+          targetAttachment: 'bottom center',
+          targetOffset: '3px -445px'
         });
-      });
-
-
-      // Toggle Delete Toast
-      $('.trigger-delete-toast, .close-toast-deleted').click(function() {
-        $('#deleted-toast').toggleClass('slds-hide');
-      });
-
-      // Toggle Modified Toast
-      $('.trigger-modified-toast, #close-modified-toast').click(function() {
-        $('#modified-toast').toggleClass('slds-hide');
-      });
-
-
-      // Commerce Selector
-
-      // Nested Categories Commerce Selector
-      $('#trigger-nested').click(function() {
-        $('.slds-is-child').toggleClass('slds-hide');
-        $(this).toggleClass('is-opened');
-      });
-
-      $('.app-trigger').click(function() {
-        $(this).toggleClass('slds-is-open');
-      });
-
-      $('.hide-select-product-2').click(function() {
-        $('#select-product-23').toggleClass('slds-hide');
-        $('#select-product-23').toggleClass('slds-show');
-      });
-
-      $('.slds-checkbox_faux').click(function() {
-        $('#items-selected, .items-selected, #item-counter').removeClass('slds-hide');
-        $('.hrhr-1').removeAttr('disabled');
-      });
-
-      $('#combobox-unique-id1').change(function() {
-        $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
-      });
-
-      $('#combobox-unique-id2').change(function() {
-        $('.product-tile[aria-level="2"], .product-tile[aria-level="3"]').removeAttr('aria-level');
-        $('.trigger-nested, .cat-path').toggleClass('slds-hide');
-      });
-
-      $('.hrhr').click(function() {
-        var $checkbox = $('input.is-child');
-        $checkbox.toggleClass('is-inhereted');
-      });
-
-      $('.hide-assign-to').click(function() {
-        $('#assign-to').toggleClass('slds-hide');
-      });
-
-      $('.slds-section__title-action').click(function() {
-        $(this).parent().parent().toggleClass('slds-is-open');
-      });
-
-      $('.trigger-assign, #assign-success, .hrhr-1, .trigger-assign-action').click(function() {
-        $('#select-product-23').toggleClass('slds-hide');
-      });
--ad      });
-
-     $('.toast-success, .close-toast, .accept-trigger, .js-close-modal-13, .reject-trigger, .js-close-modal-42, .delete-trigger, .js-close-modal-3, .trigger-add, .js-close-modal, .trigger-duplicate, .js-close-modal-12, .trigger-edit-hyper, .js-close-modal-22, .trigger-edit-keywords, .js-close-modal-222, .trigger-edit, .js-close-modal-2, .trigger-delete-toast, .close-toast-deleted, .trigger-modified-toast, #close-modified-toast').click(function() {
-          $('.slds-dropdown-trigger--click.slds-is-open').removeClass('slds-is-open');
       });
 
     });
