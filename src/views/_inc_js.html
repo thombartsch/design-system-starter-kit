@@ -1656,3 +1656,16 @@ $(function() {
     $('.spinner').delay(2000).fadeOut('slow');
     $('#page_list').delay(3000).fadeIn('slow');
 });
+
+
+$('.dialog-add').click(function() {
+    $('.modal-dialog-add').toggleClass('slds-hide');
+});
+
+$('.js-close-modal-add').click(function() {
+  $('.modal-dialog-add').toggleClass('slds-hide');
+})
+
+$('.slds-close-add').click(function() {
+  $('.modal-dialog-add').toggleClass('slds-hide');
+})

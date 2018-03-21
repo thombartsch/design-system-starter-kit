@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>.: A/B Tests :.</title>
+        <title>.: Campaigns :.</title>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <!-- Prototype styles -->
@@ -20,9 +20,9 @@
 //]]></script>
 
         <!--
-Base Global Header component
-https://www.lightningdesignsystem.com/components/global-header/
--->
+        Base Global Header component
+        https://www.lightningdesignsystem.com/components/global-header/
+        -->
         <header class="slds-global-header_container">
             <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
             <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
@@ -54,9 +54,9 @@ https://www.lightningdesignsystem.com/components/global-header/
                 </ul>
             </div>
             <!--
-Navigation Bar component
-https://www.lightningdesignsystem.com/components/global-navigation/
--->
+            Navigation Bar component
+            https://www.lightningdesignsystem.com/components/global-navigation/
+            -->
             <div class="slds-context-bar">
                 <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
                     <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
@@ -90,7 +90,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                         </li>
                         <li class="slds-context-bar__item slds-is-active">
                             <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
-                                <span class="slds-truncate">A/B Tests</span>
+                                <span class="slds-truncate">Campaigns</span>
                             </a>
                         </li>
                     </ul>
@@ -142,9 +142,11 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                 <div class="slds-col slds-has-flexi-truncate">
                                     <div class="slds-media slds-no-space slds-media_center slds-grow">
                                         <div class="slds-media__figure">
-                                            <span class="slds-icon_container slds-icon-standard-cms">
-                                              <img src="assets/icon_a-b--test.svg" border="0" />
-                                            </span>
+                                          <span class="slds-icon_container slds-icon-standard-opportunity" title="Description of icon when needed">
+                                            <svg class="slds-icon" aria-hidden="true">
+                                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#campaign" />
+                                            </svg>
+                                          </span>
                                         </div>
                                         <div class="slds-media__body">
                                             <div>
@@ -153,15 +155,14 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                         <li class="slds-breadcrumb__item"><span>Online Marketing</span></li>
                                                     </ol>
                                                 </nav>
-                                                <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Meta Tag Rules">A/B Tests</h1></div>
+                                                <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Campaigns">Campaigns</h1></div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- MENU INCL DROPDOWN -->
                                 <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small 2slds-hide">
-                                  <div class="slds-button-group" role="group">
+                                  <div class="slds-button-group2" role="group">
                                     <button class="slds-button slds-button_neutral" id="js-open-modal-id-2">New</button>
-                                    <button class="slds-button slds-button_neutral" id="" disabled>Delete</button>
                                     <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last slds-is-closed" id="ab-test--list-actions">
                                       <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More" id="ab-test--list-actions-trigger">
                                         <svg class="slds-button__icon" aria-hidden="true">
@@ -172,17 +173,6 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                       <div class="slds-dropdown slds-dropdown_right slds-hide">
                                         <ul class="slds-dropdown__list" role="menu">
                                           <li class="slds-dropdown__item" role="presentation">
-                                            <a href="javascript:void(0);" role="menuitem" tabindex="0">
-                                              <span class="slds-truncate" title="Import">Import</span>
-                                            </a>
-                                          </li>
-                                          <li class="slds-dropdown__item" role="presentation">
-                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" disabled>
-                                              <span class="slds-truncate slds-is-dis" title="Export" disabled>Export</span>
-                                            </a>
-                                          </li>
-                                          <li class="slds-has-divider_top-space" role="separator"></li>
-                                          <li class="slds-dropdown__item" role="presentation">
                                             <a href="javascript:void(0);" role="menuitem" tabindex="-1">
                                               <span class="slds-truncate" title="Enable">Enable</span>
                                             </a>
@@ -190,6 +180,12 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                           <li class="slds-dropdown__item" role="presentation">
                                             <a href="javascript:void(0);" role="menuitem" tabindex="-1">
                                               <span class="slds-truncate" title="Disable">Disable</span>
+                                            </a>
+                                          </li>
+                                          <li class="slds-has-divider_top-space" role="separator"></li>
+                                          <li class="slds-dropdown__item" role="presentation">
+                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                              <span class="slds-truncate" title="Delete">Delete</span>
                                             </a>
                                           </li>
                                         </ul>
@@ -201,7 +197,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                             </div>
                             <div class="slds-grid">
                                 <div class="slds-col slds-align-bottom">
-                                    <p class="slds-page-header__info">4 results • <span id="sorted_txt">sorted by name (asc)</span></p>
+                                    <p class="slds-page-header__info">1 result • <span id="sorted_txt">sorted by name (asc)</span></p>
                                 </div>
                                 <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
                                     <div class="slds-form-element__control">
@@ -209,7 +205,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                             <svg aria-hidden="true" class="slds-input__icon">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
                                             </svg>
-                                            <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search A/B Tests" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+                                            <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Campaigns" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
                                         </div>
                                     </div>
                                     <div>
@@ -217,16 +213,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                             <svg class="slds-button__icon" aria-hidden="true">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
                                             </svg><span class="slds-assistive-text">Delete</span></button>
-                                        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" id="HkBUxsHK3x">
-                                            <button aria-expanded="false" aria-haspopup="true" class="slds-hide slds-button slds-button--icon-more ignore-click-HkBUxsHK3x" tabindex="0">
-                                                <svg class="slds-button__icon" aria-hidden="true">
-                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
-                                                </svg>
-                                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small" viewBox="0 0 24 24" name="down">
-                                                    <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -242,111 +229,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                 <div class="spinner">
     <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid">
       <thead>
-          <tr class="slds-line-height--reset">
-              <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
-                  <div class="slds-th__action slds-th__action--form">
-                      <span class="slds-checkbox">
-                          <input type="checkbox" name="options" id="checkbox-170">
-                          <label class="slds-checkbox__label" for="checkbox-170">
-                              <span class="slds-checkbox--faux"></span>
-                              <span class="slds-form-element__label slds-assistive-text">Select All</span>
-                          </label>
-                      </span>
-                  </div>
-              </th>
-              <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:15rem" id="th_name" data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Name">ID</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" id="th_pagetype"  data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="page Type">Description</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:10em;" id="th_id"   data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="ID">Tags</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:25em">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Status">Schedule</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:6em" id="th_created"  data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Status</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8em" id="th_created"  data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Segments</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:13em" id="th_created"  data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Customer Groups</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
-              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:7em" id="th_created"  data-sort="string">
-                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Enabled</span>
-                      <div class="slds-icon_container">
-                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
-                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                  <div>
-                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-              </th>
 
-              <th scope="col" style="width:3.25rem;">
-                  <div class="slds-th__action"> <span class="slds-assistive-text">Actions</span> </div>
-              </th>
-          </tr>
       </thead>
 
 
@@ -377,7 +260,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     </span>
                                                 </div>
                                             </th>
-                                            <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:15rem" id="th_name" data-sort="string">
+                                            <th class="slds-is-sortable slds-text-title--caps" scope="col" 2style="width:15rem" id="th_id" data-sort="string">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Name">ID</span>
                                                     <div class="slds-icon_container">
                                                         <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
@@ -388,7 +271,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
                                                     <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
                                             </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" id="th_pagetype"  data-sort="string">
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:15rem;" id="th_description"  data-sort="string">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="page Type">Description</span>
                                                     <div class="slds-icon_container">
                                                         <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
@@ -399,18 +282,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
                                                     <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
                                             </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:10em;" id="th_id"   data-sort="string">
-                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="ID">Tags</span>
-                                                    <div class="slds-icon_container">
-                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                                                        </svg>
-                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                                                <div>
-                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-                                            </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:25em">
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:12rem">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Status">Schedule</span>
                                                     <div class="slds-icon_container">
                                                         <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
@@ -421,29 +293,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
                                                     <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
                                             </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:6em" id="th_created"  data-sort="string">
-                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Status</span>
-                                                    <div class="slds-icon_container">
-                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                                                        </svg>
-                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                                                <div>
-                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-                                            </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8em" id="th_created"  data-sort="string">
-                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Segments</span>
-                                                    <div class="slds-icon_container">
-                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                                                        </svg>
-                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
-                                                <div>
-                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
-                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
-                                            </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:13em" id="th_created"  data-sort="string">
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8rem" id="th_created"  data-sort="string">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Customer Groups</span>
                                                     <div class="slds-icon_container">
                                                         <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
@@ -454,7 +304,29 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
                                                     <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
                                             </th>
-                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:7em" id="th_created"  data-sort="string">
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8rem" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Source Codes</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8rem" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Coupons</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:4rem" id="th_created"  data-sort="string">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Enabled</span>
                                                     <div class="slds-icon_container">
                                                         <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
@@ -480,25 +352,33 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                               </span>
                                           </td>
                                           <td scope="row">
-                                              <div class="slds-truncate" title="test.adidas.de"><a href="">mens-sortingrules</a></div>
+                                              <div class="slds-truncate" title="ID">
+                                                <a href="">123</a>
+                                                <div class="slds-form-element__icon">
+                                                    <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipA">
+                                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Help</span>
+                                                    </button>
+                                                </div>
+
+                                              </div>
                                           </td>
                                           <td role="gridcell">
-                                              <div class="slds-truncate" title="">Testing default Sorting Rules for all Mens categories.</div>
+                                              <div class="slds-truncate" title="">some description</div>
                                           </td>
                                           <td role="gridcell">
-                                              <div class="slds-truncate" title="">sorting rules, order conversion, mens</div>
+                                              <div class="slds-truncate" title="">3/13/18, 1:00 AM to 3/17/18, 12:59 AM</div>
                                           </td>
                                           <td role="gridcell">
-                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
+                                              <div class="slds-truncate" title="">Customer Groups</div>
                                           </td>
                                           <td role="gridcell">
-                                              <div class="slds-truncate" title="">Ended</div>
+                                              <div class="slds-truncate" title="">Source Codes</div>
                                           </td>
                                           <td role="gridcell">
-                                              <div class="slds-truncate" title="">1</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Everyone</div>
+                                              <div class="slds-truncate" title="">Coupons</div>
                                           </td>
                                           <td role="gridcell">
                                               <div class="slds-truncate" title="">Yes</div>
@@ -513,7 +393,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                   <div class="slds-dropdown slds-dropdown--right">
                                                       <ul class="slds-dropdown__list" role="menu">
                                                           <li class="slds-dropdown__item" role="presentation">
-                                                              <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
+                                                              <a href="campaign-detail.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
                                                           </li>
                                                           <li class="slds-dropdown__item" role="presentation">
                                                               <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
@@ -522,171 +402,6 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                           <li class="slds-dropdown__item" role="presentation">
                                                               <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
                                                           </li>
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr class="slds-hint-parent">
-                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                                              <input type="checkbox" name="options" id="id-21">
-                                              <label class="slds-checkbox__label" for="id-21">
-                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                              </span>
-                                          </td>
-                                          <td scope="row">
-                                              <div class="slds-truncate" title="test.adidas.de"><a href="">mens-sortingrules</a></div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Testing default Sorting Rules for all Mens categories.</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">sorting rules, order conversion, mens</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Planned</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">1</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Everyone</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Yes</div>
-                                          </td>
-
-                                          <td role="gridcell" style="width:3.25rem;">
-                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                                                      <svg class="slds-button__icon" aria-hidden="true">
-                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
-                                                  <div class="slds-dropdown slds-dropdown--right">
-                                                      <ul class="slds-dropdown__list" role="menu">
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
-                                                        </li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
-                                                        </li>
-                                                        <li class="slds-has-divider_top-space" role="separator"></li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
-                                                        </li>
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr class="slds-hint-parent">
-                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                                              <input type="checkbox" name="options" id="id-22">
-                                              <label class="slds-checkbox__label" for="id-22">
-                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                              </span>
-                                          </td>
-                                          <td scope="row">
-                                              <div class="slds-truncate" title="test.adidas.de"><a href="">mens-sortingrules</a></div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Testing default Sorting Rules for all Mens categories.</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">sorting rules, order conversion, mens</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Planned</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">1</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Everyone</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Yes</div>
-                                          </td>
-
-                                          <td role="gridcell" style="width:3.25rem;">
-                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                                                      <svg class="slds-button__icon" aria-hidden="true">
-                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
-                                                  <div class="slds-dropdown slds-dropdown--right">
-                                                      <ul class="slds-dropdown__list" role="menu">
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
-                                                        </li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
-                                                        </li>
-                                                        <li class="slds-has-divider_top-space" role="separator"></li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
-                                                        </li>
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr class="slds-hint-parent">
-                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                                              <input type="checkbox" name="options" id="id-23">
-                                              <label class="slds-checkbox__label" for="id-23">
-                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                              </span>
-                                          </td>
-                                          <td scope="row">
-                                              <div class="slds-truncate" title="test.adidas.de"><a href="">mens-sortingrules</a></div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Testing default Sorting Rules for all Mens categories.</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">sorting rules, order conversion, mens</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Planned</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">1</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Everyone</div>
-                                          </td>
-                                          <td role="gridcell">
-                                              <div class="slds-truncate" title="">Yes</div>
-                                          </td>
-
-                                          <td role="gridcell" style="width:3.25rem;">
-                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                                                      <svg class="slds-button__icon" aria-hidden="true">
-                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
-                                                  <div class="slds-dropdown slds-dropdown--right">
-                                                      <ul class="slds-dropdown__list" role="menu">
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
-                                                        </li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
-                                                        </li>
-                                                        <li class="slds-has-divider_top-space" role="separator"></li>
-                                                        <li class="slds-dropdown__item" role="presentation">
-                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
-                                                        </li>
                                                       </ul>
                                                   </div>
                                               </div>
@@ -712,6 +427,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
         {% include "_inc_toast-page-deleted.html" ignore missing %}
         {% include "_inc_toast-page-created.html" ignore missing %}
 
+        {% include "_inc-page-list_poppins.html" ignore missing %}
 
 
 
@@ -758,20 +474,9 @@ https://www.lightningdesignsystem.com/components/global-navigation/
 
 
 
-        <style>
-            #poppinA{
-                top: 145px;
-                left: 230px;
-            }
-            #poppinB{
-                left: 250px;
-                top: 175px;
-            }
-            #poppinC{
-                left: 215px;
-                top: 208px;
-            }
-        </style>
+
+
+
 
 
 
