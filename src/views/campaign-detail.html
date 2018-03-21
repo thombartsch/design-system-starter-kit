@@ -261,8 +261,15 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                       </div>
                       <ul class="slds-grid slds-page-header__detail-row">
                         <li class="slds-page-header__detail-block">
-                          <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Enabled">Enabled</p>
-                          <p class="slds-text-body_regular slds-truncate" title=""><p><a href=""><b>YES</b></a></p></p>
+                            <label class="slds-checkbox_toggle slds-grid">
+                              <!--span class="slds-form-element__label slds-m-bottom_none">Enabled</span-->
+                              <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on" />
+                              <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on">Enabled</span>
+                                <span class="slds-checkbox_off">Disabled</span>
+                              </span>
+                            </label>
                         </li>
                         <li class="slds-page-header__detail-block">
                           <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Description">Description</p>
@@ -276,15 +283,24 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                           <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="End Date">End Date</p>
                           <p><a href="">No End Date</a></p>
                         </li>
+                        <li class="slds-page-header__detail-block">
+                          <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Customer Groups">Customer Groups</p>
+                          <p><a href="">Name</a></p>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                          <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Source Codes">Source Codes</p>
+                          <p><a href="">Name</a></p>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                          <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Coupons">Coupons</p>
+                          <p><a href="">Name</a></p>
+                        </li>
                       </ul>
                     </div>
                 </div>
                 <!-- PAGES DETAIL -->
                 <div class="slds-grid slds-m-top_small">
-                    <div class="slds-col slds-size_2-of-3">
-                      {% include "detail-left.html" ignore missing %}
-                    </div>
-                    <div class="slds-col  slds-p-left--small slds-size_1-of-3">
+                    <div class="slds-col  slds-size_1-of-1">
                       {% include "detail-right.html" ignore missing %}
                     </div>
                 </div>
