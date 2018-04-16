@@ -1669,3 +1669,30 @@ $('.js-close-modal-add').click(function() {
 $('.slds-close-add').click(function() {
   $('.modal-dialog-add').toggleClass('slds-hide');
 })
+
+
+
+//SCHEDULE
+$('#edit-schedule, .edit-schedule').click(function() {
+  $('#modal-schedule').toggleClass('slds-hide');
+})
+
+$('#modal-schedule button.slds-modal__close, #modal-schedule button.slds-button_neutral, #modal-schedule button.slds-button_brand').click(function() {
+  $('#modal-schedule').toggleClass('slds-hide');
+})
+
+//CUSTOMER GROUPS
+$('.dialog-customer_groups, .modal-dialog-customer_groups .slds-close').click(function() {
+    $('.modal-dialog-customer_groups').toggleClass('slds-hide');
+});
+
+//SOURCE CODES
+$('.dialog-source_codes, .modal-dialog-source_codes .slds-close').click(function() {
+    $('.modal-dialog-source_codes').toggleClass('slds-hide');
+});
+
+
+//COUPONS
+$('.dialog-coupons, .modal-dialog-coupons .slds-close').click(function() {
+    $('.modal-dialog-coupons').toggleClass('slds-hide');
+});
