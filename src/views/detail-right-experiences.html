@@ -47,10 +47,10 @@
                          <th scope="col">
                            <div class="slds-truncate" title="">Context</div>
                          </th>
-                         <th scope="col">
+                         <th scope="col" style="width:12rem;">
                            <div class="slds-truncate" title="">Schedule</div>
                          </th>
-                         <th scope="col">
+                         <th scope="col" style="width:12rem;">
                            <div class="slds-truncate" title="">Customer Groups</div>
                          </th>
                          <th scope="col">
@@ -73,10 +73,10 @@
                            <div class="slds-truncate" title=""></div>
                          </td>
                          <td>
-                           <div class="slds-truncate" title="">11/17/2018 - 11/20/2018</div>
+                           <div class="slds-truncate" title=""><a href="javascript:void();" class="edit-schedule">11/17/2018 - 11/20/2018</a></div>
                          </td>
                          <td>
-                           <div class="slds-truncate" title="Big Spenders, Everyone, Registered, Unregistered">Big Spenders + <a href="javascript:void(0);">3more</a></div>
+                           <div class="slds-truncate" title="Big Spenders, Everyone, Registered, Unregistered">Big Spenders <a href="javascript:void(0);" class="dialog-customer_groups">+ 3more</a></div>
                          </td>
                          <td>
                            <div class="slds-truncate" title=""></div>
@@ -122,13 +122,13 @@
                        <th scope="col" style="width:20rem;">
                          <div class="slds-truncate" title="">ID</div>
                        </th>
-                       <th scope="col">
+                       <th scope="col" style="width:12rem;">
                          <div class="slds-truncate" title="">Schedule</div>
                        </th>
-                       <th scope="col">
+                       <th scope="col" style="width:12rem;">
                          <div class="slds-truncate" title="">Customer Groups</div>
                        </th>
-                       <th scope="col">
+                       <th scope="col" style="width:12rem;">
                          <div class="slds-truncate" title="">Source Codes</div>
                        </th>
                        <th scope="col">
@@ -151,13 +151,13 @@
                          <div class="slds-truncate" title=""><a href="javascript:void(0);">$50FixedProductsAmountAbove100</a></div>
                        </th>
                        <td>
-                         <div class="slds-truncate" title="">11/17/2018 - 11/20/2018</div>
+                         <div class="slds-truncate" title=""><a href="javascript:void();" class="edit-schedule">11/17/2018 - 11/20/2018</a></div>
                        </td>
                        <td>
-                         <div class="slds-truncate" title="Big Spenders, Everyone, Registered, Unregistered">Big Spenders <a href="javascript:void(0);" title="Big Spenders, Everyone, Registered, Unregistered">+ 3more</a></div>
+                         <div class="slds-truncate" title="Big Spenders, Everyone, Registered, Unregistered">Big Spenders <a href="javascript:void(0);" title="Big Spenders, Everyone, Registered, Unregistered" class="dialog-customer_groups">+ 3 more</a></div>
                        </td>
                        <td>
-                         <div class="slds-truncate" title="affiliate-email, gaming-email">affiliate-email <a href="javascript:void(0);" title="affiliate-email, gaming-email">+ 1 more</a></div>
+                         <div class="slds-truncate" title="affiliate-email, gaming-email">affiliate-email <a href="javascript:void(0);" title="affiliate-email, gaming-email" class="dialog-source_codes">+ 1 more</a></div>
                        </td>
                        <td>
                          <div class="slds-truncate" title=""></div>
@@ -1687,3 +1687,1875 @@
     <div class="slds-backdrop slds-backdrop_open"></div>
   </div>
 <!-- /MODAL MANAGE KEYWORD_SORTING_RULES -->
+
+
+
+<!-- MODAL CALENDAR -->
+<div class="slds-hide" id="modal-calendar">
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-calendar-content" aria-modal="true" aria-describedby="modal-calendar-content" class="slds-modal slds-modal_medium slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Schedule</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+          <div class="slds-form slds-form_compound">
+            <fieldset class="slds-form-element">
+              <legend class="slds-form-element__label">Start</legend>
+                <div class="slds-form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="date-input-id-01">Start Date</label>
+                      <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <input type="text" id="date-input-id-01" placeholder=" " class="slds-input" value="06/24/2018" />
+                        <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                          </svg>
+                          <span class="slds-assistive-text">Select a date</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="combobox-unique-id-4"> Start Time</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-combobox_container">
+                          <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist slds-timepicker" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-4" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="All Day" />
+                              <span class="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock" />
+                                </svg>
+                                <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                            </div>
+                            <div id="listbox-unique-id" role="listbox">
+                              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown--fluid slds-dropdown--length-5" role="presentation">
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="6:00am"> 6:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="7:00am"> 7:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="8:00am"> 8:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="9:00am"> 9:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-05" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="10:00am"> 10:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-06" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="11:00am"> 11:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-07" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="12:00pm"> 12:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-08" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="1:00pm"> 1:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-09" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="2:00pm"> 2:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-10" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="3:00pm"> 3:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-11" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="4:00pm"> 4:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-12" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="5:00pm"> 5:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form-element">
+              <legend class="slds-form-element__label">End</legend>
+                <div class="slds-form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="date-input-id-01">End Date</label>
+                      <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <input type="text" id="date-input-id-01" placeholder=" " class="slds-input" value="06/29/2018" />
+                        <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                          </svg>
+                          <span class="slds-assistive-text">Select a date</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="combobox-unique-id-4"> End Time</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-combobox_container">
+                          <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist slds-timepicker" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-4" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="All Day" />
+                              <span class="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock" />
+                                </svg>
+                                <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                            </div>
+                            <div id="listbox-unique-id" role="listbox">
+                              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown--fluid slds-dropdown--length-5" role="presentation">
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="6:00am"> 6:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="7:00am"> 7:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="8:00am"> 8:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="9:00am"> 9:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-05" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="10:00am"> 10:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-06" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="11:00am"> 11:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-07" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="12:00pm"> 12:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-08" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="1:00pm"> 1:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-09" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="2:00pm"> 2:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-10" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="3:00pm"> 3:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-11" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="4:00pm"> 4:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-12" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="5:00pm"> 5:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+
+          </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral">Cancel</button>
+        <button class="slds-button slds-button_brand">Save</button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+<!-- /MODAL CALENDAR -->
+
+
+<!-- MODAL SCHEDULE -->
+<div class="slds-hide" id="modal-schedule">
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-schedule-content" aria-modal="true" aria-describedby="modal-schedule-content" class="slds-modal slds-modal_medium slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Schedule</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+          <div class="slds-form slds-form_compound">
+            <fieldset class="slds-form-element">
+              <legend class="slds-form-element__label">Start</legend>
+                <div class="slds-form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="date-input-id-01">Start Date</label>
+                      <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <input type="text" id="date-input-id-01" placeholder=" " class="slds-input" value="06/24/2018" />
+                        <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                          </svg>
+                          <span class="slds-assistive-text">Select a date</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="combobox-unique-id-4"> Start Time</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-combobox_container">
+                          <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist slds-timepicker" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-4" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="All Day" />
+                              <span class="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock" />
+                                </svg>
+                                <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                            </div>
+                            <div id="listbox-unique-id" role="listbox">
+                              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown--fluid slds-dropdown--length-5" role="presentation">
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="6:00am"> 6:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="7:00am"> 7:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="8:00am"> 8:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="9:00am"> 9:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-05" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="10:00am"> 10:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-06" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="11:00am"> 11:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-07" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="12:00pm"> 12:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-08" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="1:00pm"> 1:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-09" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="2:00pm"> 2:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-10" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="3:00pm"> 3:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-11" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="4:00pm"> 4:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-12" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="5:00pm"> 5:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form-element">
+              <legend class="slds-form-element__label">End</legend>
+                <div class="slds-form-element__group">
+                  <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="date-input-id-01">End Date</label>
+                      <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <input type="text" id="date-input-id-01" placeholder=" " class="slds-input" value="06/29/2018" />
+                        <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                          </svg>
+                          <span class="slds-assistive-text">Select a date</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                      <label class="slds-form-element__label" for="combobox-unique-id-4"> End Time</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-combobox_container">
+                          <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist slds-timepicker" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                              <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-4" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="All Day" />
+                              <span class="slds-icon_container slds-icon-utility-clock slds-input__icon slds-input__icon_right" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock" />
+                                </svg>
+                                <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                            </div>
+                            <div id="listbox-unique-id" role="listbox">
+                              <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown--fluid slds-dropdown--length-5" role="presentation">
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="6:00am"> 6:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="7:00am"> 7:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="8:00am"> 8:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="9:00am"> 9:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-05" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="10:00am"> 10:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-06" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="11:00am"> 11:00am</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-07" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="12:00pm"> 12:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-08" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="1:00pm"> 1:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-09" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="2:00pm"> 2:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-10" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="3:00pm"> 3:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-11" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="4:00pm"> 4:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                                <li role="presentation" class="slds-listbox__item">
+                                  <div id="listbox-option-unique-id-12" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                    <span class="slds-media__figure">
+                                      <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
+                                      </svg>
+                                    </span>
+                                    <span class="slds-media__body">
+                                      <span class="slds-truncate" title="5:00pm"> 5:00pm</span>
+                                    </span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form-element">
+              <legend class="slds-form-element__legend slds-form-element__label">Scheduled Day(s)</legend>
+              <div class="slds-form-element__control">
+                <div class="slds-checkbox_button-group">
+                  <span class="slds-button slds-checkbox_button">
+                    <input type="checkbox" id="monday" name="checkbox" value="on" />
+                    <label class="slds-checkbox_button__label" for="monday">
+                      <span class="slds-checkbox_faux">Mon</span>
+                    </label>
+                  </span>
+                  <span class="slds-button slds-checkbox_button">
+                    <input type="checkbox" id="tuesday" name="checkbox" value="on" />
+                    <label class="slds-checkbox_button__label" for="tuesday">
+                      <span class="slds-checkbox_faux">Tue</span>
+                    </label>
+                  </span>
+                  <span class="slds-button slds-checkbox_button">
+                    <input type="checkbox" id="wednesday" name="checkbox" value="on" />
+                    <label class="slds-checkbox_button__label" for="wednesday">
+                      <span class="slds-checkbox_faux">Wed</span>
+                    </label>
+                  </span>
+                  <span class="slds-button slds-checkbox_button">
+                    <input type="checkbox" id="thursday" name="checkbox" value="on" />
+                    <label class="slds-checkbox_button__label" for="thursday">
+                      <span class="slds-checkbox_faux">Thu</span>
+                    </label>
+                  </span>
+                  <span class="slds-button slds-checkbox_button">
+                    <input type="checkbox" id="friday" name="checkbox" value="on" />
+                    <label class="slds-checkbox_button__label" for="friday">
+                      <span class="slds-checkbox_faux">Fri</span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+            </fieldset>
+
+
+          </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral">Cancel</button>
+        <button class="slds-button slds-button_brand">Save</button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+<!-- /MODAL SCHEDULE -->
+
+
+<!-- MODAL MANAGE CUSTOMER GROUPS -->
+<div class="slds-hide modal-dialog-customer_groups">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-modal_medium slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Customer Groups</h2>
+        </header>
+        <div class="slds-modal__content slds-grid slds-grow" id="modal-content-id-1">
+          <div class="slds-grid slds-grid_vertical">
+            <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+              <div class="slds-form-element">
+                <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-6">Search</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-6" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search" />
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                        </svg>
+                        </span>
+                      </div>
+                      <div id="listbox-unique-id" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                              </span>
+                              <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                                                          </span>
+                                                          </span>
+                                                          <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-text-title slds-m-top_x-small" aria-live="polite">0 Item(s) Selected</div>
+            </div>
+            <div class="slds-scrollable slds-grow">
+              <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th scope="col" style="width: 3.75rem;"></th>
+                    <th aria-label="Name" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+                      <span class="slds-assistive-text">Sort by: </span>
+                      <span class="slds-truncate" title="Name">Name</span>
+                      <div class="slds-icon_container">
+                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                      </svg>
+                      </div>
+                      </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-5" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute">Attribute</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-6" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 2" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 2">Attribute 2</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 2 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-7" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 3" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 3">Attribute 3</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 3 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-8" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-9" tabindex="-1" value="on" />
+                        <label for="add-checkbox-9" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 1</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-10" tabindex="-1" value="on" />
+                        <label for="add-checkbox-10" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 2</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-11" tabindex="-1" value="on" />
+                        <label for="add-checkbox-11" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 3</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-12" tabindex="-1" value="on" />
+                        <label for="add-checkbox-12" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 4</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-13" tabindex="-1" value="on" />
+                        <label for="add-checkbox-13" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 5</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-14" tabindex="-1" value="on" />
+                        <label for="add-checkbox-14" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 6</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-15" tabindex="-1" value="on" />
+                        <label for="add-checkbox-15" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 7</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-16" tabindex="-1" value="on" />
+                        <label for="add-checkbox-16" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 8</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral slds-close">Cancel</button>
+          <button class="slds-button slds-button_brand slds-close">Save</button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+<!-- /MODAL MANAGE CUSTOMER GROUPS -->
+
+
+<!-- MODAL MANAGE SOURCE CODES -->
+<div class="slds-hide modal-dialog-source_codes">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-modal_medium slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Source Codes</h2>
+        </header>
+        <div class="slds-modal__content slds-grid slds-grow" id="modal-content-id-1">
+          <div class="slds-grid slds-grid_vertical">
+            <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+              <div class="slds-form-element">
+                <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-6">Search</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-6" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search" />
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                        </svg>
+                        </span>
+                      </div>
+                      <div id="listbox-unique-id" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                              </span>
+                              <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                                                          </span>
+                                                          </span>
+                                                          <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-text-title slds-m-top_x-small" aria-live="polite">0 Item(s) Selected</div>
+            </div>
+            <div class="slds-scrollable slds-grow">
+              <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th scope="col" style="width: 3.75rem;"></th>
+                    <th aria-label="Name" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+                      <span class="slds-assistive-text">Sort by: </span>
+                      <span class="slds-truncate" title="Name">Name</span>
+                      <div class="slds-icon_container">
+                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                      </svg>
+                      </div>
+                      </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-5" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute">Attribute</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-6" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 2" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 2">Attribute 2</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 2 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-7" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 3" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 3">Attribute 3</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 3 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-8" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-9" tabindex="-1" value="on" />
+                        <label for="add-checkbox-9" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 1</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-10" tabindex="-1" value="on" />
+                        <label for="add-checkbox-10" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 2</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-11" tabindex="-1" value="on" />
+                        <label for="add-checkbox-11" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 3</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-12" tabindex="-1" value="on" />
+                        <label for="add-checkbox-12" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 4</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-13" tabindex="-1" value="on" />
+                        <label for="add-checkbox-13" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 5</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-14" tabindex="-1" value="on" />
+                        <label for="add-checkbox-14" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 6</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-15" tabindex="-1" value="on" />
+                        <label for="add-checkbox-15" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 7</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-16" tabindex="-1" value="on" />
+                        <label for="add-checkbox-16" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 8</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral slds-close">Cancel</button>
+          <button class="slds-button slds-button_brand slds-close">Save</button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+<!-- /MODAL MANAGE SOURCE CODES -->
+
+
+<!-- MODAL MANAGE COUPONS -->
+<div class="slds-hide modal-dialog-coupons">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-modal_medium slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">COUPONS</h2>
+        </header>
+        <div class="slds-modal__content slds-grid slds-grow" id="modal-content-id-1">
+          <div class="slds-grid slds-grid_vertical">
+            <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+              <div class="slds-form-element">
+                <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-6">Search</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-6" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search" />
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                        </svg>
+                        </span>
+                      </div>
+                      <div id="listbox-unique-id" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                              </span>
+                              <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                              </svg>
+                              <span class="slds-assistive-text">Description of icon when needed</span>
+                                                          </span>
+                                                          </span>
+                                                          <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-text-title slds-m-top_x-small" aria-live="polite">0 Item(s) Selected</div>
+            </div>
+            <div class="slds-scrollable slds-grow">
+              <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th scope="col" style="width: 3.75rem;"></th>
+                    <th aria-label="Name" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+                      <span class="slds-assistive-text">Sort by: </span>
+                      <span class="slds-truncate" title="Name">Name</span>
+                      <div class="slds-icon_container">
+                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+                      </svg>
+                      </div>
+                      </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-5" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute">Attribute</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-6" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 2" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 2">Attribute 2</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 2 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-7" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 3" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+  <span class="slds-assistive-text">Sort by: </span>
+  <span class="slds-truncate" title="Attribute 3">Attribute 3</span>
+  <div class="slds-icon_container">
+  <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+  </svg>
+  </div>
+  </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 3 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-8" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+  <span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-9" tabindex="-1" value="on" />
+                        <label for="add-checkbox-9" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 1</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-10" tabindex="-1" value="on" />
+                        <label for="add-checkbox-10" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 2</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-11" tabindex="-1" value="on" />
+                        <label for="add-checkbox-11" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 3</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-12" tabindex="-1" value="on" />
+                        <label for="add-checkbox-12" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 4</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-13" tabindex="-1" value="on" />
+                        <label for="add-checkbox-13" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 5</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-14" tabindex="-1" value="on" />
+                        <label for="add-checkbox-14" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 6</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-15" tabindex="-1" value="on" />
+                        <label for="add-checkbox-15" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 7</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-16" tabindex="-1" value="on" />
+                        <label for="add-checkbox-16" class="slds-checkbox_faux">
+  <span class="slds-assistive-text">Select item 8</span>
+  </label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral slds-close">Cancel</button>
+          <button class="slds-button slds-button_brand slds-close">Save</button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+<!-- /MODAL MANAGE COUPONS -->
