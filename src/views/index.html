@@ -18,6 +18,35 @@
     document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
 //]]></script>
 
+
+
+
+<div id="toast-action" class="slds-hide" style="height: 4rem;">
+  <div class="slds-notify_container slds-is-relative">
+    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+      <span class="slds-assistive-text">success</span>
+      <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success" />
+        </svg>
+      </span>
+      <div class="slds-notify__content">
+        <h2 class="slds-text-heading_small ">Action Name was done.</h2>
+      </div>
+      <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close">
+        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
         <!--
         Base Global Header component
         https://www.lightningdesignsystem.com/components/global-header/
@@ -208,7 +237,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1">
+                                        <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1 button-sidebar">
                                             <svg class="slds-button__icon" aria-hidden="true">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
                                             </svg><span class="slds-assistive-text">Delete</span></button>
@@ -400,7 +429,7 @@
                                           </td>
 
                                           <td role="gridcell" style="width:3.25rem;">
-                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
                                                   <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
                                                       <svg class="slds-button__icon" aria-hidden="true">
                                                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
@@ -411,11 +440,11 @@
                                                               <a href="campaign-detail.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
                                                           </li>
                                                           <li class="slds-dropdown__item" role="presentation">
-                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="action list-action"> <span class="slds-truncate" title="Menu Item Two">Enable</span> </a>
                                                           </li>
                                                           <li class="slds-has-divider_top-space" role="separator"></li>
                                                           <li class="slds-dropdown__item" role="presentation">
-                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="action list-action js-open-modal-id-1 action"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
                                                           </li>
                                                       </ul>
                                                   </div>
@@ -468,7 +497,7 @@
                                           </td>
 
                                           <td role="gridcell" style="width:3.25rem;">
-                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
                                                   <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
                                                       <svg class="slds-button__icon" aria-hidden="true">
                                                           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
@@ -479,11 +508,11 @@
                                                               <a href="campaign-detail.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
                                                           </li>
                                                           <li class="slds-dropdown__item" role="presentation">
-                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class=""> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="action list-action"> <span class="slds-truncate" title="Menu Item Two">Disable</span> </a>
                                                           </li>
                                                           <li class="slds-has-divider_top-space" role="separator"></li>
                                                           <li class="slds-dropdown__item" role="presentation">
-                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="action list-action js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Three">Delete</span> </a>
                                                           </li>
                                                       </ul>
                                                   </div>
@@ -495,8 +524,82 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="slds-hide slds-grid slds-col" id="sidebar">
+                      <div class="demo-only slds-grid" style="height: 1800px; min-width: 300px; max-width: 420px; overflow: hidden;">
+                        <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters">
+                          <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y slds-grid slds-grid_vertical">
+                            <div class="slds-filters">
+                              <div class="slds-filters__header slds-grid slds-has-divider_bottom-space">
+                                <h2 class="slds-align-middle slds-text-heading_small">Filter</h2>
+                                <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small button-sidebar" title="Close Filter Panel">
+                                  <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#forward" />
+                                  </svg>
+                                  <span class="slds-assistive-text">Close Filter Panel</span>
+                                </button>
+                              </div>
+                              <div class="slds-filters__body">
+                                <ol class="slds-list_vertical slds-list_vertical-space">
+                                  <li class="slds-item slds-hint-parent">
+                                    <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                      <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                        <span class="slds-assistive-text">Edit filter:</span>
+                                        <span class="slds-show slds-text-body_small">Show Me</span>
+                                        <span class="slds-show">All Products</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                </ol>
+                                <h3 class="slds-text-body_small slds-m-vertical_x-small">Matching all these filters</h3>
+                                <ol class="slds-list_vertical slds-list_vertical-space">
+                                  <li class="slds-item slds-hint-parent">
+                                    <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                      <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                        <span class="slds-assistive-text">Edit filter:</span>
+                                        <span class="slds-show slds-text-body_small">Created Date</span>
+                                        <span class="slds-show">equals THIS WEEK</span>
+                                      </button>
+                                      <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove equals THIS WEEK">
+                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                                        </svg>
+                                        <span class="slds-assistive-text">Remove filter: Created Date equals THIS WEEK</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="slds-item slds-hint-parent">
+                                    <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                      <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                        <span class="slds-assistive-text">Edit filter:</span>
+                                        <span class="slds-show slds-text-body_small">List Price</span>
+                                        <span class="slds-show">greater than "500"</span>
+                                      </button>
+                                      <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                                        </svg>
+                                        <span class="slds-assistive-text">Remove filter: List Price greater than "500"</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                </ol>
+                              </div>
+                              <div class="slds-filters__footer slds-grid slds-shrink-none">
+                                <button class="slds-button_reset slds-text-link">Add Filter</button>
+                                <button class="slds-button_reset slds-text-link slds-col_bump-left">Remove All</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
                 </div>
             </div>
+
+
         </main>
 
 

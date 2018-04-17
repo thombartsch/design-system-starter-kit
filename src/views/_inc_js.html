@@ -1728,3 +1728,30 @@ $('.show-modal-customer_groups, #modal-customer_groups .slds-modal__close').clic
 $('.show-modal-coupons, #modal-coupons .slds-modal__close').click(function() {
     $('#modal-coupons').toggleClass('slds-hide');
 });
+
+
+
+//Close list drop down
+$('.list-action').click(function() {
+  $('.slds-dropdown-trigger').closest('.list-dropbox').removeClass('slds-is-open');
+});
+
+
+//SHoW action
+$('.action').click(function() {
+    $('#toast-action').toggleClass('slds-hide');
+    setTimeout(function() {
+          //$('.modal').addClass('overlay');
+          $('#toast-action').toggleClass('slds-hide');
+        }, 1000);
+});
+
+$('#toast-action .slds-notify__close').click(function() {
+    $('#toast-action').toggleClass('slds-hide');
+});
+
+
+//Close list drop down
+$('.button-sidebar').click(function() {
+  $('#sidebar').toggleClass('slds-hide');
+});
