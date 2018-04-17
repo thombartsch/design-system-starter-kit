@@ -1755,3 +1755,23 @@ $('#toast-action .slds-notify__close').click(function() {
 $('.button-sidebar').click(function() {
   $('#sidebar').toggleClass('slds-hide');
 });
+
+
+//Close list drop down
+$('.action-delete').click(function() {
+  $('#delete-campaign').toggleClass('slds-hide');
+});
+
+$('#delete-campaign .action-close').click(function() {
+  $('#delete-campaign').toggleClass('slds-hide');
+});
+
+
+$('#delete-campaign button.action-delete').click(function() {
+    $('#delete-campaign').addClass('slds-hide');
+    $('#toast-action').toggleClass('slds-hide');
+    setTimeout(function() {
+          //$('.modal').addClass('overlay');
+          $('#toast-action').toggleClass('slds-hide');
+        }, 1000);
+});
