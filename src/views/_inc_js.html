@@ -1700,7 +1700,7 @@ $('.dialog-coupons, .modal-dialog-coupons .slds-close').click(function() {
 
 //SLOTS
 $('.dialog-slots, .modal-dialog-slots .slds-close').click(function() {
-    $('.modal-dialog-slots').toggleClass('slds-hide');
+    $('#modal-tree').toggleClass('slds-hide');
 });
 
 //PROMOTIONS
@@ -1774,4 +1774,26 @@ $('#delete-campaign button.action-delete').click(function() {
           //$('.modal').addClass('overlay');
           $('#toast-action').toggleClass('slds-hide');
         }, 1000);
+});
+
+
+//HIDE CUSTOM CODE area
+$('#hide-custom').click(function() {
+  $('#custom-area').toggleClass('slds-hide');
+});
+
+
+//SHOW tree
+$('#modal-tree .close, #modal-tree .action').click(function() {
+  $('#modal-tree').toggleClass('slds-hide');
+});
+
+
+
+//SHOW cats tree
+$('.dialog-cats').click(function() {
+  $('#modal-cats').toggleClass('slds-hide');
+});
+$('#modal-cats .close, #modal-cats .action').click(function() {
+  $('#modal-cats').toggleClass('slds-hide');
 });
