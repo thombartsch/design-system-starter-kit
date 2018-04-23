@@ -25,7 +25,8 @@
           </button>
           <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Assignments</h2>
         </header>
-        <div class="slds-modal__content">
+        <div class="slds-modal__content slds-modal__content slds-grid slds-grow">
+<div class="slds-grid slds-grid_vertical slds-grow">
           <div class="slds-p-vertical_x-small slds-p-horizontal_medium slds-shrink-none slds-theme_shade slds-border_bottom" id="select-search">
             <div class="slds-form-element">
               <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id">Search</label>
@@ -85,11 +86,10 @@
               <div class="slds-text-title slds-m-top_x-small" aria-live="polite">125 items</div>
             </div>
           </div>
-          <div class="slds-grid">
-            <div class="slds-col">
-              <div class="slds-tabs_default" id="picker-tabs">
+
+              <div class="slds-tabs_default slds-scrollable_y slds-grow" id="picker-tabs">
                 <div id="tab-default-1" class="slds-tabs_default__content slds-p-top_none slds-p-bottom_none" role="tabpanel" aria-labelledby="tab-default-1__item">
-                  <div class="product-list slds-scrollable_y" style="max-height: 50vh;">
+                  <div class="product-list">
                     <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
                       <div class="slds-media__figure">
                         <span class="slds-avatar slds-avatar_medium">
@@ -1011,8 +1011,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+
+
+        </div>
         </div>
         <footer class="slds-modal__footer">
           <button class="slds-button slds-button_neutral hrhr-1">Cancel</button>
