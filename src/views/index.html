@@ -388,8 +388,8 @@
                                               <div class="slds-truncate" title="">3/17/18, 12:59 AM</div>
                                           </td>
                                           <td role="gridcell">
-                                              <span class="slds-grid slds-grid_align-spread">
-                                                <span class="slds-badge" title="Everyone">Everyone</span>
+                                              <span class="slds-grid slds-grid_align-spread slds-truncate_container_15">
+                                                <span class="slds-badge slds-truncate" title="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</span>
                                               </span>
                                           </td>
                                           <td role="gridcell">
@@ -398,7 +398,7 @@
                                           <td role="gridcell">
                                               <span class="slds-grid slds-grid_align-spread">
                                                 <span class="slds-badge">Sample Coupon</span>
-                                                <a href="javascript:void();">+3more</a>
+                                                <a href="javascript:void();" class="show-coupons">+3more</a>
                                               </span>
                                           </td>
                                           <td role="gridcell">
@@ -469,7 +469,7 @@
                                           <td role="gridcell">
                                               <span class="slds-grid slds-grid_align-spread">
                                                 <span class="slds-badge" title="SampleCoupon, 123456, 1234, sdasdasda">Sample Coupon</span>
-                                                <a href="javascript:void();" title="SampleCoupon, 123456, 1234, sdasdasda">+3more</a>
+                                                <a href="javascript:void();" title="SampleCoupon, 123456, 1234, sdasdasda" class="show-coupons">+3more</a>
                                               </span>
                                           </td>
                                           <td role="gridcell">
@@ -599,6 +599,7 @@
 
         {% include "_inc_toast-generic.html" ignore missing%}
         {% include "_inc_modal-delete.html" ignore missing%}
+        {% include "_inc_modal-show-coupons.html" ignore missing%}
 
 
 
