@@ -1,0 +1,2 @@
+.footer{box-sizing:border-box;-moz-box-sizing:border-box;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;background-color:#E8E8E8;color:#333;font-size:12px;padding:12px 10px;position:fixed;bottom:0;width:100%;min-width:1070px;}.footer__instance-details{float:right;list-style:none;margin:0;padding:0;}
+.footer__instance-details li{float:left;padding-right:6px;position:relative;}.footer__instance-details li::before{content:'|';display:block;position:absolute;left:-4px;top:0;height:100%;}.footer__instance-details li:first-child::before{content:'';}

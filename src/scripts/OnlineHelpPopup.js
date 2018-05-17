@@ -1,0 +1,2 @@
+function openOnlineHelpPopup(B){var C=1024;var A=600;var E=(screen.width-C)/2;var D=(screen.height-A)/2;var F="width="+C+", height="+A;F+=", top="+D+", left="+E;F+=", directories=no";F+=", location=no";F+=", menubar=no";F+=", resizable=yes";F+=", scrollbars=auto";F+=", status=no";F+=", toolbar=no";helppopup=window.open(B,"Demandware_Online_Help",F);
+if(window.focus){helppopup.focus();}return false;}
