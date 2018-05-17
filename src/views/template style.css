@@ -1,0 +1,179 @@
+/* CSS for This Template */
+
+h1 {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Salesforce Sans";
+    margin: 0;
+    padding: 10px ;
+    border-bottom: 1px solid red;
+    background: #16325c;
+    border-color: inherit;
+    padding: 0.75rem 1rem;    
+}
+
+p {
+    font-size: 14px;
+    font-family: "Salesforce Sans";
+    line-height: 140%;
+    padding:10px;
+}
+
+a {
+    color: #8ebce6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pink-button {
+    margin: 10px 0 10px 10px;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 140%;
+    white-space: nowrap;
+    background-image: none;
+    display: inline-block;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #0070d2;
+    border: 1px solid #0070d2;
+    color: white;    
+
+}
+
+.pink-button:hover {
+    margin-top: 10px;
+    background: #005fb2;
+}
+
+
+/* --- Selectors from Global CSS --- */
+
+._pendo-guide-container_ {
+    /* -- Guide border, shadow, background, etc. -- */
+    border-radius: 6px;
+    background: #333;
+    border: none;
+    /*padding: 30px;*/
+    padding: 0;
+    color: #bbb;
+    font-size: 14px;
+    font-family: "Salesforce Sans";
+    line-height: 20px;
+    font-weight: 300;
+}
+
+._pendo-guide-container_ ._pendo-guide-content_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+    text-align: left;
+    padding: 0;
+    border-color: #061c3f;
+    color: white;
+    background: #061c3f;    
+}
+
+._pendo-guide-container_ ._pendo-close-guide_ {
+    /* Close guide icon */
+    display: inline;
+    font-size: 28px;
+    font-family: "Salesforce Sans";
+    font-weight: 100;
+    top: 6px;
+    right: 15px;
+    color: #999;
+}
+
+._pendo-guide-container_ ._pendo-close-guide_:hover {
+    /* Close guide icon hover effects*/
+    color: #666;
+}
+
+
+/* -- Pointer at edge of tooltip -- */
+
+._pendo-guide-arrow_,
+._pendo-guide-arrow-border_ {
+    position: absolute;
+    font-size: 0;
+    font-family: "Salesforce Sans";
+    line-height: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-style: solid;
+    ;
+}
+
+._pendo-guide-arrow-top_,
+._pendo-guide-arrow-border-top_ {
+    border-top: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+}
+
+._pendo-guide-arrow-left_,
+._pendo-guide-arrow-border-left_ {
+    border-left: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+._pendo-guide-arrow-right_,
+._pendo-guide-arrow-border-right_ {
+    border-right: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+._pendo-guide-arrow-bottom_,
+._pendo-guide-arrow-border-bottom_ {
+    border-bottom: 0;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+._pendo-guide-arrow_ {
+    z-index: 100;
+}
+
+._pendo-guide-arrow-top_ {
+    border-bottom-color: #16325c;
+}
+._pendo-guide-arrow-left_ {
+    border-right-color: #16325c;
+}
+
+._pendo-guide-arrow-right_ {
+    border-left-color: #16325c;
+}
+
+._pendo-guide-arrow-bottom_ {
+    border-top-color: #061c3f;
+}
+
+._pendo-guide-arrow-border-top_ {
+    border-bottom-color: #061c3f;
+}
+
+._pendo-guide-arrow-border-left_ {
+    border-right-color: #333;
+}
+
+._pendo-guide-arrow-border-right_ {
+    border-left-color: #333;
+}
+
+._pendo-guide-arrow-border-bottom_ {
+    border-top-color: #333;
+}

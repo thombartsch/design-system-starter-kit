@@ -1,76 +1,108 @@
-<!--
-  Record Home Page Header
-  https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home
+<header class="slds-global-header_container">
+            <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+            <div class="slds-global-header slds-grid slds-grid--align-spread">
+                <div class="slds-global-header__item">
+                    <div class="slds-global-header__logo">
+                        <img src="/assets/images/logo-noname.svg" alt="">
+                    </div>
+                </div>
+                <div class="slds-global-header__item slds-global-header__item--search">
+                    <div class="slds-form-element slds-lookup">
+                        <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+                        <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
+                            <svg aria-hidden="true" class="slds-input__icon">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                            </svg>
+                            <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+                    <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
+                        <button class="slds-button" title="peredleten name" aria-haspopup="true">
+                            <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
+                                <img src="/assets/images/avatar2.jpg" alt="peredleten name">
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!--
+Navigation Bar component
+https://www.lightningdesignsystem.com/components/global-navigation/
 -->
+            <div class="slds-context-bar">
+                <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
+                    <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+                        <div class="slds-context-bar__icon-action">
+                            <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                                <span class="slds-icon-waffle">
+                                    <span class="slds-r1"></span>
+                                    <span class="slds-r2"></span>
+                                    <span class="slds-r3"></span>
+                                    <span class="slds-r4"></span>
+                                    <span class="slds-r5"></span>
+                                    <span class="slds-r6"></span>
+                                    <span class="slds-r7"></span>
+                                    <span class="slds-r8"></span>
+                                    <span class="slds-r9"></span>
+                                </span>
+                                <span class="slds-assistive-text">Open App Launcher</span>
+                            </button>
+                        </div>
+                        <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                            <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span>
+                        </span>
+                    </div>
+                </div>
+                <nav class="slds-context-bar__secondary" role="navigation">
+                    <ul class="slds-grid">
+                        <li class="slds-context-bar__item">
+                            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                                <span class="slds-truncate">Business Manager</span>
+                            </a>
+                        </li>
+                        <li class="slds-context-bar__item slds-is-active">
+                            <a href="index.html" class="slds-context-bar__label-action" title="Home">
+                                <span class="slds-truncate">Campaigns</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-<div class="slds-page-header" role="banner">
-  <div class="slds-grid">
-    <div class="slds-col slds-has-flexi-truncate">
-      <div class="slds-media slds-no-space slds-grow">
-        <div class="slds-media__figure">
-          <svg aria-hidden="true" class="slds-icon slds-icon-standard-user">
-            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
-          </svg>
-        </div>
-        <div class="slds-media__body">
-          <p class="slds-text-title--caps slds-line-height--reset">Record Type</p>
-          <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="{{ recordTitle }}">{{ recordTitle }}</h1>
-        </div>
-      </div>
-    </div>
-    <div class="slds-col slds-no-flex slds-grid slds-align-top">
-      <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive">
-        <span class="slds-text-not-selected">
-          <svg aria-hidden="true" class="slds-button__icon--stateful slds-button__icon--left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-          </svg>Follow</span>
-        <span class="slds-text-selected">
-          <svg aria-hidden="true" class="slds-button__icon--stateful slds-button__icon--left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-          </svg>Following</span>
-        <span class="slds-text-selected-focus">
-          <svg aria-hidden="true" class="slds-button__icon--stateful slds-button__icon--left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>Unfollow</span>
-      </button>
-      <div class="slds-button-group" role="group">
-        <button class="slds-button slds-button--neutral">Edit</button>
-        <button class="slds-button slds-button--neutral">Delete</button>
-        <button class="slds-button slds-button--neutral">Clone</button>
-        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" aria-expanded="false">
-          <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
-            <svg aria-hidden="true" class="slds-button__icon">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-            </svg>
-            <span class="slds-assistive-text">More Actions</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <ul class="slds-grid slds-page-header__detail-row">
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 1">Field 1</p>
-      <p class="slds-text-body--regular slds-truncate" title="Description that demonstrates truncation with a long text field">Description that demonstrates truncation with a long text field.</p>
-    </li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field2 (3)">Field 2 (3)
-        <button class="slds-button slds-button--icon" aria-haspopup="true">
-          <svg aria-hidden="true" class="slds-button__icon slds-button__icon--small">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-          </svg>
-          <span class="slds-assistive-text">More Actions</span>
-        </button>
-      </p>
-      <p class="slds-text-body--regular">Multiple Values</p>
-    </li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 3">Field 3</p><a href="javascript:void(0);">Hyperlink</a></li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
-      <p>
-        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
-      </p>
-    </li>
-  </ul>
-</div>
+                <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
+                    <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
+                        <span class="slds-truncate">Site Genesis</span>
+                    </a>
+                    <div class="slds-context-bar__icon-action">
+                        <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Open object switcher menu</span>
+                        </button>
+                    </div>
+                    <div class="slds-dropdown slds-dropdown--right">
+                        <ul class="slds-dropdown__list" role="menu">
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                    <span class="slds-truncate">
+                                        <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+                                        </svg>Site Genesis</span>
+                                </a>
+                            </li>
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                    <span class="slds-truncate">
+                                        <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
+                                        </svg>Site Genesis Global</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </header>
