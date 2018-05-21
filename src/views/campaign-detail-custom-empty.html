@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.: Campaign: Name :.</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+
+
+</head>
+
+<body>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+
+
+
+
+
+
+  {% include "_inc-page-header.html" %}
+
+  <main class="app-wrapper">
+
+      <div class="slds-brand-band slds-brand-band_medium slds-template_default">
+        {% include "_inc-detailpage-pageheader.html" %}
+      <!-- PAGES DETAIL -->
+      <div class="slds-grid slds-m-top_small">
+        <div class="slds-col  slds-size_1-of-1">
+          <!-- SCHEDULE & QUALIFIERS -->
+          <div>
+            <div class="slds-tabs_default slds-p-around--medium slds-card">
+              <ul class="slds-tabs_default__nav" role="tablist">
+                <li class="slds-tabs_default__item" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="campaign-detail.html" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-default-1" id="tab-default-1__item">Qualifiers (0)</a></li>
+                <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="campaign-detail-experiences.html" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Experiences (0)</a></li>
+                <li class="slds-tabs_default__item slds-is-active" title="Item Three" role="presentation"><a class="slds-tabs_default__link" href="campaign-detail-custom.html" role="tab" tabindex="-1" aria-selected="true" aria-controls="tab-default-3" id="tab-default-3__item">Custom Attributes (0)</a></li>
+              </ul>
+              <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+                <div class="slds-grid slds-col">
+                  <div class="slds-size_1-of-1" id="custom-area">
+                    <div class="slds-col">
+                      <article class="slds-card slds-card 2slds-card_boundary">
+                        <div class="slds-card__body slds-card__body_inner">
+                          <div class="">
+                            <div class="slds-form">
+                              <fieldset class="slds-form-element">
+                                <legend class="slds-form-element__label slds-text-title_caps">Legend if applicable</legend>
+                                <div class="slds-form-element__group">
+                                  <div class="slds-form-element__row">
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="input-01">Label</label>
+                                      <input type="text" id="input-01" class="slds-input" />
+                                    </div>
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="input-02">Label</label>
+                                      <input type="text" id="input-02" class="slds-input" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /PAGES DETAIL -->
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <div class="slds-hide modal-dialog-add">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-modal_large slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse slds-close-add" title="Close">
+<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+</svg>
+<span class="slds-assistive-text">Close</span>
+</button>
+          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Modal Name for Add/Edit</h2>
+        </header>
+        <div class="slds-modal__content slds-grid slds-grow" id="modal-content-id-1">
+          <div class="slds-grid slds-grid_vertical">
+            <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+              <div class="slds-form-element">
+                <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-6">Search</label>
+                <div class="slds-form-element__control">
+                  <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-6" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search" />
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+</svg>
+</span>
+                      </div>
+                      <div id="listbox-unique-id" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+<span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+<svg class="slds-icon slds-icon_small" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+</svg>
+<span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                              </span>
+                              <span class="slds-media__body">
+<span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                          <li role="presentation" class="slds-listbox__item">
+                            <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <span class="slds-media__figure">
+<span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+<svg class="slds-icon slds-icon_small" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
+</svg>
+<span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+                              </span>
+                              <span class="slds-media__body">
+<span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-text-title slds-m-top_x-small" aria-live="polite">0 Item(s) Selected</div>
+            </div>
+            <div class="slds-scrollable slds-grow">
+              <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th scope="col" style="width: 3.75rem;"></th>
+                    <th aria-label="Name" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+<span class="slds-assistive-text">Sort by: </span>
+<span class="slds-truncate" title="Name">Name</span>
+<div class="slds-icon_container">
+<svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+</svg>
+</div>
+</a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-5" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+<span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+<span class="slds-assistive-text">Sort by: </span>
+<span class="slds-truncate" title="Attribute">Attribute</span>
+<div class="slds-icon_container">
+<svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+</svg>
+</div>
+</a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-6" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+<span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 2" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+<span class="slds-assistive-text">Sort by: </span>
+<span class="slds-truncate" title="Attribute 2">Attribute 2</span>
+<div class="slds-icon_container">
+<svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+</svg>
+</div>
+</a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 2 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-7" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+<span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th aria-label="Attribute 3" aria-sort="none" class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+<span class="slds-assistive-text">Sort by: </span>
+<span class="slds-truncate" title="Attribute 3">Attribute 3</span>
+<div class="slds-icon_container">
+<svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
+</svg>
+</div>
+</a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
+                      <div class="slds-resizable">
+                        <input type="range" min="20" max="1000" aria-label="Attribute 3 column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-8" tabindex="-1" />
+                        <span class="slds-resizable__handle">
+<span class="slds-resizable__divider"></span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-9" tabindex="-1" value="on" />
+                        <label for="add-checkbox-9" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 1</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-10" tabindex="-1" value="on" />
+                        <label for="add-checkbox-10" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 2</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-11" tabindex="-1" value="on" />
+                        <label for="add-checkbox-11" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 3</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-12" tabindex="-1" value="on" />
+                        <label for="add-checkbox-12" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 4</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-13" tabindex="-1" value="on" />
+                        <label for="add-checkbox-13" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 5</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-14" tabindex="-1" value="on" />
+                        <label for="add-checkbox-14" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 6</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-15" tabindex="-1" value="on" />
+                        <label for="add-checkbox-15" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 7</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                  <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="-1" class="slds-text-align_right" style="width: 3.75rem;">
+                      <div class="slds-checkbox_add-button">
+                        <input type="checkbox" class="slds-assistive-text" id="add-checkbox-16" tabindex="-1" value="on" />
+                        <label for="add-checkbox-16" class="slds-checkbox_faux">
+<span class="slds-assistive-text">Select item 8</span>
+</label>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <div class="slds-truncate" title="Attribute Value">Attribute Value</div>
+                    </th>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 2">Attribute Value 2</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 3">Attribute Value 3</div>
+                    </td>
+                    <td role="gridcell">
+                      <div class="slds-truncate" title="Attribute Value 4">Attribute Value 4</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral slds-close-add">Cancel</button>
+          <button class="slds-button slds-button_brand slds-close-add">Save</button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </div>
+
+  <div class="slds-notify_container slds-hide" id="toast-id-1">
+    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+      <span class="slds-assistive-text">success</span>
+      <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+<svg class="slds-icon slds-icon_small" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+</svg>
+</span>
+      <div class="slds-notify__content">
+        <h2 class="slds-text-heading_small ">The page has been deleted.</h2>
+      </div>
+      <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" id="js-close-toast-id-1" title="Close">
+<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+</svg>
+<span class="slds-assistive-text">Close</span>
+</button>
+    </div>
+  </div>
+
+
+
+  <div class="slds-notify_container slds-hide" id="created-toast">
+    <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+      <span class="slds-assistive-text">success</span>
+      <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+<svg class="slds-icon slds-icon_small" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+</svg>
+</span>
+      <div class="slds-notify__content">
+        <h2 class="slds-text-heading_small ">The A/B Test "ID" has been successfully created.</h2>
+      </div>
+      <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse close-toast-2" title="Close">
+<svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+</svg>
+<span class="slds-assistive-text">Close</span>
+</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
+  <!-- JAVASCRIPT -->
+  <script src='/scripts/jquery-3.2.1.min.js'></script>
+  <script src='/scripts/jquery-ui.min.js'></script>
+  <script src='/scripts/stupidtable.min.js'></script>
+
+  <script>
+    { % include "_inc-js.html" %
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
