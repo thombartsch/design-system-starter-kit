@@ -25,7 +25,7 @@ $static-font-path: '/assets/fonts/webfonts';
 
 html.list-view {
     /*background-color: #afc5de;*/
-    background-color: #205c9f;
+    /*background-color: #205c9f;*/
 }
 
 
@@ -36,6 +36,16 @@ html.list-view {
   background-position: top left;
 }
 */
+
+html{
+  background-color: #afc5de;
+}
+
+
+.slds-global-header__logo>img{
+  height: 40px;
+  width: auto;
+}
 
 .slds-brand-band:before {
     background-image: url(/assets/banner-brand-default.png), -webkit-gradient(linear, left bottom, left top, from(rgba(32, 92, 159, 0)), to(#205c9f));
@@ -100,7 +110,7 @@ html.list-view {
 
 .slds-context-bar__item.slds-is-active,
 .slds-context-bar__item:not(.slds-no-hover):hover {
-    border-bottom: 3px solid #84BD00;
+    /*border-bottom: 3px solid #84BD00;*/
 }
 
 .slds-context-bar__item.slds-is-active {
