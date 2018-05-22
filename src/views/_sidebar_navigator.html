@@ -1,0 +1,126 @@
+<!-- NAVIGATOR -->
+<div class="slds-filters slds-p-around_none">
+        <div class="slds-filters__header slds-grid slds-has-divider_bottom">
+            <h2 class="slds-align-middle slds-text-heading_small">Navigator</h2>
+            <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small" title="Close Filter Panel" id="button-close-navigator">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close Filter Panel</span>
+            </button>
+        </div>
+
+    <ul class="_OLD_my_2col_navigator _OLD_slds-tree">
+        <li>
+            <div class="slds-tree__item slds-grid  slds-border_bottom ">
+                <div>
+                    <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                        </svg>
+                        <span class="slds-assistive-text">Expand Tree Branch</span>
+                    </button>
+                </div>
+                <div class="slds-p-around_xx-small slds-truncate slds-col slds-p-left--small slds-grid">
+                    <div>
+                        <span id="tree0-node1__label" tabindex="-1" role="presentation" class="slds-truncate" title="Top region">Top Region</span>
+                    </div>
+                    <div class="slds-marker slds-hide slds-m-top_none slds-p-top_none" style="margin-top: -5px !important;color: blue;margin-left: 5px;">
+                        <svg class="slds-button__icon slds-button__icon_x-small slds-m-top--none" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#record" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="slds-p-around_xx-small slds-truncate 2slds-col slds-p-right--small">
+                    <span id="regionlimit" class="slds-text-color_default">0</span>
+                    <span id="" class="slds-text-color_weak">/ 2</span>
+                </div>
+
+            </div>
+        </li>
+        <li>
+            <ul id="navigator" class="list slds-has-dividers_bottom-space">
+
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="_OLD_my_2col_navigator _OLD_slds-tree">
+        <li>
+            <div class="slds-tree__item slds-grid  slds-border_bottom ">
+                <div>
+                    <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                        </svg>
+                        <span class="slds-assistive-text">Expand Tree Branch</span>
+                    </button>
+                </div>
+                <div class="slds-p-around_xx-small slds-truncate slds-col slds-p-left--small">
+                    <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Component Name">Bottom Region</a>
+                </div>
+
+            </div>
+        </li>
+        <li>
+            <ul id="navigatorb" class="list slds-has-dividers_bottom-space">
+
+            </ul>
+        </li>
+    </ul>
+
+
+
+
+{#
+    <ul class="slds-tree slds-p-left_small slds-p-right_small" role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1" id="">
+        <li id="" role="treeitem" aria-level="1" aria-expanded="true">
+            <div class="slds-tree__item slds-p-left_none">
+                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-controls="tree0-node1" title="Toggle">
+                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Toggle</span>
+                </button>
+                <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="REGION A">REGION A</a>
+                <div class="slds-p-left_large slds-hide"><span class="slds-badge">2 of 1</span></div>
+            </div>
+        </li>
+    </ul>
+    <ul class="slds-tree slds-p-left_small slds-p-right_small" role="tree" aria-labelledby="treeheading" aria-activedescendant="tree0-node1" id="navigator-container">
+
+
+    </ul>
+</div>
+
+
+<!-- /NAVIGATOR -->
+
+
+<div class="slds-hide">
+    <li id="" class="slds-tree__item dummy-component-4" role="treeitem" aria-level="1" aria-expanded="true">
+        <div>
+            <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-controls="tree0-node1" title="Toggle">
+                <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                </svg>
+                <span class="slds-assistive-text">Toggle</span>
+            </button>
+            <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Component Name">Column Component</a>
+            <button class="slds-button slds-button_icon slds-button_icon slds-m-left_x-small" aria-controls="tree0-node1" title="Toggle">
+                <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+                </svg>
+                <span class="slds-assistive-text">Toggle</span>
+            </button>
+        </div>
+    </li>
+
+#}
+
+
+
+
+
+</div>

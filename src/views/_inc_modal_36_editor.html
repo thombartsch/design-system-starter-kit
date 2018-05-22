@@ -1,0 +1,58 @@
+<!-- PRODUCT PICKER EDITOR -->
+<div class="modal-editor-36 editor slds-hide productpicker-component-editor">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-36" class="slds-modal slds-modal_large slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse trigger-close-modal" title="Close">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Product Component</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium modal-content-id-36">
+                <!--  EDITOR CONTENT-->
+
+
+                <div class="editor">
+                    <div class="slds-tabs_default">
+                        <ul class="slds-tabs_default__nav" role="tablist">
+                            <li class="slds-tabs_default__item 2slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-361" id="tab-default-361__item">Content</a></li>
+                            <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-362" id="tab-default-362__item">Rules</a></li>
+                        </ul>
+
+                        <div id="tab-default-361" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-361__item">
+                            <!-- CONTENT -->
+                            {% include "_inc_productselected.html" ignore missing %}
+                            <!-- /CONTENT -->
+                        </div>
+                        <div id="tab-default-362" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-362__item">
+                            <!-- RULES -->
+                            {% include "_inc_rules.html" ignore missing %}
+                            <!-- /RULES -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--  /EDITOR CONTENT-->
+            </div>
+            <footer class="slds-modal__footer slds-grid">
+                <div>
+                    <button class="slds-button slds-button--neutral trigger-delete-component">Delete Component</button>
+                </div>
+                <div class="slds-col">
+                    <button class="slds-button slds-button_neutral trigger-close-modal">Cancel</button>
+                    <button class="slds-button slds-button_brand trigger-close-modal">Save</button>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+<!-- /EDITOR -->
+
+
+
+<!-- /PRODUCT PICKER EDITOR -->

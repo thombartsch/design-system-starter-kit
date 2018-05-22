@@ -1,0 +1,61 @@
+<div class="slds-text-align_left" 2style="width: 440px;">
+  <div class="slds-form slds-form_compound">
+    <fieldset class="slds-form-element">
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-01">ID</label>
+            <input type="text" id="input-01" class="slds-input" />
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Enabled</label>
+            <select class="slds-select">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-1">
+            <label class="slds-form-element__label" for="input-03">Description</label>
+            <input type="text" id="input-03" class="slds-input" />
+          </div>
+        </div>
+
+      </div>
+    </fieldset>
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-text-title_caps">Scheduling</legend>
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open  slds-size_1-of-2">
+              <label class="slds-form-element__label" for="date-input-id">Start Date</label>
+              <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                <input type="text" id="date-input-id" placeholder="No Start Date" class="slds-input" />
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                  </svg>
+                  <span class="slds-assistive-text">Select a date</span>
+                </button>
+              </div>
+            {% include "include-calendar.html" ignore missing %}
+          </div>
+          <div class="slds-form-element slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open  slds-size_1-of-2">
+              <label class="slds-form-element__label" for="date-input-id">End Date</label>
+              <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                <input type="text" id="date-input-id" placeholder="No End Date" class="slds-input" />
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon--right" title="Select a date">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#event" />
+                  </svg>
+                  <span class="slds-assistive-text">Select a date</span>
+                </button>
+              </div>
+            {% include "include-calendar.html" ignore missing %}
+          </div>
+
+        </div>
+  </fieldset>
+  </div>
+</div>

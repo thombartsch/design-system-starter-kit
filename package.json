@@ -12,8 +12,8 @@
     "lint:css": "stylelint src/styles/**/*.scss"
   },
   "engines": {
-    "node": ">=6.5.0",
-    "npm": ">=3.10.5"
+    "node": "^6.5.0",
+    "npm": "^3.10.5"
   },
   "keywords": [
     "lightning",
@@ -25,10 +25,11 @@
   "author": "Salesforce",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@salesforce-ux/design-system": "~2.3.0",
+    "@salesforce-ux/design-system": "~2.*",
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "express": "^4.15.2",
+    "file-type": "^6.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",

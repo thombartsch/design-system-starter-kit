@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <title>Sample</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+    </head>
+
+    <body>
+
+        <style>
+            #colA{
+                background:url('https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dw07ed42d2/images/landing/pexels-photo-175718.jpeg') no-repeat;
+                background-size: 100% auto;
+                height:40vh;
+            }
+
+            #colB{
+                background:url('https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dw1bc7ea27/images/landing/pexels-photo-415265.jpeg') no-repeat;
+                background-size: 100% auto;
+                height:40vh;
+            }
+            #colC{
+                background:url('https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dwc61d9944/images/landing/mens1.jpg') no-repeat;
+                background-size: 100% auto;
+            }
+
+            .row-first {
+                height:80vh;
+                overflow: hidden;
+                margin-left: 0;
+            }
+            .row{
+                margin-left: 0;
+            }
+            .bottom-right {
+                position: absolute;
+                bottom:20px;
+                right:40px;
+                background: none;
+                color: #fff;
+                text-align: right;
+            }
+            .bottom-left {
+                position: absolute;
+                bottom:20px;
+                left:20px;
+                background: none;
+                color: #fff;
+                text-align: left;
+            }
+            .large{
+                font-size: 2rem;
+                display: block;
+            }
+            .small{
+                font-size: 1rem;
+                display: block;
+            }
+            .border-left{
+                border-left:10px solid #fff;
+            }
+            .border-right{
+                border-right:10px solid #fff;
+            }
+            .border-top{
+                border-top:10px solid #fff;
+            }
+            .border-bottom{
+                border-bottom:10px solid #fff;
+            }
+            .padding-right{
+                padding-right: 1.5rem;
+            }
+            .padding-top{
+                margin-top: 1rem;
+            }
+
+            .experience-landing {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .col-6{
+                padding: 0;
+                margin: 0;
+            }
+
+        </style>
+
+
+        <style>
+            #imageA{
+                background: url(https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dw07ed42d2/images/landing/pexels-photo-175718.jpeg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            #imageB{
+                background: url(https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dw1bc7ea27/images/landing/pexels-photo-415265.jpeg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            #imageC{
+                background: url(https://dev02-performance06-qa.demandware.net/on/demandware.static/-/Library-Sites-MobileFirstSharedLibrary/default/dwc61d9944/images/landing/mens1.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        </style>
+
+
+
+
+
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6" style="background-color:yellow;">
+                    <div class="row">
+                        <div class="col" style="background-color:yellow;" id="imageA">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="background-color:blue;" id="imageB">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="background-color:pink;" id="imageC">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="experience-landing">
+            <div class="row row-first">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col" id="colA">
+                            <div class="bottom-right">
+                                <span class="small">Clothing that works as hard as you do</span>
+                                <span class="large">Built to last</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="colB">
+                            <div class="bottom-left">
+                                <span class="small">New Collection</span>
+                                <span class="large">Womens Dresses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" id="colC">
+                    <div class="bottom-left">
+                        <span class="small">New Collection</span>
+                        <span class="large">Top Mens Wear</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>

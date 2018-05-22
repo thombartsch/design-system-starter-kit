@@ -1,0 +1,38 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template-editor.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+  <div class="slds-grid">
+    <div class="slds-border--right slds-p-around_small" id="tools">
+      {% include "_sidebar-tools.html" ignore missing %}
+    </div>
+    <div class="slds-border--right slds-p-left_none slds-p-right_none" id="sidebar-navigator">
+      {% include "_sidebar_navigator.html" ignore missing %}
+    </div>
+    <div class="slds-col" id="main-page">
+      {% include "_inc_preview-settings.html" ignore missing %}
+      <div class="slds-col page-content" id="2editor">
+        {% include "_editor.html" ignore missing %}
+      </div>
+    </div>
+  </div>
+    {% include "_inc_toolbar.html" ignore missing %}
+    {% include "_inc_modal-properties-page.html" ignore missing %}
+    {% include "_inc_modal-publish.html"  ignore missing %}
+    {% include "_inc_modal-unpublish.html"  ignore missing %}
+    {% include "_inc_toast-published.html"  ignore missing %}
+    {% include "_inc_toast-saved.html"  ignore missing %}
+{% endblock %}

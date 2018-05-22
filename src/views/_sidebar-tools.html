@@ -1,0 +1,55 @@
+<!-- TOOLS -->
+<ul>
+    <li id="side_page_settings">
+        <div class="slds-p-top_small slds-p-bottom_small">
+            <button class="slds-button slds-button--icon slds-button--icon-x-small" title="Settings" id="js-open-modal-100">
+                <span class="slds-icon_container slds-icon-utility-announcement" title="Settings">
+                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                </svg>
+                <span class="slds-assistive-text">Settings</span>
+                </span>
+            </button>
+        </div>
+    </li>
+    <li id="side_navigator">
+        <div class="slds-p-top_small slds-p-bottom_small">
+        <button class="slds-button slds-button--icon slds-button--icon-x-small" title="Navigator" id="button-page-navigator">
+            <span class="slds-icon_container slds-icon-utility-announcement" title="Navigator">
+            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#summary"></use>
+            </svg>
+            <span class="slds-assistive-text">Navigator</span>
+            </span>
+        </button>
+        </div>
+    </li>
+    <li class="slds-hide" id="side_preview_settings">
+        <div class="slds-p-top_small slds-p-bottom_small">
+        <button class="slds-button slds-button--icon slds-button--icon-x-small" title="Preview Settings"  id="button-preview-settings">
+            <span class="slds-icon_container slds-icon-utility-announcement" title="Preview Setting">
+            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+            </svg>
+            <span class="slds-assistive-text">Preview Settings</span>
+            </span>
+        </button>
+        </div>
+    </li>
+    {#
+    <li id="side_device_selector">
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-p-top_small slds-p-bottom_small" id="device-selecta">
+            <button class="slds-button slds-button--icon slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                <span class="slds-icon_container slds-icon-utility-announcement" title="Device Settings">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+                    </svg>
+                        <span class="slds-assistive-text">Device Settings</span>
+                </span>
+            </button>
+            {% include "_inc_modal-devices.html" %}
+        </div>
+    </li>
+    #}
+</ul>
+<!-- /TOOLS -->

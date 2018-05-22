@@ -1,0 +1,125 @@
+<!--
+Templates leverage Nunjucks, a powerful templating language:
+https://mozilla.github.io/nunjucks/
+
+# Don't want to use Nunjucks?
+It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+Extend the global template
+-->
+{% extends "_template-editor.html" %}
+
+<!--
+Page content (gets injected into the template)
+-->
+{% block content %}
+
+<div class="slds-grid">
+    <div class="slds-border--right slds-p-around_small" id="tools">
+        {% include "_sidebar-tools.html" ignore missing %}
+    </div>
+    <div class="slds-border--right slds-p-left_none slds-p-right_none" id="sidebar-navigator">
+        <!-- NAVIGATOR -->
+        {% include "_sidebar_navigator.html" ignore missing %}
+        <!-- /NAVIGATOR -->
+    </div>
+    <div class="slds-col">
+        {% include "_inc_preview-settings.html" ignore missing %}
+        <div class="slds-col page-content region" id="2editor">
+            {% include "_inc_header-editor.html" ignore missing %}
+            <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+                <!-- REGION-->
+                <ul id="region" class="list slds-has-dividers_bottom-space"></ul>
+                <!-- /REGION-->
+                {% include "_inc_dropdown_components.html" ignore missing %}
+            </div>
+            <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+                <!-- REGION-->
+                <ul id="regionB" class="list slds-has-dividers_bottom-space"></ul>
+                <!-- /REGION-->
+                {% include "_inc_dropdown_componentsb.html" ignore missing %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{#
+<div class="slds-grid slds-grid_align-center">
+    <div class="slds-grid slds-large-size_2-of-12 slds-grid_vertical slds-text-align_center slds-p-around_small 2region slds-theme_shade slds-border_right slds-border_bottom">
+        <!-- NAVIGATOR -->
+        <ul id="navigator" class="list slds-has-dividers_bottom-space">
+
+        </ul>
+        <!-- /NAVIGATOR -->
+    </div>
+</div>
+#}
+
+
+
+<!-- ALL DUMMIES -->
+<div id="alldummies">
+{% include "_inc_all_dummies.html" ignore missing%}
+
+
+
+{% include "_inc_toolbar.html" ignore missing %}
+{% include "_inc_modal-properties-page.html" ignore missing %}
+{% include "_inc_modal-publish.html"  ignore missing %}
+{% include "_inc_modal-unpublish.html"  ignore missing %}
+
+{% include "_inc_toast-published.html"  ignore missing %}
+{% include "_inc_toast-unpublished.html"  ignore missing %}
+
+
+
+
+{% include "_inc_modal-delete-component.html" ignore missing %}
+{% include "_inc_modal_4_editor.html" ignore missing %}
+{% include "_inc_modal_5_editor.html" ignore missing %}
+{% include "_inc_modal_31_editor.html" ignore missing %}
+{% include "_inc_modal_32_editor.html" ignore missing %}
+{% include "_inc_modal_33_editor.html" ignore missing %}
+{% include "_inc_modal_34_editor.html" ignore missing %}
+{% include "_inc_modal_35_editor.html" ignore missing %}
+{% include "_inc_modal_36_editor.html" ignore missing %}
+
+{% include "_inc_modal_37_editor.html" ignore missing %}
+{% include "_inc_modal_38_editor.html" ignore missing %}
+
+{% include "_inc_modal_40_editor.html" ignore missing %}
+
+{% include "_inc_modal_basket_editor.html" ignore missing %}
+
+{% include "_inc_modal_media-picker.html" ignore missing %}
+
+{% include "products.html" ignore missing %}
+
+
+{% include "_inc_modal_locale-warning.html" ignore missing %}
+
+{% include "_inc_toast-page-rules.html" ignore missing %}
+
+
+{% include "_inc_dropdown-basket.html" ignore missing %}
+
+
+</div>
+
+
+{# ADD STYLE FOR LIMITING DISPLAY OF COMPONENTS IN REGION 1 #}
+
+
+
+
+
+
+{% endblock %}

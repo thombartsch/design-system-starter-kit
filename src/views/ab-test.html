@@ -1,0 +1,2606 @@
+
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>.: Page List :.</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+
+        <script>
+            (function (apiKey) {
+                (function (p, e, n, d, o) {
+                    var v,
+                        w,
+                        x,
+                        y,
+                        z;
+                    o = p[d] = p[d] || {};
+                    o._q = [];
+                    v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
+                    for (w = 0, x = v.length; w < x; ++w)
+                        (function (m) {
+                            o[m] = o[m] || function () {
+                                o._q[m === v[0]
+                                     ? 'unshift'
+                                     : 'push']([m].concat([].slice.call(arguments, 0)));
+                            };
+                        })(v[w]);
+                    y = e.createElement(n);
+                    y.async = !0;
+                    y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                    z = e.getElementsByTagName(n)[0];
+                    z.parentNode.insertBefore(y, z);
+                })(window, document, 'script', 'pendo');
+                // Call this whenever information about your visitors becomes available Please use Strings, Numbers, or Bools for value types.
+                pendo.initialize({
+                    visitor: {
+                        id: 'VISITOR-UNIQUE-ID' // Required if user is logged in
+                        // email:        // Optional role:         // Optional You can add any additional visitor level key-values here, as long as it's not one of the above reserved names.
+                    },
+                    account: {
+                        // id:           'ACCOUNT-UNIQUE-ID' // Highly recommended name:         // Optional planLevel:    // Optional planPrice:    // Optional creationDate: // Optional You can add any additional account level key-values here, as long as it's not one of
+                        // the above reserved names.
+                    }
+                });
+            })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
+        </script>
+    </head>
+
+    <body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+        <!--
+Base Global Header component
+https://www.lightningdesignsystem.com/components/global-header/
+-->
+        <header class="slds-global-header_container">
+            <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
+            <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+            <div class="slds-global-header slds-grid slds-grid--align-spread">
+                <div class="slds-global-header__item">
+                    <div class="slds-global-header__logo">
+                        <img src="/assets/images/logo-noname.svg" alt=""/>
+                    </div>
+                </div>
+                <div class="slds-global-header__item slds-global-header__item--search">
+                    <div class="slds-form-element slds-lookup">
+                        <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+                        <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
+                            <svg aria-hidden="true" class="slds-input__icon">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                            </svg>
+                            <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search"/>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+                    <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
+                        <button class="slds-button" title="peredleten name" aria-haspopup="true">
+                            <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
+                                <img src="/assets/images/avatar2.jpg" alt="peredleten name"/>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!--
+Navigation Bar component
+https://www.lightningdesignsystem.com/components/global-navigation/
+-->
+            <div class="slds-context-bar">
+                <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
+                    <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+                        <div class="slds-context-bar__icon-action">
+                            <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                                <span class="slds-icon-waffle">
+                                    <span class="slds-r1"></span>
+                                    <span class="slds-r2"></span>
+                                    <span class="slds-r3"></span>
+                                    <span class="slds-r4"></span>
+                                    <span class="slds-r5"></span>
+                                    <span class="slds-r6"></span>
+                                    <span class="slds-r7"></span>
+                                    <span class="slds-r8"></span>
+                                    <span class="slds-r9"></span>
+                                </span>
+                                <span class="slds-assistive-text">Open App Launcher</span>
+                            </button>
+                        </div>
+                        <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                            <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span>
+                        </span>
+                    </div>
+                </div>
+                <nav class="slds-context-bar__secondary" role="navigation">
+                    <ul class="slds-grid">
+                        <li class="slds-context-bar__item">
+                            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                                <span class="slds-truncate">Business Manager</span>
+                            </a>
+                        </li>
+                        <li class="slds-context-bar__item slds-is-active">
+                            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                                <span class="slds-truncate">A/B Tests</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
+                    <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
+                        <span class="slds-truncate">Site Genesis</span>
+                    </a>
+                    <div class="slds-context-bar__icon-action">
+                        <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Open object switcher menu</span>
+                        </button>
+                    </div>
+                    <div class="slds-dropdown slds-dropdown--right">
+                        <ul class="slds-dropdown__list" role="menu">
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                    <span class="slds-truncate">
+                                        <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+                                        </svg>Site Genesis</span>
+                                </a>
+                            </li>
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                    <span class="slds-truncate">
+                                        <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
+                                        </svg>Site Genesis Global</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main class="app-wrapper">
+
+            <div class="slds-brand-band slds-brand-band_medium slds-template_default">
+                <div class="slds-card slds-has-bottom-magnet">
+                    <div class="slds-page-header slds-page-header--object-home">
+                        <div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-has-flexi-truncate">
+                                    <div class="slds-media slds-no-space slds-media_center slds-grow">
+                                        <div class="slds-media__figure">
+
+                                            <span class="slds-icon_container slds-icon-standard-cms">
+                                                <svg class="slds-icon" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#cms"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <div>
+                                                <nav role="navigation" aria-label="Breadcrumbs">
+                                                    <ol class="slds-breadcrumb slds-line-height_reset">
+                                                        <li class="slds-breadcrumb__item"><span>Online Marketing</span></li>
+                                                    </ol>
+                                                </nav>
+                                                <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Meta Tag Rules">A/B Tests</h1></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+                                    <div class="2slds-button-group" role="group">
+                                        <button class="slds-button slds-button--neutral trigger-add" id="">Import</button>
+                                        <button class="slds-button slds-button--neutral trigger-add" disabled id="">Export</button>
+                                        <button class="slds-button slds-button--neutral trigger-add" id="js-open-modal-id-2">New</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-align-bottom">
+                                    <p class="slds-page-header__info">4 results • <span id="sorted_txt">sorted by name (asc)</span></p>
+                                </div>
+                                <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-input-has-icon slds-input-has-icon--right">
+                                            <svg aria-hidden="true" class="slds-input__icon">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                            </svg>
+                                            <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search A/B Tests" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1">
+                                            <svg class="slds-button__icon" aria-hidden="true">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                            </svg><span class="slds-assistive-text">Delete</span></button>
+                                        <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" id="HkBUxsHK3x">
+                                            <button aria-expanded="false" aria-haspopup="true" class="slds-hide slds-button slds-button--icon-more ignore-click-HkBUxsHK3x" tabindex="0">
+                                                <svg class="slds-button__icon" aria-hidden="true">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                                                </svg>
+                                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small" viewBox="0 0 24 24" name="down">
+                                                    <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PAGES LIST -->
+
+                <div class="slds-has-top-magnet slds-grid slds-grow">
+                    <div class="slds-grow slds-grid layout-table-fix">
+                        <div class="slds-scrollable_y">
+                            <div class="slds-text-align_center">
+                                <div class="spinner">
+    <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid">
+      <thead>
+          <tr class="slds-line-height--reset">
+              <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
+                  <div class="slds-th__action slds-th__action--form">
+                      <span class="slds-checkbox">
+                          <input type="checkbox" name="options" id="checkbox-170">
+                          <label class="slds-checkbox__label" for="checkbox-170">
+                              <span class="slds-checkbox--faux"></span>
+                              <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                          </label>
+                      </span>
+                  </div>
+              </th>
+              <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:5rem" id="th_name" data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Name">ID</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" id="th_pagetype"  data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="page Type">Description</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:10em;" id="th_id"   data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="ID">Tags</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:25em">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Status">Schedule</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:6em" id="th_created"  data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Status</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8em" id="th_created"  data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Segments</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:13em" id="th_created"  data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Customer Groups</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+              <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:7em" id="th_created"  data-sort="string">
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Enabled</span>
+                      <div class="slds-icon_container">
+                          <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                          </svg>
+                      </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                  <div>
+                      <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                      <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+              </th>
+
+              <th scope="col" style="width:3.25rem;">
+                  <div class="slds-th__action"> <span class="slds-assistive-text">Actions</span> </div>
+              </th>
+          </tr>
+      </thead>
+
+
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_medium">
+        <span class="slds-assistive-text">Loading</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+    </div>
+
+
+</div>
+
+                                <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid" id="page_list">
+                                    <thead>
+                                        <tr class="slds-line-height--reset">
+                                            <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
+                                                <div class="slds-th__action slds-th__action--form">
+                                                    <span class="slds-checkbox">
+                                                        <input type="checkbox" name="options" id="checkbox-170">
+                                                        <label class="slds-checkbox__label" for="checkbox-170">
+                                                            <span class="slds-checkbox--faux"></span>
+                                                            <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </th>
+                                            <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:5rem" id="th_name" data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Name">ID</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" id="th_pagetype"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="page Type">Description</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:10em;" id="th_id"   data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="ID">Tags</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:25em">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Status">Schedule</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:6em" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Status</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:8em" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Segments</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:13em" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Customer Groups</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+                                            <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:7em" id="th_created"  data-sort="string">
+                                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Created">Enabled</span>
+                                                    <div class="slds-icon_container">
+                                                        <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                                                        </svg>
+                                                    </div> <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span> </a>
+                                                <div>
+                                                    <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                                                    <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0"> </div>
+                                            </th>
+
+                                            <th scope="col" style="width:3.25rem;">
+                                                <div class="slds-th__action"> <span class="slds-assistive-text">Actions</span> </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                      <tr class="slds-hint-parent">
+                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
+                                              <input type="checkbox" name="options" id="id-2">
+                                              <label class="slds-checkbox__label" for="id-2">
+                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                              </span>
+                                          </td>
+                                          <td scope="row">
+                                              <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">ID</a></div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Description</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">tags</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">online</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">1</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Everyone</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">true</div>
+                                          </td>
+
+                                          <td role="gridcell" style="width:3.25rem;">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                                      <svg class="slds-button__icon" aria-hidden="true">
+                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                                  <div class="slds-dropdown slds-dropdown--right">
+                                                      <ul class="slds-dropdown__list" role="menu">
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
+                                                          </li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr class="slds-hint-parent">
+                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
+                                              <input type="checkbox" name="options" id="id-2">
+                                              <label class="slds-checkbox__label" for="id-2">
+                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                              </span>
+                                          </td>
+                                          <td scope="row">
+                                              <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">ID</a></div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Description</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">tags</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">online</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">1</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Everyone</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">true</div>
+                                          </td>
+
+                                          <td role="gridcell" style="width:3.25rem;">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                                      <svg class="slds-button__icon" aria-hidden="true">
+                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                                  <div class="slds-dropdown slds-dropdown--right">
+                                                      <ul class="slds-dropdown__list" role="menu">
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
+                                                          </li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr class="slds-hint-parent">
+                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
+                                              <input type="checkbox" name="options" id="id-2">
+                                              <label class="slds-checkbox__label" for="id-2">
+                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                              </span>
+                                          </td>
+                                          <td scope="row">
+                                              <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">ID</a></div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Description</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">tags</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">online</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">1</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Everyone</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">true</div>
+                                          </td>
+
+                                          <td role="gridcell" style="width:3.25rem;">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                                      <svg class="slds-button__icon" aria-hidden="true">
+                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                                  <div class="slds-dropdown slds-dropdown--right">
+                                                      <ul class="slds-dropdown__list" role="menu">
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
+                                                          </li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr class="slds-hint-parent">
+                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
+                                              <input type="checkbox" name="options" id="id-2">
+                                              <label class="slds-checkbox__label" for="id-2">
+                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                              </span>
+                                          </td>
+                                          <td scope="row">
+                                              <div class="slds-truncate" title="test.adidas.de"><a href="page-editor.html">ID</a></div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Description</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">tags</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">12.31.2017 21:21 PM - 12.31.2017 21:21 PM</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">online</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">1</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">Everyone</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="">true</div>
+                                          </td>
+
+                                          <td role="gridcell" style="width:3.25rem;">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                                      <svg class="slds-button__icon" aria-hidden="true">
+                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                                  <div class="slds-dropdown slds-dropdown--right">
+                                                      <ul class="slds-dropdown__list" role="menu">
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="page-editor.html" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Menu Item One">Edit</span> </a>
+                                                          </li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+
+        <!-- /PAGES LIST -->
+        
+
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>
+            svg4everybody();
+        </script>
+        <!-- JAVASCRIPT -->
+        <script src='/scripts/jquery-3.2.1.min.js'></script>
+        <script src='/scripts/jquery-ui.min.js'></script>
+        <script src='/scripts/stupidtable.min.js'></script>
+        <script>
+            <!-- START SCRIPT -->
+            //DUMMY PAGE FUNCTIONALITY
+var activeComponent = undefined;
+var activePickerbase = undefined;
+
+var cloneCountA = 1;
+var cloneCountB = 1;
+
+var longtext = undefined;
+var selected_image = undefined;
+var selected_video = undefined;
+var selected_text = undefined;
+var selected_header = undefined;
+var selected_sub_header = undefined;
+
+var selected_product_name = undefined;
+var selected_product_brand = undefined;
+var selected_product_price = undefined;
+var selected_product_id = undefined;
+var selected_product_image = undefined;
+
+var seomax_a = 160;
+var seomax_b = 70;
+
+
+var $win = $(window); // or $box parent container
+var $box = $('#component-selecta');
+var $boxb = $('#language-selecta');
+var $boxc = $('#device-selecta');
+var $boxd = $('.sub-left').closest('.slds-dropdown-trigger');
+var $boxe = $('.sub-right .slds-dropdown-trigger');
+
+var show_recommendation = false;
+
+//var $box = $('.slds-dropdown-trigger');
+var copytext = undefined;
+
+
+//counter for components
+var regionlimit = 0;
+$('#regionlimit').text(regionlimit);
+
+
+
+
+
+
+
+//HIDE ALL MENUS
+$(function() {
+    $win.on('click.Bst', function(event) {
+        //MAIN COMPONENT SELECT
+        if (
+            $box.has(event.target).length == 0 //checks if descendants of $box was clicked
+            &&
+            !$box.is(event.target) //checks if the $box itself was clicked
+            &&
+            $($box).hasClass('slds-is-open')
+        ) {
+            $($box).toggleClass('slds-is-open')
+        }
+        //LOCALIZATION SELECT
+        if (
+            $boxb.has(event.target).length == 0 //checks if descendants of $box was clicked
+            &&
+            !$boxb.is(event.target) //checks if the $box itself was clicked
+            &&
+            $($boxb).hasClass('slds-is-open')
+        ) {
+            $($boxb).toggleClass('slds-is-open')
+        }
+        //DEVICE SELECT
+        if (
+            $boxc.has(event.target).length == 0 //checks if descendants of $box was clicked
+            &&
+            !$boxc.is(event.target) //checks if the $box itself was clicked
+            &&
+            $($boxc).hasClass('slds-is-open')
+        ) {
+            $($boxc).toggleClass('slds-is-open')
+        }
+        //SUB LEFT SELECT
+        if (
+            $boxd.has(event.target).length == 0 //checks if descendants of $box was clicked
+            &&
+            !$boxd.is(event.target) //checks if the $box itself was clicked
+            &&
+            $($boxd).hasClass('slds-is-open')
+        ) {
+            $($boxd).toggleClass('slds-is-open')
+        }
+        //SUB RIGHT SELECT
+        if (
+            $boxe.has(event.target).length == 0 //checks if descendants of $box was clicked
+            &&
+            !$boxe.is(event.target) //checks if the $box itself was clicked
+            &&
+            $($boxe).hasClass('slds-is-open')
+        ) {
+            $($boxe).toggleClass('slds-is-open')
+        }
+
+
+    });
+
+    return false;
+});
+
+
+
+//SORT table
+/*
+  $(this).click(function() {
+      if ($(this).is('.asc')) {
+        $(this).removeClass('asc');
+        $(this).addClass('desc selected');
+        sortOrder = -1;
+      }
+      else {
+        $(this).addClass('asc selected');
+        $(this).removeClass('desc');
+        sortOrder = 1;
+      }
+      $(this).siblings().removeClass('asc selected');
+      $(this).siblings().removeClass('desc selected');
+      var arrData = $('table').find('tbody >tr:has(td)').get();
+      arrData.sort(function(a, b) {
+        var val1 = $(a).children('td').eq(col).text().toUpperCase();
+        var val2 = $(b).children('td').eq(col).text().toUpperCase();
+        if($.isNumeric(val1) && $.isNumeric(val2))
+        return sortOrder == 1 ? val1-val2 : val2-val1;
+        else
+           return (val1 < val2) ? -sortOrder : (val1 > val2) ? sortOrder : 0;
+      });
+      $.each(arrData, function(index, row) {
+        $('tbody').append(row);
+      });
+    });
+  });
+*/
+
+
+
+
+
+
+
+//COUNT SEO CHARS
+
+$('#spn-id-seo_description').html(seomax_a + '  Remaining');
+$('#textarea-id-seo_description').keyup(function() {
+    var lenght1 = $('#textarea-id-seo_description').val().length;
+    var remaining = seomax_a - lenght1;
+    $('#spn-id-seo_description').html(remaining + '  Remaining');
+    if (remaining < 0) {
+        $('#spn-id-seo_description').css('opacity', '0.4').css('color', 'red');
+    } else {
+        $('#spn-id-seo_description').css('opacity', '1').css('color', 'black');
+    }
+    if (remaining < 10) {
+        $('#spn-id-seo_description').addClass('slds-destructive');
+    } else {
+        $('#spn-id-seo_description').removeClass('slds-destructive');
+    }
+
+});
+$('#spn-id-seo_title').html(seomax_b + '  Remaining');
+$('#input-seo_title').keyup(function() {
+    var lenght2 = $('#input-seo_title').val().length;
+    var remaining_b = seomax_b - lenght2;
+    $('#spn-id-seo_title').html(remaining_b + '  Remaining');
+    if (remaining_b < 0) {
+        $('#spn-id-seo_title').css('opacity', '0.4').css('color', 'red');
+    } else {
+        $('#spn-id-seo_title').css('opacity', '1').css('color', 'black');
+    }
+    if (remaining_b < 10) {
+        $('#spn-id-seo_title').css('color', 'red');
+    } else {
+        $('#spn-id-seo_title').css('color', 'black');
+    }
+
+});
+
+
+//CREATE PAGE TOAST
+$('button.js-save-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+    $('#created-toast').toggleClass('slds-hide');
+});
+
+
+$('button.close-toast-2').click(function() {
+    $('#created-toast').toggleClass('slds-hide');
+});
+
+
+
+//BACK TO LIST
+$('#back-to-list').click(function() {
+    location.href = 'page-list.html';
+});
+
+
+//SCREEN SIZES
+$('#trigger-phone').click(function() {
+    $('#device-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
+    $('.page-content').css('max-width', '320px');
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+
+});
+$('#trigger-tablet').click(function() {
+    $('#device-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
+    $('.page-content').css('max-width', '800px');
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+});
+$('#trigger-desktop').click(function() {
+    $('#device-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+
+    $('.page-content').css('max-width', '100%');
+    $('#tools .slds-dropdown-trigger').toggleClass('slds-is-open');
+});
+
+
+//LOCALES
+$('#trigger-us').click(function() {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+});
+$('#trigger-fr').click(function() {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+    $('#locale-warning').toggleClass('slds-hide');
+
+});
+$('#trigger-de').click(function() {
+    $('#language-selecta li').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+});
+
+
+
+
+
+//FILTER VIEW
+$('#trigger_preview').click(function() {
+    $('#poppinD').toggleClass('slds-hide');
+});
+$('.js-close-filter-view').click(function() {
+    $('#poppinD').toggleClass('slds-hide');
+});
+
+$('#poppinD button').click(function() {
+    $('#poppinD').toggleClass('slds-hide');
+});
+
+
+//PREVIEW
+$('#trigger-preview').click(function() {
+    $('.slds-button--icon-more').toggleClass('slds-hide');
+    $('.region').toggleClass('region region-off');
+    $('#editor').toggleClass('editor-off');
+    $('#trigger-back-to-edit').toggleClass('slds-hide');
+    $('#trigger-preview').toggleClass('slds-hide');
+    $('#tools').toggleClass('slds-hide');
+    $('.mini-menu').toggleClass('slds-hide');
+    $('.sub-mini-menu').toggleClass('slds-hide');
+    $('.placeholder').toggleClass('placeholder placeholder-off');
+    $('#trigger-publish').toggleClass('slds-hide');
+    $('#sidebar-navigator').toggleClass('slds-hide');
+    $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
+});
+$('#trigger-back-to-edit').click(function() {
+    $('.slds-button--icon-more').toggleClass('slds-hide');
+    $('.region-off').toggleClass('region-off region');
+    $('.editor-off').toggleClass('editor-off editor');
+    $('#trigger-back-to-edit').toggleClass('slds-hide');
+    //$('#trigger-preview').toggleClass('slds-hide');
+    $('#tools').toggleClass('slds-hide');
+    $('.mini-menu').toggleClass('slds-hide');
+    $('.sub-mini-menu').toggleClass('slds-hide');
+    $('.placeholder-off').toggleClass('placeholder-off placeholder');
+    $('#trigger-publish').toggleClass('slds-hide');
+    $('#sidebar-navigator').toggleClass('slds-hide');
+    $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
+});
+
+
+//PUBLISH
+$('#trigger-publish').click(function() {
+    $('#modal-id-101').toggleClass('slds-hide');
+});
+$('#modal-id-101 #trigger-close').click(function() {
+    $('#modal-id-101').toggleClass('slds-hide');
+});
+$('#modal-id-101 #trigger-cancel').click(function() {
+    $('#modal-id-101').toggleClass('slds-hide');
+});
+$('#modal-id-101 #trigger-publish').click(function() {
+    $('#modal-id-101').toggleClass('slds-hide');
+    $('#toast-page-published').toggleClass('slds-hide');
+    $('#trigger-publish').toggleClass('slds-hide');
+    //$('#trigger-preview').toggleClass('slds-hide');
+    $('#trigger-published').toggleClass('slds-hide');
+    $('#not_published').toggleClass('slds-hide');
+    $('#page_published').toggleClass('slds-hide');
+    $('#badge-offline').toggleClass('slds-hide');
+    $('#badge-online').toggleClass('slds-hide');
+});
+$('#toast-page-published .close-toast-2').click(function() {
+    $('#toast-page-published').toggleClass('slds-hide');
+});
+
+
+//UNPUBLISH
+$('#trigger-published').click(function() {
+    $('#modal-id-unpublish').toggleClass('slds-hide');
+});
+$('#modal-id-unpublish #trigger-close').click(function() {
+    $('#modal-id-unpublish').toggleClass('slds-hide');
+});
+$('#modal-id-unpublish #trigger-cancel').click(function() {
+    $('#modal-id-unpublish').toggleClass('slds-hide');
+});
+$('#modal-id-unpublish #trigger-publish').click(function() {
+    $('#modal-id-unpublish').toggleClass('slds-hide');
+    $('#toast-page-unpublished').toggleClass('slds-hide');
+    $('#trigger-publish').toggleClass('slds-hide');
+    $('#trigger-preview').toggleClass('slds-hide');
+    $('#trigger-published').toggleClass('slds-hide');
+    $('#not_published').toggleClass('slds-hide');
+    $('#page_published').toggleClass('slds-hide');
+    $('#badge-offline').toggleClass('slds-hide');
+    $('#badge-online').toggleClass('slds-hide');
+});
+
+$('#toast-page-unpublished .close-toast-2').click(function() {
+    $('#toast-page-unpublished').toggleClass('slds-hide');
+});
+
+
+//TRIGGER DELETE PAGE
+$('.js-open-modal-id-1').click(function() {
+    $('.modal-id-1').toggleClass('slds-hide');
+    $('.slds-dropdown-trigger').removeClass('slds-is-open');
+    $('.slds-dropdown-trigger').addClass('slds-is-closed');
+});
+
+//DELETE PAGE MODAL
+$('.modal-id-1 button.js-close-modal-id-1').click(function() {
+    $('.modal-id-1').toggleClass('slds-hide');
+    $('#toast-id-1').toggleClass('slds-hide');
+});
+
+//CLOSE DELETE TOAST
+$('#js-close-toast-id-1').click(function() {
+    $('#toast-id-1').toggleClass('slds-hide');
+});
+
+//TRIGGER NEW PAGE
+$('#js-open-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+
+//NEW PAGE MODAL
+$('.js-close-modal-id-2').click(function() {
+    $('.modal-id-2').toggleClass('slds-hide');
+});
+$('.js-close-modal-id-100').click(function() {
+    $('.modal-id-100').toggleClass('slds-hide');
+});
+$('#js-open-modal-100').click(function() {
+    $('.modal-id-100').toggleClass('slds-hide');
+});
+
+//SIDEBAR
+$('#button-page-navigator').click(function() {
+    $('#sidebar-navigator').toggleClass('slds-hide');
+});
+$('#button-close-navigator').click(function() {
+    $('#modal-page-navigator').toggleClass('slds-hide');
+});
+$('#button-preview-settings').click(function() {
+    $('#modal-id-102').toggleClass('slds-hide');
+});
+$('#button-close-navigator').click(function() {
+    $('#sidebar-navigator').toggleClass('slds-hide');
+});
+
+
+//MODAL PREVIEW SETTINGS
+$('#modal-id-102 .js-close-modal-id-102').click(function() {
+    $('#modal-id-102').toggleClass('slds-hide');
+});
+
+
+//TEXT COMPONENT
+$('.add-text-dummy').click(function() {
+    var component_text = $('#dummy_container .my_text_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_text_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.text-component-editor').toggleClass('slds-hide');
+
+
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+
+    return false;
+});
+$('.text-component button.js-trigger-edit-component, .js-trigger-text-edit-component').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+
+
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+$('.text-component-editor button.trigger-save-modal').click(function() {
+    selected_text = $('.slds-rich-text-area__content').html();
+    selected_header = $('.slds-input-header').val();
+
+    $('.' + activeComponent + ' .text-holder').html(selected_text);
+    $('.' + activeComponent + ' .header-holder').html(selected_header);
+
+    //check if rules have been changed only for the first from field\
+
+    /*
+    var currentValue = $('.'+activeComponent +'.input-rules-from').text();
+    if(currentValue != undefined) {
+        previousValue = currentValue;
+    }
+    */
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+//SLIDER COMPONENT
+$('.add-slider-dummy').click(function() {
+    var component_slider = $('#dummy_container .my_slider_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_slider = $('#dummy_container .my_slider_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    //$('.region_component_selector').addClass('slds-hide');
+
+    component_slider.appendTo('#region').hide().fadeIn(600);
+    navigator_slider.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_slider).attr('class');
+    $('.slider-component-editor').toggleClass('slds-hide');
+
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+    //return false;
+
+});
+$('.slider-component button.js-trigger-edit-component, .js-trigger-slider-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.slider-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+
+
+$('.slider-component-editor button.trigger-save-modal').click(function() {
+    $('.slider-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+//IMAGE COMPONENT
+$('.add-image-dummy').click(function() {
+    var component_text = $('#dummy_container .my_image_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_image_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    class_activeComponent = '.' + activeComponent;
+    $('.image-component-editor').toggleClass('slds-hide');
+
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+$('.image-component button.js-trigger-edit-component').click(function() {
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    class_activeComponent = '.' + activeComponent;
+
+    $('.image-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+$('.image-component-editor button.trigger-save-modal').click(function() {
+
+    $('.image-component-editor').toggleClass('slds-hide');
+    //$('.'+activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    //$('.' + activeComponent + ' .image-holder').attr('src', selected_image);
+    //$('.' + activeComponent + ' .image-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+    $('.' + activeComponent + ' .image-holder').css('background-image','url('+selected_image+')');
+    //$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+    return false;
+});
+
+
+//TARGETED_BANNER COMPONENT
+$('.add-targeted_banner-dummy').click(function() {
+    var component_text = $('#dummy_container .my_targeted_banner_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_targeted_banner_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    class_activeComponent = '.' + activeComponent;
+
+    $('.targeted_banner-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+$('.target-component button.js-trigger-edit-component, .js-trigger-banner-edit-component').click(function() {
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    class_activeComponent = '.' + activeComponent;
+
+    $('.targeted_banner-component-editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+
+$('.targeted_banner-component-editor button.trigger-save-modal').click(function() {
+
+    $('.targeted_banner-component-editor').toggleClass('slds-hide');
+    //$(class_activeComponent +' .image-holder').attr('src', '/assets/' +selected_image);
+    $(class_activeComponent + ' .image-holder').attr('src', selected_image);
+
+    return false;
+});
+
+
+//VIDEO COMPONENT
+$('.add-video-dummy').click(function() {
+    var component_text = $('#dummy_container .my_video_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_video_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    $('.video-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+$('.video-component button.js-trigger-edit-component, .js-trigger-video-edit-component').click(function() {
+
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    class_activeComponent = '.' + activeComponent;
+
+    $('.video-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+
+$('.video-component-editor button.trigger-save-modal').click(function() {
+    $('.video-component-editor').toggleClass('slds-hide');
+    $('.' + activeComponent + ' .video-holder').attr('src', '//player.vimeo.com/video/53873232');
+    return false;
+});
+
+
+//USP COMPONENT
+$('.add-usp-dummy').click(function() {
+    var component_usp = $('#dummy_container .my_usp_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_usp = $('#dummy_container .my_usp_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+    component_usp.appendTo('#region').hide().fadeIn(600);
+    navigator_usp.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_usp).attr('class');
+    $('.usp-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    //return false;
+
+});
+$('.usp-component button.js-trigger-edit-component, .js-trigger-usp-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    $('.usp-component-editor').toggleClass('slds-hide');
+    $('.slider-component-editor').addClass('slds-hide');
+    $('.region_component_selector').addClass('slds-hide');
+
+});
+
+
+
+$('.usp-component-editor button.trigger-save-modal').click(function() {
+    $('.usp-component-editor').toggleClass('slds-hide');
+    //return false;
+});
+
+
+
+
+
+
+//PRODUCT PICKER SELECT COMPONENT
+$('.add-productpicker-dummy').click(function() {
+    var component_text = $('#dummy_container .my_productpicker_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_productpicker_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    class_activeComponent = '.' + activeComponent;
+
+    $('.productpicker-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+$('.productpicker-component-placeholder button.js-trigger-edit-component, .js-trigger-product-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    $('.productpicker-component-editor').toggleClass('slds-hide');
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+    return false;
+});
+
+
+
+
+
+$('.product-component-editor button.trigger-save-modal').click(function() {
+
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+    $('.product-component-editor').toggleClass('slds-hide');
+
+    $('.productpicker-component-editor div.list-empty').toggleClass('slds-hide');
+    $('.productpicker-component-editor div.list-full').toggleClass('slds-hide');
+
+    $('.image-component-editor').addClass('slds-hide');
+
+
+    //$('.'+activeComponent +' img.prod_img').src(selected_product_image);
+    $('.' + activeComponent + ' .slds-text-heading_small').html(selected_product_name);
+    $('.' + activeComponent + ' .slds-text-title').html(selected_product_price);
+    $('.' + activeComponent + ' .header-holder').html(selected_header);
+
+    //$('.image-component-editor').addClass('slds-hide');
+
+    return false;
+});
+
+
+$('.product-component-editor button.trigger-close-modal').click(function() {
+
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+    $('.product-component-editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+
+$('.remove-products').click(function() {
+    $('.productpicker-component-editor div.list-empty').toggleClass('slds-hide');
+    $('.productpicker-component-editor div.list-full').toggleClass('slds-hide');
+
+})
+
+
+$('.productpicker-component-editor .trigger-close-modal').click(function() {
+    $(this).find('.editor').toggleClass('slds-hide');
+    return false;
+});
+
+$('.productpicker-component-editor .trigger-save-modal').click(function() {
+    $(this).find('.editor').toggleClass('slds-hide');
+    $('.modal-editor-5').addClass('slds-hide');
+    $('.image-component-editor').addClass('slds-hide');
+    return false;
+});
+
+
+$('.productpicker-component-editor .add-products').click(function() {
+    $('.product-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+//ADD MEDIA
+$('.image-component-editor .add-medias').click(function() {
+    //$('.product-component-editor').toggleClass('slds-hide');
+    $('.media-picker').toggleClass('slds-hide');
+    return false;
+});
+
+$('.picker .trigger-close-modal').click(function() {
+    //$(this).closest('.picker').toggleClass('slds-hide');
+    $('.media-picker').toggleClass('slds-hide');
+});
+
+
+$('.remove-image').click(function() {
+  //remove image from selection
+  $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
+  $('.mediaselector-component-editor .file-name').text('No Image selected');
+  $('.circle').toggleClass('slds-hide');
+  $('.remove-image').toggleClass('slds-hide');
+
+});
+
+
+$('.picker .trigger-save-modal').click(function() {
+    //$(this).closest('.picker').toggleClass('slds-hide');
+    //$('.' + activeComponent + ' .image-holder').attr('src', selected_image);
+    $('.' + activeComponent + ' .image-back').css('background-image', 'url(' + selected_image + ')');
+    $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
+
+    $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
+    $('.mediaselector-component-editor .file-name').text(selected_image);
+
+    $('.circle').toggleClass('slds-hide');
+    $('.remove-image').toggleClass('slds-hide');
+
+
+    //$('.shopableselector-component-editor .image-figure-thumb').attr('src', selected_image);
+
+    $('.shopableselector-component-editor .shopableback').css('background-image', 'url(' + selected_image + ')');
+
+    $('.shopableselector-component-editor .file-name').text(selected_image);
+
+    $('.media-picker').addClass('slds-hide');
+
+    /*
+    $('.'+activePickerbase +' .image-holder-thumb').attr('src', selected_image);
+    */
+});
+
+
+
+
+$('.mediaselector-component-editor .trigger-save-modal').click(function() {
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+});
+
+$('.shopableselector-component-editor .trigger-save-modal').click(function() {
+    $('.shopableselector-component-editor').toggleClass('slds-hide');
+});
+
+
+
+$('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+});
+
+$('.placeholder-component-38 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+});
+
+
+
+
+
+//MEDIA SELECTOR
+
+$('.add-mediaselector-dummy').click(function() {
+    var component_text = $('#dummy_container .my_mediaselector_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_mediaselector_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+
+$('.mediaselector-component-editor .image-figure, .add-image').click(function() {
+    //open dialog for selecting an image
+    $('.media-picker').toggleClass('slds-hide');
+});
+
+$('.media-component button.js-trigger-edit-component').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+$('.media-component-editor button.trigger-save-modal').click(function() {
+    selected_text = $('.slds-rich-text-area__content').html();
+    selected_header = $('.slds-input-header').val();
+
+    $('.' + activeComponent + ' .text-holder').html(selected_text);
+    $('.' + activeComponent + ' .header-holder').html(selected_header);
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+//EINSTEIN COMPONENT
+$('.add-einstein-dummy').click(function() {
+
+    var component_text = $('#dummy_container .my_einstein_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_einstein_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.einstein-component-editor').toggleClass('slds-hide');
+
+
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+
+
+
+//Shopable SELECTOR
+$('.add-shopableselector-dummy').click(function() {
+    var component_text = $('#dummy_container .my_shopableselector_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_shopableselector_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //$(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+
+    $('.shopableselector-component-editor').toggleClass('slds-hide');
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+
+$('.placeholder-component-38 .js-trigger-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.shopableselector-component-editor').toggleClass('slds-hide');
+    $('.mediaselector-component-editor').addClass('slds-hide');
+    return false;
+
+});
+
+
+
+$('.shopableselector-component-editor .image-figure').click(function() {
+    //open dialog for selecting an image
+    $('.media-picker').toggleClass('slds-hide');
+});
+
+$('.media-component button.js-trigger-edit-component').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+$('.media-component-editor button.trigger-save-modal').click(function() {
+    selected_text = $('.slds-rich-text-area__content').html();
+    selected_header = $('.slds-input-header').val();
+
+    $('.' + activeComponent + ' .text-holder').html(selected_text);
+    $('.' + activeComponent + ' .header-holder').html(selected_header);
+
+    $('.text-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+//2COL COMPONENT
+$('.add-2col-dummy').click(function() {
+    var clonenumber = cloneCountA++;
+
+    var component_text = $('#dummy_container>ul.my_2col_dummy>li').clone(true).addClass('item' + clonenumber).attr('id', clonenumber);
+    var navigator_text = $('#dummy_container .my_2col_navigator li').clone(true, true).addClass('item' + clonenumber).attr('id', 'navigatoritem' + clonenumber);
+
+    $('.region_component_selector').toggleClass('slds-hide');
+
+    component_text.appendTo('#region').hide().fadeIn(600);
+    navigator_text.appendTo('#navigator').hide().fadeIn(600);
+
+    //add 1 to component count
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+//2COL COMPONENT - OPEN CLOSE MENU
+$('.sub-container .slds-dropdown-trigger--click').click(function() {
+    $(this).toggleClass('slds-is-open');
+});
+//SUB TEXT COMPONENT
+$('.add-sub-text-dummy').click(function() {
+    var component_text = $('#dummy_container .my_text_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_text_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    var subgoal = $(this).closest('.sub-container').find('.sub')
+    component_text.appendTo(subgoal).hide().fadeIn(600);
+
+    /*
+    var mosa = $(this).closest('#region>li').attr('id');
+    var subnavigator = 'li#navigatoritem'+mosa;
+    navigator_text.appendTo(subnavigator).hide().fadeIn(600);
+    */
+
+    //$(this).parent('li').css( "background-color", "red" );
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+    $('.text-component-editor').toggleClass('slds-hide');
+
+
+
+
+    return false;
+});
+
+
+$('.js-trigger-2col-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    $('.text-component-editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+
+//SUB IMAGE COMPONENT
+$('.add-sub-image-dummy').click(function() {
+    var component_text = $('#dummy_container .my_image_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_image_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+    //navigator_text.appendTo(subgoal).hide().fadeIn(600);
+
+    var subgoal = $(this).closest('.sub-container').find('.sub')
+    component_text.appendTo(subgoal).hide().fadeIn(600);
+
+
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    class_activeComponent = '.' + activeComponent;
+    $('.image-component-editor').toggleClass('slds-hide');
+
+
+    return false;
+});
+//SUB VIDEO COMPONENT
+$('.add-sub-video-dummy').click(function() {
+    var component_text = $('#dummy_container .my_video_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    var navigator_text = $('#dummy_container .my_video_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+    var subgoal = $(this).closest('.sub-container').find('.sub')
+    component_text.appendTo(subgoal).hide().fadeIn(600);
+
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+
+    //now open editor
+    activeComponent = undefined;
+    activeComponent = $(component_text).attr('class');
+
+    $('.video-component-editor').toggleClass('slds-hide');
+
+
+
+    return false;
+});
+
+
+//DELETE COMPONENT
+$('button.js-trigger-delete-component').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    $('.delete-component').toggleClass('slds-hide');
+
+    return false;
+});
+$('.delete-component .action-delete-component').click(function() {
+    /*
+        var removeit = $(this).closest('li').attr('class');
+
+        $(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+        $('li.'+ removeit).fadeOut(600, function(){
+            $('li.'+ removeit).remove();
+        });
+    */
+
+    $('.delete-component').toggleClass('slds-hide');
+    $('li.' + activeComponent).fadeOut(600, function() {
+        $('li.' + activeComponent).remove();
+    });
+
+    //add 1 to component count
+    regionlimit = regionlimit - 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
+
+
+
+
+//sort at the same time navigator and component
+var currentIndex;
+$(function() {
+    $('.list').sortable({
+        start: function(event, ui) {
+            currentIndex = ui.helper.index();
+        },
+        change: function(event, ui) {
+            var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
+            var sortClass = '.' + ui.item.attr('class').split(' ')[0];
+            var parent = $('.list').not(ui.item.parent());
+
+            if (currentIndex > ui.placeholder.index()) {
+                parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
+            } else
+                parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
+            currentIndex = ui.placeholder.index();
+        }
+    });
+    $('.list').disableSelection();
+});
+
+
+//delete component and navigator item all together
+$('.delete-component .js-close-modal-id-0').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    $('.delete-component').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+//MODAL HANDLERS
+$('.trigger-close-modal').click(function() {
+    $(this).closest('body .editor').toggleClass('slds-hide');
+
+    return false;
+});
+
+
+//SLIDER
+$('.trigger-sliderA').click(function() {
+    $('.sliderA').addClass('slds-show');
+    $('.sliderA').removeClass('slds-hide');
+    $('.sliderB').addClass('slds-hide');
+    $('.sliderB').removeClass('slds-show');
+    $('.sliderC').addClass('slds-hide');
+    $('.sliderC').removeClass('slds-show');
+
+    $('.sliderA').addClass('active');
+
+    return false;
+});
+$('.trigger-sliderB').click(function() {
+    $('.sliderA').addClass('slds-hide');
+    $('.sliderA').removeClass('slds-show');
+    $('.sliderB').addClass('slds-show');
+    $('.sliderB').removeClass('slds-hide');
+    $('.sliderC').addClass('slds-hide');
+    $('.sliderC').removeClass('slds-show');
+
+    $('.sliderB').addClass('active');
+
+    return false;
+});
+$('.trigger-sliderC').click(function() {
+    $('.sliderA').addClass('slds-hide');
+    $('.sliderA').removeClass('slds-show');
+    $('.sliderB').addClass('slds-hide');
+    $('.sliderB').removeClass('slds-show');
+    $('.sliderC').addClass('slds-show');
+    $('.sliderC').removeClass('slds-hide');
+
+    $('.sliderC').addClass('active');
+
+    return false;
+});
+
+//IMAGE SELECT
+$('.image-thumb').click(function() {
+    //selected_image = $(this).find('h2').text();
+    selected_image = $(this).closest('a').find('img').attr('src');
+    $('.slds-file_card').removeClass('selected');
+    $(this).closest('.slds-file_card').addClass('selected');
+
+    return false;
+});
+
+//VIDEO SELECT
+$('.video-thumb').click(function() {
+    selected_video = $(this).find('h2').text();
+    return false;
+});
+
+
+//HOVER LI ITEM
+$('.list>li').hover(function() {
+    var myClass = $(this).attr('class');
+    $('.' + myClass).css({
+        border: '3px solid red',
+        color: 'red'
+    });
+});
+
+
+//FILTER PRODUCT TABLE
+
+$("#kwd_search").keyup(function() {
+    if ($(this).val() != "") {
+        $("#my-table tbody>tr").hide();
+        $("#my-table td:contains-ci('" + $(this).val() + "')").parent("tr").show();
+    } else {
+        $("#my-table tbody>tr").show();
+    }
+});
+$.extend($.expr[":"], {
+    "contains-ci": function(elem, i, match, array) {
+        return (elem.textContent || elem.innerText || $(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+});
+
+
+
+
+
+//SELECT PRODUCT
+$('.slds-checkbox_faux').click(function() {
+    selected_product_name = undefined;
+    selected_product_brand = undefined;
+    selected_product_price = undefined;
+    selected_product_id = undefined;
+
+
+    selected_product_name = $(this).closest('tr').find('.product-name').html();
+    selected_product_brand = $(this).closest('tr').find('.product-brand').html();
+    selected_product_price = $(this).closest('tr').find('.product-price').html();
+    selected_product_image = $(this).closest('tr').find('.prod_img').attr('src');
+
+
+    //return false;
+    //$('.product-recommendation').toggleClass('slds-hide');
+    if ($('.product-recommendation').hasClass('slds-hide')) {
+        $('.product-recommendation').toggleClass('slds-hide');
+    }
+});
+
+//SELECT RECOMMENDATION
+$('#visual-picker-17').click(function() {
+    show_recommendation = true;
+
+    if (show_recommendation = true) {
+        $('.product-holder2').removeClass('slds-hide');
+    }
+
+    return false;
+});
+
+
+//LOAD MORE PAGE LIST
+$(function() {
+    size_tr = $("#table-pages tr").length;
+    x = 197;
+    $('#table-pages tr:lt(' + x + ')').fadeIn();
+    $('#loadMore').click(function() {
+        x = (x + 197 <= size_tr) ? x + 197 : size_tr;
+        $('#table-pages tr:lt(' + x + ')').fadeIn();
+    });
+    $('#showLess').click(function() {
+        x = (x - 197 < 0) ? 197 : x - 197;
+        $('#table-pages tr').not(':lt(' + x + ')').fadeOut();
+    });
+});
+
+
+
+//PAGE LIST SORTABLE
+$('#th_name').click(function() {
+    //open dialog for selecting an image
+    $('#sorted_txt').html('sorted by name');
+});
+
+$('#th_pagetype').click(function() {
+    //open dialog for selecting an image
+    $('#sorted_txt').html('sorted by page type');
+});
+
+$('#th_id').click(function() {
+    //open dialog for selecting an image
+    $('#sorted_txt').html('sorted by ID');
+});
+
+$('#th_date').click(function() {
+    //open dialog for selecting an image
+    $('#sorted_txt').html('sorted by date');
+});
+
+
+//HIDE ALL DROPDOWN
+$(document).click(function(e) {
+    /*
+    if (!$(e.target).hasClass('slds-is-open')
+        && $(e.target).parents('.slds-dropdown').length === 0)
+    {
+        $('.slds-is-open').removeClass('slds-is-open');
+
+    }
+    */
+
+});
+
+//LOADER PAGE LIST
+$(function() {
+    $('.spinner').delay(3000).fadeOut('slow');
+    $('#page_list').delay(4000).fadeIn('slow');
+});
+
+
+//OCAPI modal__close
+$('.js-close-modalA').click(function() {
+    //open dialog for selecting an image
+    $('#modalA').toggleClass('slds-hide');
+});
+
+$('.js-run-modalB').click(function() {
+    //open dialog for selecting an image
+    $('#modalB').toggleClass('slds-hide');
+    //$('#modal-content-id-1B-loader').delay(6000).toggleClass('slds-hide');
+    //$('#modal-content-id-1B-stuff').delay(4000).toggleClass('slds-hide');
+});
+
+$('.js-close-modalB').click(function() {
+    //open dialog for selecting an image
+    $('#modalB').toggleClass('slds-hide');
+});
+
+
+$('.action_level_1').click(function() {
+    //open dialog for selecting an image
+    $('#row-2').toggleClass('slds-hide');
+});
+
+
+
+$('.action_level_2').click(function() {
+    //open dialog for selecting an image
+    $('#row-3').toggleClass('slds-hide');
+    $('#row-loader').toggleClass('slds-hide');
+});
+
+
+$('.js-copy-modalA').click(function() {
+    //open dialog for selecting an image
+    $('#textarea-body').toggleClass('slds-hide');
+    $('#textarea-empty').toggleClass('slds-hide');
+    $('#modalA').toggleClass('slds-hide');
+});
+
+$('#author').click(function() {
+    $('#help').toggleClass('slds-hide');
+});
+
+$(document).ready(function() {
+    $("#filter-ocapi").keyup(function() {
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(),
+            count = 0;
+        // Loop through the comment list
+        $("nav ul li").each(function() {
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+                // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+        // Update the count
+        var numberItems = count;
+    });
+});
+
+
+$('#component-selecta').click(function() {
+    $('.region_component_selector').toggleClass('slds-hide');
+});
+
+
+$('.region_component_selector .js-close-dropdown').click(function() {
+    //$(this'.region_component_selector').addClass('slds-hide');
+    //$(this).closest('.region_component_selector').addClass('slds-hide');
+    $('.region_component_selector').toggleClass('slds-hide');
+});
+
+/*
+$('.js-close-dropdown').click(function() {
+    //$(this'.region_component_selector').addClass('slds-hide');
+    //$(this).closest('.region_component_selector').addClass('slds-hide');
+});
+*/
+
+$('#rtf_button_link').click(function() {
+    $('#link-menu').toggleClass('slds-is-open');
+});
+
+
+
+//check rules
+$('.input-rules-from').blur(function() {
+    if (!$(this).val()) {
+        //$(this).parents('p').addClass('warning');
+    } else {
+        $('#navigator .' + activeComponent + ' .rules-icon').toggleClass('slds-hide');
+        $('.slds-marker').toggleClass('slds-hide');
+
+    }
+});
+
+//edit rules from click on clock
+$('.rules-text-icon button').click(function() {
+    /*
+    new Tether({
+        element: '.help-text',
+        target: '.rules-text-icon button',
+        attachment: 'bottom center',
+        targetAttachment: 'bottom center'
+    });
+    */
+    $('.help-text').toggleClass('slds-hide');
+    //now attach here the popover and show it!
+});
+
+
+$(function() {
+    $(".clickspot").draggable();
+    //$('.clickspot').drag().drag();
+});
+
+
+/*
+$('.clickspot').drag("init", function(ev, dd) {
+    if (this.id == "test-drag") {
+        return $(".clickspot").addClass("selected");
+    }
+}).drag(function(ev, dd) {
+    if (ev.target.id == "test-drag") {
+        $(this).css({
+            top: dd.offsetY,
+            left: dd.offsetX
+        });
+    }
+});
+*/
+
+
+$('.shopableback .js-trigger-edit-component').click(function() {
+    $('.product-component-editor').toggleClass('slds-hide');
+});
+
+
+$('.placeholder .clickspot, .product-tile .close-tile').click(function() {
+    $('.product-tile').toggleClass('slds-hide');
+});
+
+
+$('.button-add-clickspot').click(function() {
+    $('.clickspot').addClass('slds-show');
+});
+
+$('.clickspot .js-trigger-delete-component').click(function() {
+    $('.shopableback .clickspot').removeClass('slds-show');
+});
+
+
+$('#locale-warning .js-trigger-close').click(function() {
+    $('#locale-warning').toggleClass('slds-hide');
+});
+
+
+//rules page
+//check rules
+$('#page-rule-from').blur(function() {
+    if (!$(this).val()) {
+        //$(this).parents('p').addClass('warning');
+    } else {
+        $('#toast-rules').toggleClass('slds-hide');
+    }
+});
+
+
+$('#toast-rules .close-toast-2').click(function() {
+    $('#toast-rules').toggleClass('slds-hide');
+});
+
+
+
+
+//MINI CART COMPONENT
+//ADD MINI BASKET
+
+$('#trigger-minibasket').click(function() {
+    /*
+    $('#mini-cart').toggleClass('slds-hide');
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    */
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+$('.toggle-minicart').click(function() {
+    /*
+    $(this).closest('.button-container>.slds-dropdown-trigger').toggleClass('slds-is-open');
+    */
+    $('#basket_component_selector').toggleClass('slds-hide');
+
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+$('#basket_component_selector .js-close-dropdown').click(function() {
+    $('#basket-editor').toggleClass('slds-hide');
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+
+$('#basket_component_selector .trigger-close-modal').click(function() {
+    $('#basket_component_selector').toggleClass('slds-hide');
+    return false;
+});
+
+$('#basket-editor .trigger-save-modal').click(function() {
+    $('#mini-cart').toggleClass('slds-hide');
+    $('#editor-header #region-header').toggleClass('slds-hide');
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+
+$('#basket-editor .trigger-close-modal, #mini-cart').click(function() {
+    $('#basket-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+$('a[href="#close_notification"]').click(function(){
+      alert('Sign new href executed.');
+});
+
+
+
+//SET FOCAL Point
+// Credit: https://github.com/jonom/jquery-focuspoint
+// Credit: https://github.com/jonom/jquery-focuspoint
+
+//$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+
+$('.set-focal-point').click(function(e){
+
+  var imageW = $(this).width();
+  var imageH = $(this).height();
+
+  //Calculate FocusPoint coordinates
+  var offsetX = e.pageX - $(this).offset().left;
+  var offsetY = e.pageY - $(this).offset().top;
+
+  //Calculate CSS Percentages
+  var percentageX = (offsetX/imageW)*100;
+  //var percentageY = (offsetY/imageH)*100;
+  //there must be a bug in here ... why is *10 working???
+  var percentageY = (offsetY/imageH)*10;
+  var backgroundPosition = percentageX.toFixed(0) + '% ' + percentageY.toFixed(0) + '%';
+
+  //Move indicator
+  $('.circle').css('top',(offsetY-10)+'px');
+  $('.circle').css('left',(offsetX-10)+'px');
+  // Set positioning
+  $('.focal-holder').css('background-position',backgroundPosition);
+
+  //alert(offsetY+'px');
+
+});
+
+// Hide image while resizing
+var resizing = false;
+$(window).resize(function(){
+  if(resizing !== false) {
+    clearTimeout(resizing);
+    $('img').css('opacity', 0);
+ }
+ resizing = setTimeout(function() {
+   $('img').css('opacity', 1);
+ }, 1000);
+
+});
+
+                <!-- END SCRIPT -->
+        </script>
+        <!-- /JAVASCRIPT -->
+
+
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinA">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinB">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Summer Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinC">
+            <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <header class="slds-popover__header">
+                <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Fall Campaign 2017</h2>
+            </header>
+            <div class="slds-popover__body" id="dialog-body-id-6">
+                <div>
+                    <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+                        <label><strong>Library: </strong></label> Library Name
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-p-around_small slds-border_bottom">
+                        <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Sites</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Status</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="">Is Searchable</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td data-label="">
+                                        Site Name
+                                    </td>
+                                    <td data-label="">
+                                        Online
+                                    </td>
+                                    <td data-label="">
+                                        YES
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+        <script>
+
+            $('#list_tooltipA').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinA').toggleClass('slds-hide');
+            });
+            $('#list_tooltipB').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinB').toggleClass('slds-hide');
+            });
+            $('#list_tooltipC').click(function() {
+                //alert( "Handler for .click() called." );
+                $('#poppinC').toggleClass('slds-hide');
+            });
+
+            $('.slds-popover__close').click(function() {
+                //$('#poppinC').toggleClass('slds-hide');
+                $(this).closest('.slds-popover').toggleClass('slds-hide');
+            });
+
+
+            $(function(){
+                $('#page_list').stupidtable();
+            });
+        </script>
+
+
+
+        <style>
+            #poppinA{
+                top: 145px;
+                left: 230px;
+            }
+            #poppinB{
+                left: 250px;
+                top: 175px;
+            }
+            #poppinC{
+                left: 215px;
+                top: 208px;
+            }
+        </style>
+
+    </body>
+
+</html>

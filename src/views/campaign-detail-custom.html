@@ -482,30 +482,36 @@
 
 
 
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/vendor/svg4everybody.min.js"></script>
-  <script>
-    svg4everybody();
-  </script>
-  <!-- JAVASCRIPT -->
-  <script src='/scripts/jquery-3.2.1.min.js'></script>
-  <script src='/scripts/jquery-ui.min.js'></script>
-  <script src='/scripts/stupidtable.min.js'></script>
-
-  <script>
-    { % include "_inc-js.html" %
-    }
-  </script>
+  {% include "_inc_all-modals.html" %}
 
 
 
 
+          <script src="/scripts/app.js"></script>
+          <script src="/scripts/vendor/svg4everybody.min.js"></script>
+          <script>
+              svg4everybody();
+          </script>
+          <!-- JAVASCRIPT -->
+          <script src='/scripts/jquery-3.2.1.min.js'></script>
+          <script src='/scripts/jquery-ui.min.js'></script>
+          <script src='/scripts/stupidtable.min.js'></script>
+
+          <script>
+            {% include "_inc-js.html" %}
+          </script>
 
 
 
 
 
 
-</body>
 
-</html>
+
+
+
+
+
+      </body>
+
+  </html>
