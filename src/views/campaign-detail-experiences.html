@@ -522,7 +522,7 @@
               <div class="slds-media__body">
                 <h2>
                   <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
-                    <span class="slds-text-heading_small">Sorting Rules (1)</span>
+                    <span class="slds-text-heading_small">Category Sorting Rules (1)</span>
                   </a>
                 </h2>
               </div>
@@ -603,10 +603,22 @@
                     <div class="slds-truncate" title="">Sorts by price ascending</div>
                   </td>
                   <td class="commentout_slds-cell-edit" role="gridcell">
-                     <span class="slds-grid 1slds-grid_align-spread slds-wrap">
-                      <span class="slds-badge" title="mens-clothes">mens-clothes</span>
-                      <a href="javascript:void();" title="mens-clothes, dresses">+1more</a>
-                    </span>
+                    <div class="slds-grid">
+                        <div class="slds-col">
+                          <span class="slds-grid slds-wrap">
+                           <span class="slds-badge" title="mens (Mens)">men (Mens)</span>
+                           <a href="javascript:void();" title="mens-clothes, dresses" class="show-categories">+ 1 more</a>
+                         </span>
+                        </div>
+                        <div class="slds-col2">
+                          <button class="slds-button slds-button_icon" class="select-categorie">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit" />
+                            </svg>
+                            <span class="slds-assistive-text">Provide description of action</span>
+                          </button>
+                        </div>
+                    </div>
                   </td>
                   <td role="gridcell" style="width:3.25rem;">
                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
@@ -718,14 +730,39 @@
 
               <tbody>
                 <tr class="slds-hint-parent">
-                  <th scope="row">
-                    <div class="slds-truncate" title="">price-low-to-high</div>
+                  <th scope="slds-cell-error slds-cell-edit row">
+                    <div class="slds-truncate" title="">
+                      <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small" title="Item 1 has errors">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                          </svg>
+                          <span class="slds-assistive-text">"price-low-to-high" has some errors</span>
+                      </button>
+                      <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
+                      price-low-to-high</div>
                   </th>
                   <td>
                     <div class="slds-truncate" title="">Sorts by price ascending</div>
                   </td>
-                  <td>
-                    <div class="slds-truncate" title=""></div>
+                  <td class="slds-cell-edit slds-has-focus slds-has-error">
+                    <div class="slds-truncate" title="">
+                      <div class="slds-grid">
+                          <div class="slds-col">
+                              <span class="slds-truncate" title="None">
+                                  <a href="">None</a>
+                              </span>
+                          </div>
+                          <div class="slds-col2">
+                            <button class="slds-button slds-button_icon" class="select-categorie">
+                              <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit" />
+                              </svg>
+                              <span class="slds-assistive-text">Provide description of action</span>
+                            </button>
+                          </div>
+                      </div>
+
+                    </div>
                   </td>
                   <td role="gridcell" style="width:3.25rem;">
                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
@@ -779,7 +816,6 @@
 
 
 {% include "_inc_all-modals.html" %}
-
 
 
 
