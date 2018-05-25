@@ -522,7 +522,7 @@
               <div class="slds-media__body">
                 <h2>
                   <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
-                    <span class="slds-text-heading_small">Category Sorting Rules (1)</span>
+                    <span class="slds-text-heading_small">Category Sorting Rules (2)</span>
                   </a>
                 </h2>
               </div>
@@ -640,6 +640,61 @@
                     </div>
                   </td>
                 </tr>
+                <tr class="slds-hint-parent">
+                  <th scope="slds-cell-error slds-cell-edit row">
+                    <div class="slds-truncate" title="">
+                      <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small" title="Item 1 has errors">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                          </svg>
+                          <span class="slds-assistive-text">"price-low-to-high" has some errors</span>
+                      </button>
+                      <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
+                      price-low-to-high</div>
+                  </th>
+                  <td>
+                    <div class="slds-truncate" title="">Sorts by price ascending</div>
+                  </td>
+                  <td class="slds-cell-edit slds-has-focus slds-has-error">
+                    <div class="slds-truncate" title="">
+                      <div class="slds-grid">
+                          <div class="slds-col">
+                              <span class="slds-truncate" title="None">
+                                  <a href="">None</a>
+                              </span>
+                          </div>
+                          <div class="slds-col2">
+                            <button class="slds-button slds-button_icon" class="select-categorie">
+                              <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit" />
+                              </svg>
+                              <span class="slds-assistive-text">Provide description of action</span>
+                            </button>
+                          </div>
+                      </div>
+
+                    </div>
+                  </td>
+                  <td role="gridcell" style="width:3.25rem;">
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
+                      <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Show More</span>
+                      </button>
+                      <div class="slds-dropdown slds-dropdown--right">
+                        <ul class="slds-dropdown__list" role="menu">
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="action-delete list-action js-open-modal-id-1">
+                              <span class="slds-truncate" title="Menu Item Three">Delete</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
 
@@ -705,24 +760,6 @@
                     </span>
                   </div>
                 </th>
-                <th aria-sort="none" class="slds-is-sortable slds-is-resizable removed--slds-text-title_caps" aria-label="Name" scope="col">
-                  <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
-                    <span class="slds-assistive-text">Sort by: </span>
-                    <span class="slds-truncate" title="Categories">Categories</span>
-                    <div class="slds-icon_container">
-                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown" />
-                      </svg>
-                    </div>
-                  </a>
-                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted none</span>
-                  <div class="slds-resizable">
-                    <input type="range" min="20" max="1000" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-8" tabindex="-1" />
-                    <span class="slds-resizable__handle">
-                      <span class="slds-resizable__divider"></span>
-                    </span>
-                  </div>
-                </th>
 
 
                 <th scope="col" style="width:2rem"></th>
@@ -732,37 +769,11 @@
                 <tr class="slds-hint-parent">
                   <th scope="slds-cell-error slds-cell-edit row">
                     <div class="slds-truncate" title="">
-                      <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small" title="Item 1 has errors">
-                          <svg class="slds-button__icon" aria-hidden="true">
-                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
-                          </svg>
-                          <span class="slds-assistive-text">"price-low-to-high" has some errors</span>
-                      </button>
                       <span class="slds-row-number slds-text-body_small slds-text-color_weak"></span>
                       price-low-to-high</div>
                   </th>
                   <td>
                     <div class="slds-truncate" title="">Sorts by price ascending</div>
-                  </td>
-                  <td class="slds-cell-edit slds-has-focus slds-has-error">
-                    <div class="slds-truncate" title="">
-                      <div class="slds-grid">
-                          <div class="slds-col">
-                              <span class="slds-truncate" title="None">
-                                  <a href="">None</a>
-                              </span>
-                          </div>
-                          <div class="slds-col2">
-                            <button class="slds-button slds-button_icon" class="select-categorie">
-                              <svg class="slds-button__icon" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit" />
-                              </svg>
-                              <span class="slds-assistive-text">Provide description of action</span>
-                            </button>
-                          </div>
-                      </div>
-
-                    </div>
                   </td>
                   <td role="gridcell" style="width:3.25rem;">
                     <div class="slds-dropdown-trigger slds-dropdown-trigger--click list-dropbox">
