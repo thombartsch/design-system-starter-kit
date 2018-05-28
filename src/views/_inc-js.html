@@ -275,3 +275,24 @@ $('.slds-popover__close').click(function() {
 $(function(){
     $('#page_list').stupidtable();
 });
+
+
+
+
+$('#search_slots').keyup(function(){
+    //$('').css("background-color", "pink");
+    alert();
+});
+
+
+
+
+
+ $('#select-product').click(function() {
+   $('#select-intro, #picker-tabs, #select-search, #empty-state, #combobox-unique-id2').toggleClass('slds-hide');
+ });
+
+ $('#select-category').click(function() {
+   $('#select-intro, #picker-tabs, #select-search, #tab-default-2, #combobox-unique-id1').toggleClass('slds-hide');
+   $('#tab-default-2').toggleClass('slds-show');
+ });

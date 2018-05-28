@@ -302,7 +302,7 @@
       <!-- Content from HTML files gets injected here -->
     {% endblock %}
 
-        {% include "_inc_dropdowncomponents.html"  ignore missing %}
+        {% include "_inc_dropdowncomponents.html"    %}
 
 
   </main>
@@ -319,15 +319,15 @@
     <script src = '/scripts/jquery-3.2.1.min.js'></script>
     <script src = '/scripts/jquery-ui.min.js'> </script>
     <script>
-        {% include '_inc_js.html' ignore missing %}
+        {% include '_inc_js.html'   %}
     </script>
 
 
 
     <!-- /JAVASCRIPT -->
-    {% include "_inc_modal-delete-page.html" ignore missing %}
-    {% include "_inc_toast-page-deleted.html" ignore missing %}
-    {% include "_inc_notification-save.html" ignore missing %}
+    {% include "_inc_modal-delete-page.html"   %}
+    {% include "_inc_toast-page-deleted.html"   %}
+    {% include "_inc_notification-save.html"   %}
 
 
     <script src="//github.hubspot.com/tether/dist/js/tether.js"></script>

@@ -17,22 +17,22 @@
 {% block content %}
   <div class="slds-grid">
     <div class="slds-border--right slds-p-around_small" id="tools">
-      {% include "_sidebar-tools.html" ignore missing %}
+      {% include "_sidebar-tools.html"   %}
     </div>
     <div class="slds-border--right slds-p-left_none slds-p-right_none" id="sidebar-navigator">
-      {% include "_sidebar_navigator.html" ignore missing %}
+      {% include "_sidebar_navigator.html"   %}
     </div>
     <div class="slds-col" id="main-page">
-      {% include "_inc_preview-settings.html" ignore missing %}
+      {% include "_inc_preview-settings.html"   %}
       <div class="slds-col page-content" id="2editor">
-        {% include "_editor.html" ignore missing %}
+        {% include "_editor.html"   %}
       </div>
     </div>
   </div>
-    {% include "_inc_toolbar.html" ignore missing %}
-    {% include "_inc_modal-properties-page.html" ignore missing %}
-    {% include "_inc_modal-publish.html"  ignore missing %}
-    {% include "_inc_modal-unpublish.html"  ignore missing %}
-    {% include "_inc_toast-published.html"  ignore missing %}
-    {% include "_inc_toast-saved.html"  ignore missing %}
+    {% include "_inc_toolbar.html"   %}
+    {% include "_inc_modal-properties-page.html"   %}
+    {% include "_inc_modal-publish.html"    %}
+    {% include "_inc_modal-unpublish.html"    %}
+    {% include "_inc_toast-published.html"    %}
+    {% include "_inc_toast-saved.html"    %}
 {% endblock %}
