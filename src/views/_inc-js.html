@@ -1,4 +1,5 @@
-  //DUMMY PAGE FUNCTIONALITY
+//DUMMY PAGE FUNCTIONALITY
+/*
 var activeComponent = undefined;
 var activePickerbase = undefined;
 
@@ -38,7 +39,7 @@ var copytext = undefined;
 //counter for components
 var regionlimit = 0;
 $('#regionlimit').text(regionlimit);
-
+*/
 
 
 
@@ -277,17 +278,6 @@ $(function(){
 });
 
 
-
-
-$('#search_slots').keyup(function(){
-    //$('').css("background-color", "pink");
-    alert();
-});
-
-
-
-
-
  $('#select-product').click(function() {
    $('#select-intro, #picker-tabs, #select-search, #empty-state, #combobox-unique-id2').toggleClass('slds-hide');
  });
@@ -296,3 +286,95 @@ $('#search_slots').keyup(function(){
    $('#select-intro, #picker-tabs, #select-search, #tab-default-2, #combobox-unique-id1').toggleClass('slds-hide');
    $('#tab-default-2').toggleClass('slds-show');
  });
+
+
+
+     $('#select-product').click(function() {
+       $('#select-intro, #picker-tabs, #select-search, #empty-state, #combobox-unique-id2').toggleClass('slds-hide');
+     });
+
+     $('#select-category').click(function() {
+       $('#select-intro, #picker-tabs, #select-search, #tab-default-2, #combobox-unique-id1').toggleClass('slds-hide');
+       $('#tab-default-2').toggleClass('slds-show');
+     });
+
+
+  $('.is-child.is-inhereted + .slds-checkbox_faux').click(function() {
+    $(this).removeClass('is-inhereted');
+  });
+
+
+
+     $('#select-all-products').click(function() {
+       $('.product-list .slds-checkbox_add-button input').prop('checked', true);
+       $('.hrhr-1').removeAttr('disabled');
+       $('#deselect-all-products').toggleClass('slds-hide');
+       $(this).toggleClass('slds-hide');
+     });
+
+     $('#deselect-all-products').click(function() {
+       $('.product-list .slds-checkbox_add-button input').prop('checked', false);
+       $('#select-all-products').toggleClass('slds-hide');
+       $(this).toggleClass('slds-hide');
+       $('.slds-button_brand.hrhr-1').attr('disabled', 'disabled');
+     });
+
+     // Nested Categories Commerce Selector
+           $('#trigger-nested').click(function() {
+             $('.slds-is-child').toggleClass('slds-hide');
+             $(this).toggleClass('is-opened');
+           });
+
+           $('.app-trigger').click(function() {
+             $(this).toggleClass('slds-is-open');
+           });
+
+           $('.hide-select-product-2').click(function() {
+             $('#select-product-23').toggleClass('slds-hide');
+             $('#select-product-23').toggleClass('slds-show');
+           });
+
+           $('.slds-checkbox_faux').click(function() {
+             $('#items-selected, #remove-all-trigger').removeClass('slds-hide');
+             $('.einstein-placeholder-item').addClass('slds-hide');
+             $('.einstein-item').removeClass('slds-hide');
+             $('.hrhr-1').removeAttr('disabled');
+           });
+
+           $('#remove-all-trigger').click(function() {
+             $('#remove-all-trigger, #items-selected').addClass('slds-hide');
+             $('.product-list .slds-checkbox_add-button input').prop('checked', false);
+             $('.hrhr-1').prop('disabled', true);
+           });
+
+           $('#combobox-unique-id1').change(function() {
+             $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
+           });
+
+           $('#combobox-unique-id2').change(function() {
+             $('.product-tile[aria-level="2"], .product-tile[aria-level="3"]').removeAttr('aria-level');
+             $('.trigger-nested, .cat-path').toggleClass('slds-hide');
+           });
+
+           $('.hrhr').click(function() {
+             var $checkbox = $('input.is-child');
+             $checkbox.toggleClass('is-inhereted');
+           });
+
+           $('.hide-assign-to').click(function() {
+             $('#assign-to').toggleClass('slds-hide');
+           });
+
+           $('.slds-section__title-action').click(function() {
+             $(this).parent().parent().toggleClass('slds-is-open');
+           });
+
+
+           $('#assign-success, .hrhr-1').click(function() {
+             $('#select-product-23').toggleClass('slds-hide');
+           });
+
+
+           $('#slot-configurations').click(function() {
+             $('#select-product-23').toggleClass('slds-hide');
+           });

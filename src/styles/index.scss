@@ -235,4 +235,75 @@ html{
     /*background:url('assets/einstein_bg.png') fixed no-repeat bottom right;*/
 }
 
-//IMAGE SELECTED
+//SELECTOR css
+
+.product-tile {
+  &[aria-level="2"] {
+    // background-color: red;
+    padding-left: 2rem;
+  }
+
+  &[aria-level="3"] {
+    // background-color: red;
+    padding-left: 4.5rem;
+  }
+
+  &:hover {
+  background-color: #fafaf9;
+  }
+}
+
+
+.trigger-nested.is-opened {
+  transform: rotate(90deg);
+}
+
+.no-padding {
+  padding-left: 0!important;
+}
+
+.slds-section__content {
+  overflow: hidden;
+}
+
+// Checkbox Inheretance
+input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+input:not(:checked).is-inhereted + .slds-checkbox_faux,
+input:not(:checked).is-inhereted + .slds-checkbox--faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
+input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
+input:not(:checked).is-inhereted + .slds-checkbox_faux,
+input:not(:checked).is-inhereted + .slds-checkbox--faux {
+  background-color: $color-gray-6;
+
+  &:before,
+  &:after {
+    background-color: #fff;
+  }
+
+  &:before {
+    top: -0.125rem;
+    left: 0.4375rem;
+    width: 0.1875rem;
+    height: 1.0625rem;
+    transform: rotate(40deg);
+  }
+
+  &:after {
+    top: 0.3125rem;
+    left: -0.625rem;
+    width: 0.625rem;
+    height: 0.1875rem;
+    transform: rotate(36deg);
+  }
+
+  &:hover {
+    background-color: $color-gray-8;
+
+    &:before,
+    &:after {
+      background-color: white;
+    }
+  }
+}
