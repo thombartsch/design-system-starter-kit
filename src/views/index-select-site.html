@@ -1,0 +1,2807 @@
+<html>
+<head>
+</head>
+
+<body class="bm-welcome-page">
+
+<!-- include select site form -->
+<style>
+	div.popup {
+	    display: none;
+	    background-color: rgba(128,128,128,0.5);
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+
+			z-index: 110;
+	}
+
+	div.popup>* {
+	    background-color: white;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 42em;
+	    margin-top: 100px;
+	    padding-left: 4em;
+	    padding-right: 4em;
+	    padding-top: 1em;
+	    padding-bottom: 1em;
+	    border-radius: 3px;
+	    position: relative;
+	}
+
+	div.popup img.x-close-button {
+	    position: absolute;
+	    top: 5px;
+	    right: 5px;
+	    cursor: pointer;
+	}
+
+	div.ScopeOptions td:last-child {
+	    width: 100%;
+	}
+
+	div.popup td.buttonspacing {
+	    padding-top: 1em;
+	}
+
+	td.buttonspacing {
+	    text-align: right;
+	}
+
+	.buttonspacing {
+	    padding: 4px;
+	}
+
+	.table_header {
+	    background-color: #eee;
+	    color: #54585a;
+	    font-weight: bold;
+	    padding: 3px 5px;
+	    white-space: nowrap;
+	}
+
+	.middle {
+	    vertical-align: middle;
+	}
+
+	.w {
+	    border-left: 1px solid #dadada;
+	}
+
+	.s {
+	    border-bottom: 1px solid #dadada;
+	}
+
+	.n {
+	    border-top: 1px solid #dadada;
+	}
+
+	label {
+	    display: inline-block;
+	    /*margin: 0 0 .5em;*/
+	    font-weight: 400;
+	    line-height: 1;
+	}
+
+	.siteList{
+		border: 1px solid #ddd;
+	}
+
+	.siteList ul{
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 10px;
+	}
+
+	.siteList ul{
+		max-height:300px;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+
+</style>
+<div id="ScopeOptions" class="ScopeOptions popup" style="display: block;">
+    <form action="javascript:ScopeEditor.save()" name="SelectForm">
+        <img class="x-close-button" id="ScopeOptionsX" src="/assets/lightbox-close.gif">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+							<tr>
+                <td width="100%" class="table_title w e s">Select Site</td>
+            	</tr>
+            	<tr>
+                <td class=" table_title_description w e">Depending on the rights you have been assigned by the site manager, select the site for which you want to perform tasks. You may change the selection any time in your "My Profile" module.</td>
+            	</tr>
+        	</tbody>
+				</table>
+        <div class="siteList">
+					<ul>
+						<li>
+							<input type="checkbox" value="" id="SiteA" class="site">
+							<label for="SiteA">
+									Site Name A
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" value="" id="SiteB" class="site">
+							<label for="SiteB">
+									Site Name B
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" value="" id="SiteC" class="site">
+							<label for="SiteC">
+									Site Name C
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" value="" id="SiteD" class="site">
+							<label for="SiteD">
+									Site Name D
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" value="" id="SiteE" class="site">
+							<label for="SiteE">
+									Site Name E
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" value="" id="SiteF" class="site">
+							<label for="SiteF">
+									Site Name F
+							</label>
+						</li>
+					</ul>
+						<!--
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td class="table_header middle w n s"><input type="checkbox" id="ScopeOptionOrganisation"></td>
+                    <td class="table_header middle e n s" id="ScopeOptionOrganizationLabel"><label for="ScopeOptionOrganisation">
+                        Organization
+                    </label></td>
+                </tr>
+
+                <tr>
+                    <td class="table_header middle w s"><input type="checkbox" id="ScopeOptionAllSites"></td>
+                    <td class="table_header middle e s"><label for="ScopeOptionAllSites">
+                        Sites
+                    </label></td>
+                </tr>
+
+                    <tr>
+                        <td class="table_detail middle w s">&nbsp;</td>
+                        <td class="table_detail middle e s">
+                        <input type="checkbox" value="SiteGenesis" id="ScopeOptionSiteGenesis"><label for="ScopeOptionSiteGenesis">
+                            SiteGenesis
+                        </label></td>
+                    </tr>
+
+            </tbody></table>
+						-->
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+								<td nowrap>
+									<input type="checkbox" name="remember" />
+									<label for="remember">Remember for next login</label>
+								</td>
+                <td class="buttonspacing">
+                    <button type="button" class="button" id="ScopeChangeCancelButton">Cancel</button>
+                    <button type="submit" class="button" id="ScopeChangeApplyButton" disabled="disabled">OK</button>
+                </td>
+            </tr>
+        </tbody></table>
+    </form>
+</div>
+<!-- /include select site form -->
+
+
+
+
+	<table class="main" width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr id="bm_header_row">
+				<td colspan="2">
+					<script src="/scripts/jquery-1.10.2.min.js"></script>
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/bm-site-nav.css">
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/header.css">
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/site-selection.css">
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/selectordie.css">
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/jquery-ui-1.10.3.min.css">
+					<link rel="stylesheet" type="text/css" href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.static/Sites-Site/-/default/css/enterprisesite2.css?v18.5.2.100">
+
+<script>
+					$(document).ready(function () {
+
+						var ckbox = $('#SiteA');
+						$('input').on('click',function(){
+								if (ckbox.is(':checked')) {
+										//alert('You have Checked it');
+										$('#ScopeChangeApplyButton').attr('disabled' , false);
+										$('#SiteB, #SiteC, #SiteD, #SiteE, #SiteF').attr('disabled' , true);
+								} else {
+										//alert('You Un-Checked it');
+										$('#SiteB, #SiteC, #SiteD, #SiteE, #SiteF').attr('disabled' , false);
+										$('#ScopeChangeApplyButton').attr('disabled' , true);
+								}
+						});
+
+
+					});
+</script>
+
+
+
+
+					<header class="header header--Sandbox">
+						<div class="header__wrapper">
+							<div class="header__navigation">
+								<a href="" class="header__logo" title="Business Manager start page."><img class="header__logo-image" src="assets/salesforce-logo.svg">
+								</a>
+								<div class="header__site-switcher header__site-switcher--Sandbox">
+									<div class="header__site-switcher__instance">
+										<span title="tbartsch.inside-eu02.dw.demandware.net">Sandbox - tbartsch</span>
+									</div>
+									<div class="header__site-switcher__selection">
+										<!-- Global Navigation Area &amp; Channel Selection Area -->
+										<!-- Site Selection Area -->
+										<div id="headerNav" class="site-selection">
+											<span id="mainNav">
+												<div>
+													<form action="" method="post" name="SiteSelectionForm">
+														<div id="SelectedSiteID-wrap">
+														<span class="sod_select " tabindex="0" data-cycle="false" data-links="false" data-links-external="false" data-placeholder-option="false" data-filter="">
+															<span class="sod_label" title="Select a Site">Select a Site</span>
+															<span class="sod_list_wrapper">
+																<span class="sod_list">
+																	<span class="sod_option " title="Select a Site" data-value="">Select a Site</span>
+																	<span class="sod_option  selected active " title="SiteGenesis" data-value="bcL4EiaagJtn6aaadlFMYTadDs">Select a Site</span>
+																</span>
+															</span>
+															<select name="SelectedSiteID" id="SelectedSiteID" class="perm_not_disabled dropdown inputfield_en" onchange="document.SiteSelectionForm.submit();" x-bm-site-url="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-SelectSite?MenuGroupID=ChannelMenu&amp;ChannelID=bcL4EiaagJtn6aaadlFMYTadDs&amp;">
+																<option value="" selected="selected">Select a Site</option>
+																<option value="bcL4EiaagJtn6aaadlFMYTadDs" selected="selected">Select a Site</option>
+															<select>
+														</span>
+													</div>
+												</div>
+									</span>
+
+									<div class="clear">
+										<!-- FLOAT CLEAR -->
+									</div>
+								</div>
+								<!-- EO Site Selection Area -->
+
+								<!--script type="text/javascript" src="/scripts/site-selection.js"></script-->
+
+								<!-- EO Global Navigation Area &amp; Channel Selection Area -->
+							</div>
+						</div>
+
+
+						<div class="header__merchant-menu bm-site-navigation-menus">
+
+
+							<div id="site_navigation_column ">
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<!-- Merchant Tools Menu -->
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<div class="menu bm-dropdown-menu merchant-tools active">
+									<span class="menu-overview-link">
+
+	<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-CompressMenuGroup?MenuGroupID=&amp;OverviewPage=SiteNavigationBar-ShowSiteOverview&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM" class="merchant-tools-link">
+
+	<span class="menu-overview-link-text">
+	Merchant Tools
+	</span>
+
+									<span class="menu-overview-link-icon" title="Click to show &quot;Merchant Tools&quot; menu items.">
+	<img src="assets/menu-down-arrow.png" width="14" alt="" border="0">
+	</span>
+									</a>
+									</span>
+									<div class="merchant-tool-menu the-menu" style="width: 1015px;">
+
+										<div class="bm-menu-search-bar" style="display: block;">
+											<input id="bm-menu-merch-search" class="bm-menu-search perm_not_disabled" type="text" placeholder="Merchant Tools feature lookup..." ng-model="none">
+										</div>
+										<div class="bm-menu-columns">
+											<!-- column 1 -->
+											<div class="bm-menu-column">
+												<div class="section-name content" section-name="content">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head content">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=content&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the non-product content of this site.">
+	                        Content
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View the content libraries for the organization.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewContentSharedLibrary-List?SelectedMenuItem=content&amp;CurrentMenuItemId=content&amp;csrf_token=ZMo9PJw7_ta3nMVKuGLtbWf6cmWRbY54OOPSqRGW_c5tI53GdBgAp-gHZ8MVxYCxZiSgcInWyV-aXWzRf4ofe34ZoJVa-s0NZCkyEOGgZTkIiEnxT1ueVmRJXavZufH1UJFkBjk6YqsiFfz1KTZJCLrLbw0NMSUilkh9Xu1jIgnwZf4zwUQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Libraries
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage folder structures of libraries.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLibrary_52-Start?SelectedMenuItem=content&amp;CurrentMenuItemId=content&amp;csrf_token=rRAtmghD0fhb9k9k8yREd8Q_bKP5XjisEZXKL129vlBOllH8RJTynCfx_jHBvBOMWYZ9slfL-vLyVP0q22g96sie-Z4O8AhAwxibzoj5hOsHKHyycSR2-r2Lu92Le24OULMCGkqB53KXjJr4XnKFF_0lYIKzpMeyPM9VSjEplgfGQE7DQtI"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Library Folder
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the content assets of the site library.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLibraryContentList_52-Start?SelectedMenuItem=content&amp;CurrentMenuItemId=content&amp;csrf_token=AGSYsX51uUM4UoOe9DvRhw7DdU0hNf0QTy25ycT1-h4kZV6eGtXThv7MduUUrmFH2yyaArBXRaSB4MctMnhFvgklk-kU1xFhCwwURU0Rjf1bU-xnC75TRLMW921JtWWNdv7zvgHFjjMpP5ZzXYAiLizgehu5Nc5V86Kqka3KUhRPx_vHdgk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Content Assets
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLibraryImpex_52-Status?SelectedMenuItem=content&amp;CurrentMenuItemId=content&amp;csrf_token=dqi3rXqI3aKd19PfgJ5-GTYviqkEpk_EmzlJIbhwW2YT7EqhbXiqBOg8i2PV-KjHi4n77ToAjknv2ZDrB4Z7bq5ti_8Q_xhl4vbErwMEYFGFVSF5Hu3_xCYNMxv5rI12b8yoZVwPZFgFCbb0Ujsxq2jDcx9QFScLO-TeybNthnYrIDJSFqw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name customers" section-name="customers">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head customers">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=customers&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the customers of this site.">
+	                        Customers
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage customers">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomers-List?SelectedMenuItem=customers&amp;CurrentMenuItemId=customers&amp;csrf_token=Z7uaomT1kYkIjqIbX6utb1lPc1wLpOAbhaW7QDzdY4B4WZOQaMoBBxu9eDMq3ZvFe_ROyKDofuYXn5lTvXglqEb6UB_MYLYH_Fuuu8J5id9BNjfCdIVm6b1e2Nhe_2YxzmtnOsEdO4QwrJ7vVaUOnLzXpO4AGeOzceP2YWQBE8ew6EAmN5k"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customers
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage customer groups">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=customers&amp;CurrentMenuItemId=customers&amp;screen=CustomerGroup&amp;csrf_token=wCYcLYpQY8oYEJUKXBur6FYNpuAA7m2OIFzK30JoW5ryOs9kHsNZoERqHTq9YvS1uTikuwMlBmQOwI4iv6fBe8yHstFwLa2s11yWLgwisiEkDLzo0Iba9e9-9BIM7eAhci9UhNArzhY40saU0aQqc7mzsYiJFlB2Dkej_xm8pduwOyfDAHE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer Groups
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage customer data snapshots.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomerSnapshots-Start?SelectedMenuItem=customers&amp;CurrentMenuItemId=customers&amp;csrf_token=kW7hj001O6INKqc2hwcWqs8fJqcSsMsUFoYsvsKP88WVA9SiQgiUE7tD9-EOvvEnPJoLZEgkHDLj_KXfMGgD4uDv7TQMfXglyJ1obG-7g4xHFmZnX3vKmox27VcrukdV38b8IIiBBYsjofc9B0InsFFvjD7gAPPT8pxKsLMNR6Aq6kOYO1M"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Snapshots
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage batch processes">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProcessList_52-ListAll?SelectedMenuItem=customers&amp;CurrentMenuItemId=customers&amp;JobNamePrefix=Customer&amp;csrf_token=s0BwBv6gu5-0ApZkHFPhC1XmaOChxmoUvJfFdcnW7EJvoiww5ZhVJLeTU9pDw0GipCGjGeGZWAUY4DHmKr57q4uGbPwqh5z7C2pYeLPQUjyec9vNn_0NiaRe4Bboe5OppNFf5VZOoQ-kF1Et2gNiHcwSI35ZYxUOVxnEPyi4hSnDlVLBsrE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Batch Processes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export customers, customer groups and customers product lists.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomerImpex-Status?SelectedMenuItem=customers&amp;CurrentMenuItemId=customers&amp;csrf_token=pCER0mueKzVor7YQH1nvIjALN0tPfrYMFXA9-DRWaD20qtiS4H4GME-_1ueykOZ726sx3vU4w0EO_9Z4H3plBuM590BCqqpiU2O8TW_VFWJ4a17zjEfsa9XWTMRR-Eaa-Wvjt4eC3hapG1qkkwBM-rqxyOvO6m2zG3tJNDkjdZsAxnFKm1U"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name site-obj" section-name="site-obj">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head site-obj">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=site-obj&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage custom objects of this site.">
+	                        Custom Objects
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage custom object instances.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomObjectList_52-Start?SelectedMenuItem=site-obj&amp;CurrentMenuItemId=site-obj&amp;csrf_token=XdFiKjeStHY_6AUy43mivFeUVPzxQgyoXtBUmwKEZVHbDup0rWilfZiOwzdABp0jE6RTKIripQ6XpUx4RzYiCnM6P5YiDAft0GuFmaHpyLBZBFwfBFLuiGOZvve_HEuQB6028LBcKg83fT5DF3DDTzNKlMDCoM3qFb9IMqbx7C8JyvI5ya4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Object Editor
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage batch processes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProcessList_52-ListAll?SelectedMenuItem=site-obj&amp;CurrentMenuItemId=site-obj&amp;JobNamePrefix=CustomObject&amp;csrf_token=4aEl6pvLuYYrB17Enre7SOksNZFOQyHHoleDCkpLeMAmJSCqHRo8CI--IJmMzT1pHHoEbnRklgcBsHQAFjn8PqC6cU1LWqcOkjp7RqtqnEZla4aRRa-zWHKYg7lE-QCx1aQrwYr_abyK-H87EneY0YkPM3KKg3a00tlFDPU420awHeBZ-cE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Batch Processes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomObjectImpex_52-Status?SelectedMenuItem=site-obj&amp;CurrentMenuItemId=site-obj&amp;csrf_token=jJA7HplYrdFP8tg93iy18jemK7Fxfn907LTugs7va9dLNGZ9cSLz72ZF80mfiKNFUN8gu4dGO8UV8NTUJz8Q1Gk11h0_k8xG3QokPiMf4RTMoX737SbJsw_0knKmsH6LxDf04fIISHRcOnoLXivYPR88mr9pF4nzAchKC0gZM7EvnI5cME4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name site-urls" section-name="site-urls">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head site-urls">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=site-urls&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage site aliases and URL mapping rules.">
+	                        Site URLs
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Define URL rules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontURLRules-Start?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=PJQb4kTEzhJh4K2hlx89gR0MomxLV0BfIE2AXwN08pD17Sr0VqbK17Fn42u37X6faQtTtn5ZGwxeo1IzzL7tTLhDpXqeAYQZu8Fu_jVdUCVhL-s13xy8qBFyXxD5xFtzEygYsNZ9oXzLVcqm_Sqj58qIh3IVHUGXkIZBb1yjNgBEzSnXFCw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	URL Rules
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure URL redirect rules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewUrlRedirectList_52-Start?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=Avi7zNEp-_4268XsabhL5IvsUn-UwzN46JzrKzNgxt2UpXckMhybSMwgUNsyNBUQHIlhybzYU0w-Z7-ZHjKF2wJYP0p4KkfmkJPjZVoktF-AXe26uN4nuih3VnfGeP_OqIqJq0B1KSGA7Uc8kAngJ6st3Jbnv0RiYSGVoo1ico7ZXm6vU14"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	URL Redirects
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure dynamic mapping rules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLinkMapping_52-Rules?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=BxtTJR4A9X4DDeWxIisBn2tS3OMTXTZlW85W5JRqE7aVUvmxvQPoBChdwogZQAnYN1g8HOfmwadOHlhU3HVkim9n_cku6KO9_IfdUM_G4miiC36Y1F37Ys-YD0Dhj0SL_1ppEkkWuTaLXOmXdajLQ6sOTfjBi6ms7_OAkEayNIeG7e02aSU"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Dynamic Mapping
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure static mapping rules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLinkMapping_52-Mappings?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=2LgRnOfCcob_pI12AMlG397inW0zompa9DJcXDzjJ1gAx2ycM6tYdgm-VFlWGh5ba2CUgzCFqAp3fvRd1sKw6RW0PKVaZ059SYcD9Ryt3o0uExHAd7c02zUC8M2Rf6tbBpe7V6Qogmt_HLOx2h--Q4cDgZrKAu861dkaI3CuCSaNZibpMTo"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Static Mapping
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure robots.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSiteRobotsDefinition-Start?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=VXIaLK97JUEJLU978GOEwA6FfXuEnxr_i3KclziuNm9s1_HVuYuNPEt7gDi5bI7JH0GCjdPU49yu-duwmbDMwRrN5GUo63SSyJma6WpAjlW_OjzqlCKwZihbIimQyhiiBF1x4k9nixrAt2-Hb-6babfQr5m_YIe8x1IpBFtp0Uc3-4HTNIE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Robots
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Define aliases.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLinkMapping_52-Aliases?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=uXmbPqsOCaaez4q1PkatTi4_E-aoRN5DKtw1GZIZNSYS09ueGySQt50vv3jg65GQ0IDf7EEeMRPT4koluE5INg_WDl6dLOsdvw676HGTL4qLZ30bdKyboiU2L9T5maJfKpU3SJsJSqes-ZYZwX6_f8KWyerD-Kvpj8xuo0K2O8Hth1ViD-A"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Aliases
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Define customer CDN settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;screen=customerCdns&amp;csrf_token=N3W8ZShfbRd39cW8udvRQi10nnHYgdDS8-ub-PYmCtOdxR2gomXg4Uzl_NxQB1fW4QEge6CTSGJkn7dtNoRKNW81GFHyr2rwZQrqXG7gJJSowGroj4TRgLnXmtsGE_dKuoFMzx8-mlBGLUsM67f9eSaI3Hy0ub7TPD8Kt1-K4w6yzBHx6EE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer CDN Settings
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Run and schedule the sitemaps feed.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSitemap-Start?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=OTcebO5E17d9KL4HR-5zQTWXJYgvTtsSvJMXAnzOcASMu_y-st4s7cBTguXZJUGX0j_epWh1G7Tu3_OYVlo6StINRSVaDELDpDGaPYQEBK2P_XxyeCbMlTZMU-PpBbPzvyUpWCbMC0on-NP-vTQi-1q1rSsjCWWzKfLXHT88ozfbrpuSlZA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Sitemaps
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="The URL Request Analyzer for Storefront URLs.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontURLRequestAnalyzer-Start?SelectedMenuItem=site-urls&amp;CurrentMenuItemId=site-urls&amp;csrf_token=8o1yeA3UTN22x7GSQL9N878aq5idNJV1iWxUdVfUkTG00JtvQkOWi8Sefk3eSikLTd2nEXFh7kSsGrM0iA_gW9V9srKNUNsUv_OiF7B2gnBuqrW1UV8nLLRuI30S_l_4a-JOtJpovWqy56aDjUsFh6LMmADlgVFkGfto6Krodx4tXp39KkA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	URL Request Analyzer
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 2 -->
+											<div class="bm-menu-column">
+												<div class="section-name prod-cat" section-name="prod-cat">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head prod-cat">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=prod-cat&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the catalogs and products of this site.">
+	                        Products and Catalogs
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage products.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductList_52-List?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;CatalogItemType=Product&amp;csrf_token=l304CFY1WDqNUD3kK0d4MRyhztXLU4nRDQVzAl5PdNdPtwfKWHLPJvR1NpMqD2T47rCqIpmolVC99hEV1GAQWYL7aQX-5u5_bCxj118ByqG4DirDP6fDhUBxTmlW78AfskZyob9VyOjzl4xOJpbduIzf_OsqQOwROHwb1P3koX62ohdRvLY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Products
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage product sets.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductList_52-List?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;CatalogItemType=ProductSet&amp;csrf_token=d72J1aXbhItfazkbTs9PHD0e0AkA4AN4oU2eCYhL888ERpKphCCzPK7YIHU-gjiaQsTv0l7unOZ2cP3Ble8ETIBTEY_sSijVZRHvAqbGyp0q6idXRNy5Rs_GNng60Xa258ne9hNLTVYI4D3oAnvJ7VJ8qBlRHJ6lY47Jr1r9awEZfjvZhyc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Product Sets
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage catalogs.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewChannelCatalogList_52-Start?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;screen=catalog&amp;csrf_token=rKVLii91Nt_0hRrZOsx5VdIqQFoiBd9Ex0bSt5Ki65kSfh96NDJJGMHJ4kRIIa2paa8aTIb5GqFj7egwXf1K-pVhM_NwCgK9voYV6_VTH65K5WTkwEjCVKmqDo0CH3CWKYBb198K0g7_Cib6qi_urn_PP270mHl9kWF1p6_AutOMYMrLs-k"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Catalogs
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage product options.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSharedProductOptions_52-ListCatalogs?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=36luOOMg6RlLa6ONKkLpcbbBlCrHGvQp_ZtYTCJp-xJxUVDhh27OywG4b-Qo11PBF3i8mI8h9Boo8o_aT9Y-o-qsg6Ypj0h1N8pRoaE7UK4LKUzNLu3B1FyzGU9F2V9ojcylnoBkZ15f09vlbi2pXyMWgjVLLw3mEW--FUqqQL_heGerdIY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Product Options
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage variation attributes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSharedProductVariations_52-ListCatalogs?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=Nx2w1Crc5RdZhQreqNwF6HEIZFCk-SbNFMSj6TlFpoQVp-rgTsaIilOB_Xn0QzyEK9WvXnYPIDnkhzmdFB4-YuAumh_iAUbQ2uv3Xov0YhjS_5ninYhFXObxhKSX9elneeMTwn0mlsRIjO3I8WI0HC9scCL_ZYAchDDfND_AwA054yM515U"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Variation Attributes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage recommendations.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewRecommendationCatalogs_52-ListAll?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=e3tq_v59VrkHJuasluagEQ_dyZOsRADmVmvmYtt8G311iudYH2pXgZFyfqTvDAmPbiL7VgeVnCl4ralvQso0k66KYGsmiWQf4fC3UJ2PWbZp-Cfu15uj_KvxNVYAda_VRlMj-Luz9xyK0TpSWDHHg9TE_OzaBb_ovuRiAaFmTRhSQhAKj7E"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Recommendations
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage price books.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPriceBookList_52-ListAll?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=z243VZ6-xNEv8pqunvRi1r7Bl0luLhXKmSY-Z2EA6DLIcD3j9Yj4Odcr5bY2cFGvwEiXc0UfZkvK0YeWG0joDxoLbPDuI-zYAIx3caiPz_EIpY6d4_kyNOvVGYxrZPo60KZxS89bAAe7lpBFsALx_NdPcxSK0B3OjjdxRIMR8ccMdEI_ysQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Price Books
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage inventory lists.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewInventoryLists_52-ListAll?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=UIazkkNx7fqK7jPq58PIlpT8r_20bBIuuiuwppxTrjceAX3099KuXmTonyKp-q6RUHWL8rJG7hOnrYKEJT_piD0btlcDc77KlJNakGDxBWrGHWVOmW2hZNJqohJWMARNJAYLk0VW2UT26sn6Rs_fy9VU1H_J_mqHpAwe1pInTPIUiBKJ3G4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Inventory Lists
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage catalog feeds.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCatalogFeeds_52-Start?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=pqqwRCnUcYIBMtbZMCbY73gfknhCTn7DFiLoUZ18_shwrny-6O9LRPpbm-26d6lWsGKJxnXD6rHYzq5tQTslaY3hXH7bZiZvJj1RjKb2xfCImPeRQMIF486enrDPcSBoGFvKtfcEzIhNbLIGxL6VJUusKM1SAPJ8fMBP_uKKa45n4YHSDls"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Catalog Feeds
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage batch processes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProcessList_52-ListAll?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;JobNamePrefix=Catalog&amp;csrf_token=VFXpwZsKusGmiqqConN_Ly8uGd1WLy3ukRKP3evbtkZp4tyXeTOFDspDJXG5GARI32-SmRRDwlbgEJsj_eBNuVj_MFA_bZQO65g-GpuTPQaw2auq7BZFpw-YQ17SgjKdG-MDjfctxXJmxTnvqfEAI6UY8_xqDaNzZ0O_MSmUKlMGad6qXro"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Batch Processes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCatalogImpex_52-Status?SelectedMenuItem=prod-cat&amp;CurrentMenuItemId=prod-cat&amp;csrf_token=tQ45SyxLQsqiiosaQlTNNQVt6L5IlyTaGA8cDxYnnV30yf9tUM3LmT7aHn-5NkSUaLSA9XZy2hOhWXYqk-N-LBsXziJ1vQXUWeYjFoy4g-NVTmHig4ZKaZIJZpaTPE0as3N3mpJIOrkHvQ9PO61a4SagQb52_5gZYflauLwcE9G-jo016DM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name orders" section-name="orders">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head orders">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=orders&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the orders of this site.">
+	                        Ordering
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage orders.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrderList_52-Dispatch?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;enter=enter&amp;csrf_token=IdENRzBjPLCT5vkcmDhbzuoV8HuWvUtS6EY4Z7dK2NR_iMiebiWnThBuCISk8qmb1q4dQOxjQFekmezDs1goHejMEAGBpI9a1TirCsYyOSpKMch90g-hCx3kGO3iH6M77KPhkWFOrRnKE2_8_MC9gogsKsc6rn-_Cat-t6DlhZYC0gTdoag"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Orders
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage taxation.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewTaxPreferences_52-Start?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;csrf_token=DnYQ4W1Kq55InBxSKftc621su0T-rqYGsVWSvUbHtp3tQx-UrbU_cwag0eIGUvQ3XBqMUQ9VdDUJJLDjAhGVIpVXk92TMayKbiZPwXRSO2Gsy8UG1A6vahf547OIzJm0zFCLjZadin8-JbdY4RP97xlg_OG6O0ubZkzWVfpucarixWQcNwU"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Taxation
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage payment processors.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPaymentMethodList_52-ListAll?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;csrf_token=1WRiX15ignWqJHjPynjJdqGErsbRf9fkgQ3LrrMXtI-HtVLZ7i9TzdnVszMA25voOC5q6dEy20urnoWydwgNRJSWmYBpND0UUkN8gSY8ElVVsTsKgh-R7WL60S2OQf1MUv714zFDKDFBzUS_bXSJuRE3O-POYQHbmlNfH5Tvc_Pk7xyKtE8"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Payment Processors
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage payment methods.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/PaymentMethod-Start?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;csrf_token=d1TMeNpumGCQUTQs50lGavxi69Qruz1XdLhbYeG64CVmtS7bx5QryuhTicR2ojifpoASbKYyXFt7PxDRDp1eYxoFi4_orVkAHI-zQIHKbEb60Vpy8Wmy4v85IDokNmZozuhnnWksclLLGAJqK48Ijxn0ymVNpMnUi4Oj5i654KyrDjJ6aSM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Payment Methods
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage shipping methods.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ShippingMethodList-ListAll?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;csrf_token=ibtpf200k12lJsMZR7T9iwAcFYZNZhaOv6SsRfxCFIcmxxFSTyKdqf4gvjsMM1Wc03tf_tqnMauvLfyPqQTZWsF_1oaaqIblyf13RVxO4siTlMRGpJgqKkN5saw-whmfh0DtrGJYUuBQRp3xK4Oomr-uNpTr_2R6Y2MY7E0XN9Xf3TvXZnQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Shipping Methods
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Export ordering data.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrderImpex_52-Status?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;csrf_token=NyyWA5DdpfD8OlKgwnslUIAxCCvXRFmb6R_vXTGA4XOcbONjtZSasj1xCuObtmDdwvVfe5-rNXHpwu07t6oGe-NGxKVKUHNE2zQDBBhup4icXAbUWSVzYuop_zRKAS9rAK28avnPa2qeLamn7-Z4AtbtYABlBa3QciExN1EbR-ymUr_kcBQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Customer Service Center.">
+																		<a href="javascript: void 0;" onclick="window.open('https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ScreenDispatcher-CSC?SelectedMenuItem=orders&amp;CurrentMenuItemId=orders&amp;hash=welcome&amp;csrf_token=zbZDf7WnxOaxMsSo7Mlh8cmdnaDRijBKRMeSyHOJfOdr4kzgB3VVGMysxCPxSbinEWdAnE0DQXR-eHndKr_Wwu8bLMWdeRIFZ76IFs1Sep9JrvcCYkXsRASN49epBHKx0nubLLHXcNX1mNItpDJDOOtn8c_4VneR1ItZMGPmG1B9rLNP5gs','Customer Service Center','location=yes,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes');"
+																		  class="overview_subtitle_bm bm-menu-item">
+	Customer Service Center
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 3 -->
+											<div class="bm-menu-column">
+												<div class="section-name search" section-name="search">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head search">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=search&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage storefront search indexes and sorting options of this site.">
+	                        Search
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search indexes">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchIndexList_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=RmdhYCxBRVRlhlChrdhUXF8_tWkX6dMGsXbWLoI1Lpu1tOR1JPtXdSJQz3dlgYDUrOGdAePg3AuxtrB6fasGMM5O53BwRPrXThmcTw2dGZuw9gaHBWCH6jiQbZBSP-5QTl2bj4KA4AQG8Gx-c8qxWthAbD0mUEUnV0WP4x0SNDP7UtY-IWM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Indexes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the search index rebuild schedule.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchIndexSchedule_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=9NtUfZ2zfokN8ZLfrzcAp29wOML-VT3nGpEzeT7c-aT49u0JB3yhhiuZ4YiubsbuBIyg-_LwLiwrT5fzVi6QdCtosSjCbNLhXf4gIasMU-56wdjgKUvge8jLcgR9fYoyE24c3izPDaSr77aRNZwZiyLUnhHak9HzmY5zDllhEhzmnBwZo84"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Index Rebuild Schedule
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Test queries against product index.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductIndexExecutionPlan_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;IndexName=product&amp;csrf_token=T2cRUli5PIZT1AxQLUWeAsY5_J9Lpl7rfvH74xpUnyOJNpSJ1kErDdIZCKnYwBWjrUgz5L_SJ9MI65bCclFRIf1hSPrJTqEAXGjw2LQcWI6rK_oDtCoyK80eWw3YRPLJj-OLfCnpE38uC_du4iSRf6rGnJQ7zV-RFWLaMW5ZUPTAGrJkhtc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Index Query Testing
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search dictionaries.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLdsBusinessManagerScreen-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;screen=search-settings&amp;csrf_token=r7MGhPWq8AQwZFKXqDq0hcCwvz_iwiyesMFXXn1AKxpXKeo8Rj-J4DnYeXCOQ6wlX_oSTKILHirh9VS3Kq2iyfvFY8-8AF28xMJY61WFDCArNXcfOAW53ZYMmlP7XnoquigdRMcuOt87vZuu6AvMwncKitFWDvL3b_MG2yy-UKqYdxpD8_k"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Dictionaries
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage searchable attributes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SearchableAttributes-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=UCyufk_w7bndK5lvvqTCscg9jCD3v-8WD28y8W-fDNhN6C-sNEHAnx2L5lyvUz4uuAORtfBJrj0RpwSH6q39_Scye7oFcFmRfDngoW2iI0Dva8yMlqiLU3F0aKZmpbOEjpVFAwJD34vNy7FIcMUUCieV8-BynfOXerFTeGCUtoARyGw3m9w"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Searchable Attributes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search driven redirect rules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchRedirectList_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=dB4ccRRD4oX6KoGKxURZH-Q51_UtDDQDhmzvmoeGDpb7ia7I1e1rvo5_ipAmGXaLtPPZ9WdFEx36aWbVXauCthY3KMaQR0jXIHkWMKhP72qTLyuvXO2tDDMHt5F0QeyK_kpuTik2coHvm0yb9ZOVpM1lh802uJdLgKlsiQZo85gWNhHCTbs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Driven Redirects
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage stop words.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchStopwords_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=TPDon5ZTIc3DvS7TzcPZyKlF6O9jqyy3uc-6bCHYoFrek5XhP-lCOkBv2lxEs_wlsDB_8okrAQwDjKv7CkIByjm8LaMaXLjb41JSbUAA10r_xcGh2-FHXcZLrax6DIp9-SRj5ZXmIj0YkMghVliPKjCUMzGpYMpl1k6zZctLMfr-9RBVrko"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Stop Word Dictionary
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage category name indexing exclusions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchCategoryExclusions-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=aJYQQ01_yxJ5sZjpqWeeXUtq4PmlorVU79nnofNL51xv8_kNnWRObdCUSwyUK-88KTSMN-y5eMkRtjkJXzvLoiIj6tLvoYfXh9niOUCrl6dsVX_3S5W7Rii2xNlJDa471W9DYmOlMg9nb2oz2m4M8vzc9_suOxaiK59BfyDWtC31qI3YWww"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Category Name Exclusions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage synonyms.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchSynonyms_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=50tXK_40dU82_GsEh3i7dQo_2mDM9cXgSIR6M26xUACaFBTb5jf9sgT1gLpZKOSqt3qRkOQFSw4Mri6zVeYGeeIKDioO8JE-H46n-h1PyHf6a6S6zhuTqoWKTdJfCW0UWSy3Qy3DDxklGW3mNhG4FHa9GHyWds_PexKWNev8bBvMrt22x_s"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Synonym Dictionary
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage hypernyms.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchHypernyms_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=hPWPM7fX0zPvniSygNIkyJBuJ7CySQk91RcU9wspnGjAWDSYZPXWfSk6H3r0xuQkvZHrP4T-dFnC2uPfN8mCABO04Lwun-D5SzGrkcYLjOLNLME5uZAX0DH6JZAwdsyMhAHgj51OGUpBKep-nldlgr5IFl42pIDNO01OuxJzbTrc0ksFPa4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Hypernym Dictionary
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage compound words.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchCompoundWords_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=XoUSGx8IFVtHHpQcaiJIRhPKYlvj8cWFWUX34swwiWBiWEVFvCnTTFFi6wwKjmKscOFembhTmAaTI7ezKzjucA3q89eve0ALhLlffXvKhrWl5iqnZEPUd2W7krBzeK7HyNlaogfCV1XGacHk9ip5Wt6o_zGDJqxobnmyEggtMEzrDYRjp1A"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Compound Word Dictionary
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage common phrases.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchCommonPhrases-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=QA7s-tHMxDjdCkPpO56bbQxTyz1186musV6R8PK7AeKOzi1iTuTtZf-KKHGz72QWbnI40sJuQ9ZlUVrfvP7tXeZeuA-Ij9mtZs827-0ZbfqYvzcPXkVYJiYHCih_ecAFqdKVkb2_cv4HDzOM_kC7dyOcGXP0083IcAz23KpkJAZ5F0fSJg4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Common Phrase Dictionary
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search suggestions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchSuggestions_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=jz1nsQfcVS34frYURf8HUnWVPxBmiuxj_8V-YOvyVMWHgUWq8dbJUUVikD6ww4oPm0zwvY7IKTIAdlMxPoFUq--bbG-dr73nRaTyIxkvFhrEgu_hYol_p6rPcDqzZke2raNPILzCtrJ2Je2EuhjTk_oZGnIs_BkbkPS-ZkGcEYfvHmMrqA8"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Suggestions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Stemming exceptions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStemmingExceptions_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=6sGQOfyb2vbOyQ3ZUIP3o_sP4mIhiFXhmSSvXTD3z-ocROFm51_WgjmRqGeC_S0VzfyTY_HFKdhVrs8RSvQEleB2tYalB-DU_ylrLn9vtXn2JE2JA-T0oR8caNVpIPw03ablUdtZ9sztdsaLX23giOI9fZ1NsKUoF4R8TuIeT_xw0kkZfVM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Stemming Exceptions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the sorting rules for this site.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SortingRules-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=kyAlRc012E4Y65WKBYbd-HcPsu55Wi5u_wMKx_EFWc8jhSKs2KZgHEutcUmTtHKK6DvPuwQRYEEEnHFTxLHT2tg6nxFoMoIvQHC6OELe3hMpdCPTHVDZ797QuvrkSA0OuI3UAMDlbo7ddf25dhXQ2pGoBMKXMMlxmj3L0a42KeTA7EKS8cs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Sorting Rules
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the sorting rules presented to storefront customers.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontSortingOptions_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=dS4Ap3RZk-3ZFVXlRuaSrFuXctrmJNRILZTvpePuyS0onuE9tRzca4o2bkRs2gwNt1Y8MOl9q-Bfmqoe9gUA56geQxtEO-KFxfBdV4p71xjMJmNeDSGBjHDWwi43ZdAWqPs50BmufbyOkbL4Pfjg3IMsVHpwA3kdJGCEagF4ooJh8GHcavo"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Storefront Sorting Options
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchPreferences_52-Start?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=WNCdbNfI9m9SVjennia0sp8iQYz3x6VuyILgKaeDWiyvhQEIXIYMidCBgNj1EEVvNB3NcjBedTxOyzmmDLw2lD-XyUhZMOSqpT4WCpOdWx9lu9KRtefB9XuZ5Vs8tR2RpdPrdnNCIyMHnLMrjUnFP5J00K1ZzTkdy9J2eBcc9yeR1hKFi80"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Preferences
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchImpex-Status?SelectedMenuItem=search&amp;CurrentMenuItemId=search&amp;csrf_token=OnbUXIzd6oTuoTpo9ECQo0TfC6UUDPT9rPTbWtY8t42o3GWXQkjZQ2Gv-xTeZPdkBk0FLAfQA0Ulj0sDFwRHQ0E-elODpQ-0YXNup7GX3jx_UWh9Ah3vYIdFbxqCnIF6u7xo1lvu7n55ElKkIqWRj1yL7TcFiqzvd1xXhlG4EpWEhWnsZYk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 4 -->
+											<div class="bm-menu-column">
+												<div class="section-name marketing" section-name="marketing">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head marketing">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=marketing&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the online marketing activities of this site.">
+	                        Online Marketing
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage campaigns.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=campaigns&amp;csrf_token=QWDpqj-qDNwu8J28HjZWJwKfiyUgdDXN9RJ381uQGOrZ8-QJtovRyTkmngM37kyg82ul30J5SK3LxjnPOp7QPXigKiCLVoVG0nwL2GH7a90hEfRU9nG7hxtvfSBhS7rwgvGkqsR5zy_iXzU7Q58CWPGT8Gh-UfK4NyMYz2npdYNksHzDI1c"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Campaigns
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage A/B tests.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ABTest-Start?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;csrf_token=G71ywgR8XwtFphs6vRi-L2uXuN_zyI3nBG8jyXlWE5QRL48wu2-qMxIbylEDYII9q6qXEHzg-dq6b688olr2HNxysOI2z4CtSYffPuXUf6FYZSF7Rmi9ZT60qpln_QjzW9Ss7iTwt48qFxbnKJg9vPV2_Fk36xvIyzkmWV8c7E_rJslK1EE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	A/B Tests
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage promotions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=Promotion&amp;csrf_token=PUntvAWWGoZUQa_RTArBmXmvslbVY3wSctdlUHQq8XUbakLKVTmztwcF0UxyJlqfCDSTTX-uC135WNBtUb7o_2OsFWABVdEx7mKvkUuonPyHgucegAttFj8NikRdSJxCy0dAz1AkOXXyXOeD8Yfh7enuGtAH3N3PFAim0S9xdqCJmY3BSOI"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Promotions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage content slots.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SlotList-ListAll?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;csrf_token=mco4hwd88L2cbKO6BmGrG_pqx__ZoF8ezJPpVUJDwH76owIHdzkFwWyghDTVsibiSpGCiD17ZdwKrtgHqd7imlqe7E2fiNzEK-iw6hAlldhKRT6_bLPStumr8jot9ffFJl-ZR0Sw7GGzuhfRWwc8k7LpYoe1T8GSP4eWIxC0Wq_j-Ub9VhE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Content Slots
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage coupons.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=coupons&amp;csrf_token=fyD-2tvrR5oyDJh-nh3wTKE6cMnTcX4KOWWSTGgSwRT-34vfTCP-fKf7OWDhz5-yqCcysn1JgXGu-Ot0ZHeP7dBE-ruOco1c41OcRKjSVR8jqxPxuRhlG-kIVXWLFWuknneQzSwmd8_krNVBo-xQFnvNqQCZfM0Q07thaJsEUmrcI6Wl2-U"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Coupons
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage source code groups.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=SourceCode&amp;csrf_token=g3cIM5Qt2l8BLvhoFX7OFTbUh65Igen7-NDWAVHlkbfGqbykXlxF1Kt2inbzcjhAL8XmGTvRxoDhpR6UC3l7EO5wlMZZq9s5hOQv_yqUy9OoRomWkqzZ9YN3xCQlxhePBQdaKnK9V_AMcZW9wiArKOJ1u7I-F9VL3ZQ-oGijkGBYUBsXvS4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Source Code Groups
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage active data.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewActiveDataMenu_52-Start?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;csrf_token=5nb5B05Z607pTwU2rCjxmpeowm87Gkygr7VtrAsB9ytNNCsknLzg800bb_YAEIYyPNXs83uSkMLccJHqX1tlseCxyn7fiWy-7poHt43xtQlRcwSWt4xSdExWqJI2Pk-2BNYeoKwTigweIGYyQY3DHvFEGqigVtyAboTF7VxwyOg6rXJZKbY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Active Data
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage stores.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=Store&amp;csrf_token=zJhMSraZBOtC6bMFgnmpSEOLo8NAbEuztFUb9vPILc_ZEYjCr6fFa4p9TRU1dVR2E60wnuZroMBOpb56q89mi5eUUOpVCNMCfOsTY6bA2EHk9jdUGETg8ja_JJnmuwuKpFlTWf7hNtTJseg6kIV3nDpyd13_K7DIT0iENJToow5f8fjGeWk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Stores
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage gift certificates.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;screen=GiftCertificate&amp;csrf_token=TYtPgo7pzM5odz_fVVzt08cLh8aRfQgwV8De3bge2p1xiGMJGC7YeN6zgnyJlir9m0q30tziS8GoI7DGhCT5PV5CIZTVUB2lBR5GlW0KHL_m4m2FNVyYz7uZ9MtXr0cfkDGDDxdltfdi2R7irlQFZ_dRo_6RW704iiJv8FYGbPjFJbO5XPQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Gift Certificates
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOnlineMarketingImpex_52-Status?SelectedMenuItem=marketing&amp;CurrentMenuItemId=marketing&amp;csrf_token=84wny5bwqeMrMubLIiD8YkwWIWKITnrDqWNqbEpQKUuPptpUqzHUgNS6p_gLXFOx3Bcppln4hPNx4qszpkXBQnyltgpY0ptX_LyBmVqk4iMP5fiuXsmSM7ArT3Gv0CRNNYGXMjz-Sg2VYI_sKYiG79X5tqzB5bNlDKUQ7Lr3tZYm6SfkJ7Y"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name analytics" section-name="analytics">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head analytics">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=analytics&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Browse reports of this site.">
+	                        Analytics
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View Reports and Dashboards (New!).">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-ViewReportsAndDashboards?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;csrf_token=JGQnDCl29abZIVBZuzVl7MivDf6He1yWcJfnjuHbfnOvSvXvvDb24YoNZZ77-G_Woc9rnQrjqAUs2KsF1wlwxnG7390DfuvirbH9lu7Ay5hVux6glVt6-UOOG9iZvJJk00J3jghRyZxHa5d_M01Xh3xot7UsYNU6mWeqAAS32DXlQXAzLHY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Reports and Dashboards (New!)
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View conversion reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncConversionReports_52&amp;ReportID=visit-conversion&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=jwWqly4LNx35ljYanF3hIxVlFSdnu72W3YgdQZQEDjoyK3vlBlFHRbqtVD395w3rU4THBqbnb4abN0aJKseyx1_UEciBtdSQvNz57AkwbdoGrQG90Tc6PVZs_bGbU8cOjc1xvdR2-gGWoAr3FaMTT3stTLerpbXpaxziEAK5qJ_jQVwQ4i0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Conversion Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View purchase reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncPurchaseReports_52&amp;ReportID=orders&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=iXQUv61auw0T4dQEqoF9nKZASFZFsUziG7lpUWw0d7fdiHB4Q4j1XWgWoHpMm8pyNZABkLSJf02jLJhdYjj20cyjwBwTooxbUUo7iSwtnnQlg3cuZ98SoFI-a1zqRo19e1-ndnU2fwfYNV3sDQaGe0WU_fCAnh6ddC4zhOw_IsHlHnB0_fI"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Purchase Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View catalog reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncCatalogReports_52&amp;ReportID=ordered-products&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=tEK-CsuyMIHAx6ZttZDLiog1YZmu99NgW8R22ItwmdlgQPHs14CL85BDZG-R5byMO3xG7REceMxJUQc7iXGvqEHy0bJfGnHsiulSEMe7w1y0nfkkbNCzYt7XXK9-CJZj6SfBxj5XX0KQcmBlMnonRaEcdYpYIERh6aATX_iGbTsU5cfx4cY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Catalog Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View search and navigation reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncSearchReports_52&amp;ReportID=search&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=zWPyNoPQBXEFNMe5fRpQlHqSGYCM7u9KsekHuYlv3WTKT9_78lAAy0x83H9HPFdU-4x6Gui7oyfWdXCmtEKgwZe3aOE2S7iZL_RcU_e3UZ58oWhO_F5cBFiujX2jjjzG06mGgFvWldvn-IwBxdi7VmAFBhgPXvrd2VTbJqQmwpzz99rHKuc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search and Navigation Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View customer reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncCustomerReports_52&amp;ReportID=users-customers&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=0KX3KrLECkvh9J3948QuiygU4r_vKIPIca5H_JOKGAwcHwT1s523iczk2o5MJPlOOjYY66Hm0HnzIbRGYs0ZueHFz3WLU7SkKDuYDDT14rj2fI1t8udHFqOBSi53GOqbjh2ya94PpGlKHnlu8Gpv4TrMlKlHCKpcRRIIZT3y_yAhLvrC2B0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View traffic reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncTrafficReports_52&amp;ReportID=pages&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=B5pOdoi0HkyB43pUM1C4xnVfJsm4QCYi0yK9R99ofB_kq9eTn0lTjQfvs2kdnDAhj-e_pfcvny2dBt6XceLs4ekZDQuQgvTuwb3KOgPaGe_5eEtPP3hDHQjPVH13JWJY4euXv0ADKRC_ytK62TEC-iKHri8DQmCJVmBafywuBhge4dnp5lc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Traffic Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View A/B testing reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncABTestReports_52&amp;ReportID=ab-testing&amp;ReportPeriod=month&amp;HasContentFile=true&amp;csrf_token=0AFuMaAXuW0VtvdM4OEO3CwjQG5YSkVs3JXja4PGPYMyw4cbxkZjoiDWh_aEsThfIHM5E6URBMHfGSCublfrGmgv6EZDlyA_OFHGY5RW3yRRTPvnb2o4E9eb7no6kpoMMybkpo3XJL-iyd4HMnUom8yLbbIViY7Kw8mv4N8LaHtRGzJBo-g"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	A/B Testing Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View technical reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncTechnicalReports_52&amp;ReportID=pipeline-callcount&amp;ReportPeriod=week&amp;HasContentFile=true&amp;csrf_token=o_0w4Ar8e3yTlrriCvS2i9oa54wpHZjljsiJ6NoEfq1rV8_YD-wHeSSu24s5Mgm_-_w01l_O1kh97SQeEEfeXA3FEGRkjekJSMiDNDCF4V3ltnLNuEwK79mhYiru8ak5LSPbyOb4p0NCgXUlnwT549zyJnHWnOrS2APvR5EwkOnfKHu8298"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Technical Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View object churn trends.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAnalytics_52-Refresh?SelectedMenuItem=analytics&amp;CurrentMenuItemId=analytics&amp;ReportGroup=IncObjectManipulationReports_52&amp;ReportID=Product&amp;ReportPeriod=month&amp;HasContentFile=false&amp;csrf_token=WRBbTYmk6OjVlcAVB07t8jKNgDN-1CUaYQ2HmOLxJ2rwaEGjzx3cTC2CT0-XZShhCNI0_zcRHYbkYllgfDmKWNRaL_KG57jrB2wDkPYXbTF_RQj1cdLZHBSX6SC8DJQUYHIv2k3B0mwqK4A1ccfZKYLJhKJ3LPQ11p77f_NNH2yq8RJoTZM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Object Churn Trends
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 5 -->
+											<div class="bm-menu-column">
+												<div class="section-name site-prefs" section-name="site-prefs">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head site-prefs">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=site-prefs&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Set preferences for this site.">
+	                        Site Preferences
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure product locking preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=mXsHxiZWDPp8ElVrQ9IhMgqDybRe_gJCpgm3sbK2kfLSWOiT8ShXhBf1H25XeRNMLp1jF9N5uZAain8U-3OIgY1cBysiO7wgIhQNMkNHn1K7cX8IYPpzlQb4DmKYsMg2V_IXGB_SnruoPA5cmx07gx8OY2zj1Gx6Z4nAaxohdkF_C4Xsc5o"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Locking
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure baskets.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewBasketPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=UtXFpnYuhsxNYdurTRyfcn4Fd70eDltT5awSA-zkezMvXOBC3Ut4gZiMtINBrsDVd9mmbOQaa_i2FZIGJ_g5GXJ5Jp9flZOe1JsyDMoUvhv_ySWR5Tay6FsNbnNXKLEjRzDNjrn3-JhNukq6CCFL3pS5WQ8l-go79fTzP5sIJRIwg47USpc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Baskets
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure A/B tests.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewABTestPreferences-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=4i7GsDO8viUzEuJp6OhXq6YQV_ygaOSqckaXSw0nyS3uOU4jnQ3bOE9A7DGIyhWcMuMFSN5gPPN4-cmcLLNewU52h30CgDW2JdN_3ZE5-4aZO_R5bq2H2-MJmqZsP3qqfnhQjEUrLshA_udu1rJbp30EgM5aeqnO8NAuq0wYTU6H2VzSRHo"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	A/B Tests
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Locale settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewRegionalSettings_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=BpJYxgslPGyb-RYfCXkPRu0hYPioYpBQ_zcnFt1GGjJqrmhWfaVVY1RZed-pRtqgo24oZbv1J2F5XAOeGzy0i8x2_sO56LQo7sK782s9o6A0BdwlP4gsgAxqz9bMT2Nrm2ms38v3VuAhozQKyVguo7l4rF3SsvLL3Y_3O4nNrBPo57juqxQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Locales
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure site currencies.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteCurrencies-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=0M9L36mmD_iCxvfxZBgqmlotvQB2Wlw4LC8mXbuqnrNVpv4gZGP4pWCrjIqhnGkJresR7pHSYbBSBuLIVbOYopx35LHIqpSm7CwPBsPH-bAqv9Oaf8AlxcXUwx5V1c61kHkYII-emfUBzcXX_QBai_xmOP_Ku4JK0K8lDmVAZatSDJIg79o"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Currencies
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Source code settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSourceCodePreferences_52-Edit?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=1JZ05ZyfNfLU_xxSx1u_zHvUGqeE82XK-Zg2JdFFdvg_rkCB4-h1_ELixGJm0hBkSY5zg2cUTAzEGw-kWoftg9roR3DLDo7UCns3LU-hosLlCrjI1DqEj0KVc7TKFMdtv2nPSFrdcW5DmPVD3068y9glONT24STV5iT-FGOllL1jfEDrKOM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Source Codes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage gift certificate preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewGiftCertificatePreferences_52-Display?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=YWTIL8WEv51tKDRIVo17mEo-89PSCeDuSzXolK5D-d7d_KxOwkii91xSNUeqCb8c07uwhd3Q2jNm7uudwxySLslSlE2vlHLvwP06QxUDRP7SicWOvbXIF910JHY9vmPQ2EfW8QQ5-wv4TgoivI6QTHsLimrYkRDtYyIsCqvsu9jWkhUCMEs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Gift Certificates
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage search preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSearchPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=SPn1Uswr3KxIwZZZ2kThE1fmOTSb9_j7qZWt7A4oeHllr9Lp5FHTxE49rzY0dpwvYpl9xZfnirFYv4PKYb5jZd_c2ekeQswnHdQnJMAZABnBgka7iphvHwPXvujOcFLYDqqtaHIk1E85Nlb4ktvfvs6j2qdRIr9Lg2-7xAEdkkftyUE4HE4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Search Preferences
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage sequence numbers assigned to your orders.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSeriesNumbers_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=_k4s9PzZl_unvxObbyhNxij05RGDivwgW7M75DPKlwAkbgpW4_qvqjWcUZEw523PWqW48TnOtmQboD-Sa75vPl1JA_Sn22zMQuufelu2rRBYBT9tQjhw4Xhp8Hs5f14el00zbEqzMgwKcHnyDq_gz8XK3WD0FiP2rV2truWz5yRCBMT_3hs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Sequence Numbers
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage essential order settings for this site.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrderPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=GTNESmbcpcBoRcM1XDD33UJ5fd9L4Y_WDvYiW0uTl2xOOI29T-OyJ_itShYD9CKqPod16tjYOhvQqcyhpTAXuhkf_eBFsnuSNoQ-n5OccwANYKOGI7-iH-oDowmH1ZHsczILA5ifENJ8616aFH51IzKkaHT9qG1cYY7-L1Bu-3NFcNMpw2k"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Order
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the coupon preferences for this site.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCouponPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=aQOJMdKFZfoaUcsFa8EdFeE9Tr5aQgxih6mlGFFxnBEcaRhBDY0RkC5x5bsnt07RBVojlk0tVfNYx8fsz_Z4v3NzOmEhC-sAoEnPDSrw4Ul0gvVlWtgi8o2ZaQojdA52HUehB3MqWP4W4z8G-v3c3Q3tDjLFrDNQ5WaJiNy21sM5hkk7V0g"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Coupons
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the promotion preferences for this site.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPromotionPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=rgsNSuovT5zyNLKMYUqq35BZxs-l0sKNcE-TB_ZrtW4pfBBzhuNfQ4W7i9cSWmh0MBjQDClLW2mxpR3SaCT4LgaJVOpDxwCTA150fweH62_Pqp6q88YxpOP3AK1CyWRgMzMu6GByVArLuLzfrkRDIdYWQnaF-P9opt6pOU4yIugzWqb4ac0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Promotions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the storefront toolkit preferences for this site.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontToolkitPreferences_52-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=YSI3bHiWiixilACo7k9vIWvfQGbJFYXonalWYEqdlT_2TeqrINlXZBb2MdI9pbwEoG4_yjJDtzxYClOoUX0umB0FpzN04UNdD_aUm5ARA7qRhH4kvipY2CkCTXk4rAJenhxxFgzJWD54PdObgJOxxm9CDsKbGQongqWQfQb1N89-mdeiiQg"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Storefront Toolkit
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Define storefront URL preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontURLPreferences-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=fuv2J5c9CmYzCfZCZjwbldkFo-jCLi3JFDBITG17H5BkoqLA0hhb49vcvLOnQJ3dxx5hVjLUkBDfY1wvc06wB8NRsHshI6sxbKnCvJbhDBJN4JQ3V9-wMPe_jf_G-vz0D95BIfCdaA0OElTH0K9qhJJsN7dUFW0oEFHFvjfEAGs9Q8D6Wrw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Storefront URLs
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Set custom site preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;screen=preference%23site_preference_groups&amp;csrf_token=5cJVYgOJyvBUWjVVUTEc_J0PaLxNk6iKpawYiSxYhTS4lPEGD343o6qAeAm13phMoGGLm_sgkev0mMkcKuWcUvEVwy9eHFjUb7Tvx6ii6TWobBJIZaYctUpY9r5QEZUDoSqrxxTDMngEcpoVFy7ObKfZTw8H42FTLE2IMgGfcscmswbqB1k"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Preferences
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage Pinterest Commerce configuration.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPinterestCommerceConfiguration-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=lcDSRusKR9SfKuXMgsZiD_HHeGzXl7B4t-RU0QtnMJJVjT24EmyvsI8Qxlz3IoQWBzIgnW7mZJscW4p-79mbQKuN2w-S8A3tqWEplOpgVOh6H5OqqEp-7RGfnG7z37CsmVAry-ejIy8DFfUoRFBnqhEQeGVdcj4qucLmLC4O_np9ZOjJw4Y"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Pinterest Commerce
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage privacy preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPrivacyPreferences-Edit?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=wcPGZLFeG97Jvvy8kanEYxbX6lhPzUaS_H_q4P3hv08_ujgY2iOwr1IR6Y1BLzGb5FHp45EH0BXO-oaE38HCTzc4gr6XnXNMQkFDEDcN7eQbLi8lsM97CQVPwE3U7dn-dCVatMT4ZnqG1DeOEc0cYvmp5Z4weFL_gG2k5VFgds96fOiGz4A"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Privacy
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage Customer Service Center preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCSCPreferences-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=erBt2T-nPTpFxXh-XeMG9pYwupO6_whmInzLRC461vH-Q_cd98OdUc_FoR75lK5LXtgj2h7an3lc4JAGxIKe9m-VWjuTDyvR8ifd42OU5BlmO5KujJMxXd4IIhDcOWcGnhcJyotA2lxlYCBHDr53Z8Fac9v-9NaH10KItl5gvq9AKu395Gw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer Service Center Preferences
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage Apple Pay configuration.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplePayConfiguration-Start?SelectedMenuItem=site-prefs&amp;CurrentMenuItemId=site-prefs&amp;csrf_token=hDxG2FxUHnOsJaK6yAnnoB7wsGiN7SqW9k9-5uFEbi001QeA_PG76oTlnE5WQQ3yRp0kT9nAJt7mPRMBeFbCkG9Yxy0DXGU9WIOUuHVfVoYi8nKWZasKSmlg-SwFkKqG4pJgZ9VInVviwtvspisbb_mK3uiCe2xNF2fpFzZGlPSX4dH9P-A"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Apple Pay
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 6 -->
+											<div class="bm-menu-column"></div>
+										</div>
+									</div>
+								</div>
+								<div class="menu-separator"></div>
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<!-- Admin Menu -->
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<div class="menu bm-dropdown-menu admin">
+									<span class="menu-overview-link">
+	<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-CompressMenuGroup?MenuGroupID=&amp;OverviewPage=SiteNavigationBar-ShowAdministrationOverview&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM" class="admin-link">
+	<span class="menu-overview-link-text">
+	Administration
+	</span>
+
+									<span class="menu-overview-link-icon" title="Click to show &quot;Administration&quot; menu items.">
+	<img src="assets/menu-down-arrow.png" width="14" alt="" border="0">
+	</span>
+									</a>
+									</span>
+									<div class="administration-menu the-menu" style="width: 912px;">
+
+										<div class="bm-menu-search-bar" style="display: block;">
+											<input id="bm-menu-admin-search" class="bm-menu-search perm_not_disabled" type="text" placeholder="Administration feature lookup..." ng-model="none">
+										</div>
+										<div class="bm-menu-columns">
+											<!-- column 1 -->
+											<div class="bm-menu-column">
+												<div class="section-name global-replication" section-name="global-replication">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head global-replication">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=global-replication&amp;itemType=Administration&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Replication settings.">
+	                        Replication
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Start and control data replication processes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewReplicationProcessList-List?SelectedMenuItem=global-replication&amp;CurrentMenuItemId=global-replication&amp;csrf_token=026J63ilVeVka-Caix6_R2E7uQhWQurGUm5aCWxFE2t560khostVIQgMEXNfUq1ah86LZXQj4kVXJrxb6-HK4MuqU_c4rNLCcII7zNp7mQNZJAPXRLnrLTRRcB08zkRyIx2MzIBPf6wtV3crjsChROeZXb7bFBV6ti5ionsH5IndWQSzMF8"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Data Replication
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Start and control code replication processes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCodeReplicationProcessList-List?SelectedMenuItem=global-replication&amp;CurrentMenuItemId=global-replication&amp;csrf_token=lrhLvZu-ZFT99aklrNgyDEI8aGv6h3J8t4pFbqJpCzlmUmzXQVUcxbqRNvgfBkKEvzkcriBJvgh0htQmRguZdoDXMEoJPQsUL4OEjiQUXvk1dXw6h4iCFTWMivi8jqs8sttKbOrzTCNRpmf1kMD11k9BJ4eXZRm11OIyCViUS8WKUo1FyNo"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Code Replication
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+												<div class="section-name organization" section-name="organization">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head organization">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=organization&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage the organization.">
+	                        Organization
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the organization profile.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrganization-Edit?SelectedMenuItem=organization&amp;CurrentMenuItemId=organization&amp;csrf_token=PL1B1iiAsY9w_jdL2PoQOX6JstfNWkSUHSqHR-yErfgRPERwrsYKfCppVsHua0WFcEOyA8-TN695sJGPgY8rezjXjBK3z5hbiQR0BKD3uIOqUFfo1Cb5qQGrBAEzH-wpLJ96hGQFn4pJ32cDKjf4PCR82YZeXKNlzPs6tnHKY6hdgSg56lk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Organization Profile
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage BM users.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewUserList-List?SelectedMenuItem=organization&amp;CurrentMenuItemId=organization&amp;csrf_token=m3V4UYTi4zV4t4mCLSEsDknZrO7p9n-tVYJQGAFC_AmxUF_-W9m7TosV5ZlJ9haUOY6NIH7wce89dTberdflYckM4d1P3c8lZIFPofvkXK2mA_jrYrMp7FKI3i9mV2SVuLEi1_IGx026J96OwQdeFT5r8_t3JbMc_J0flKX-YGAYAUa14Zs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Users
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage roles and permissions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAccessRoles-Start?SelectedMenuItem=organization&amp;CurrentMenuItemId=organization&amp;csrf_token=A8sHni8renuf6blwn-iy1u_pVIRbTHBreKZz9GtMEL6YK4QExoZ_tKXGDW6TMqJ7kF0rtkbNGnOeudQZIBQuulLFdkoBn4lU0qjuBb0MW_4g1B7NAJUDbkaKjicRcGPVZbaHPGqALCcb4O3hYjjSQH--WqPFiWTr5JsTRRBzepf4dfHc_e0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Roles &amp; Permissions
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage WebDAV Client Permissions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewWebdavClientPermissions-Start?SelectedMenuItem=organization&amp;CurrentMenuItemId=organization&amp;csrf_token=sWcCP8dCwztI_s_I_ZveMkeoTwJORIMi_hs7pv7NYpQLzyE5oyvMDVb-63FQg1XNVouDmsEZjCYa81tMe0sQSWgfy6BYL1wWzsL_yRtEoSFpX_1yCDM1GjcccVdFokxnJuJoKNOMrQwy8modw5EWIhay3GmrwZRFFpW9ReLg1TJoRiFAAPk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	WebDAV Client Permissions
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 2 -->
+											<div class="bm-menu-column">
+												<div class="section-name sites" section-name="sites">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head sites">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=sites&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Manage sites.">
+	                        Sites
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the sites of this organization.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewChannelList-ListAll?SelectedMenuItem=sites&amp;CurrentMenuItemId=sites&amp;csrf_token=BTs9PR-Qzd0cBE4QjnJjNUyQPhNxEZOTDoYzz5pi9SyW1PdTa_aU2_p3Z_3X_TUfU-FwsgmawAWBi-PvHfo81dC1Y2Gf7UDNPW7LMpG5OZQW95ndSa0eKQ7gak-vugvLQ8cnjL0XHs5hYZf1e8z9wqeQo3ujYRQR4lHsbWd-hAbjMC5anoM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Manage Sites
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the customer lists of this organization.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomerLists-ListAll?SelectedMenuItem=sites&amp;CurrentMenuItemId=sites&amp;csrf_token=eU2uW-zvzzwVOLjVD8roFBg42fbuxeSaCqn4Qu4bn0WQbcZHKMrr6f_JOIe6UAfu4VVas62e_MINJ18NytA4m3mygAjNcPMFiP_M9WmAszCvxoDPmEvWk4uF0JqqdSA3q9B5XVwtuOnoxFqgUvVeoB559YGZ_yzdGwg05fmGNElAEHrUAL4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer Lists
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage and assign content libraries for sites.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAdminSharedLibrary-List?SelectedMenuItem=sites&amp;CurrentMenuItemId=sites&amp;csrf_token=_1UR6U7f91x1d2879UFO0r4pdK-qBMqjpgoj7Ux6C-M2fTEwoHXomeyavJ0htPtwK_8yjD2mULXb2dzrUZ6yvGhDihj1XfZEG7e64rq473XXw5qNoU03Csubnsq2TswnL3EfaFC5N58Y4ogwY36dzCo7UBGFISE8_xjuSmt9SLViLLcFK4g"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Content Libraries
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage batch processes.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProcessList_52-ListAll?SelectedMenuItem=sites&amp;CurrentMenuItemId=sites&amp;JobOwner=Organization&amp;JobNamePrefix=Customer&amp;csrf_token=bW53BgvOQi5JiRhRL8kxc5hix74hiWhYmzksylIa0aQsrBItp7E30jctCxxF9XteId6OZOUVMkDRk5m2DHJoicutvWplD3XcWGArHkz91bBl-9-3LRwYxQaZaGWXqLznBzqXkt4Nrz1CutrLBJ3XTj4Yn7yPgXR83HEYQZja3fyKsoTSFN0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Batch Processes
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Hostnames and certificates.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=sites&amp;CurrentMenuItemId=sites&amp;screen=embedded-cdn&amp;csrf_token=htUY8I1Jb5b8iV8fHDmuh7D_ANTcfVBnSti-Ut_ZWjeHIRMvx60VR0abN-JyTWgOZbOcSvxz5OV05KmFc2PgsqhFeD2q8fscPeDXlBzxBsfpXHR5liHhJtg_XBBBu-WNitozlPmXeV6-V1YwVJAvBPsV-nXxQiTvolCa-BL90IWIGDFCCK4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Embedded CDN Settings
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 3 -->
+											<div class="bm-menu-column">
+												<div class="section-name studio" section-name="studio">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head studio">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=studio&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Site development extensions.">
+	                        Site Development
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Setup and configure development environment.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStudioSetup-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=TLFQvot7njjvyEEbfRNFbtjQIPQzoVcClm-lX6YiWb0YS_JMONzhgesDAH9UWS-jJP1MjI-DwVGSiFlGKU5458NE0acKGwMheopK9wc5itykHG3_mno25IhBjGO3VIFN-jyPo1TKEqao-id8saxkXHQcaTDP3eLeiamfsvz4zTrLayKWvo0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Development Setup
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage code versions and upload deployment archives.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCodeDeployment-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=hjo3xexhVyLqjwg0By7h7tZnhbUaG37XT6W3YsxQuEEC1yHrrwifoNvDAQeMn3XpYNgdZuEagErwBWFZjoWclaHfrjYMYE4K3fLlWz4e9rEGNO4qfhR9gw92wAnAmyXdfmxtil9WdJOIUYZZRu97Rn714aVn8X2U0N2CBfUQRHMsCzmG63M"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Code Deployment
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Customize type definitions of system objects.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSystemObjectTypeList-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=BrGMC3Cr6vH5s3PyarlMQRv8QT-34PpaJtr_ZOsPsYiBlnXOs7leumIhZM_SZHrDEB1c3YdHL9Xqs5OIRxFgc5cZEGVGptgMVf_MLaROXNK5fLQVTdHSI0jd3-auchI8o1Fl5prNtc6ErE7WX9nt6-7hFJaA71IOCVV0HiQkedDSFpfQPSo"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	System Object Types
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage type definitions for your custom objects.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomObjectTypeList-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=GBkv5UUhuud3AwOx5SPtb0o3WY5tDSoZYBA2d4oxSnCIn_eqh39184DDxrjHfZDKRq7EbfAP0Rp1gZIGIErzwz1c-zO-RTigQxoQ2DoQ44UFdXHVOjqVokPh3_uUEh7uV61QCjdU3ixQ7vpmddcALnCh5iYBtxNCbDNZKG5J-iRh7GgDbSw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Object Types
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Modify displayed error pages in an emergency.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomErrorpages-Status?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=NpXLR8DvMydAK-_RMVD9rVTpzeq_B1zKh4ogray-YYxRnKJy_X9FWMJJddV8i9ssuAeP55yqWIBWO83xhcYW7kOqekZBzyqsES63dBSPu1oWhE_iaHmSH8Xbf1TgnBHwqkUireyym6Wa2-XQJ7bo-6w0pYD4qBNVBXavIud_Y4eGj1vhngw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Error Pages
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Modify displayed pages if the server is down for maintenance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomMaintPages-Status?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=pRqOTAeuHNEet7no1e8ArqEtgW0bDgLwXY73CJ1tN6PnGZbRy5f3loWTt4COBCgFpGkIsG8ZFko7yfg4rJL7Hf53s6Qjo6GeG8rIQu8dJFWkeZm_i2T_610o3Lq2yiFX6tsLciLr_V8q7f4tEZymG8u3of7aQpYDYUk9LkyC_c87AtaIru4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Maintenance Pages
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Display deprecated API usage.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewDeprecatedApiUsage-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=35c08wWGra0OGJ9tUqG-t2vZc5A8xcSQNVj34HCPf--Ec_VMi4A0VWJTZIDDFGA9NSBh1EJQMJegUGLrT37K_TB6elaiqjjA1KMfoq6GVtm0z9i8yIYTjVtsC6CLDY2qlmi5zRSmEpAkQNa58fGIRzc5JaDLPdfEt0zfcSpYwijbN9vfdHc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Deprecated API Usage
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCustomizationImpex-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=6cCV2jLErEMVKuYGDO_gaZfXpo__cEjpeBdAKJcV5gWZakkTazH9aNKcoKiglddt4HZUiPCg7pHQ_fFDtEeeRBw5CuEWb112mXOyQ-iJi_GxcHQWQMOM02E3zG6eJx1EKBmUwTI-VRrQiPRqeLJX8tZbPSL5S2_jo9TQKeHTVedjn7YWwKE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Storage and restore of site and instance configurations.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSiteImpex-Status?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=W5XwvooiYTzE55PcBnFCM_PVDnq46kBSv7GGODxlZMwS2PKFIyjlosZHiZTLSVUf3CxbNxSgVRVm6tF7RfX2yXdc0WISdHl5nVRQS9EI77lfVGNOT61f9-7uBA-9Q0OBTnQHrkv9dHfGmv271BehxWsyqc_WrUp2lslLUw3RqRqgRbna5fw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Site Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage Open Commerce API settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewWapiSettings-Start?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=8axV9oznGpRttdcqmtM2AULEMrMsPTe_esJfb9zqseJWM_4KCysp9FsrrMl7Iygwm8_5Nh09fhsNTFmmlT49k4VC2DdEznTCmEaCidyuUTSxFkb-l7rETbOhEqZSdb3QESeKXT8NbKSAA96Lz1LR62UuVkW_aCayEZREyuilMDQcpSr2OJw"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Open Commerce API Settings
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure settings for the Customer Service Center.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCSCSettings-View?SelectedMenuItem=studio&amp;CurrentMenuItemId=studio&amp;csrf_token=12Z8oxDCv6oWByVNEzaGZmJCd43uVbkqLCTN2J9kmVJE-i5mt49m8UiuINfkv33XrsAunfQ-0Y0sXvuG-2WNaUbhvxqtDBQfhTgePsVZFRxPKQZTPL8hvXfmaAU5HdAWzHpgfo6pAife3Obz7atQTqJDMD-6vTmy1hQAWs99fTKcxAQ1dkE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Customer Service Center Settings
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 4 -->
+											<div class="bm-menu-column">
+												<div class="section-name global-prefs" section-name="global-prefs">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head global-prefs">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=global-prefs&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Set global preferences of the sales organization.">
+	                        Global Preferences
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage locales.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLocales-Show?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;menuname=Locale&amp;mainmenuname=Global%20Preferences&amp;csrf_token=ZxLyTdJ_R0pq_h_6hEMs5qouDbfTZZXHmre9q_UZBwDRxPQV-ghepkbfrCDAXxcnMJeCPl4iQyu1TwbMoylgewK1OQnMWKt_3NnhuxbZ5tthg5Jgi1iWvryuBvGv1XLqxPZB3gj1c9hWgfVlm1viubpeOG39UTTidxeQGnQsXHjgyYttJZA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Locales
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage the time zone of the organization.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewInstanceTimeZone-Show?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;menuname=Instance%20Time%20Zone&amp;mainmenuname=Global%20Preferences&amp;csrf_token=q-DnATKJm1posCqSI4ZWZKs0tGkF9Odq6pYitfazdEE45GawR_8WEVieU2ZxeSNzOu3rQsR8I0VDIAUYix3Mt1ZcAIwwjw0-RQpbIvnc13K0th90WykDXCrGEjwlLGiP6ztdgBVjjD_DZ2l0nJ8uTL_2pQTVSnp5BT6FGpGjh0zkI2Ohx0A"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Instance Time Zone
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure history settings for this instance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAuditPreferences-View?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=iPkCVRylDoR9wovmpIaONS6oaIg9znTFaJ-uAPia_JQ6-usTfaNCi-GGz2w5WkgZd-DiKUpw1vQPMSghaSOeVKFnJseb3vFE052ON5QI74xQlmfci9j0g3RuKOJ2Xun4rXE_mMgr60No-X2nPQFnDzQKXYboypH5lJVLEo13pxxkeQb7J9U"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Change History
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure OAuth2 Providers for this instance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOAuth2ProviderList-ListAll?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=ajTa7EUuaNUvrytEPkixCV3oKDvQ_k4Z5oLnu-FRtNESyN5pGPuP3MIXw93kn8zN27Oy_sOCcebj7VR5Sw9MCb0fYgC5OQi_vt4QoptDEvuEHSzLmKhj_x7-0GR9pdXRW6USAidUosP4EHWut8hozpuBuOz2iJ4Sr4gzMxGZNqrkYiaD0o0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	OAuth2 Providers
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Preferences related to Payment Card Industry Data Security Standard compliance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSecurityPreferences-View?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=1CXBmB02nrLzU09gJMIjLdA2UdcLYpDge7HCe-CKYvC_nf5ZTO4IgoWkAETGna_dvi7rnKZ4XgdHhYJ-_Nb9XtmcPs0VnjM4HpDzr7Tek-xz4-eJOgWwsyS4Jb_Yl0CxHyIqRju3ahGx0jmVSpjHdqhjKFSFgDZ8lIaMcESnqUjfWMzVbdA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Security
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View geolocations.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewGeolocations-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=1omLW_fO07pY6SuYYDaSy93T-lkI_Ggv1e5Cfat04OZ13weB9fCENtlA-P5ldxbGzK5yKKr8x8Aoq2MrYAHLg4K56qOMHqOHeKiusMTx0UZJ1rJv50FKDsYuJSRotXDmPLkcIazjgiOWnLgTaeG0v_YfiiO5cd53xerRWpKZW7v1NCOvU4s"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Store Locator Data
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage page meta tag definitions.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPageMetaTagDefinitions-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=jyV6_cUrP1yOqF195DUNofGVrKop9Xd8r0Ihx3jYBkowmlEx5UBlkL6y1NMzn-RgfUtzOsK9fyXoP_CizCE_jTP91-yPCiBoFMAV88FA84KBG-xHaUNE2vaTwzzmR1azoXOup1qJt5bvP1GzXKb3jgTEjt4KM77FuztXfQEKNNjkMpNOds0"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Page Meta Tags
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View feature switch preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewFeatureSwitchPreferences-Show?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=G2sfTO4-msfqtN1EGd-mwWRXBRj8siZ26MHensoZQoKEsqkK-cNDSCAffjlBfqeM9QK0Dn3Dl-nMUjd8bC3AVtFVK5kH0yKSIe9kIHqqiALMpi0meTWnULRFwaWe2ZuVIWwmqWucme9D31HwhSzQ-4gB02wen4IswxlqarGQDdG9QNuqC88"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Feature Switches
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure global order search preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrderSearchPreferences-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=miD9JHiCnU2s2MtF7PLW0-MJ0TpmXw96WFB3AgKYuUNj2ZJmzgEI5kxroiI_Svvr16gBe4WRUDvQKH_p8kGEgliaHBekbz9rsz2G6ylKYvFKurTiU0a7M6-QMfJYybVqfySEbel1cuz-tU0NlHsQAOnkUeYRczG0VQ1pJ5QK_S9pSqIj4wA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Order Search
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage sequence numbers.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewSeriesNumbers-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=o8XVmYbfLJWGHGdXVPDzrg2gzxybrSVWHe0XyZAhK7ChpLOez1qqcinRwxjpoGibrChcUBiZoR5EOElr-nJD-ra4oshpU0Ur6ur3UayUWg_QYqOc_-x6NEvGik8ElnuB-Y-3btVOYmeIeRzQxG9Y5YYAXoj5ava1q16ai2yAMb1bHOTvlC4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Sequence Numbers
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure global product preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductPreferences-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=qtHpsI2xFx7uhUuWbZpM7KayeOCCTzDPzUf5BROIaGEq9-Rpyyby45U3TBnSqIIz0YPZ7EeIL9FLgiwgYs-uKghobOSb92knbQhmI_dAB0AiS9KoJgxezdMB0ZOemq4fp5i6Favg6EQ1-DcU50KRFHTUrLAjU4-iD2onu-ShPanxEO2JAIg"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Products
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage global retention settings for this instance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewProductListPreferences-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=B4Us78lsun5zxUDQzgEKzGSmBtOyMJ53511bamDwgfWA_4l76FWFYfr001pUCmM_zLn2_RB3MzWSy1NAo7X0u5od-VqM40Ij-cFk6heX3rlz2nLVzyz2v-jQ11ep1Oh19DNFESxBlfHJ2NXiJcMAEmq8c07lHyOBhQBaVXC2NKfpsc_-IbQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Retention Settings
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and Export settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewImpexSettings-Start?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=EX10KevD0Sl7oOzHD4TSQsVK5dcMa5PoCr5sz0KQ7NpsoHM_Ja5b5cx1tci8FzoXgFF8soDnEFLpu0DGomephhOqgYUAZojjDZShJu0X0sAptbra4ULXvHo7m6M1_2KguUfBJTFwqulujoNgf44GhWPIJmOcKvm4QAHTY8df_XomfNF6KPA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View global client timeouts for this instance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewServiceCommonCfg-DisplayAll?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=_4Ea12_SLHOE9yyZIxKU1-HpVFWet3vglnxHZSWRow0KPR7T9q5ctf4X4vk3cDadDH6IR6_71tdRFCGnHcUn6RWX11qo2i7uHbJFN1InjlHK44RrCxWgkRT1q8n4b9MyC8QmZRsOvK7HRLcbCg3gsVeBux8NKarvfBAAJSt5LUxt20Nj3XA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Global Timeouts
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure global custom preferences.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/GlobalCustomPreferences-View?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=_UPHDto8TtBiwBsP1nIqDkccs25VggMJFp-_CsaVzGoHxbgj6qdBs2ThxwEv_tMmrEEkb9MmyY7wh8nh5at5jScfUI506M0Z_1SL9uEgeSeBJCbZDg2zyi1M-nIyf47ULEOsgz1jDCz0eXKkhv4Drm8CzwEfGxU6W1vtFzhji49Ac7vSjVM"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Preferences
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Apply for Einstein data privacy agreement.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/DataPrivacyAgreement-View?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=EW-TnMdL5i293cWpp9HTI_nCeFy1CKyTc_DMU6QJd2pCVPuluLH9BwJIuW_mhVZ71LoX9iAhfYqFEHa1Zwj6J2NAUXhvOsnybvpYs0ulLPUwm9d9aBxsYwfF2SfwpB4Fxo2Hc86JFiDwLye84CCnMAlshuJMyNirXc_VBhbVqZUx1gl-gMs"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Einstein Data Privacy Agreement
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure preferences for Business Manager Analytics.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewBMAnalyticsConfiguration_52-IpAddressExclusions?SelectedMenuItem=global-prefs&amp;CurrentMenuItemId=global-prefs&amp;csrf_token=jxrTgtGMNxQnGuSvqzGFdIIkTC2bQBvzT1-Ti6CjmS-NHoGWiPFY0wccTjhcMnIRf4-2RPk_tdJiZW6iZvGpjQU0PjaTMjRjoC48TRpnXIAlzls8NoySpFTSAQCC9rvzF4wl2_dpy5emaFNJRVjkapttjlrWC9EHFavjhNzz2dYAXmlfQJE"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Analytics
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- column 5 -->
+											<div class="bm-menu-column">
+												<div class="section-name operations" section-name="operations">
+													<div class="bm-menu-section">
+														<div class="leftmenu_sub_bm">
+															<div class="bm-menu-head operations">
+																<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=operations&amp;itemType=Site&amp;csrf_token=SpFuG23oCrJUres3H1ifRMw5u9TG3MxcPpF8m1NwrNn2EZS525eaatvm-fto29XCA5Hp03Ex1DK_9Htsp60RsqCDxlfVOUaXIiuLNnIad7D8XeXqjiy-PQyWc6ZFxmeqfPtGfgqICxCtmhx4dHPe7iGVHD06X_pDIvnFPoZ4kJ38J0NGbZM"
+																  title="Operations functions.">
+	                        Operations
+	                    </a>
+															</div>
+
+
+															<!-- start page navigator -->
+															<div class="menu_items_bm">
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage job schedules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;screen=job&amp;csrf_token=8KkeXegoYVXpF263Qy9ivNzDU1bdZeaWIhBh_6fCWFyAOWp37t26GuWA1d5x1sAtEUUud6-m8K1tgVQNRi8rOgErKNnfbC5C1O6Zy_4-vlaGjtONC69bfLK2rL1OqnXDgn1VXb1DBbl1JM2DXl6N1EwC-n9vebW2tqcxqTQhLSlqiOpAmn4"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Job Schedules
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Monitor running jobs.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;screen=job%23history&amp;csrf_token=5D4Z3J6VZb7FFoyOyCq9Hxh8SKudScGuGLDdKBg51D73GY9GwxiLowJRM9mVyDCITozuHhjrrNAH1KHWU9trOB36gGipCpuxrNmQ60pGozcZLSlOcSeL0bUJumQRoFxzd0aiAVpk2u-7X41FgmRgvCOCXVGhnFKh070xVB16job_K-q1zmk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Job History
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage job schedules.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SMCScheduler-DisplayAll?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;menuname=Job%20Schedules&amp;mainmenuname=Operations&amp;csrf_token=bFl8nX1EFzeghhUvSuSA5hdluySMOTE462UxMtrcOT9Cjm12wshBKsc3VSEoiri1_VX-u7Az5hRFmQcI2DwuMAiqMbP_tklIjRShg9lURj4WYTACDdUeAL71281-U_himkFkm-i1Xla4tV0im9YT2x81iBx5Y7u9zMDqprD4Ub-PgSy-72g"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Job Schedules (deprecated)
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Monitor running jobs.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewJobMonitor-DisplayAll?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;menuname=Job%20History&amp;mainmenuname=Operations&amp;csrf_token=ymZg85oGDqiABC646WaTnp4UzUxXHlPQT_90By3kOt6OqeLO1x5r6aGli8KjtNkpkqHA-l-WiG7QdtokXgplO3re9nqGHEGOZTgUcz7imfIpgYRqhpGh7OS0vta-BF0eS3HbTQoacOmP4YjilT94V1jYBjCJuGYuPLaSDcbo9EX2nGFTEWU"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Job History (deprecated)
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View job statistics.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewJobStatistics-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;menuname=Job%20Statistics&amp;mainmenuname=Operations&amp;csrf_token=Si4YRJrnfmodDiDH4LM1VdP5cOqAp2ltWXNJW8AlMYEyJFZBoIqVobQfX9PV0k4hGZMyTNYH01ZunVaf7okXXbXPlRkMxGp5lAAvDnfC4qtuzZycSWZyHsbGhEWrZKsx1r-qLvD4b6u6TqGnbfm9lNGMSlcShcnXC3EOW69DO8jl7M8G1Hk"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Job Statistics
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Import and export.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOperationsImpex-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=MCW_uyihvGv-JbNVK2ZVNnv6RpUUuUpUtF5gdooZnFKNi_0iBJUGu8Vp1VVjES0Q80LBV033i3ZYiynmPtwcFB92cdD5NFzn6XK2vLUhCigtqQ2fdbJq3_Gr-vMCjG3vNkhKS2mFfHXkpQXeOotEi3m88f1GltrQ1khw2Pwwv59-JjAAg9w"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Import &amp; Export
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View and generate GMV and Order Journal reports.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewOrderJournalImpex-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=oe7PC44Le2veAQ9rdp1yBXW_zjiq-fCns5QEZrlqSSpkQ0CFkw_20C6Ze4jQlD7xe2_j96yDxbhEP2B4Sh2o-OUaQoNB0HaAlIDTqEsBsfOJOHPETeV1HlIvWMvaOl2qkX6cjBTQNvsZ8jktR-ITx_sD0U3HHhmnjATB3oPC8eOD5MUgqGc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	GMV Reports
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage custom log settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;screen=customLogSettings&amp;csrf_token=-h9vMrQumtWRg0UFC0hkMuTjR3lJZwtmG4AwL1Qa0TkZt5J1WPfzQKJUHLwFJki2ukXilu-F9JqGVeGAg2_UAYOkUjvsj44SU_vO46Ue_pp_n4FYUtopiz_UtX6e3y83GTbLu0KN5Rhk4JadfYGWw9E-Q2oOChISlM-v5U9ib5vrXVWSDrQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Custom Log Settings
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Start/Stop Code Profiling and View Results">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewLdsBusinessManagerScreen-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;screen=code-profiler&amp;csrf_token=Dr_TR354_9IV7cys1We4AuARdmRWkRcJgkBYlHgu2rbWRkZno-z4EBrXnewVQPzd4voQgtTkZyf4xTAftI7o1M_pJLqNL3pcmiCoWhr24VDgxG6b3v5LgUFD3S55em9b9hWtlV7gw0jE1XHJ_UoOsdFKv-vsMyKrXB1TvTy3rIChtO8QC7o"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Code Profiler
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Profile and evaluate pipeline runtime performance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewPipelineProfiler-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=WmYpr5QccV9zx5xCGICCc365IVDBbFvt84kIu_FdP_Yi6QCT_FhjHGS3PuNhJNkSo5LhMQa2qNz9SmuE-F479m_1VnF4KNHgKJd1S4lfwqkJSZpfDUiaiYLRMOp6wnFtfk8gmy8NTpjDEbHexzS42WnU3JgnhDxcRb0rPgj1O6oTone7ST8"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Pipeline Profiler
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Display quota status and limits.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewQuotaStatus-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=8aSXjQ-7iT-7LeujHxYgr_2H9Qikh5yGdzJuLRnV700CCJTOh-2N6PCRHLeKi7HRz4vrMDWtJmSI0l5GCcE4VzaJbNyTxxtPjKdllQT4gtN3eJHou-zewF_dAFuF1t6pjQ61kYtSdPTB8B7UtR60aHBpvfxrZM3163DwijFossPh_pg_Cuc"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Quota Status
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View change history of various object types.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAuditHistory-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=tYT5weIkmynXrECwEqSm7mwGLV1JJ8f8yup5FY2wTkgRWYtai1lWMpyZPW7z7FeNu_qRSTts7xUdDoNjsmA_1w_WI7Ia5BrfRj1Hy4HgQY-8PujIB0P-lA2uCy177Z4ntsjR1eYcQ-DPNe3sWOUY4dIe9awklH2lfmHAf7nBM6k5Di_hbdQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Change History
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Monitor encryption keys used for internal encryption of sensitive data.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewEncryptionKeyList-ListAll?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=7TiwpEfKVSNPRTjduFq2WO-LVARmN7VL8TI5okAnboxkFNIn3K8tWqZBqeWCvsP_bNC_V1hgTPC_-Ulcl1fn_pxEjilQncQleY2eAMYiQeWONBF60yFNCaJhuonG9ZXNVm393PaXR6VrUKp7I4euP1qw35AqF-phvw3DQjV6MTxMEOMdFF8"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Encryption Keys
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage private keys and certificates.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-BM?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;screen=PrivateKey&amp;csrf_token=_8dp2_klz17rI45Axtbu7-XjfjHudjTlkjOlY9ABR_9bww39XGrg3UpjEhon06hnjgJGzH9vNerxj3bFP1pP3hEovSnrF1ErJ3X4tMF2BeMLYDKyM7dKECtNtPo7CM_CsUrRDRw478vHSDQqY6uaAtD3oTdL1d16sLivDZwkpgJYApZ6zJY"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Private Keys and Certificates
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Manage services and their credentials and profiles.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/Service-DisplayAll?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=rvn6_rXJJvvrcqEo5mNTVtGChfs5OWr0EWFQpzZUi7v5QM6s0FP8tq09JM-Tkj7RrcWYI16DD1TbMqD7X8i_4nz-GZ7-7GDK7q36KueLofigo8dbh4gxGyhs77A7Im8B05Fmu-Txqb_d74tY72mZTdPtApIiZkpqjvO_4cpKDnhQA8MKIAQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Services
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="View reports of service status and performance.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ServiceAnalytics-Overview?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=YAf0wJDLEdjV-TzORiLZYIFSDKUVegS9Gqmj6GI5uIqtXt1NApMFd5fa2d0tumX45AWKfuOqGZJXHjfoKcU-SLZq6iZLzphmdd2uR28kgLCYIaKMHuobWGik--cDeTyS9W0j51qcPbEgjx9hAsyvVVp-wB6DtHiv_ZQbeF_nkJREJnwGHTQ"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Service Status
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Lookup geolocations for IP addresses.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewIPGeolocations-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=sr69_BeVY38K9yPCLN80T8JrxB5fNgybOqPOrRbLc0zt6Q9IHwIWCqGnPZ4dkjYwv6LgZtVTN-YL2F-GbZrkL8gj-mGgWoq_keKpQIivB7potzZVzZW-N43iqeqi_gVJVCszvlSjjYIMAbfROANyVMyXeAw8QGfGqRORmeK2tMGxf0mrStA"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	IP Address Geolocation Data
+	</a>
+																	</div>
+
+																</div>
+
+
+																<div class="overview_item_bm">
+
+																	<div class="overview_subtitle_bm" title="Configure Predictive Intelligence settings.">
+																		<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewCQConfiguration-Start?SelectedMenuItem=operations&amp;CurrentMenuItemId=operations&amp;csrf_token=ILoLdVIZj7FWiSaQP5DNwIFPRhUf2JdAToaJ8NhUKeVQBEnkb2rHhA70a4rp_cIsqd5zn4IM7Z7z6WF_viM-TAGPDm_WzPxlhHXXqx-x8vGNQT1VkUmNagU2VfvHRAXdjEUb3p2WOhPNxzNVBROysLSACNy099DbqXBaOXh1bsWe2k1gR14"
+																		  onclick="" class="overview_subtitle_bm bm-menu-item">
+	Predictive Intelligence
+	</a>
+																	</div>
+
+																</div>
+
+															</div>
+
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="menu-separator"></div>
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<!-- Storefront Menu Link -->
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<div class="menu storelink ">
+									<span class="menu-overview-link">
+	<a href="javascript: void 0;" class="goto-storefront" title="Open the consumer storefront in a new window." onmouseover="window.status='https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/SiteNavigationBar-StoreFront?csrf_token=XcCENgsL5COHz9JhzQh_YvrORTtAnPO62OozaamDRvb5kjQqH6I-7gtW3LUqjpEb3pf_1hpnB1cDrYE3CJH5dA0QqPifBzul_geVjVOvI3RC2SwSFcQavwOa0Q5OIASJHQ0OjHSDk9KHy1DMXkseHs7h__TJ6nn6isIS6CgHvH1GiWhTWp8';return true;" onmouseout="window.status='';return true;">
+	<span class="menu-overview-link-icon">
+	<img src="assets/storelink.png" width="16" alt="" border="0">
+	</span>
+									<span class="menu-overview-link-text">
+	Storefront
+	</span>
+									</a>
+									</span>
+								</div>
+
+								<div class="menu-separator"></div>
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<!-- Storefront Toolkit Menu Link -->
+								<!-- --------------------------------------------------------------------------------------------- -->
+								<div class="menu storelink">
+									<span class="menu-overview-link">
+	<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewStorefrontToolkit" class="goto-storefront-toolkit" target="_blank" title="Open the Storefront Toolkit (beta) in a new window.">
+	<span class="menu-overview-link-icon">
+	<img src="assets/storelink.png" width="16" alt="" border="0">
+	</span>
+									<span class="menu-overview-link-text">
+	Toolkit
+	<span class="beta">
+	Beta
+	</span>
+									</span>
+									</a>
+									</span>
+								</div>
+
+							</div>
+
+						</div>
+						</div>
+						<div class="header__user header__global-navigation-bar">
+
+
+							<!-- Global Navigation Area -->
+
+							<ul class="header__global-navigation-bar__menu">
+								<li class="header__global-navigation-bar__menu-item">
+									<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-DisplayWelcomePage" class="headermenu home" title="Business Manager home.">
+	<span class="headermenu-link-icon">
+	<img src="assets/menu-home-icon.png" width="18" alt="" border="0">
+	</span>
+	</a>
+								</li>
+								<li class="header__global-navigation-bar__menu-item">
+									<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAccount-Show" class="headermenu profile" title="User profile.">
+	<span class="headermenu-link-icon">
+	<img src="assets/menu-profile-icon.png" width="18" alt="" border="0">
+	</span>
+	</a>
+								</li>
+								<li class="header__global-navigation-bar__menu-item loggedin">
+
+
+									(<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewAccount-Show" class="headermenu">
+
+	Admin
+
+	&nbsp;
+	Admin
+	</a>)
+
+								</li>
+								<li class="header__global-navigation-bar__menu-item">
+									<a href="https://documentation.demandware.com/DOC2/index.jsp" target="_blank" class="headermenu support" title="Open the documentation.">
+	<span class="headermenu-link-icon">
+	<img src="assets/menu-help-icon.png" width="18" alt="" border="0">
+	</span>
+	</a>
+								</li>
+								<li class="header__global-navigation-bar__menu-item">
+									<a href="https://tbartsch-inside-eu02-dw.demandware.net/on/demandware.store/Sites-Site/default/ViewApplication-Logout" class="headermenu logoff" title="Log off.">
+	<span class="headermenu-link-icon">
+	<img src="assets/menu-logout-icon.png" width="18" alt="" border="0">
+	</span>
+	</a>
+								</li>
+							</ul>
+							<div class="clear">
+								<!-- FLOAT CLEAR -->
+							</div>
+							<!-- EO Global Navigation Area -->
+
+						</div>
+						</div>
+					</header>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="top" id="bm_content_column" colspan="2">
+					<table cellpadding="0" cellspacing="0" border="0" width="100%">
+						<tbody>
+							<tr>
+								<td>
+									<!-- global spacer table -->
+									<table border="0" cellspacing="0" cellpadding="0" width="100%">
+										<tbody>
+											<tr>
+												<td><img src="assets/space.gif" width="12" height="1" alt="" border="0"></td>
+												<td width="100%" class="top">
+													<div><img src="assets/space.gif" width="1" height="6" alt="" border="0"></div>
+													<!-- Working Area -->
+													<div><img src="assets/space.gif" width="1" height="6" alt="" border="0"></div>
+													<table border="0" cellspacing="0" cellpadding="0" class="bm-welcome-page" width="">
+														<tbody>
+															<tr>
+																<td class="overview_title">Welcome to the Business Manager</td>
+															</tr>
+															<tr>
+																<td><img src="assets/space.gif" width="1" height="6" alt="" border="0"></td>
+															</tr>
+															<tr>
+																<td class="overview_title_description">Use the site navigation bar at the top of the page and select the site for which you would like to perform individual tasks. <br> Depending on the rights you have been assigned by the site manager, you will be able to administer different
+																	storefront sites.
+																</td>
+															</tr>
+															<tr>
+																<td><img src="assets/space.gif" width="1" height="12" alt="" border="0"></td>
+															</tr>
+														</tbody>
+													</table>
+
+													{% include "_inc_style.html" %}
+													{% include "_inc_fav-empty.html" %}
+
+
+
+													<div id="advertorialdiv">
+
+														<script type="text/javascript" src="/scripts/jquery-ui-1.10.3.min.js"></script>
+
+
+														<style scoped="" type="text/css">
+															<!-- body {
+																font-family: 'PT Sans', Helvetica, Arial, Verdana, sans-serif;
+																text-align: left;
+															}
+
+															.advertorialcontainer {
+																background-color: #e0e0e0;
+																float: left;
+																margin: 1em 1em 2em;
+																width: 80%;
+															}
+
+															.advertorialtable {
+																border-bottom: 1px solid #ccc;
+																overflow: scroll;
+															}
+
+															h1 {
+																text-align: center;
+															}
+
+															p {
+																color: #333;
+																font-weight: 400;
+																font-size: 14px;
+																padding: 0.2em 1em 0;
+															}
+
+															-->
+														</style>
+
+														<div class="advertorialcontainer">
+															<div class="advertorialtable" style="width:100%">
+																<div id="advertorialtabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+																	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+
+
+																		<li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tab-1" aria-labelledby="ui-id-1" aria-selected="true">
+																			<a href="#tab-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Release Highlights</a>
+																		</li>
+																		<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-2" aria-labelledby="ui-id-2" aria-selected="false">
+																			<a href="#tab-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Release Updates</a>
+																		</li>
+
+																	</ul>																	<div id="tab-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
+																		<h1>Release Highlights</h1>
+																		<p><strong>What’s New in Commerce Cloud: Release 18.5.</strong></p>
+																		<p><strong>Language Analyzer for Site Search</strong><br>A language analyzer understands the characteristics of a specific language, such as foreign language characters, and increases the relevancy of search results. New filters have been
+																			added to the language analyzer in Commerce Cloud to further increase the relevancy of site search results. In addition, the language analyzer will be available for four new languages: Brazilian Portuguese, Sorani Kurdish, Irish, and
+																			Hindi.
+																		</p>
+																		<p><strong>XML Sitemap Enhancements</strong><br>Maximize search engine ranking and increase traffic to your site with two enhancements to XML Sitemaps:<br>1. Merchants gain more control over their URL taxonomy by excluding category or folder
+																			level information. This helps brands increase rankings &amp; organic traffic with URLs that are easier for search engines to read.<br>2. When updating the alias hostname in Business Manager, changes are now refreshed instantly in the
+																			XML sitemaps menu. Previously, users would have to wait one minute to see their changes reflected.</p>
+																		<p><strong>OCAPI Explorer Enhancement – Debugger Information</strong><br>The Open Commerce API (OCAPI) Debugger is an extension of the OCAPI Explorer and allows developers to easily troubleshoot OCAPI requests, and provides detailed information
+																			about the execution path across all API endpoints. This allows developers to efficiently design and test storefront extensions and build unique digital experiences.</p>
+																		<p><strong>Real-time metrics for Reports &amp; Dashboards (Open Beta)</strong><br>A new set of real-time metrics have been added to Reports and Dashboards giving business users easy-to-read dashboards that offer insight into revenue, top
+																			selling products, profitability of promotions, and more. This includes the ability to see metrics for a single site or across all sites and filter by customer type, site and product to get granular insight into your business.&nbsp;</p>
+																		<p>&nbsp;</p>
+																		<p>&nbsp;</p>
+																		<p>&nbsp;</p>
+																		<p><strong>&nbsp;</strong></p>
+																		<p><strong>&nbsp;</strong></p>
+																		<p><strong>&nbsp;</strong></p>
+																		<p>
+																		</p>
+																		<p>
+																		</p>
+																		<p>
+																		</p>
+																	</div>
+																	<div id="tab-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+																		<h1>BM Release Updates &amp; Notifications</h1>
+																		<blockquote>
+																			<p><span style="font-size:18pt"><strong>Updated: Meta API Change&nbsp;</strong></span></p>
+																			<p>Last year we announced the 17.3 Commerce Cloud release included enhancements to the Meta API method in order to strengthen its overall functional and security profile. We asked our customers to take advantage of the new API and begin
+																				updating client code with the new API in the 17.3 Commerce Cloud release.</p>
+																			<p>We have delayed disabling the old API a little longer to allow customers a little more time to complete their update to the new API.&nbsp;<em><strong>We will not disable the old API with the 18.5 release as previously indicated.<br></strong></em><br>However,
+																				we are asking customers to please make your best efforts to update your client code to work with the latest Meta API. This is for your benefit as the new API includes security and functional improvements.&nbsp;<br>We will update this
+																				communication within the next few weeks to indicate a new target release where we will disable the old API.</p>
+																			<p>Information about the new Meta API (and how to access it) is described in this article&nbsp; <a href="https://www.google.com/url?q=https://documentation.demandware.com/DOC1/topic/com.demandware.dochelp/OCAPI/18.3/usage/Metadata.html?cp%3D0_12_2_20&amp;sa=D&amp;source=hangouts&amp;ust=1521575941156000&amp;usg=AFQjCNEOGPnYdrb-NsvAHnYTbwEfIdgP1w"
+																				  rel="nofollow">https://documentation.demandware.com/DOC1/topic/com.demandware.dochelp/OCAPI/18.3/usage/Metadata.html?cp=0_12_2_20</a></p>
+																			<p>Here are some differences between the former Meta API and the new one:</p>
+																			<p>* The customer needs a valid OAuth token to access the new Meta API.The old Meta API did not require any authentication.</p>
+																			<p>* The new Meta API has a slightly different API path. Instead of “…/dw/meta/rest/…” the new Meta API must be accessed via “…/dw/meta/v1/rest/…”</p>
+																			<p>* The new Meta API must be accessed securely, i.e. via https</p>
+																			<p>If you have any questions about this change, please contact your Success Manager or Technical Account Manager for further assistance.</p>
+																			<p>&nbsp; &nbsp;</p>
+																		</blockquote>
+																		<p>
+																		</p>
+																		<p>
+																		</p>
+																		<p>
+																		</p>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<script>
+															jQuery(document).ready(function() {
+																jQuery("#advertorialtabs").tabs();
+															});
+														</script>
+
+
+													</div>
+													<div><img src="assets/space.gif" width="1" height="6" alt="" border="0"></div>
+
+
+													<!-- EO Working Area -->
+
+													<div><img src="assets/space.gif" width="1" height="40" alt="" border="0"></div>
+
+												</td>
+												<td><img src="assets/space.gif" width="6" height="1" alt="" border="0"></td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- EO global spacer table -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</body>
+
+</html>
