@@ -70,7 +70,6 @@ html {
   flex: 1;
   position: relative;
 }
-
 .content-frame {
   position: absolute;
   top: 0;
@@ -79,24 +78,18 @@ html {
   right: 0;
   margin: 0;
 }
-
 .app-wrapper {
   min-height: calc(100vh - #{$height-context-bar + $height-header});
 }
-
-
 .is-disabled {
   opacity: .4;
 }
-
 .rotate-45 {
   transform: rotate(45deg);
 }
-
 .slds-icon {
   transition: all .2s ease;
 }
-
 #gain-value {
     &::before {
     content: "25%";
@@ -204,4 +197,24 @@ tr.is-new {
 
 .slds-tabs_default__content {
   min-height: 50vh;
+}
+
+.screenshot {
+  background-color: white;
+
+  .slds-backdrop_open,
+  .slds-backdrop--open {
+    visibility: hidden;
+  }
+
+  .slds-modal__header,
+  .slds-modal__content,
+  .slds-modal__footer {
+    border: 1px solid $color-border;
+  }
+
+  .slds-modal__header,
+  .slds-modal__footer {
+    border-bottom: 0;
+  }
 }
