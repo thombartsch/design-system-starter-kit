@@ -381,9 +381,31 @@ $(function(){
            });
 
 
-//cats
+          //cats
+          $('.select-categories').click(function() {
+            $('#select-product-23').toggleClass('slds-hide');
+            $('#select-product-23 #id-of-modalheader-h2').html('Select Categories');
+          });
 
-$('.select-categories').click(function() {
-  $('#select-product-23').toggleClass('slds-hide');
-  $('#select-product-23 #id-of-modalheader-h2').html('Select Categories');
-});
+          //add Strings
+          $('#show-modal-add-string').click(function() {
+            $('#modal-add-strings').toggleClass('slds-hide');
+          });
+          $('#modal-add-strings .js-close').click(function() {
+            $('#modal-add-strings').toggleClass('slds-hide');
+          });
+          $('#modal-delete-strings .js-close').click(function() {
+            $('#modal-delete-strings').toggleClass('slds-hide');
+          });
+
+          $('#modal-edit-strings .js-close').click(function() {
+            $('#modal-edit-strings').toggleClass('slds-hide');
+          });
+
+          $('.slds-pill__action').click(function() {
+            $('#modal-edit-strings').toggleClass('slds-hide');
+          });
+
+          $('.slds-pill__remove').click(function() {
+            $('#modal-delete-strings').toggleClass('slds-hide');
+          });
