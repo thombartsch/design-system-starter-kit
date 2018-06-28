@@ -41,3 +41,22 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
+.banner {
+    position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  & > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  background-image: url("http://www.stevensegallery.com/1600/800");
+  background-size: cover;
+  background-position: 50% 50%;
+}
