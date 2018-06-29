@@ -5,14 +5,14 @@
 //
 // First, we're importing the design system from the npm package
 //
-$static-font-path: '/assets/fonts/webfonts';
+$static-font-path: "/assets/fonts/webfonts";
 
-@import 'node_modules/@salesforce-ux/design-system/scss/index';
+@import "node_modules/@salesforce-ux/design-system/scss/index";
 
 //
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
-@import 'footer';
+@import "footer";
 
 //
 // We can also add styles directly in this file, like so:
@@ -52,61 +52,69 @@ $static-font-path: '/assets/fonts/webfonts';
 }
 
 .banner {
+  > .boxed {
     position: relative;
+    margin-bottom: $spacing-small;
+    background-image: url("http://placekitten.com/1200/900");
+    background-size: cover;
+    background-position: 50%;
 
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: calc(400 / 1024 * 100%);
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: calc(400 / 1024 * 100%);
+    }
   }
-
-  background-image: url("http://placekitten.com/1200/900");
-  background-size: cover;
-  background-position: 50%;
 }
 
 .square {
-  position: relative;
+  > .boxed {
+    position: relative;
+    margin-bottom: $spacing-small;
+    background-image: url("http://placekitten.com/900/900");
+    background-size: cover;
+    background-position: 50%;
 
-&:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: calc(800 / 800 * 100%);
-}
-
-background-image: url("http://placekitten.com/900/900");
-background-size: cover;
-background-position: 50%;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: calc(800 / 800 * 100%);
+    }
+  }
 }
 
 .rect {
-  position: relative;
+  > .boxed {
+    position: relative;
+    margin-bottom: $spacing-small;
+    background-image: url("http://placekitten.com/900/400");
+    background-size: cover;
+    background-position: 50%;
 
-&:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: calc(400 / 800 * 100%);
-}
-
-background-image: url("http://placekitten.com/900/400");
-background-size: cover;
-background-position: 50%;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: calc(400 / 800 * 100%);
+    }
+  }
 }
 
 .slot {
-  position: relative;
+  > .boxed {
+    position: relative;
+    margin-bottom: $spacing-small;
+    background-image: url("http://placekitten.com/300/600");
+    background-size: cover;
+    background-position: 50%;
 
-&:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: calc(800 / 400 * 100%);
-}
-
-background-image: url("http://placekitten.com/300/600");
-background-size: cover;
-background-position: 50%;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: calc(800 / 400 * 100%);
+    }
+  }
 }
