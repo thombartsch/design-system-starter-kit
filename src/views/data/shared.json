@@ -19,6 +19,12 @@
   "banner": [{
     "img": "assets/img/banner.png",
     "headline": "Summer Style",
+    "sub": "Explore the look of the summer"
+  }],
+
+  "banner2": [{
+    "img": "assets/img/style.png",
+    "headline": "Shop the Style",
     "sub": "1"
   }],
 
@@ -33,85 +39,20 @@
   }],
 
   "slots": [{
-    "img": "assets/img/pexels-photo-445109.jpg",
+    "img": "assets/img/red2.png",
     "headline": "Wommen's Dresses",
     "sub": "1"
   }, {
-    "img": "assets/img/mens1.jpg",
-    "headline": "Men's Dresses",
+    "img": "assets/img/suit.png",
+    "headline": "Men's Suits",
     "sub": "1"
   }, {
-    "img": "assets/img/pexels-photo-58592.jpg",
+    "img": "assets/img/528442230.png",
     "headline": "Wommen's Dresses",
     "sub": "1"
   }, {
     "img": "assets/img/pexels-photo-298864.jpg",
     "headline": "Shop Red",
     "sub": "3"
-  }],
-
-  // Editor Shortcodes
-  "buttons": [{
-    "label": "Product Name",
-    "value": "${Product.name}",
-    "id": "rte-btn-1"
-  }, {
-    "label": "Category Name",
-    "value": "${Category.displayName}",
-    "id": "rte-btn-2"
-  }, {
-    "label": "Image",
-    "value": "${ProductImageURL.medium}",
-    "id": "rte-btn-3"
-  }, {
-    "label": "URL",
-    "value": "${OriginalRequestURL}",
-    "id": "rte-btn-4"
-  }, {
-    "label": "If-Then-Else",
-    "value": "${IF SearchRefinement.refinementColor THEN Constant('noindex, nofollow, noarchive') ELSE Constant('index, follow, archive')}",
-    "id": "rte-btn-5"
-  }, {
-    "label": "Page Title",
-    "value": "Buy ${Product.name} for ${ProductPrice.min} ${ProductPrice.currency} | ${Site.displayName}",
-    "id": "rte-btn-6"
-  }, {
-    "label": "Search Title",
-    "value": "Find ${IF SearchPhrase THEN SearchPhrase ELSE Constant('products')} in ${Category.displayName}.",
-    "id": "rte-btn-7"
-  }],
-
-  // Select Scope Option
-  "locales": [
-  {"label": "Default"},
-  {"label": "Chinese"},
-  {"label": "Dutch"},
-  {"label": "English"},
-  {"label": "French"},
-  {"label": "German"},
-  {"label": "Italian"},
-  {"label": "Japanese"},
-  {"label": "Spanish"}],
-
-  // Select Scope Option
-  "scopes": [
-  // {"label": "Experience Editor"},
-  {"label": "2017"},
-  {"label": "2016"},
-  {"label": "2015"},],
-
-  // Select Meta ID Type Options
-  "metatype": [
-  {"label": "January"},
-  {"label": "February"},
-  {"label": "March"},
-  {"label": "April"},
-  {"label": "May"},
-  {"label": "June"},
-  {"label": "July"},
-  {"label": "August"},
-  {"label": "September"},
-  {"label": "October"},
-  {"label": "November"},
-  {"label": "December"}]
+  }]
   }
