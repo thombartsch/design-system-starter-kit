@@ -39,55 +39,29 @@
       </div>
       {% endfor %}
 
+      {% for rect in shared.rects %}
       <div class="rect slds-col slds-size_1-of-1 slds-medium-size_2-of-4">
-        <div class="boxed">
-          <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
-          </div>
+        <div class="boxed" style="background-image: url('{{ rect.img }}')">
+          <a href="{{ rect.url }}" title="{{ rect.headline }}">
+            <div class="content">
+              <div class="slds-text-heading_medium">{{ rect.headline }}</div>
+              <div class="slds-text-heading_small">{{ rect.sub }}</div>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="rect slds-col slds-size_1-of-1 slds-medium-size_2-of-4">
-        <div class="boxed">
-          <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
 
+      {% for slot in shared.slots %}
       <div class="slot slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
-        <div class="boxed">
+        <div class="boxed" style="background-image: url('{{ slot.img }}')">
           <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
+            <div class="slds-text-heading_medium">{{ slot.headline }}</div>
+            <div class="slds-text-heading_small">{{ rect.sub }}</div>
           </div>
         </div>
       </div>
-      <div class="slot slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
-        <div class="boxed">
-          <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
-          </div>
-        </div>
-      </div>
-      <div class="slot slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
-        <div class="boxed">
-          <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
-          </div>
-        </div>
-      </div>
-      <div class="slot slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
-        <div class="boxed">
-          <div class="content">
-            <div class="slds-text-heading_medium">Headline</div>
-            <div class="slds-text-heading_small">Subline</div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>

@@ -3,16 +3,16 @@
 // e.g. {{ recordTitle }}
 {
   "squares": [{
-    "img": "assets/img/square1.png",
-    "headline": "Wommen's Dresses",
+    "img": "assets/img/PG.10213171.JJ3ZSA6.PZ.jpg",
+    "headline": "Product Title",
     "sub": "1"
   }, {
-    "img": "assets/img/bags.png",
-    "headline": "Women's Bags",
+    "img": "assets/img/PG.10252337.JJAN9XX.PZ.jpg",
+    "headline": "Product Title",
     "sub": "2"
   }, {
-    "img": "assets/img/red.png",
-    "headline": "Shop Red",
+    "img": "assets/img/PG.10221136.JJBF5XX.PZ.jpg",
+    "headline": "Product Title",
     "sub": "3"
   }],
 
@@ -20,6 +20,34 @@
     "img": "assets/img/banner.png",
     "headline": "Summer Style",
     "sub": "1"
+  }],
+
+  "rects": [{
+    "img": "assets/img/square1.png",
+    "headline": "Wommen's Dresses",
+    "sub": "1"
+  }, {
+    "img": "assets/img/red.png",
+    "headline": "Shop Red",
+    "sub": "3"
+  }],
+
+  "slots": [{
+    "img": "assets/img/pexels-photo-445109.jpg",
+    "headline": "Wommen's Dresses",
+    "sub": "1"
+  }, {
+    "img": "assets/img/mens1.jpg",
+    "headline": "Men's Dresses",
+    "sub": "1"
+  }, {
+    "img": "assets/img/pexels-photo-58592.jpg",
+    "headline": "Wommen's Dresses",
+    "sub": "1"
+  }, {
+    "img": "assets/img/pexels-photo-298864.jpg",
+    "headline": "Shop Red",
+    "sub": "3"
   }],
 
   // Editor Shortcodes
