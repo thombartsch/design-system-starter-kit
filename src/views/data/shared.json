@@ -1,8 +1,89 @@
-// DO NOT DELETE THIS FILE!
-// This data is shared across all templates:
+// This data gets injected into the example.html view
+// and is accessible using double brackets:
+// e.g. {{ recordTitle }}
 {
-  // To access this data in a view, you'd write:
-  // {{ shared.somedata }}
-  "somedata": "somevalue",
-  "builtWith": "Salesforce Lightning Design System Starter Kit"
-}
+  "squares": [{
+    "img": "assets/img/square1.png",
+    "headline": "Wommen's Dresses",
+    "sub": "1"
+  }, {
+    "img": "assets/img/bags.png",
+    "headline": "Women's Bags",
+    "sub": "2"
+  }, {
+    "img": "assets/img/red.png",
+    "headline": "Shop Red",
+    "sub": "3"
+  }],
+
+  "banner": [{
+    "img": "assets/img/banner.png",
+    "headline": "Summer Style",
+    "sub": "1"
+  }],
+
+  // Editor Shortcodes
+  "buttons": [{
+    "label": "Product Name",
+    "value": "${Product.name}",
+    "id": "rte-btn-1"
+  }, {
+    "label": "Category Name",
+    "value": "${Category.displayName}",
+    "id": "rte-btn-2"
+  }, {
+    "label": "Image",
+    "value": "${ProductImageURL.medium}",
+    "id": "rte-btn-3"
+  }, {
+    "label": "URL",
+    "value": "${OriginalRequestURL}",
+    "id": "rte-btn-4"
+  }, {
+    "label": "If-Then-Else",
+    "value": "${IF SearchRefinement.refinementColor THEN Constant('noindex, nofollow, noarchive') ELSE Constant('index, follow, archive')}",
+    "id": "rte-btn-5"
+  }, {
+    "label": "Page Title",
+    "value": "Buy ${Product.name} for ${ProductPrice.min} ${ProductPrice.currency} | ${Site.displayName}",
+    "id": "rte-btn-6"
+  }, {
+    "label": "Search Title",
+    "value": "Find ${IF SearchPhrase THEN SearchPhrase ELSE Constant('products')} in ${Category.displayName}.",
+    "id": "rte-btn-7"
+  }],
+
+  // Select Scope Option
+  "locales": [
+  {"label": "Default"},
+  {"label": "Chinese"},
+  {"label": "Dutch"},
+  {"label": "English"},
+  {"label": "French"},
+  {"label": "German"},
+  {"label": "Italian"},
+  {"label": "Japanese"},
+  {"label": "Spanish"}],
+
+  // Select Scope Option
+  "scopes": [
+  // {"label": "Experience Editor"},
+  {"label": "2017"},
+  {"label": "2016"},
+  {"label": "2015"},],
+
+  // Select Meta ID Type Options
+  "metatype": [
+  {"label": "January"},
+  {"label": "February"},
+  {"label": "March"},
+  {"label": "April"},
+  {"label": "May"},
+  {"label": "June"},
+  {"label": "July"},
+  {"label": "August"},
+  {"label": "September"},
+  {"label": "October"},
+  {"label": "November"},
+  {"label": "December"}]
+  }

@@ -66,6 +66,12 @@ $static-font-path: "/assets/fonts/webfonts";
       padding-top: calc(400 / 1024 * 100%);
     }
   }
+
+  .slds-text-heading_large {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $font-size-heading-x-large;
+  }
 }
 
 .square {
