@@ -70,7 +70,7 @@ $static-font-path: "/assets/fonts/webfonts";
     font-weight: bold;
     text-transform: uppercase;
     font-size: $font-size-heading-x-large;
-    margin-top: 20%;
+    margin-top: 25%;
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
@@ -193,23 +193,11 @@ $static-font-path: "/assets/fonts/webfonts";
       width: 100%;
       padding-top: calc(800 / 400 * 100%);
     }
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: block;
-      content: "";
-      background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
-      padding-top: calc(800 / 800 * 100%);
-      z-index: 10;
-    }
   }
 
   .title {
     font-weight: bold;
-    margin-top: 150%;
+    margin-top: 120%;
     position: relative;
     z-index: 20;
     font-size: $font-size-heading-large;
