@@ -74,7 +74,7 @@ $static-font-path: "/assets/fonts/webfonts";
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
     letter-spacing: 1px;
     float: left;
@@ -89,7 +89,7 @@ $static-font-path: "/assets/fonts/webfonts";
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
     float: left;
   }
@@ -157,14 +157,12 @@ $static-font-path: "/assets/fonts/webfonts";
 
   .title {
     font-weight: bold;
-    text-transform: uppercase;
     margin-top: 20%;
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
-    letter-spacing: 1px;
     float: left;
 
     @include mq-medium-min {
@@ -177,7 +175,7 @@ $static-font-path: "/assets/fonts/webfonts";
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
     letter-spacing: 1px;
     float: left;
@@ -207,10 +205,8 @@ $static-font-path: "/assets/fonts/webfonts";
     margin-top: 120%;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 
     @include mq-medium-min {
       font-size: $font-size-heading-large;
@@ -220,7 +216,7 @@ $static-font-path: "/assets/fonts/webfonts";
   .sub {
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-alt-inverse;
+    background-color: $color-background-notification-badge-focus;
     display: inline-block;
   }
 }
