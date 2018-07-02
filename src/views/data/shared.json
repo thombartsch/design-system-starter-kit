@@ -2,51 +2,67 @@
 // and is accessible using double brackets:
 // e.g. {{ recordTitle }}
 {
-  "squares": [{
-    "img": "assets/img/PG.10213171.JJ3ZSA6.PZ.jpg",
-    "headline": "Ruffle Neckline Button Down Blouse"
-  }, {
-    "img": "assets/img/PG.10252337.JJAN9XX.PZ.jpg",
-    "headline": "Organza Burnout Blouse"
-  }, {
-    "img": "assets/img/PG.10221136.JJBF5XX.PZ.jpg",
-    "headline": "Double Layer Tank Top"
-  }],
+  "banner": [
+    {
+      "img": "assets/img/banner.png",
+      "headline": "Summer Style",
+      "sub": "Explore the look of the summer"
+    }
+  ],
 
-  "banner": [{
-    "img": "assets/img/banner.png",
-    "headline": "Summer Style",
-    "sub": "Explore the look of the summer"
-  }],
+  "banner2": [
+    {
+      "img": "assets/img/style.png",
+      "headline": "Shop the Style"
+    }
+  ],
 
-  "banner2": [{
-    "img": "assets/img/style.png",
-    "headline": "Shop the Style"
-  }],
+  "squares": [
+    {
+      "img": "assets/img/PG.10213171.JJ3ZSA6.PZ.jpg",
+      "headline": "Ruffle Neckline Button Down Blouse"
+    },
+    {
+      "img": "assets/img/PG.10252337.JJAN9XX.PZ.jpg",
+      "headline": "Organza Burnout Blouse"
+    },
+    {
+      "img": "assets/img/PG.10221136.JJBF5XX.PZ.jpg",
+      "headline": "Double Layer Tank Top"
+    }
+  ],
 
-  "rects": [{
-    "img": "assets/img/square1.png",
-    "headline": "Women's Dresses",
-    "sub": "Explore our Collection"
-  }, {
-    "img": "assets/img/red.png",
-    "headline": "Shop Red",
-    "sub": "20% off this week only"
-  }],
+  "rects": [
+    {
+      "img": "assets/img/square1.png",
+      "headline": "Women's Dresses",
+      "sub": "Explore our Collection"
+    },
+    {
+      "img": "assets/img/red.png",
+      "headline": "Shop Red",
+      "sub": "20% off this week only"
+    }
+  ],
 
-  "slots": [{
-    "img": "assets/img/red2.png",
-    "headline": "Women's Dresses",
-    "sub": "20% off this week only"
-  }, {
-    "img": "assets/img/suit.png",
-    "headline": "Men's Suits"
-  }, {
-    "img": "assets/img/528442230.png",
-    "headline": "New Arrivals",
-    "sub": "Shop Accessoires"
-  }, {
-    "img": "assets/img/pexels-photo-298864.jpg",
-    "headline": "Fit into Summer"
-  }]
-  }
+  "slots": [
+    {
+      "img": "assets/img/red2.png",
+      "headline": "Women's Dresses",
+      "sub": "20% off this week only"
+    },
+    {
+      "img": "assets/img/suit.png",
+      "headline": "Men's Suits"
+    },
+    {
+      "img": "assets/img/528442230.png",
+      "headline": "New Arrivals",
+      "sub": "Shop Accessoires"
+    },
+    {
+      "img": "assets/img/pexels-photo-298864.jpg",
+      "headline": "Fit into Summer"
+    }
+  ]
+}
