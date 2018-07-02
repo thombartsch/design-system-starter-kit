@@ -86,7 +86,6 @@ $static-font-path: "/assets/fonts/webfonts";
     padding-right: $spacing-small;
     background-color: $color-background-alt-inverse;
     display: inline-block;
-    letter-spacing: 1px;
     float: left;
   }
 }
@@ -198,13 +197,19 @@ $static-font-path: "/assets/fonts/webfonts";
   .title {
     font-weight: bold;
     margin-top: 120%;
-    position: relative;
-    z-index: 20;
     font-size: $font-size-heading-large;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    background-color: $color-background-alt-inverse;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   .sub {
-    position: relative;
-    z-index: 20;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    background-color: $color-background-alt-inverse;
+    display: inline-block;
   }
 }
