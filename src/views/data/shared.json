@@ -4,16 +4,13 @@
 {
   "squares": [{
     "img": "assets/img/PG.10213171.JJ3ZSA6.PZ.jpg",
-    "headline": "Product Title",
-    "sub": "1"
+    "headline": "Ruffle Neckline Button Down Blouse"
   }, {
     "img": "assets/img/PG.10252337.JJAN9XX.PZ.jpg",
-    "headline": "Product Title",
-    "sub": "2"
+    "headline": "Organza Burnout Blouse"
   }, {
     "img": "assets/img/PG.10221136.JJBF5XX.PZ.jpg",
-    "headline": "Product Title",
-    "sub": "3"
+    "headline": "Double Layer Tank Top"
   }],
 
   "banner": [{
@@ -24,35 +21,32 @@
 
   "banner2": [{
     "img": "assets/img/style.png",
-    "headline": "Shop the Style",
-    "sub": "1"
+    "headline": "Shop the Style"
   }],
 
   "rects": [{
     "img": "assets/img/square1.png",
-    "headline": "Wommen's Dresses",
-    "sub": "1"
+    "headline": "Women's Dresses",
+    "sub": "Explore our Collection"
   }, {
     "img": "assets/img/red.png",
     "headline": "Shop Red",
-    "sub": "3"
+    "sub": "20% off this week only"
   }],
 
   "slots": [{
     "img": "assets/img/red2.png",
-    "headline": "Wommen's Dresses",
-    "sub": "1"
+    "headline": "Women's Dresses",
+    "sub": "20% off this week only"
   }, {
     "img": "assets/img/suit.png",
-    "headline": "Men's Suits",
-    "sub": "1"
+    "headline": "Men's Suits"
   }, {
     "img": "assets/img/528442230.png",
-    "headline": "Wommen's Dresses",
-    "sub": "1"
+    "headline": "New Arrivals",
+    "sub": "Shop Accessoires"
   }, {
     "img": "assets/img/pexels-photo-298864.jpg",
-    "headline": "Shop Red",
-    "sub": "3"
+    "headline": "Fit into Summer"
   }]
   }

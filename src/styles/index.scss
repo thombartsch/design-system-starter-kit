@@ -58,7 +58,7 @@ $static-font-path: "/assets/fonts/webfonts";
     background-size: cover;
     background-position: 50%;
 
-    &:before {
+    &::before {
       display: block;
       content: "";
       width: 100%;
@@ -92,6 +92,8 @@ $static-font-path: "/assets/fonts/webfonts";
 }
 
 .square {
+  text-align: center;
+
   > .boxed {
     position: relative;
     margin-bottom: $spacing-small;
@@ -99,12 +101,37 @@ $static-font-path: "/assets/fonts/webfonts";
     background-size: cover;
     background-position: 50%;
 
-    &:before {
+    &::before {
       display: block;
       content: "";
       width: 100%;
       padding-top: calc(800 / 800 * 100%);
     }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: block;
+      content: "";
+      background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
+      padding-top: calc(400 / 800 * 100%);
+      z-index: 10;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    position: relative;
+    margin-top: 65%;
+    margin-bottom: $spacing-small;
+    z-index: 20;
+  }
+
+  .slds-button {
+    position: relative;
+    z-index: 20;
   }
 }
 
@@ -116,16 +143,43 @@ $static-font-path: "/assets/fonts/webfonts";
     background-size: cover;
     background-position: 50%;
 
-    &:before {
+    &::before {
       display: block;
       content: "";
       width: 100%;
       padding-top: calc(400 / 800 * 100%);
     }
   }
+
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $font-size-heading-large;
+    margin-top: 20%;
+    text-align: left;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    background-color: $color-background-alt-inverse;
+    display: inline-block;
+    letter-spacing: 1px;
+    float: left;
+  }
+
+  .sub {
+    clear: both;
+    text-align: left;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    background-color: $color-background-alt-inverse;
+    display: inline-block;
+    letter-spacing: 1px;
+    float: left;
+  }
 }
 
 .slot {
+  text-align: center;
+
   > .boxed {
     position: relative;
     margin-bottom: $spacing-small;
@@ -133,11 +187,36 @@ $static-font-path: "/assets/fonts/webfonts";
     background-size: cover;
     background-position: 50%;
 
-    &:before {
+    &::before {
       display: block;
       content: "";
       width: 100%;
       padding-top: calc(800 / 400 * 100%);
     }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: block;
+      content: "";
+      background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
+      padding-top: calc(800 / 800 * 100%);
+      z-index: 10;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    margin-top: 150%;
+    position: relative;
+    z-index: 20;
+    font-size: $font-size-heading-large;
+  }
+
+  .sub {
+    position: relative;
+    z-index: 20;
   }
 }

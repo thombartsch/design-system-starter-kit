@@ -20,10 +20,14 @@
       {% for one in shared.banner %}
       <div class="banner slds-col slds-size_1-of-1 slds-medium-size_3-of-3">
         <div class="boxed" style="background-image: url('{{ one.img }}')">
-          <div class="content">
-            <div class="slds-text-heading_large title">{{ one.headline }}</div>
-            <div class="slds-text-heading_small sub">{{ one.sub }}</div>
-          </div>
+          <a href="#{{ one.headline }}" title="{{ one.headline }}">
+            <div class="content">
+              <div class="slds-text-heading_large title">{{ one.headline }}</div>
+              {% if one.sub %}
+              <div class="slds-text-heading_small sub">{{ one.sub }}</div>
+              {% endif %}
+            </div>
+          </a>
         </div>
       </div>
       {% endfor %}
@@ -32,8 +36,11 @@
       <div class="square slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
         <div class="boxed" style="background-image: url('{{ square.img }}')">
           <div class="content">
-            <div class="slds-text-heading_medium">{{ square.headline }}</div>
-            <div class="slds-text-heading_small">{{ square.sub }}</div>
+            <div class="slds-text-heading_medium title">{{ square.headline }}</div>
+            {% if square.sub %}
+            <div class="slds-text-heading_small sub">{{ square.sub }}</div>
+            {% endif %}
+            <button class="slds-button slds-button_outline-brand">Shop Now</button>
           </div>
         </div>
       </div>
@@ -42,10 +49,12 @@
       {% for rect in shared.rects %}
       <div class="rect slds-col slds-size_1-of-1 slds-medium-size_2-of-4">
         <div class="boxed" style="background-image: url('{{ rect.img }}')">
-          <a href="{{ rect.url }}" title="{{ rect.headline }}">
+          <a href="#{{ rect.headline }}" title="{{ rect.headline }}">
             <div class="content">
-              <div class="slds-text-heading_medium">{{ rect.headline }}</div>
-              <div class="slds-text-heading_small">{{ rect.sub }}</div>
+              <div class="slds-text-heading_medium title">{{ rect.headline }}</div>
+              {% if rect.sub %}
+              <div class="slds-text-heading_small sub">{{ rect.sub }}</div>
+              {% endif %}
             </div>
           </a>
         </div>
@@ -55,10 +64,14 @@
       {% for slot in shared.slots %}
       <div class="slot slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
         <div class="boxed" style="background-image: url('{{ slot.img }}')">
-          <div class="content">
-            <div class="slds-text-heading_medium">{{ slot.headline }}</div>
-            <div class="slds-text-heading_small">{{ rect.sub }}</div>
-          </div>
+          <a href="#{{ slot.headline }}" title="{{ slot.headline }}">
+            <div class="content">
+              <div class="slds-text-heading_medium title">{{ slot.headline }}</div>
+              {% if slot.sub %}
+              <div class="slds-text-heading_small sub">{{ slot.sub }}</div>
+              {% endif %}
+            </div>
+          </a>
         </div>
       </div>
       {% endfor %}
@@ -66,10 +79,14 @@
       {% for one in shared.banner2 %}
       <div class="banner slds-col slds-size_1-of-1 slds-medium-size_3-of-3">
         <div class="boxed" style="background-image: url('{{ one.img }}')">
-          <div class="content">
-            <div class="slds-text-heading_large title">{{ one.headline }}</div>
-            <div class="slds-text-heading_small sub">{{ one.sub }}</div>
-          </div>
+          <a href="#{{ one.headline }}" title="{{ one.headline }}">
+            <div class="content">
+              <div class="slds-text-heading_large title">{{ one.headline }}</div>
+              {% if one.sub %}
+              <div class="slds-text-heading_small sub">{{ one.sub }}</div>
+              {% endif %}
+            </div>
+          </a>
         </div>
       </div>
       {% endfor %}
