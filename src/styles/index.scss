@@ -69,8 +69,8 @@ $static-font-path: "/assets/fonts/webfonts";
   .title {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: $font-size-heading-x-large;
-    margin-top: 25%;
+
+    margin-top: 20%;
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
@@ -78,7 +78,12 @@ $static-font-path: "/assets/fonts/webfonts";
     display: inline-block;
     letter-spacing: 1px;
     float: left;
+
+    @include mq-medium-min {
+      font-size: $font-size-heading-x-large;
+    }
   }
+
   .sub {
     clear: both;
     text-align: left;
@@ -153,7 +158,6 @@ $static-font-path: "/assets/fonts/webfonts";
   .title {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: $font-size-heading-large;
     margin-top: 20%;
     text-align: left;
     padding-left: $spacing-small;
@@ -162,6 +166,10 @@ $static-font-path: "/assets/fonts/webfonts";
     display: inline-block;
     letter-spacing: 1px;
     float: left;
+
+    @include mq-medium-min {
+      font-size: $font-size-heading-large;
+    }
   }
 
   .sub {
@@ -197,13 +205,16 @@ $static-font-path: "/assets/fonts/webfonts";
   .title {
     font-weight: bold;
     margin-top: 120%;
-    font-size: $font-size-heading-large;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
     background-color: $color-background-alt-inverse;
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    @include mq-medium-min {
+      font-size: $font-size-heading-large;
+    }
   }
 
   .sub {
