@@ -18,28 +18,40 @@ Page content (gets injected into the template)
 
 <div class="slds-grid">
     <div class="slds-border--right slds-p-around_small" id="tools">
-        {% include "_sidebar-tools.html" ignore missing %}
+        {% include "_sidebar-tools.html"   %}
     </div>
     <div class="slds-border--right slds-p-left_none slds-p-right_none" id="sidebar-navigator">
         <!-- NAVIGATOR -->
-        {% include "_sidebar_navigator.html" ignore missing %}
+        {% include "_sidebar_navigator.html"   %}
         <!-- /NAVIGATOR -->
     </div>
     <div class="slds-col">
-        {% include "_inc_preview-settings.html" ignore missing %}
+        {% include "_inc_preview-settings.html"   %}
         <div class="slds-col page-content region" id="2editor">
-            {% include "_inc_header-editor.html" ignore missing %}
+            {% include "_inc_header-editor.html"   %}
             <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
-                <ul id="region" class="list slds-has-dividers_bottom-space"></ul>
+                <ul id="region1" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
-                {% include "_inc_dropdown_components.html" ignore missing %}
+                {% include "_inc_dropdown_components.html"   %}
             </div>
-            <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+            <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
-                <ul id="regionB" class="list slds-has-dividers_bottom-space"></ul>
+                <ul id="region2-1" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
-                {% include "_inc_dropdown_componentsb.html" ignore missing %}
+                {% include "_inc_dropdown_componentsb.html"   %}
+            </div>
+            <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+                <!-- REGION-->
+                <ul id="region2-2" class="list slds-has-dividers_bottom-space"></ul>
+                <!-- /REGION-->
+                {% include "_inc_dropdown_componentsb.html"   %}
+            </div>
+            <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
+                <!-- REGION-->
+                <ul id="region2-3" class="list slds-has-dividers_bottom-space"></ul>
+                <!-- /REGION-->
+                {% include "_inc_dropdown_componentsb.html"   %}
             </div>
 
         </div>
@@ -67,49 +79,49 @@ Page content (gets injected into the template)
 
 <!-- ALL DUMMIES -->
 <div id="alldummies">
-{% include "_inc_all_dummies.html" ignore missing%}
+{% include "_inc_all_dummies.html"  %}
 
 
 
-{% include "_inc_toolbar.html" ignore missing %}
-{% include "_inc_modal-properties-page.html" ignore missing %}
-{% include "_inc_modal-publish.html"  ignore missing %}
-{% include "_inc_modal-unpublish.html"  ignore missing %}
+{% include "_inc_toolbar.html"   %}
+{% include "_inc_modal-properties-page.html"   %}
+{% include "_inc_modal-publish.html"    %}
+{% include "_inc_modal-unpublish.html"    %}
 
-{% include "_inc_toast-published.html"  ignore missing %}
-{% include "_inc_toast-unpublished.html"  ignore missing %}
-
-
+{% include "_inc_toast-published.html"    %}
+{% include "_inc_toast-unpublished.html"    %}
 
 
-{% include "_inc_modal-delete-component.html" ignore missing %}
-{% include "_inc_modal_4_editor.html" ignore missing %}
-{% include "_inc_modal_5_editor.html" ignore missing %}
-{% include "_inc_modal_31_editor.html" ignore missing %}
-{% include "_inc_modal_32_editor.html" ignore missing %}
-{% include "_inc_modal_33_editor.html" ignore missing %}
-{% include "_inc_modal_34_editor.html" ignore missing %}
-{% include "_inc_modal_35_editor.html" ignore missing %}
-{% include "_inc_modal_36_editor.html" ignore missing %}
-
-{% include "_inc_modal_37_editor.html" ignore missing %}
-{% include "_inc_modal_38_editor.html" ignore missing %}
-
-{% include "_inc_modal_40_editor.html" ignore missing %}
-
-{% include "_inc_modal_basket_editor.html" ignore missing %}
-
-{% include "_inc_modal_media-picker.html" ignore missing %}
-
-{% include "products.html" ignore missing %}
 
 
-{% include "_inc_modal_locale-warning.html" ignore missing %}
+{% include "_inc_modal-delete-component.html"   %}
+{% include "_inc_modal_4_editor.html"   %}
+{% include "_inc_modal_5_editor.html"   %}
+{% include "_inc_modal_31_editor.html"   %}
+{% include "_inc_modal_32_editor.html"   %}
+{% include "_inc_modal_33_editor.html"   %}
+{% include "_inc_modal_34_editor.html"   %}
+{% include "_inc_modal_35_editor.html"   %}
+{% include "_inc_modal_36_editor.html"   %}
 
-{% include "_inc_toast-page-rules.html" ignore missing %}
+{% include "_inc_modal_37_editor.html"   %}
+{% include "_inc_modal_38_editor.html"   %}
+
+{% include "_inc_modal_40_editor.html"   %}
+
+{% include "_inc_modal_basket_editor.html"   %}
+
+{% include "_inc_modal_media-picker.html"   %}
+
+{% include "products.html"   %}
 
 
-{% include "_inc_dropdown-basket.html" ignore missing %}
+{% include "_inc_modal_locale-warning.html"   %}
+
+{% include "_inc_toast-page-rules.html"   %}
+
+
+{% include "_inc_dropdown-basket.html"   %}
 
 
 </div>
