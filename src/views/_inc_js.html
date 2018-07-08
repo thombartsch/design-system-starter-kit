@@ -384,8 +384,7 @@ $('.delete-component .js-close-modal-id-0').click(function() {
 
 //MODAL HANDLERS
 $('.trigger-close-modal').click(function() {
-    $(this).closest('body .editor').toggleClass('slds-hide');
-
+    $(this).closest('.editor').toggleClass('slds-hide');
     return false;
 });
 
@@ -644,7 +643,6 @@ $('.add-mediaselector-dummy').click(function() {
     //now open editor
     activeComponent = undefined;
     activeComponent = $(component_placeholder).attr('class');
-    alert(activeComponent);
 
     //add 1 to component count
     regionlimit = regionlimit + 1;
@@ -717,8 +715,56 @@ $('.mediaselector-component-editor .trigger-save-modal').click(function() {
     $('.mediaselector-component-editor').toggleClass('slds-hide');
     //alert(selected_image + "and" + activeComponent);
     $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
+    $('.' + activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
+
+    banner_header = $('#text-banner-header').val;
+    banner_sub = $('#text-banner-sub').val;
 });
 
+
+//BANNER COMPONENT Edit
+$('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+    $('.targeted_banner-component-editor').addClass('slds-hide');
+});
+
+
+
+
+//DELETE ANY COMPONENT
+//DELETE COMPONENT
+$('button.js-trigger-delete-component').click(function() {
+    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+    //$(this).closest('#region').find('li').attr('class');
+
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+    $('.delete-component').toggleClass('slds-hide');
+
+    return false;
+});
+$('.delete-component .action-delete-component').click(function() {
+    /*
+        var removeit = $(this).closest('li').attr('class');
+
+        $(this).closest('li').find('.delete-component').toggleClass('slds-hide');
+        $('li.'+ removeit).fadeOut(600, function(){
+            $('li.'+ removeit).remove();
+        });
+    */
+
+    $('.delete-component').toggleClass('slds-hide');
+    $('li.' + activeComponent).fadeOut(600, function() {
+        $('li.' + activeComponent).remove();
+    });
+
+    //add 1 to component count
+    regionlimit = regionlimit - 1;
+    $('#regionlimit').text(regionlimit);
+
+
+    return false;
+});
 
 //- end js
 });
