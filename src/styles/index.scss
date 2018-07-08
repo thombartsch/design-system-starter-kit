@@ -5,12 +5,10 @@
 // First, we're importing the design system from the npm package
 //
 $static-font-path: '/assets/fonts/webfonts';
-@import 'node_modules/@salesforce-ux/design-system/scss/index';
-//
+@import 'node_modules/@salesforce-ux/design-system/scss/index'; //
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
-@import 'footer';
-//
+@import 'footer'; //
 // We can also add styles directly in this file, like so:
 //
 // Push down the global navigation below the header using a placeholder element
@@ -80,8 +78,8 @@ html.list-view {
     */
 }
 
-.slds-context-bar__item.slds-is-active:before,
-.slds-context-bar__item.slds-is-active:after {
+.slds-context-bar__item.slds-is-active:after,
+.slds-context-bar__item.slds-is-active:before {
     background: #84BD00;
     position: absolute;
     top: 0;
@@ -89,8 +87,8 @@ html.list-view {
     right: -1px;
 }
 
-.slds-context-bar__item:not(.slds-no-hover):hover,
-.slds-context-bar__item.slds-is-active {
+.slds-context-bar__item.slds-is-active,
+.slds-context-bar__item:not(.slds-no-hover):hover {
     border-bottom: 3px solid #84BD00;
 }
 
@@ -155,8 +153,8 @@ html.list-view {
 .page-content {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: max-width .5s;
-    transition: max-width .5s;
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s;
     margin: 0 auto;
 }
 
@@ -195,7 +193,7 @@ html.list-view {
     background: #fff;
     /*background: url('https://unsplash.it/1500/2000') !important;*/
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: 0 0;
     background-size: 100% 100%;
     opacity: 0.5;
     top: 0;
@@ -208,9 +206,9 @@ html.list-view {
 
 #left-placeholder-content,
 #right-placeholder-content {
-    background: url('https://unsplash.it/800/600') !important;
+    background: url("https://unsplash.it/800/600") !important;
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: 0 0;
     background-size: 100% 100%;
     min-height: 300px;
     text-align: center;
@@ -219,8 +217,8 @@ html.list-view {
     font-size: 24px;
 }
 
-#header,
-#footer {
+#footer,
+#header {
     -webkit-transition-duration: 0.4s;
     background: rgba(0, 0, 0, 0.4);
     min-height: 100px;
@@ -228,8 +226,8 @@ html.list-view {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#header:hover,
-#footer:hover {
+#footer:hover,
+#header:hover {
     border: 1px solid rgba(255, 165, 0, 1);
     background: rgba(0, 0, 0, 0.4);
 }
@@ -303,146 +301,6 @@ html.list-view {
     background-color: #fafaf9;
     z-index: -1;
 }
-
-
-/* SLIDER STLYE */
-
-
-/*
-#slider-wrapper {
-width: 100%;
-height: 470px;
-margin: 50px auto;
-position: relative;
-margin-bottom: 0px;
-background: rgba(0, 0, 0, 0.5);
-overflow: hidden;
-}
-
-#s1 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: -36px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s2 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: -12px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s3 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: 12px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s4 {
-padding: 6px;
-background: #000000;
-position: absolute;
-left: 50%;
-bottom: 25px;
-margin-left: 36px;
-border-radius: 20px;
-opacity: 0.3;
-cursor: pointer;
-z-index: 999;
-}
-
-#s1:hover,
-#s2:hover,
-#s3:hover,
-#s4:hover {
-opacity: .50;
-}
-
-.inner-wrapper {
-width: 940px;
-height: 470px;
-position: absolute;
-top: 0;
-left: 0;
-margin-bottom: 0px;
-overflow: hidden;
-}
-
-.control {
-display: none;
-}
-
-#Slide1:checked ~ .overflow-wrapper {
-margin-left: 0%;
-}
-
-#Slide2:checked ~ .overflow-wrapper {
-margin-left: -100%;
-}
-
-#Slide3:checked ~ .overflow-wrapper {
-margin-left: -200%;
-}
-
-#Slide4:checked ~ .overflow-wrapper {
-margin-left: -300%;
-}
-
-#Slide1:checked + #s1 {
-opacity: 1;
-}
-
-#Slide2:checked + #s2 {
-opacity: 1;
-}
-
-#Slide3:checked + #s3 {
-opacity: 1;
-}
-
-#Slide4:checked + #s4 {
-opacity: 1;
-}
-
-.overflow-wrapper {
-width: 400%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-overflow-y: hidden;
-z-index: 1;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-}
-
-.slide img {
-width: 25%;
-float: left;
-}
-*/
 
 
 /*PINGER */
@@ -633,12 +491,12 @@ background: red !Important;
         color: red;
         display: inline-block;
         width: 1em;
-        margin-left: -1em
+        margin-left: -1em;
     }
 }
 
-.shopableback,
-.image-back {
+.image-back,
+.shopableback {
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 20rem;
@@ -703,8 +561,8 @@ div.ring {
     top: -42px;
     left: -42px;
     border: double #77d2ff 10px;
-    -moz-animation-duration: .75s;
-    -webkit-animation-duration: .75s;
+    -moz-animation-duration: 0.75s;
+    -webkit-animation-duration: 0.75s;
     -moz-animation-name: smallping;
     -webkit-animation-name: smallping;
 }
@@ -801,34 +659,34 @@ div.ring {
 
 
 /* FOCAL POINT */
+
 .set-focal-point {
-  /*
+    /*
   position: absolute;
   top: 10px;
   left: 10px;
   border: 5px solid white;
   width: 400px;
   */
-  height: 200px;
-  transition: opacity 0.3s ease-in-out;
+    height: 200px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .focal-holder {
-  background: gray no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transition: background-position 0.3s ease-in-out;
+    background: gray no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: background-position 0.3s ease-in-out;
 }
-
 
 //circle
 .circle {
     border-radius: 50%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     border: 2px solid #fff;
     z-index: 2000;
     position: absolute;
@@ -837,8 +695,9 @@ div.ring {
     left: 50%;
     top: 47%;
 }
-.circle-in{
-  /*background: red;*/
+
+.circle-in {
+    /*background: red;*/
 }
 
 //SOMETHING WRONG WITH LOGO

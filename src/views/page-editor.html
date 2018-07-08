@@ -1,67 +1,144 @@
-<!--
-Templates leverage Nunjucks, a powerful templating language:
-https://mozilla.github.io/nunjucks/
+<!-- Templates leverage Nunjucks, a powerful templating language: https://mozilla.github.io/nunjucks/ # Don't want to use Nunjucks? It is entirely optional. Feel free to use normal HTML instead! -->
 
-# Don't want to use Nunjucks?
-It is entirely optional. Feel free to use normal HTML instead!
--->
-
-<!--
-Extend the global template
--->
+<!-- Extend the global template -->
 {% extends "_template-editor.html" %}
 
-<!--
-Page content (gets injected into the template)
--->
+<!-- Page content (gets injected into the template) -->
 {% block content %}
-
-<div class="slds-grid">
+  <div class="slds-grid">
     <div class="slds-border--right slds-p-around_small" id="tools">
-        {% include "_sidebar-tools.html"   %}
+      {% include "_sidebar-tools.html" %}
     </div>
     <div class="slds-border--right slds-p-left_none slds-p-right_none" id="sidebar-navigator">
-        <!-- NAVIGATOR -->
-        {% include "_sidebar_navigator.html"   %}
-        <!-- /NAVIGATOR -->
+      <!-- NAVIGATOR -->
+      {% include "_sidebar_navigator.html" %}
+      <!-- /NAVIGATOR -->
     </div>
     <div class="slds-col">
-        {% include "_inc_preview-settings.html"   %}
-        <div class="slds-col page-content region" id="2editor">
-            {% include "_inc_header-editor.html"   %}
-            <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
-                <!-- REGION-->
-                <ul id="region1" class="list slds-has-dividers_bottom-space"></ul>
-                <!-- /REGION-->
-                {% include "_inc_dropdown_components.html"   %}
-            </div>
+      {% include "_inc_preview-settings.html" %}
+      <div class="slds-col page-content region" id="2editor">
+        {# include "_inc_header-editor.html" #}
+        <div style="opacity:0.2">
+          {# include "_inc_top_locked.html" #}
+          <!--iframe src="_inc_top_locked.html" /></iframe-->
+        </div>
+        <!-- ROW 1 -->
+        <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical region" style="background:#fff" id="regionEins">
+          <!-- REGION-->
+          <ul id="region1" class="list slds-has-dividers_bottom-space"></ul>
+          <!-- /REGION-->
+          <div>
+              {% include "_inc_button_addcomponent.html" %}
+          </div>
+        </div>
+        <!-- /ROW 1 -->
+
+        <!-- ROW 2 -->
+        <div class="slds-grid">
+          <div class="slds-grid slds-grid_vertical slds-large-size_4-of-12 region" style="background:#fff" id="regionZwei_Eins">
+            <!-- REGION-->
+            <ul id="region2_1" class="list slds-has-dividers_bottom-space"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_4-of-12 region" style="background:#fff" id="regionZwei_Zwei">
+            <!-- REGION-->
+            <ul id="region2_2" class="list slds-has-dividers_bottom-space"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_4-of-12 region" style="background:#fff" id="regionZwei_Drei">
+            <!-- REGION-->
+            <ul id="region2_3" class="list slds-has-dividers_bottom-space"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+        </div>
+        <!-- /ROW 2 -->
+
+        <!-- ROW 3 -->
+        <div class="slds-grid">
+          <div class="slds-grid slds-grid_vertical slds-large-size_6-of-12 region" style="background:#fff" id="regionDrei_Eins">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_6-of-12 region" style="background:#fff" id="regionDrei_Zwei">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+        </div>
+        <!-- /ROW 3 -->
+
+
+        <!-- ROW 4 -->
+        <div class="slds-grid">
+          <div class="slds-grid slds-grid_vertical slds-large-size_3-of-12 region" style="background:#fff" id="regionVier_Eins">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space region_list"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_3-of-12 region" style="background:#fff" id="regionVier_Zwei">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space region_list"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_3-of-12 region" style="background:#fff" id="regionVier_Drei">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space region_list"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+          <div class="slds-grid slds-grid_vertical slds-large-size_3-of-12 region" style="background:#fff" id="regionVier_Vier">
+            <!-- REGION-->
+            <ul id="region2-1" class="list slds-has-dividers_bottom-space region_list"></ul>
+            <!-- /REGION-->
+            {% include "_inc_button_addcomponent.html" %}
+          </div>
+        </div>
+        <!-- /ROW 4 -->
+
+        <!-- ROW 5 -->
+        <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical region" style="background:#fff"  id="regionFuenf">
+          <!-- REGION-->
+          <ul id="region1" class="list slds-has-dividers_bottom-space"></ul>
+          <!-- /REGION-->
+          {% include "_inc_button_addcomponent.html" %}
+        </div>
+        <!-- /ROW 5 -->
+
+        {#
             <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
                 <ul id="region2-1" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
-                {% include "_inc_dropdown_componentsb.html"   %}
+                {% include "_inc_dropdown_componentsb.html" %}
             </div>
             <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
                 <ul id="region2-2" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
-                {% include "_inc_dropdown_componentsb.html"   %}
+                {% include "_inc_dropdown_componentsb.html" %}
             </div>
             <div class="slds-grid slds-large-size_4-of-12 2slds-grid_vertical slds-text-align_center 2slds-p-around_small region" style="background:#fff">
                 <!-- REGION-->
                 <ul id="region2-3" class="list slds-has-dividers_bottom-space"></ul>
                 <!-- /REGION-->
-                {% include "_inc_dropdown_componentsb.html"   %}
+                {% include "_inc_dropdown_componentsb.html" %}
             </div>
-
-        </div>
+            #}
+            <div style="opacity:0.2">
+              {# include "_inc_bottom_locked.html" #}
+              <!--iframe src="_inc_bottom_locked.html" /></iframe-->
+            </div>
+      </div>
     </div>
-</div>
-
-
-
-
-
+  </div>
 
 {#
 <div class="slds-grid slds-grid_align-center">
@@ -75,63 +152,37 @@ Page content (gets injected into the template)
 </div>
 #}
 
+{% include "_inc_dropdowncomponents.html" %}
 
+  <!-- ALL DUMMIES -->
+  <div id="alldummies">
+    {% include "_inc_all_dummies.html" %}
+    {% include "_inc_toolbar.html" %}
+    {% include "_inc_modal-properties-page.html" %}
+    {% include "_inc_modal-publish.html" %}
+    {% include "_inc_modal-unpublish.html" %}
+    {% include "_inc_toast-published.html" %}
+    {% include "_inc_toast-unpublished.html" %}
+    {% include "_inc_modal-delete-component.html" %}
+    {% include "_inc_modal_4_editor.html" %}
+    {% include "_inc_modal_5_editor.html" %}
+    {% include "_inc_modal_31_editor.html" %}
+    {% include "_inc_modal_32_editor.html" %}
+    {% include "_inc_modal_33_editor.html" %}
+    {% include "_inc_modal_34_editor.html" %}
+    {% include "_inc_modal_35_editor.html" %}
+    {% include "_inc_modal_36_editor.html" %}
+    {% include "_inc_modal_37_editor.html" %}
+    {% include "_inc_modal_38_editor.html" %}
+    {% include "_inc_modal_40_editor.html" %}
+    {% include "_inc_modal_basket_editor.html" %}
+    {% include "_inc_modal_media-picker.html" %}
+    {% include "products.html" %}
+    {% include "_inc_modal_locale-warning.html" %}
+    {% include "_inc_toast-page-rules.html" %}
+    {% include "_inc_dropdown-basket.html" %}
 
-<!-- ALL DUMMIES -->
-<div id="alldummies">
-{% include "_inc_all_dummies.html"  %}
+  </div>
 
-
-
-{% include "_inc_toolbar.html"   %}
-{% include "_inc_modal-properties-page.html"   %}
-{% include "_inc_modal-publish.html"    %}
-{% include "_inc_modal-unpublish.html"    %}
-
-{% include "_inc_toast-published.html"    %}
-{% include "_inc_toast-unpublished.html"    %}
-
-
-
-
-{% include "_inc_modal-delete-component.html"   %}
-{% include "_inc_modal_4_editor.html"   %}
-{% include "_inc_modal_5_editor.html"   %}
-{% include "_inc_modal_31_editor.html"   %}
-{% include "_inc_modal_32_editor.html"   %}
-{% include "_inc_modal_33_editor.html"   %}
-{% include "_inc_modal_34_editor.html"   %}
-{% include "_inc_modal_35_editor.html"   %}
-{% include "_inc_modal_36_editor.html"   %}
-
-{% include "_inc_modal_37_editor.html"   %}
-{% include "_inc_modal_38_editor.html"   %}
-
-{% include "_inc_modal_40_editor.html"   %}
-
-{% include "_inc_modal_basket_editor.html"   %}
-
-{% include "_inc_modal_media-picker.html"   %}
-
-{% include "products.html"   %}
-
-
-{% include "_inc_modal_locale-warning.html"   %}
-
-{% include "_inc_toast-page-rules.html"   %}
-
-
-{% include "_inc_dropdown-basket.html"   %}
-
-
-</div>
-
-
-{# ADD STYLE FOR LIMITING DISPLAY OF COMPONENTS IN REGION 1 #}
-
-
-
-
-
-
+  {# ADD STYLE FOR LIMITING DISPLAY OF COMPONENTS IN REGION 1 #}
 {% endblock %}

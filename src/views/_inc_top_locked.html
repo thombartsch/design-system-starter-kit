@@ -1,0 +1,414 @@
+{% include "_inc_locked_css.html" %}
+
+<div class="header-banner slide-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="close-button pull-right">
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="content">
+          <!-- dwMarker="slot" dwContentID="header-banner-m" dwContext="global"-->
+
+          <!-- dwMarker="linclude" dwTemplateTitle="/default/slots/htmlSlotContainer.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/slots/htmlSlotContainer.isml" -->
+          <div class="html-slot-container">
+
+            <div class="header-promotion">
+              <strong>FREE 2-Day SHIPPING</strong>
+              FOR ORDERS OVER $300</div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header>
+  <nav role="navigation">
+    <div class="header container">
+      <div class="row">
+        <div class="col-12">
+          <div class="navbar-header brand">
+            <a href="/s/RefArch/home?lang=default" title="Commerce Cloud SiteGenesis Home">
+              <!--img class="hidden-md-down" src="/on/demandware.static/Sites-RefArch-Site/-/default/dw1249157d/images/logo.svg" alt="Commerce Cloud SiteGenesis">
+              <img class="d-lg-none" src="/on/demandware.static/Sites-RefArch-Site/-/default/dw40d4a975/images/logo-small.svg" alt="Commerce Cloud SiteGenesis"-->
+              <img class="hidden-md-down" src="/assets/2016sf_CommerceCloud_logo_RGB.png" alt="Commerce Cloud SiteGenesis">
+            </a>
+          </div>
+          <div class="navbar-header">
+            <div class="pull-left">
+              <div class="hidden-md-down">
+
+                <!-- dwMarker="dw-object-rinclude"
+                data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/header.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header&quot;,&quot;PageProcessingTime&quot;:21,&quot;TemplateTitle&quot;:&quot;/default/account/header.isml
+                (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Account-Header (app_storefront_base)&quot;}" -->
+                <!-- dwMarker="rinclude" dwPipelineTitle="Account-Header (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&start=Header" dwIsController="true"
+                dwTemplateTitle="/default/account/header.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/header.isml" -->
+                <div class="user hidden-md-down">
+                  <a href="https://ecom-2015183130.vpod.t.force.com/on/demandware.store/Sites-RefArch-Site/default/Login-Show">
+                    <!-- dwMarker="link" dwPipelineTitle="Login-Show (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Login.js&amp;start=Show" -->
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="user-message">Login</span>
+                  </a>
+                </div>
+
+                <!-- dwMarker="dw-object-rinclude"
+                data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/countrySelector.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&amp;start=Locale&quot;,&quot;PageProcessingTime&quot;:4,&quot;TemplateTitle&quot;:&quot;/default//components/header/countrySelector.isml
+                (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Locale (plugin_experience)&quot;}" -->
+                <!-- dwMarker="rinclude" dwPipelineTitle="Page-Locale (plugin_experience)" dwPipelineURL="http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&start=Locale" dwIsController="true"
+                dwTemplateTitle="/default//components/header/countrySelector.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/countrySelector.isml" -->
+                <div class="dropdown country-selector" data-url="/on/demandware.store/Sites-RefArch-Site/default/Page-SetLocale" tabindex="0">
+                  <span class="btn dropdown-toggle" id="dropdownCountrySelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="flag-icon flag-icon-"></i>
+
+                  </span>
+                  <div class="dropdown-menu dropdown-country-selector" aria-labelledby="dropdownCountrySelector">
+
+                    <a class="dropdown-item" href="#" data-locale="en_US" data-currencycode="USD">
+                      <i class="flag-icon flag-icon-us"></i>
+                      English (United States)
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+              <button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
+                <span class="hidden-xs-down">Menu</span>
+              </button>
+            </div>
+            <div class="pull-right">
+              <div class="search hidden-xs-down">
+                <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/search.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/search.isml" -->
+                <div class="site-search">
+                  <form role="search" action="/s/RefArch/search?lang=default" method="get" name="simpleSearch">
+                    <span class="fa fa-search"></span>
+                    <input class="form-control search-field" type="search" name="q" value="" placeholder="Search (keywords,etc)" autocomplete="off" aria-label="Search (keywords,etc)">
+                    <div class="suggestions-wrapper" data-url="/on/demandware.store/Sites-RefArch-Site/default/SearchServices-GetSuggestions?q="></div>
+                    <input type="hidden" value="null" name="lang">
+                  </form>
+                </div>
+                <div class="search-button">
+                  <i class="fa fa-search"></i>
+                </div>
+
+              </div>
+              <div class="minicart" data-action-url="/on/demandware.store/Sites-RefArch-Site/default/Cart-MiniCartShow">
+                <!-- dwMarker="dw-object-rinclude"
+                data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/miniCart.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Cart.js&amp;start=MiniCart&quot;,&quot;PageProcessingTime&quot;:14,&quot;TemplateTitle&quot;:&quot;/default//components/header/miniCart.isml
+                (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Cart-MiniCart (app_storefront_base)&quot;}" -->
+                <!-- dwMarker="rinclude" dwPipelineTitle="Cart-MiniCart (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Cart.js&start=MiniCart" dwIsController="true"
+                dwTemplateTitle="/default//components/header/miniCart.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/miniCart.isml" -->
+                <div class="minicart-total hide-link-med">
+                  <a class="minicart-link" href="https://ecom-2015183130.vpod.t.force.com/s/RefArch/cart?lang=default" title="View Cart">
+                    <i class="minicart-icon fa fa-shopping-bag"></i>
+                    <span class="minicart-quantity">
+                      0
+                    </span>
+                  </a>
+                </div>
+
+                <div class="minicart-total hide-no-link">
+                  <i class="minicart-icon fa fa-shopping-bag"></i>
+                  <span class="minicart-quantity">
+                    0
+                  </span>
+                </div>
+                <div class="popover popover-bottom"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown" id="sg-navbar-collapse">
+      <div class="container">
+        <div class="row">
+          <!-- dwMarker="dw-object-rinclude"
+          data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/menu.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&amp;start=IncludeHeaderMenu&quot;,&quot;PageProcessingTime&quot;:37,&quot;PageCacheExpires&quot;:&quot;07/07/2018
+          12:31 pm&quot;,&quot;TemplateTitle&quot;:&quot;/default//components/header/menu.isml (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-IncludeHeaderMenu (plugin_experience)&quot;}" -->
+          <!-- dwMarker="rinclude" dwPipelineTitle="Page-IncludeHeaderMenu (plugin_experience)" dwPipelineURL="http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&start=IncludeHeaderMenu" dwIsController="true"
+          dwTemplateTitle="/default//components/header/menu.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/menu.isml" -->
+          <nav class="navbar navbar-expand-md bg-inverse col-12">
+            <div class="close-menu clearfix d-lg-none">
+              <div class="back pull-left">
+                <a href="#" role="button">
+                  <span class="caret-left"></span>
+                  Back
+                </a>
+              </div>
+              <div class="close-button pull-right">
+                <a href="#" role="button">
+                  Close
+                  <span aria-hidden="true">×</span>
+                </a>
+              </div>
+            </div>
+            <div class="menu-group" aria-label="Main menu" role="navigation">
+              <ul class="nav navbar-nav" role="menu">
+
+                <li class="nav-item dropdown" role="menuitem">
+                  <a href="/s/RefArch/new%20arrivals/?lang=default" id="newarrivals" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New Arrivals</a>
+
+                  <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                  <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/new%20arrivals/womens/?lang=default" id="newarrivals-womens" role="button" class="dropdown-link">Womens</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/new%20arrivals/mens/?lang=default" id="newarrivals-mens" role="button" class="dropdown-link">Mens</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/new%20arrivals/electronics/?lang=default" id="newarrivals-electronics" role="button" class="dropdown-link">Electronics</a>
+                    </li>
+
+                  </ul>
+
+                </li>
+
+                <li class="nav-item dropdown" role="menuitem">
+                  <a href="/s/RefArch/womens/?lang=default" id="womens" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Womens</a>
+
+                  <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                  <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                    <li class="dropdown-item dropdown" role="menuitem">
+                      <a href="/s/RefArch/womens/clothing/?lang=default" id="womens-clothing" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
+
+                      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                      <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/outfits/?lang=default" id="womens-outfits" role="button" class="dropdown-link">Outfits</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/tops/?lang=default" id="womens-clothing-tops" role="button" class="dropdown-link">Tops</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/dresses/?lang=default" id="womens-clothing-dresses" role="button" class="dropdown-link">Dresses</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/bottoms/?lang=default" id="womens-clothing-bottoms" role="button" class="dropdown-link">Bottoms</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/jackets%20%26%20coats/?lang=default" id="womens-clothing-jackets" role="button" class="dropdown-link">Jackets &amp; Coats</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/clothing/feeling%20red/?lang=default" id="womens-clothing-feeling-red" role="button" class="dropdown-link">Feeling Red</a>
+                        </li>
+
+                      </ul>
+
+                    </li>
+
+                    <li class="dropdown-item dropdown" role="menuitem">
+                      <a href="/s/RefArch/womens/jewelry/?lang=default" id="womens-jewelry" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jewelry</a>
+
+                      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                      <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/jewelry/earrings/?lang=default" id="womens-jewelry-earrings" role="button" class="dropdown-link">Earrings</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/jewelry/bracelets/?lang=default" id="womens-jewelry-bracelets" role="button" class="dropdown-link">Bracelets</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/jewelry/necklaces/?lang=default" id="womens-jewelry-necklaces" role="button" class="dropdown-link">Necklaces</a>
+                        </li>
+
+                      </ul>
+
+                    </li>
+
+                    <li class="dropdown-item dropdown" role="menuitem">
+                      <a href="/s/RefArch/womens/accessories/?lang=default" id="womens-accessories" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+
+                      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                      <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/accessories/scarves/?lang=default" id="womens-accessories-scarves" role="button" class="dropdown-link">Scarves</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/womens/accessories/shoes/?lang=default" id="womens-accessories-shoes" role="button" class="dropdown-link">Shoes</a>
+                        </li>
+
+                      </ul>
+
+                    </li>
+
+                  </ul>
+
+                </li>
+
+                <li class="nav-item dropdown" role="menuitem">
+                  <a href="/s/RefArch/mens/?lang=default" id="mens" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mens</a>
+
+                  <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                  <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                    <li class="dropdown-item dropdown" role="menuitem">
+                      <a href="/s/RefArch/mens/clothing/?lang=default" id="mens-clothing" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
+
+                      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                      <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/clothing/suits/?lang=default" id="mens-clothing-suits" role="button" class="dropdown-link">Suits</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/clothing/jackets%20%26%20coats/?lang=default" id="mens-clothing-jackets" role="button" class="dropdown-link">Jackets &amp; Coats</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/clothing/dress%20shirts/?lang=default" id="mens-clothing-dress-shirts" role="button" class="dropdown-link">Dress Shirts</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/clothing/shorts/?lang=default" id="mens-clothing-shorts" role="button" class="dropdown-link">Shorts</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/clothing/pants/?lang=default" id="mens-clothing-pants" role="button" class="dropdown-link">Pants</a>
+                        </li>
+
+                      </ul>
+
+                    </li>
+
+                    <li class="dropdown-item dropdown" role="menuitem">
+                      <a href="/s/RefArch/mens/accessories/?lang=default" id="mens-accessories" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+
+                      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                      <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/accessories/ties/?lang=default" id="mens-accessories-ties" role="button" class="dropdown-link">Ties</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/accessories/gloves/?lang=default" id="mens-accessories-gloves" role="button" class="dropdown-link">Gloves</a>
+                        </li>
+
+                        <li class="dropdown-item" role="menuitem">
+                          <a href="/s/RefArch/mens/accessories/luggage/?lang=default" id="mens-accessories-luggage" role="button" class="dropdown-link">Luggage</a>
+                        </li>
+
+                      </ul>
+
+                    </li>
+
+                  </ul>
+
+                </li>
+
+                <li class="nav-item dropdown" role="menuitem">
+                  <a href="/s/RefArch/electronics/?lang=default" id="electronics" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Electronics</a>
+
+                  <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/menuItem.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/menuItem.isml" -->
+                  <ul class="dropdown-menu" role="menu" aria-hidden="true">
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/electronics/televisions/?lang=default" id="electronics-televisions" role="button" class="dropdown-link">Televisions</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/electronics/digital%20cameras/?lang=default" id="electronics-digital-cameras" role="button" class="dropdown-link">Digital Cameras</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/electronics/ipod%20%26%20mp3%20players/?lang=default" id="electronics-digital-media-players" role="button" class="dropdown-link">iPod &amp; MP3 Players</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/electronics/gps%20navigation/?lang=default" id="electronics-gps-units" role="button" class="dropdown-link">GPS Navigation</a>
+                    </li>
+
+                    <li class="dropdown-item" role="menuitem">
+                      <a href="/s/RefArch/electronics/gaming/?lang=default" id="electronics-gaming" role="button" class="dropdown-link">Gaming</a>
+                    </li>
+
+                  </ul>
+
+                </li>
+
+                <li class="nav-item" role="menuitem">
+                  <a href="https://ecom-2015183130.vpod.t.force.com/s/RefArch/search?cgid=root&amp;amp;srule=top-sellers&amp;amp;lang=default" id="top-seller" role="button" class="nav-link">Top Sellers</a>
+                </li>
+
+                <!-- dwMarker="dw-object-rinclude"
+                data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/mobileHeader.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&amp;start=Header&quot;,&quot;PageProcessingTime&quot;:5,&quot;TemplateTitle&quot;:&quot;/default/account/mobileHeader.isml
+                (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Account-Header (app_storefront_base)&quot;}" -->
+                <!-- dwMarker="rinclude" dwPipelineTitle="Account-Header (app_storefront_base)" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Account.js&start=Header" dwIsController="true"
+                dwTemplateTitle="/default/account/mobileHeader.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/account/mobileHeader.isml" -->
+                <li class="nav-item d-lg-none" role="menuitem">
+                  <a href="https://ecom-2015183130.vpod.t.force.com/on/demandware.store/Sites-RefArch-Site/default/Login-Show" class="nav-link">
+                    <!-- dwMarker="link" dwPipelineTitle="Login-Show (app_storefront_base)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_storefront_base/cartridge/controllers/Login.js&amp;start=Show" -->
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="user-message">Login</span>
+                  </a>
+                </li>
+
+                <!-- dwMarker="dw-object-rinclude"
+                data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/mobileCountrySelector.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&amp;start=Locale&quot;,&quot;PageProcessingTime&quot;:5,&quot;TemplateTitle&quot;:&quot;/default//components/header/mobileCountrySelector.isml
+                (app_storefront_base)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Locale (plugin_experience)&quot;}" -->
+                <!-- dwMarker="rinclude" dwPipelineTitle="Page-Locale (plugin_experience)" dwPipelineURL="http://localhost:60606/target=/plugin_experience/cartridge/controllers/Page.js&start=Locale" dwIsController="true"
+                dwTemplateTitle="/default//components/header/mobileCountrySelector.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default//components/header/mobileCountrySelector.isml" -->
+                <li class="menu-item dropdown country-selector d-md-none" data-url="/on/demandware.store/Sites-RefArch-Site/default/Page-SetLocale">
+                  <span class="btn dropdown-toggle" id="dropdownCountrySelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="flag-icon flag-icon-"></i>
+
+                  </span>
+                  <div class="dropdown-menu dropdown-country-selector" aria-labelledby="dropdownCountrySelector">
+
+                    <a class="dropdown-item" href="#" data-locale="en_US" data-currencycode="USD">
+                      <i class="flag-icon flag-icon-us"></i>
+                      English (United States)
+                    </a>
+
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="search-mobile d-sm-none">
+      <!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/search.isml (app_storefront_base)" dwTemplateURL="http://localhost:60606/target=/app_storefront_base/cartridge/templates/default/components/header/search.isml" -->
+      <div class="site-search">
+        <form role="search" action="/s/RefArch/search?lang=default" method="get" name="simpleSearch">
+          <span class="fa fa-search"></span>
+          <input class="form-control search-field" type="search" name="q" value="" placeholder="Search (keywords,etc)" autocomplete="off" aria-label="Search (keywords,etc)">
+          <div class="suggestions-wrapper" data-url="/on/demandware.store/Sites-RefArch-Site/default/SearchServices-GetSuggestions?q="></div>
+          <input type="hidden" value="null" name="lang">
+        </form>
+      </div>
+      <div class="search-button">
+        <i class="fa fa-search"></i>
+      </div>
+
+    </div>
+  </nav>
+</header>

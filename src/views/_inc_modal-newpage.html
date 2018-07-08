@@ -27,7 +27,10 @@
                                                 <span class="slds-assistive-text">Help</span>
                                             </button>
                                         </div>
-                                        <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
+                                        <input type="text" id="input-pagename" class="slds-input" placeholder="Given Page Name"
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Given Page Name'"
+                                        >
                                     </div>
                                     <div class="slds-form-element slds-size_1-of-2">
                                         <label class="slds-form-element__label" for="input-013"><abbr class="slds-required" title="required">*</abbr>ID (URL Suffix)</label>
@@ -39,60 +42,32 @@
                                                 <span class="slds-assistive-text">Help</span>
                                             </button>
                                         </div>
-                                        <input type="text" id="input-02" class="slds-input" placeholder="ID">
+                                        {#
+                                        <input type="text" id="input-pageid" class="slds-input" placeholder="Page ID"
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Page ID'"
+                                        >
+                                        #}
+                                        <div class="slds-form-element__control slds-col">
+                                              <span class="slds-form-element__static slds-border_bottom" style="width:100%" id="input-pageid">Read Only</span>
+                                        </div>
                                     </div>
                                 </div>
-                                {#
-                                <!-- ERROR VERSION below -->
-                                <div class="slds-form-element__row">
-                                  <div class="slds-form-element slds-has-error slds-size_1-of-2">
-                                      <label class="slds-form-element__label" for="input-013">
-                                        <abbr class="slds-required" title="required">*</abbr>Page Name</label>
-                                        <div class="slds-form-element__icon">
-                                            <button aria-describedby="help" class="slds-button slds-button_icon">
-                                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                                </svg>
-                                                <span class="slds-assistive-text">Help</span>
-                                            </button>
-                                        </div>
-                                        <div class="slds-form-element__control">
-                                          <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
-                                        </div>
-                                        <div id="error-message" class="slds-form-element__help">This is the error message</div>
-                                  </div>
-                                  <div class="slds-form-element slds-has-error slds-size_1-of-2">
-                                      <label class="slds-form-element__label" for="input-013">
-                                        <abbr class="slds-required" title="required">*</abbr>ID (URL Suffix)</label>
-                                        <div class="slds-form-element__icon">
-                                            <button aria-describedby="help" class="slds-button slds-button_icon">
-                                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                                </svg>
-                                                <span class="slds-assistive-text">Help</span>
-                                            </button>
-                                        </div>
-                                        <div class="slds-form-element__control">
-                                          <input type="text" id="input-02" class="slds-input" placeholder="ID">
-                                        </div>
-                                        <div id="error-message" class="slds-form-element__help">This is the error message</div>
-                                  </div>
-                                </div>
-                                #}
-
                             </div>
                         </fieldset>
                     </div>
                 <!-- /FORM 1 -->
+
+
+
                 <!-- FORM 2 -->
                 <div class="slds-form slds-form_stacked slds-scrollable_y" id="form_step-1">
                     <label>Select a Page Type</label>
-                    {#
                     <fieldset class="slds-form-element slds-p-top_small">
                         <!-- legend class="slds-form-element__legend slds-form-element__label">Select a Page Type</legend -->
                         <div class="slds-form-element__control">
                             <div class="slds-visual-picker slds-visual-picker_medium 2slds-m-right--small">
-                                <input type="radio" id="visual-picker-301" name="options">
+                                <input type="radio" id="visual-picker-301" name="options" checked>
                                 <label for="visual-picker-301">
                                     <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
                                         <span class="">
@@ -100,7 +75,7 @@
                                         </span>
                                     </span>
                                     <span class="slds-visual-picker__body">
-                                        <span class="slds-text-heading_small">1 Region Campaign Page</span>
+                                        <span class="slds-text-heading_small">Basic Layout</span>
                                         <span class="slds-text-title">Full-width single region template.</span>
                                     </span>
                                     <span class="slds-icon_container slds-visual-picker__text-check">
@@ -111,7 +86,7 @@
                                 </label>
                             </div>
 
-                            <div class="slds-visual-picker slds-visual-picker_medium 2slds-m-right--small">
+                            <div class="slds-visual-picker slds-visual-picker_medium 2slds-m-right--small slds-hide">
                                 <input type="radio" id="visual-picker-302" name="options">
                                 <label for="visual-picker-302">
                                     <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
@@ -131,7 +106,7 @@
                                 </label>
                             </div>
 
-                            <div class="slds-visual-picker slds-visual-picker_medium">
+                            <div class="slds-visual-picker slds-visual-picker_medium slds-hide">
                                 <input type="radio" id="visual-picker-303" name="options">
                                 <label for="visual-picker-303">
                                     <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
@@ -152,13 +127,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    #}
-                    <div class="slds-col slds-text-align_center 2slds-hide">
-                      <img src="assets/DesertSimplified.svg" />
-                      <h1 class="slds-text-heading--medium">
-                        No page types available ...
-                      </h1>
-                    </div>
+
                 </div>
                 <!-- /FORM 2 -->
             </div>
