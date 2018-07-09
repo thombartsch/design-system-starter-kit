@@ -633,12 +633,18 @@ $('.button--add-component').click(function() {
 
 //MEDIA SELECTOR
 $('.add-mediaselector-dummy').click(function() {
+    alert(closest_region);
+    selected_image = undefined;
+    $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
+    $('.mediaselector-component-editor .file-name').html('No Image assigned');
+
+
     var component_placeholder = $('#dummy_container .my_mediaselector_dummy li').clone(true, true).addClass('item' + cloneCountA++);
     var navigator_placeholder = $('#dummy_container .my_mediaselector_navigator li').clone(true, true).addClass('item' + cloneCountB++);
 
     //component_placeholder.appendTo('#region').hide().fadeIn(600);
     component_placeholder.appendTo('#'+closest_region+' ul').hide().fadeIn(600);
-    navigator_placeholder.appendTo('#navigator').hide().fadeIn(600);
+    navigator_placeholder.appendTo('#'+closest_region+'_links ul').hide().fadeIn(600);
 
     //now open editor
     activeComponent = undefined;
@@ -661,8 +667,6 @@ $('.mediaselector-component-editor .image-figure, .add-image').click(function() 
 $('.media-component button.js-trigger-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
-
-    $('.text-component-editor').toggleClass('slds-hide');
     return false;
 });
 $('.media-component-editor button.trigger-save-modal').click(function() {
@@ -671,8 +675,6 @@ $('.media-component-editor button.trigger-save-modal').click(function() {
 
     $('.' + activeComponent + ' .text-holder').html(selected_text);
     $('.' + activeComponent + ' .header-holder').html(selected_header);
-
-    $('.text-component-editor').toggleClass('slds-hide');
     return false;
 });
 
@@ -687,25 +689,8 @@ $('.image-thumb').click(function() {
 
 //IMAGE Save
 $('.picker .trigger-save-modal').click(function() {
-    /*
-    $('.' + activeComponent + ' .image-back').css('background-image', 'url(' + selected_image + ')');
-    $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
-    */
-
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
     $('.mediaselector-component-editor .file-name').text(selected_image);
-
-    /*
-    $('.circle').toggleClass('slds-hide');
-    $('.remove-image').toggleClass('slds-hide');
-
-
-    $('.shopableselector-component-editor .shopableback').css('background-image', 'url(' + selected_image + ')');
-
-    $('.shopableselector-component-editor .file-name').text(selected_image);
-
-    */
-
     $('.picker').addClass('slds-hide');
 
 });
@@ -717,26 +702,39 @@ $('.mediaselector-component-editor .trigger-save-modal').click(function() {
     $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
     $('.' + activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
 
-    banner_header = $('#text-banner-header').val;
-    banner_sub = $('#text-banner-sub').val;
+    banner_header = $('#text-banner-header').val();
+    banner_sub = $('#text-banner-sub').val();
+
+    $('.banner-header').html(banner_header);
+    $('.banner-sub').html(banner_sub);
 });
 
 
-//BANNER COMPONENT Edit
-$('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
+//BANNER COMPONENT EDIT
+$('.placeholder-component-37 .js-trigger-edit-component').click(function() {
+    //GET IMAGE
+    imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    patt=/\"|\'|\)/g;
+    selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
+
+    //GET TEXTS
+    text_header = undefined;
+    text_sub = undefined;
+
+    text_header = $(this).closest('.placeholder').find('.title').text();
+    text_sub = $(this).closest('.placeholder').find('.sub').text();
+
+    $('.mediaselector-component-editor #text-banner-header').val(text_header);
+    $('.mediaselector-component-editor #text-banner-sub').val(text_sub);
+
     $('.mediaselector-component-editor').toggleClass('slds-hide');
-    $('.targeted_banner-component-editor').addClass('slds-hide');
 });
 
 
 
 
 //DELETE ANY COMPONENT
-//DELETE COMPONENT
 $('button.js-trigger-delete-component').click(function() {
-    //$(this).closest('li').find('.delete-component').toggleClass('slds-hide');
-    //$(this).closest('#region').find('li').attr('class');
-
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
     $('.delete-component').toggleClass('slds-hide');
