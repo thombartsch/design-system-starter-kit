@@ -8,8 +8,8 @@ var closest_region = undefined;
 var activeComponent = undefined;
 var activePickerbase = undefined;
 
-var cloneCountA = 1;
-var cloneCountB = 1;
+var cloneCountA = 0;
+var cloneCountB = 0;
 
 var longtext = undefined;
 var selected_image = undefined;
@@ -44,6 +44,17 @@ var copytext = undefined;
 //counter for components
 var regionlimit = 0;
 $('#regionlimit').text(regionlimit);
+
+
+//TOP TOOLBAR
+
+ $('#language-selecta').click(function(){
+     $('#language-selecta').next('.slds-dropdown-trigger--click').toggleClass('slds-is-open');
+ });
+
+
+
+
 
 
 //HIDE ALL MENUS
@@ -384,6 +395,9 @@ $('.delete-component .js-close-modal-id-0').click(function() {
 
 //MODAL HANDLERS
 $('.trigger-close-modal').click(function() {
+    banner_header = undefined;
+    banner_sub = undefined;
+
     $(this).closest('.editor').toggleClass('slds-hide');
     return false;
 });
@@ -594,7 +608,6 @@ $('.set-focal-point').click(function(e){
   // Set positioning
   $('.focal-holder').css('background-position',backgroundPosition);
 
-  //alert(offsetY+'px');
 
 });
 
@@ -633,7 +646,6 @@ $('.button--add-component').click(function() {
 
 //MEDIA SELECTOR
 $('.add-mediaselector-dummy').click(function() {
-    alert(closest_region);
     selected_image = undefined;
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
     $('.mediaselector-component-editor .file-name').html('No Image assigned');
@@ -657,6 +669,7 @@ $('.add-mediaselector-dummy').click(function() {
     $('.region_component_selector').toggleClass('slds-hide');
     $('.mediaselector-component-editor').toggleClass('slds-hide');
 
+
     return false;
 });
 
@@ -670,6 +683,7 @@ $('.media-component button.js-trigger-edit-component').click(function() {
     return false;
 });
 $('.media-component-editor button.trigger-save-modal').click(function() {
+
     selected_text = $('.slds-rich-text-area__content').html();
     selected_header = $('.slds-input-header').val();
 
@@ -698,35 +712,40 @@ $('.picker .trigger-save-modal').click(function() {
 //NOW CLOSE PICKER AND SET IMAGE
 $('.mediaselector-component-editor .trigger-save-modal').click(function() {
     $('.mediaselector-component-editor').toggleClass('slds-hide');
-    //alert(selected_image + "and" + activeComponent);
     $('.' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
     $('.' + activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
 
+    banner_header = undefined;
+    banner_sub = undefined;
     banner_header = $('#text-banner-header').val();
     banner_sub = $('#text-banner-sub').val();
 
-    $('.banner-header').html(banner_header);
-    $('.banner-sub').html(banner_sub);
+    $('.' + activeComponent + ' .banner-header').html(banner_header);
+    $('.' + activeComponent + ' .banner-sub').html(banner_sub);
+
+    $('#text-banner-header').val('');
+    $('#text-banner-sub').val('');
 });
 
 
 //BANNER COMPONENT EDIT
 $('.placeholder-component-37 .js-trigger-edit-component').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
     //GET IMAGE
     imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
     patt=/\"|\'|\)/g;
     selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
 
     //GET TEXTS
-    text_header = undefined;
-    text_sub = undefined;
+    banner_header = $('.' + activeComponent).find('.title').text();
+    banner_sub =    $('.' + activeComponent).find('.sub').text();
 
-    text_header = $(this).closest('.placeholder').find('.title').text();
-    text_sub = $(this).closest('.placeholder').find('.sub').text();
+    $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
 
-    $('.mediaselector-component-editor #text-banner-header').val(text_header);
-    $('.mediaselector-component-editor #text-banner-sub').val(text_sub);
-
+    $('.mediaselector-component-editor #text-banner-header').val(banner_header);
+    $('.mediaselector-component-editor #text-banner-sub').val(banner_sub);
     $('.mediaselector-component-editor').toggleClass('slds-hide');
 });
 
