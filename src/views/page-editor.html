@@ -17,13 +17,9 @@
     <div class="slds-col">
       {% include "_inc_preview-settings.html" %}
       <div class="slds-col page-content region" id="2editor">
-        {# include "_inc_header-editor.html" #}
-        <div style="opacity:0.2">
-          {# include "_inc_top_locked.html" #}
-          <!--iframe src="_inc_top_locked.html" /></iframe-->
-        </div>
+        {%include "_inc_header-editor.html" %}
         <!-- ROW 1 -->
-        <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical region" style="background:#fff" id="regionEins">
+        <div class="slds-grid slds-large-size_12-of-12 slds-grid_vertical region" style="background:#fff;" id="regionEins">
           <!-- REGION-->
           <ul id="region1" class="list slds-has-dividers_bottom-space"></ul>
           <!-- /REGION-->
@@ -132,8 +128,8 @@
                 {% include "_inc_dropdown_componentsb.html" %}
             </div>
             #}
-            <div style="opacity:0.2">
-              {# include "_inc_bottom_locked.html" #}
+            <div class="footer">
+              {% include "_inc_bottom_locked.html" %}
               <!--iframe src="_inc_bottom_locked.html" /></iframe-->
             </div>
       </div>

@@ -1,54 +1,74 @@
+
 <div class="slds-grid">
     <!-- LEFT -->
     <div class="slds-col2">
         <div class="slds-tree_container" role="application">
             <h4 class="slds-text-title_caps" id="treeheading">Asset Libraries</h4>
             <ul class="slds-tree" role="tree" aria-labelledby="treeheading">
-                <li id="tree0-node0" role="treeitem" aria-level="1">
+                <li id="tree0-node0" role="treeitem" aria-level="1" class="select_collectionA slds-is-selected">
                     <div class="slds-tree__item">
                         <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
                             <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                            </svg> <span class="slds-assistive-text">Toggle</span> </button><a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">Spring 2018</a></div>
+                            </svg>
+                            <span class="slds-assistive-text">Toggle</span>
+                          </button>
+                          <a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">Older Material</a>
+                    </div>
                 </li>
-                <li id="tree0-node1" role="treeitem" aria-level="1" aria-expanded="false">
-                    <div class="slds-tree__item">
-                        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-controls="tree0-node1" title="Toggle">
-                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                            </svg> <span class="slds-assistive-text">Toggle</span> </button><a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Nested Folders">Summer Campaign 2018</a></div>
-                    <ul class="slds-is-collapsed" role="group" aria-labelledby="tree0-node1__label">
-                        <li id="tree0-node1-0" role="treeitem" aria-level="2">
-                            <div class="slds-tree__item">
-                                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
-                                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                                    </svg> <span class="slds-assistive-text">Toggle</span> </button><a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">Folder</a></div>
+                <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                      <div class="slds-tree__item">
+                        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                          </svg>
+                          <span class="slds-assistive-text">Expand Tree Branch</span>
+                        </button>
+                        <span class="slds-size_1-of-1">
+                          <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Collections</span>
+                        </span>
+                      </div>
+                      <ul role="group">
+                        <li role="treeitem" aria-level="2" aria-selected="false" class="select_collectionB">
+                          <div class="slds-tree__item">
+                            <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
+                              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                              </svg>
+                              <span class="slds-assistive-text">Expand Tree Item</span>
+                            </button>
+                            <span class="slds-size_1-of-1">
+                              <span class="slds-tree__item-label slds-truncate" title="Tree Item">Spring Collection 2018</span>
+                            </span>
+                          </div>
                         </li>
-                    </ul>
-                </li>
-                <li id="tree0-node2" role="treeitem" aria-level="1">
-                    <div class="slds-tree__item">
-                        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-controls="tree0-node2" title="Toggle">
-                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                            </svg> <span class="slds-assistive-text">Toggle</span> </button><a id="tree0-node2__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Nested Folders">Fall Campaign 2018</a></div>
-                    <ul class="slds-is-collapsed" role="group" aria-labelledby="tree0-node2__label">
-                        <li id="tree0-node2-0" role="treeitem" aria-level="2">
-                            <div class="slds-tree__item">
-                                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
-                                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                                    </svg> <span class="slds-assistive-text">Toggle</span> </button><a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">Folder</a></div>
+                        <li role="treeitem" aria-level="2" aria-selected="false" class="select_collectionD">
+                          <div class="slds-tree__item">
+                            <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
+                              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                              </svg>
+                              <span class="slds-assistive-text">Expand Tree Item</span>
+                            </button>
+                            <span class="slds-size_1-of-1">
+                              <span class="slds-tree__item-label slds-truncate" title="Tree Item">Fall Collection 2018</span>
+                            </span>
+                          </div>
                         </li>
-                    </ul>
-                </li>
-                <li id="tree0-node3" role="treeitem" aria-level="1">
+                      </ul>
+                    </li>
+
+
+                <li id="tree0-node3" role="treeitem" aria-level="1" class="select_collectionC">
                     <div class="slds-tree__item">
                         <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small slds-is-disabled" disabled="" title="Toggle">
-                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                            </svg> <span class="slds-assistive-text">Toggle</span> </button><a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">_temp media</a></div>
+                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                          </svg>
+                          <span class="slds-assistive-text">Toggle</span>
+                        </button>
+                        <a href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate" title="Folder">_temp media</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -57,12 +77,32 @@
     <!-- CENTER -->
 
 
-    <div class="slds-p-left_small slds-p-right_small slds-text-align_left slds-col">
+    <!-- COLLECTION A -->
+    <div class="slds-p-left_small slds-p-right_small slds-text-align_left slds-col collectionA">
+      <div class="slds-size-1-of-1 slds-col slds-text-align_center">
+        <img src="/assets/empty_page.svg" />
+        <p>
+          <h2 class="slds-text-heading_large">Sorry, here are no images available</h2>
+          <p class="slds-text-heading_small">
+            Why not uploading some ...
+          </p>
+        </p>
+      </div>
 
 
 
 
 
+
+
+
+
+
+    </div>
+    <!-- //COLLECTION A -->
+
+    <!-- COLLECTION B -->
+    <div class="slds-p-left_small slds-p-right_small slds-text-align_left slds-col collectionB slds-hide">
       <div class="slds-size-1-of-1 slds-col">
                 <ul class="slds-grid slds-grid_pull-padded" style="display: flex; flex-wrap: wrap;">
                     <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
@@ -294,180 +334,309 @@
 
 
 
-      {#
-      <fieldset class="slds-form-element slds-hide">
-        <legend class="slds-form-element__legend slds-form-element__label">Select a plan</legend>
-        <div class="slds-form-element__control">
-          <div class="slds-visual-picker slds-visual-picker_medium">
-            <input type="radio" id="visual-picker-19" value="visual-picker-19" name="options" />
-            <label for="visual-picker-19">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                <span>
-                  <span class="slds-text-heading_large">$30</span>
-                  <span class="slds-text-title">USD/user/month *</span>
-                </span>
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-heading_small">Lightning Professional</span>
-                <span class="slds-text-title">Complete service CRM for teams of any size</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-          </div>
-          <div class="slds-visual-picker slds-visual-picker_medium">
-            <input type="radio" id="visual-picker-20" value="visual-picker-20" name="options" />
-            <label for="visual-picker-20">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                <span>
-                  <span class="slds-text-heading_large">$150</span>
-                  <span class="slds-text-title">USD/user/month *</span>
-                </span>
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-heading_small">Lightning Enterprise</span>
-                <span class="slds-text-title">Everything you need to take support to the next level</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-          </div>
-          <div class="slds-visual-picker slds-visual-picker_medium">
-            <input type="radio" id="visual-picker-21" value="visual-picker-21" name="options" />
-            <label for="visual-picker-21">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                <span>
-                  <span class="slds-text-heading_large">$300</span>
-                  <span class="slds-text-title">USD/user/month *</span>
-                </span>
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-heading_small">Lightning Unlimited</span>
-                <span class="slds-text-title">Complete support with enterprise-grade customization</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-          </div>
-        </div>
-      </fieldset>
-      #}
+
+
+
+    </div>
+    <!-- //COLLECTION B -->
+
+    <!-- COLLECTION C -->
+    <div class="slds-p-left_small slds-p-right_small slds-text-align_left slds-col collectionC slds-hide">
+      <div class="slds-size-1-of-1 slds-col slds-text-align_center">
+        <img src="/assets/empty_page.svg" />
+        <p>
+          <h2 class="slds-text-heading_large">Sorry, here are no images available</h2>
+          <p class="slds-text-heading_small">
+            Why not uploading some ...
+          </p>
+        </p>
+      </div>
+
+    </div>
+    <!-- //COLLECTION C -->
+
+
+    <!-- COLLECTION D -->
+    <div class="slds-p-left_small slds-p-right_small slds-text-align_left slds-col collectionD slds-hide">
+      <div class="slds-size-1-of-1 slds-col">
+                <ul class="slds-grid slds-grid_pull-padded" style="display: flex; flex-wrap: wrap;">
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_1.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_1.jpgf">landing_1.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_2.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_2.jpgf">landing_2.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_3.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_3.jpgf">landing_3.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_homepage-3-large.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_homepage-3-large.jpg">landing_homepage-3-large.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_homepage-4-large.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_homepage-4-large.jpg">landing_homepage-4-large.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_homepage-5-large.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_homepage-5-large.jpg">landing_homepage-5-large.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+
+
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-p-around_small">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_large.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_large.jpgf">landing_large.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-hide">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_red-shoes.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_red-shoes.jpg">landing_red-shoes.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-hide">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_red.png" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_red.png">landing_red.png</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+                    <li class="slds-p-horizontal_xx-small slds-size_1-of-2 slds-medium-size_1-of-3 slds-hide">
+                        <div class="slds-file slds-file_card">
+                          <figure>
+                            <a href="javascript:void(0);" class="slds-file__crop">
+                              <img src="/assets/landing_shoes.jpg" alt="Description of the image" class="image-thumb">
+                            </a>
+                            <figcaption class="slds-file__title slds-file__title_card">
+                              <div class="slds-media slds-media_small slds-media_center">
+                                <div class="slds-media__figure slds-line-height_reset">
+                                  <span class="slds-icon_container" title="pdf">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#image"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">jpg</span>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <span class="slds-file__text slds-truncate" title="landing_shoes.jpg">landing_shoes.jpg</span>
+                                </div>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </div>
+                    </li>
+
+
+                </ul>
+              </div>
+
+
+
+
+
+
 
 
 
     </div>
 
-
-
-
-    {#
-    <div class="2slds-col slds-p-left_small slds-p-right_small">
-        <div class="2slds-grid">
-
-        <div class="slds-visual-picker slds-visual-picker_medium">
-            <input type="radio" id="visual-picker-33" name="options" value="on" />
-            <label for="visual-picker-33">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                <img src="/assets/banner1.jpg" border="0" />
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-title">image name.jpg</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-        </div>
-
-        <div class="slds-visual-picker slds-visual-picker_medium">
-            <input type="radio" id="visual-picker-34" name="options" value="on" />
-            <label for="visual-picker-34">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center"
-              style="
-                background:url('/assets/slide1.jpg') no-repeat center center fixed;
-                  -webkit-background-size: cover;
-                  -moz-background-size: cover;
-                  -o-background-size: cover;
-                  background-size: cover;
-                "
-              >
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-title">image name.jpg</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-        </div>
-
-        <div class="slds-visual-picker slds-visual-picker_medium" style="background: url('/assets/right.jpg');">
-            <input type="radio" id="visual-picker-35" name="options" value="on" />
-            <label for="visual-picker-35">
-              <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                <img src="" border="0" />
-              </span>
-              <span class="slds-visual-picker__body">
-                <span class="slds-text-title">image name.jpg</span>
-              </span>
-              <span class="slds-icon_container slds-visual-picker__text-check">
-                <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check" />
-                </svg>
-              </span>
-            </label>
-        </div>
+    <!-- //COLLECTION D -->
 
 
 
 
 
-        </div>
-    </div>
-    #}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- /CENTER -->
-    {#
-    <!-- RIGHT -->
-    <div class="slds-hide slds-col slds-p-around_small slds-theme_shade" style="width:240px">
-        <h3 class="slds-text-heading--medium slds-m-bottom--x-small" data-reactid="21">Merchstein Suggestion</h3> <span class="text-body--default slds-m-bottom--x-small">We found and image which might suit your needs even better!</span>
-        <div class="slds-p-around_small">
-            <fieldset class="slds-form-element">
-                <div class="slds-visual-picker slds-visual-picker_medium">
-                    <input type="radio" id="visual-picker-15" name="options" value="off">
-                    <label for="visual-picker-15">
-                        <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
-                            <span>
-                                <img src="assets/fashion2.jpg" width="100" />
-                            </span>
-                        </span>
-                        <span class="slds-visual-picker__body">
-                            <span class="slds-text-heading_small">Dress-dark.jpg</span>
-                            <span class="slds-text-title">800kB<br />
-                            12.12.2018 23:54:00PM</span>
-                        </span>
-                        <span class="slds-icon_container slds-visual-picker__text-check">
-                            <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-                            </svg>
-                        </span>
-                    </label>
-                </div>
-            </fieldset>
-        </div>
-    </div>
-    <!-- /RIGHT -->
-    #}
 </div>

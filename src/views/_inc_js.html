@@ -47,9 +47,13 @@ $('#regionlimit').text(regionlimit);
 
 
 //TOP TOOLBAR
-
  $('#language-selecta').click(function(){
      $('#language-selecta').next('.slds-dropdown-trigger--click').toggleClass('slds-is-open');
+     /*
+     $('*').click(function(){
+        $('#language-selecta').next('.slds-dropdown-trigger--click').toggleClass('slds-is-open');
+     });
+     */
  });
 
 
@@ -242,7 +246,7 @@ $('#trigger-back-to-edit').click(function() {
     $('.region-off').toggleClass('region-off region');
     $('.editor-off').toggleClass('editor-off editor');
     $('#trigger-back-to-edit').toggleClass('slds-hide');
-    //$('#trigger-preview').toggleClass('slds-hide');
+    $('#trigger-preview').toggleClass('slds-hide');
     $('#tools').toggleClass('slds-hide');
     $('.mini-menu').toggleClass('slds-hide');
     $('.sub-mini-menu').toggleClass('slds-hide');
@@ -669,6 +673,8 @@ $('.add-mediaselector-dummy').click(function() {
     $('.region_component_selector').toggleClass('slds-hide');
     $('.mediaselector-component-editor').toggleClass('slds-hide');
 
+    $('.modal-content-id-37 .tab_general').addClass('slds-active');
+
 
     return false;
 });
@@ -676,6 +682,7 @@ $('.add-mediaselector-dummy').click(function() {
 //BANNER COMPONENT
 $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
     $('.media-picker').toggleClass('slds-hide');
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
 });
 $('.media-component button.js-trigger-edit-component').click(function() {
     activeComponent = undefined;
@@ -689,6 +696,7 @@ $('.media-component-editor button.trigger-save-modal').click(function() {
 
     $('.' + activeComponent + ' .text-holder').html(selected_text);
     $('.' + activeComponent + ' .header-holder').html(selected_header);
+
     return false;
 });
 
@@ -701,11 +709,13 @@ $('.image-thumb').click(function() {
     return false;
 });
 
-//IMAGE Save
+//IMAGE SAVE
 $('.picker .trigger-save-modal').click(function() {
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
     $('.mediaselector-component-editor .file-name').text(selected_image);
     $('.picker').addClass('slds-hide');
+    $('.circle').toggleClass('slds-hide');
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
 
 });
 
@@ -744,13 +754,14 @@ $('.placeholder-component-37 .js-trigger-edit-component').click(function() {
 
     $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
 
+    //SET TAB
+    $('.modal-content-id-37 .tab_general').addClass('slds-active');
+
+
     $('.mediaselector-component-editor #text-banner-header').val(banner_header);
     $('.mediaselector-component-editor #text-banner-sub').val(banner_sub);
     $('.mediaselector-component-editor').toggleClass('slds-hide');
 });
-
-
-
 
 //DELETE ANY COMPONENT
 $('button.js-trigger-delete-component').click(function() {
@@ -782,6 +793,123 @@ $('.delete-component .action-delete-component').click(function() {
 
     return false;
 });
+
+
+
+//GALLERY BROWSING
+
+$('.select_collectionA').click(function() {
+  $('.select_collectionA').addClass('slds-is-selected');
+  $('.collectionA').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+    return false;
+});
+
+
+$('.select_collectionB').click(function() {
+  $('.select_collectionB').addClass('slds-is-selected');
+  $('.collectionB').removeClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+    return false;
+});
+
+
+$('.select_collectionC').click(function() {
+  $('.select_collectionC').addClass('slds-is-selected');
+  $('.collectionC').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+    return false;
+});
+
+$('.select_collectionD').click(function() {
+  $('.select_collectionD').addClass('slds-is-selected');
+  $('.collectionD').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+    return false;
+});
+
+
+
+//SET FOCAL Point
+// Credit: https://github.com/jonom/jquery-focuspoint
+// Credit: https://github.com/jonom/jquery-focuspoint
+
+//$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
+
+$('.set-focal-point').click(function(e){
+
+  var imageW = $(this).width();
+  var imageH = $(this).height();
+
+  //Calculate FocusPoint coordinates
+  var offsetX = e.pageX - $(this).offset().left;
+  var offsetY = e.pageY - $(this).offset().top;
+
+  //Calculate CSS Percentages
+  var percentageX = (offsetX/imageW)*100;
+  //var percentageY = (offsetY/imageH)*100;
+  //there must be a bug in here ... why is *10 working???
+  var percentageY = (offsetY/imageH)*10;
+  var backgroundPosition = percentageX.toFixed(0) + '% ' + percentageY.toFixed(0) + '%';
+
+  //Move indicator
+  $('.circle').css('top',(offsetY-10)+'px');
+  $('.circle').css('left',(offsetX-10)+'px');
+  // Set positioning
+  $('.focal-holder').css('background-position',backgroundPosition);
+
+  //alert(offsetY+'px');
+
+});
+
+// Hide image while resizing
+var resizing = false;
+$(window).resize(function(){
+  if(resizing !== false) {
+    clearTimeout(resizing);
+    $('img').css('opacity', 0);
+ }
+ resizing = setTimeout(function() {
+   $('img').css('opacity', 1);
+ }, 1000);
+
+});
+
 
 //- end js
 });
