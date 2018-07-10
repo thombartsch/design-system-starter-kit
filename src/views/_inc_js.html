@@ -913,7 +913,7 @@ $(window).resize(function(){
 
 
 
-//ROW COMPONENT
+//ROW COMPONENT - ADD
 $('.add-row').click(function() {
     selected_layout = 1;
 
@@ -941,7 +941,7 @@ $('.add-row').click(function() {
 });
 
 
-//ROW COMPONENT
+//ROW COMPONENT - EDIT
 $('.placeholder-component-row .js-trigger-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
@@ -950,15 +950,23 @@ $('.placeholder-component-row .js-trigger-edit-component').click(function() {
     $('.modal-content-id-row .tab_general').addClass('slds-active');
     $('.row-component-editor').toggleClass('slds-hide');
 });
-
-
-
 $('.row-component-editor button.trigger-save-modal').click(function() {
-    function addRegions() {
-        $('.'+activeComponent+' .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+ cloneCountA++).addClass('regionstuff-' + cloneCountA++));
+
+    //alert($(activeComponent).hasClass('region_container'));
+
+
+    function deleteRegions(){
+      $('.'+activeComponent+' .placeholder-component-row .region_container').remove();
+      //alert('all removed');
     }
+    function addRegions() {
+      $('.'+activeComponent+' .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+ cloneCountA++).addClass('regionstuff-' + cloneCountA++)).hide().fadeIn(600);
+    }
+
+    deleteRegions();
+
     for (i = 0; i < selected_layout; i++){
-        addRegions();
+      addRegions();
     }
     $('.row-component-editor').toggleClass('slds-hide');
     return false;
