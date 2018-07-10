@@ -1,0 +1,102 @@
+<!-- EDITOR -->
+<div class="row-component-editor editor slds-hide">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-row" class="slds-modal slds-fade-in-open slds-modal_medium">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse trigger-close-modal" title="Close">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Row</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium modal-content-id-row  2slds-grow">
+                <!--  MEDIA SELECTION CONTENT-->
+
+
+                    <div class="editor">
+                        <div class="slds-tabs_default">
+                            <ul class="slds-tabs_default__nav" role="tablist">
+                                <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-row1" id="tab-default-row1__item">Content</a></li>
+                                <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row2" id="tab-default-row2__item">Rules</a></li>
+                                <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row3" id="tab-default-row3__item">Localization</a></li>
+                            </ul>
+
+                            <div id="tab-default-row1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-row1__item">
+                                <!-- CONTENT -->
+                                <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Layout</legend>
+
+                                <div class="slds-button-group" role="group">
+                                  <button class="slds-button slds-button_neutral slds-button_stateful row-one">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                                    </svg> 1 Column
+                                  </button>
+                                  <button class="slds-button slds-button_neutral row-two">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                                    </svg> 2 Columns
+                                  </button>
+                                  <button class="slds-button slds-button_neutral row-three">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                                    </svg> 3 Columns
+                                  </button>
+                                  <button class="slds-button slds-button_neutral row-four">
+                                    <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                                    </svg> 4 Columns
+                                  </button>
+                                </div>
+
+
+                                <!--ul>
+
+                                  <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Layout</legend>
+
+                                  <li class="slds-p-bottom_small">
+                                    <ul class="slds-button-group-list">
+                                      <li>
+                                        <button class="slds-button slds-button_neutral row-one">1/1</button>
+                                      </li>
+                                      <li>
+                                        <button class="slds-button slds-button_neutral row-two">2/2</button>
+                                      </li>
+                                      <li>
+                                        <button class="slds-button slds-button_neutral row-three">3/3</button>
+                                      </li>
+                                      <li>
+                                        <button class="slds-button slds-button_neutral row-four">4/4</button>
+                                      </li>
+                                    </ul>
+                                  </li>
+
+                                </ul-->
+                                <!-- /CONTENT -->
+                            </div>
+                            <div id="tab-default-row2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-row2__item">
+                                <!-- RULES -->
+                                {% include "_inc_rules.html"   %}
+                                <!-- /RULES -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--  /MEDIA SELECTION CONTENT-->
+            </div>
+            <footer class="slds-modal__footer slds-grid">
+                <div class="slds-hide">
+                    <button class="slds-button slds-button--neutral trigger-delete-component">Delete Component</button>
+                </div>
+                <div class="slds-col">
+                    <button class="slds-button slds-button_neutral trigger-close-modal">Cancel</button>
+                    <button class="slds-button slds-button_brand trigger-save-modal">Save</button>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+<!-- /EDITOR -->

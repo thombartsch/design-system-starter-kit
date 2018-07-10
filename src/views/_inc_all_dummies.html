@@ -1,6 +1,71 @@
 <div class="slds-hide" id="dummy_container">
 
 
+  <!-- MEDIA PICKER -->
+  <ul class="my_mediaselector_dummy slds-tree">
+      <li class="">
+        {% include "_inc_placeholder_component-banner.html"   %}
+      </li>
+  </ul>
+  <ul class="my_mediaselector_navigator slds-tree">
+      <li>
+          <div class="2slds-border_top 2slds-border_left slds-border_bottom 2slds-border_right slds-grid">
+              <div class="slds-p-around_small slds-p-right_small">
+                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Drag & Drop</span>
+              </div>
+              <div class="slds-p-around_small slds-truncate slds-col slds-p-left--small">
+                  <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate  js-trigger-media-edit-component" title="Component Name">Media</a>
+              </div>
+              <div class="slds-hide slds-p-around_small rules-icon">
+                  <button class="slds-button slds-button_icon slds-button_icon slds-m-left_x-small" aria-controls="tree0-node1" title="Toggle">
+                      <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Rules</span>
+                  </button>
+              </div>
+          </div>
+      </li>
+  </ul>
+
+
+
+  <!-- ROW DUMMY -->
+  <ul class="my_row_dummy slds-tree">
+      <li class="">
+        {% include "_inc_placeholder_component-row.html"   %}
+      </li>
+  </ul>
+  <ul class="my_row_navigator slds-tree">
+      <li>
+          <div class="2slds-border_top 2slds-border_left slds-border_bottom 2slds-border_right slds-grid">
+              <div class="slds-p-around_small slds-p-right_small">
+                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Drag & Drop</span>
+              </div>
+              <div class="slds-p-around_small slds-truncate slds-col slds-p-left--small">
+                  <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate  js-trigger-media-edit-component" title="Component Name">Row</a>
+              </div>
+              <div class="slds-hide slds-p-around_small rules-icon">
+                  <button class="slds-button slds-button_icon slds-button_icon slds-m-left_x-small" aria-controls="tree0-node1" title="Toggle">
+                      <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Rules</span>
+                  </button>
+              </div>
+          </div>
+      </li>
+  </ul>
+
+
+
+
     <!-- TEXT -->
     <ul class="my_text_dummy slds-tree">
         <li class="">
@@ -27,7 +92,6 @@
                         <span class="slds-assistive-text">Rules</span>
                     </button>
                     <div class="slds-hide slds-popover slds-popover_tooltip slds-nubbin_top-left help-text" role="tooltip" style="z-index:2000000000;position: absolute;width: 200px;top: 125px;left: 186px;">
-                        {#style="z-index:2000000000;position: absolute;width: 200px;top: 125px;left: 186px;"#}
                         <div class="slds-popover__body">
                             <p>From: 12.12. 2018</p>
                             <p><button class="slds-button slds-button--neutral slds-button--small">Apply rule to canvas</button>
@@ -345,35 +409,7 @@
     </ul>
 
 
-    <!-- MEDIA PICKER -->
-    <ul class="my_mediaselector_dummy slds-tree">
-        <li class="">
-          {% include "_inc_placeholder_component-37.html"   %}
-        </li>
-    </ul>
-    <ul class="my_mediaselector_navigator slds-tree">
-        <li>
-            <div class="2slds-border_top 2slds-border_left slds-border_bottom 2slds-border_right slds-grid">
-                <div class="slds-p-around_small slds-p-right_small">
-                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
-                    </svg>
-                    <span class="slds-assistive-text">Drag & Drop</span>
-                </div>
-                <div class="slds-p-around_small slds-truncate slds-col slds-p-left--small">
-                    <a id="tree0-node1__label" href="javascript:void(0);" tabindex="-1" role="presentation" class="slds-truncate  js-trigger-media-edit-component" title="Component Name">Media</a>
-                </div>
-                <div class="slds-hide slds-p-around_small rules-icon">
-                    <button class="slds-button slds-button_icon slds-button_icon slds-m-left_x-small" aria-controls="tree0-node1" title="Toggle">
-                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
-                        </svg>
-                        <span class="slds-assistive-text">Rules</span>
-                    </button>
-                </div>
-            </div>
-        </li>
-    </ul>
+
 
 
 
@@ -407,10 +443,6 @@
             </div>
         </li>
     </ul>
-
-
-
-
 </div>
 
 
