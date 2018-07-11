@@ -1060,6 +1060,8 @@ $('.add-product-dummy').click(function() {
     $('.product-component-editor').toggleClass('slds-hide');
 
     $('.modal-content-id-product .tab_general').addClass('slds-active');
+    $('.product-link').val('');
+
     return false;
 });
 
@@ -1080,6 +1082,11 @@ $('.product-component-editor button.trigger-save-modal').click(function() {
     selected_header = $('.slds-input-header').val();
     $('.' + activeComponent + ' .text-holder').html(selected_text);
     $('.' + activeComponent + ' .header-holder').html(selected_header);
+    $('.' + activeComponent + ' .linked-product').html(selected_product_name);
+
+    selected_product_name = undefined;
+    $('.product-link').val('');
+
     return false;
 });
 
@@ -1107,15 +1114,23 @@ $('.placeholder-component-product .js-trigger-edit-component').click(function() 
     patt=/\"|\'|\)/g;
     selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
 
+    selected_product_name = undefined;
+    selected_product_name =  $('.' + activeComponent + ' .linked-product').text();
+
     //GET TEXTS
     banner_header_product = $('.' + activeComponent).find('.title').text();
 
     $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
+    $('.product-link').val(selected_product_name);
+
 
     //SET TAB
     $('.modal-content-id-product .tab_general').addClass('slds-active');
     $('.product-component-editor .text-banner-header-product').val(banner_header_product);
     $('.product-component-editor').toggleClass('slds-hide');
+
+    selected_product_name = undefined;
+
 });
 
 
@@ -1179,6 +1194,7 @@ $('.product-picker button.trigger-save-modal').click(function() {
     $('.product-picker div.list-full').toggleClass('slds-hide');
 
     $('.product-link').val(selected_product_name);
+
 
     return false;
 });
