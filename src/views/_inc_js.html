@@ -228,6 +228,7 @@ $('#poppinD button').click(function() {
 
 //PREVIEW
 $('#trigger-preview').click(function() {
+    $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
     $('#editor').toggleClass('editor-off');
@@ -243,6 +244,7 @@ $('#trigger-preview').click(function() {
 });
 
 $('#trigger-published-preview').click(function() {
+    $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
     $('#editor').toggleClass('editor-off');
@@ -258,6 +260,7 @@ $('#trigger-published-preview').click(function() {
 });
 
 $('#trigger-back-to-edit').click(function() {
+    $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region-off').toggleClass('region-off region');
     $('.editor-off').toggleClass('editor-off editor');

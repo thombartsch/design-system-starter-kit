@@ -107,7 +107,7 @@
                                             <div class="slds-text-title slds-m-top_x-small" aria-live="polite">1 Item(s) Selected</div>
                                         </div>
                                         <div class="slds-scrollable slds-grow">
-                                            <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none">
+                                            <table role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_resizable-cols slds-no-row-hover slds-scrollable_none  2slds-table_col-bordered">
                                                 <thead>
                                                     <tr class="slds-line-height_reset">
                                                         <th scope="col" style="width: 3.75rem;"></th>
@@ -188,6 +188,9 @@
                                                 <tbody>
                                                     {% for product in products %}
                                                     <tr class="product-row{{ product.id }}">
+                                                        <td>
+
+                                                        </td>
                                                         <td role="gridcell">
                                                             <div class="slds-truncate product-image" title="Image"><img class="prod_img" src="{{ product.Image }}" style="height:80px; width: auto;" /></div>
                                                         </td>
