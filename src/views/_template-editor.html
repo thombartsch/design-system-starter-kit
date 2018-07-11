@@ -10,8 +10,7 @@
 
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
-  {#
-    <script>
+    <!--script>
         (function(apiKey){
             (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
                                  v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -43,9 +42,7 @@
                 }
             });
         })('a6211f58-beb4-47b8-6f9a-f2d2d9db186d');
-    </script>
-
-    #}
+    </script-->
 
 </head>
 <body>
@@ -67,7 +64,7 @@
         </button>
       </div>
       <span class="slds-context-bar__label-action slds-context-bar__app-name slds-p-left--small">
-        <span class="slds-truncate" title="App Name">Page Name</span>
+        <span class="slds-truncate" title="Page Name" id="page_name">Page Name</span>
       </span>
     </div>
   </div>
@@ -235,18 +232,12 @@
           <span class="slds-truncate" title="Tools">Back to Edit</span>
         </a>
         </li>
-        {#
-        <li class="slds-context-bar__item slds-context-bar__item_divider-right slds-context-bar__item_divider-left" id="trigger-preview">
-        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Preview">
-          <span class="slds-truncate" title="Tools">Preview</span>
-        </a>
-        </li>
-        #}
-        <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+        <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger 2slds-dropdown-trigger_hover">
             <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item"  id="trigger-preview">
                 <span class="slds-truncate" title="Menu Item">Preview</span>
             </a>
-            <div class="slds-context-bar__icon-action slds-p-left_none">
+            {#
+            <div class="slds-context-bar__icon-action slds-p-left_none slds-hide">
                 <button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
                     <svg class="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
@@ -254,7 +245,7 @@
                     <span class="slds-assistive-text">Open menu item submenu</span>
                 </button>
             </div>
-            <div class="slds-dropdown slds-dropdown_right">
+            <div class="slds-dropdown slds-dropdown_right slds-hide">
                 <ul class="slds-dropdown__list" role="menu">
                     <li class="slds-dropdown__item slds-border_bottom" role="presentation">
                         <div class="slds-p-around_small">
@@ -269,7 +260,13 @@
                     </li>
                 </ul>
             </div>
-            </li>
+            #}
+        </li>
+        <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger 2slds-dropdown-trigger_hover">
+            <a href="javascript:void(0);" class="slds-context-bar__label-action slds-hide" title="Menu Item"  id="trigger-published-preview">
+                <span class="slds-truncate" title="Menu Item">Preview Published</span>
+            </a>
+        </li>
 
         <li class="slds-context-bar__item" id="trigger-publish">
         <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Set Online">
@@ -305,7 +302,7 @@
       <!-- Content from HTML files gets injected here -->
     {% endblock %}
 
-        {% include "_inc_dropdowncomponents.html"    %}
+        {% include "_inc_dropdowncomponents.html"  %}
 
 
   </main>
@@ -336,6 +333,63 @@
     <script src="//github.hubspot.com/tether/dist/js/tether.js"></script>
 
 
+<script>
+$(document).ready(function() {
+//- start
+    //check if page name and layout exist ...
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+    var page_name = getUrlParameter('name');
+    var page_layout = getUrlParameter('layout');
+
+    if (page_name){
+      //string += "&page_name=" + page_name;
+      $('#page_name').html(page_name);
+      $('#page_name').attr('title',page_name);
+    }
+    if (page_layout){
+      if (page_layout == 'flexible'){
+        //flexible
+        $('#regionZwei_Eins_links').css('display','none');
+        $('#regionZwei_Zwei_links').css('display','none');
+        $('#regionZwei_Drei_links').css('display','none');
+        $('#regionDrei_Eins_links').css('display','none');
+        $('#regionDrei_Zwei_links').css('display','none');
+        $('#regionVier_Eins_links').css('display','none');
+        $('#regionVier_Zwei_links').css('display','none');
+        $('#regionVier_Drei_links').css('display','none');
+        $('#regionVier_Vier_links').css('display','none');
+        $('#regionElf_links').css('display','none');
+
+        $('#row_2').css('display','none');
+        $('#row_3').css('display','none');
+        $('#row_4').css('display','none');
+        $('#row_5').css('display','none');
+        $('#row_6').css('display','none');
+        $('#row_7').css('display','none');
+        $('#row_8').css('display','none');
+        $('#row_9').css('display','none');
+        $('#row_10').css('display','none');
+        $('#row_11').css('display','none');
+      }else{
+        //alert('static');
+      }
+    }
+//- end js
+});
+
+</script>
 
 
 </body>

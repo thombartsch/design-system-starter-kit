@@ -982,3 +982,73 @@ div.ring {
 .slds-global-header img {
     width: 50px;
 }
+
+
+
+//FIXED LAYOUT Page
+#regionEins,
+#regionFuenf,
+#regionEins .image-holder,
+#regionFuenf .image-holder {
+  min-height: 500px;
+}
+
+#regionZwei_Eins,
+#regionZwei_Zwei,
+#regionZwei_Drei,
+#regionZwei_Eins .image-holder ,
+#regionZwei_Zwei .image-holder ,
+#regionZwei_Drei .image-holder {
+  min-height: 416px;
+}
+
+#regionDrei_Eins,
+#regionDrei_Zwei,
+#regionDrei_Eins .image-holder,
+#regionDrei_Zwei .image-holder{
+  min-height: 316px;
+}
+
+#regionDrei_Eins .image-holder,
+#regionDrei_Zwei .image-holder{
+  min-height: 316px;
+}
+
+#regionVier_Eins,
+#regionVier_Zwei,
+#regionVier_Drei,
+#regionVier_Vier,
+#regionVier_Eins .image-holder,
+#regionVier_Zwei .image-holder,
+#regionVier_Drei .image-holder,
+#regionVier_Vier .image-holder{
+  min-height: 616px;
+}
+
+
+.slds-image__crop img,
+.slds-file__crop img {
+    //top: 0!important;
+}
+
+
+/*
+
+.square .slds-button {
+    position: relative;
+    z-index: 20;
+}
+.slds-button_outline-brand {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dddbda;
+    -webkit-transition: border 0.15s linear;
+    transition: border 0.15s linear;
+    border-color: #dddbda;
+    background-color: white;
+    border-color: #0070d2;
+}
+
+*/
