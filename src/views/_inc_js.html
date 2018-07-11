@@ -200,18 +200,40 @@ $('#trigger-desktop').click(function() {
 //LOCALES
 $('#trigger-us').click(function() {
     $('#language-selecta li').removeClass('slds-is-selected');
+    $('.lang-fra').removeClass('slds-is-selected');
+    $('.lang-de').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
+    $('.language-menu').removeClass('slds-is-open');
 });
 $('#trigger-fr').click(function() {
     $('#language-selecta li').removeClass('slds-is-selected');
+    $('.lang-us').removeClass('slds-is-selected');
+    $('.lang-de').removeClass('slds-is-selected');
     $(this).closest('li').addClass('slds-is-selected');
-    $('#locale-warning').toggleClass('slds-hide');
+    //$('#locale-warning').toggleClass('slds-hide');
+    $('.language-menu').removeClass('slds-is-open');
 
 });
 $('#trigger-de').click(function() {
     $('#language-selecta li').removeClass('slds-is-selected');
+    $('.lang-us').removeClass('slds-is-selected');
+    $('.lang-fra').removeClass('slds-is-selected');
+    $(this).closest('li').addClass('slds-is-selected');
+    $('.language-menu').removeClass('slds-is-open');
+});
+
+/*
+$('#locale-warning .js-trigger-save').click(function() {
+    $('#locale-warning').addClass('slds-hide');
     $(this).closest('li').addClass('slds-is-selected');
 });
+*/
+
+
+
+
+
+
 
 //FILTER VIEW
 $('#trigger_preview').click(function() {
@@ -1147,8 +1169,8 @@ $('.slds-checkbox_faux').click(function() {
 });
 
 $('.product-picker button.trigger-save-modal').click(function() {
-    alert(activeComponent);
-    alert(selected_product_name);
+    //alert(activeComponent);
+    //alert(selected_product_name);
 
     $('.product-picker').toggleClass('slds-hide');
     $('.product-component-editor').toggleClass('slds-hide');
