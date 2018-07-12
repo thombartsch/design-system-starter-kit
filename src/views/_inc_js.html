@@ -691,6 +691,18 @@ $('.button--add-component').click(function() {
   return false;
 });
 
+$('.button--add-component-side').click(function() {
+  //closest_region = $(this).closest('.region').attr('id');
+  var name_links = $(this).closest('.region').attr('id');
+  var arr =  name_links.split('_');
+  closest_region = arr[0];
+
+  alert(closest_region);
+
+  $('.region_component_selector').toggleClass('slds-hide');
+  return false;
+});
+
 
 
 
@@ -736,11 +748,14 @@ $('.mediaselector-component-editor .image-figure, .add-image').click(function() 
     $('.mediaselector-component-editor').toggleClass('slds-hide');
     $('.product-component-editor').addClass('slds-hide');
 });
+
 $('.media-component button.js-trigger-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
     return false;
 });
+
+
 $('.media-component-editor button.trigger-save-modal').click(function() {
     selected_text = $('.slds-rich-text-area__content').html();
     selected_header = $('.slds-input-header').val();
@@ -796,12 +811,15 @@ $('.mediaselector-component-editor .trigger-save-modal').click(function() {
 
 
 //BANNER COMPONENT EDIT
-$('.placeholder-component-37 .js-trigger-edit-component').click(function() {
+$('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
 
     //GET IMAGE
-    imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    imgUrl = $('.'+activeComponent).find('.image-holder').css('background-image');
+    alert(activeComponent);
+
     patt=/\"|\'|\)/g;
     selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
 
@@ -819,7 +837,7 @@ $('.placeholder-component-37 .js-trigger-edit-component').click(function() {
 });
 
 //DELETE ANY COMPONENT
-$('button.js-trigger-delete-component').click(function() {
+$('.js-trigger-delete-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
     $('.delete-component').toggleClass('slds-hide');
@@ -1105,12 +1123,14 @@ $('.product-component-editor .trigger-save-modal').click(function() {
 
 
 //PRODUCT COMPONENT EDIT
-$('.placeholder-component-product .js-trigger-edit-component').click(function() {
+$('.placeholder-component-product .js-trigger-edit-component, .js-trigger-product-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('class');
 
     //GET IMAGE
-    imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    imgUrl = $('.'+activeComponent).find('.image-holder').css('background-image');
+
     patt=/\"|\'|\)/g;
     selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
 

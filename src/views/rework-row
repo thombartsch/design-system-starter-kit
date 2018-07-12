@@ -1,0 +1,79 @@
+//ROW COMPONENT - ADD
+$('.add-row').click(function() {
+    selected_layout = 1;
+    alert('closest region is: '+closest_region);
+
+    //var component_placeholder = $('#dummy_container .my_row_dummy .dummy_content').clone(true, true).addClass('item' + cloneCountA++);
+    var component_placeholder = $('#dummy_container .my_row_dummy .dummy_content').clone(true, true).attr('id','sub_region_'+ cloneCountA++);
+    var navigator_placeholder = $('#dummy_container .my_row_navigator li').clone(true, true).addClass('item' + cloneCountB++);
+
+    //component_placeholder.appendTo('#region').hide().fadeIn(600);
+    component_placeholder.appendTo('#'+closest_region+' ul').hide().fadeIn(600);
+    navigator_placeholder.appendTo('#'+closest_region+'_links ul').hide().fadeIn(600);
+
+    //now open editor
+    activeComponent = undefined;
+    //activeComponent = $(component_placeholder).attr('class');
+    activeComponent = $(component_placeholder).attr('id');
+
+    alert(activeComponent);
+
+    //add 1 to component count
+    /*
+    regionlimit = regionlimit + 1;
+    $('#regionlimit').text(regionlimit);
+    */
+
+
+    $('.region_component_selector').toggleClass('slds-hide');
+    $('.row-component-editor').toggleClass('slds-hide');
+
+    $('.row-component-editor .tab_general').addClass('slds-active');
+
+    return false;
+});
+
+
+//ROW COMPONENT - EDIT
+$('.placeholder-component-row .js-trigger-edit-component').click(function() {
+    activeComponent = undefined;
+    //activeComponent = $(this).closest('.region').attr('class');
+    activeComponent = $(this).closest('.region');
+
+    //SET TAB
+    $('.modal-content-id-row .tab_general').addClass('slds-active');
+    $('.row-component-editor').toggleClass('slds-hide');
+});
+$('.row-component-editor button.trigger-save-modal').click(function() {
+    function deleteRegions(){
+      $('.'+activeComponent+' .placeholder-component-row .region_container').remove();
+    }
+    function addRegions() {
+      alert("active component"+activeComponent+" add"+selected_layout+" to the:"+closest_region);
+      //$('.'+activeComponent+' .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+ cloneCountA++).addClass('regionstuff-' + cloneCountA++)).hide().fadeIn(600);
+    }
+    deleteRegions();
+    for (i = 0; i < selected_layout; i++){
+      addRegions();
+    }
+    $('.row-component-editor').toggleClass('slds-hide');
+    return false;
+});
+
+
+$('.row-one').click(function() {
+  selected_layout = 1;
+  return false;
+});
+$('.row-two').click(function() {
+  selected_layout = 2;
+  return false;
+});
+$('.row-three').click(function() {
+  selected_layout = 3;
+  return false;
+});
+$('.row-four').click(function() {
+  selected_layout = 4;
+  return false;
+});
