@@ -250,6 +250,8 @@ $('#poppinD button').click(function() {
 
 //PREVIEW
 $('#trigger-preview').click(function() {
+    $('.page-bottom-section').fadeTo('slow',1);
+    $('.page-header-section').fadeTo('slow',1);
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
@@ -261,11 +263,14 @@ $('#trigger-preview').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder').toggleClass('placeholder placeholder-off');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeOut('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
 $('#trigger-published-preview').click(function() {
+    $('.page-bottom-section').fadeTo('slow',1);
+    $('.page-header-section').fadeTo('slow',1);
+
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
@@ -277,11 +282,14 @@ $('#trigger-published-preview').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder').toggleClass('placeholder placeholder-off');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeOut('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
 $('#trigger-back-to-edit').click(function() {
+    $('.page-bottom-section').fadeTo('slow',0.2);
+    $('.page-header-section').fadeTo('slow',0.2);
+
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region-off').toggleClass('region-off region');
@@ -293,7 +301,7 @@ $('#trigger-back-to-edit').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder-off').toggleClass('placeholder-off placeholder');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeIn('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
