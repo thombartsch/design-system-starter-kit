@@ -40,6 +40,7 @@ var show_recommendation = false;
 //var $box = $('.slds-dropdown-trigger');
 var copytext = undefined;
 
+var selected_layout = 1;
 
 //counter for components
 var regionlimit = 0;
@@ -231,10 +232,6 @@ $('#locale-warning .js-trigger-save').click(function() {
 
 
 
-
-
-
-
 //FILTER VIEW
 $('#trigger_preview').click(function() {
     $('#poppinD').toggleClass('slds-hide');
@@ -250,6 +247,7 @@ $('#poppinD button').click(function() {
 
 //PREVIEW
 $('#trigger-preview').click(function() {
+    $('.template-header, .template-footer').fadeTo('slow', 1);
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
@@ -261,11 +259,13 @@ $('#trigger-preview').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder').toggleClass('placeholder placeholder-off');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    //$('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeOut('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
 $('#trigger-published-preview').click(function() {
+    $('.template-header, .template-footer').fadeTo('slow', 1);
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region').toggleClass('region region-off');
@@ -277,11 +277,13 @@ $('#trigger-published-preview').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder').toggleClass('placeholder placeholder-off');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    //$('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeOut('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
 $('#trigger-back-to-edit').click(function() {
+    $('.template-header, .template-footer').fadeTo('slow', 0.2);
     $('.slds-button-container').toggleClass('slds-hide');
     $('.slds-button--icon-more').toggleClass('slds-hide');
     $('.region-off').toggleClass('region-off region');
@@ -293,7 +295,8 @@ $('#trigger-back-to-edit').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder-off').toggleClass('placeholder-off placeholder');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').toggleClass('slds-hide');
+    //$('#sidebar-navigator').toggleClass('slds-hide');
+    $('#sidebar-navigator').fadeIn('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
@@ -475,11 +478,6 @@ $('.list>li').hover(function() {
 });
 
 
-
-
-
-
-
 //LOADER PAGE LIST
 $(function() {
     $('.spinner').delay(3000).fadeOut('slow');
@@ -569,40 +567,13 @@ $('.input-rules-from').blur(function() {
 
 //edit rules from click on clock
 $('.rules-text-icon button').click(function() {
-    /*
-    new Tether({
-        element: '.help-text',
-        target: '.rules-text-icon button',
-        attachment: 'bottom center',
-        targetAttachment: 'bottom center'
-    });
-    */
     $('.help-text').toggleClass('slds-hide');
-    //now attach here the popover and show it!
 });
 
 
 $(function() {
-    $(".clickspot").draggable();
-    //$('.clickspot').drag().drag();
+    $('.clickspot').draggable();
 });
-
-
-/*
-$('.clickspot').drag("init", function(ev, dd) {
-    if (this.id == "test-drag") {
-        return $(".clickspot").addClass("selected");
-    }
-}).drag(function(ev, dd) {
-    if (ev.target.id == "test-drag") {
-        $(this).css({
-            top: dd.offsetY,
-            left: dd.offsetX
-        });
-    }
-});
-*/
-
 
 
 
@@ -841,7 +812,6 @@ $('.delete-component .action-delete-component').click(function() {
 
 
 //GALLERY BROWSING
-
 $('.select_collectionA').click(function() {
   $('.select_collectionA').addClass('slds-is-selected');
   $('.collectionA').removeClass('slds-hide');
@@ -857,8 +827,6 @@ $('.select_collectionA').click(function() {
 
     return false;
 });
-
-
 $('.select_collectionB').click(function() {
   $('.select_collectionB').addClass('slds-is-selected');
   $('.collectionB').removeClass('slds-hide');
@@ -874,8 +842,6 @@ $('.select_collectionB').click(function() {
 
     return false;
 });
-
-
 $('.select_collectionC').click(function() {
   $('.select_collectionC').addClass('slds-is-selected');
   $('.collectionC').removeClass('slds-hide');
@@ -891,7 +857,6 @@ $('.select_collectionC').click(function() {
 
     return false;
 });
-
 $('.select_collectionD').click(function() {
   $('.select_collectionD').addClass('slds-is-selected');
   $('.collectionD').removeClass('slds-hide');
@@ -912,9 +877,7 @@ $('.select_collectionD').click(function() {
 //SET FOCAL Point
 // Credit: https://github.com/jonom/jquery-focuspoint
 // Credit: https://github.com/jonom/jquery-focuspoint
-
 //$('.focal-holder').css('background-image','url('+$('.set-focal-point').attr('src')+')');
-
 $('.set-focal-point').click(function(e){
 
   var imageW = $(this).width();
@@ -940,7 +903,6 @@ $('.set-focal-point').click(function(e){
   //alert(offsetY+'px');
 
 });
-
 // Hide image while resizing
 var resizing = false;
 $(window).resize(function(){
@@ -962,6 +924,7 @@ $('.add-row').click(function() {
     selected_layout = 1;
 
     var component_placeholder = $('#dummy_container .my_row_dummy li').clone(true, true).addClass('item' + cloneCountA++);
+    alert(component_placeholder);
     var navigator_placeholder = $('#dummy_container .my_row_navigator li').clone(true, true).addClass('item' + cloneCountB++);
 
     //component_placeholder.appendTo('#region').hide().fadeIn(600);
@@ -973,8 +936,11 @@ $('.add-row').click(function() {
     activeComponent = $(component_placeholder).attr('class');
 
     //add 1 to component count
+    /*
     regionlimit = regionlimit + 1;
     $('#regionlimit').text(regionlimit);
+    */
+
 
     $('.region_component_selector').toggleClass('slds-hide');
     $('.row-component-editor').toggleClass('slds-hide');
@@ -1000,6 +966,7 @@ $('.row-component-editor button.trigger-save-modal').click(function() {
       //alert('all removed');
     }
     function addRegions() {
+      alert("add"+selected_layout+" to:"+activeComponent);
       $('.'+activeComponent+' .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+ cloneCountA++).addClass('regionstuff-' + cloneCountA++)).hide().fadeIn(600);
     }
     deleteRegions();
