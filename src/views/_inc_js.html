@@ -569,7 +569,7 @@ $('.input-rules-from').blur(function() {
     if (!$(this).val()) {
         //$(this).parents('p').addClass('warning');
     } else {
-        $('#navigator .' + activeComponent + ' .rules-icon').toggleClass('slds-hide');
+        $('#'+closest_region+'_links .' + activeComponent + ' .rules-icon').toggleClass('slds-hide');
         $('#'+closest_region+'_links .slds-marker').toggleClass('slds-hide');
 
     }
