@@ -301,7 +301,7 @@ $('#trigger-back-to-edit').click(function() {
     $('.sub-mini-menu').toggleClass('slds-hide');
     $('.placeholder-off').toggleClass('placeholder-off placeholder');
     $('#trigger-publish').toggleClass('slds-hide');
-    $('#sidebar-navigator').fadeIn('slow');
+    $('#sidebar-navigator').fadeOut('slow');
     $('.placeholder-component-38 .sub-mini-menu').addClass('slds-hide');
 });
 
@@ -570,10 +570,12 @@ $('.input-rules-from').blur(function() {
         //$(this).parents('p').addClass('warning');
     } else {
         $('#navigator .' + activeComponent + ' .rules-icon').toggleClass('slds-hide');
-        $('.slds-marker').toggleClass('slds-hide');
+        $('#'+closest_region+'_links .slds-marker').toggleClass('slds-hide');
 
     }
 });
+
+
 
 //edit rules from click on clock
 $('.rules-text-icon button').click(function() {
@@ -842,6 +844,34 @@ $('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-
     $('.mediaselector-component-editor').toggleClass('slds-hide');
 });
 
+
+
+$('.js-trigger-media-edit-rules').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    //GET IMAGE
+    //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    imgUrl = $('.'+activeComponent).find('.image-holder').css('background-image');
+
+    patt=/\"|\'|\)/g;
+    selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
+
+    //GET TEXTS
+    banner_header = $('.' + activeComponent).find('.title').text();
+    banner_sub =    $('.' + activeComponent).find('.sub').text();
+
+    $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
+
+    //SET TAB
+    $('.modal-content-id-37 .tab_rules').addClass('slds-active');
+    $('.mediaselector-component-editor .text-banner-header').val(banner_header);
+    $('.mediaselector-component-editor .text-banner-sub').val(banner_sub);
+    $('.mediaselector-component-editor').toggleClass('slds-hide');
+});
+
+
+
 //DELETE ANY COMPONENT
 $('.js-trigger-delete-component').click(function() {
     activeComponent = undefined;
@@ -851,10 +881,13 @@ $('.js-trigger-delete-component').click(function() {
     return false;
 });
 $('.delete-component .action-delete-component').click(function() {
+    $('#'+closest_region+'_links .slds-marker').toggleClass('slds-hide');
+    $('#'+closest_region+'_links .rules-icon').addClass('slds-hide');
     $('.delete-component').toggleClass('slds-hide');
     $('li.' + activeComponent).fadeOut(600, function() {
         $('li.' + activeComponent).remove();
     });
+
     //add 1 to component count
     regionlimit = regionlimit - 1;
     $('#regionlimit').text(regionlimit);
@@ -1150,6 +1183,38 @@ $('.placeholder-component-product .js-trigger-edit-component, .js-trigger-produc
 
     //SET TAB
     $('.modal-content-id-product .tab_general').addClass('slds-active');
+    $('.product-component-editor .text-banner-header-product').val(banner_header_product);
+    $('.product-component-editor').toggleClass('slds-hide');
+
+    selected_product_name = undefined;
+
+});
+
+
+//PRODUCT RULES EDIT
+$('.js-trigger-product-edit-rules').click(function() {
+    activeComponent = undefined;
+    activeComponent = $(this).closest('li').attr('class');
+
+    //GET IMAGE
+    //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
+    imgUrl = $('.'+activeComponent).find('.image-holder').css('background-image');
+
+    patt=/\"|\'|\)/g;
+    selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
+
+    selected_product_name = undefined;
+    selected_product_name =  $('.' + activeComponent + ' .linked-product').text();
+
+    //GET TEXTS
+    banner_header_product = $('.' + activeComponent).find('.title').text();
+
+    $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
+    $('.product-link').val(selected_product_name);
+
+
+    //SET TAB
+    $('.modal-content-id-product .tab_rules').addClass('slds-active');
     $('.product-component-editor .text-banner-header-product').val(banner_header_product);
     $('.product-component-editor').toggleClass('slds-hide');
 
