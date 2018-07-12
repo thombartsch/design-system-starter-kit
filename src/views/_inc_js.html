@@ -697,7 +697,6 @@ $('.button--add-component-side').click(function() {
   var arr =  name_links.split('_');
   closest_region = arr[0];
 
-  alert(closest_region);
 
   $('.region_component_selector').toggleClass('slds-hide');
   return false;
@@ -818,7 +817,6 @@ $('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-
     //GET IMAGE
     //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
     imgUrl = $('.'+activeComponent).find('.image-holder').css('background-image');
-    alert(activeComponent);
 
     patt=/\"|\'|\)/g;
     selected_image = '/assets/'+imgUrl.split('/').pop().replace(patt,'');
@@ -955,7 +953,6 @@ $('.set-focal-point').click(function(e){
   // Set positioning
   $('.focal-holder').css('background-position',backgroundPosition);
 
-  //alert(offsetY+'px');
 
 });
 
@@ -1015,7 +1012,6 @@ $('.placeholder-component-row .js-trigger-edit-component').click(function() {
 $('.row-component-editor button.trigger-save-modal').click(function() {
     function deleteRegions(){
       $('.'+activeComponent+' .placeholder-component-row .region_container').remove();
-      //alert('all removed');
     }
     function addRegions() {
       $('.'+activeComponent+' .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+ cloneCountA++).addClass('regionstuff-' + cloneCountA++)).hide().fadeIn(600);
@@ -1204,8 +1200,6 @@ $('.slds-checkbox_faux').click(function() {
 });
 
 $('.product-picker button.trigger-save-modal').click(function() {
-    //alert(activeComponent);
-    //alert(selected_product_name);
 
     $('.product-picker').toggleClass('slds-hide');
     $('.product-component-editor').toggleClass('slds-hide');
