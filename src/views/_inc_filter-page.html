@@ -115,22 +115,36 @@ style="left: 335px; top: 5px;"
         <div class="slds-p-around_small slds-grid modal" id="">
             <ul class="slds-col">
               <li class="slds-p-bottom_small">
-                <label class="slds-form-element__label" for="select-01">Customer Groups:</label>
-                <div class="slds-form-element__control">
-                  <div class="slds-select_container">
-                    <select class="slds-select" id="select-01">
-                      <option selected="selected">Everyone</option>
-                      <option>Customer Group A</option>
-                      <option>Customer Group B</option>
-                    </select>
-                  </div>
-                </div>
+                    <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
+                    <div class="slds-form-element__control">
+                      <span class="slds-checkbox">
+                        <input type="checkbox" name="options" id="" value="Everyone" />
+                        <label class="slds-checkbox__label" for="">
+                          <span class="slds-checkbox_faux"></span>
+                          <span class="slds-form-element__label">Everyone</span>
+                        </label>
+                      </span>
+                      <span class="slds-checkbox">
+                        <input type="checkbox" name="options" id="" value="CustomergroupA" />
+                        <label class="slds-checkbox__label" for="">
+                          <span class="slds-checkbox_faux"></span>
+                          <span class="slds-form-element__label">Customer Group A</span>
+                        </label>
+                      </span>
+                      <span class="slds-checkbox">
+                        <input type="checkbox" name="options" id="" value="CustomergroupB" />
+                        <label class="slds-checkbox__label" for="">
+                          <span class="slds-checkbox_faux"></span>
+                          <span class="slds-form-element__label">Customer Group B</span>
+                        </label>
+                      </span>
+                    </div>
               </li>
               <li>
                 <div class="slds-form-element">
                   <label class="slds-form-element__label" for="select-01">Display:</label>
                   <div class="slds-form-element__control">
-                    <input type="text" id="input-unique-id" class="slds-input" placeholder="--/--/----">
+                    <input type="text" id="filter-show-date" class="slds-input" placeholder="--/--/----">
                   </div>
                 </div>
               </li>
@@ -145,7 +159,5 @@ style="left: 335px; top: 5px;"
       </div>
     <!-- /SELECT RULES -->
 
-
   </div>
-
 </section>

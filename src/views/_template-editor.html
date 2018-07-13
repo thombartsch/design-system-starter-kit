@@ -323,6 +323,18 @@
     </script>
 
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+    $( function() {
+      $( "#filter-show-date" ).datepicker();
+      $( ".display-from" ).datepicker();
+      $( ".display-to" ).datepicker();
+    } );
+    </script>
+
+
+
 
     <!-- /JAVASCRIPT -->
     {% include "_inc_modal-delete-page.html"   %}
@@ -330,7 +342,10 @@
     {% include "_inc_notification-save.html"   %}
 
 
-    <script src="//github.hubspot.com/tether/dist/js/tether.js"></script>
+    <!--script src="//github.hubspot.com/tether/dist/js/tether.js"></script-->
+
+
+
 
 
 <script>
