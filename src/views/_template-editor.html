@@ -360,6 +360,8 @@ $(document).ready(function() {
     }
     if (page_layout){
       if (page_layout == 'flexible'){
+        //hide limits
+        $('.slds-limiter').addClass('slds-hide');
         //flexible
         $('#regionZweiEins_links').css('display','none');
         $('#regionZweiZwei_links').css('display','none');
