@@ -686,7 +686,6 @@ $('#input-pagename').keyup(function(e) {
 
 $('.button--add-component').click(function() {
   closest_region = $(this).closest('.region').attr('id');
-//alert('the nearest region is: '+closest_region);
 
   $('.region_component_selector').toggleClass('slds-hide');
 
@@ -733,7 +732,6 @@ $('.add-mediaselector-dummy').click(function() {
     component_placeholder.appendTo('#'+closest_region+' .region_container').hide().fadeIn(600);
     navigator_placeholder.appendTo('#'+closest_region+'_links .region_container').hide().fadeIn(600);
 
-    //alert('append banner to: #'+closest_region+'_links .region_container');
 
 
     //now open editor
@@ -765,7 +763,6 @@ $('.mediaselector-component-editor .image-figure, .add-image').click(function() 
 $('.media-component button.js-trigger-edit-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('id');
-    //alert('edit media component now:' +activeComponent);
 
     $('#banner-checkbox_everyone').prop('checked', false);
     $('#banner-checkbox_customergroupa').prop('checked', false);
@@ -898,20 +895,19 @@ $('.js-trigger-media-edit-rules').click(function() {
 
     //SET CHECKBOX VALUES
     if ($('#'+activeComponent).hasClass('Everyone')) {
-        alert('cg everyone');
+        //alert('cg everyone');
         $('#banner-checkbox_everyone').prop('checked', true);
     }
     if ($('#'+activeComponent).hasClass('CustomergroupA')) {
-      alert('cg a');
+      //alert('cg a');
       $('#banner-checkbox_customergroupa').prop('checked', true);
     }
     if ($('#'+activeComponent).hasClass('CustomergroupB')) {
-      alert('cg b');
+      //alert('cg b');
       $('#banner-checkbox_customergroupb').prop('checked', true);
     }
 
 
-    //alert('edit rules: '+activeComponent);
 
     //GET IMAGE
     //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
@@ -952,14 +948,12 @@ $('.js-trigger-media-edit-rules').click(function() {
 $('.js-trigger-delete-component').click(function() {
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('id');
-    //alert('called deletion:' +activeComponent);
 
     $('.delete-component').toggleClass('slds-hide');
 
     return false;
 });
 $('.delete-component .action-delete-component').click(function() {
-    //alert('wanna delete:' +activeComponent);
     $('#'+closest_region+'_links .slds-marker').addClass('slds-hide');
     $('#'+closest_region+'_links .rules-icon').addClass('slds-hide');
     $('.delete-component').toggleClass('slds-hide');
@@ -1107,7 +1101,6 @@ $('.add-product-dummy').click(function() {
     component_placeholder.appendTo('#'+closest_region+' .region_container').hide().fadeIn(600);
     navigator_placeholder.appendTo('#'+closest_region+'_links .region_container').hide().fadeIn(600);
 
-    //alert('append to: #'+closest_region+'_links .region_container');
 
     //now open editor
     activeComponent = undefined;
@@ -1193,7 +1186,7 @@ $('.placeholder-component-product .js-trigger-edit-component, .js-trigger-produc
     activeComponent = undefined;
     activeComponent = $(this).closest('li').attr('id');
 
-    alert('call product props 1');
+    //alert('call product props 1');
 
 
     $('#product-checkbox_everyone').prop('checked', false);
@@ -1370,7 +1363,6 @@ $('.add-row').click(function() {
     activeComponent = undefined;
     activeComponent = $(component_placeholder).attr('id');
 
-    //alert('row activeComponent is: '+activeComponent);
 
     //add 1 to component count
     regionlimit = $('#'+closest_region+'_links .region_limit').text();
@@ -1491,7 +1483,6 @@ function calculate_banner() {
     $('span').text('the checked values are: ' + arr.join(','));
 }
 calculate_banner();
-//alert(activeComponent);
 $('div.mediaselector-component-editor').delegate('input:checkbox', 'click', calculate);
 */
 
@@ -1502,7 +1493,7 @@ $('.cg').change(function() {
         //$('#'+activeComponent+'.customergroup').val($(this).val());
         //$('#'+activeComponent+' .customergroup_text').val() + $(this).val();
         $('#'+activeComponent).addClass($(this).val());
-        alert('called');
+        //alert('called');
     }else{
         $('#'+activeComponent).removeClass($(this).val());
     }
@@ -1510,10 +1501,10 @@ $('.cg').change(function() {
 
 $('#checkbox_everyone').change(function() {
   if(this.checked) {
-    alert('only everyone')
+    //alert('only everyone')
     $('.item').hide();
     if ($('.item').hasClass('Everyone')) {
-      alert('has everyone');
+      //alert('has everyone');
       $('.item').hide();
       $('.Everyone').show();
     }
@@ -1522,7 +1513,7 @@ $('#checkbox_everyone').change(function() {
 
 $('#checkbox_customergroupa').change(function() {
   if(this.checked) {
-    alert('only A')
+    //alert('only A')
     $('.item').hide();
     if ($('.item').hasClass('CustomergroupA')) {
       $('.item').hide();
@@ -1533,7 +1524,7 @@ $('#checkbox_customergroupa').change(function() {
 
 $('#checkbox_customergroupb').change(function() {
   if(this.checked) {
-    alert('only B')
+    //alert('only B')
     $('.item').hide();
     if ($('.item').hasClass('CustomergroupB')) {
       $('.item').hide();
@@ -1544,11 +1535,9 @@ $('#checkbox_customergroupb').change(function() {
 
 
 $("#btnSubmit").click(function(){
-
-$('input[name="language"]:checked').each(function() {
-selectedLanguage.push(this.value);
-});
-//alert("Number of selected Languages: "+selectedLanguage.length+"\n"+"And, they are: "+selectedLanguage);
+  $('input[name="language"]:checked').each(function() {
+    selectedLanguage.push(this.value);
+  });
 });
 
 $('#select-all-products').click(function () {
@@ -1620,7 +1609,10 @@ $('.slds-section__title-action').click(function() {
 
 $('#assign-success, .hrhr-1').click(function() {
   $('#cat-pick').toggleClass('slds-hide');
-  alert('picked cat is: '+checked_cat);
+  $('.product-component-editor').toggleClass('slds-hide');
+  $('product-link').text(checked_cat);
+  //alert('picked cat is: '+checked_cat);
+  //now set the image
 });
 
 $('.is-child.is-inhereted + .slds-checkbox_faux').click(function() {
