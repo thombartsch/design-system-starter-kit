@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="screenshot">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Commerce Cloud - Commerce Selector - Designed by Christian Mücke</title>
+  <meta name="author" content="Christian Mücke">
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<div class="slds-layout-frame"></div>
+
+    {% include "_modal-select-commerce-products.html" %}
+
+    <script src="/scripts/vendor/svg4everybody.min.js"></script>
+    <script>
+    svg4everybody();
+
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      // Nested Categories Commerce Selector
+      $('#trigger-nested').click(function() {
+        $('.slds-is-child').toggleClass('slds-hide');
+        $(this).toggleClass('is-opened');
+      });
+
+      $('.app-trigger').click(function() {
+        $(this).toggleClass('slds-is-open');
+      });
+
+      $('.hide-select-product-2').click(function() {
+        $('#select-product-23').toggleClass('slds-hide');
+        $('#select-product-23').toggleClass('slds-show');
+      });
+
+      $('.slds-checkbox_faux').click(function() {
+        $('#items-selected, #remove-all-trigger').removeClass('slds-hide');
+        $('.einstein-placeholder-item').addClass('slds-hide');
+        $('.einstein-item').removeClass('slds-hide');
+        $('.hrhr-1').removeAttr('disabled');
+      });
+
+      $('#remove-all-trigger').click(function() {
+        $('#remove-all-trigger, #items-selected').addClass('slds-hide');
+        $('.product-list .slds-checkbox_add-button input').prop('checked', false);
+        $('.hrhr-1').prop('disabled', true);
+      });
+
+      $('#combobox-unique-id1').change(function() {
+        $('#tab-default-1, #placeholder-img, #item-counter, #empty-state-text').toggleClass('slds-hide');
+      });
+
+      $('#combobox-unique-id2').change(function() {
+        $('.product-tile[aria-level="2"], .product-tile[aria-level="3"]').removeAttr('aria-level');
+        $('.trigger-nested, .cat-path').toggleClass('slds-hide');
+      });
+
+      $('.hrhr').click(function() {
+        var $checkbox = $('input.is-child');
+        $checkbox.toggleClass('is-inhereted');
+      });
+
+      $('.hide-assign-to').click(function() {
+        $('#assign-to').toggleClass('slds-hide');
+      });
+
+      $('.slds-section__title-action').click(function() {
+        $(this).parent().parent().toggleClass('slds-is-open');
+      });
+
+
+      $('#assign-success, .hrhr-1').click(function() {
+        $('#select-product-23').toggleClass('slds-hide');
+      });
+
+
+    });
+
+    </script>
+</body>
+
+</html>

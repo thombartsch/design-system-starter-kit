@@ -1,14 +1,29 @@
-<div id="cat-pick" class="slds-hide editor">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salesforce Commerce Cloud - Commerce Selector</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+  <div class="slds-layout-frame"></div>
+  <div id="select-product-23">
     <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-describedby="modal-content-id-1">
       <div class="slds-modal__container">
         <header class="slds-modal__header">
-          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse hrhr-1 show_component trigger-close-modal" title="Close">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse hrhr-1 show_component" title="Close">
             <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
             </svg>
             <span class="slds-assistive-text">Close</span>
           </button>
-          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Categories</h2>
+          <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Assignments</h2>
         </header>
         <div class="slds-modal__content">
           <div class="slds-p-vertical_x-small slds-p-horizontal_medium slds-shrink-none slds-theme_shade slds-border_bottom" id="select-search">
@@ -66,6 +81,20 @@
                 </div>
               </div>
             </div>
+            <div id="items-selected" class="slds-pill_container slds-pill_container_bare">
+              <div id="listbox-unique-id" role="listbox" aria-orientation="horizontal">
+                <ul class="slds-listbox slds-listbox_horizontal" role="presentation">
+                  <li role="presentation" class="slds-listbox__item">
+                    <span class="slds-pill"><span class="slds-pill__label">Site Catalog 1</span>
+                    <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                      </svg><span class="slds-assistive-text">Remove</span></button>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="slds-grid">
             <div class="slds-col">
@@ -73,17 +102,17 @@
                 <div id="tab-default-2" class="slds-tabs_default__content slds-p-top_none slds-show" role="tabpanel" aria-labelledby="tab-default-2__item">
                   <ul>
                     <li>
-                      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta">
+                      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
                         <div class="slds-media__body">
-                          <button class="slds-button is-opened slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested">
+                          <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested is-opened" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested">
                             <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                            </svg><span class="slds-assistive-text">Expand Acme Corporation</span></button><span>Womens</span>
+                            </svg><span class="slds-assistive-text">Expand Acme Corporation</span></button><span>Site Catalog 1</span>
                         </div>
                         <div class="slds-media__figure slds-media__figure_reverse">
                           <div class="slds-checkbox_add-button">
-                            <input type="checkbox" class="checker slds-assistive-text" id="womens" value="on">
-                            <label for="womens" class="slds-checkbox_faux hrhr">
+                            <input type="checkbox" class="slds-assistive-text" id="add-Lemonade - Island Tea, 591 Ml11" value="on" checked="checked">
+                            <label for="add-Lemonade - Island Tea, 591 Ml11" class="slds-checkbox_faux hrhr">
                               <span class="slds-assistive-text">Add Category</span>
                             </label>
                           </div>
@@ -91,18 +120,18 @@
                       </div>
                       <ul>
                         <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="2">
+                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child" aria-level="2">
                             <div class="slds-media__body">
                               <p class="slds-text-heading_xsmall2">
                                 <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested is-opened" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-2">
                                   <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
                                   </svg><span class="slds-assistive-text">Expand Shoes</span></button>
-                                  <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1<br></span>Clothing</p>
+                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1<br></span>Shoes</p>
                             </div>
                             <div class="slds-media__figure slds-media__figure_reverse">
                               <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="clothing" value="on">
+                                <input type="checkbox" class="slds-assistive-text is-child is-inhereted" id="add-Lemonade - Island Tea, 591 2Ml112" value="on">
                                 <label for="add-Lemonade - Island Tea, 591 2Ml112" class="slds-checkbox_faux">
                                   <span class="slds-assistive-text">Add Category</span>
                                 </label>
@@ -111,16 +140,16 @@
                           </div>
                         </li>
                         <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
+                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child" aria-level="3">
                             <div class="slds-media__body">
                               <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Outfits
+                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Running Shoes
                               </p>
                             </div>
                             <div class="slds-media__figure slds-media__figure_reverse">
                               <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="outfits" value="on">
-                                <label for="outfits" class="slds-checkbox_faux">
+                                <input type="checkbox" class="slds-assistive-text is-child is-inhereted" id="add-Lemonade - Island Tea, 591 21Ml1113" value="on" checked="checked">
+                                <label for="add-Lemonade - Island Tea, 591 21Ml1113" class="slds-checkbox_faux">
                                   <span class="slds-assistive-text">Add Category</span>
                                 </label>
                               </div>
@@ -128,104 +157,18 @@
                           </div>
                         </li>
                         <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
-                            <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Tops
-                              </p>
-                            </div>
-                            <div class="slds-media__figure slds-media__figure_reverse">
-                              <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="tops" value="on">
-                                <label for="tops" class="slds-checkbox_faux">
-                                  <span class="slds-assistive-text">Add Category</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
-                            <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Dresses
-                              </p>
-                            </div>
-                            <div class="slds-media__figure slds-media__figure_reverse">
-                              <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="dresses" value="on">
-                                <label for="dresses" class="slds-checkbox_faux">
-                                  <span class="slds-assistive-text">Add Category</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
-                            <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Bottoms
-                              </p>
-                            </div>
-                            <div class="slds-media__figure slds-media__figure_reverse">
-                              <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="bottoms" value="on">
-                                <label for="bottoms" class="slds-checkbox_faux">
-                                  <span class="slds-assistive-text">Add Category</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
-                            <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Jackets & Coats
-                              </p>
-                            </div>
-                            <div class="slds-media__figure slds-media__figure_reverse">
-                              <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="jackets_coats" value="on">
-                                <label for="jackets_coats" class="slds-checkbox_faux">
-                                  <span class="slds-assistive-text">Add Category</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
-                            <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2">
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Shoes<br></span>Feeling Red
-                              </p>
-                            </div>
-                            <div class="slds-media__figure slds-media__figure_reverse">
-                              <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="feeling_red" value="on">
-                                <label for="feeling_red" class="slds-checkbox_faux">
-                                  <span class="slds-assistive-text">Add Category</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-
-                        <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="2">
+                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child" aria-level="2">
                             <div class="slds-media__body">
                               <p class="slds-text-heading_xsmall2">
                                 <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested is-opened" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-2">
                                   <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
                                   </svg><span class="slds-assistive-text">Expand Acme Corporation</span></button>
-                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1<br></span>Jewelry</p>
+                                <span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1<br></span>Electronics</p>
                             </div>
                             <div class="slds-media__figure slds-media__figure_reverse">
                               <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="jewelry" value="on">
+                                <input type="checkbox" class="slds-assistive-text is-child is-inhereted" id="add-Lemonade - Island Tea, 591 Ml114" value="on">
                                 <label for="add-Lemonade - Island Tea, 591 Ml114" class="slds-checkbox_faux">
                                   <span class="slds-assistive-text">Add Category</span>
                                 </label>
@@ -234,14 +177,14 @@
                           </div>
                         </li>
                         <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
+                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child" aria-level="3">
                             <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2"><span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Electronics<br></span>Earrings</p>
+                              <p class="slds-text-heading_xsmall2"><span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Electronics<br></span>4K Televisions</p>
                             </div>
                             <div class="slds-media__figure slds-media__figure_reverse">
                               <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="earrings" value="on">
-                                <label for="earrings" class="slds-checkbox_faux">
+                                <input type="checkbox" class="slds-assistive-text is-child is-inhereted" id="add-Lemonade - Island Tea, 5921 21Ml1115" value="on">
+                                <label for="add-Lemonade - Island Tea, 5921 21Ml1115" class="slds-checkbox_faux">
                                   <span class="slds-assistive-text">Add Category</span>
                                 </label>
                               </div>
@@ -249,14 +192,14 @@
                           </div>
                         </li>
                         <li>
-                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
+                          <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile slds-is-child" aria-level="3">
                             <div class="slds-media__body">
-                              <p class="slds-text-heading_xsmall2"><span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Electronics<br></span>Bracelets</p>
+                              <p class="slds-text-heading_xsmall2"><span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Electronics<br></span>Televisions</p>
                             </div>
                             <div class="slds-media__figure slds-media__figure_reverse">
                               <div class="slds-checkbox_add-button">
-                                <input type="checkbox" class="checker slds-assistive-text is-child" id="bracelets" value="on">
-                                <label for="bracelets" class="slds-checkbox_faux">
+                                <input type="checkbox" class="slds-assistive-text is-child is-inhereted" id="add-Lemonade - Island Tea, 591 21Ml116" value="on">
+                                <label for="add-Lemonade - Island Tea, 591 21Ml116" class="slds-checkbox_faux">
                                   <span class="slds-assistive-text">Add Category</span>
                                 </label>
                               </div>
@@ -266,14 +209,18 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile_beta slds-is-child" aria-level="3">
+                      <div class="slds-media slds-media_center slds-p-vertical_xx-small slds-p-horizontal_medium slds-border_bottom product-tile">
                         <div class="slds-media__body">
-                          <p class="slds-text-heading_xsmall2"><span class="slds-text-body_small slds-color__text_gray-8 cat-path slds-hide">Site Catalog 1 &gt; Electronics<br></span>Necklaces</p>
+                          <p class="slds-text-heading_xsmall2">
+                            <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small slds-m-right_x-small2 trigger-nested" aria-hidden="true" tabindex="-1" title="Collapse Acme Corporation" id="trigger-nested-h">
+                              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                              </svg><span class="slds-assistive-text">Expand Acme Corporation</span></button>Site Catalog 2</p>
                         </div>
                         <div class="slds-media__figure slds-media__figure_reverse">
                           <div class="slds-checkbox_add-button">
-                            <input type="checkbox" class="checker slds-assistive-text is-child" id="necklaces" value="on">
-                            <label for="necklaces" class="slds-checkbox_faux">
+                            <input type="checkbox" class="slds-assistive-text" id="add-Lemonade - Island Tea, 591 Ml111" value="on">
+                            <label for="add-Lemonade - Island Tea, 591 Ml111" class="slds-checkbox_faux">
                               <span class="slds-assistive-text">Add Category</span>
                             </label>
                           </div>
@@ -281,18 +228,19 @@
                       </div>
                     </li>
                   </ul>
-                </li>
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <footer class="slds-modal__footer">
-          <button class="slds-button slds-button_neutral hrhr-1 trigger-close-modal">Cancel</button>
-          <button class="slds-button slds-button_brand hrhr-1" disabled="" id="assign-success">Select</button>
+          <button class="slds-button slds-button_neutral hrhr-1">Cancel</button>
+          <button class="slds-button slds-button_brand hrhr-1" id="assign-success">Select</button>
         </footer>
       </div>
     </section>
     <div class="slds-backdrop slds-backdrop_open "></div>
   </div>
+</body>
+
+</html>

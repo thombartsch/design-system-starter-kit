@@ -1,0 +1,68 @@
+<div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters slds-m-left_none">
+    <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y slds-grid slds-grid_vertical">
+      <div class="slds-filters">
+        <div class="slds-filters__header slds-grid slds-has-divider_bottom-space">
+          <h2 class="slds-align-middle slds-text-heading_small">Filter</h2>
+          <button class="filter-trigger slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small" title="Close Filter Panel">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#forward"></use>
+            </svg>
+            <span class="slds-assistive-text">Close Filter Panel</span>
+          </button>
+        </div>
+        <div class="slds-filters__body">
+          <ol class="slds-list_vertical slds-list_vertical-space">
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus" id="trigger-change">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Scope</p>
+                  <p>Product Listing</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove filter: Type Stop Word">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: Type Stop Words</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Locale</p>
+                  <p>English</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove greater than Locale English">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: Locale English</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-item slds-hint-parent slds-hide" id="new-filter">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center slds-is-new">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Type</p>
+                  <p>Synonym</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small remove-filter-button" title="Remove greater than Locale English">
+                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Remove filter: Locale English</span>
+                </button>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="slds-filters__footer slds-grid slds-shrink-none">
+          <button class="slds-button_reset slds-text-link" href="javascript:void(0);" id="show-new-filter">Add Filter</button>
+          <button class="slds-button_reset slds-text-link slds-col_bump-left" href="javascript:void(0);"  id="delete-filters">Remove All</button>
+        </div>
+      </div>
+    </div>
+  </div>
