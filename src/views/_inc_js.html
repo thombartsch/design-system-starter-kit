@@ -1223,9 +1223,12 @@ $('.add-row').click(function() {
     //component_placeholder.appendTo('#'+closest_region+'>ul').hide().fadeIn(600);
     //navigator_placeholder.appendTo('#'+closest_region+'_links ul').hide().fadeIn(600);
 
+    alert('#'+closest_region+'_links .region_container');
 
     component_placeholder.appendTo($('#'+closest_region+' > .region_container')).hide().fadeIn(600);
-    navigator_placeholder.appendTo($('#'+closest_region+'_links .region_container')).hide().fadeIn(600);
+    navigator_placeholder.appendTo($('#'+closest_region+'_links .region_container')).first().hide().fadeIn(600);
+
+    //$('#'+closest_region+'_links .region_container')).first().css('background','red');
 
     //alert('append row to: #'+closest_region+'_links .region_container');
 
@@ -1293,8 +1296,8 @@ $('.row-component-editor button.trigger-save-modal').click(function() {
         //addRegions();
         var countRechts = cloneCountA++;
 
-        $('#'+closest_region+'        #'+activeComponent+'      .layout-container').append($('#region_container').clone(true, true).attr('id','region_sub_'+countRechts).addClass('regionstuff-'+countRechts)).hide().fadeIn(600);
-        $('#'+closest_region+'_links  #'+activeComponent+'_links .layout-container').append($('<div class="slds-grid slds-grid_vertical slds-col region region_container" id="region_container_sub"><ul id="" class="slds-p-left_small list slds-has-dividers_bottom-space region_list region_container ui-sortable">AAA</ul></div>').clone(true, true).attr('id','region_sub_'+countRechts+'_links').addClass('regionstuff-'+countRechts)).hide().fadeIn(600);
+        $('#'+closest_region+'        #'+activeComponent+'      .layout-container').first().append($('#region_container').clone(true, true).attr('id','region_sub_'+countRechts).addClass('regionstuff-'+countRechts)).hide().fadeIn(600);
+        $('#'+closest_region+'_links  #'+activeComponent+'_links .layout-container').first().append($('<div class="slds-grid slds-grid_vertical slds-col region region_container" id="region_container_sub"><ul id="" class="slds-p-left_small list slds-has-dividers_bottom-space region_list region_container ui-sortable">AAA</ul></div>').clone(true, true).attr('id','region_sub_'+countRechts+'_links').addClass('regionstuff-'+countRechts)).hide().fadeIn(600);
 
       }
 
