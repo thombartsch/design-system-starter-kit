@@ -895,7 +895,6 @@ $('.js-trigger-media-edit-rules').click(function() {
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -906,15 +905,12 @@ $('.js-trigger-media-edit-rules').click(function() {
 
     //SET CHECKBOX VALUES
     if ($('#'+activeComponent).hasClass('Everyone')) {
-        //alert('cg everyone');
         $('#banner-checkbox_everyone').prop('checked', true);
     }
     if ($('#'+activeComponent).hasClass('CustomergroupA')) {
-      //alert('cg a');
       $('#banner-checkbox_customergroupa').prop('checked', true);
     }
     if ($('#'+activeComponent).hasClass('CustomergroupB')) {
-      //alert('cg b');
       $('#banner-checkbox_customergroupb').prop('checked', true);
     }
 
@@ -964,7 +960,6 @@ $('.js-trigger-delete-component').click(function() {
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -1239,7 +1234,6 @@ $('.placeholder-component-product .js-trigger-edit-component, .js-trigger-produc
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -1262,7 +1256,6 @@ $('.placeholder-component-product .js-trigger-edit-component, .js-trigger-produc
 
 
     //GET IMAGE
-    //imgUrl = undefined;
     imgUrl = $('#'+activeComponent).find('.image-holder').css('background-image');
 
     patt=/\"|\'|\)/g;
@@ -1297,7 +1290,6 @@ $('.js-trigger-product-edit-rules').click(function() {
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -1451,7 +1443,6 @@ $('.placeholder-component-row .js-trigger-edit-component, .js-trigger-row-edit-c
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -1568,7 +1559,6 @@ $('.js-trigger-row-edit-rules').click(function() {
     if(activeComponent.match('_links')) {
       arr = activeComponent.split('_');
       activeComponent = arr[0];
-      //alert(activeComponent);
       arr = undefined;
     }
 
@@ -1605,7 +1595,6 @@ $('.cg').change(function() {
         //$('#'+activeComponent+'.customergroup').val($(this).val());
         //$('#'+activeComponent+' .customergroup_text').val() + $(this).val();
         $('#'+activeComponent).addClass($(this).val());
-        //alert('called');
 
         $('#'+closest_region+'_links .' + activeComponent + ' .rules-icon').removeClass('slds-hide');
         $('#'+closest_region+'_links .slds-marker').removeClass('slds-hide');
@@ -1621,10 +1610,8 @@ $('.cg').change(function() {
 
 $('#checkbox_everyone').change(function() {
   if(this.checked) {
-    //alert('only everyone')
     $('.item').hide();
     if ($('.item').hasClass('Everyone')) {
-      //alert('has everyone');
       $('.item').hide();
       $('.Everyone').show();
     }
@@ -1633,7 +1620,6 @@ $('#checkbox_everyone').change(function() {
 
 $('#checkbox_customergroupa').change(function() {
   if(this.checked) {
-    //alert('only A')
     $('.item').hide();
     if ($('.item').hasClass('CustomergroupA')) {
       $('.item').hide();
@@ -1644,7 +1630,6 @@ $('#checkbox_customergroupa').change(function() {
 
 $('#checkbox_customergroupb').change(function() {
   if(this.checked) {
-    //alert('only B')
     $('.item').hide();
     if ($('.item').hasClass('CustomergroupB')) {
       $('.item').hide();
@@ -1752,12 +1737,10 @@ $('#picker-tabs .checker').on('change', function(){
      $(this).prop('disabled', false);
      //var checked_cat = $('label[for="'+ $this.attr('id') +'"]');
      checked_cat = $(this).closest('.slds-checkbox_add-button').find('.checker').attr('id');
-    //alert(checked_cat);
      $('#assign-success').prop('disabled', false);
    }else{
      $('#picker-tabs .checker').prop('disabled', false);
      checked_cat = '';
-    //alert(checked_cat);
      $('#assign-success').prop('disabled', true);
    }
 })
