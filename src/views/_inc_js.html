@@ -1410,7 +1410,7 @@ $('.add-row').click(function() {
     var component_placeholder = $('#dummy_container .my_row_dummy li').clone(true, true).attr('id','item'+countRechts).addClass('item'+countRechts);
     var navigator_placeholder = $('#dummy_container .my_row_navigator li').clone(true, true).attr('id','item'+countRechts+'_links').addClass('item'+countRechts);
 
-    component_placeholder.appendTo($('#'+closest_region+' .region_container')).hide().fadeIn(600);
+    component_placeholder.appendTo($('#'+closest_region+' > .region_container')).hide().fadeIn(600);
     navigator_placeholder.appendTo('#'+closest_region+'_links .region_container').hide().fadeIn(600);
 
 
