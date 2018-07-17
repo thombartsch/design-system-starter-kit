@@ -689,10 +689,8 @@ $('#input-pagename').keyup(function(e) {
 
 $('.button--add-component').click(function() {
   closest_region = $(this).closest('.region').attr('id');
-  alert(closest_region);
-
   $('.region_component_selector').toggleClass('slds-hide');
-
+  alert(closest_region);
   return false;
 });
 
@@ -740,7 +738,6 @@ $('.add-mediaselector-dummy').click(function() {
     component_placeholder.appendTo('#'+closest_region+' .region_container').hide().fadeIn(600);
     navigator_placeholder.appendTo('#'+closest_region+'_links .region_container').hide().fadeIn(600);
 
-    $('#'+closest_region+' .region_container').css('background','red');
 
     //now open editor
     activeComponent = undefined;
