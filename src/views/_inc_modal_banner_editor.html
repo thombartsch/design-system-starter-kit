@@ -38,6 +38,17 @@
                                     </div>
                                   </li>
 
+                                  <li class="slds-p-bottom_small slds-hide">
+                                    <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="text-input-id-1">Dropbox</label>
+                                      <div class="slds-form-element__control">
+                                        <!--input type="text" class="slds-input text-banner-sub" placeholder="" /-->
+                                        <button class="dropbox_chooser">Dropbox Chooser</button>
+                                      </div>
+                                    </div>
+                                  </li>
+
+
                                   <li class="slds-p-bottom_small">
                                     <div class="slds-form-element">
                                       <label class="slds-form-element__label" for="text-input-id-1">Banner Text Sub</label>
@@ -46,7 +57,6 @@
                                       </div>
                                     </div>
                                   </li>
-
 
 
 
@@ -70,6 +80,7 @@
                                                       </div>
                                                       <div class="slds-media__figure slds-p-left--large">
                                                           <div class="slds-text-align_center">
+                                                              {#
                                                               <button class="slds-button icon-add slds-button_icon 2slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
                                                                   <svg class="slds-button__icon" aria-hidden="true">
                                                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
@@ -89,6 +100,52 @@
                                                                   </svg>
                                                                   <span class="slds-assistive-text">Clear Image</span>
                                                               </button>
+                                                              #}
+
+                                                              <div class="slds-file__actions-menu">
+                                                                   <div class="slds-button-group" role="group">
+                                                                     <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" title="Download">
+                                                                       <svg class="slds-button__icon" aria-hidden="true">
+                                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                                                                       </svg>
+                                                                       <span class="slds-assistive-text">Select Image</span>
+                                                                     </button>
+                                                                     <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
+                                                                       <svg class="slds-button__icon" aria-hidden="true">
+                                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
+                                                                       </svg>
+                                                                       <span class="slds-assistive-text">Select Image</span>
+                                                                     </button>
+
+
+
+
+                                                                     <div class="slds-dropdown slds-dropdown_left slds-dropdown_small image_chooser slds-hide">
+                                                                         <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                                                           <li class="slds-dropdown__item" role="presentation">
+                                                                             <a href="javascript:void(0);" class="add-image" role="menuitem" tabindex="0">
+                                                                               <span class="slds-truncate" title="Menu Item One">
+                                                                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                                                                   <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                                                                 </svg>Select File from Server</span>
+                                                                             </a>
+                                                                           </li>
+                                                                           <li class="slds-dropdown__item" role="presentation">
+                                                                             <a href="javascript:void(0);" class="dropbox_chooser" role="menuitem" tabindex="-1">
+                                                                               <span class="slds-truncate" title="Menu Item Three">
+                                                                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                                                                   <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                                                                 </svg>Dropbox</span>
+                                                                             </a>
+                                                                           </li>
+                                                                         </ul>
+                                                                       </div>
+
+
+
+
+
+                                                                   </div>
                                                           </div>
                                                       </div>
                                                   </div>

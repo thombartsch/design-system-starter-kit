@@ -1762,9 +1762,35 @@ $('#assign-success, .hrhr-1').click(function() {
 });
 
 
+//DROPBOX Chooser
+$('.dropbox_chooser').click(function() {
+  $('.image_chooser').toggleClass('slds-hide');
+  options = {
+    success: function(files) {
+        //alert("Here's the file link: " + files[0].link)
+        //$('.image-figure-thumb').appendChild(li).appendChild(a).appendChild(img);
+        var image = files[0].link;
+
+        if (image.indexOf("?") > 0) {
+        	    var clean_image = image.substring(0, image.indexOf("?"));
+              image = clean_image+'?raw=1';
+              $('.mediaselector-component-editor .image-figure-thumb').attr('src', image);
+              //alert(image);
+              image = undefined;
+        	}
+        linkType: "preview";
+        multiselect: false;
+        extensions: ['png','jpg']
+    },
+  }
+  //alert('call dropbox');
+  Dropbox.choose(options);
+});
 
 
-
+  $('.open-menu-select').click(function() {
+    $('.image_chooser').toggleClass('slds-hide');
+  });
 
 //- end js
 });
