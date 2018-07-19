@@ -814,12 +814,16 @@ $('.picker .trigger-save-modal').click(function() {
     if(callerComponent == 'banner'){
       $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
       $('.mediaselector-component-editor .file-name').text(selected_image);
+      $('.mediaselector-component-editor .file-name').attr('title',selected_image);
+
       $('.picker').addClass('slds-hide');
       $('.circle').toggleClass('slds-hide');
       $('.mediaselector-component-editor').toggleClass('slds-hide');
     }else{
       $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
       $('.product-component-editor .file-name').text(selected_image);
+      $('.product-component-editor .file-name').attr('title',selected_image);
+
       $('.picker').addClass('slds-hide');
       $('.circle').toggleClass('slds-hide');
       $('.product-component-editor').toggleClass('slds-hide');
