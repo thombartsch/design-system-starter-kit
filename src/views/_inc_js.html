@@ -1778,6 +1778,9 @@ $('.dropbox_chooser').click(function() {
         	    var clean_image = selected_image.substring(0, selected_image.indexOf("?"));
               selected_image = clean_image+'?raw=1';
               $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
+              $('.mediaselector-component-editor .file-name').html(selected_image);
+              $('.mediaselector-component-editor .file-name').attr('title',selected_image);
+
               //alert(image);
               //selected_image = undefined;
         	}
