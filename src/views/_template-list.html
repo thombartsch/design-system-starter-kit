@@ -1,313 +1,51 @@
 Commerce Builder<!DOCTYPE html>
 <html lang="en" class="list-view">
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>.: BUILDER :.</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <!-- Prototype styles -->
-  <link rel="stylesheet" href="/styles/index.css" />
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: BUILDER :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!-- Prototype styles -->
+    <link rel="stylesheet" href="/styles/index.css"/>
 
+  </head>
 
-</head>
-
-<body>
-  <!--
-Base Global Header component
-https://www.lightningdesignsystem.com/components/global-header/
--->
-{#
-  <header class="slds-global-header_container">
-    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
-    <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
-    <div class="slds-global-header slds-grid slds-grid--align-spread">
-      <div class="slds-global-header__item">
-        <div class="slds-global-header__logo">
-          <img src="/assets/images/logo-noname.svg" alt="" />
+  <body>
+    <main class="app-wrapper">
+      <!-- BUILDER HEADER -->
+      {% include "_inc_builder-header.html" %}
+      <!-- /BUILDER HEADER -->
+      <div id="page_editor" class="slds-grid slds-col">
+        <div id="panel_left" class="2slds-col">
+          <!-- PANEL LEFT -->
+          {% include "_inc_builder-panel-left.html" %}
+          <!-- /PANEL LEFT -->
+        </div>
+        <div id="canvas" class="slds-col slds-text-align_top" style="background:#fff">
+          <!-- CANVAS -->
+          <!-- /CANVAS -->
+        </div>
+        <div id="panel_right">
+          <!-- PANEL RIGHT -->
+          {% include "_inc_builder-panel-right.html" %}
+          <!-- /PANEL RIGHT -->
         </div>
       </div>
-      <div class="slds-global-header__item slds-global-header__item--search">
-        <div class="slds-form-element slds-lookup">
-          <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
-          <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
-            <svg aria-hidden="true" class="slds-input__icon">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                            </svg>
-            <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search" />
-          </div>
-        </div>
-      </div>
-      <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
-        <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
-          <button class="slds-button" title="peredleten name" aria-haspopup="true">
-                            <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
-                                <img src="/assets/images/avatar2.jpg" alt="peredleten name"/>
-                            </span>
-                        </button>
-        </li>
-      </ul>
-    </div>
-    <!--
-Navigation Bar component
-https://www.lightningdesignsystem.com/components/global-navigation/
--->
-    <div class="slds-context-bar">
-      <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
-        <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
-          <div class="slds-context-bar__icon-action">
-            <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
-                                <span class="slds-icon-waffle">
-                                    <span class="slds-r1"></span>
-                                    <span class="slds-r2"></span>
-                                    <span class="slds-r3"></span>
-                                    <span class="slds-r4"></span>
-                                    <span class="slds-r5"></span>
-                                    <span class="slds-r6"></span>
-                                    <span class="slds-r7"></span>
-                                    <span class="slds-r8"></span>
-                                    <span class="slds-r9"></span>
-                                </span>
-                                <span class="slds-assistive-text">Open App Launcher</span>
-                            </button>
-          </div>
-          <span class="slds-context-bar__label-action slds-context-bar__app-name">
-                            <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span>
-          </span>
-        </div>
-      </div>
-      <nav class="slds-context-bar__secondary" role="navigation">
-        <ul class="slds-grid">
-          <li class="slds-context-bar__item">
-            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
-                                <span class="slds-truncate">Business Manager</span>
-                            </a>
-          </li>
-          <li class="slds-context-bar__item slds-is-active">
-            <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
-                                <span class="slds-truncate">Pages</span>
-                            </a>
-          </li>
-        </ul>
-      </nav>
+    </main>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/vendor/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody();
+    </script>
+    <!-- JAVASCRIPT -->
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    {% include '_inc_js.html' %}
+    <!-- /JAVASCRIPT -->
 
-      <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
-        <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
-                        <span class="slds-truncate">Site Genesis</span>
-                    </a>
-        <div class="slds-context-bar__icon-action">
-          <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
-                            <svg class="slds-button__icon" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
-                            </svg>
-                            <span class="slds-assistive-text">Open object switcher menu</span>
-                        </button>
-        </div>
-        <div class="slds-dropdown slds-dropdown--right">
-          <ul class="slds-dropdown__list" role="menu">
-            <li class="slds-dropdown__item" role="presentation">
-              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                                    <span class="slds-truncate">
-                                        <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
-                                        </svg>Site Genesis</span>
-                                </a>
-            </li>
-            <li class="slds-dropdown__item" role="presentation">
-              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
-                                    <span class="slds-truncate">
-                                        <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
-                                        </svg>Site Genesis Global</span>
-                                </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-#}
-
-
-  <main class="app-wrapper">
-
-
-
-    <!-- BUILDER HEADER -->
-    <div style="position: relative; height: 100px;">
-      <div class="slds-builder-header_container">
-        <header class="slds-builder-header">
-          <div class="slds-builder-header__item">
-            <div class="slds-builder-header__item-label slds-media slds-media_center">
-              <div class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder" />
-</svg>
-</span>
-              </div>
-              <div class="slds-media__body">Commerce Builder</div>
-            </div>
-          </div>
-          <nav class="slds-builder-header__item slds-builder-header__nav">
-            <ul class="slds-builder-header__nav-list">
-              <li class="slds-builder-header__nav-item">
-                <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
-<span class="slds-media__figure">
-<span class="slds-icon_container slds-icon-utility-settings slds-current-color">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings" />
-</svg>
-</span>
-</span>
-<span class="slds-media__body">
-<span class="slds-truncate" title="Link">Link</span>
-</span>
-</a>
-              </li>
-              <li class="slds-builder-header__nav-item">
-                <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu">
-<span class="slds-media__figure">
-<span class="slds-icon_container slds-icon-utility-page slds-current-color">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#page" />
-</svg>
-</span>
-</span>
-<span class="slds-media__body">
-<span class="slds-truncate" title="Dropdown">Dropdown</span>
-<span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
-</svg>
-</span>
-</span>
-</button>
-              </li>
-            </ul>
-          </nav>
-          <div class="slds-builder-header__item">
-            <h1 class="slds-builder-header__item-label">Page Type</h1>
-          </div>
-          <div class="slds-builder-header__item slds-builder-header__utilities">
-            <div class="slds-builder-header__utilities-item">
-              <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
-                <div class="slds-media__figure">
-                  <span class="slds-icon_container slds-icon-utility-back slds-current-color">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#back" />
-</svg>
-</span>
-                </div>
-                <div class="slds-media__body">Back</div>
-              </a>
-            </div>
-            <div class="slds-builder-header__utilities-item">
-              <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
-                <div class="slds-media__figure">
-                  <span class="slds-icon_container slds-icon-utility-help slds-current-color">
-<svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#help" />
-</svg>
-</span>
-                </div>
-                <div class="slds-media__body">Help</div>
-              </a>
-            </div>
-          </div>
-        </header>
-        <div class="slds-builder-toolbar" role="toolbar">
-          <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions">
-            <div class="slds-button-group">
-              <button class="slds-button slds-button_icon slds-button_icon-border" title="Undo" tabindex="0">
-<svg class="slds-button__icon" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#undo" />
-</svg>
-<span class="slds-assistive-text">Undo</span>
-</button>
-              <button class="slds-button slds-button_icon slds-button_icon-border" title="Redo" tabindex="-1">
-<svg class="slds-button__icon" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#redo" />
-</svg>
-<span class="slds-assistive-text">Redo</span>
-</button>
-            </div>
-          </div>
-          <div class="slds-builder-toolbar__item-group" aria-label="Edit actions">
-            <div class="slds-button-group">
-              <button class="slds-button slds-button_icon slds-button_icon-border" title="Cut" tabindex="-1">
-<svg class="slds-button__icon" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cut" />
-</svg>
-<span class="slds-assistive-text">Cut</span>
-</button>
-              <button class="slds-button slds-button_icon slds-button_icon-border" title="Copy" tabindex="-1">
-<svg class="slds-button__icon" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#copy" />
-</svg>
-<span class="slds-assistive-text">Copy</span>
-</button>
-              <button class="slds-button slds-button_icon slds-button_icon-border" title="Paste" tabindex="-1">
-<svg class="slds-button__icon" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#paste" />
-</svg>
-<span class="slds-assistive-text">Paste</span>
-</button>
-            </div>
-          </div>
-          <div class="slds-builder-toolbar__actions" aria-label="Document actions">
-            <button class="slds-button slds-button_neutral">
-<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right" />
-</svg> Run</button>
-            <button class="slds-button slds-button_neutral">Save As</button>
-            <button class="slds-button slds-button_brand">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- /BUILDER HEADER -->
-
-
-
-
-
-
-
-
-  </main>
-
-
-
-
-
-
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/vendor/svg4everybody.min.js"></script>
-  <script>
-    svg4everybody();
-  </script>
-  <!-- JAVASCRIPT -->
-  <script src='/scripts/jquery-3.2.1.min.js'></script>
-  <script src='/scripts/jquery-ui.min.js'></script>
-  {% include '_inc_js.html' %}
-  <!-- /JAVASCRIPT -->
-
-
-
-
-
-
-
-
-</body>
-
-
-
+  </body>
 
 </html>
