@@ -26,6 +26,8 @@ Commerce Builder<!DOCTYPE html>
         </div>
         <div id="canvas" class="slds-col slds-text-align_top" style="background:#fff">
           <!-- CANVAS -->
+          <ul id="canvas_list" class="list 2slds-drop-zone" style="height:100%; width:100%">
+          </ul>
           <!-- /CANVAS -->
         </div>
         <div id="panel_right">
@@ -40,11 +42,17 @@ Commerce Builder<!DOCTYPE html>
     <script>
       svg4everybody();
     </script>
+
+
     <!-- JAVASCRIPT -->
     <script src='/scripts/jquery-3.2.1.min.js'></script>
     <script src='/scripts/jquery-ui.min.js'></script>
     {% include '_inc_js.html' %}
     <!-- /JAVASCRIPT -->
+
+
+{% include "_inc_modal-delete-component-4.html" %}
+
 
   </body>
 
