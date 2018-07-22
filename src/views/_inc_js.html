@@ -17,6 +17,10 @@ $(document).ready(function() {
           var txt = $(ui.helper.children('a')).text();
 
           console.log('stop dragging: '+txt);
+          console.log('saving...');
+          savingAnimation();
+
+
           ui.helper.children('.add-component').remove();
           ui.helper.children('div.component').removeClass('slds-hide').hide().fadeIn('slow');
 
@@ -61,6 +65,8 @@ $(document).ready(function() {
                 $('#modal-id-4-delete').addClass('slds-hide');
                 activeComponentPlaceholder = undefined;
                 activeNavigationPlaceholder = undefined;
+                console.log('saving...');
+
                 return false;
             });
           });
@@ -83,7 +89,14 @@ $(document).ready(function() {
   });
 
 
-
+//SAVING ANIMATION
+function savingAnimation() {
+  $('#status_txt').delay(500).fadeOut(1000,function(){
+    $('#status_txt').text('Saving ...');
+  }).fadeIn(1000).delay(500).fadeOut(1000,function(){
+    $('#status_txt').text('Saved');
+  }).fadeIn(1000);
+}
 
 
 
