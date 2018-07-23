@@ -412,6 +412,11 @@ $('.js-trigger-media-edit-rules').click(function() {
 
 
 
+//MODAL HANDLERS
+$('.trigger-close-modal').click(function() {
+    $(this).closest('.modal').toggleClass('slds-hide');
+    return false;
+});
 
 
 
@@ -961,15 +966,6 @@ $('.delete-component .js-close-modal-id-0').click(function() {
 });
 
 
-//MODAL HANDLERS
-$('.trigger-close-modal').click(function() {
-    banner_header = undefined;
-    banner_sub = undefined;
-    var edit_the_row = 'no';
-
-    $(this).closest('.editor').toggleClass('slds-hide');
-    return false;
-});
 
 
 
