@@ -15,11 +15,16 @@ Commerce Builder<!DOCTYPE html>
 
   <body>
     <main class="app-wrapper">
+
+      {% include "_inc_modal-delete-component-4.html" %}
+      {% include "_inc_modal_media-picker.html" %}
+
+
       <!-- BUILDER HEADER -->
       {% include "_inc_builder-header.html" %}
       <!-- /BUILDER HEADER -->
       <div id="page_editor" class="slds-grid slds-col">
-        <div id="panel_left" class="2slds-col">
+        <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
           <!-- PANEL LEFT -->
           {% include "_inc_builder-panel-left.html" %}
           <!-- /PANEL LEFT -->
@@ -54,11 +59,6 @@ Commerce Builder<!DOCTYPE html>
     <script src='/scripts/jquery-ui.min.js'></script>
     {% include '_inc_js.html' %}
     <!-- /JAVASCRIPT -->
-
-
-{% include "_inc_modal-delete-component-4.html" %}
-{% include "_inc_modal_media-picker.html" %}
-
 
   </body>
 

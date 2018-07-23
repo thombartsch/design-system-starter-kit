@@ -4,8 +4,8 @@
         <span class="slds-text-title_caps">Layout</span>
     </li>
     <li class="slds-dropdown__item layout_rows draggable handle" role="presentation">
-      <div class="slds-grid add-row add-component">
-          <div class="slds-p-right_small slds-p-bottom_small">
+      <div class="slds-grid slds-grid_vertical-align-center add-row add-component">
+          <div class="slds-p-right_small">
             <svg class="slds-icon slds-icon_medium slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
             </svg>
@@ -47,9 +47,7 @@
                 </div>
               </div>
               <article class="slds-card slds-m-bottom_small">
-                <header>
-
-                </header>
+                <header></header>
                 <div class="slds-card__body slds-card__body_inner slds-text-align_center placeholder">
                   <h1 class="slds-heading_medium slds-p-top_small">Row</h1>
                   <p>
@@ -60,7 +58,6 @@
                       </span>
                   </p>
                   <ul class="sort3 list slds-drop-zone ui-droppable ui-sortable" style="height:2rem;width:100%;margin-top: 1rem;">
-
                   </ul>
                 </div>
                 <footer class="slds-card__footer"><button class="slds-button slds-button_neutral"></button></footer>
@@ -93,22 +90,14 @@
         <span class="slds-text-title_caps">Content</span>
     </li>
     <li class="slds-dropdown__item draggable handle " role="presentation">
-        {#
-        <a href="javascript:void(0);" class="add-mediaselector-dummy add-component" role="menuitem" tabindex="0">
-            <span class="slds-truncate" title="Table View">Banner</span>
-            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#description"></use>
-            </svg>
-        </a>
-        #}
-        <div class="slds-grid add-mediaselector-dummy add-component">
-            <div class="slds-p-right_small slds-p-bottom_small">
-              <svg class="slds-icon slds-icon_small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+        <div class="slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component">
+            <div class="slds-p-right_small">
+              <svg class="slds-icon slds-icon_medium slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#description"></use>
               </svg>
             </div>
             <div class="">
-              <span class="slds-truncate" title="Table View">Banner</span>
+              <span class="slds-truncate" title="Banner">Banner</span>
             </div>
         </div>
         <div class="component component_banner slds-hide" style="padding-top:2rem;">
@@ -174,18 +163,20 @@
         </div>
     </li>
     <li class="slds-dropdown__item draggable handle " role="presentation">
-      <div class="slds-grid add-product-dummy add-component">
-          <div class="slds-grid add-mediaselector-dummy add-component">
+      <div class="slds-grid slds-grid_vertical-align-center add-product-dummy add-component">
+          <div class="slds-p-right_small">
             <svg class="slds-icon slds-icon_medium slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#folder"></use>
             </svg>
           </div>
           <div class="">
-            <span class="slds-truncate" title="Table View">Category</span>
+            <span class="slds-truncate" title="Product">Category</span>
           </div>
       </div>
 
-        <a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0"></a>
+
+
+        <!--a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0"></a-->
         <div class="component component_product slds-hide" style="padding-top:2rem;">
           <div class="slds-drop-zone">
             <div class="slds-drop-zone__container 2slds-is-hovered" tabindex="-1">
@@ -209,15 +200,13 @@
                 </div>
               </div>
               <article class="slds-card slds-m-bottom_small">
-                <header>
-
-                </header>
+                <header></header>
                 <div class="slds-card__body slds-card__body_inner slds-text-align_center placeholder">
                   <h1 class="slds-heading_medium slds-p-top_small">Category</h1>
                   <p>
                       <span class="slds-icon_container null slds-icon__svg--default">
                         <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-                          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
+                          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#folder"></use>
                         </svg>
                       </span>
                   </p>

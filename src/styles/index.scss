@@ -418,25 +418,24 @@ background: red;
 #regionVierZwei_links li li,
 #regionVierDrei_links li li,
 #regionVierVier_links li li,
-#regionFuenf_links li li{
+#regionFuenf_links li li {
     opacity: 0.5;
 }
 
 //#navigator li:nth-child(1)
-#regionEins_links li li:nth-child(1) ,
-#regionZweiEins_links li li:nth-child(1) ,
-#regionZweiZwei_links li li:nth-child(1) ,
-#regionZweiDrei_links li li:nth-child(1) ,
-#regionDreiEins_links li li:nth-child(1) ,
-#regionDreiZwei_links li li:nth-child(1) ,
-#regionVierEins_links li li:nth-child(1) ,
-#regionVierZwei_links li li:nth-child(1) ,
-#regionVierDrei_links li li:nth-child(1) ,
-#regionVierVier_links li li:nth-child(1) ,
-#regionFuenf_links    li li:nth-child(1) {
+#regionEins_links li li:nth-child(1),
+#regionZweiEins_links li li:nth-child(1),
+#regionZweiZwei_links li li:nth-child(1),
+#regionZweiDrei_links li li:nth-child(1),
+#regionDreiEins_links li li:nth-child(1),
+#regionDreiZwei_links li li:nth-child(1),
+#regionVierEins_links li li:nth-child(1),
+#regionVierZwei_links li li:nth-child(1),
+#regionVierDrei_links li li:nth-child(1),
+#regionVierVier_links li li:nth-child(1),
+#regionFuenf_links li li:nth-child(1) {
     opacity: 1;
 }
-
 
 //SORTABLE UI
 
@@ -721,8 +720,8 @@ div.ring {
     width: 50px;
 }
 
-
 //BANNER TEXT
+
 /*
 .banner-header, .banner-sub{
   color: #fff;
@@ -733,185 +732,165 @@ div.ring {
 */
 
 .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
 }
 
 .banner {
-  > .boxed {
-    position: relative;
-    margin-bottom: $spacing-small;
-    background-image: url("http://placekitten.com/1200/900");
-    background-size: cover;
-    background-position: 50%;
-
-    &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(400 / 1024 * 100%);
+    >.boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/1200/900");
+        background-size: cover;
+        background-position: 50%;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(400 / 1024 * 100%);
+        }
     }
-  }
-
-  .title {
-    font-weight: bold;
-    text-transform: uppercase;
-
-    margin-top: 20%;
-    text-align: left;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-    letter-spacing: 1px;
-    float: left;
-
-    @include mq-medium-min {
-      font-size: $font-size-heading-x-large;
+    .title {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20%;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        letter-spacing: 1px;
+        float: left;
+        @include mq-medium-min {
+            font-size: $font-size-heading-x-large;
+        }
     }
-  }
-
-  .sub {
-    clear: both;
-    text-align: left;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-    float: left;
-  }
+    .sub {
+        clear: both;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        float: left;
+    }
 }
 
 .square {
-  text-align: center;
-
-  > .boxed {
-    position: relative;
-    margin-bottom: $spacing-small;
-    background-image: url("http://placekitten.com/900/900");
-    background-size: cover;
-    background-position: 50%;
-
-    &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(800 / 800 * 100%);
+    text-align: center;
+    >.boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/900/900");
+        background-size: cover;
+        background-position: 50%;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(800 / 800 * 100%);
+        }
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            content: "";
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 50%);
+            padding-top: calc(400 / 800 * 100%);
+            z-index: 10;
+        }
     }
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: block;
-      content: "";
-      background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
-      padding-top: calc(400 / 800 * 100%);
-      z-index: 10;
+    .title {
+        font-weight: bold;
+        position: relative;
+        margin-top: 65%;
+        margin-bottom: $spacing-small;
+        z-index: 20;
     }
-  }
-
-  .title {
-    font-weight: bold;
-    position: relative;
-    margin-top: 65%;
-    margin-bottom: $spacing-small;
-    z-index: 20;
-  }
-
-  .slds-button {
-    position: relative;
-    z-index: 20;
-  }
+    .slds-button {
+        position: relative;
+        z-index: 20;
+    }
 }
 
 .rect {
-  > .boxed {
-    position: relative;
-    margin-bottom: $spacing-small;
-    background-image: url("http://placekitten.com/900/400");
-    background-size: cover;
-    background-position: 50%;
-
-    &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(400 / 800 * 100%);
+    >.boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/900/400");
+        background-size: cover;
+        background-position: 50%;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(400 / 800 * 100%);
+        }
     }
-  }
-
-  .title {
-    font-weight: bold;
-    margin-top: 20%;
-    text-align: left;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-    float: left;
-
-    @include mq-medium-min {
-      font-size: $font-size-heading-large;
+    .title {
+        font-weight: bold;
+        margin-top: 20%;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        float: left;
+        @include mq-medium-min {
+            font-size: $font-size-heading-large;
+        }
     }
-  }
-
-  .sub {
-    clear: both;
-    text-align: left;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-    letter-spacing: 1px;
-    float: left;
-  }
+    .sub {
+        clear: both;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        letter-spacing: 1px;
+        float: left;
+    }
 }
 
 .slot {
-  text-align: center;
-
-  > .boxed {
-    position: relative;
-    margin-bottom: $spacing-small;
-    background-image: url("http://placekitten.com/300/600");
-    background-size: cover;
-    background-position: 50%;
-
-    &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(800 / 400 * 100%);
+    text-align: center;
+    >.boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/300/600");
+        background-size: cover;
+        background-position: 50%;
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(800 / 400 * 100%);
+        }
     }
-  }
-
-  .title {
-    font-weight: bold;
-    margin-top: 120%;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-
-    @include mq-medium-min {
-      font-size: $font-size-heading-large;
+    .title {
+        font-weight: bold;
+        margin-top: 120%;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        @include mq-medium-min {
+            font-size: $font-size-heading-large;
+        }
     }
-  }
-
-  .sub {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
-    display: inline-block;
-  }
+    .sub {
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+    }
 }
-
 
 .banner-header {
     font-weight: bold;
@@ -925,7 +904,6 @@ div.ring {
     letter-spacing: 1px;
     float: left;
 }
-
 
 .banner-sub {
     clear: both;
@@ -944,44 +922,45 @@ div.ring {
     color: #fff;
     padding: 10px;
 }
+
 .main-menu {
     background-color: #444;
 }
 
-.main-menu button{
-  color: #fff;
+.main-menu button {
+    color: #fff;
 }
 
 
 /* FOCAL POINT */
+
 .set-focal-point {
-  /*
+    /*
   position: absolute;
   top: 10px;
   left: 10px;
   border: 5px solid white;
   width: 400px;
   */
-  height: 200px;
-  transition: opacity 0.3s ease-in-out;
+    height: 200px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .focal-holder {
-  background: #eee no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  transition: background-position 0.3s ease-in-out;
+    background: #eee no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: background-position 0.3s ease-in-out;
 }
-
 
 //circle
 .circle {
     border-radius: 50%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     border: 2px solid #fff;
     z-index: 2000;
     position: absolute;
@@ -990,8 +969,9 @@ div.ring {
     left: 50%;
     top: 47%;
 }
-.circle-in{
-  /*background: red;*/
+
+.circle-in {
+    /*background: red;*/
 }
 
 //SOMETHING WRONG WITH LOGO
@@ -999,35 +979,33 @@ div.ring {
     width: 50px;
 }
 
-
-
 //FIXED LAYOUT Page
 #regionEins,
 #regionFuenf,
 #regionEins .image-holder,
 #regionFuenf .image-holder {
-  min-height: 500px;
+    min-height: 500px;
 }
 
 #regionZwei_Eins,
 #regionZwei_Zwei,
 #regionZwei_Drei,
-#regionZwei_Eins .image-holder ,
-#regionZwei_Zwei .image-holder ,
+#regionZwei_Eins .image-holder,
+#regionZwei_Zwei .image-holder,
 #regionZwei_Drei .image-holder {
-  min-height: 416px;
+    min-height: 416px;
 }
 
 #regionDrei_Eins,
 #regionDrei_Zwei,
 #regionDrei_Eins .image-holder,
-#regionDrei_Zwei .image-holder{
-  min-height: 316px;
+#regionDrei_Zwei .image-holder {
+    min-height: 316px;
 }
 
 #regionDrei_Eins .image-holder,
-#regionDrei_Zwei .image-holder{
-  min-height: 316px;
+#regionDrei_Zwei .image-holder {
+    min-height: 316px;
 }
 
 #regionVier_Eins,
@@ -1037,10 +1015,9 @@ div.ring {
 #regionVier_Eins .image-holder,
 #regionVier_Zwei .image-holder,
 #regionVier_Drei .image-holder,
-#regionVier_Vier .image-holder{
-  min-height: 616px;
+#regionVier_Vier .image-holder {
+    min-height: 616px;
 }
-
 
 .slds-image__crop img,
 .slds-file__crop img {
@@ -1069,90 +1046,76 @@ div.ring {
 
 */
 
-
-#sidebar-navigator .button--add-component{
-  display: none;
+#sidebar-navigator .button--add-component {
+    display: none;
 }
-
 
 .slds-tabs_default__content {
- min-height: 50vh;
+    min-height: 50vh;
 }
-
-
 
 .product-tile_beta {
-  &[aria-level="2"] {
-    // background-color: red;
-    padding-left: 2rem;
-  }
-
-  &[aria-level="3"] {
-    // background-color: red;
-    padding-left: 4.5rem;
-  }
-
-  &:hover {
-  background-color: #fafaf9;
-  }
+    &[aria-level="2"] {
+        // background-color: red;
+        padding-left: 2rem;
+    }
+    &[aria-level="3"] {
+        // background-color: red;
+        padding-left: 4.5rem;
+    }
+    &:hover {
+        background-color: #fafaf9;
+    }
 }
 
-
 .trigger-nested.is-opened {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .no-padding {
-  padding-left: 0!important;
+    padding-left: 0!important;
 }
 
 .slds-section__content {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 // Checkbox Inheretance
-input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-input:not(:checked).is-inhereted + .slds-checkbox_faux,
-input:not(:checked).is-inhereted + .slds-checkbox--faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
-input:not(:checked).is-inhereted ~ .slds-checkbox--faux,
-input:not(:checked).is-inhereted + .slds-checkbox_faux,
-input:not(:checked).is-inhereted + .slds-checkbox--faux {
-  background-color: $color-gray-6;
-
-  &:before,
-  &:after {
-    background-color: #fff;
-  }
-
-  &:before {
-    top: -0.125rem;
-    left: 0.4375rem;
-    width: 0.1875rem;
-    height: 1.0625rem;
-    transform: rotate(40deg);
-  }
-
-  &:after {
-    top: 0.3125rem;
-    left: -0.625rem;
-    width: 0.625rem;
-    height: 0.1875rem;
-    transform: rotate(36deg);
-  }
-
-  &:hover {
-    background-color: $color-gray-8;
-
+input:not(:checked).is-inhereted~.slds-checkbox_faux,
+input:not(:checked).is-inhereted~.slds-checkbox--faux,
+input:not(:checked).is-inhereted+.slds-checkbox_faux,
+input:not(:checked).is-inhereted+.slds-checkbox--faux,
+input:not(:checked).is-inhereted~.slds-checkbox_faux,
+input:not(:checked).is-inhereted~.slds-checkbox--faux,
+input:not(:checked).is-inhereted+.slds-checkbox_faux,
+input:not(:checked).is-inhereted+.slds-checkbox--faux {
+    background-color: $color-gray-6;
     &:before,
     &:after {
-      background-color: white;
+        background-color: #fff;
     }
-  }
+    &:before {
+        top: -0.125rem;
+        left: 0.4375rem;
+        width: 0.1875rem;
+        height: 1.0625rem;
+        transform: rotate(40deg);
+    }
+    &:after {
+        top: 0.3125rem;
+        left: -0.625rem;
+        width: 0.625rem;
+        height: 0.1875rem;
+        transform: rotate(36deg);
+    }
+    &:hover {
+        background-color: $color-gray-8;
+        &:before,
+        &:after {
+            background-color: white;
+        }
+    }
 }
-
-
 
 
 /**
@@ -1162,17 +1125,20 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
  * @restrict div
  * @variant
  */
+
 .slds-drop-zone {
-  position: relative;
-  /**
+    position: relative;
+    /**
   * @name drag over
   * @summary Modifier used to indicate that component may be dropped in container
   * @selector .slds-drop-zone_drag
   * @restrict .slds-drop-zone
   * @modifier
   * @group interaction
-  */ }
-  .slds-drop-zone:after {
+  */
+}
+
+.slds-drop-zone:after {
     content: '';
     position: absolute;
     top: 0;
@@ -1180,67 +1146,86 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
     bottom: 0;
     right: 0;
     border: 1px dotted #3e3e3c;
-    outline: 1px dotted white; }
-  .slds-drop-zone.slds-drop-zone_drag:after {
+    outline: 1px dotted white;
+}
+
+.slds-drop-zone.slds-drop-zone_drag:after {
     border: 1px solid #04844b;
-    outline: 0; }
+    outline: 0;
+}
+
 
 /**
   * @summary Top label of drop zone
   * @selector .slds-drop-zone__label
   * @restrict .slds-drop-zone div
   */
+
 .slds-drop-zone__label {
-  color: white;
-  background: #04844b;
-  border-radius: 0.25rem 0.25rem 0 0;
-  padding: 0.25rem 0.5rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  /**
+    color: white;
+    background: #04844b;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    /**
   * @summary Top of populated label of drop zone
   * @selector .slds-drop-zone__label_container
   * @restrict .slds-drop-zone__label
-  */ }
-  .slds-drop-zone__label.slds-drop-zone__label_container {
+  */
+}
+
+.slds-drop-zone__label.slds-drop-zone__label_container {
     opacity: 0;
-    background: #0070d2; }
+    background: #0070d2;
+}
+
 
 /**
   * @summary Button within drop zone label
   * @selector .slds-drop-zone__label_button
   * @restrict .slds-drop-zone__label button
   */
+
 .slds-drop-zone__label_button {
-  border-radius: 0; }
-  .slds-drop-zone__label_button:hover, .slds-drop-zone__label_button:focus {
+    border-radius: 0;
+}
+
+.slds-drop-zone__label_button:hover,
+.slds-drop-zone__label_button:focus {
     text-decoration: underline;
-    outline: none; }
+    outline: none;
+}
+
 
 /**
   * @summary Insertion point of drop zone
   * @selector .slds-drop-zone_drag__slot
   * @restrict .slds-drop-zone_drag div
   */
+
 .slds-drop-zone_drag__slot {
-  border: 1px solid white;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  background: #04844b;
-  width: 100%;
-  height: 0.25rem; }
+    border: 1px solid white;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    background: #04844b;
+    width: 100%;
+    height: 0.25rem;
+}
+
 
 /**
   * @summary Populated region within drop zone
   * @selector .slds-drop-zone__container
   * @restrict .slds-drop-zone div
   */
+
 .slds-drop-zone__container {
-  position: relative;
-  z-index: 8000;
-  /**
+    position: relative;
+    z-index: 8000;
+    /**
     * @name item-hovered
     * @summary Hover state for a component within a drop zone
     * @selector .slds-is-hovered
@@ -1248,47 +1233,71 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
     * @notes Class should be applied via Javascript
     * @modifier
     * @group interactions
-    */ }
-  .slds-drop-zone__container:after {
+    */
+}
+
+.slds-drop-zone__container:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0; }
-  .slds-drop-zone__container.slds-is-hovered .slds-drop-zone__label_container,
-  .slds-drop-zone__container.slds-is-hovered .slds-drop-zone__actions, .slds-drop-zone__container:hover .slds-drop-zone__label_container,
-  .slds-drop-zone__container:hover .slds-drop-zone__actions {
+    right: 0;
+}
+
+.slds-drop-zone__container.slds-is-hovered .slds-drop-zone__label_container,
+.slds-drop-zone__container.slds-is-hovered .slds-drop-zone__actions,
+.slds-drop-zone__container:hover .slds-drop-zone__label_container,
+.slds-drop-zone__container:hover .slds-drop-zone__actions {
     opacity: 1;
-    z-index: 8000; }
-  .slds-drop-zone__container.slds-is-hovered:after, .slds-drop-zone__container:hover:after {
-    border: 1px solid #0070d2; }
-  .slds-drop-zone__container:active:after {
-    border: 2px solid #005fb2; }
-  .slds-drop-zone__container:active .slds-drop-zone__label {
-    background-color: #005fb2; }
-  .slds-drop-zone__container:focus-within {
-    outline: none; }
-    .slds-drop-zone__container:focus-within .slds-drop-zone__label_container,
-    .slds-drop-zone__container:focus-within .slds-drop-zone__actions {
-      opacity: 1;
-      z-index: 8000; }
-    .slds-drop-zone__container:focus-within:after {
-      border: 2px solid #005fb2; }
-    .slds-drop-zone__container:focus-within .slds-drop-zone__label {
-      background-color: #005fb2; }
+    z-index: 8000;
+}
+
+.slds-drop-zone__container.slds-is-hovered:after,
+.slds-drop-zone__container:hover:after {
+    border: 1px solid #0070d2;
+}
+
+.slds-drop-zone__container:active:after {
+    border: 2px solid #005fb2;
+}
+
+.slds-drop-zone__container:active .slds-drop-zone__label {
+    background-color: #005fb2;
+}
+
+.slds-drop-zone__container:focus-within {
+    outline: none;
+}
+
+.slds-drop-zone__container:focus-within .slds-drop-zone__label_container,
+.slds-drop-zone__container:focus-within .slds-drop-zone__actions {
+    opacity: 1;
+    z-index: 8000;
+}
+
+.slds-drop-zone__container:focus-within:after {
+    border: 2px solid #005fb2;
+}
+
+.slds-drop-zone__container:focus-within .slds-drop-zone__label {
+    background-color: #005fb2;
+}
+
 
 /**
   * @summary Action buttons within drop zone
   * @selector .slds-drop-zone__actions
   * @restrict .slds-drop-zone div
   */
+
 .slds-drop-zone__actions {
-  opacity: 0;
-  background: #0070d2;
-  position: absolute;
-  right: 0;
-  top: 0; }
+    opacity: 0;
+    background: #0070d2;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 
 /*
@@ -1300,16 +1309,24 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
 }
 */
 
-.ui-sortable-helper{
-}
-
-
+.ui-sortable-helper {}
 
 
 /* SIDE PANEL EDITOR */
-#panel_editor{
-  z-index: 100;
-  position: absolute;
-  right: 0;
-  height: 100%;
+
+#panel_editor {
+    z-index: 6000;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.left_expanded {
+    width: 10rem;
+    overflow: hidden;
+}
+
+.left_collapsed {
+    width: 3.5rem;
+    overflow: hidden;
 }

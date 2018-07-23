@@ -516,7 +516,13 @@ $('.trigger-close-modal').click(function() {
 });
 
 
-
+//SIDE PANEL COLLAPSE EXPAND
+$('#panel_left .slds-panel__close').click(function() {
+  $('#panel_left').removeClass('left_expanded');
+  $('#panel_left').addClass('left_collapsed');
+  $('#panel_left .slds-dropdown__header').addClass('slds-hide');
+  return false;
+});
 
 
 
