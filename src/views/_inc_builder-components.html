@@ -4,12 +4,26 @@
         <span class="slds-text-title_caps">Layout</span>
     </li>
     <li class="slds-dropdown__item layout_rows draggable handle" role="presentation">
+      <div class="slds-grid add-row add-component">
+          <div class="slds-p-right_small slds-p-bottom_small">
+            <svg class="slds-icon slds-icon_medium slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
+            </svg>
+          </div>
+          <div class="">
+            <span class="slds-truncate" title="Table View">Row</span>
+          </div>
+      </div>
+
+
+      {#
         <a href="javascript:void(0);" class="add-row add-component" role="menuitem" tabindex="0">
             <span class="slds-truncate" title="Table View">Row</span>
             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
             </svg>
         </a>
+      #}
         <div class="component component_row slds-hide" style="padding-top:2rem;">
           <div class="slds-drop-zone">
             <div class="slds-drop-zone__container 2slds-is-hovered" tabindex="-1">
@@ -79,12 +93,24 @@
         <span class="slds-text-title_caps">Content</span>
     </li>
     <li class="slds-dropdown__item draggable handle " role="presentation">
+        {#
         <a href="javascript:void(0);" class="add-mediaselector-dummy add-component" role="menuitem" tabindex="0">
             <span class="slds-truncate" title="Table View">Banner</span>
             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#description"></use>
             </svg>
         </a>
+        #}
+        <div class="slds-grid add-mediaselector-dummy add-component">
+            <div class="slds-p-right_small slds-p-bottom_small">
+              <svg class="slds-icon slds-icon_small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#description"></use>
+              </svg>
+            </div>
+            <div class="">
+              <span class="slds-truncate" title="Table View">Banner</span>
+            </div>
+        </div>
         <div class="component component_banner slds-hide" style="padding-top:2rem;">
           <div class="slds-drop-zone">
             <div class="slds-drop-zone__container 2slds-is-hovered" tabindex="-1">
@@ -148,12 +174,18 @@
         </div>
     </li>
     <li class="slds-dropdown__item draggable handle " role="presentation">
-        <a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0">
-            <span class="slds-truncate" title="Table View">Category</span>
-            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+      <div class="slds-grid add-product-dummy add-component">
+          <div class="slds-grid add-mediaselector-dummy add-component">
+            <svg class="slds-icon slds-icon_medium slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
             </svg>
-        </a>
+          </div>
+          <div class="">
+            <span class="slds-truncate" title="Table View">Category</span>
+          </div>
+      </div>
+
+        <a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0"></a>
         <div class="component component_product slds-hide" style="padding-top:2rem;">
           <div class="slds-drop-zone">
             <div class="slds-drop-zone__container 2slds-is-hovered" tabindex="-1">
