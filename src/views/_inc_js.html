@@ -128,6 +128,7 @@ function savingAnimation() {
 
 //NAVIGATOR
 function showNavigation() {
+  /*
   $('#tab-navigator').removeClass('slds-hide');
   $('#tab_navigator').addClass('slds-show');
   $('#tab-properties').addClass('slds-hide');
@@ -137,27 +138,129 @@ function showNavigation() {
   $('#tab_prop').removeClass('slds-is-active');
   $('#tab_nav').addClass('slds-active');
   $('#tab_nav').addClass('slds-is-active');
+  */
 }
+//showNavigation();
+
 function showProperties(component_type) {
+  $('#panel_editor .component_properties').addClass('slds-hide');
+
   console.log('calling now component properties: '+component_type);
-  $('#editor_'+component_type).toggleClass('slds-hide');
+
+  $('#editor_'+component_type).removeClass('slds-hide');
+  $('#editor_'+component_type).addClass('slds-show');
   $('#panel_editor').removeClass('slds-hide');
-  $('#panel_right').addClass('slds-hide');
-
-
 }
 
-
-$('#tab-nav-navigator__item').click(function() {
-  showNavigation();
-});
-
-$('#tab-nav-properties__item').click(function() {
-  showProperties();
+//MEDIA SELECTOR
+$('#panel_right .slds-panel__close').click(function() {
+  $('#panel_right').addClass('slds-hide');
+  return false;
 });
 
 
 
+
+
+
+
+//GALLERY BROWSING
+$('.select_collectionA').click(function() {
+  alert();
+  console.log('open collection A');
+  $('.select_collectionA').addClass('slds-is-selected');
+  $('.collectionA').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+  $('.select_collectionG').removeClass('slds-is-selected');
+  $('.collectionG').addClass('slds-hide');
+    return false;
+});
+
+
+$('.select_collectionB').click(function() {
+  console.log('open collection B');
+  $('.select_collectionB').addClass('slds-is-selected');
+  $('.collectionB').removeClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+  $('.select_collectionG').removeClass('slds-is-selected');
+  $('.collectionG').addClass('slds-hide');
+    return false;
+});
+
+
+$('.select_collectionC').click(function() {
+  console.log('open collection C');
+  $('.select_collectionC').addClass('slds-is-selected');
+  $('.collectionC').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+
+  $('.select_collectionG').removeClass('slds-is-selected');
+  $('.collectionG').addClass('slds-hide');
+    return false;
+});
+
+$('.select_collectionD').click(function() {
+  $('.select_collectionD').addClass('slds-is-selected');
+  $('.collectionD').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionG').removeClass('slds-is-selected');
+  $('.collectionG').addClass('slds-hide');
+    return false;
+});
+
+
+$('.select_collectionG').click(function() {
+  $('.select_collectionG').addClass('slds-is-selected');
+  $('.collectionG').removeClass('slds-hide');
+
+  $('.select_collectionB').removeClass('slds-is-selected');
+  $('.collectionB').addClass('slds-hide');
+
+  $('.select_collectionA').removeClass('slds-is-selected');
+  $('.collectionA').addClass('slds-hide');
+
+  $('.select_collectionC').removeClass('slds-is-selected');
+  $('.collectionC').addClass('slds-hide');
+
+  $('.select_collectionD').removeClass('slds-is-selected');
+  $('.collectionD').addClass('slds-hide');
+    return false;
+});
 
 
 
@@ -200,9 +303,13 @@ $('.add-mediaselector-dummy').click(function() {
 //BANNER COMPONENT
 $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
     callerComponent = 'banner';
+    /*
     $('.media-picker').toggleClass('slds-hide');
     $('.mediaselector-component-editor').toggleClass('slds-hide');
     $('.product-component-editor').addClass('slds-hide');
+    */
+    $('.media-picker').toggleClass('slds-hide');
+    console.log('call image add');
 });
 
 $('.media-component button.js-trigger-edit-component').click(function() {
@@ -251,14 +358,15 @@ $('.image-thumb').click(function() {
 //IMAGE SAVE
 $('.picker .trigger-save-modal').click(function() {
     if(callerComponent == 'banner'){
-      $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
-      $('.mediaselector-component-editor .file-name').text(selected_image);
+      console.log('selected image: '+selected_image);
+      $('#editor_banner .image-figure-thumb').attr('src', selected_image);
+      $('#editor_banner .file-name').text(selected_image);
       $('.picker').addClass('slds-hide');
       $('.circle').toggleClass('slds-hide');
-      $('.mediaselector-component-editor').toggleClass('slds-hide');
+      //$('.mediaselector-component-editor').toggleClass('slds-hide');
     }else{
-      $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
-      $('.product-component-editor .file-name').text(selected_image);
+      $('#editor_banner .image-figure-thumb').attr('src', selected_image);
+      $('#editor_banner .file-name').text(selected_image);
       $('.picker').addClass('slds-hide');
       $('.circle').toggleClass('slds-hide');
       $('.product-component-editor').toggleClass('slds-hide');
@@ -305,6 +413,7 @@ $('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-
     if ($('#'+activeComponent).hasClass('CustomergroupB')) {
         $('#banner-checkbox_customergroupb').prop('checked', true);
     }
+
 
 
     //GET IMAGE
@@ -1284,8 +1393,8 @@ $('.picker .trigger-save-modal').click(function() {
       $('.circle').toggleClass('slds-hide');
       $('.mediaselector-component-editor').toggleClass('slds-hide');
     }else{
-      $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
-      $('.product-component-editor .file-name').text(selected_image);
+      $('#editor_banner .image-figure-thumb').attr('src', selected_image);
+      $('#editor_banner .file-name').text(selected_image);
       $('.picker').addClass('slds-hide');
       $('.circle').toggleClass('slds-hide');
       $('.product-component-editor').toggleClass('slds-hide');
@@ -1456,100 +1565,7 @@ $('.delete-component .action-delete-component').click(function() {
 
 
 
-//GALLERY BROWSING
 
-$('.select_collectionA').click(function() {
-  $('.select_collectionA').addClass('slds-is-selected');
-  $('.collectionA').removeClass('slds-hide');
-
-  $('.select_collectionB').removeClass('slds-is-selected');
-  $('.collectionB').addClass('slds-hide');
-
-  $('.select_collectionC').removeClass('slds-is-selected');
-  $('.collectionC').addClass('slds-hide');
-
-  $('.select_collectionD').removeClass('slds-is-selected');
-  $('.collectionD').addClass('slds-hide');
-
-  $('.select_collectionG').removeClass('slds-is-selected');
-  $('.collectionG').addClass('slds-hide');
-    return false;
-});
-
-
-$('.select_collectionB').click(function() {
-  $('.select_collectionB').addClass('slds-is-selected');
-  $('.collectionB').removeClass('slds-hide');
-
-  $('.select_collectionA').removeClass('slds-is-selected');
-  $('.collectionA').addClass('slds-hide');
-
-  $('.select_collectionC').removeClass('slds-is-selected');
-  $('.collectionC').addClass('slds-hide');
-
-  $('.select_collectionD').removeClass('slds-is-selected');
-  $('.collectionD').addClass('slds-hide');
-
-  $('.select_collectionG').removeClass('slds-is-selected');
-  $('.collectionG').addClass('slds-hide');
-    return false;
-});
-
-
-$('.select_collectionC').click(function() {
-  $('.select_collectionC').addClass('slds-is-selected');
-  $('.collectionC').removeClass('slds-hide');
-
-  $('.select_collectionB').removeClass('slds-is-selected');
-  $('.collectionB').addClass('slds-hide');
-
-  $('.select_collectionA').removeClass('slds-is-selected');
-  $('.collectionA').addClass('slds-hide');
-
-  $('.select_collectionD').removeClass('slds-is-selected');
-  $('.collectionD').addClass('slds-hide');
-
-  $('.select_collectionG').removeClass('slds-is-selected');
-  $('.collectionG').addClass('slds-hide');
-    return false;
-});
-
-$('.select_collectionD').click(function() {
-  $('.select_collectionD').addClass('slds-is-selected');
-  $('.collectionD').removeClass('slds-hide');
-
-  $('.select_collectionB').removeClass('slds-is-selected');
-  $('.collectionB').addClass('slds-hide');
-
-  $('.select_collectionA').removeClass('slds-is-selected');
-  $('.collectionA').addClass('slds-hide');
-
-  $('.select_collectionC').removeClass('slds-is-selected');
-  $('.collectionC').addClass('slds-hide');
-
-  $('.select_collectionG').removeClass('slds-is-selected');
-  $('.collectionG').addClass('slds-hide');
-    return false;
-});
-
-
-$('.select_collectionG').click(function() {
-  $('.select_collectionG').addClass('slds-is-selected');
-  $('.collectionG').removeClass('slds-hide');
-
-  $('.select_collectionB').removeClass('slds-is-selected');
-  $('.collectionB').addClass('slds-hide');
-
-  $('.select_collectionA').removeClass('slds-is-selected');
-  $('.collectionA').addClass('slds-hide');
-
-  $('.select_collectionC').removeClass('slds-is-selected');
-  $('.collectionC').addClass('slds-hide');
-
-  $('.select_collectionD').removeClass('slds-is-selected');
-  $('.collectionD').addClass('slds-hide');
-    return false;
-});
 
 
 
@@ -1602,8 +1618,8 @@ $(window).resize(function(){
 //PRODUCT SELECTOR
 $('.add-product-dummy').click(function() {
     selected_image = undefined;
-    $('.product-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
-    $('.product-component-editor .file-name').html('No Image assigned');
+    $('#editor_banner .image-figure-thumb').attr('src', '/assets/placeholder.png');
+    $('#editor_banner .file-name').html('No Image assigned');
 
     var countRechts = cloneCountA++;
 
@@ -1638,7 +1654,7 @@ $('.add-product-dummy').click(function() {
 
 
 //PRODUCT COMPONENT
-$('.product-component-editor .add-image').click(function() {
+$('#editor_banner .add-image').click(function() {
   callerComponent = 'product';
   $('.product-component-editor').addClass('slds-hide');
   $('.modal-editor-37').addClass('slds-hide');
@@ -1667,7 +1683,7 @@ $('.product-component button.js-trigger-edit-component').click(function() {
 
     return false;
 });
-$('.product-component-editor button.trigger-save-modal').click(function() {
+$('#editor_banner button.trigger-save-modal').click(function() {
     selected_text = $('.slds-rich-text-area__content').html();
     selected_header = $('.slds-input-header').val();
     $('#'+ activeComponent + ' .text-holder').html(selected_text);
@@ -1681,7 +1697,7 @@ $('.product-component-editor button.trigger-save-modal').click(function() {
 });
 
 //NOW CLOSE PICKER AND SET IMAGE
-$('.product-component-editor .trigger-save-modal').click(function() {
+$('#editor_banner .trigger-save-modal').click(function() {
     $('.product-component-editor').toggleClass('slds-hide');
     $('#'+ activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
     $('#'+ activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
@@ -1736,13 +1752,13 @@ $('.placeholder-component-product .js-trigger-edit-component, .js-trigger-produc
     //GET TEXTS
     banner_header_product = $('#'+ activeComponent).find('.title').text();
 
-    $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
+    $('#editor_banner .image-figure-thumb').attr('src', selected_image);
     $('.product-link').val(selected_product_name);
 
 
     //SET TAB
     $('.modal-content-id-product .tab_general').addClass('slds-active');
-    $('.product-component-editor .text-banner-header-product').val(banner_header_product);
+    $('#editor_banner .text-banner-header-product').val(banner_header_product);
     $('.product-component-editor').toggleClass('slds-hide');
 
     selected_product_name = undefined;
@@ -1780,13 +1796,13 @@ $('.js-trigger-product-edit-rules').click(function() {
     //GET TEXTS
     banner_header_product = $('#'+ activeComponent).find('.title').text();
 
-    $('.product-component-editor .image-figure-thumb').attr('src', selected_image);
+    $('#editor_banner .image-figure-thumb').attr('src', selected_image);
     $('.product-link').val(selected_product_name);
 
 
     //SET TAB
     $('.modal-content-id-product .tab_rules').addClass('slds-active');
-    $('.product-component-editor .text-banner-header-product').val(banner_header_product);
+    $('#editor_banner .text-banner-header-product').val(banner_header_product);
     $('.product-component-editor').toggleClass('slds-hide');
 
     selected_product_name = undefined;
@@ -2179,7 +2195,7 @@ $('#assign-success, .hrhr-1').click(function() {
   $('#assign-success').prop('disabled', true);
 
 
-  $('.product-component-editor .image-figure-thumb').attr('src', 'assets/'+checked_cat+'.jpg');
+  $('#editor_banner .image-figure-thumb').attr('src', 'assets/'+checked_cat+'.jpg');
   selected_image = 'assets/'+checked_cat+'.jpg';
   $('.product-link').val(checked_cat);
   $('#cat-pick').toggleClass('slds-hide');

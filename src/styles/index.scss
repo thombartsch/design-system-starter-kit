@@ -1308,7 +1308,7 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
 
 /* SIDE PANEL EDITOR */
 #panel_editor{
-  z-index: 10000000;
+  z-index: 100;
   position: absolute;
   right: 0;
   height: 100%;
