@@ -760,6 +760,7 @@ $('.add-mediaselector-dummy').click(function() {
 
 //BANNER COMPONENT
 $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
+    $('.image_chooser').toggleClass('slds-hide');
     callerComponent = 'banner';
     $('.media-picker').toggleClass('slds-hide');
     $('.mediaselector-component-editor').toggleClass('slds-hide');
