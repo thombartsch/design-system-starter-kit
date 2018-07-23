@@ -1,0 +1,16 @@
+<div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false">
+  <div class="slds-panel__header slds-p-top_none slds-p-left_none slds-p-right_none slds-p-bottom_none">
+    <div class="slds-tabs_default slds-p-around_small">Editor</div>
+    <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small" title="Close Filter Panel">
+      <svg class="slds-button__icon" aria-hidden="true">
+        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+      </svg>
+      <span class="slds-assistive-text">Close Filter Panel</span>
+    </button>
+  </div>
+  <div class="slds-panel__body">
+    {% include "_commerce-selector-inc_banner.html" %}
+    {% include "_commerce-selector-inc_category.html" %}
+    {% include "_commerce-selector-inc_row.html" %}
+  </div>
+</div>

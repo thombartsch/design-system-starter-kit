@@ -1302,3 +1302,14 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
 
 .ui-sortable-helper{
 }
+
+
+
+
+/* SIDE PANEL EDITOR */
+#panel_editor{
+  z-index: 10000000;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}

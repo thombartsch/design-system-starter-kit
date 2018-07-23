@@ -139,24 +139,12 @@ function showNavigation() {
   $('#tab_nav').addClass('slds-is-active');
 }
 function showProperties(component_type) {
-
   console.log('calling now component properties: '+component_type);
-
-
-  $('.component_properties .placeholder').addClass('slds-hide');
-  $('.component_properties').addClass('slds-hide');
   $('#editor_'+component_type).toggleClass('slds-hide');
+  $('#panel_editor').removeClass('slds-hide');
+  $('#panel_right').addClass('slds-hide');
 
-  $('#tab-navigator').addClass('slds-hide');
-  $('#tab-navigator').removeClass('slds-show');
 
-  $('#tab-properties').removeClass('slds-hide');
-  $('#tab-properties').addClass('slds-show');
-
-  $('#tab_nav').removeClass('slds-active');
-  $('#tab_nav').removeClass('slds-is-active');
-  $('#tab_prop').addClass('slds-active');
-  $('#tab_prop').addClass('slds-is-active');
 }
 
 
