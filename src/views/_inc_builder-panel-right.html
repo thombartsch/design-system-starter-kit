@@ -20,7 +20,14 @@
   </div>
   <div class="slds-panel__body">
 
-    <div id="tab-properties" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-nav-properties__item">Properties</div>
+    <div id="tab-properties" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-nav-properties__item">
+      {% include "_commerce-selector-inc_banner.html" %}
+      {% include "_commerce-selector-inc_category.html" %}
+      {% include "_commerce-selector-inc_row.html" %}
+    </div>
+
+
+
     <div id="tab-navigator" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-nav-navigator__item">
       <!--h1 class="slds-heading_medium">Navigator</h1-->
       <ul class="slds-has-dividers_bottom-space" id="navigator_list">

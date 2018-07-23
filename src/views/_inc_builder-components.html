@@ -3,7 +3,7 @@
     <li class="slds-dropdown__header slds-truncate layout_title" title="Menu Sub Heading" role="separator">
         <span class="slds-text-title_caps">Layout</span>
     </li>
-    <li class="slds-dropdown__item layout_rows draggable" role="presentation" 2id="drag_row">
+    <li class="slds-dropdown__item layout_rows draggable handle" role="presentation">
         <a href="javascript:void(0);" class="add-row add-component" role="menuitem" tabindex="0">
             <span class="slds-truncate" title="Table View">Row</span>
             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
@@ -18,13 +18,13 @@
                   <div class="slds-media__figure">
                     <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color">
                       <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
                       </svg>
                     </span>
                   </div>
                   <div class="slds-media__body">
                     <h2>
-                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component">
+                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-row">
                         <span class="slds-assistive-text">Edit: </span>
                         <span>Row</span>
                       </button>
@@ -36,8 +36,15 @@
                 <header>
 
                 </header>
-                <div class="slds-card__body slds-card__body_inner slds-text-align_center">
-                  <h1 class="slds-heading_medium slds-p-top_small">Row Placeholder</h1>
+                <div class="slds-card__body slds-card__body_inner slds-text-align_center placeholder">
+                  <h1 class="slds-heading_medium slds-p-top_small">Row</h1>
+                  <p>
+                      <span class="slds-icon_container null slds-icon__svg--default">
+                        <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
+                        </svg>
+                      </span>
+                  </p>
                   <ul class="sort3 list slds-drop-zone ui-droppable ui-sortable" style="height:2rem;width:100%;margin-top: 1rem;">
 
                   </ul>
@@ -48,7 +55,7 @@
 
               <div class="slds-drop-zone__actions">
                 <div class="slds-button-group" role="group">
-                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small  button-trigger-action--move-component" title="Move">
+                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small  button-trigger-action--move-component handle " title="Move">
                     <svg class="slds-button__icon" aria-hidden="true">
                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
                     </svg>
@@ -71,7 +78,7 @@
     <li class="slds-dropdown__header slds-truncate" title="Menu Sub Heading" role="separator">
         <span class="slds-text-title_caps">Content</span>
     </li>
-    <li class="slds-dropdown__item draggable" role="presentation" 2id="drag_banner">
+    <li class="slds-dropdown__item draggable handle " role="presentation">
         <a href="javascript:void(0);" class="add-mediaselector-dummy add-component" role="menuitem" tabindex="0">
             <span class="slds-truncate" title="Table View">Banner</span>
             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
@@ -86,13 +93,13 @@
                   <div class="slds-media__figure">
                     <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color">
                       <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
                       </svg>
                     </span>
                   </div>
                   <div class="slds-media__body">
                     <h2>
-                      <button class="slds-drop-zone__label_button slds-button_reset  button-trigger-action--edit-component">
+                      <button class="slds-drop-zone__label_button slds-button_reset  button-trigger-action--edit-component-banner">
                         <span class="slds-assistive-text">Edit: </span>
                         <span>Banner</span>
                       </button>
@@ -104,8 +111,16 @@
                 <header>
 
                 </header>
-                <div class="slds-card__body slds-card__body_inner slds-text-align_center">
-                  <h1 class="slds-heading_medium slds-p-top_small">Banner Placeholder</h1>
+                <div class="slds-card__body slds-card__body_inner slds-text-align_center placeholder">
+                  <h1 class="slds-heading_medium slds-p-top_small">Banner</h1>
+                  <p>
+                      <span class="slds-icon_container null slds-icon__svg--default">
+                        <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
+                        </svg>
+                      </span>
+                  </p>
+
                 </div>
                 <footer class="slds-card__footer"></footer>
               </article>
@@ -113,7 +128,7 @@
 
               <div class="slds-drop-zone__actions">
                 <div class="slds-button-group" role="group">
-                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small  button-trigger-action--move-component" title="Move">
+                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small  button-trigger-action--move-component handle " title="Move">
                     <svg class="slds-button__icon" aria-hidden="true">
                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
                     </svg>
@@ -132,8 +147,8 @@
           </div>
         </div>
     </li>
-    <li class="slds-dropdown__item draggable" role="presentation">
-        <a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0" 2id="drag_category">
+    <li class="slds-dropdown__item draggable handle " role="presentation">
+        <a href="javascript:void(0);" class="add-product-dummy add-component" role="menuitem" tabindex="0">
             <span class="slds-truncate" title="Table View">Category</span>
             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
@@ -147,15 +162,15 @@
                   <div class="slds-media__figure">
                     <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color">
                       <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
                       </svg>
                     </span>
                   </div>
                   <div class="slds-media__body">
                     <h2>
-                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component">
+                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-category">
                         <span class="slds-assistive-text">Edit: </span>
-                        <span>Product</span>
+                        <span>Category</span>
                       </button>
                     </h2>
                   </div>
@@ -165,8 +180,16 @@
                 <header>
 
                 </header>
-                <div class="slds-card__body slds-card__body_inner slds-text-align_center">
-                  <h1 class="slds-heading_medium slds-p-top_small">Category Placeholder</h1>
+                <div class="slds-card__body slds-card__body_inner slds-text-align_center placeholder">
+                  <h1 class="slds-heading_medium slds-p-top_small">Category</h1>
+                  <p>
+                      <span class="slds-icon_container null slds-icon__svg--default">
+                        <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
+                        </svg>
+                      </span>
+                  </p>
+
                 </div>
                 <footer class="slds-card__footer"></footer>
               </article>
@@ -174,7 +197,7 @@
 
               <div class="slds-drop-zone__actions">
                 <div class="slds-button-group" role="group">
-                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small  button-trigger-action--move-component" title="Move">
+                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--move-component handle " title="Move">
                     <svg class="slds-button__icon" aria-hidden="true">
                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
                     </svg>
