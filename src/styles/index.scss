@@ -1322,11 +1322,35 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 
 .left_expanded {
-    width: 10rem;
+    width: 15rem;
     overflow: hidden;
+    transition: width 1s ease-in-out;
 }
 
 .left_collapsed {
     width: 3.5rem;
     overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+#button_left_expand {
+    left: -2rem;
+    transition: width 1s ease-in-out;
+}
+
+//TRY ANIMATE
+.slds-hide {
+    opacity: 0;
+    -webkit-transition: height 1.5s ease-in-out;
+    -moz-transition: height 1.5s ease-in-out;
+    -o-transition: height 1.5s ease-in-out;
+    transition: height 1.5s ease-in-out;
+}
+
+.slds-show {
+    opacity: 1;
+    -webkit-transition: height 1.5s ease-in-out;
+    -moz-transition: height 1.5s ease-in-out;
+    -o-transition: height 1.5s ease-in-out;
+    transition: height 1.5s ease-in-out;
 }
