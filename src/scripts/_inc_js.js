@@ -1,42 +1,38 @@
 <script>
     $(document).ready(function() {
         //DRAG DROP MOVE AROUND
-        var count = 0;
+        count = 0;
 
         $('.draggable').draggable({
             connectToSortable: '.list',
             helper: 'clone',
+            //handle: '.handle',
             start: function(event, ui) {
                 //var txt = ui.helper.children('a').text());
-                var txt = $(ui.helper.children(('attr'),'title')).text();
+                var txt = $(ui.helper.children('a')).text();
 
-                console.log('start dragging text:' +txt);
-                //$('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
+                console.log('start dragging');
+                console.log(txt);
 
-                //ui.helper.children('div.add-component').hide();
-                //ui.helper.children('div.component').hide();
+
+
+
+
             },
             stop: function(event, ui) {
-                //var txt = $(ui.helper.children('a')).text();
-                var txt = $(ui.helper.children('.component_name')).text();
+                var txt = $(ui.helper.children('a')).text();
 
-                console.log('stop dragging text: ' + txt);
+                console.log('stop dragging: ' + txt);
                 console.log('saving...');
                 savingAnimation();
 
-                ui.helper.css('width', '100%');
 
-                ui.helper.children('.add-component').hide().fadeOut('slow');
-                ui.helper.children('div.component').toggleClass('slds-hide');
-
+                ui.helper.children('.add-component').remove();
+                ui.helper.children('div.component').removeClass('slds-hide').hide().fadeIn('slow');
 
                 //add id to placeholder
                 $(this).addClass('ui-draggable-dragged');
                 ui.helper.attr('id', 'component_placeholder_' + count);
-
-                //$('.draggable').css('z-index', '100000');
-
-
 
                 //add navigator item
                 var nav_item = '<li class="slds-item" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + txt + '">' + txt + '</span</li>';
@@ -122,10 +118,8 @@
 
         $('.list').sortable({
             revert: true,
-            placeholder: 'ui-sortable-helper',
-
             start: function(event, ui) {
-                //ui.helper.css('width', '700px');
+                ui.helper.css('width', 'auto');
                 ui.helper.css('height', 'auto');
                 $('ul,li').disableSelection();
             }

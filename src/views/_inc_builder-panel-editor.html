@@ -1,15 +1,17 @@
 <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false">
+  {#
   <div class="slds-panel__header slds-panel__header_custom">
       <button class="slds-button slds-button_neutral slds-col_bump-right trigger-close-modal">Cancel</button>
       <button class="slds-button slds-button_brand trigger-close-modal">Save</button>
   </div>
-  <div class="slds-panel__header slds-p-top_none slds-hide slds-p-left_none slds-p-right_none slds-p-bottom_none">
-    <div class="slds-tabs_default slds-p-around_small">Editor</div>
+  #}
+  <div class="slds-panel__header slds-p-top_none 2slds-hide slds-p-left_none slds-p-right_none slds-p-bottom_none">
+    <h2 class="slds-panel__header-title slds-text-heading_small slds-p-around_small slds-p-left_none slds-float_left">Editor</h2>
     <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small trigger-close-modal" title="Close Panel">
       <svg class="slds-button__icon" aria-hidden="true">
         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
       </svg>
-      <span class="slds-assistive-text">Close Filter Panel</span>
+      <span class="slds-assistive-text">Close Editor Panel</span>
     </button>
   </div>
   <div class="slds-panel__body">
@@ -17,4 +19,8 @@
     {% include "_commerce-selector-inc_category.html" %}
     {% include "_commerce-selector-inc_row.html" %}
   </div>
+    <div class="slds-panel__header slds-panel__header_custom action_footer">
+      <button class="slds-button slds-button_neutral slds-col_bump-right trigger-close-modal">Cancel</button>
+      <button class="slds-button slds-button_brand trigger-close-modal">Save</button>
+    </div>
 </div>

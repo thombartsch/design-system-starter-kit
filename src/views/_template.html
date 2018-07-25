@@ -23,28 +23,34 @@ Commerce Builder<!DOCTYPE html>
       <!-- BUILDER HEADER -->
       {% include "_inc_builder-header.html" %}
       <!-- /BUILDER HEADER -->
-      <div id="page_editor" class="slds-grid slds-col">
+      <div id="builder" class="slds-grid slds-col">
+
+        <div id="panel_editor" class="slds-hide modal">
+          <!-- PANEL EDITOR RIGHT -->
+          {% include "_inc_builder-panel-editor.html" %}
+          <!-- /PANEL EDITOR  RIGHT -->
+        </div>
+
         <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
           <!-- PANEL LEFT -->
           {% include "_inc_builder-panel-left.html" %}
           <!-- /PANEL LEFT -->
         </div>
+
         <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small" 2style="background:#fff">
           <!-- CANVAS -->
           <ul id="canvas_list" class="list 2slds-drop-zone" style="height:100%; width:100%">
+            {#<li><div class="slds-drop-zone_drag__slot"></div></li>#}
           </ul>
           <!-- /CANVAS -->
         </div>
+
         <div id="panel_right">
           <!-- PANEL RIGHT -->
           {% include "_inc_builder-panel-right.html" %}
           <!-- /PANEL RIGHT -->
         </div>
-        <div id="panel_editor" class="slds-hide modal">
-          <!-- PANEL RIGHT -->
-          {% include "_inc_builder-panel-editor.html" %}
-          <!-- /PANEL RIGHT -->
-        </div>
+
       </div>
     </main>
     <script src="/scripts/app.js"></script>

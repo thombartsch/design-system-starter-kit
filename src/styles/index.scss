@@ -1206,13 +1206,16 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
   * @restrict .slds-drop-zone_drag div
   */
 
-.slds-drop-zone_drag__slot {
+.slds-drop-zone_drag__slot,
+.ui-sortable-placeholder,
+.ui-state-highlight {
     border: 1px solid white;
     border-left-width: 2px;
     border-right-width: 2px;
     background: #04844b;
     width: 100%;
     height: 0.25rem;
+    overflow: hidden;
 }
 
 
@@ -1309,13 +1312,11 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 */
 
-.ui-sortable-helper {}
-
 
 /* SIDE PANEL EDITOR */
 
 #panel_editor {
-    z-index: 6000;
+    z-index: 8000;
     position: absolute;
     right: 0;
     height: 100%;
@@ -1341,16 +1342,68 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 //TRY ANIMATE
 .slds-hide {
     opacity: 0;
-    -webkit-transition: height 1.5s ease-in-out;
-    -moz-transition: height 1.5s ease-in-out;
-    -o-transition: height 1.5s ease-in-out;
-    transition: height 1.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .slds-show {
     opacity: 1;
-    -webkit-transition: height 1.5s ease-in-out;
-    -moz-transition: height 1.5s ease-in-out;
-    -o-transition: height 1.5s ease-in-out;
-    transition: height 1.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#canvas {
+    z-index: 1;
+    background: #eee;
+}
+
+.slds-image_card,
+.slds-image--card,
+.slds-file_card,
+.slds-file--card {
+    background: #eee;
+}
+
+//footer action buttons right
+.action_footer {
+    /*background: red;*/
+    position: absolute;
+    bottom: 0.8rem;
+    width: 100%;
+}
+
+.ui-sortable-helper,
+.draggable {
+    width: 100% !Important;
+}
+
+.ui-sortable-helper .add-component,
+.ui-sortable-helper .component {
+    /*
+    display: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    */
+}
+
+.ui-draggable-handle {
+    /*height: 20px;*/
+    /*background: green;*/
+}
+
+.slds-is-hovered {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
