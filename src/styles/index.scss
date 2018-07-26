@@ -1380,7 +1380,11 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 
 .ui-sortable-helper,
 .draggable {
-    width: 100% !Important;
+    width: 100%;
+}
+
+li.draggable:hover {
+    cursor: mouse;
 }
 
 .ui-sortable-helper .add-component,
