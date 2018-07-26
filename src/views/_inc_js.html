@@ -7,21 +7,11 @@
             connectToSortable: '.list',
             helper: 'clone',
             start: function(event, ui) {
-                //var txt = ui.helper.children('a').text());
-                var txt = $(ui.helper.children(('attr'),'title')).text();
-
-                console.log('start dragging text:' +txt);
                 //$('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
-
-                //ui.helper.children('div.add-component').hide();
-                //ui.helper.children('div.component').hide();
             },
             stop: function(event, ui) {
-                //var txt = $(ui.helper.children('a')).text();
-                var txt = $(ui.helper.children('.component_name')).text();
+                var navtxt = $(ui.helper).attr('title');
 
-                console.log('stop dragging text: ' + txt);
-                console.log('saving...');
                 savingAnimation();
 
                 ui.helper.css('width', '100%');
@@ -33,13 +23,12 @@
                 //add id to placeholder
                 $(this).addClass('ui-draggable-dragged');
                 ui.helper.attr('id', 'component_placeholder_' + count);
-
                 //$('.draggable').css('z-index', '100000');
 
 
 
                 //add navigator item
-                var nav_item = '<li class="slds-item" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + txt + '">' + txt + '</span</li>';
+                var nav_item = '<li class="slds-item" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '">' + navtxt + '</span</li>';
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
                 $('#navigator_list').append(nav_item);
 
@@ -50,7 +39,6 @@
                     var component_type = 'row';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    console.log('clicked edit');
                     showProperties(component_type);
                 });
 
@@ -59,7 +47,6 @@
                     var component_type = 'banner';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    console.log('clicked edit' + component_type);
                     showProperties(component_type);
                 });
 
@@ -67,15 +54,12 @@
                     var component_type = 'category';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    console.log('clicked edit');
                     showProperties(component_type);
                 });
 
 
 
                 $('.list button.button-trigger-action--delete-component').click(function() {
-                    console.log('clicked delete component placeholder and nav');
-
                     var activeComponentPlaceholder = undefined;
                     var activeNavigationPlaceholder = undefined;
 
@@ -83,26 +67,20 @@
                     if (activeComponentPlaceholder.match('component_placeholder_')) {
                         arr = activeComponentPlaceholder.split('component_');
                         var activeNavigationPlaceholder = 'navigator_' + arr[1];
-                        console.log(activeNavigationPlaceholder);
                         arr = undefined;
                     }
                     $('#modal-id-4-delete').removeClass('slds-hide');
-                    console.log('open delete modal');
                     //DELETE ANY COMPONENT
                     $('.js-trigger-delete-component, .action-delete-component').click(function() {
-                        console.log('close delete modal');
                         $('#' + activeComponentPlaceholder).remove();
                         $('#' + activeNavigationPlaceholder).remove();
 
                         $('#modal-id-4-delete').addClass('slds-hide');
                         activeComponentPlaceholder = undefined;
                         activeNavigationPlaceholder = undefined;
-                        console.log('saving...');
 
                         if ($('#canvas_list > li.draggable').length != 0) {
-                            console.log('still editors in canvas');
                         } else {
-                            console.log('no more editors in canvas');
                             $('.component_properties').addClass('slds-hide');
                             $('.component_properties .placeholder').toggleClass('slds-hide');
                         }
@@ -112,24 +90,76 @@
 
                 /*
                 $('.list button.button-trigger-action--move-component').click(function() {
-                  console.log('clicked move');
+                  //console.log('clicked move');
                 });
                 */
 
             }
         });
 
-
+        var currentIndex;
         $('.list').sortable({
             revert: true,
             placeholder: 'ui-sortable-helper',
 
             start: function(event, ui) {
+                currentIndex = ui.helper.index();
+
+                console.log('currentIndex:'+ currentIndex);
+
                 //ui.helper.css('width', '700px');
                 ui.helper.css('height', 'auto');
                 $('ul,li').disableSelection();
+            },
+            change: function( event, ui ) {
+                var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
+                var sortClass = '.'+ui.item.attr('class').split(' ')[0];
+                var parent = $('.list').not(ui.item.parent());
+
+                console.log('sortClass is' +sortClass);
+
+                if(currentIndex > ui.placeholder.index()){
+                    parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
+                }
+                else
+                    parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
+                    currentIndex = ui.placeholder.index();
             }
         });
+        $( '.list' ).disableSelection();
+
+
+/*
+
+
+//sort at the same time navigator and component
+var currentIndex;
+$(function() {
+    $( '.list' ).sortable({
+        start: function(event, ui) {
+            currentIndex = ui.helper.index();
+        },
+        change: function( event, ui ) {
+            var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
+            var sortClass = '.'+ui.item.attr('class').split(' ')[0];
+            var parent = $('.list').not(ui.item.parent());
+
+            if(currentIndex > ui.placeholder.index()){
+                parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
+            }
+            else
+                parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
+                currentIndex = ui.placeholder.index();
+        }
+    });
+    $( '.list' ).disableSelection();
+});
+
+
+
+*/
+
+
 
 
         //SAVING ANIMATION
@@ -161,9 +191,6 @@
 
         function showProperties(component_type) {
             $('#panel_editor .component_properties').addClass('slds-hide');
-
-            console.log('calling now component properties: ' + component_type);
-
             $('#editor_' + component_type).removeClass('slds-hide');
             $('#editor_' + component_type).addClass('slds-show');
             $('#panel_editor').removeClass('slds-hide');
@@ -184,7 +211,6 @@
         //GALLERY BROWSING
         $('.select_collectionA').click(function() {
             alert();
-            console.log('open collection A');
             $('.select_collectionA').addClass('slds-is-selected');
             $('.collectionA').removeClass('slds-hide');
 
@@ -204,7 +230,6 @@
 
 
         $('.select_collectionB').click(function() {
-            console.log('open collection B');
             $('.select_collectionB').addClass('slds-is-selected');
             $('.collectionB').removeClass('slds-hide');
 
@@ -224,7 +249,6 @@
 
 
         $('.select_collectionC').click(function() {
-            console.log('open collection C');
             $('.select_collectionC').addClass('slds-is-selected');
             $('.collectionC').removeClass('slds-hide');
 
@@ -326,7 +350,6 @@
             $('.product-component-editor').addClass('slds-hide');
             */
             $('.media-picker').toggleClass('slds-hide');
-            console.log('call image add');
         });
 
         $('.media-component button.js-trigger-edit-component').click(function() {
@@ -375,7 +398,6 @@
         //IMAGE SAVE
         $('.picker .trigger-save-modal').click(function() {
             if (callerComponent == 'banner') {
-                console.log('selected image: ' + selected_image);
                 $('#editor_banner .image-figure-thumb').attr('src', selected_image);
                 $('#editor_banner .file-name').text(selected_image);
                 $('.picker').addClass('slds-hide');
@@ -552,11 +574,20 @@
 
 
 
+//POPOVER PREVIEW SETTINGS
+$('#trigger-preview-options').click(function() {
+    $('#popover-preview-settings').toggleClass('slds-hide');
+    return false;
+});
+$('#popover-preview-settings button').click(function() {
+    $('#popover-preview-settings').toggleClass('slds-hide');
+    return false;
+});
 
-
-
-
-
+$('#button-navigator').click(function() {
+    $('#panel_right').toggleClass('slds-hide');
+    return false;
+});
 
 
         //- end js

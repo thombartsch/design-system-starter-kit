@@ -1399,10 +1399,12 @@ li.draggable:hover {
     */
 }
 
-.ui-draggable-handle {
+li.ui-draggable-handle:hover {
     /*height: 20px;*/
     /*background: green;*/
+    cursor: grab;
 }
+
 
 .slds-is-hovered {
     -webkit-transition: all 0.2s ease-in-out;
