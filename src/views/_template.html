@@ -1,73 +1,126 @@
-Commerce Builder<!DOCTYPE html>
-<html lang="en" class="list-view">
+<!doctype html>
+<html class="dw-theme" lang="en">
 
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>.: BUILDER :.</title>
-    <meta name="robots" content="noindex, nofollow"/>
-    <link rel="icon" type="image/png" href="/favicon.png"/>
-    <!-- Prototype styles -->
-    <link rel="stylesheet" href="/styles/index.css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow">
+    <title>Salesforce Commerce Cloud UI</title>
+    {% include "_inc_style-noconflict.html" %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
 
-  </head>
+<body>
 
-  <body>
-    <main class="app-wrapper">
-
-      {% include "_inc_builder-popover-previewsettings.html" %}
-
-      {% include "_inc_modal-delete-component-4.html" %}
-      {% include "_inc_modal_media-picker.html" %}
+    <div class="dw-layout-frame">
+        <div class="dw-layout dw-layout-fixed-sidebar">
+            <div class="dw-container" style="padding:0 50px;">
 
 
-      <!-- BUILDER HEADER -->
-      {% include "_inc_builder-header.html" %}
-      <!-- /BUILDER HEADER -->
-      <div id="builder" class="slds-grid slds-col">
+                <div>
+                    <h3 class="dw-text-heading-medium">Centralized User Authenticitation</h3>
+                </div>
+                <div class="dw-stacked-inputs">
+                    <label class="dw-radio">
+                <input type="radio">No centralized user authenticitation
+                <p class="dw-text-small dw-text-muted">All Business Manager users are required to maintain one account per instance. Each account needs to be managed separately.</p>
+            </label>
+                    <label class="dw-radio">
+                <input type="radio">Centralized user authenticitation supported
+                <p class="dw-text-small dw-text-muted">Migration to centralized user authenticitation in Account Manager is possible for every user but requires the Administrator ...</p>
+            </label>
 
-        <div id="panel_editor" class="slds-hide modal">
-          <!-- PANEL EDITOR RIGHT -->
-          {% include "_inc_builder-panel-editor.html" %}
-          <!-- /PANEL EDITOR  RIGHT -->
+                    <label class="dw-radio">
+                <input type="radio">Centralized user authenticitation encouraged
+                <p class="dw-text-small dw-text-muted">Upon login, all Business Manager users get prompted to migrate to centralized authenticitation via Account Manager.</p>
+            </label>
+                    <label class="dw-radio">
+                <input type="radio">Mandatory migration to centralized user authenticitation
+                <p class="dw-text-small dw-text-muted">Upon login, all Business Manager who have not yet moved to Account Manager authenticitation are prompted to ...</p>
+            </label>
+                    <label class="dw-radio">
+                <input type="radio">Centralized user authenticitation only
+                <p class="dw-text-small dw-text-muted">Login for Business Manager users that have not yet migrated to Account Manager is disabled and no migration path ...</p>
+            </label>
+                </div>
+                <div>
+                    <hr class="dw-ruler">
+                </div>
+
+                <div>
+                    <h3 class="dw-text-heading-medium">User Statistics on Centralized Authenticitation</h3>
+                </div>
+                <div class="dw-stacked-inputs">
+                    <p>
+                        <p class="dw-text-small">
+                            Number of Users with Centralized Authenticitation
+                            <span class="dw-badge dw-badge-primary">0</span>
+                        </p>
+                        <p class="dw-text-small">
+                            Number of Users Not Yet Using Centralized Authenticitation
+                            <span class="dw-badge dw-badge-primary">5</span>
+                        </p>
+                    </p>
+                </div>
+                <div>
+                    <hr class="dw-ruler">
+                </div>
+
+
+                <div>
+                    <h3 class="dw-text-heading-medium">Default Role Mapping for Business Manager User Role in Account Manager (optional)</h3>
+                </div>
+                <div class="dw-stacked-inputs">
+                    <p>
+                        <p class="dw-text-small">
+                            Select Business Manager roles that any new centrally authenticitated Business Manager
+                        </p>
+                        <h4 class="dw-text-heading-small">Default Role Mapping for Business Manager User Role in Account Manager (optional)</h4>
+                        <div class="dw-stacked-inputs">
+                            <label class="dw-checkbox"><input type="checkbox">TestAgentOnBehalf</label>
+                            <label class="dw-checkbox"><input type="checkbox">TestAutomationDefaultManager</label>
+                            <label class="dw-checkbox"><input type="checkbox">TestOrgManager</label>
+                            <label class="dw-checkbox"><input type="checkbox"> TestSlottingManager</label>
+                        </div>
+                        <p class="dw-text-medium">
+                        </p>
+                    </p>
+                </div>
+                <div>
+                    <hr class="dw-ruler">
+                </div>
+
+
+                <div>
+                    <h3 class="dw-text-heading-medium">System Notification</h3>
+                </div>
+
+                <div class="dw-stacked-inputs">
+                    <p>
+                        <div class="dw-stacked-inputs">
+                            <label class="dw-checkbox">
+                                <input type="checkbox">Enable System Notification Message
+                            </label>
+                            <label class="dw-checkbox" style="margin-left:20px" disabled>
+                                <input type="checkbox">Enforce Aknowledgement of the System Notification Message
+                            </label>
+                            <label for="textarea-1" disabled style="margin-left:20px">Notification Message</label>
+                            <textarea id="textarea-1" style="margin-left:20px" class="dw-input" disabled placeholder="Placeholder"></textarea>
+                        </div>
+                    </p>
+                </div>
+                <div>
+                    <hr class="dw-ruler">
+                </div>
+
+
+
+            </div>
         </div>
-
-        <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
-          <!-- PANEL LEFT -->
-          {% include "_inc_builder-panel-left.html" %}
-          <!-- /PANEL LEFT -->
-        </div>
-
-        <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small" 2style="background:#fff">
-          <!-- CANVAS -->
-          <ul id="canvas_list" class="list 2slds-drop-zone" style="height:100%; width:100%">
-            {#<li><div class="slds-drop-zone_drag__slot"></div></li>#}
-          </ul>
-          <!-- /CANVAS -->
-        </div>
-
-        <div id="panel_right">
-          <!-- PANEL RIGHT -->
-          {% include "_inc_builder-panel-right.html" %}
-          <!-- /PANEL RIGHT -->
-        </div>
-
-      </div>
-    </main>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/vendor/svg4everybody.min.js"></script>
-    <script>
-      svg4everybody();
-    </script>
+    </div>
 
 
-    <!-- JAVASCRIPT -->
-    <script src='/scripts/jquery-3.2.1.min.js'></script>
-    <script src='/scripts/jquery-ui.min.js'></script>
-    {% include '_inc_js.html' %}
-    <!-- /JAVASCRIPT -->
-
-  </body>
+</body>
 
 </html>
