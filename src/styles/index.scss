@@ -272,10 +272,16 @@ html.list-view {
     /*background: orange !important;*/
 }
 
-.slds-hide,
-.slds-show {
-    -webkit-transition-duration: 0.4s;
+.slds-hide{
+    opacity: 0;
+    -webkit-transition: all 3s linear 0s;
+    transition: all 3s linear 0s;
 }
+
+.slds-show{
+    opacity: 1;
+}
+
 
 .slds-grow {
     -webkit-box-flex: 1;
@@ -1359,7 +1365,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 
 #canvas {
-    z-index: 1;
+    /*z-index: 1;*/
     background: #eee;
 }
 
@@ -1383,9 +1389,11 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     width: 100%;
 }
 
-li.draggable:hover {
-    cursor: mouse;
+
+.ui-sortable-helper{
+    /*background: red;*/
 }
+
 
 .ui-sortable-helper .add-component,
 .ui-sortable-helper .component {

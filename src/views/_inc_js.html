@@ -7,17 +7,16 @@
             connectToSortable: '.list',
             helper: 'clone',
             start: function(event, ui) {
-                //$('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
+                $('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
             },
             stop: function(event, ui) {
                 var navtxt = $(ui.helper).attr('title');
 
                 savingAnimation();
-
                 ui.helper.css('width', '100%');
-
-                ui.helper.children('.add-component').hide().fadeOut('slow');
-                ui.helper.children('div.component').toggleClass('slds-hide');
+                //.ui.helper.children('.add-component').hide().fadeOut('slow');
+                ui.helper.children('.add-component').fadeOut(600);
+                ui.helper.children('div.component').fadeToggle().toggleClass('slds-hide slds-show');
 
 
                 //add id to placeholder
@@ -30,7 +29,12 @@
                 //add navigator item
                 var nav_item = '<li class="slds-item" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '">' + navtxt + '</span</li>';
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
+                $(nav_item).addClass('listItem'+ count);
+                $(nav_item).attr('indexer','listItem'+ count);
+                ui.helper.addClass('listItem'+ count);
+                ui.helper.attr('indexer','listItem'+ count);
                 $('#navigator_list').append(nav_item);
+
 
 
                 count++;
@@ -97,6 +101,16 @@
             }
         });
 
+        /*
+        $("#sortable").sortable({
+            stop: function(event, ui) {
+                alert("New position: " + ui.item.index());
+            }
+        });
+        $("#sortable").disableSelection();
+        */
+
+
         var currentIndex;
         $('.list').sortable({
             revert: true,
@@ -106,6 +120,7 @@
                 currentIndex = ui.helper.index();
 
                 console.log('currentIndex:'+ currentIndex);
+                console.log('currentIndex add on:' + ui.item.index());
 
                 //ui.helper.css('width', '700px');
                 ui.helper.css('height', 'auto');
@@ -302,10 +317,6 @@ $(function() {
             $('.collectionD').addClass('slds-hide');
             return false;
         });
-
-
-
-
 
 
 
@@ -587,6 +598,16 @@ $('#popover-preview-settings button').click(function() {
 $('#button-navigator').click(function() {
     $('#panel_right').toggleClass('slds-hide');
     return false;
+});
+
+
+//HOVER LIST ITEM
+$('.draggable').on('mouseenter', '#canvas_list', function() {
+    console.log('in');
+});
+
+$('.draggable').on('mouseleave', '#canvas_list', function() {
+    console.log('out');
 });
 
 
