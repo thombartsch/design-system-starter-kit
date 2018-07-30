@@ -272,16 +272,15 @@ html.list-view {
     /*background: orange !important;*/
 }
 
-.slds-hide{
+.slds-hide {
     opacity: 0;
     -webkit-transition: all 3s linear 0s;
     transition: all 3s linear 0s;
 }
 
-.slds-show{
+.slds-show {
     opacity: 1;
 }
-
 
 .slds-grow {
     -webkit-box-flex: 1;
@@ -1389,11 +1388,9 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     width: 100%;
 }
 
-
-.ui-sortable-helper{
+.ui-sortable-helper {
     /*background: red;*/
 }
-
 
 .ui-sortable-helper .add-component,
 .ui-sortable-helper .component {
@@ -1413,11 +1410,43 @@ li.ui-draggable-handle:hover {
     cursor: grab;
 }
 
-
 .slds-is-hovered {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+}
+
+#canvas_list>ul {
+    list-style: none;
+    float: left;
+    width: 200px;
+    padding: 0 10px 0 0;
+}
+
+#canvas_list a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background: #900;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin: 0 0 5px 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+#canvas_list:hover a {
+    opacity: 0.2;
+}
+
+#canvas_list:hover ul:hover a {
+    opacity: 0.5;
+}
+
+#canvas_list:hover ul:hover a:hover {
+    opacity: 1;
 }

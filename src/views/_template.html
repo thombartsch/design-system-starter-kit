@@ -55,6 +55,7 @@
                         <p class="dw-text-small">
                             Number of Users with Centralized Authenticitation
                             <span class="dw-badge dw-badge-primary">0</span>
+                            <progress class="dw-progress" value="10" max="100">10%</progress> 10%
                         </p>
                         <p class="dw-text-small">
                             Number of Users Not Yet Using Centralized Authenticitation
@@ -91,6 +92,14 @@
                 </div>
 
 
+                <div>
+                    <hr class="dw-ruler">
+                </div>
+
+
+                <div>
+                    <h3 class="dw-text-heading-medium">Business Manager Password Settings</h3>
+                </div>
 
 
                     <div class="dw-form-item">
@@ -189,6 +198,12 @@
                     <hr class="dw-ruler">
                 </div>
 
+
+                <div>
+                    <h4>IP Range Based Access Restriction</h4>
+                </div>
+
+
                 <div class="dw-form-item">
                     <label for="textarea-1">IP Range Whitelist</label>
                     <textarea id="textarea-1" class="dw-input" placeholder="Placeholder"></textarea>
@@ -202,9 +217,9 @@
                         <input type="checkbox">Deny Login for Invalid Access
                     </label>
                 </div>
-                <div class="dw-form-item">
+                <div class="dw-form-item" style="margin-left:20px">
                     <label class="dw-checkbox">
-                        <input type="checkbox">Increase Failed Login Count
+                        <input type="checkbox" disabled>Increase Failed Login Count
                     </label>
                 </div>
 
