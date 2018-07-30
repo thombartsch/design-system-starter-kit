@@ -113,17 +113,31 @@
 
         var currentIndex;
         $('.list').sortable({
+
             revert: true,
             placeholder: 'ui-sortable-helper',
+            over : function(){
+                //$(this).addClass('valid');
+                console.log('over sort element');
+            },
+            out : function(){ 
+                //$(this).removeClass('valid');
+                console.log('out sort element');
+            },
 
             start: function(event, ui) {
+
                 currentIndex = ui.helper.index();
 
+                console.log('start sort');
                 console.log('currentIndex:'+ currentIndex);
                 console.log('currentIndex add on:' + ui.item.index());
 
+                var list_width = $('#canvas_list').width();
+
                 //ui.helper.css('width', '700px');
                 ui.helper.css('height', 'auto');
+                ui.helper.css('width', list_width);
                 $('ul,li').disableSelection();
             },
             change: function( event, ui ) {
@@ -599,18 +613,6 @@ $('#button-navigator').click(function() {
     $('#panel_right').toggleClass('slds-hide');
     return false;
 });
-
-
-//HOVER LIST ITEM
-$('.draggable').on('mouseenter', '#canvas_list', function() {
-    console.log('in');
-});
-
-$('.draggable').on('mouseleave', '#canvas_list', function() {
-    console.log('out');
-});
-
-
         //- end js
 
     });

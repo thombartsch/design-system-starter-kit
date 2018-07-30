@@ -272,16 +272,15 @@ html.list-view {
     /*background: orange !important;*/
 }
 
-.slds-hide{
+.slds-hide {
     opacity: 0;
     -webkit-transition: all 3s linear 0s;
     transition: all 3s linear 0s;
 }
 
-.slds-show{
+.slds-show {
     opacity: 1;
 }
-
 
 .slds-grow {
     -webkit-box-flex: 1;
@@ -1233,7 +1232,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 
 .slds-drop-zone__container {
     position: relative;
-    z-index: 8000;
+    z-index: 3;
     /**
     * @name item-hovered
     * @summary Hover state for a component within a drop zone
@@ -1243,6 +1242,10 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     * @modifier
     * @group interactions
     */
+}
+
+.slds-drop-zone__container:hover {
+    cursor: hand;
 }
 
 .slds-drop-zone__container:after {
@@ -1384,16 +1387,9 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     width: 100%;
 }
 
-.ui-sortable-helper,
-.draggable {
-    width: 100%;
+.ui-sortable-helper {
+    height: auto;
 }
-
-
-.ui-sortable-helper{
-    /*background: red;*/
-}
-
 
 .ui-sortable-helper .add-component,
 .ui-sortable-helper .component {
@@ -1407,12 +1403,11 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     */
 }
 
-li.ui-draggable-handle:hover {
+#component_list li.ui-draggable-handle:hover {
     /*height: 20px;*/
     /*background: green;*/
     cursor: grab;
 }
-
 
 .slds-is-hovered {
     -webkit-transition: all 0.2s ease-in-out;
