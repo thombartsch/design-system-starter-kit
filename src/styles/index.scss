@@ -1416,3 +1416,40 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
+
+#canvas>ul {
+    list-style: none;
+    float: left;
+    width: 200px;
+    padding: 0 10px 0 0;
+}
+
+#canvas li {
+    text-decoration: none;
+    display: block;
+    /*
+    padding: 10px;
+    background: #900;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin: 0 0 5px 0;
+    */
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+#canvas:hover li {
+    opacity: 0.2;
+}
+
+#canvas:hover ul:hover li {
+    opacity: 0.5;
+}
+
+#canvas:hover ul:hover li:hover {
+    opacity: 1;
+}
+
+#navigator_placeholder_:hover {}
