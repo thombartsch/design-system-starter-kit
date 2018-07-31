@@ -9,254 +9,321 @@
     {% include "_inc_style-noconflict.html" %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+    });
+    </script>
+
+
+
 </head>
 
 <body>
+
+
+    <div class="dw-message dw-message-warning">
+        <button class="dw-message-close dw-button dw-button-clear dw-icon-close"><span class="dw-visually-hidden">Close</span></button>
+        <h1>Warning Header</h1>
+        <p>Warning content here ...</p>
+    </div>
 
     <div class="dw-layout-frame">
         <div class="dw-layout dw-layout-fixed-sidebar">
             <div class="dw-container" style="padding:0 50px;">
                 <fieldset class="dw-form-stacked">
+                    <form>
 
-                <div>
-                    <h3 class="dw-text-heading-medium">Centralized User Authenticitation</h3>
-                </div>
-                <div class="dw-form-item">
-                    <label class="dw-radio">
-                        <input type="radio">No centralized user authenticitation
-                        <p class="dw-text-small dw-text-muted">All Business Manager users are required to maintain one account per instance. Each account needs to be managed separately.</p>
-                    </label>
-                    <label class="dw-radio">
-                        <input type="radio">Centralized user authenticitation supported
-                        <p class="dw-text-small dw-text-muted">Migration to centralized user authenticitation in Account Manager is possible for every user but requires the Administrator ...</p>
-                    </label>
-                    <label class="dw-radio">
-                        <input type="radio">Centralized user authenticitation encouraged
-                        <p class="dw-text-small dw-text-muted">Upon login, all Business Manager users get prompted to migrate to centralized authenticitation via Account Manager.</p>
-                    </label>
-                    <label class="dw-radio">
-                        <input type="radio">Mandatory migration to centralized user authenticitation
-                        <p class="dw-text-small dw-text-muted">Upon login, all Business Manager who have not yet moved to Account Manager authenticitation are prompted to ...</p>
-                    </label>
-                    <label class="dw-radio">
-                        <input type="radio">Centralized user authenticitation only
-                        <p class="dw-text-small dw-text-muted">Login for Business Manager users that have not yet migrated to Account Manager is disabled and no migration path ...</p>
-                    </label>
-                </div>
-                <div>
-                    <hr class="dw-ruler">
-                </div>
-
-                <div>
-                    <h3 class="dw-text-heading-medium">User Statistics on Centralized Authenticitation</h3>
-                </div>
-                 <div class="dw-form-item">
-                    <p>
-                        <p class="dw-text-small">
-                            Number of Users with Centralized Authenticitation
-                            <span class="dw-badge dw-badge-primary">0</span>
-                            <progress class="dw-progress" value="10" max="100">10%</progress> 10%
-                        </p>
-                        <p class="dw-text-small">
-                            Number of Users Not Yet Using Centralized Authenticitation
-                            <span class="dw-badge dw-badge-primary">5</span>
-                        </p>
-                    </p>
-                </div>
-                <div>
-                    <hr class="dw-ruler">
-                </div>
-
-
-                <div>
-                    <h3 class="dw-text-heading-medium">Default Role Mapping for Business Manager User Role in Account Manager (optional)</h3>
-                </div>
-                 <div class="dw-form-item">
-                    <p>
-                        <p class="dw-text-small">
-                            Select Business Manager roles that any new centrally authenticitated Business Manager
-                        </p>
-                        <h4 class="dw-text-heading-small">Available Business Manager Roles</h4>
-                         <div class="dw-form-item">
-                            <label class="dw-checkbox"><input type="checkbox">TestAgentOnBehalf</label>
-                            <label class="dw-checkbox"><input type="checkbox">TestAutomationDefaultManager</label>
-                            <label class="dw-checkbox"><input type="checkbox">TestOrgManager</label>
-                            <label class="dw-checkbox"><input type="checkbox"> TestSlottingManager</label>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h3 class="dw-text-heading-medium">Centralized User Authentication</h3>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="column small-12">
+                            <div class="dw-form-item">
+                                <label class="dw-radio">
+                                    <input type="radio" name="family" value="1">No centralized user authentication
+                                    <p class="dw-text-small dw-text-muted">All Business Manager users are required to maintain one account per instance. Each account needs to be managed separately.</p>
+                                </label>
+                                <label class="dw-radio">
+                                    <input type="radio" name="family" value="2">Centralized user authentication supported
+                                    <p class="dw-text-small dw-text-muted">Migration to centralized user authentication in Account Manager is possible for every user but requires the Administrator ...</p>
+                                </label>
+                                <label class="dw-radio">
+                                    <input type="radio" name="family" value="3">Centralized user authentication encouraged
+                                    <p class="dw-text-small dw-text-muted">Upon login, all Business Manager users get prompted to migrate to centralized authentication via Account Manager.</p>
+                                </label>
+                                <label class="dw-radio">
+                                    <input type="radio" name="family" value="4">Mandatory migration to centralized user authentication
+                                    <p class="dw-text-small dw-text-muted">Upon login, all Business Manager who have not yet moved to Account Manager authentication are prompted to ...</p>
+                                </label>
+                                <label class="dw-radio">
+                                    <input type="radio" name="family" value="5">Centralized user authentication only
+                                    <p class="dw-text-small dw-text-muted">Login for Business Manager users that have not yet migrated to Account Manager is disabled and no migration path ...</p>
+                                </label>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h3 class="dw-text-heading-small">User Statistics on Centralized authentication</h3>
                         </div>
-                        <p class="dw-text-medium">
-                        </p>
-                    </p>
-                </div>
-                <div>
-                    <hr class="dw-ruler">
-                </div>
-
-
-                <div>
-                    <hr class="dw-ruler">
-                </div>
-
-
-                <div>
-                    <h3 class="dw-text-heading-medium">Business Manager Password Settings</h3>
-                </div>
-
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Maximum Invalid Login Attempts</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                    </div>    
+                    <div class="row">
+                        <div class="column small-9">
+                            <p class="dw-text-small">Number of Users with Centralized authentication</p>
+                        </div>
+                        <div class="column small-1">
+                            <button class="dw-button dw-button-small dw-button-primary">0</button>
+                        </div>
+                        <div class="column small-1 dw-text-align-right">
+                            <progress class="dw-progress" value="10" max="100" style="width:50px;">10%</progress>
+                        </div>
+                        <div class="column small-1 dw-text-align-right">
+                            <span class="dw-text-small">10%</span>                            
                         </div>
                     </div>
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Lockout Effective Period</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                    <div class="row">
+                        <div class="column small-9">
+                            <p class="dw-text-small">Number of Users Not Yet Using Centralized authentication</p>
                         </div>
-                    </div>
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">User Passwords Expire In</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                        <div class="column small-1">
+                            <button class="dw-button dw-button-small dw-button-primary">0</button>
                         </div>
-                    </div>
-
-                    <div class="dw-form-item">
-                        <label class="dw-checkbox">
-                            <input type="checkbox">Require Security Question for Password Reset
-                        </label>                        
-                    </div>
-
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Accounts Deactivated If Unused for More Than</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                        <div class="column small-1 dw-text-align-right">
+                            <progress class="dw-progress" value="10" max="100" style="width:50px;">10%</progress>
+                        </div>
+                        <div class="column small-1 dw-text-align-right">
+                            <span class="dw-text-small">10%</span>                            
                         </div>
                     </div>
 
 
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Enforce Password History</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h3 class="dw-text-heading-small">Default Role Mapping for Business Manager User Role in Account Manager (optional)</h3>
                         </div>
-                    </div>
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Minimum Password Length</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                        <div class="column small-12">
+                            <p class="dw-text-small">
+                                Select Business Manager roles that any new centrally authenticitated Business Manager
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Minimum Password Special Characters</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                    </div>    
+                    <div class="row">
+                        <div class="column small-12">
+                            <h4 class="dw-text-heading-small">Available Business Manager Roles</h4>
                         </div>
-                    </div>
-
-
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Minimum Login Length</label>
-                        <div class="dw-select-wrapper dw-form-item-control">
-                            <select class="dw-input">
-                            <option>6</option>
-                            </select>
+                        <div class="column small-12">
+                            <div class="dw-form-item">
+                                <select multiple size="10" class="dw-input">
+                                    <option value="TestAgentOnBehalf">TestAgentOnBehalf</option>
+                                    <option value="TestAutomationDefaultManager">TestAutomationDefaultManager</option>
+                                    <option value="TestAutomationDefaultManager">TestAutomationDefaultManager</option>
+                                    <option value="TestOrgManager">TestOrgManager</option>
+                                    <option value="TestSlottingManager">TestSlottingManager</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
+                    </div>    
 
-                    <div class="dw-form-item">
-                        <label class="dw-form-item-label">Clear SFTP Known Good Hosts File</label>
-                        <button class="dw-button">Clear</button>
-                    </div>
-                    
-                    <div class="dw-form-item">
-                        <label class="dw-checkbox">
-                            <input type="checkbox">Permit Whitelisted Hostnames Only
-                        </label>
-                    </div>
+
+
+                    <div class="row">
+                        <div class="column small-12">
+                            <h3 class="dw-text-heading-medium">Business Manager Password Settings</h3>
+                        </div>
+                        <div class="column small-12">
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Maximum Invalid Login Attempts</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Lockout Effective Period</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">User Passwords Expire In</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-checkbox">
+                                    <input type="checkbox">Require Security Question for Password Reset
+                                </label>                        
+                            </div>
+
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Accounts Deactivated If Unused for More Than</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Enforce Password History</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Minimum Password Length</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Minimum Password Special Characters</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Minimum Login Length</label>
+                                <div class="dw-select-wrapper dw-form-item-control">
+                                    <select class="dw-input">
+                                    <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dw-form-item">
+                                <label class="dw-form-item-label">Clear SFTP Known Good Hosts File</label>
+                                <button class="dw-button">Clear</button>
+                            </div>
+                            
+                            <div class="dw-form-item">
+                                <label class="dw-checkbox">
+                                    <input type="checkbox">Permit Whitelisted Hostnames Only
+                                </label>
+                            </div>
   
-                <div>
-                    <hr class="dw-ruler">
-                </div>
 
-
-                <div>
-                    <h4>IP Range Based Access Restriction</h4>
-                </div>
-
-
-                <div class="dw-form-item">
-                    <label for="textarea-1">IP Range Whitelist</label>
-                    <textarea id="textarea-1" class="dw-input" placeholder="Placeholder"></textarea>
-                </div>
-                <div class="dw-form-item">
-                    <label for="textarea-1">IP Range Blacklist</label>
-                    <textarea id="textarea-1" class="dw-input" placeholder="Placeholder"></textarea>
-                </div>
-                <div class="dw-form-item">
-                    <label class="dw-checkbox">
-                        <input type="checkbox">Deny Login for Invalid Access
-                    </label>
-                </div>
-                <div class="dw-form-item" style="margin-left:20px">
-                    <label class="dw-checkbox">
-                        <input type="checkbox" disabled>Increase Failed Login Count
-                    </label>
-                </div>
-
-                <div class="dw-form-item">
-                    <label class="dw-checkbox">Send Email on Invalid Access to</label>
-                    <input class="dw-input dw-input-text dw-form-item-control" type="text" placeholder="Placeholder" />
-                </div>
-
-
-                <div>
-                    <hr class="dw-ruler">
-                </div>
-
-
-                <div>
-                    <h3 class="dw-text-heading-medium">System Notification</h3>
-                </div>
-
-                 <div class="dw-form-item">
-                    <p>
-                         <div class="dw-form-item">
-                            <label class="dw-checkbox">
-                                <input type="checkbox">Enable System Notification Message
-                            </label>
-                            <label class="dw-checkbox" style="margin-left:20px" disabled>
-                                <input type="checkbox">Enforce Aknowledgement of the System Notification Message
-                            </label>
-                            <label for="textarea-1" disabled style="margin-left:20px">Notification Message</label>
-                            <textarea id="textarea-1" style="margin-left:20px" class="dw-input" disabled placeholder="Placeholder"></textarea>
                         </div>
-                    </p>
+                    </div>    
+
+                <div class="row">
+                        <div class="column small-12">
+                            <hr class="dw-ruler">
+                        </div>
                 </div>
 
 
 
+                <div class="row">
+                        <div class="column small-12">
+                            <h4 class="dw-text-heading-medium">IP Range Based Access Restriction</h4>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="column small-12">
+                        <div class="dw-form-item">
+                            <label for="textarea-1">IP Range Whitelist</label>
+                            <textarea id="textarea-1" class="dw-input" placeholder="Placeholder"></textarea>
+                        </div>
+                        <div class="dw-form-item">
+                            <label for="textarea-1">IP Range Blacklist</label>
+                            <textarea id="textarea-1" class="dw-input" placeholder="Placeholder"></textarea>
+                        </div>
+                        <div class="dw-form-item">
+                            <label class="dw-checkbox">
+                                <input type="checkbox">Deny Login for Invalid Access
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column small-1"></div>
+                    <div class="column small-11">
+                        <div class="dw-form-item">
+                            <label class="dw-checkbox" disabled>
+                                <input type="checkbox" disabled>Increase Failed Login Count
+                            </label>
+                        </div>
+
+                        <div class="dw-form-item">
+                            <label class="dw-checkbox" disabled>Send Email on Invalid Access to</label>
+                            <input class="dw-input dw-input-text dw-form-item-control" type="text" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                </div>
 
 
+
+                <div class="row">
+                        <div class="column small-12">
+                            <hr class="dw-ruler">
+                        </div>
+                </div>
+
+
+                    <div class="row">
+                        <div class="column small-12">
+                            <h3 class="dw-text-heading-medium">System Notification</h3>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="column small-12">
+                            <div class="dw-form-item">
+                                <label class="dw-checkbox">
+                                    <input type="checkbox">Enable System Notification Message
+                                </label>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="column small-1"></div>
+                        <div class="column small-11">
+                            <div class="dw-form-item">
+                                <label class="dw-checkbox" disabled>
+                                    <input type="checkbox">Enforce Aknowledgement of the System Notification Message
+                                </label>
+                                <label>Notification Message</label>
+                                <textarea id="textarea-1" class="dw-input" disabled placeholder="Placeholder"></textarea>
+                            </div>
+                        </div>
+                    </div>    
+
+
+
+
+
+
+
+
+
+                    </fieldset>
                 </form>
             </div>
         </div>
