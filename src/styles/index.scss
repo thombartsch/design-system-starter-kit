@@ -1458,3 +1458,8 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 #builder {
     height: 100%;
 }
+
+#navigator_list li:hover {
+    background: red;
+    cursor: pointer;
+}

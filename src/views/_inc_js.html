@@ -124,45 +124,48 @@
                 }else{
                     $('#component_placeholder_'+moveitem).insertAfter('#canvas_list li:eq('+newIndex+')');
                 }
-            }
+            },
+            over : function(event, ui){
+               console.log('over');
+            },
+            out : function(event, ui){
+               console.log('out');
+            }            
         });
         $("#sortable").disableSelection();
 
 
 
         $('.list').sortable({
-
             revert: true,
             placeholder: 'ui-sortable-helper',
-
             start: function(event, ui) {
-                var list_width = $('#canvas_list').width();
-                var oldIndex = ui.item.index();
+                list_width = $('#canvas_list').width();
+                oldIndex = ui.item.index();
                 console.log('the old index is:'+ oldIndex);
                 ui.helper.css('height', 'auto');
                 ui.helper.css('width', list_width);
-
-                console.log(ui.item.index());
-
                 $('ul,li').disableSelection();
                 
             },
             stop: function(event, ui, ) {
-                var newIndex = ui.item.index();
-                console.log('the old index was:'+ oldIndex);
-                console.log('the new index is:'+ newIndex);
-                /*
-                var str = ui.item.attr('id');
-                var listitem = str.split("navigator_placeholder_");
-                var moveitem = listitem[1];
-                if (oldIndex > newIndex) {
-                    $('#navigator_placeholder_'+moveitem).insertBefore('#canvas_list li:eq('+newIndex+')');
-                }else{
-                    $('#navigator_placeholder_'+moveitem).insertAfter('#canvas_list li:eq('+newIndex+')');
-                }
-                */
-            }
+                newIndex = ui.item.index();
+                //console.log('the old index was:'+ oldIndex);
 
+                var str = ui.item.attr('id');
+                var listitem = str.split("component_placeholder_");
+                var moveitem = listitem[1];
+
+
+
+                if (oldIndex > newIndex) {
+                    console.log('is bigger: yes '+ moveitem);
+                    $('#navigator_placeholder_'+moveitem).insertBefore('#navigator_list li:eq('+newIndex+')');
+                }else{
+                    console.log('is bigger: no '+ moveitem);
+                    $('#navigator_placeholder_'+moveitem).insertAfter('#navigator_list li:eq('+newIndex+')');
+                }
+            }
         });
         $('.list').disableSelection();
 
