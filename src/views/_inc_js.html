@@ -8,6 +8,7 @@
             helper: 'clone',
             start: function(event, ui) {
                 $('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
+                $('.ui-draggable').css('height', 'auto');
             },
             stop: function(event, ui) {
                 var navtxt = $(ui.helper).attr('title');
@@ -29,10 +30,10 @@
                 //add navigator item
                 var nav_item = '<li class="slds-item" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '">' + navtxt + '</span</li>';
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
-                $(nav_item).addClass('listItem'+ count);
-                $(nav_item).attr('indexer','listItem'+ count);
-                ui.helper.addClass('listItem'+ count);
-                ui.helper.attr('indexer','listItem'+ count);
+                $(nav_item).addClass('listItem' + count);
+                $(nav_item).attr('indexer', 'listItem' + count);
+                ui.helper.addClass('listItem' + count);
+                ui.helper.attr('indexer', 'listItem' + count);
                 $('#navigator_list').append(nav_item);
 
 
@@ -83,8 +84,7 @@
                         activeComponentPlaceholder = undefined;
                         activeNavigationPlaceholder = undefined;
 
-                        if ($('#canvas_list > li.draggable').length != 0) {
-                        } else {
+                        if ($('#canvas_list > li.draggable').length != 0) {} else {
                             $('.component_properties').addClass('slds-hide');
                             $('.component_properties .placeholder').toggleClass('slds-hide');
                         }
@@ -110,69 +110,92 @@
         $("#sortable").disableSelection();
         */
 
+        $("#navigator_list").sortable({
+            start: function(event, ui){
+                oldIndex = ui.item.index();
+            },
+            stop: function(event, ui) {
+                newIndex = ui.item.index();
+                var str = ui.item.attr('id');
+                var listitem = str.split("navigator_placeholder_");
+                var moveitem = listitem[1];
+                if (oldIndex > newIndex) {
+                    $('#component_placeholder_'+moveitem).insertBefore('#canvas_list li:eq('+newIndex+')');
+                }else{
+                    $('#component_placeholder_'+moveitem).insertAfter('#canvas_list li:eq('+newIndex+')');
+                }
+            }
+        });
+        $("#sortable").disableSelection();
 
-        var currentIndex;
+
+
         $('.list').sortable({
+
             revert: true,
             placeholder: 'ui-sortable-helper',
 
             start: function(event, ui) {
-                currentIndex = ui.helper.index();
-
-                console.log('currentIndex:'+ currentIndex);
-                console.log('currentIndex add on:' + ui.item.index());
-
-                //ui.helper.css('width', '700px');
+                var list_width = $('#canvas_list').width();
+                var oldIndex = ui.item.index();
+                console.log('the old index is:'+ oldIndex);
                 ui.helper.css('height', 'auto');
+                ui.helper.css('width', list_width);
+
+                console.log(ui.item.index());
+
                 $('ul,li').disableSelection();
+                
             },
-            change: function( event, ui ) {
-                var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
-                var sortClass = '.'+ui.item.attr('class').split(' ')[0];
-                var parent = $('.list').not(ui.item.parent());
-
-                console.log('sortClass is' +sortClass);
-
-                if(currentIndex > ui.placeholder.index()){
-                    parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
+            stop: function(event, ui, ) {
+                var newIndex = ui.item.index();
+                console.log('the old index was:'+ oldIndex);
+                console.log('the new index is:'+ newIndex);
+                /*
+                var str = ui.item.attr('id');
+                var listitem = str.split("navigator_placeholder_");
+                var moveitem = listitem[1];
+                if (oldIndex > newIndex) {
+                    $('#navigator_placeholder_'+moveitem).insertBefore('#canvas_list li:eq('+newIndex+')');
+                }else{
+                    $('#navigator_placeholder_'+moveitem).insertAfter('#canvas_list li:eq('+newIndex+')');
                 }
-                else
-                    parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
-                    currentIndex = ui.placeholder.index();
+                */
             }
+
         });
-        $( '.list' ).disableSelection();
+        $('.list').disableSelection();
 
 
-/*
+        /*
 
 
-//sort at the same time navigator and component
-var currentIndex;
-$(function() {
-    $( '.list' ).sortable({
-        start: function(event, ui) {
-            currentIndex = ui.helper.index();
-        },
-        change: function( event, ui ) {
-            var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
-            var sortClass = '.'+ui.item.attr('class').split(' ')[0];
-            var parent = $('.list').not(ui.item.parent());
+        //sort at the same time navigator and component
+        var currentIndex;
+        $(function() {
+            $( '.list' ).sortable({
+                start: function(event, ui) {
+                    currentIndex = ui.helper.index();
+                },
+                change: function( event, ui ) {
+                    var indexCount = ui.item.parent().find('li:not(.ui-sortable-helper)');
+                    var sortClass = '.'+ui.item.attr('class').split(' ')[0];
+                    var parent = $('.list').not(ui.item.parent());
 
-            if(currentIndex > ui.placeholder.index()){
-                parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
-            }
-            else
-                parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
-                currentIndex = ui.placeholder.index();
-        }
-    });
-    $( '.list' ).disableSelection();
-});
+                    if(currentIndex > ui.placeholder.index()){
+                        parent.find('li').eq(indexCount.index(ui.placeholder)).before(parent.find(sortClass));
+                    }
+                    else
+                        parent.find('li').eq(indexCount.index(ui.placeholder)).after(parent.find(sortClass));
+                        currentIndex = ui.placeholder.index();
+                }
+            });
+            $( '.list' ).disableSelection();
+        });
 
 
 
-*/
+        */
 
 
 
@@ -585,32 +608,20 @@ $(function() {
 
 
 
-//POPOVER PREVIEW SETTINGS
-$('#trigger-preview-options').click(function() {
-    $('#popover-preview-settings').toggleClass('slds-hide');
-    return false;
-});
-$('#popover-preview-settings button').click(function() {
-    $('#popover-preview-settings').toggleClass('slds-hide');
-    return false;
-});
+        //POPOVER PREVIEW SETTINGS
+        $('#trigger-preview-options').click(function() {
+            $('#popover-preview-settings').toggleClass('slds-hide');
+            return false;
+        });
+        $('#popover-preview-settings button').click(function() {
+            $('#popover-preview-settings').toggleClass('slds-hide');
+            return false;
+        });
 
-$('#button-navigator').click(function() {
-    $('#panel_right').toggleClass('slds-hide');
-    return false;
-});
-
-
-//HOVER LIST ITEM
-$('.draggable').on('mouseenter', '#canvas_list', function() {
-    console.log('in');
-});
-
-$('.draggable').on('mouseleave', '#canvas_list', function() {
-    console.log('out');
-});
-
-
+        $('#button-navigator').click(function() {
+            $('#panel_right').toggleClass('slds-hide');
+            return false;
+        });
         //- end js
 
     });

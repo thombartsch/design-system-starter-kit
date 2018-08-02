@@ -1232,7 +1232,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 
 .slds-drop-zone__container {
     position: relative;
-    z-index: 8000;
+    z-index: 3;
     /**
     * @name item-hovered
     * @summary Hover state for a component within a drop zone
@@ -1242,6 +1242,10 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     * @modifier
     * @group interactions
     */
+}
+
+.slds-drop-zone__container:hover {
+    cursor: hand;
 }
 
 .slds-drop-zone__container:after {
@@ -1383,13 +1387,8 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     width: 100%;
 }
 
-.ui-sortable-helper,
-.draggable {
-    width: 100%;
-}
-
 .ui-sortable-helper {
-    /*background: red;*/
+    height: auto;
 }
 
 .ui-sortable-helper .add-component,
@@ -1404,7 +1403,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     */
 }
 
-li.ui-draggable-handle:hover {
+#component_list li.ui-draggable-handle:hover {
     /*height: 20px;*/
     /*background: green;*/
     cursor: grab;
@@ -1418,35 +1417,44 @@ li.ui-draggable-handle:hover {
     transition: all 0.2s ease-in-out;
 }
 
-#canvas_list>ul {
+
+/*
+#canvas>ul {
     list-style: none;
     float: left;
     width: 200px;
     padding: 0 10px 0 0;
 }
 
-#canvas_list a {
+#canvas li {
     text-decoration: none;
     display: block;
-    padding: 10px;
-    background: #900;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    margin: 0 0 5px 0;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
 }
 
-#canvas_list:hover a {
+#canvas:hover li {
     opacity: 0.2;
 }
 
-#canvas_list:hover ul:hover a {
+#canvas:hover ul:hover li {
     opacity: 0.5;
 }
 
-#canvas_list:hover ul:hover a:hover {
+#canvas:hover ul:hover li:hover {
     opacity: 1;
+}
+*/
+
+#navigator_placeholder_:hover {}
+
+#canvas,
+#canvas_list {
+    height: 100%;
+    width: 100%;
+}
+
+#builder {
+    height: 100%;
 }

@@ -1,0 +1,82 @@
+<div class="component_properties slds-hide" id="editor_row">
+    <!--  MEDIA SELECTION CONTENT-->
+        <div class="editor">
+            <div class="slds-tabs_default">
+                <ul class="slds-tabs_default__nav" role="tablist">
+                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-row-1" id="tab-default-row-1__item">Content</a></li>
+                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-2" id="tab-default-row-2__item">Rules</a></li>
+                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-3" id="tab-default-row-3__item">Localization</a></li>
+                </ul>
+
+                <div id="tab-default-row-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-row-1__item">
+                    <!-- CONTENT -->
+                    <ul>
+                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Text Blocks</legend>
+                      <li class="slds-p-bottom_small">
+                        <div class="slds-form-element">
+                          <label class="slds-form-element__label" for="text-input-id-1">row Text Header</label>
+                          <div class="slds-form-element__control">
+                            <input type="text" class="slds-input text-row-header" placeholder="" />
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <!-- /CONTENT -->
+                </div>
+                <div id="tab-default-row-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-row-2__item">
+                      <!-- RULES -->
+                      {# include "_inc_rules.html"   #}
+                      <div class="slds-p-bottom_small">
+                          <div class="slds-form">
+                                <div class="slds-form-element slds-p-bottom_small">
+                                    <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
+                                    <div class="slds-form-element__control">
+                                      <span class="slds-checkbox">
+                                        <input type="checkbox" class="cg" name="options[]" id="row-checkbox_everyone" value="Everyone">
+                                        <label class="slds-checkbox__label" for="row-checkbox_everyone">
+                                          <span class="slds-checkbox_faux"></span>
+                                          <span class="slds-form-element__label">Everyone</span>
+                                        </label>
+                                      </span>
+                                      <span class="slds-checkbox">
+                                        <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupa" value="CustomergroupA">
+                                        <label class="slds-checkbox__label" for="row-checkbox_customergroupa">
+                                          <span class="slds-checkbox_faux"></span>
+                                          <span class="slds-form-element__label">Registered Users</span>
+                                        </label>
+                                      </span>
+                                      <span class="slds-checkbox">
+                                        <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupb" value="CustomergroupB">
+                                        <label class="slds-checkbox__label" for="row-checkbox_customergroupb">
+                                          <span class="slds-checkbox_faux"></span>
+                                          <span class="slds-form-element__label">Unregistered Users</span>
+                                        </label>
+                                      </span>
+                                    </div>
+                                </div>
+
+                                  <div class="slds-form-element slds-p-bottom_small">
+                                      <label class="slds-form-element__label" for="select-01"> Display from:</label>
+                                      <div class="slds-form-element__control">
+                                          <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
+                                  </div>
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label" for="select-02"> Display to:</label>
+                                      <div class="slds-form-element__control">
+                                          <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
+                                  </div>
+
+                          </div>
+                      </div>
+
+                      <!-- /RULES -->
+                  </div>
+
+
+            </div>
+        </div>
+
+
+        <!--  /MEDIA SELECTION CONTENT-->
+</div>
