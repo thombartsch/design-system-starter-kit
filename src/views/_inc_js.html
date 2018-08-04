@@ -29,7 +29,7 @@
 
 
                 //add navigator item
-                var nav_item = '<li class="slds-item nav-out" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><a href="#" class="hoverme">' + navtxt + '</a></span</li>';
+                var nav_item = '<li class="slds-item nav" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><a href="#" class="hoverme">' + navtxt + '</a></span</li>';
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
                 $(nav_item).addClass('listItem' + count);
                 $(nav_item).attr('indexer', 'listItem' + count);
@@ -66,7 +66,7 @@
                     var str = $(this).closest('#canvas_list li.draggable').attr('id');
                     var listitem = str.split('component_placeholder_');
                     var item = listitem[1];
-                    $('#navigator_placeholder_'+item).removeClass('nav-out');
+                    $('#navigator_placeholder_'+item).removeClass('nav');
                     $('#navigator_placeholder_'+item).addClass('nav-hover');
                 });
                 $('#canvas_list .slds-drop-zone').mouseout(function() {
@@ -74,16 +74,17 @@
                     var listitem = str.split('component_placeholder_');
                     var item = listitem[1];
                     $('#navigator_placeholder_'+item).removeClass('nav-hover');
-                    $('#navigator_placeholder_'+item).addClass('nav-out');
+                    $('#navigator_placeholder_'+item).addClass('nav');
                 });
 
 
 
 
 
-                $('#navigator_list a.hoverme').mouseenter(function() {
+                $('#navigator_list li').mouseenter(function() {
                     //on hover show the sub menu and change the background color
-                    $(this).closest('#navigator_list li.slds-item').toggleClass('nav-out nav-hover');
+                    $(this).closest('#navigator_list li.slds-item').removeClass('nav');
+                    $(this).closest('#navigator_list li.slds-item').addClass('nav-hover');
                     //now get the id and then highlight the related component
                     var str = $(this).closest('#navigator_list li.slds-item').attr('id');
                     var listitem = str.split('navigator_placeholder_');
@@ -93,13 +94,14 @@
 
 
                 });
-                $('#navigator_list a.hoverme').mouseout(function() {
+                $('#navigator_list li').mouseout(function() {
                     //on hover show the sub menu and change the background color
-                    $(this).closest('#navigator_list li.slds-item').toggleClass('nav-out nav-hover');
+                    $(this).closest('#navigator_list li.slds-item').addClass('nav');
+                    $(this).closest('#navigator_list li.slds-item').removeClass('nav-hover');
                     $('#canvas_list .slds-drop-zone__container').removeClass('slds-is-hovered');
                 });
 
-                $('#navigator_list a.hoverme').click(function() {
+                $('#navigator_list li').click(function() {
                     //show the relation to the main elements int the screen
                 });
 
