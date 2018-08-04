@@ -1459,7 +1459,48 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     height: 100%;
 }
 
-#navigator_list li:hover {
-    background: red;
+.sortable-hover {
+    background: lightblue;
+}
+
+.ui-sortable-helper>div.component {
+    display: none !important;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.slds-icon-utility-connected_apps:hover,
+#navigator_list li.slds-item:hover {
     cursor: pointer;
+}
+
+.nav-hover {
+    background: #f4f6fe;
+    -moz-transition: opacity 1s, visibility 1.3s;
+    -webkit-transition: opacity 1s, visibility 1.3s;
+    -o-transition: opacity 1s, visibility 1.3s;
+    transition: opacity 1s, visibility 1.3s;
+}
+
+.nav-out {
+    background: #fff;
+    -moz-transition: opacity 1s, visibility 1.3s;
+    -webkit-transition: opacity 1s, visibility 1.3s;
+    -o-transition: opacity 1s, visibility 1.3s;
+    transition: opacity 1s, visibility 1.3s;
+}
+
+.slds-show {
+    opacity: 1;
+    -moz-transition: opacity 1s, visibility 1.3s;
+    -webkit-transition: opacity 1s, visibility 1.3s;
+    -o-transition: opacity 1s, visibility 1.3s;
+    transition: opacity 1s, visibility 1.3s;
+}
+
+.slds-hide {
+    opacity: 0;
+    -moz-transition: opacity 1s, visibility 1.3s;
+    -webkit-transition: opacity 1s, visibility 1.3s;
+    -o-transition: opacity 1s, visibility 1.3s;
+    transition: opacity 1s, visibility 1.3s;
 }
