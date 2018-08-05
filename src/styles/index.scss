@@ -1332,15 +1332,19 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 
 .left_expanded {
-    width: 15rem;
+    width: 25rem;
     overflow: hidden;
     transition: width 1s ease-in-out;
 }
 
 .left_collapsed {
-    width: 3.5rem;
+    width: 3.9rem;
     overflow: hidden;
     transition: width 0.5s ease-in-out;
+}
+
+.left_collapsed span.component_name{
+    display: none;
 }
 
 #button_left_expand {
@@ -1459,9 +1463,11 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     height: 100%;
 }
 
+/*
 .sortable-hover {
     background: lightblue;
 }
+*/
 
 .ui-sortable-helper>div.component {
     display: none !important;
@@ -1503,4 +1509,65 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     -webkit-transition: opacity 1s, visibility 1.3s;
     -o-transition: opacity 1s, visibility 1.3s;
     transition: opacity 1s, visibility 1.3s;
+}
+
+div.slds-hide,
+span.slds-hide,
+li.slds-hide,
+button.slds-hide
+{
+    opacity: 0;
+    transition:all 1s;
+}
+div,
+span,
+li,
+button{
+    opacity: 1;
+    transition:all 0.5s;
+}
+
+
+#canvas{
+    text-align: center;
+}
+
+
+
+ul#canvas_list.desktop{
+    width:100%;
+    transition:all 0.5s;
+}
+ul#canvas_list.tablet_portrait{
+    width:768px;
+    transition:all 0.5s;
+}
+ul#canvas_list.tablet_landscape{
+    width:1024px;
+    transition:all 0.5s;
+}
+ul#canvas_list.phone_portrait{
+    width:320px;
+    transition:all 0.5s;
+}
+ul#canvas_list.phone_landscape{
+    width:568px;
+    transition:all 0.5s;
+}
+
+.component{
+    padding: 10px;
+}
+
+.component-preview{
+    padding: none;
+}
+
+
+.white{
+    background: rgba(255,255,255,1.0);
+}
+
+.transparent{
+    background: rgba(255,255,255, 0);
 }

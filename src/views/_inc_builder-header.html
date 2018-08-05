@@ -83,40 +83,40 @@
         <div class="slds-builder-toolbar" role="toolbar">
             <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions">
             </div>
-            <div class="slds-builder-toolbar__item-group" aria-label="Edit actions">
+            <div class="slds-builder-toolbar__item-group slds-m-left_none" aria-label="Edit actions">
                 <div class="slds-button-group">
-                    <button class="slds-button slds-button_icon slds-button_icon-border" title="Paste" tabindex="-1" id="button-navigator">
+                    <button class="slds-button slds-button_icon slds-button_icon-border" title="Toggle Page Structure Panel" tabindex="-1" id="button-navigator">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#list"/>
                       </svg>
-                      <span class="slds-assistive-text">Show Page Structure</span>
+                        <span class="slds-assistive-text">Toggle Page Structure Panel</span>
                     </button>
                 </div>
             </div>
             <div class="slds-col slds-text-align_center">
 
 <div class="slds-button-group" role="group">
-    <button class="slds-button slds-button_neutral">
+    <button class="slds-button slds-button_neutral" id="trigger-preview-desktop">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral">
+    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_landscape">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
         </svg><!-- Tablet -->
     </button>
-    <button class="slds-button slds-button_neutral">
+    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_portrait">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_portrait"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral">
+    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_landscape">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_landscape"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral">
+    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_portrait">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
         </svg><!-- Desktop -->
@@ -137,8 +137,11 @@
                       </svg>
                       <span class="slds-assistive-text">Preview Settings</span>
                     </button>
-                    <button class="slds-button slds-button_neutral">
+                    <button id="trigger-preview" class="slds-button slds-button_neutral">
                         Preview
+                    </button>
+                    <button id="trigger-edit" class="slds-button slds-button_neutral slds-hide">
+                        Back to Edit
                     </button>
                 </div>
 
