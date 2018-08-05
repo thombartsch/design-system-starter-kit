@@ -29,7 +29,7 @@
 
 
                 //add navigator item
-                var nav_item = '<li class="slds-item nav" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><a href="#" class="hoverme">' + navtxt + '</a></span</li>';
+                var nav_item = '<li class="slds-item nav" id="navigator_placeholder_' + count + '"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><button class="slds-button slds-button__small 2slds-button_neutral hoverme">' + navtxt + '</button><button class="slds-button slds-button__small slds-float_right trash"><svg class="slds-button__icon slds-button__icon_left" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use></svg></button></span></li>';
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
                 $(nav_item).addClass('listItem' + count);
                 $(nav_item).attr('indexer', 'listItem' + count);
@@ -45,6 +45,8 @@
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
                     showProperties(component_type);
+                    var activeComponent = $(this).closest('.draggable').attr('id');
+                    console.log('activeComponent is now: '+activeComponent);
                 });
 
 
@@ -52,7 +54,10 @@
                     var component_type = 'banner';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    showProperties(component_type);
+                    var activeComponent = $(this).closest('.draggable').attr('id');
+                    showProperties(component_type, activeComponent);
+                    //alert('activeComponent is now: '+activeComponent);
+
                 });
 
                 $('.list .button-trigger-action--edit-component-category').click(function() {
@@ -60,6 +65,8 @@
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
                     showProperties(component_type);
+                    var activeComponent = $(this).closest('.draggable').attr('id');
+                    console.log('activeComponent is now: '+activeComponent);
                 });
 
                 $('#canvas_list .slds-drop-zone').mouseenter(function() {
@@ -101,12 +108,25 @@
                     $('#canvas_list .slds-drop-zone__container').removeClass('slds-is-hovered');
                 });
 
+                $('.hoverme').click(function() {
+                    //scroll to div in canvas
+                });
 
-                $('.list button.button-trigger-action--delete-component').click(function() {
+
+
+
+                $('.list button.button-trigger-action--delete-component , .trash').click(function() {
                     var activeComponentPlaceholder = undefined;
                     var activeNavigationPlaceholder = undefined;
 
                     var activeComponentPlaceholder = $(this).closest('li').attr('id');
+                    if (activeComponentPlaceholder.match('navigator_placeholder_')) {
+
+                        arr = activeComponentPlaceholder.split('navigator_placeholder_');
+                        var activeNavigationPlaceholder = 'navigator_placeholder_' + arr[1];
+                        var activeComponentPlaceholder = 'component_placeholder_' + arr[1];
+                        arr = undefined;
+                    }
                     if (activeComponentPlaceholder.match('component_placeholder_')) {
                         arr = activeComponentPlaceholder.split('component_');
                         var activeNavigationPlaceholder = 'navigator_' + arr[1];
@@ -138,14 +158,6 @@
             start: function(event, ui){
                 oldIndex = ui.item.index();
                 $(this).addClass('sortable-hover');
-            },
-            over : function(event, ui){
-                console.log('over');
-                $('#navigator_list').removeClass('sortable-hover');
-                $(this).addClass('sortable-hover');
-            },
-            out : function(event, ui){
-               console.log('out');
             },
             stop: function(event, ui) {
                 newIndex = ui.item.index();
@@ -256,7 +268,11 @@
         //NAVIGATOR
         function showNavigation() {
         }
-        function showProperties(component_type) {
+        function showProperties(component_type, activeComponent) {
+            /*
+            console.log('called editor and now the activeComponent is: '+activeComponent);
+            console.log('called editor and now the component_type is: '+component_type);
+            */
             $('#panel_editor .component_properties').addClass('slds-hide');
             $('#editor_' + component_type).removeClass('slds-hide');
             $('#editor_' + component_type).addClass('slds-show');
@@ -269,10 +285,7 @@
             $('#editor_' + component_type +' .tab_general_content').removeClass('slds-hide');
             $('#editor_' + component_type +' .tab_rules_content').removeClass('slds-show');
             $('#editor_' + component_type +' .tab_rules_content').addClass('slds-hide');
-
-
-
-
+            $('.text-activeComponent').val(activeComponent);
 
             $('#panel_editor').removeClass('slds-hide');
         }
@@ -313,7 +326,6 @@
 
         //GALLERY BROWSING
         $('.select_collectionA').click(function() {
-            alert();
             $('.select_collectionA').addClass('slds-is-selected');
             $('.collectionA').removeClass('slds-hide');
 
@@ -413,6 +425,7 @@
 
         //MEDIA SELECTOR
         $('.add-mediaselector-dummy').click(function() {
+            console.log('media selector called');
             selected_image = undefined;
             $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
             $('.mediaselector-component-editor .file-name').html('No Image assigned');
@@ -442,7 +455,9 @@
 
         //BANNER COMPONENT
         $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
+            console.log('add image called');
             callerComponent = 'banner';
+            //console.log('active component is: '+activeComponent);
             /*
             $('.media-picker').toggleClass('slds-hide');
             $('.mediaselector-component-editor').toggleClass('slds-hide');
@@ -487,15 +502,22 @@
 
         //IMAGE SELECT
         $('.image-thumb').click(function() {
-            //selected_image = $(this).find('h2').text();
             selected_image = $(this).closest('a').find('img').attr('src');
+            console.log('selected image: '+selected_image);
             $('.slds-file_card').removeClass('selected');
             $(this).closest('.slds-file_card').addClass('selected');
+            console.log('image selected: '+selected_image);
             return false;
         });
 
         //IMAGE SAVE
         $('.picker .trigger-save-modal').click(function() {
+            console.log('close picker and set image: '+selected_image)
+            $('#editor_banner .image-figure-thumb').attr('src', selected_image);
+            $('#editor_banner .file-name').text(selected_image);
+            $('.picker').addClass('slds-hide');
+            $('.circle').toggleClass('slds-hide');
+            /*
             if (callerComponent == 'banner') {
                 $('#editor_banner .image-figure-thumb').attr('src', selected_image);
                 $('#editor_banner .file-name').text(selected_image);
@@ -510,10 +532,47 @@
                 $('.product-component-editor').toggleClass('slds-hide');
 
             }
+            */
         });
 
-        //NOW CLOSE PICKER AND SET IMAGE
-        $('.mediaselector-component-editor .trigger-save-modal').click(function() {
+        //NOW SET IMAGE TO PLACEHOLDER
+        $('#panel_editor .trigger-save-modal').click(function(selected_image) {
+
+            if (component_type = 'banner'){
+                var activeComponent = $('.text-activeComponent').val();
+                var selected_image = $('.file-name').text();
+                $('#'+activeComponent+' .component .placeholder').addClass('slds-hide');
+                $('#'+activeComponent+' .component .image-holder').removeClass('slds-hide');
+
+                $('#'+activeComponent+' .component .image-holder').css('background-image', 'url(' + selected_image + ')');
+
+                banner_header = $('.text-banner-header').val();
+                banner_sub = $('.text-banner-sub').val();
+                $('#' + activeComponent + ' .banner-header').html(banner_header);
+                $('#' + activeComponent + ' .banner-sub').html(banner_sub);
+
+
+                //alert('#'+activeComponent+' .image-holder'+ selected_image);
+                console.log(selected_image);
+                console.log(activeComponent);
+
+
+                /*
+                banner_header = $('.text-banner-header').val();
+                banner_sub = $('.text-banner-sub').val();
+                $('#' + activeComponent + ' .banner-header').html(banner_header);
+                $('#' + activeComponent + ' .banner-sub').html(banner_sub);
+                */
+
+                /*
+                $('.text-banner-header').val('');
+                $('.text-banner-sub').val('');
+                */
+
+            }
+
+
+            /*
             $('.mediaselector-component-editor').toggleClass('slds-hide');
             $('#' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
             $('#' + activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
@@ -528,11 +587,16 @@
 
             $('.text-banner-header').val('');
             $('.text-banner-sub').val('');
+            */
         });
 
 
+
+        /*
+
         //BANNER COMPONENT EDIT
         $('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
+            alert();
             activeComponent = undefined;
             activeComponent = $(this).closest('li').attr('id');
 
@@ -637,7 +701,7 @@
 
         });
 
-
+*/
 
 
 

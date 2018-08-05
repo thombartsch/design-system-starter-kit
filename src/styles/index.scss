@@ -984,6 +984,11 @@ div.ring {
     width: 50px;
 }
 
+
+.image-holder{
+    min-height: 300px;
+}
+
 //FIXED LAYOUT Page
 #regionEins,
 #regionFuenf,
@@ -1570,4 +1575,279 @@ ul#canvas_list.phone_landscape{
 
 .transparent{
     background: rgba(255,255,255, 0);
+}
+
+
+
+
+//BANNER TEXT
+/*
+.banner-header, .banner-sub{
+color: #fff;
+background: blue;
+padding: 10px;
+text-align: left;
+}
+*/
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+.banner {
+    > .boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/1200/900");
+        background-size: cover;
+        background-position: 50%;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(400 / 1024 * 100%);
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        margin-top: 20%;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        letter-spacing: 1px;
+        float: left;
+
+        @include mq-medium-min {
+            font-size: $font-size-heading-x-large;
+        }
+    }
+
+    .sub {
+        clear: both;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        float: left;
+    }
+}
+
+.square {
+    text-align: center;
+
+    > .boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/900/900");
+        background-size: cover;
+        background-position: 50%;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(800 / 800 * 100%);
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            content: "";
+            background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
+            padding-top: calc(400 / 800 * 100%);
+            z-index: 10;
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        position: relative;
+        margin-top: 65%;
+        margin-bottom: $spacing-small;
+        z-index: 20;
+    }
+
+    .slds-button {
+        position: relative;
+        z-index: 20;
+    }
+}
+
+.rect {
+    > .boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/900/400");
+        background-size: cover;
+        background-position: 50%;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(400 / 800 * 100%);
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        margin-top: 20%;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        float: left;
+
+        @include mq-medium-min {
+            font-size: $font-size-heading-large;
+        }
+    }
+
+    .sub {
+        clear: both;
+        text-align: left;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+        letter-spacing: 1px;
+        float: left;
+    }
+}
+
+.slot {
+    text-align: center;
+
+    > .boxed {
+        position: relative;
+        margin-bottom: $spacing-small;
+        background-image: url("http://placekitten.com/300/600");
+        background-size: cover;
+        background-position: 50%;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(800 / 400 * 100%);
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        margin-top: 120%;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+
+        @include mq-medium-min {
+            font-size: $font-size-heading-large;
+        }
+    }
+
+    .sub {
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+        background-color: $color-background-notification-badge-focus;
+        display: inline-block;
+    }
+}
+
+
+.banner-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5%;
+    text-align: left;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: #005fb2;
+    display: inline-block;
+    letter-spacing: 1px;
+    float: left;
+}
+
+
+.banner-sub {
+    clear: both;
+    text-align: left;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: #005fb2;
+    display: inline-block;
+    float: left;
+}
+
+//HEADER
+.header-banner {
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+.main-menu {
+    background-color: #444;
+}
+
+.main-menu button{
+    color: #fff;
+}
+
+
+/* FOCAL POINT */
+.set-focal-point {
+    /*
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 5px solid white;
+    width: 400px;
+    */
+    height: 200px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.focal-holder {
+    background: #eee no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: background-position 0.3s ease-in-out;
+}
+
+
+//circle
+.circle {
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    border: 2px solid #fff;
+    z-index: 2000;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 47%;
+}
+.circle-in{
+    /*background: red;*/
 }
