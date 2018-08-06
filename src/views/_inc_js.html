@@ -44,8 +44,8 @@
                     var component_type = 'row';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    showProperties(component_type);
                     var activeComponent = $(this).closest('.draggable').attr('id');
+                    showProperties(component_type, activeComponent);
                     console.log('activeComponent is now: '+activeComponent);
                 });
 
@@ -64,8 +64,8 @@
                     var component_type = 'category';
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                    showProperties(component_type);
                     var activeComponent = $(this).closest('.draggable').attr('id');
+                    showProperties(component_type, activeComponent);
                     console.log('activeComponent is now: '+activeComponent);
                 });
 
@@ -455,14 +455,7 @@
 
         //BANNER COMPONENT
         $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
-            console.log('add image called');
             callerComponent = 'banner';
-            //console.log('active component is: '+activeComponent);
-            /*
-            $('.media-picker').toggleClass('slds-hide');
-            $('.mediaselector-component-editor').toggleClass('slds-hide');
-            $('.product-component-editor').addClass('slds-hide');
-            */
             $('.media-picker').toggleClass('slds-hide');
         });
 
@@ -551,43 +544,19 @@
                 $('#' + activeComponent + ' .banner-header').html(banner_header);
                 $('#' + activeComponent + ' .banner-sub').html(banner_sub);
 
-
                 //alert('#'+activeComponent+' .image-holder'+ selected_image);
                 console.log(selected_image);
                 console.log(activeComponent);
-
-
-                /*
-                banner_header = $('.text-banner-header').val();
-                banner_sub = $('.text-banner-sub').val();
-                $('#' + activeComponent + ' .banner-header').html(banner_header);
-                $('#' + activeComponent + ' .banner-sub').html(banner_sub);
-                */
-
-                /*
-                $('.text-banner-header').val('');
-                $('.text-banner-sub').val('');
-                */
-
+            }
+            if (component_type = 'category'){
+                console.log('component type is category');
+                var activeComponent = $('.text-activeComponent').val();
+                console.log('save category');
+            }
+            if (component_type = 'row'){
+                console.log('save row');
             }
 
-
-            /*
-            $('.mediaselector-component-editor').toggleClass('slds-hide');
-            $('#' + activeComponent + ' .image-holder').css('background-image', 'url(' + selected_image + ')');
-            $('#' + activeComponent + ' .image-holder span.no-image').addClass('slds-hide');
-
-            banner_header = undefined;
-            banner_sub = undefined;
-            banner_header = $('.text-banner-header').val();
-            banner_sub = $('.text-banner-sub').val();
-
-            $('#' + activeComponent + ' .banner-header').html(banner_header);
-            $('#' + activeComponent + ' .banner-sub').html(banner_sub);
-
-            $('.text-banner-header').val('');
-            $('.text-banner-sub').val('');
-            */
         });
 
 
