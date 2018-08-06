@@ -677,6 +677,69 @@
 
 
 
+        //PRODUCT PICKER SELECT COMPONENT
+        $('.add-product').click(function() {
+            $('.product-component-editor').toggleClass('slds-hide');
+            $('#cat-pick').toggleClass('slds-hide');
+            //$('.product-picker').toggleClass('slds-hide');
+            /*
+    $('#picker-tabs').toggleClass('slds-hide');
+    $('#tab-default-2').toggleClass('slds-show');
+    $('#select-search').toggleClass('slds-show');
+    $('#combobox-unique-id1').toggleClass('slds-show');
+    */
+
+            return false;
+        });
+
+
+        //FILTER PRODUCT TABLE
+
+        $("#kwd_search").keyup(function() {
+            if ($(this).val() != "") {
+                $("#my-table tbody>tr").hide();
+                $("#my-table td:contains-ci('" + $(this).val() + "')").parent("tr").show();
+            } else {
+                $("#my-table tbody>tr").show();
+            }
+        });
+        $.extend($.expr[":"], {
+            "contains-ci": function(elem, i, match, array) {
+                return (elem.textContent || elem.innerText || $(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+            }
+        });
+
+
+        //SELECT PRODUCT
+        $('.slds-checkbox_faux').click(function() {
+            selected_product_name = undefined;
+            selected_product_brand = undefined;
+            selected_product_price = undefined;
+            selected_product_id = undefined;
+
+
+            selected_product_name = $(this).closest('tr').find('.product-name').html();
+            selected_product_brand = $(this).closest('tr').find('.product-brand').html();
+            selected_product_price = $(this).closest('tr').find('.product-price').html();
+            selected_product_image = $(this).closest('tr').find('.prod_img').attr('src');
+        });
+
+        $('.product-picker button.trigger-save-modal').click(function() {
+
+            $('.product-picker').toggleClass('slds-hide');
+            $('.product-component-editor').toggleClass('slds-hide');
+
+            $('.product-picker div.list-empty').toggleClass('slds-hide');
+            $('.product-picker div.list-full').toggleClass('slds-hide');
+
+            $('.product-link').val(selected_product_name);
+
+
+            return false;
+        });
+
+
+
 
 
 
