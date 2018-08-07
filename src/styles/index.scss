@@ -1851,3 +1851,27 @@ text-align: left;
 .circle-in{
     /*background: red;*/
 }
+
+
+/* EMPTY REGION PLACEHOLDER */
+
+.emptyRegion.emptyRegionPlaceholder {
+    font-family: "Salesforce Sans Regular","SalesforceSans-Regular","Helvetica Neue","HelveticaNeue",Helvetica,sans-serif;
+    padding: 20px;
+    text-align: center;
+    color: #667889;
+    font-size: 14px;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+}
+
+
+.regionName {
+    cursor: default;
+    opacity: 1;
+    color: #667889;
+    font-style: italic;
+    font-weight: 300;
+    transition: opacity .3s ease;
+}
