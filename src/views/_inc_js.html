@@ -2,6 +2,7 @@
     $(document).ready(function() {
         //DRAG DROP MOVE AROUND
         var count = 0;
+        var component_count = 0;
 
         $('.draggable').draggable({
             connectToSortable: '.list',
@@ -20,12 +21,12 @@
                 ui.helper.children('.add-component').fadeOut(600);
                 ui.helper.children('div.component').fadeToggle().toggleClass('slds-hide slds-show');
 
-
-
-
                 //add id to placeholder
                 $(this).addClass('ui-draggable-dragged');
                 ui.helper.attr('id', 'component_placeholder_' + count);
+                $('#emptyRegion').fadeOut(600);
+
+
 
 
                 //add navigator item
@@ -38,7 +39,10 @@
                 $('#navigator_list').append(nav_item);
 
 
+                component_count++
                 count++;
+
+                console.log('aktuelle components in sight: '+component_count);
 
                 $('.list .button-trigger-action--edit-component-row').click(function() {
                     var component_type = 'row';
@@ -141,6 +145,13 @@
                         $('#modal-id-4-delete').addClass('slds-hide');
                         activeComponentPlaceholder = undefined;
                         activeNavigationPlaceholder = undefined;
+
+                        component_count = component_count -1;
+
+                        if(component_count < 1){
+                            console.log('now please show placeholder');
+                        }
+
 
                         if ($('#canvas_list > li.draggable').length != 0) {} else {
                             $('.component_properties').addClass('slds-hide');

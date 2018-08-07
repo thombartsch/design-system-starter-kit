@@ -984,8 +984,7 @@ div.ring {
     width: 50px;
 }
 
-
-.image-holder{
+.image-holder {
     min-height: 300px;
 }
 
@@ -1348,7 +1347,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     transition: width 0.5s ease-in-out;
 }
 
-.left_collapsed span.component_name{
+.left_collapsed span.component_name {
     display: none;
 }
 
@@ -1462,11 +1461,13 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 #canvas_list {
     height: 100%;
     width: 100%;
+    min-height: 30px;
 }
 
 #builder {
     height: 100%;
 }
+
 
 /*
 .sortable-hover {
@@ -1519,68 +1520,66 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 div.slds-hide,
 span.slds-hide,
 li.slds-hide,
-button.slds-hide
-{
+button.slds-hide {
     opacity: 0;
-    transition:all 1s;
+    transition: all 1s;
 }
+
 div,
 span,
 li,
-button{
+button {
     opacity: 1;
-    transition:all 0.5s;
+    transition: all 0.5s;
 }
 
-
-#canvas{
+#canvas {
     text-align: center;
 }
 
-
-
-ul#canvas_list.desktop{
-    width:100%;
-    transition:all 0.5s;
-}
-ul#canvas_list.tablet_portrait{
-    width:768px;
-    transition:all 0.5s;
-}
-ul#canvas_list.tablet_landscape{
-    width:1024px;
-    transition:all 0.5s;
-}
-ul#canvas_list.phone_portrait{
-    width:320px;
-    transition:all 0.5s;
-}
-ul#canvas_list.phone_landscape{
-    width:568px;
-    transition:all 0.5s;
+ul#canvas_list.desktop {
+    width: 100%;
+    transition: all 0.5s;
 }
 
-.component{
+ul#canvas_list.tablet_portrait {
+    width: 768px;
+    transition: all 0.5s;
+}
+
+ul#canvas_list.tablet_landscape {
+    width: 1024px;
+    transition: all 0.5s;
+}
+
+ul#canvas_list.phone_portrait {
+    width: 320px;
+    transition: all 0.5s;
+}
+
+ul#canvas_list.phone_landscape {
+    width: 568px;
+    transition: all 0.5s;
+}
+
+.component {
     padding: 10px;
 }
 
-.component-preview{
+.component-preview {
     padding: none;
 }
 
-
-.white{
-    background: rgba(255,255,255,1.0);
+.white {
+    background: rgba(255, 255, 255, 1.0);
 }
 
-.transparent{
-    background: rgba(255,255,255, 0);
+.transparent {
+    background: rgba(255, 255, 255, 0);
 }
-
-
-
 
 //BANNER TEXT
+
 /*
 .banner-header, .banner-sub{
 color: #fff;
@@ -1600,13 +1599,12 @@ text-align: left;
 }
 
 .banner {
-    > .boxed {
+    >.boxed {
         position: relative;
         margin-bottom: $spacing-small;
         background-image: url("http://placekitten.com/1200/900");
         background-size: cover;
         background-position: 50%;
-
         &::before {
             display: block;
             content: "";
@@ -1614,11 +1612,9 @@ text-align: left;
             padding-top: calc(400 / 1024 * 100%);
         }
     }
-
     .title {
         font-weight: bold;
         text-transform: uppercase;
-
         margin-top: 20%;
         text-align: left;
         padding-left: $spacing-small;
@@ -1627,12 +1623,10 @@ text-align: left;
         display: inline-block;
         letter-spacing: 1px;
         float: left;
-
         @include mq-medium-min {
             font-size: $font-size-heading-x-large;
         }
     }
-
     .sub {
         clear: both;
         text-align: left;
@@ -1646,21 +1640,18 @@ text-align: left;
 
 .square {
     text-align: center;
-
-    > .boxed {
+    >.boxed {
         position: relative;
         margin-bottom: $spacing-small;
         background-image: url("http://placekitten.com/900/900");
         background-size: cover;
         background-position: 50%;
-
         &::before {
             display: block;
             content: "";
             width: 100%;
             padding-top: calc(800 / 800 * 100%);
         }
-
         &::after {
             position: absolute;
             bottom: 0;
@@ -1668,12 +1659,11 @@ text-align: left;
             width: 100%;
             display: block;
             content: "";
-            background: linear-gradient(to bottom, transparent 0%,rgba(0, 0, 0, 0.2) 50%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 50%);
             padding-top: calc(400 / 800 * 100%);
             z-index: 10;
         }
     }
-
     .title {
         font-weight: bold;
         position: relative;
@@ -1681,7 +1671,6 @@ text-align: left;
         margin-bottom: $spacing-small;
         z-index: 20;
     }
-
     .slds-button {
         position: relative;
         z-index: 20;
@@ -1689,13 +1678,12 @@ text-align: left;
 }
 
 .rect {
-    > .boxed {
+    >.boxed {
         position: relative;
         margin-bottom: $spacing-small;
         background-image: url("http://placekitten.com/900/400");
         background-size: cover;
         background-position: 50%;
-
         &::before {
             display: block;
             content: "";
@@ -1703,7 +1691,6 @@ text-align: left;
             padding-top: calc(400 / 800 * 100%);
         }
     }
-
     .title {
         font-weight: bold;
         margin-top: 20%;
@@ -1713,12 +1700,10 @@ text-align: left;
         background-color: $color-background-notification-badge-focus;
         display: inline-block;
         float: left;
-
         @include mq-medium-min {
             font-size: $font-size-heading-large;
         }
     }
-
     .sub {
         clear: both;
         text-align: left;
@@ -1733,14 +1718,12 @@ text-align: left;
 
 .slot {
     text-align: center;
-
-    > .boxed {
+    >.boxed {
         position: relative;
         margin-bottom: $spacing-small;
         background-image: url("http://placekitten.com/300/600");
         background-size: cover;
         background-position: 50%;
-
         &::before {
             display: block;
             content: "";
@@ -1748,7 +1731,6 @@ text-align: left;
             padding-top: calc(800 / 400 * 100%);
         }
     }
-
     .title {
         font-weight: bold;
         margin-top: 120%;
@@ -1756,12 +1738,10 @@ text-align: left;
         padding-right: $spacing-small;
         background-color: $color-background-notification-badge-focus;
         display: inline-block;
-
         @include mq-medium-min {
             font-size: $font-size-heading-large;
         }
     }
-
     .sub {
         padding-left: $spacing-small;
         padding-right: $spacing-small;
@@ -1769,7 +1749,6 @@ text-align: left;
         display: inline-block;
     }
 }
-
 
 .banner-header {
     font-weight: bold;
@@ -1783,7 +1762,6 @@ text-align: left;
     letter-spacing: 1px;
     float: left;
 }
-
 
 .banner-sub {
     clear: both;
@@ -1802,16 +1780,18 @@ text-align: left;
     color: #fff;
     padding: 10px;
 }
+
 .main-menu {
     background-color: #444;
 }
 
-.main-menu button{
+.main-menu button {
     color: #fff;
 }
 
 
 /* FOCAL POINT */
+
 .set-focal-point {
     /*
     position: absolute;
@@ -1835,11 +1815,10 @@ text-align: left;
     transition: background-position 0.3s ease-in-out;
 }
 
-
 //circle
 .circle {
     border-radius: 50%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     border: 2px solid #fff;
     z-index: 2000;
     position: absolute;
@@ -1848,7 +1827,8 @@ text-align: left;
     left: 50%;
     top: 47%;
 }
-.circle-in{
+
+.circle-in {
     /*background: red;*/
 }
 
@@ -1856,7 +1836,7 @@ text-align: left;
 /* EMPTY REGION PLACEHOLDER */
 
 .emptyRegion.emptyRegionPlaceholder {
-    font-family: "Salesforce Sans Regular","SalesforceSans-Regular","Helvetica Neue","HelveticaNeue",Helvetica,sans-serif;
+    font-family: "Salesforce Sans Regular", "SalesforceSans-Regular", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
     padding: 20px;
     text-align: center;
     color: #667889;
@@ -1865,7 +1845,6 @@ text-align: left;
     display: flex;
     justify-content: center;
 }
-
 
 .regionName {
     cursor: default;
