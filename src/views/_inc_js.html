@@ -280,10 +280,10 @@
         function showNavigation() {
         }
         function showProperties(component_type, activeComponent) {
-            /*
+
             console.log('called editor and now the activeComponent is: '+activeComponent);
             console.log('called editor and now the component_type is: '+component_type);
-            */
+
             $('#panel_editor .component_properties').addClass('slds-hide');
             $('#editor_' + component_type).removeClass('slds-hide');
             $('#editor_' + component_type).addClass('slds-show');
@@ -496,11 +496,13 @@
 
 
         $('.media-component-editor button.trigger-save-modal').click(function() {
+            alert();
+            activeComponent = $('.text-active-component').val();
             selected_text = $('.slds-rich-text-area__content').html();
             selected_header = $('.slds-input-header').val();
             $('#' + activeComponent + ' .text-holder').html(selected_text);
             $('#' + activeComponent + ' .header-holder').html(selected_header);
-
+            console.log('the active component: '+activeComponent);
             return false;
         });
 
@@ -543,29 +545,24 @@
         $('#panel_editor .trigger-save-modal').click(function(selected_image) {
 
             if (component_type = 'banner'){
-                var activeComponent = $('.text-activeComponent').val();
-                var selected_image = $('.file-name').text();
+                var activeComponent =   $('#editor_banner .text-activeComponent').val();
+                var selected_image =    $('#editor_banner .file-name').text();
+
                 $('#'+activeComponent+' .component .placeholder').addClass('slds-hide');
                 $('#'+activeComponent+' .component .image-holder').removeClass('slds-hide');
 
                 $('#'+activeComponent+' .component .image-holder').css('background-image', 'url(' + selected_image + ')');
+                $('#'+activeComponent+' .component .image-holder').attr('src', selected_image);
 
-                banner_header = $('.text-banner-header').val();
-                banner_sub = $('.text-banner-sub').val();
+                banner_header = $('#editor_banner .text-banner-header').val();
+                banner_sub = $('#editor_banner .text-banner-sub').val();
                 $('#' + activeComponent + ' .banner-header').html(banner_header);
                 $('#' + activeComponent + ' .banner-sub').html(banner_sub);
-
-                //alert('#'+activeComponent+' .image-holder'+ selected_image);
-                console.log(selected_image);
-                console.log(activeComponent);
             }
             if (component_type = 'category'){
-                console.log('component type is category');
                 var activeComponent = $('.text-activeComponent').val();
-                console.log('save category');
             }
             if (component_type = 'row'){
-                console.log('save row');
             }
 
         });

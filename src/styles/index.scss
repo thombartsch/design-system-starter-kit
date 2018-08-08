@@ -986,6 +986,8 @@ div.ring {
 
 .image-holder {
     min-height: 300px;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 //FIXED LAYOUT Page
@@ -1853,4 +1855,8 @@ text-align: left;
     font-style: italic;
     font-weight: 300;
     transition: opacity .3s ease;
+}
+
+#canvas>div {
+    height: 100%;
 }
