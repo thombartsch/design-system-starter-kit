@@ -985,8 +985,10 @@ div.ring {
 }
 
 .image-holder {
+    /*
     min-height: 300px;
     max-height: 400px;
+    */
     overflow: hidden;
 }
 
@@ -1565,7 +1567,7 @@ ul#canvas_list.phone_landscape {
 }
 
 .component {
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .component-preview {
@@ -1810,11 +1812,17 @@ text-align: left;
     background: #eee no-repeat center center;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     top: 0;
     left: 0;
-    position: absolute;
+    /*position: absolute;*/
+    position: relative;
     transition: background-position 0.3s ease-in-out;
+    height: 200px;
+}
+
+img.image-holder{
+  display:none;
 }
 
 //circle
@@ -1859,4 +1867,21 @@ text-align: left;
 
 #canvas>div {
     height: 100%;
+}
+
+#popover_page-list {
+    top: 60px;
+    left: 370px;
+    position: absolute;
+}
+
+#popover-preview-settings {
+    z-index: 10000000;
+    position: absolute;
+    top: 98px;
+    right: 177px;
+}
+
+#component_list li{
+  padding-bottom: 0.75rem;
 }

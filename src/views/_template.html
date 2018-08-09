@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" class="list-view">
 
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.: BUILDER :.</title>
-    <meta name="robots" content="noindex, nofollow"/>
-    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Prototype styles -->
-    <link rel="stylesheet" href="/styles/index.css"/>
+    <link rel="stylesheet" href="/styles/index.css" />
 
-  </head>
+</head>
 
-  <body>
+<body>
+    {% include "_inc_builder-popover-previewsettings.html" %}
     <main class="app-wrapper">
-        {% include "_inc_builder-popover-previewsettings.html" %}
-        {% include "_inc_modal-delete-component-4.html" %}
-        {% include "_inc_modal_media-picker.html" %}
-        {% include "_inc_modal_category-picker.html" %}
+        {% include "_inc_modal-delete-component-4.html" %} {% include "_inc_modal_media-picker.html" %} {% include "_inc_modal_category-picker.html" %} {% include "_inc_modal_page-settings.html" %}
 
-      <!-- BUILDER HEADER -->
-      {% include "_inc_builder-header.html" %}
-      <!-- /BUILDER HEADER -->
+        <!-- BUILDER HEADER -->
+        {% include "_inc_builder-header.html" %}
+        <!-- /BUILDER HEADER -->
 
-      <div id="builder" class="slds-grid slds-col">
-        <div id="panel_editor" class="slds-hide modal">
-          <!-- PANEL EDITOR RIGHT -->
-          {% include "_inc_builder-panel-editor.html" %}
-          <!-- /PANEL EDITOR  RIGHT -->
-        </div>
-        <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
-          <!-- PANEL LEFT -->
-          {% include "_inc_builder-panel-left.html" %}
-          <!-- /PANEL LEFT -->
-        </div>
-        <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y">
-            <div class="slds-align_absolute-center">
-                <!-- CANVAS -->
-                <ul id="canvas_list" class="list slds-drop-zone slds-list_vertical-space white">
-                    <li class="emptyRegion" id="emptyRegion">
-                        <div class="regionName">Content</div>
-                    </li>
-                </ul>
-                <!-- /CANVAS -->
+        <div id="builder" class="slds-grid slds-col">
+            <div id="panel_editor" class="slds-hide modal">
+                <!-- PANEL EDITOR RIGHT -->
+                {% include "_inc_builder-panel-editor.html" %}
+                <!-- /PANEL EDITOR  RIGHT -->
+            </div>
+            <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
+                <!-- PANEL LEFT -->
+                {% include "_inc_builder-panel-left.html" %}
+                <!-- /PANEL LEFT -->
+            </div>
+            <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y">
+                <div class="slds-align_absolute-center">
+                    <!-- CANVAS -->
+                    <ul id="canvas_list" class="list slds-drop-zone slds-list_vertical-space white">
+                        <li></li>
+                    </ul>
+                    <!-- /CANVAS -->
+                </div>
+            </div>
+            <div id="panel_right">
+                <!-- PANEL RIGHT -->
+                {% include "_inc_builder-panel-right.html" %}
+                <!-- /PANEL RIGHT -->
             </div>
         </div>
-        <div id="panel_right">
-          <!-- PANEL RIGHT -->
-          {% include "_inc_builder-panel-right.html" %}
-          <!-- /PANEL RIGHT -->
-        </div>
-      </div>
     </main>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/vendor/svg4everybody.min.js"></script>
     <script>
-      svg4everybody();
+        svg4everybody();
     </script>
 
 
@@ -66,6 +62,6 @@
     {% include '_inc_js.html' %}
     <!-- /JAVASCRIPT -->
 
-  </body>
+</body>
 
 </html>

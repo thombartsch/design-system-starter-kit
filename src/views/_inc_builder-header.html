@@ -16,37 +16,41 @@
             <nav class="slds-builder-header__item slds-builder-header__nav">
                 <ul class="slds-builder-header__nav-list">
                     <li class="slds-builder-header__nav-item">
-                        <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center">
+                        <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center" id="js-trigger-page-settings">
                             <span class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-utility-settings slds-current-color">
-                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"/>
-                  </svg>
-                </span>
+                                <span class="slds-icon_container slds-icon-utility-settings slds-current-color">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"/>
+                                    </svg>
+                                </span>
                             </span>
                             <span class="slds-media__body">
-                <span class="slds-truncate" title="Settings">Page Settings</span>
+                                <span class="slds-truncate" title="Settings">Page Settings</span>
                             </span>
                         </a>
                     </li>
                     <li class="slds-builder-header__nav-item">
-                        <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" title="Click to open menu">
-              <span class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-utility-page slds-current-color">
-                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#page"/>
-                  </svg>
-                </span>
-              </span>
-              <span class="slds-media__body">
-                <span class="slds-truncate" title="Dropdown">Page Name</span>
-                <span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
-                  <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"/>
-                  </svg>
-                </span>
-              </span>
-            </button>
+                        <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" id="js-trigger-page-list" title="Click to open menu">
+                            <span class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-utility-page slds-current-color">
+                                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#page"/>
+                                </svg>
+                                </span>
+                            </span>
+                            <span class="slds-media__body">
+                                <span class="slds-truncate" title="Dropdown">Page Name</span>
+                                <span class="slds-icon_container slds-icon-utility-chevrondown slds-current-color slds-m-left_small">
+                                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"/>
+                                </svg>
+                                </span>
+                            </span>
+                        </button> {% include "_inc_builder-popover_page-list.html"%}
+
+
+
+
                     </li>
                 </ul>
             </nav>
@@ -95,38 +99,41 @@
             </div>
             <div class="slds-col slds-text-align_center">
 
-<div class="slds-button-group" role="group">
-    <button class="slds-button slds-button_neutral" id="trigger-preview-desktop">
+                <div class="slds-button-group" role="group">
+                    <button class="slds-button slds-button_neutral" id="trigger-preview-desktop">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_landscape">
+                    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_landscape">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
         </svg><!-- Tablet -->
     </button>
-    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_portrait">
+                    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_portrait">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_portrait"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_landscape">
+                    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_landscape">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_landscape"></use>
         </svg><!-- Desktop -->
     </button>
-    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_portrait">
+                    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_portrait">
         <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
         </svg><!-- Desktop -->
     </button>
-</div>
+                </div>
 
 
             </div>
-            <div class="slds-builder-toolbar__actions" aria-label="Document actions">
+            <div class="slds-text-align_right slds-p-right_small" style="width:200px;">
                 <button class="slds-button" id="status_txt" 2disabled>Saved 1min ago.</button>
+            </div>
+
+            <div class="slds-builder-toolbar__actions" aria-label="Document actions">
                 <div class="slds-button-group">
                     <button id="trigger-preview-options" class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="More Options">
                       <svg class="slds-button__icon" aria-hidden="true">
