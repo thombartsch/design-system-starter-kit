@@ -11,6 +11,7 @@
                 $('.ui-draggable').not(ui.helper.css('z-index', '1')).css('z-index', '0');
                 $('.ui-draggable').css('height', 'auto');
                 ui.helper.children('.component').fadeOut(600);
+                console.log('start');
 
             },
 
@@ -32,8 +33,9 @@
 
             stop: function(event, ui) {
                 var navtxt = $(ui.helper).attr('title');
+                console.log('end');
 
-                savingAnimation();
+                //savingAnimation();
                 ui.helper.css('width', '100%');
                 ui.helper.children('.add-component').fadeOut(600);
                 ui.helper.children('div.component').fadeToggle().toggleClass('slds-hide slds-show');
@@ -41,7 +43,7 @@
                 //add id to placeholder
                 $(this).addClass('ui-draggable-dragged');
                 ui.helper.attr('id', 'component_placeholder_' + count);
-                $('#emptyRegion').fadeOut(600);
+                //$('#emptyRegion').fadeOut(600);
 
 
 
@@ -230,6 +232,7 @@
             },
             stop: function(event, ui, ) {
                 newIndex = ui.item.index();
+                newIndex = newIndex - 1;
                 console.log('new index is: '+newIndex);
                 var str = ui.item.attr('id');
                 var listitem = str.split("component_placeholder_");
@@ -301,11 +304,13 @@
 
         //SAVING ANIMATION
         function savingAnimation() {
+            $('#status_txt').css('opacity','1');
             $('#status_txt').delay(500).fadeOut(1000, function() {
                 $('#status_txt').text('Saving ...');
             }).fadeIn(1000).delay(500).fadeOut(1000, function() {
                 $('#status_txt').text('Saved');
             }).fadeIn(1000);
+            $('#status_txt').css('opacity','0.5');
         }
 
 
@@ -484,7 +489,7 @@
 
             //now open editor
             activeComponent = undefined;
-            activeComponent = $(component_placeholder).attr('id');
+            activeComponent = $(this).closest('li').attr('id');
 
             //add 1 to component count
             regionlimit = $('#' + closest_region + '_links .region_limit').text();
