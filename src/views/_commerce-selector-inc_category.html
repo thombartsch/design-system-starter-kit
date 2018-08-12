@@ -14,11 +14,11 @@
                     <ul>
                         <legend>Category Link</legend>
                         <li class="slds-p-bottom_small">
+                            <!--
                             <div class="slds-form-element">
                                 <label class="slds-form-element__label" for="text-input-id-1">Selected Category</label>
                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
                                     <input type="text" id="" class="slds-input product-link" placeholder="">
-                                    <!--button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon add-product"-->
                                     <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon add-product">
                                         <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#add_relationship"></use>
@@ -26,7 +26,32 @@
                                         <span class="slds-assistive-text">Clear</span>
                                     </button>
                                 </div>
+                                <div>
+                                    <button class="slds-button slds-button_icon add-product">
+                                        <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#add_relationship"></use>
+                                        </svg>Select Category ...
+                                        <span class="slds-assistive-text">Clear</span>
+                                    </button>
+                                </div>
                             </div>
+                            -->
+
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element__row slds-grid">
+                                    <div class="slds-form-element slds-size_10-of-12">
+                                        <input type="text" id="" class="slds-input product-link" placeholder="">
+                                    </div>
+                                    <div class="slds-form-element slds-size_2-of-12 slds-text-align_right">
+                                        <button class="slds-button slds-button_neutral add-product slds-p-left_small">
+                                            ...
+                                            <span class="slds-assistive-text">Clear</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </li>
                         <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Text Blocks</legend>
                         <li class="slds-p-bottom_small">

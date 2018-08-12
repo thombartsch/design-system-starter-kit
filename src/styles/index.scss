@@ -1821,8 +1821,8 @@ text-align: left;
     height: 200px;
 }
 
-img.image-holder{
-  display:none;
+img.image-holder {
+    display: none;
 }
 
 //circle
@@ -1882,6 +1882,14 @@ img.image-holder{
     right: 177px;
 }
 
-#component_list li{
-  padding-bottom: 0.75rem;
+#component_list li {
+    padding-bottom: 0.75rem;
+}
+
+li.nav .trash {
+    display: none;
+}
+
+li.nav:hover .trash {
+    display: block;
 }
