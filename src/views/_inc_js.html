@@ -141,9 +141,13 @@
                     showProperties(component_type, activeComponent);
                 });
 
-                $('.button-trigger-action--edit-component-category').click(function() {
+                $('.button-trigger-action--edit-component-category').click(function() {                    
                     var component_type = 'category';
                     $('#string_editor').html('Category');
+
+
+                    $('input.text-banner-header-product').val('');
+                    $('input.product-link').val('');
 
                     $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                     $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
