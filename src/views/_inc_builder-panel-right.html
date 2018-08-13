@@ -1,18 +1,6 @@
 <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false">
     <div class="slds-panel__header slds-p-top_none slds-p-left_none slds-p-right_none slds-p-bottom_none">
         <h2 class="slds-panel__header-title slds-text-heading_small slds-p-around_small slds-p-left_none">Page Structure</h2>
-            {#
-        <div class="slds-tabs_default">
-            <ul class="slds-tabs_default__nav" role="tablist">
-                <li class="slds-tabs_default__item slds-hide" title="Properties" role="presentation" id="tab_prop">
-                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-properties" id="tab-nav-properties__item">Properties</a>
-                </li>
-                <li class="slds-tabs_default__item slds-is-active" title="Navigator" role="presentation" id="tab_nav">
-                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-navigator" id="tab-nav-navigator__item">Navigator</a>
-                </li>
-            </ul>
-        </div>
-            #}
         <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small" title="Close Filter Panel">
       <svg class="slds-button__icon" aria-hidden="true">
         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
@@ -22,24 +10,99 @@
     </div>
     <div class="slds-panel__body">
         <div id="tab-properties" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-nav-properties__item"></div>
-        <div id="tab-navigator" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-nav-navigator__item">
-        </div>
-        <!--ul>
-          <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
-              <div class="slds-tree__item">
-                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
-                  </svg>
-                  <span class="slds-assistive-text">Expand Tree Branch</span>
-                </button>
-                <span class="slds-size_1-of-1">
-                  <span class="slds-tree__item-label slds-truncate" title="Content">Content</span>
-                </span>
-              </div>
+        <div id="tab-navigator" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-nav-navigator__item"></div>
+
+        <ul class="slds-tree" role="tree" aria-labelledby="treeheading" id="tree-header">
+            <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                <div class="slds-tree__item">
+                    <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                        </svg>
+                        <span class="slds-assistive-text">Expand</span>
+                    </button>
+                    <span class="slds-size_1-of-1">
+                        <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Page Header
+                        <svg class="slds-icon slds-icon-text-default slds-icon_xx-small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#lock"></use>
+                        </svg>
+                    </span>
+                </div>
+                <ul role="group">
+                    <li role="treeitem" aria-level="2" aria-selected="false">
+                    <div class="slds-tree__item">
+                        <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
+                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                            </svg>
+                            <span class="slds-assistive-text">Expand</span>
+                        </button>
+                        <span class="slds-size_1-of-1">
+                            <span class="slds-tree__item-label slds-truncate" title="Tree Item">Navigation</span>
+                        </span>
+                    </div>
+                    </li>
+                </ul>
             </li>
-        </ul-->
-        <ul role="group" class="slds-has-dividers_bottom-space" id="navigator_list"></ul>
+        </ul>
+
+        
+
+        <ul class="slds-tree" role="tree" aria-labelledby="treeheading">
+            <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                <div class="slds-tree__item">
+                    <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                        </svg>
+                        <span class="slds-assistive-text">Expand</span>
+                    </button>
+                    <span class="slds-size_1-of-1">
+                        <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Content</span>
+                    </span>
+                </div>
+                <ul role="group" class="slds-has-dividers_bottom-space" id="navigator_list"></ul>
+            </li>
+        </ul>
+
+
+
+
+        <ul class="slds-tree" role="tree" aria-labelledby="treeheading" id="tree-footer">
+            <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                <div class="slds-tree__item">
+                    <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                        <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                        </svg>
+                        <span class="slds-assistive-text">Expand</span>
+                    </button>
+                    <span class="slds-size_1-of-1">
+                        <span class="slds-tree__item-label slds-truncate" title="">Page Footer
+                        <svg class="slds-icon slds-icon-text-default slds-icon_xx-small" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#lock"></use>
+                        </svg>
+                    </span>
+                </div>
+                <ul role="group">
+                    <li role="treeitem" aria-level="2" aria-selected="false">
+                    <div class="slds-tree__item">
+                        <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
+                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+                            </svg>
+                            <span class="slds-assistive-text">Expand</span>
+                        </button>
+                        <span class="slds-size_1-of-1">
+                            <span class="slds-tree__item-label slds-truncate" title="Tree Item">Static Footer Content</span>
+                        </span>
+                    </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
     </div>
 
 </div>

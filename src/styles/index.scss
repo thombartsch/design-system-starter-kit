@@ -1894,6 +1894,16 @@ li.nav:hover .trash {
     display: block;
 }
 
-#canvas_list li:nth-child(1) {
-    padding-top: 20px;
+button.call-to-action {
+    top: 70%;
+}
+
+li.nav,
+li.nav-hover {
+    padding: 0 !important
+}
+
+#tree-header,
+#tree-footer {
+    opacity: 0.6;
 }
