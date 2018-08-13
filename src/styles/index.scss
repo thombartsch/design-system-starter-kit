@@ -1893,3 +1893,7 @@ li.nav .trash {
 li.nav:hover .trash {
     display: block;
 }
+
+#canvas_list li:nth-child(1) {
+    padding-top: 20px;
+}
