@@ -322,7 +322,7 @@
             revert: true,
             placeholder: 'ui-sortable-helper',
             start: function(event, ui) {
-                list_width = $('#canvas_list').width();
+                list_width = $('#canvas_list, #static_header').width();
                 oldIndex = ui.item.index();
                 console.log('old index was: '+oldIndex);
                 ui.helper.css('height', 'auto');
@@ -355,48 +355,27 @@
 
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_landscape');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_landscape');
-            $('#canvas_list').removeClass('phone_portrait');
-            $('#canvas_list').addClass('desktop');
-            return false;
-        });
-        $('#trigger-preview-tablet_landscape').click(function() {
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_landscape');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_landscape');
-            $('#canvas_list').removeClass('phone_portrait');
-            $('#canvas_list').addClass('tablet_landscape');
+            console.log('trigger desktop resolution');
+            $('#canvas_list, #static_header').removeClass('desktop');
+            $('#canvas_list, #static_header').removeClass('tablet_portrait');
+            $('#canvas_list, #static_header').removeClass('phone_portrait');
+            $('#canvas_list, #static_header').addClass('desktop');
             return false;
         });
         $('#trigger-preview-tablet_portrait').click(function() {
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_landscape');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_landscape');
-            $('#canvas_list').removeClass('phone_portrait');
-            $('#canvas_list').addClass('tablet_portrait');
-            return false;
-        });
-        $('#trigger-preview-phone_landscape').click(function() {
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_landscape');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_landscape');
-            $('#canvas_list').removeClass('phone_portrait');
-            $('#canvas_list').addClass('phone_landscape');
+            console.log('trigger tablet portrait resolution');
+            $('#canvas_list, #static_header').removeClass('desktop');
+            $('#canvas_list, #static_header').removeClass('tablet_portrait');
+            $('#canvas_list, #static_header').removeClass('phone_portrait');
+            $('#canvas_list, #static_header').addClass('tablet_portrait');
             return false;
         });
         $('#trigger-preview-phone_portrait').click(function() {
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_landscape');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_landscape');
-            $('#canvas_list').removeClass('phone_portrait');
-            $('#canvas_list').addClass('phone_portrait');
+            console.log('trigger phone portrait resolution');
+            $('#canvas_list, #static_header').removeClass('desktop');
+            $('#canvas_list, #static_header').removeClass('tablet_portrait');
+            $('#canvas_list, #static_header').removeClass('phone_portrait');
+            $('#canvas_list, #static_header').addClass('phone_portrait');
             return false;
         });
 
@@ -610,6 +589,7 @@
         $('.mediaselector-component-editor .image-figure, .add-image').click(function() {
             callerComponent = 'banner';
             $('.media-picker').toggleClass('slds-hide');
+            $('.image_chooser').toggleClass('slds-hide');
         });
 
         $('.media-component button.js-trigger-edit-component').click(function() {
@@ -664,19 +644,19 @@
             $('#editor_banner .image-figure-thumb').attr('src', selected_image);
             $('#editor_banner .file-name').text(selected_image);
             $('.picker').addClass('slds-hide');
-            $('.circle').toggleClass('slds-hide');
+            //$('.circle').toggleClass('slds-hide');
             /*
             if (callerComponent == 'banner') {
                 $('#editor_banner .image-figure-thumb').attr('src', selected_image);
                 $('#editor_banner .file-name').text(selected_image);
                 $('.picker').addClass('slds-hide');
-                $('.circle').toggleClass('slds-hide');
+                //$('.circle').toggleClass('slds-hide');
                 //$('.mediaselector-component-editor').toggleClass('slds-hide');
             } else {
                 $('#editor_banner .image-figure-thumb').attr('src', selected_image);
                 $('#editor_banner .file-name').text(selected_image);
                 $('.picker').addClass('slds-hide');
-                $('.circle').toggleClass('slds-hide');
+                //$('.circle').toggleClass('slds-hide');
                 $('.product-component-editor').toggleClass('slds-hide');
 
             }
@@ -1052,10 +1032,60 @@
 
 
         //POPOVER PREVIEW SETTINGS
-        $('#trigger-preview-options').click(function() {
-            $('#popover-preview-settings').toggleClass('slds-hide');
+        $('#trigger-show-customer-groups').click(function() {
+            $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-date').addClass('slds-hide');
+            $('#popover-more').addClass('slds-hide');
+
+            new Tether({
+                element:            '.tether-box',
+                target:             '.trigger-tether',
+                attachment:         'bottom left',
+                targetAttachment:   'bottom left',
+                targetModifier:     'visible',
+                offset:             '-10px 6px',
+            });
+            $('#popover-customer-groups').toggleClass('slds-hide');
             return false;
         });
+        $('#trigger-show-date').click(function() {
+            $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-date').addClass('slds-hide');
+            $('#popover-more').addClass('slds-hide');
+
+            new Tether({
+                element:            '.tether-boxB',
+                target:             '.trigger-tetherB',
+                attachment:         'bottom left',
+                targetAttachment:   'bottom left',
+                targetModifier:     'visible',
+                offset:             '-10px 6px',
+            });
+            $('#popover-date').toggleClass('slds-hide');
+            return false;
+        });
+
+
+        $('#trigger-show-more').click(function() {
+            $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-date').addClass('slds-hide');
+            $('#popover-more').addClass('slds-hide');
+
+            new Tether({
+                element:            '.tether-boxC',
+                target:             '.trigger-tetherC',
+                attachment:         'bottom left',
+                targetAttachment:   'bottom left',
+                targetModifier:     'visible',
+                offset:             '-10px 6px',
+            });
+            $('#popover-more').toggleClass('slds-hide');
+            return false;
+        });
+
+
+
+
         $('#trigger-preview').click(function() {
             $('#panel_left').toggleClass('slds-hide');
             $('#panel_right').toggleClass('slds-hide');
@@ -1063,8 +1093,8 @@
             $('.component').toggleClass('component component-preview');
             $('#trigger-preview').toggleClass('slds-hide');
             $('#trigger-edit').toggleClass('slds-hide');
-            $('#canvas_list').toggleClass('slds-drop-zone');
-            $('#canvas_list').toggleClass('white transparent');
+            $('#canvas_list, #static_header').toggleClass('slds-drop-zone');
+            $('#canvas_list, #static_header').toggleClass('white transparent');
             return false;
         });
         $('#trigger-edit').click(function() {
@@ -1074,8 +1104,8 @@
             $('.component-preview').toggleClass('component-preview component');
             $('#trigger-preview').toggleClass('slds-hide');
             $('#trigger-edit').toggleClass('slds-hide');
-            $('#canvas_list').toggleClass('slds-drop-zone');
-            $('#canvas_list').toggleClass('transparent white');
+            $('#canvas_list, #static_header').toggleClass('slds-drop-zone');
+            $('#canvas_list, #static_header').toggleClass('transparent white');
 
             return false;
         });
@@ -1146,6 +1176,53 @@
 
 
 
+
+
+        //DROPBOX Chooser
+        $('.dropbox_chooser').click(function() {
+        $('.image_chooser').toggleClass('slds-hide');
+        options = {
+            success: function(files) {
+                //alert("Here's the file link: " + files[0].link)
+                //$('.image-figure-thumb').appendChild(li).appendChild(a).appendChild(img);
+                var selected_image = files[0].link;
+
+                if (selected_image.indexOf("?") > 0) {
+                        var clean_image = selected_image.substring(0, selected_image.indexOf("?"));
+                    selected_image = clean_image+'?raw=1';
+                    $('.image-figure-thumb').attr('src', selected_image);
+                    $('.file-name').html(selected_image);
+                    $('.file-name').attr('title',selected_image);
+
+                    //alert(image);
+                    //selected_image = undefined;
+                    }
+                linkType: "preview";
+                multiselect: false;
+                extensions: ['png','jpg']
+            },
+        }
+        console.log('call dropbox');
+        Dropbox.choose(options);
+        });
+
+
+        $('.open-menu-select').click(function() {
+            $('.image_chooser').toggleClass('slds-hide');
+        });
+
+
+        //TODAY' DATE
+        var d = new Date();
+
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+
+        var output = d.getFullYear() + '/' +
+            ((''+month).length<2 ? '0' : '') + month + '/' +
+            ((''+day).length<2 ? '0' : '') + day;
+        $('input.display-filter').attr('placeholder', output);
+        console.log('date is: '+output);
         //- end js
 
     });

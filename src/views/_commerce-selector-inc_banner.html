@@ -41,11 +41,71 @@
                           <div class="slds-file slds-file_card">
                             <figure class="">
                               <div class="slds-file__crop set-focal-point">
-                                  <div class="circle slds-hide">
+                                  <div class="circle">
                                     <div class="circle-in" class="circle"></div>
                                   </div>
                                   <img src="/assets/placeholder.png" alt="" class="image-figure-thumb" style="font-size: 39px;" />
                               </div>
+
+
+
+                                              <figcaption class="slds-file__title slds-file__title_card">
+                                                  <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
+                                                      <div class="slds-media__body slds-col slds-media__body slds-col slds-truncate slds-truncate_container_25">
+                                                        <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
+                                                      </div>
+                                                      <div class="slds-media__figure slds-p-left--large">
+                                                          <div class="slds-text-align_center">
+                                                              
+
+                                                              <div class="slds-file__actions-menu">
+                                                                   <div class="slds-button-group" role="group">
+                                                                     <button class="slds-button slds-button_icon 2slds-button_icon-x-medium open-menu-select" title="Select Image">
+                                                                       <svg class="slds-button__icon slds-hide" aria-hidden="true">
+                                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                                                       </svg> Select Source
+                                                                       <span class="slds-assistive-text">Select Source</span>
+                                                                     </button>
+                                                                     <button class="slds-button 2slds-hide slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
+                                                                       <svg class="slds-button__icon" aria-hidden="true">
+                                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                                                       </svg>
+                                                                       <span class="slds-assistive-text">Select Source</span>
+                                                                     </button>
+
+
+
+
+                                                                     <div class="slds-dropdown slds-dropdown_right slds-dropdown_small image_chooser slds-hide">
+                                                                         <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                                                           <li class="slds-dropdown__item" role="presentation">
+                                                                             <a href="javascript:void(0);" class="add-image" role="menuitem" tabindex="0">
+                                                                               <span class="slds-truncate" title="Commerce Cloud">
+                                                                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                                                                   <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                                                                                 </svg>Commerce Cloud</span>
+                                                                             </a>
+                                                                           </li>
+                                                                           <li class="slds-dropdown__item" role="presentation">
+                                                                             <a href="javascript:void(0);" class="dropbox_chooser" role="menuitem" tabindex="-1">
+                                                                               <span class="slds-truncate" title="Dropbox">
+                                                                                 
+                                                                                 <img src="/assets/Dropbox_Icon.svg.png" class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" width="16" style="opacity: 1;">
+                                                                                 Dropbox</span>
+                                                                             </a>
+                                                                           </li>
+                                                                         </ul>
+                                                                       </div>
+                                                                   </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </figcaption>
+
+
+
+                              {#
                               <figcaption class="slds-file__title slds-file__title_card">
                                       <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
                                           <div class="slds-media__body slds-col">
@@ -76,6 +136,7 @@
                                           </div>
                                       </div>
                                   </figcaption>
+                              #}
                             </figure>
                           </div>
                         </div>

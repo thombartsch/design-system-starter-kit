@@ -87,44 +87,65 @@
         <div class="slds-builder-toolbar" role="toolbar">
             <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions">
             </div>
-            <div class="slds-builder-toolbar__item-group slds-m-left_none" aria-label="Edit actions">
+            <!--div class="slds-builder-toolbar__item-group slds-m-left_none" aria-label="Edit actions">
                 <div class="slds-button-group">
-                    <button class="slds-button slds-button_icon slds-button_icon-border" title="Toggle Page Structure Panel" tabindex="-1" id="button-navigator">
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Toggle Page Structure Panel" tabindex="-1" id="button-navigator">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#list"/>
                       </svg>
                         <span class="slds-assistive-text">Toggle Page Structure Panel</span>
                     </button>
                 </div>
-            </div>
+            </div-->
             <div class="slds-col slds-text-align_center">
 
                 <div class="slds-button-group" role="group">
-                    <button class="slds-button slds-button_neutral" id="trigger-preview-desktop">
-        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
-        </svg><!-- Desktop -->
-    </button>
-                    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_landscape">
-        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
-        </svg><!-- Tablet -->
-    </button>
-                    <button class="slds-button slds-button_neutral" id="trigger-preview-tablet_portrait">
-        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_portrait"></use>
-        </svg><!-- Desktop -->
-    </button>
-                    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_landscape">
-        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_landscape"></use>
-        </svg><!-- Desktop -->
-    </button>
-                    <button class="slds-button slds-button_neutral" id="trigger-preview-phone_portrait">
-        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
-        </svg><!-- Desktop -->
-    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" 2aria-pressed="false"  id="trigger-preview-desktop">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop"></use>
+                        </svg><!-- Desktop -->
+                    </button>
+                    <button class="slds-button slds-button_neutral slds-hide" id="trigger-preview-tablet_landscape">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_landscape"></use>
+                        </svg><!-- Tablet -->
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" 2aria-pressed="false"  id="trigger-preview-tablet_portrait">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#tablet_portrait"></use>
+                        </svg><!-- Desktop -->
+                    </button>
+                    <button class="slds-button slds-button_neutral slds-hide" id="trigger-preview-phone_landscape">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_landscape"></use>
+                        </svg><!-- Desktop -->
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" 2aria-pressed="false"  id="trigger-preview-phone_portrait">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
+                        </svg><!-- Desktop -->
+                    </button>
+                    <!--
+                    <button id="trigger-show-customer-groups" class="trigger-tether slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customer Groups">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#groups" />
+                      </svg>
+                      <span class="slds-assistive-text">Customer Groups</span>
+                    </button>
+                    <button id="trigger-show-date" class="trigger-tetherB slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customer Groups">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#dayview" />
+                      </svg>
+                      <span class="slds-assistive-text">Display Date</span>
+                    </button>
+                    -->
+                    <button id="trigger-show-more" class="trigger-tetherC slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customize Preview">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#more" />
+                      </svg>
+                      <span class="slds-assistive-text">Customize Preview</span>
+                    </button>
+
                 </div>
 
 
@@ -134,7 +155,7 @@
             </div>
 
             <div class="slds-builder-toolbar__actions" aria-label="Document actions">
-                <div class="slds-button-group">
+                <!--div class="slds-button-group">
                     <button id="trigger-preview-options" class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="More Options">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings" />
@@ -150,7 +171,7 @@
                     <button id="trigger-edit" class="slds-button slds-button_neutral slds-hide">
                         Back to Edit
                     </button>
-                </div>
+                </div -->
 
 
 
