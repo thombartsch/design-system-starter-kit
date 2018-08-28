@@ -24,6 +24,8 @@
         {% include "_inc_modal_page-settings.html" %}
         {% include "_inc_modal_page-publish.html" %}
 
+        {% include "_inc_modal_code-view.html" %}
+
         <!-- BUILDER HEADER -->
         {% include "_inc_builder-header.html" %}
         <!-- /BUILDER HEADER -->
@@ -35,18 +37,48 @@
                 <!-- /PANEL EDITOR  RIGHT -->
             </div>
             <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
+                {#                
+                <div class="slds-panel__body slds-hide slds-p-left_none" style="">
+                    <!-- sort: true -->
+                    <div class="list-group-item" style="background: green; height:20px">
+                        <div class="tool"><span class="my-handle">::</span> Row</div>
+                        <div class="slds-hide placeholder">Placeholder display</div>
+                        <div class="slds-hide   navigator">Navigator display</div>
+                    </div>
+                    <div class="list-group-item" style="background: green; height:20px">
+                        <div class="tool"><span class="my-handle">::</span> Catalog</div>
+                        <div class="slds-hide placeholder">Placeholder display</div>
+                        <div class="slds-hide   navigator">Navigator display</div>
+                    </div>
+                    <div class="list-group-item" style="background: green; height:20px">
+                        <div class="tool"><span class="my-handle">::</span> Banner</div>
+                        <div class="slds-hide placeholder">Placeholder display</div>
+                        <div class="slds-hide   navigator">Navigator display</div>
+                    </div>
+                    <div class="list-group-item" style="background: green; height:20px">
+                        <div class="tool"><span class="my-handle">::</span> Rich Text</div>
+                        <div class="slds-hide placeholder">Placeholder display</div>
+                        <div class="slds-hide   navigator">Navigator display</div>
+                    </div>
+                </div>
+                #}
                 <!-- PANEL LEFT -->
                 {% include "_inc_builder-panel-left.html" %}
                 <!-- /PANEL LEFT -->
             </div>
             <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y">
                 {% include "_inc_header-editor.html" %}     
-                <div class="slds-align_absolute-center">
+                <div class="slds-align_absolute-center">                    
                     <!-- CANVAS -->
-                    <ul id="canvas_list" class="list slds-drop-zone slds-list_vertical-space white">
+                    <ul id="canvas_list" class="list slds-drop-zone slds-list_vertical-space white 2slds-hide" 2style="background: #fff; min-height:200px">
                         <li></li>
                     </ul>
                     <!-- /CANVAS -->
+                    {#
+                    <!-- sort: false -->
+                    <div id="listEditor" class="list-group slds-m-left_small slds-col" style="border: 1px dashed #eee; background: #fff; min-height: 100px;">
+                    </div>
+                    #}
                 </div>
                 {% include "_inc_footer-editor.html" %}     
             </div>
@@ -69,6 +101,7 @@
     <script src='/scripts/jquery-ui.min.js'></script>
     <script src='/scripts/utils.js'></script>
     <script src='/scripts/tether.min.js'></script>
+    <!--script src='/scripts/repos.js'></script-->
     {% include '_inc_js.html' %}
     <!-- /JAVASCRIPT -->
 

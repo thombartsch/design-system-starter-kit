@@ -1,8 +1,70 @@
-<script>
+<!-- Latest Sortable -->
+{#
+  <script src="//rubaxa.github.io/Sortable/Sortable.js"></script>
+  <script>
+    var countess = 0;
+
+    Sortable.create(listTools, {
+    animation: 200,
+    group: {
+        name: "shared",
+        pull: "clone",
+        put: false,
+        revertClone: true,
+        handle: '.my-handle'
+    },
+    sort: false,
+        onClone: function (evt) {
+            console.log('clone now');
+            var origEl = evt.item;
+            var cloneEl = evt.clone;
+        }    
+    });
+
+    Sortable.create(listEditor, {
+    group: "shared",
+    sort: true,
+        onAdd: function (evt) {
+            placeholder = evt.item;
+            placeholder.id = 'component-'+countess;
+            placeholder_id = 'component-'+countess;
+            //now change display
+            $('#'+placeholder_id+' .tool').addClass('slds-hide');
+            $('#'+placeholder_id+' .placeholder').removeClass('slds-hide');
+
+            //now clone element to right side
+            var itm = document.querySelector('#component-'+countess);
+            var nav = itm.cloneNode(true);
+            nav.id = 'navigator-'+countess;
+            var nav_id = 'navigator-'+countess;
+
+
+            document.querySelector('#navigator_list').appendChild(nav);
+
+
+            /*
+            document.getElementById(nav_id).querySelector('.tool').className.replace('slds-hide', '');
+            document.getElementById(nav_id).querySelector('.navigator').className.replace('slds-hide', '');
+            */
+            $('#'+nav_id+' .tool').addClass('slds-hide');
+            $('#'+nav_id+' .placeholder').addClass('slds-hide');
+            $('#'+nav_id+' .navigator').removeClass('slds-hide');
+
+            //now count up
+            countess ++
+        },  
+    });
+
+</script>    
+#}
+
+<script>        
+
     $(document).ready(function() {
         //DRAG DROP MOVE AROUND
         var count = 0;
 
+        //START DRAG DROP JQUERY
         $('.draggable').draggable({
             revert: true,
             connectToSortable: '.list',
@@ -16,23 +78,6 @@
                 console.log('start');
 
             },
-
-            /*
-            revert: function (socketObj) {
-            		if (socketObj === true) {
-            			// Drag success :)
-            			alert("Success!");
-            			return false;
-            		}
-            		else {
-            			// Drag fail :(
-            			alert("Reverting!");
-            			return true;
-            		}
-            	},
-              */
-
-
             stop: function(event, ui) {
                 var navtxt = $(ui.helper).attr('title');
                 console.log('end');
@@ -47,22 +92,6 @@
                 //add navigator item
                 var get_case = $(this).closest('li').attr('id');
                 var nav_item = '<li role="treeitem" aria-level="3" class="slds-item nav slds-padding_n" id="navigator_placeholder_' + count + '"><div class="slds-tree__item"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><button class="slds-button slds-button__small hoverme button-trigger-action--edit-component-'+get_case+' ">' + navtxt + '</button><button class="slds-button slds-button__small slds-float_right trash"><svg class="slds-button__icon slds-button__icon_left" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use></svg></button></span></div></li>';
-/*
-                    <li role="treeitem" aria-level="2" aria-selected="false">
-                    <div class="slds-tree__item">
-                        <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
-                            <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
-                            </svg>
-                            <span class="slds-assistive-text">Expand</span>
-                        </button>
-                        <span class="slds-size_1-of-1">
-                            <span class="slds-tree__item-label slds-truncate" title="Tree Item">Page Header</span>
-                        </span>
-                    </div>
-                    </li>
-*/
-
 
 
                 $(nav_item).attr('id', 'navigator_placeholder_' + count);
@@ -351,6 +380,9 @@
 
         });
         $('.list').disableSelection();
+
+
+        //END WORKING SORTING JQUERY
 
 
         //PREVIEW HANDLING
@@ -1223,6 +1255,16 @@
             ((''+day).length<2 ? '0' : '') + day;
         $('input.display-filter').attr('placeholder', output);
         console.log('date is: '+output);
+
+
+
+
+        $('.code-view').click(function() {
+            console.log('show code view');
+            $('#modal-code').toggleClass('slds-hide');
+        });
+
+
         //- end js
 
     });
