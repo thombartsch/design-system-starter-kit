@@ -388,26 +388,41 @@
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
             console.log('trigger desktop resolution');
-            $('#canvas_list, #static_header').removeClass('desktop');
-            $('#canvas_list, #static_header').removeClass('tablet_portrait');
-            $('#canvas_list, #static_header').removeClass('phone_portrait');
-            $('#canvas_list, #static_header').addClass('desktop');
+            $('#canvas_list').removeClass('desktop');
+            $('#canvas_list').removeClass('tablet_portrait');
+            $('#canvas_list').removeClass('phone_portrait');
+            $('#static_header').removeClass('desktop');
+            $('#static_header').removeClass('tablet_portrait');
+            $('#static_header').removeClass('phone_portrait');
+
+            $('#canvas_list').addClass('desktop');
+            $('#static_header').addClass('desktop');
             return false;
         });
         $('#trigger-preview-tablet_portrait').click(function() {
             console.log('trigger tablet portrait resolution');
-            $('#canvas_list, #static_header').removeClass('desktop');
-            $('#canvas_list, #static_header').removeClass('tablet_portrait');
-            $('#canvas_list, #static_header').removeClass('phone_portrait');
-            $('#canvas_list, #static_header').addClass('tablet_portrait');
+            $('#canvas_list').removeClass('desktop');
+            $('#canvas_list').removeClass('tablet_portrait');
+            $('#canvas_list').removeClass('phone_portrait');
+            $('#static_header').removeClass('desktop');
+            $('#static_header').removeClass('tablet_portrait');
+            $('#static_header').removeClass('phone_portrait');
+
+            $('#canvas_list').addClass('tablet_portrait');
+            $('#static_header').addClass('tablet_portrait');
             return false;
         });
         $('#trigger-preview-phone_portrait').click(function() {
             console.log('trigger phone portrait resolution');
-            $('#canvas_list, #static_header').removeClass('desktop');
-            $('#canvas_list, #static_header').removeClass('tablet_portrait');
-            $('#canvas_list, #static_header').removeClass('phone_portrait');
-            $('#canvas_list, #static_header').addClass('phone_portrait');
+            $('#canvas_list').removeClass('desktop');
+            $('#canvas_list').removeClass('tablet_portrait');
+            $('#canvas_list').removeClass('phone_portrait');
+            $('#static_header').removeClass('desktop');
+            $('#static_header').removeClass('tablet_portrait');
+            $('#static_header').removeClass('phone_portrait');
+
+            $('#canvas_list').addClass('phone_portrait');
+            $('#static_header').addClass('phone_portrait');
             return false;
         });
 
@@ -663,9 +678,13 @@
         //IMAGE SELECT
         $('.image-thumb').click(function() {
             selected_image = $(this).closest('a').find('img').attr('src');
+            //alert(selected_image);
+
             console.log('selected image: '+selected_image);
             $('.slds-file_card').removeClass('selected');
             $(this).closest('.slds-file_card').addClass('selected');
+            $('li').removeClass('selected');
+            $(this).closest('li').addClass('selected');
             console.log('image selected: '+selected_image);
             return false;
         });

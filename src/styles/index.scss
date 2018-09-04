@@ -478,7 +478,9 @@ background: red !Important;
 
 //IMAGE SELECTED
 .selected {
-    border: 2px solid #0070D2;
+    border-top: 1px solid rgb(0, 112, 210) !important;
+    background: rgb(243, 242, 242);
+    border-bottom: 1px solid rgb(0, 112, 210);
 }
 
 //POPPINS Page list-view
@@ -1537,34 +1539,40 @@ button {
     transition: all 0.5s;
 }
 
-#canvas {
+#canvas,
+div#static_header {
     text-align: center;
 }
 
-ul#canvas_list.desktop {
+ul#canvas_list.desktop,
+div#static_header.desktop {
     width: 100%;
     transition: all 0.5s;
 }
 
-ul#canvas_list.tablet_portrait {
+ul#canvas_list.tablet_portrait,
+div#static_header.tablet_portrait {
     width: 768px;
     transition: all 0.5s;
 }
 
-ul#canvas_list.tablet_landscape {
-    width: 1024px;
-    transition: all 0.5s;
-}
-
-ul#canvas_list.phone_portrait {
+ul#canvas_list.phone_portrait,
+div#static_header.phone_portrait {
     width: 320px;
     transition: all 0.5s;
 }
 
+
+/*
+ul#canvas_list.tablet_landscape {
+    width: 1024px;
+    transition: all 0.5s;
+}
 ul#canvas_list.phone_landscape {
     width: 568px;
     transition: all 0.5s;
 }
+*/
 
 .component {
     /*padding: 10px;*/
@@ -1912,4 +1920,10 @@ li.nav-hover {
 
 ul#component_list li li {
     padding-left: 10px;
+}
+
+.thumbnail_container {
+    width: 200px;
+    height: 115px;
+    //text-align: center;
 }
