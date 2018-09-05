@@ -29,7 +29,8 @@
               <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Layout (1)</span>
           </span>
       </div>
-      <ul role="group">
+
+      <ul role="group" id="">
           {#
           <li role="treeitem" aria-level="2" aria-selected="false">
           <div class="slds-tree__item">
@@ -46,6 +47,16 @@
           </li>
           #}
           {% include "_inc_builder-component-row.html" %}
+
+               <div class="slds-panel__body 2slds-hide slds-p-left_none listTools" style="" id="listTools">
+                    <!-- sort: true -->
+                    <div class="list-group-item" style="background: green; height:20px">
+                        <div class="tool"><span class="my-handle">::</span> Row</div>
+                        <div class="slds-hide placeholder">Placeholder Row</div>
+                        <div class="slds-hide   navigator">Navigator Row</div>
+                    </div>
+                </div>
+
       </ul>
   </li>
   <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Content">
@@ -60,6 +71,27 @@
               <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Content (2)</span>
           </span>
       </div>
+
+        <div class="slds-panel__body 2slds-hide slds-p-left_none" style="" id="listToolsB">
+            <div class="list-group-item" style="background: green; height:20px">
+                <div class="tool"><span class="my-handle">::</span> Catalog</div>
+                <div class="slds-hide placeholder">Placeholder Catalog</div>
+                <div class="slds-hide   navigator">Navigator Catalog</div>
+            </div>
+            <div class="list-group-item" style="background: green; height:20px">
+                <div class="tool"><span class="my-handle">::</span> Banner</div>
+                <div class="slds-hide placeholder">Placeholder Banner</div>
+                <div class="slds-hide   navigator">Navigator Banner</div>
+            </div>
+            <div class="list-group-item" style="background: green; height:20px">
+                <div class="tool"><span class="my-handle">::</span> Rich Text</div>
+                <div class="slds-hide placeholder">Placeholder RTF</div>
+                <div class="slds-hide   navigator">Navigator RTF</div>
+            </div>
+        </div>
+
+
+
       <ul role="group">
         {% include "_inc_builder-component-banner.html" %}
         {% include "_inc_builder-component-category.html" %}

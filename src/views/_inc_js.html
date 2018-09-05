@@ -1,9 +1,8 @@
 <!-- Latest Sortable -->
-{#
   <script src="//rubaxa.github.io/Sortable/Sortable.js"></script>
   <script>
     var countess = 0;
-
+    
     Sortable.create(listTools, {
     animation: 200,
     group: {
@@ -20,6 +19,23 @@
             var cloneEl = evt.clone;
         }    
     });
+
+    Sortable.create(listToolsB, {
+    animation: 200,
+    group: {
+        name: "shared",
+        pull: "clone",
+        put: false,
+        revertClone: true,
+        handle: '.my-handle'
+    },
+    sort: false,
+        onClone: function (evt) {
+            console.log('clone now');
+            var origEl = evt.item;
+            var cloneEl = evt.clone;
+        }    
+    });    
 
     Sortable.create(listEditor, {
     group: "shared",
@@ -56,11 +72,11 @@
     });
 
 </script>    
-#}
 
 <script>        
 
     $(document).ready(function() {
+        {#
         //DRAG DROP MOVE AROUND
         var count = 0;
 
@@ -80,7 +96,7 @@
             },
             stop: function(event, ui) {
                 var navtxt = $(ui.helper).attr('title');
-                console.log('end');
+                console.log('navtxt:' +navtxt);
 
                 savingAnimation();
 
@@ -383,7 +399,7 @@
 
 
         //END WORKING SORTING JQUERY
-
+        #}
 
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
