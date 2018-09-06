@@ -1544,19 +1544,19 @@ div#static_header {
     text-align: center;
 }
 
-#listEditor.desktop,
-div#static_header.desktop {
+div#listEditor.desktop,
+div#static_header .desktop {
     width: 100%;
     transition: all 0.5s;
 }
 
-#listEditor.tablet_portrait,
+div#listEditor.tablet_portrait,
 div#static_header.tablet_portrait {
     width: 768px;
     transition: all 0.5s;
 }
 
-#listEditor.phone_portrait,
+div#listEditor.phone_portrait,
 div#static_header.phone_portrait {
     width: 320px;
     transition: all 0.5s;
@@ -1930,4 +1930,28 @@ ul#component_list li li {
 
 #component_list li:hover{
   cursor: pointer;
+}
+
+.sortable-ghost{
+  background: green;
+  height: 2px;
+  /*
+  margin-top: 4px;
+  margin-bottom: 4px;
+  */
+}
+
+.list-group-item .ghost-dummy{
+  display: none;
+}
+
+.sortable-ghost .ghost-dummy{
+  display: block;
+}
+.sortable-ghost .tool{
+  display: none;
+}
+
+.list-group-item{
+  width:100%
 }
