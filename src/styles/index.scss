@@ -1927,3 +1927,7 @@ ul#component_list li li {
     height: 115px;
     //text-align: center;
 }
+
+#component_list li:hover{
+  cursor: pointer;
+}

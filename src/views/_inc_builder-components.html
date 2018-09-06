@@ -1,119 +1,56 @@
 <div class="slds-form-element slds-p-left_small slds-p-top_small slds-p-right_small">
-  <!--label class="slds-form-element__label" for="text-input-id-1">Input Label</label-->
-  <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
-    <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
-    </svg>
-    <input type="text" id="text-input-id-1" class="slds-input" placeholder="Search Components" />
-    <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon slds-hide">
-      <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear" />
-      </svg>
-      <span class="slds-assistive-text">Clear</span>
-    </button>
-  </div>
+    <!--label class="slds-form-element__label" for="text-input-id-1">Input Label</label-->
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+        <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+        </svg>
+        <input type="text" id="text-input-id-1" class="slds-input" placeholder="Search Components" />
+        <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon slds-hide">
+            <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear" />
+            </svg>
+            <span class="slds-assistive-text">Clear</span>
+        </button>
+    </div>
 </div>
 
 
+
 <div>
-<ul id="component_list" class="slds-tree slds-p-top_small" role="tree" aria-labelledby="treeheading" id="tree-header">
-  <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
-      <div class="slds-tree__item">
-          <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-              </svg>
-              <span class="slds-assistive-text">Expand</span>
-          </button>
-          <span class="slds-size_1-of-1">
-              <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Layout (1)</span>
-          </span>
-      </div>
-
-      <ul role="group" id="">
-          {#
-          <li role="treeitem" aria-level="2" aria-selected="false">
-          <div class="slds-tree__item">
-              <button class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Tree Item">
-                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                  </svg>
-                  <span class="slds-assistive-text">Expand</span>
-              </button>
-              <span class="slds-size_1-of-1">
-                  <span class="slds-tree__item-label slds-truncate" title="Tree Item">Navigation</span>
-              </span>
-          </div>
-          </li>
-          #}
-          {% include "_inc_builder-component-row.html" %}
-
-               <div class="slds-panel__body 2slds-hide slds-p-left_none listTools" style="" id="listTools">
-                    <!-- sort: true -->
-                    <div class="list-group-item" style="background: green; height:20px">
-                        <div class="tool"><span class="my-handle">::</span> Row</div>
-                        <div class="slds-hide placeholder">Placeholder Row</div>
-                        <div class="slds-hide   navigator">Navigator Row</div>
-                    </div>
-                </div>
-
-      </ul>
-  </li>
-  <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Content">
-      <div class="slds-tree__item">
-          <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-              </svg>
-              <span class="slds-assistive-text">Expand</span>
-          </button>
-          <span class="slds-size_1-of-1">
-              <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Content (2)</span>
-          </span>
-      </div>
-
-        <div class="slds-panel__body 2slds-hide slds-p-left_none" style="" id="listToolsB">
-            <div class="list-group-item" style="background: green; height:20px">
-                <div class="tool"><span class="my-handle">::</span> Catalog</div>
-                <div class="slds-hide placeholder">Placeholder Catalog</div>
-                <div class="slds-hide   navigator">Navigator Catalog</div>
+    <ul id="component_list" class="slds-tree slds-p-top_small" role="tree" aria-labelledby="treeheading" id="tree-header">
+        <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+            <div class="slds-tree__item">
+                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Expand</span>
+                </button>
+                <span class="slds-size_1-of-1">
+                    <span class="slds-tree__item-label slds-truncate" title="Layout (1)">Layout (1)</span>
+                </span>
             </div>
-            <div class="list-group-item" style="background: green; height:20px">
-                <div class="tool"><span class="my-handle">::</span> Banner</div>
-                <div class="slds-hide placeholder">Placeholder Banner</div>
-                <div class="slds-hide   navigator">Navigator Banner</div>
+
+            <div class="slds-panel__body slds-m-left_small listTools" style="" id="listTools">
+                {% include "_inc_builder-component-banner.html" %}
             </div>
-            <div class="list-group-item" style="background: green; height:20px">
-                <div class="tool"><span class="my-handle">::</span> Rich Text</div>
-                <div class="slds-hide placeholder">Placeholder RTF</div>
-                <div class="slds-hide   navigator">Navigator RTF</div>
+        </li>
+        <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+            <div class="slds-tree__item">
+                <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Expand</span>
+                </button>
+                <span class="slds-size_1-of-1">
+                    <span class="slds-tree__item-label slds-truncate" title="Content (1)">Content (1)</span>
+                </span>
             </div>
-        </div>
 
-
-
-      <ul role="group">
-        {% include "_inc_builder-component-banner.html" %}
-        {% include "_inc_builder-component-category.html" %}
-        {% include "_inc_builder-component-rtf.html" %}
-      </ul>
-  </li>
-</ul>
-
-
-
-{#
-  <ul id="component_list" class="2list" role="menu">
-    <li class="slds-dropdown__header slds-p-bottom_small slds-truncate layout_title" title="Menu Sub Heading" role="separator">
-        <span class="slds-text-title_caps">Layout</span>
-    </li>
-      {% include "_inc_builder-component-row.html" %}
-    <li class="slds-dropdown__header slds-truncate slds-p-bottom_small" title="Menu Sub Heading" role="separator">
-        <span class="slds-text-title_caps">Content</span>
-    </li>
-      {% include "_inc_builder-component-banner.html" %}
-      {% include "_inc_builder-component-category.html" %}
-      {% include "_inc_builder-component-rtf.html" %}
-  </ul>
-#}
+            <div class="slds-panel__body slds-m-left_small listTools" style="" id="listToolsB">
+                {% include "_inc_builder-component-banner.html" %}
+            </div>
+        </li>
+    </ul>
 </div>
