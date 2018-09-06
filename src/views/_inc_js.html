@@ -12,12 +12,12 @@
                 connectToSortable: '.list',
                 helper: 'clone',
                 start: function(event, ui) {
-                    console.log('start');
+                    //console.log('start');
 
                 },
                 stop: function(event, ui) {
                     var navtxt = $(ui.helper).attr('title');
-                    console.log('navtxt:' + navtxt);
+                    //console.log('navtxt:' + navtxt);
 
                     savingAnimation();
 
@@ -60,7 +60,7 @@
                         var str = $(this).closest('li').attr('id');
                         var editstring = str.split('placeholder_');
                         var editit = editstring[1];
-                        console.log('check for editing: ' + editit);
+                        //console.log('check for editing: ' + editit);
 
                         $('#panel_editor .slds-panel').removeClass('slds-size_x-large');
                         $('#panel_editor .slds-panel').addClass('slds-size_medium');
@@ -79,10 +79,10 @@
                         var str = $(this).closest('li').attr('id');
                         var editstring = str.split('placeholder_');
                         var editit = editstring[1];
-                        console.log('check for editing: ' + editit);
+                        //console.log('check for editing: ' + editit);
 
                         var banner_value = $('#component_placeholder_' + editit + ' .image-holder').attr('src');
-                        console.log('image ist: ' + banner_value);
+                        //console.log('image ist: ' + banner_value);
 
                         if (typeof banner_value === 'undefined') {
                             $('.image-figure-thumb').attr('src', '/assets/placeholder.png');
@@ -93,11 +93,11 @@
                         }
 
                         var header1_value = $('#component_placeholder_' + editit + ' .banner-header').html();
-                        console.log('header 1 ist: ' + header1_value);
+                        //console.log('header 1 ist: ' + header1_value);
                         $('input.text-banner-header').val(header1_value);
 
                         var header2_value = $('#component_placeholder_' + editit + ' .banner-sub').html();
-                        console.log('header 2 ist: ' + header2_value);
+                        //console.log('header 2 ist: ' + header2_value);
                         $('input.text-banner-sub').val(header2_value);
 
 
@@ -122,10 +122,10 @@
                         var str = $(this).closest('li').attr('id');
                         var editstring = str.split('placeholder_');
                         var editit = editstring[1];
-                        console.log('check for editing: ' + editit);
+                        //console.log('check for editing: ' + editit);
 
                         var banner_value = $('#component_placeholder_' + editit + ' .image-holder').attr('src');
-                        console.log('image ist: ' + banner_value);
+                        //console.log('image ist: ' + banner_value);
 
                         if (typeof banner_value === 'undefined') {
                             $('.image-figure-thumb').attr('src', '/assets/placeholder.png');
@@ -136,7 +136,7 @@
                         }
 
                         var call_button = $('#component_placeholder_' + editit + ' .call-to-action').html();
-                        console.log('button ist: ' + call_button);
+                        //console.log('button ist: ' + call_button);
                         $('input.text-banner-header-product').val(call_button);
 
 
@@ -155,12 +155,12 @@
                         $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
                         $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
                         var activeComponent = $(this).closest('li').attr('id');
-                        console.log('active component is: ' + activeComponent);
+                        //console.log('active component is: ' + activeComponent);
 
                         var str = $(this).closest('li').attr('id');
                         var editstring = str.split('placeholder_');
                         var editit = editstring[1];
-                        console.log('check for editing: ' + editit);
+                        //console.log('check for editing: ' + editit);
 
                         $('#panel_editor .slds-panel').addClass('slds-size_x-large');
                         $('#panel_editor .slds-panel').removeClass('slds-size_medium');
@@ -269,10 +269,10 @@
                     var moveitem = listitem[1];
                     if (oldIndex > newIndex) {
                         $('#component_placeholder_' + moveitem).insertBefore('#canvas_list li:eq(' + newIndex + ')');
-                        console.log('insertBefore: ' + newIndex);
+                        //console.log('insertBefore: ' + newIndex);
                     } else {
                         $('#component_placeholder_' + moveitem).insertAfter('#canvas_list li:eq(' + newIndex + ')');
-                        console.log('insertAfter: ' + newIndex);
+                        //console.log('insertAfter: ' + newIndex);
 
                     };
                     $('#navigator_list').removeClass('sortable-hover');
@@ -290,7 +290,7 @@
                 start: function(event, ui) {
                     list_width = $('#canvas_list, #static_header').width();
                     oldIndex = ui.item.index();
-                    console.log('old index was: ' + oldIndex);
+                    //console.log('old index was: ' + oldIndex);
                     ui.helper.css('height', 'auto');
                     ui.helper.css('width', list_width);
                     $('ul,li').disableSelection();
@@ -298,18 +298,18 @@
                 stop: function(event, ui, ) {
                     newIndex = ui.item.index();
                     newIndex = newIndex - 1;
-                    console.log('new index is: ' + newIndex);
+                    //console.log('new index is: ' + newIndex);
                     var str = ui.item.attr('id');
                     var listitem = str.split("component_placeholder_");
                     var moveitem = listitem[1];
-                    console.log('move item is: ' + moveitem);
+                    //console.log('move item is: ' + moveitem);
 
 
                     if (oldIndex > newIndex) {
-                        console.log('insertBefore: ' + newIndex);
+                        //console.log('insertBefore: ' + newIndex);
                         $('#navigator_placeholder_' + moveitem).insertBefore('#navigator_list li:eq(' + newIndex + ')');
                     } else {
-                        console.log('insertAfter: ' + newIndex);
+                        //console.log('insertAfter: ' + newIndex);
                         $('#navigator_placeholder_' + moveitem).insertAfter('#navigator_list li:eq(' + newIndex + ')');
                     }
                     savingAnimation();
@@ -327,41 +327,41 @@
 
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
-            console.log('trigger desktop resolution');
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_portrait');
+            //console.log('trigger desktop resolution');
+            $('#listEditor').removeClass('desktop');
+            $('#listEditor').removeClass('tablet_portrait');
+            $('#listEditor').removeClass('phone_portrait');
             $('#static_header').removeClass('desktop');
             $('#static_header').removeClass('tablet_portrait');
             $('#static_header').removeClass('phone_portrait');
 
-            $('#canvas_list').addClass('desktop');
+            $('#listEditor').addClass('desktop');
             $('#static_header').addClass('desktop');
             return false;
         });
         $('#trigger-preview-tablet_portrait').click(function() {
-            console.log('trigger tablet portrait resolution');
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_portrait');
+            //console.log('trigger tablet portrait resolution');
+            $('#listEditor').removeClass('desktop');
+            $('#listEditor').removeClass('tablet_portrait');
+            $('#listEditor').removeClass('phone_portrait');
             $('#static_header').removeClass('desktop');
             $('#static_header').removeClass('tablet_portrait');
             $('#static_header').removeClass('phone_portrait');
 
-            $('#canvas_list').addClass('tablet_portrait');
+            $('#listEditor').addClass('tablet_portrait');
             $('#static_header').addClass('tablet_portrait');
             return false;
         });
         $('#trigger-preview-phone_portrait').click(function() {
-            console.log('trigger phone portrait resolution');
-            $('#canvas_list').removeClass('desktop');
-            $('#canvas_list').removeClass('tablet_portrait');
-            $('#canvas_list').removeClass('phone_portrait');
+            //console.log('trigger phone portrait resolution');
+            $('#listEditor').removeClass('desktop');
+            $('#listEditor').removeClass('tablet_portrait');
+            $('#listEditor').removeClass('phone_portrait');
             $('#static_header').removeClass('desktop');
             $('#static_header').removeClass('tablet_portrait');
             $('#static_header').removeClass('phone_portrait');
 
-            $('#canvas_list').addClass('phone_portrait');
+            $('#listEditor').addClass('phone_portrait');
             $('#static_header').addClass('phone_portrait');
             return false;
         });
@@ -386,8 +386,8 @@
 
         function showProperties(component_type, activeComponent) {
 
-            console.log('called editor and now the activeComponent is: ' + activeComponent);
-            console.log('called editor and now the component_type is: ' + component_type);
+            //console.log('called editor and now the activeComponent is: ' + activeComponent);
+            //console.log('called editor and now the component_type is: ' + component_type);
 
             $('#panel_editor .component_properties').addClass('slds-hide');
             $('#editor_' + component_type).removeClass('slds-hide');
@@ -544,7 +544,7 @@
 
         //MEDIA SELECTOR
         $('.add-mediaselector-dummy').click(function() {
-            console.log('media selector called');
+            //console.log('media selector called');
             selected_image = undefined;
             $('.mediaselector-component-editor .image-figure-thumb').attr('src', '/assets/placeholder.png');
             $('.mediaselector-component-editor .file-name').html('No Image assigned');
@@ -610,7 +610,7 @@
             selected_header = $('.slds-input-header').val();
             $('#' + activeComponent + ' .text-holder').html(selected_text);
             $('#' + activeComponent + ' .header-holder').html(selected_header);
-            console.log('the active component: ' + activeComponent);
+            //console.log('the active component: ' + activeComponent);
             savingAnimation();
             return false;
         });
@@ -620,18 +620,18 @@
             selected_image = $(this).closest('a').find('img').attr('src');
             //alert(selected_image);
 
-            console.log('selected image: ' + selected_image);
+            //console.log('selected image: ' + selected_image);
             $('.slds-file_card').removeClass('selected');
             $(this).closest('.slds-file_card').addClass('selected');
             $('li').removeClass('selected');
             $(this).closest('li').addClass('selected');
-            console.log('image selected: ' + selected_image);
+            //console.log('image selected: ' + selected_image);
             return false;
         });
 
         //IMAGE SAVE
         $('.picker .trigger-save-modal').click(function() {
-            console.log('close picker and set image: ' + selected_image)
+            //console.log('close picker and set image: ' + selected_image)
             $('#editor_banner .image-figure-thumb').attr('src', selected_image);
             $('#editor_banner .file-name').text(selected_image);
             $('.picker').addClass('slds-hide');
@@ -660,7 +660,7 @@
             component_type = $('.text-componentType').val()
 
             if (component_type === 'banner') {
-                console.log('component type is: ' + component_type);
+                //console.log('component type is: ' + component_type);
                 var activeComponent = $('#editor_banner .text-activeComponent').val();
                 var selected_image = $('#editor_banner .file-name').text();
 
@@ -676,7 +676,7 @@
                 $('#' + activeComponent + ' .banner-sub').html(banner_sub);
             }
             if (component_type === 'category') {
-                console.log('component type is: ' + component_type);
+                //console.log('component type is: ' + component_type);
                 var activeComponent = $('#editor_category .text-activeComponent').val();
                 var selected_image = $('#editor_category .file-name').text();
 
@@ -688,7 +688,7 @@
 
                 call_button = $('#editor_category .text-banner-header-product').val();
 
-                console.log('button text should be: ' + call_button);
+                //console.log('button text should be: ' + call_button);
 
                 $('#' + activeComponent + ' button.call-to-action').html(call_button);
 
@@ -1192,7 +1192,7 @@
                     extensions: ['png', 'jpg']
                 },
             }
-            console.log('call dropbox');
+            //console.log('call dropbox');
             Dropbox.choose(options);
         });
 
@@ -1212,13 +1212,13 @@
             (('' + month).length < 2 ? '0' : '') + month + '/' +
             (('' + day).length < 2 ? '0' : '') + day;
         $('input.display-filter').attr('placeholder', output);
-        console.log('date is: ' + output);
+        //console.log('date is: ' + output);
 
 
 
 
         $('.code-view').click(function() {
-            console.log('show code view');
+            //console.log('show code view');
             $('#modal-code').toggleClass('slds-hide');
         });
 
@@ -1246,7 +1246,7 @@
         },
         sort: false,
         onClone: function(evt) {
-          console.log('clone now');
+          //console.log('clone now');
           var origEl = evt.item;
           var cloneEl = evt.clone;
         }
@@ -1263,7 +1263,7 @@
         },
         sort: false,
         onClone: function(evt) {
-          console.log('clone now');
+          //console.log('clone now');
           var origEl = evt.item;
           var cloneEl = evt.clone;
         }
@@ -1288,6 +1288,8 @@
 
           document.querySelector('#navigator_list').appendChild(nav);
 
+          savingAnimation();
+
           /*
           document.getElementById(nav_id).querySelector('.tool').className.replace('slds-hide', '');
           document.getElementById(nav_id).querySelector('.navigator').className.replace('slds-hide', '');
@@ -1295,6 +1297,21 @@
           $('#' + nav_id + ' .tool').addClass('slds-hide');
           $('#' + nav_id + ' .placeholder').addClass('slds-hide');
           $('#' + nav_id + ' .navigator').removeClass('slds-hide');
+
+
+          //START ALL UI PROCESSES
+
+          //SAVING ANIMATION
+          function savingAnimation() {
+              $('#status_txt').css('opacity', '1');
+              $('#status_txt').delay(500).fadeOut(1000, function() {
+                  $('#status_txt').text('Saving ...');
+              }).fadeIn(1000).delay(500).fadeOut(1000, function() {
+                  $('#status_txt').text('Saved');
+              }).fadeIn(1000);
+              $('#status_txt').css('opacity', '0.5');
+          }
+
 
 
           //HOVER NAV ITEM AND HIGHLIGHT
@@ -1344,8 +1361,8 @@
           //SHOW PROPERTIES NON MODAL
           function showProperties(component_type, activeComponent) {
 
-              console.log('called editor and now the activeComponent is: ' + activeComponent);
-              console.log('called editor and now the component_type is: ' + component_type);
+              //console.log('called editor and now the activeComponent is: ' + activeComponent);
+              //console.log('called editor and now the component_type is: ' + component_type);
 
               $('#panel_editor .component_properties').addClass('slds-hide');
               $('#editor_' + component_type).removeClass('slds-hide');
@@ -1366,11 +1383,36 @@
 
               $('#panel_editor').removeClass('slds-hide');
           }
-          
+
+
+          //DELETE COMPONENT
+          $('.js-trigger-delete-component, .action-delete-component').click(function() {
+
+              var get_case = $(this).closest('.list-group-item').attr('id');
+              //console.log('call delete:' +listitem);
+
+              /*
+              $('#' + activeComponentPlaceholder).remove();
+              $('#' + activeNavigationPlaceholder).remove();
+
+              $('#modal-id-4-delete').addClass('slds-hide');
+              activeComponentPlaceholder = undefined;
+              activeNavigationPlaceholder = undefined;
+
+
+              if ($('#canvas_list > li.draggable').length != 0) {} else {
+                  $('.component_properties').addClass('slds-hide');
+                  $('.component_properties .placeholder').toggleClass('slds-hide');
+              }
+              */
+              return false;
+          });
 
 
 
-          //BANNER handling
+
+
+          //BANNER HANDLING
           $('.button-trigger-action--edit-component-banner').click(function() {
               var component_type = 'banner';
               $('#string_editor').html('Banner');
@@ -1382,10 +1424,10 @@
               var str = $(this).closest('.list-group-item').attr('id');
               var editstring = str.split('component-');
               var editit = editstring[1];
-              console.log('check for editing: ' + editit);
+              //console.log('check for editing: ' + editit);
 
               var banner_value = $('#component-' + editit + ' .image-holder').attr('src');
-              console.log('image ist: ' + banner_value);
+              //console.log('image ist: ' + banner_value);
 
               if (typeof banner_value === 'undefined') {
                   $('.image-figure-thumb').attr('src', '/assets/placeholder.png');
@@ -1396,11 +1438,11 @@
               }
 
               var header1_value = $('#component-' + editit + ' .banner-header').html();
-              console.log('header 1 ist: ' + header1_value);
+              //console.log('header 1 ist: ' + header1_value);
               $('input.text-banner-header').val(header1_value);
 
               var header2_value = $('#component-' + editit + ' .banner-sub').html();
-              console.log('header 2 ist: ' + header2_value);
+              //console.log('header 2 ist: ' + header2_value);
               $('input.text-banner-sub').val(header2_value);
 
 
@@ -1411,36 +1453,12 @@
           });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          //TRIGGER COMPONENT DELETION
           $('.button-trigger-action--delete-component').click(function() {
               var get_case = $(this).closest('.list-group-item').attr('id');
-              console.log('call delete');
+              var listitem = get_case.split('component-');
+              //console.log('call delete'+listitem);
+              $('#listitem').val(listitem[1]);
               $('#modal-id-4-delete').removeClass('slds-hide');
               return false;
           });
@@ -1448,11 +1466,28 @@
 
           $('.trash').click(function() {
               var get_case = $(this).closest('.list-group-item').attr('id');
-              console.log('call delete');
+              var listitem = get_case.split('navigator-');
+              //console.log('call delete'+listitem);
+              $('#listitem').val(listitem[1]);
               $('#modal-id-4-delete').removeClass('slds-hide');
               return false;
           });
 
+
+          //DELETE COMPONENT
+          $('.js-trigger-delete-component, .action-delete-component').click(function(listitem) {
+              var deleteitem = $('#listitem').val();
+              //console.log('now delete: '+deleteitem);
+              $('#navigator-'+deleteitem).fadeOut(500,function(){$(this).remove();});
+              $('#component-'+deleteitem).fadeOut(500,function(){$(this).remove();});
+
+              $('#listitem').val('');
+              $('#modal-id-4-delete').addClass('slds-hide');
+
+              savingAnimation();
+
+              return false;
+          });
 
 
 

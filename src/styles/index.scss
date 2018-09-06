@@ -1544,19 +1544,19 @@ div#static_header {
     text-align: center;
 }
 
-ul#canvas_list.desktop,
+#listEditor.desktop,
 div#static_header.desktop {
     width: 100%;
     transition: all 0.5s;
 }
 
-ul#canvas_list.tablet_portrait,
+#listEditor.tablet_portrait,
 div#static_header.tablet_portrait {
     width: 768px;
     transition: all 0.5s;
 }
 
-ul#canvas_list.phone_portrait,
+#listEditor.phone_portrait,
 div#static_header.phone_portrait {
     width: 320px;
     transition: all 0.5s;

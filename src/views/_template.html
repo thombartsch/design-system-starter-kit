@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Prototype styles -->
     <link rel="stylesheet" href="/styles/index.css" />
-    
-    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ug0ns8z2dvqvxvi"></script>    
+
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ug0ns8z2dvqvxvi"></script>
 
 </head>
 
@@ -42,10 +42,10 @@
                 <!-- /PANEL LEFT -->
             </div>
             <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
-                {% include "_inc_header-editor.html" %}     
-                <div class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none">
+                {% include "_inc_header-editor.html" %}
+                <div class="slds-align_absolute-center slds-m-top_medium slds-m-left_none">
                     <!-- sort: false -->
-                    <div id="listEditor" class="list-group 2slds-m-left_small slds-col" style="border: 1px dashed #eee; background: #fff; min-height: 100px;">
+                    <div id="listEditor" class="list-group 2slds-m-left_small slds-col" style="border: 1px dashed #eee; background: #fff; min-height: 100px; height:100%">
 
                     </div>
 
@@ -54,11 +54,11 @@
                     <!-- CANVAS -->
                     <ul id="canvas_list" class="list-group list slds-drop-zone slds-list_vertical-space white 2slds-hide" 2style="background: #fff; min-height:200px">
                         <li></li>
-                    </ul>                    
+                    </ul>
                     <!-- /CANVAS -->
                     #}
                 </div>
-                {% include "_inc_footer-editor.html" %}     
+                {% include "_inc_footer-editor.html" %}
             </div>
             <div id="panel_right">
                 <!-- PANEL RIGHT -->
