@@ -25,7 +25,8 @@
   "author": "Salesforce",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@salesforce-ux/design-system": "~2.6.2",
+    //"@salesforce-ux/design-system": "~2.6.2",
+    "@salesforce-ux/design-system": "2.7.0",
     "browser-sync": "^2.24.5",
     "del": "^2.2.2",
     "express": "^4.16.3",
