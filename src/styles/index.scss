@@ -136,6 +136,10 @@ html.list-view {
     border: none;
 }
 
+.inner-design{
+  background: #fff;
+}
+
 .region-off:hover {}
 
 .editor-off {}
@@ -1109,6 +1113,9 @@ div.ring {
 .slds-section__content {
   overflow: hidden;
 }
+
+
+
 
 // Checkbox Inheretance
 input:not(:checked).is-inhereted ~ .slds-checkbox_faux,
