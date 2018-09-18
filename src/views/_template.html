@@ -31,36 +31,66 @@
         <!-- /BUILDER HEADER -->
 
         <div id="builder" class="slds-grid slds-col">
+            <div id="pd-menu">
+              {% include "_inc_pd-menu.html" %}
+            </div>
             <div id="panel_editor" class="slds-hide modal">
                 <!-- PANEL EDITOR RIGHT -->
                 {% include "_inc_builder-panel-editor.html" %}
                 <!-- /PANEL EDITOR  RIGHT -->
             </div>
+            {#
             <div id="panel_left" class="2slds-col slds-p-left_none left-expanded">
                 <!-- PANEL LEFT -->
                 {% include "_inc_builder-panel-left.html" %}
                 <!-- /PANEL LEFT -->
             </div>
-            <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top" 3class="slds-grid slds-wrap">
-                {% include "_inc_header-editor.html" %}
-                <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->
-                <div class="slds-align_absolute-center slds-col slds-grid">
-                    <!-- CANVAS -->
-                    <div id="listEditor" class="list-group slds-col" 2class="list-group 2slds-m-left_small slds-col"  3class="list-group slds-col slds-size_1-of-1 slds-align_absolute-center" style="border: 1px dashed #eee; background: #fff; min-height: 100px; height:100%">
-                    </div>
-                    <!--ul id="canvas_list" class="list-group list slds-drop-zone slds-list_vertical-space white 2slds-hide" 2style="background: #fff; min-height:200px">
-                        <li></li>
-                    </ul-->
-                    <!-- /CANVAS -->
-                  </div>
-                <!--/div-->
-                {% include "_inc_footer-editor.html" %}
+            #}
+
+            <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+                  <!--div class="slds-drop-zone_drag__slot"-->
+                    {% include "_inc_header-editor.html" %}
+                    <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->
+                    <div class="2slds-align_absolute-center slds-col slds-grid">
+                        <!-- EDITOR REGION 1 -->
+                        <div id="region1" style="width:100%">
+                          <!-- CANVAS -->
+                          <div class="demo-only" style="padding-top:2rem">
+                            <div class="" id="dropzone1">
+                              <div class="slds-drop-zone__label">
+                                <div class="slds-media slds-media_center">
+                                  <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
+                                      <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div class="slds-media__body">
+                                    <h2>Content</h2>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div id="listEditor" class="list-group slds-col slds-align_absolute-center slds-grid_vertical" style="border: 1px dashed #eee; background: #fff; min-height: 90px;"></div>
+
+                            </div>
+                          </div>
+                          <!-- /CANVAS -->
+                        </div>
+                        <!-- EDITOR REGION 1 -->
+                      </div>
+                    <!--/div-->
+                    {% include "_inc_footer-editor.html" %}
+                </div>
             </div>
+            {#
             <div id="panel_right">
                 <!-- PANEL RIGHT -->
                 {% include "_inc_builder-panel-right.html" %}
                 <!-- /PANEL RIGHT -->
             </div>
+            #}
         </div>
     </main>
     <script src="/scripts/app.js"></script>

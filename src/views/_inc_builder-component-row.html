@@ -9,10 +9,17 @@
             </span>
         </div-->
         <div class="slds-p-right_small my-handle">
-          <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Banner">
-              <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+          <span class="slds-icon_container slds-m-left_small" title="Banner">
+              <svg class="slds-hide slds-icon slds-icon slds-icon_xx-small slds-icon-text-light" aria-hidden="true">
                 <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use-->
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag_and_drop"></use>
+                <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag"></use-->
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
+
+              </svg>
+              <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-light" aria-hidden="true">
+                <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use-->
+                <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag"></use-->
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
 
               </svg>
               <span class="slds-assistive-text">Row</span>
@@ -64,6 +71,7 @@
                 <img src="" class="slds-hide image-holder" style="width:100%;">
             </div>
 
+
             <!-- /COMPONENT -->
             <div class="slds-drop-zone__actions">
                 <div class="slds-button-group" role="group">
@@ -84,7 +92,8 @@
         </div>
     </div>
     <div class="slds-hide navigator">
-        <!-- Navigator Catalog -->
+        <!-- Navigator Row -->
+        {#
         <div class="slds-tree__item nav slds-p-left_large">
             <span class="slds-p-left_large slds-tree__item-label slds-truncate" title="Row">
                 <button class="slds-button slds-button__small hoverme button-trigger-action--edit-component-">Row</button>
@@ -95,7 +104,49 @@
                 </button>
             </span>
         </div>
-        <!-- /Navigator Catalog -->
+        #}
+        <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
+          <div class="">
+            <span class="slds-icon_container slds-m-left_small" title="Sort Component">
+                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
+                </svg>
+                <span class="slds-assistive-text">Sort Component</span>
+            </span>
+          </div>
+
+          <div class="my-handle">
+            <span class="slds-icon_container slds-m-left_small" title="Row">
+                <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
+                </svg>
+                <span class="slds-assistive-text">Row</span>
+            </span>
+          </div>
+
+          <div class="slds-col hoverme">
+            <span class="slds-truncate slds-p-left_small component_name" title="Row">Row</span>
+          </div>
+
+          <div class="">
+            <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
+                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                </svg>
+                <span class="slds-assistive-text">Edit Properties</span>
+            </span>
+          </div>
+
+          <div class="slds-m-right_small">
+            <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
+                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                </svg>
+                <span class="slds-assistive-text">Delete Component</span>
+            </span>
+          </div>
+        </div>        
+        <!-- /Navigator Row -->
     </div>
 </div>
 

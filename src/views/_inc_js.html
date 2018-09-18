@@ -1077,25 +1077,32 @@
 
 
         $('#trigger-preview').click(function() {
+            $('#pd-menu').addClass('slds-hide');
+            $('#panel_editor').addClass('slds-hide');
+
             $('#panel_left').toggleClass('slds-hide');
             $('#panel_right').toggleClass('slds-hide');
             //$('.slds-drop-zone').toggleClass('slds-drop-zone slds-drop-zone_none');
             $('.component').toggleClass('component component-preview');
             $('#trigger-preview').toggleClass('slds-hide');
             $('#trigger-edit').toggleClass('slds-hide');
-            $('#canvas_list, #static_header').toggleClass('slds-drop-zone');
-            $('#canvas_list, #static_header').toggleClass('white transparent');
+            $('#dropzone1>div').toggleClass('slds-drop-zone');
+            $('#canvas_list, #static_header').removeClass('transparent');
             return false;
         });
         $('#trigger-edit').click(function() {
+            $('#pd-menu').removeClass('slds-hide');
+            $('#panel_editor').removeClass('slds-hide');
+
+
             $('#panel_left').toggleClass('slds-hide');
             $('#panel_right').toggleClass('slds-hide');
             //$('.slds-drop-zone').toggleClass('slds-drop-zone_none slds-drop-zone');
             $('.component-preview').toggleClass('component-preview component');
             $('#trigger-preview').toggleClass('slds-hide');
             $('#trigger-edit').toggleClass('slds-hide');
-            $('#canvas_list, #static_header').toggleClass('slds-drop-zone');
-            $('#canvas_list, #static_header').toggleClass('transparent white');
+            $('#dropzone1>div').toggleClass('slds-drop-zone');
+            $('#canvas_list, #static_header').addClass('transparent');
 
             return false;
         });
@@ -1165,7 +1172,99 @@
         });
 
 
+        //PD MENU
 
+        $('.js-component-palette-button').click(function() {
+          //$('.js-component-palette-button').removeClass('pd-button-is-active');
+          $('.js-component-palette-button').removeClass('is-active');
+          $('#component-palette-menu').addClass('slds-hide');
+          //$('.js-page-structure-button').removeClass('pd-button-is-active');
+          $('.js-page-structure-button').removeClass('is-active');
+          $('#page-structure-menu').addClass('slds-hide');
+          $('#modal-page-settings').addClass('slds-hide');
+
+          /*
+          $('#page-structure-menu').addClass('slds-hide');
+          $('#component-palette-menu').addClass('slds-hide');
+          $('#modal-page-settings').addClass('slds-hide');
+          $('.js-component-palette-button').addClass('pd-button-is-active');
+          $('.js-page-structure-button').addClass('pd-button-is-active');
+          */
+
+
+          //$('.js-component-palette-button').addClass('pd-button-is-active');
+          $('.js-component-palette-button').addClass('is-active');
+          $('#component-palette-menu').removeClass('slds-hide');
+        });
+        $('.js-page-structure-button').click(function() {
+          $('.js-component-palette-button').removeClass('is-active');
+          $('#component-palette-menu').addClass('slds-hide');
+          $('.js-page-structure-button').removeClass('is-active');
+          $('#page-structure-menu').addClass('slds-hide');
+          $('#modal-page-settings').addClass('slds-hide');
+
+          /*
+          $('#page-structure-menu').addClass('slds-hide');
+          $('#component-palette-menu').addClass('slds-hide');
+          $('#modal-page-settings').addClass('slds-hide');
+          $('.js-component-palette-button').addClass('pd-button-is-active');
+          $('.js-page-structure-button').addClass('pd-button-is-active');
+          */
+
+          //$('.js-page-structure-button').toggleClass('pd-button-is-active');
+          $('.js-page-structure-button').toggleClass('is-active');
+          $('#page-structure-menu').toggleClass('slds-hide');
+        });
+        $('.js-page-settings-button').click(function() {
+          $('.js-component-palette-button').removeClass('is-active');
+          $('#component-palette-menu').addClass('slds-hide');
+          $('.js-page-structure-button').removeClass('is-active');
+          $('#page-structure-menu').addClass('slds-hide');
+          $('#modal-page-settings').addClass('slds-hide');
+
+          /*
+          $('#page-settings-general').removeClass('slds-active');
+          $('#page-settings-seo').removeClass('slds-active');
+          $('#page-settings-rules').removeClass('slds-active');
+          $('#tab-default-11').removeClass('slds-show');
+          $('#tab-default-21').removeClass('slds-show');
+          $('#tab-default-31').removeClass('slds-show');
+          $('#tab-default-32').removeClass('slds-show');
+
+          $('#tab-default-11').addClass('slds-hide');
+          $('#tab-default-21').addClass('slds-hide');
+          $('#tab-default-31').addClass('slds-hide');
+          $('#tab-default-32').addClass('slds-hide');
+
+          $('#tab-default-11').addClass('slds-show');
+          */
+
+          $('#page-settings-general').addClass('slds-active');
+          $('#modal-page-settings').toggleClass('slds-hide');
+        });
+
+        /*
+        $('#region1').hover(function(){
+          console.log('in');
+          $('#dropzone1').toggleClass('slds-drop-zone');
+          $('#dropzone1').toggleClass('slds-drop-zone_drag');
+          return false;
+        });
+        */
+
+
+        //CLOSE PD Panels
+        $('#component-palette-menu .js-trigger-close').click(function(e) {
+            console.log('close component palette now');
+            $('.js-component-palette-button').removeClass('is-active');
+            $('#component-palette-menu').addClass('slds-hide');
+        });
+
+        $('#page-structure-menu .js-trigger-close').click(function(e) {
+            //console.log('close component palette now');
+            $('.js-page-structure-button').removeClass('is-active');
+            $('#page-structure-menu').addClass('slds-hide');
+        });
 
 
         //DROPBOX Chooser
@@ -1247,11 +1346,32 @@
         },
         sort: false,
         onClone: function(evt) {
-          //console.log('clone now');
+          console.log('clone now from A');
           var origEl = evt.item;
           var cloneEl = evt.clone;
+        },
+        onMove: function(evt){
+          console.log('moving now');
+          //HOVER OVER REGION SHOW HIDE
+          $('#region1').hover(function(){
+            console.log('hover over region in');
+            $('#dropzone1').addClass('slds-drop-zone');
+            $('#dropzone1').addClass('slds-drop-zone_drag');
+            return false;
+          });
+        },
+        onEnd: function (evt){
+          console.log('finished');
+          $('#region1').hover(function(){
+            $('#dropzone1').removeClass('slds-drop-zone');
+            $('#dropzone1').removeClass('slds-drop-zone_drag');
+            return false;
+          });
         }
     });
+
+    /*
+    */
 
     Sortable.create(listToolsB, {
         animation: 200,
@@ -1259,7 +1379,7 @@
           name: "shared",
           pull: "clone",
           put: false,
-          ghostClass: "sortable-ghost",           
+          ghostClass: "sortable-ghost",
           revertClone: true,
           handle: '.my-handle'
         },
@@ -1268,7 +1388,26 @@
           //console.log('clone now');
           var origEl = evt.item;
           var cloneEl = evt.clone;
+        },
+        onMove: function(evt){
+          console.log('moving now');
+          //HOVER OVER REGION SHOW HIDE
+          $('#region1').hover(function(){
+            console.log('hover over region in');
+            $('#dropzone1').addClass('slds-drop-zone');
+            $('#dropzone1').addClass('slds-drop-zone_drag');
+            return false;
+          });
+        },
+        onEnd: function (evt){
+          console.log('finished');
+          $('#region1').hover(function(){
+            $('#dropzone1').removeClass('slds-drop-zone');
+            $('#dropzone1').removeClass('slds-drop-zone_drag');
+            return false;
+          });
         }
+        
     });
 
     Sortable.create(listEditor, {
@@ -1484,6 +1623,7 @@
               $('#component-'+deleteitem).fadeOut(500,function(){$(this).remove();});
 
               $('#listitem').val('');
+              $('#panel_editor').addClass('slds-hide');
               $('#modal-id-4-delete').addClass('slds-hide');
 
               savingAnimation();

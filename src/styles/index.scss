@@ -108,6 +108,21 @@ html.list-view {
 }
 
 
+//typography
+.font_xx-small{
+  font-size: $font-size-heading-xx-small;
+}
+.font_x-small{
+  font-size: $font-size-heading-x-small;
+}
+.font_small{
+  font-size: $font-size-heading-small;
+}
+.font_medium{
+  font-size: $font-size-heading-medium;
+}
+
+
 /*
 #regionA,
 #regionB,
@@ -1852,7 +1867,6 @@ img.image-holder {
 
 
 /* EMPTY REGION PLACEHOLDER */
-
 .emptyRegion.emptyRegionPlaceholder {
     font-family: "Salesforce Sans Regular", "SalesforceSans-Regular", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
     padding: 20px;
@@ -1872,14 +1886,14 @@ img.image-holder {
     font-weight: 300;
     transition: opacity .3s ease;
 }
-
+/*
 #canvas>div {
     height: 100%;
 }
-
+*/
 #popover_page-list {
     top: 60px;
-    left: 370px;
+    left: 140px;
     position: absolute;
 }
 
@@ -1923,8 +1937,8 @@ ul#component_list li li {
 }
 
 .thumbnail_container {
-    width: 200px;
-    height: 115px;
+    width: 155px;
+    height: 50px;
     //text-align: center;
 }
 
@@ -1935,10 +1949,8 @@ ul#component_list li li {
 .sortable-ghost{
   background: green;
   height: 2px;
-  /*
   margin-top: 4px;
   margin-bottom: 4px;
-  */
 }
 
 .list-group-item .ghost-dummy{
@@ -1954,4 +1966,403 @@ ul#component_list li li {
 
 .list-group-item{
   width:100%
+}
+
+//PD Structure
+/*
+.cb-AppNav {
+    position: absolute;
+    top: 10px;
+    z-index: 11;
+}
+
+.cb-AppNav-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #143058;
+    box-shadow: 0 2px 4px 0 rgba(22,45,60,.56);
+    font-size: 21px;
+    margin: 10px;
+    color: #fff;
+    fill: #fff;
+    display: flex;
+    align-items: center;
+    transition: all .1s ease-in;
+    cursor: pointer;
+    position: relative;
+}
+
+.cb-AppNav-button:before {
+    transform: scaleY(-1);
+    top: 11px;
+}
+
+.cb-AppNav-button:before,
+.cb-AppNav-button:after {
+    position: absolute;
+    right: 3px;
+    width: 6px;
+    height: 6px;
+    content: url(/assets/corner.svg);
+    opacity: 0;
+}
+
+.cb-AppNav-button:before,
+.cb-AppNav-button:after {
+    position: absolute;
+    right: 3px;
+    width: 6px;
+    height: 6px;
+    content: url(/sfsites/commeditor/assets/corner.svg);
+    opacity: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+::selection {
+    background: #d8edff;
+    text-shadow: none;
+    color: #16325c;
+}
+
+.cb-AppNav-button:hover {
+    width: 100%;
+    fill: #fff;
+}
+
+.cb-AppNav-button:hover .cb-AppNav-buttonLabel {
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+.cb-AppNav-button .cb-AppNav-buttonLabel,
+.cb-AppNav-button.is-active:hover .cb-AppNav-buttonLabel {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .15s ease-in;
+    visibility: hidden;
+}
+
+.cb-AppNav-button.is-active:first-child {
+    box-shadow: 0 -2px 6px -2px rgba(22,45,60,.75), -3px 3px 5px -2px rgba(22,45,61,.6);
+}
+
+.cb-AppNav-button.is-active,
+.cb-AppNav-button.is-active:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: #0070d2;
+    width: 55px;
+    box-shadow: -3px 3px 5px -2px rgba(22,45,61,.6);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+//PD menu
+.cb-AppNav-button.is-active:first-child {
+    box-shadow: 0 -2px 6px -2px rgba(22,45,60,.75), -3px 3px 5px -2px rgba(22,45,61,.6);
+}
+.cb-AppNav-button.pd-button-is-active,
+.cb-AppNav-button.pd-button-is-active:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: #0070d2;
+    width: 55px;
+    box-shadow: -3px 3px 5px -2px rgba(22,45,61,.6);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.cb-AppNav-buttonIcon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.cb-LeftPanel-container {
+    position: absolute;
+    z-index: -1;
+    width: 325px;
+    top: 10px;
+    left: 62px;
+    border-radius: 3px;
+    border-left: 5px solid #0070d2;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(22, 45, 60, 0.75);
+    box-shadow: 0 1px 6px 0 rgba(22,45,60,.75);
+    min-height: 200px;
+}
+
+.cb-AppNav-button.is-active:before, .cb-AppNav-button.is-active:after {
+    opacity: 1;
+    transition: all .2s ease-in;
+}
+.cb-AppNav-button:after {
+    bottom: 11px;
+}
+.cb-AppNav-button:before,
+.cb-AppNav-button:after {
+    position: absolute;
+    right: 3px;
+    width: 6px;
+    height: 6px;
+    content: url(/assets/corner.svg);
+    opacity: 0;
+}
+*/
+
+//APP NAV button
+.cb-AppNav {
+  position: absolute;
+  top: 10px;
+  z-index: 11
+}
+
+.cb-AppNav-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #143058;
+  box-shadow: 0 2px 4px 0 rgba(22, 45, 60, .56);
+  font-size: 21px;
+  margin: 10px;
+  color: #fff;
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  transition: all .1s ease-in;
+  cursor: pointer;
+  position: relative
+}
+
+.cb-AppNav-button.hide {
+  display: none
+}
+
+.cb-AppNav-button.is-active,
+.cb-AppNav-button.is-active:hover {
+  color: #fff;
+  fill: #fff;
+  background-color: #0070d2;
+  width: 55px;
+  box-shadow: -3px 3px 5px -2px rgba(22, 45, 61, .6);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.cb-AppNav-button.is-active:first-child {
+  box-shadow: 0 -2px 6px -2px rgba(22, 45, 60, .75), -3px 3px 5px -2px rgba(22, 45, 61, .6)
+}
+
+.cb-AppNav-button.is-active:first-child:before {
+  opacity: 0
+}
+
+.cb-AppNav-button.hideTopCurve.is-active:before {
+  opacity: 0
+}
+
+.cb-AppNav-button:before,
+.cb-AppNav-button:after {
+  position: absolute;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  content: url("/assets/corner.svg");
+  opacity: 0
+}
+
+.cb-AppNav-button.is-active:before,
+.cb-AppNav-button.is-active:after {
+  opacity: 1;
+  transition: all .2s ease-in
+}
+
+.cb-AppNav-button:before {
+  transform: scaleY(-1);
+  top: 11px
+}
+
+.cb-AppNav-button:after {
+  bottom: 11px
+}
+
+.cb-AppNav-button:hover {
+  width: 100%;
+  fill: #fff
+}
+
+.cb-AppNav-button:hover .cb-AppNav-buttonLabel {
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden
+}
+
+.cb-AppNav-button .cb-AppNav-buttonLabel,
+.cb-AppNav-button.is-active:hover .cb-AppNav-buttonLabel {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .15s ease-in;
+  visibility: hidden
+}
+
+.cb-AppNav-button .cb-AppNav-buttonBadge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-size: 9px;
+  border-radius: 10px;
+  color: #fff;
+  width: 18px;
+  text-align: center;
+  line-height: 16px;
+  background-color: #c23934;
+  border: 1px solid #fff
+}
+
+.cb-AppNav-button.is-active .cb-AppNav-buttonBadge {
+  right: 7px
+}
+
+.cb-AppNav-buttonIcon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative
+}
+
+
+//left menu panel_left
+/*
+.cb-LeftPanel-container {
+  position: absolute;
+  z-index: 10;
+  width: 255px;
+  top: 20px;
+  left: 62px;
+  border-radius: 3px;
+  border-left: 5px solid #0070d2;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 rgba(22, 45, 60, .75);
+  min-height: 200px
+}
+*/
+
+.cb-LeftPanel-container {
+    position: absolute;
+    z-index: -1;
+    width: 326px;
+    top: 10px;
+    left: 62px;
+    border-radius: 3px;
+    border-left: 5px solid #0070d2;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(22, 45, 60, 0.75);
+    box-shadow: 0 1px 6px 0 rgba(22, 45, 60, 0.75);
+    min-height: 200px;
+}
+
+
+.cb-LeftPanel-container.widePanel {
+  width: 100%;
+  max-width: 450px
+}
+
+@media ( min-width:768px) {
+  .cb-LeftPanel-container.widePanel {
+    max-width: 90vw
+  }
+}
+
+@media ( min-width:1024px) {
+  .cb-LeftPanel-container.widePanel {
+    max-width: 950px
+  }
+}
+
+.cb-LeftPanel-header {
+  display: flex;
+  z-index: 1;
+  position: relative
+}
+
+.cb-LeftPanel-header .cb-LeftPanel-headerTitleOption {
+  display: flex;
+  align-items: center;
+  width: 100%
+}
+
+.cb-LeftPanel-headerTitle {
+  font-weight: bold;
+  max-width: 155px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 8px
+}
+
+.cb-LeftPanel-container.widePanel .cb-LeftPanel-headerTitle {
+  padding-top: 24px
+}
+
+.cb-LeftPanel-headerCloseButton {
+  margin-right: 10px;
+  margin-top: 12px
+}
+
+.widePanel .cb-LeftPanel-headerCloseButton {
+  margin-right: 20px
+}
+
+.cb-LeftPanel-closeIcon {
+  fill: #b1c5d9;
+  width: 1rem;
+  height: 1rem
+}
+
+.cb-LeftPanel-headerOption {
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 100%
+}
+
+.cb-LeftPanel-fixedHeightView {
+  height: calc(85vh - 75px)
+}
+
+.cb-LeftPanel-dynamicHeightView {
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden
+}
+
+//Image Browser
+.collectionA li,
+.collectionB li,
+.collectionC li,
+.collectionD li,
+.collectionE li,
+.collectionF li,
+.collectionG li{
+  min-width: 21rem;
+}
+
+//SET HEADER AND FOOTER TO transparent
+.transparent{
+  opacity: 0.2;
 }
