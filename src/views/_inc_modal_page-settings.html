@@ -1,5 +1,5 @@
 <div id="modal-page-settings" class="slds-hide modal">
-    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header100" aria-describedby="modal-content-id-3">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header100" aria-describedby="modal-content-id-3" style="height: 35rem;">
         <div class="slds-modal__container">
             <header class="slds-modal__header">
                 <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse trigger-close-modal" title="Close">
@@ -61,10 +61,10 @@
                                             <input type="text" id="input-03" class="slds-input">
                                         </div>
                                     </div>
-                                    <div class="slds-form-element__row">
+                                    <div class="slds-form-element__row slds-hide">
                                         <div class="slds-form-element slds-size_1-of-1">
-                                            <label class="slds-form-element__label" for="input-03">Page Description</label>
-                                            <textarea id="textarea-id-01" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+                                            <label class="slds-form-element__label" for="input-03">Comment</label>
+                                            <textarea id="textarea-id-01" class="slds-textarea" placeholder=""></textarea>
                                         </div>
                                     </div>
                                     <div class="slds-form-element__row">
@@ -73,7 +73,7 @@
                                             <input type="checkbox" name="options" id="checkbox-1" value="on">
                                             <label class="slds-checkbox__label" for="checkbox-1">
                                                 <span class="slds-checkbox_faux"></span>
-                                                <span class="slds-form-element__label">Is findable in Storefront Search</span>
+                                                <span class="slds-form-element__label">Searchable in Storefront</span>
                                             </label>
                                             </span>
                                         </div>
@@ -152,7 +152,7 @@
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
                                             <label class="slds-form-element__label" for="input-03">Page Address (URL)</label>
-                                            <input type="text" id="input-03" class="slds-input" placeholder="">
+                                            <input type="text" id="input-03" class="slds-input" placeholder="//something.com/pagename">
                                         </div>
                                     </div>
                                     <div class="slds-form-element__row">
@@ -173,7 +173,7 @@
                                     <div class="slds-form-element__row">
                                         <div class="slds-form-element slds-size_1-of-1">
                                             <label class="slds-form-element__label" for="input-03">Meta Keywords (10 keywords)</label>
-                                            <input type="text" id="input-03" class="slds-input" placeholder="">
+                                            <input type="text" id="meta-keywords" class="slds-input" placeholder="">
                                         </div>
                                     </div>
 
@@ -186,7 +186,66 @@
                     <div id="tab-default-32" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
                         <!-- RULES -->
 
-                        <div class="slds-p-bottom_small">
+                      <div>
+                        <div class="slds-popover__body" id="dialog-body-id-preview-settings">
+                                <p>
+
+                                   </p><div class="slds-form" id="content-customer-groups">
+                                        <div class="slds-form-element slds-p-bottom_small">
+                                            <legend class="slds-form-element__legend slds-form-element__label">Show this page only to members of Customer Groups:</legend>
+                                            <div class="slds-form-element__control">
+                                                <span class="slds-checkbox">
+                                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_everyone" value="Everyone" checked="">
+                                              <label class="slds-checkbox__label" for="banner-checkbox_everyone">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <span class="slds-form-element__label">Everyone</span>
+                                                </label>
+                                                </span>
+                                                <span class="slds-checkbox">
+                                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupa" value="CustomergroupA">
+                                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupa">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <span class="slds-form-element__label">Registered Users</span>
+                                                </label>
+                                                </span>
+                                                <span class="slds-checkbox">
+                                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupb" value="CustomergroupB">
+                                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupb">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <span class="slds-form-element__label">Unregistered Users</span>
+                                                </label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="slds-form" id="content-from">
+                                        <div class="slds-form-element slds-p-bottom_small">
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-form-element 1slds-p-bottom_small">
+                                                    <label class="slds-form-element__label" for="select-01">Show page from:</label>
+                                                    <div class="slds-form-element__control">
+                                                        <input type="text" class="slds-input input-rules-from 2display-filter" placeholder="∞"> </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form" id="content-to">
+                                        <div class="slds-form-element slds-p-bottom_small">
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-form-element 1slds-p-bottom_small">
+                                                    <label class="slds-form-element__label" for="select-01">Show page until:</label>
+                                                    <div class="slds-form-element__control">
+                                                        <input type="text" class="slds-input input-rules-to 2display-filter" placeholder="∞"> </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>                                <p></p>
+                            </div>
+                      </div>
+
+                        <div class="slds-hide slds-p-bottom_small">
                             <div class="slds-form slds-form_compound">
                                 <div class="slds-form-element__row slds-grid">
                                     <div class="slds-form-element">

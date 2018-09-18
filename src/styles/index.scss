@@ -2366,3 +2366,17 @@ ul#component_list li li {
 .transparent{
   opacity: 0.2;
 }
+
+
+//SET SPACING BETWEEN COMPONENTS IN menu
+#listToolsB>div,
+#listToolsA>div{
+  margin-bottom: 0.5rem;
+}
+
+//EDITOR MODE
+.edit-mode{
+  border: 1px dashed #eee;
+  background: #fff;
+  min-height: 90px;
+}
