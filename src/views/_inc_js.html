@@ -1347,6 +1347,93 @@
                 $('#spn-id-seo_description').html(text_remaining + ' characters remaining');
             });
 
+
+            /*
+
+            $(function() {
+                $win.on('click.Bst', function(event) {
+                    //MAIN COMPONENT SELECT
+                    if (
+                        $box.has(event.target).length == 0 //checks if descendants of $box was clicked
+                        &&
+                        !$box.is(event.target) //checks if the $box itself was clicked
+                        &&
+                        $($box).hasClass('slds-is-open')
+                    ) {
+                        $($box).toggleClass('slds-is-open')
+                    }
+                    //LOCALIZATION SELECT
+                    if (
+                        $boxb.has(event.target).length == 0 //checks if descendants of $box was clicked
+                        &&
+                        !$boxb.is(event.target) //checks if the $box itself was clicked
+                        &&
+                        $($boxb).hasClass('slds-is-open')
+                    ) {
+                        $($boxb).toggleClass('slds-is-open')
+                    }
+                    //DEVICE SELECT
+                    if (
+                        $boxc.has(event.target).length == 0 //checks if descendants of $box was clicked
+                        &&
+                        !$boxc.is(event.target) //checks if the $box itself was clicked
+                        &&
+                        $($boxc).hasClass('slds-is-open')
+                    ) {
+                        $($boxc).toggleClass('slds-is-open')
+                    }
+                    //SUB LEFT SELECT
+                    if (
+                        $boxd.has(event.target).length == 0 //checks if descendants of $box was clicked
+                        &&
+                        !$boxd.is(event.target) //checks if the $box itself was clicked
+                        &&
+                        $($boxd).hasClass('slds-is-open')
+                    ) {
+                        $($boxd).toggleClass('slds-is-open')
+                    }
+                    //SUB RIGHT SELECT
+                    if (
+                        $boxe.has(event.target).length == 0 //checks if descendants of $box was clicked
+                        &&
+                        !$boxe.is(event.target) //checks if the $box itself was clicked
+                        &&
+                        $($boxe).hasClass('slds-is-open')
+                    ) {
+                        $($boxe).toggleClass('slds-is-open')
+                    }
+
+
+                });
+
+                return false;
+            });
+            */
+
+          $('#locale-switch').click(function() {
+              $('#locale-switch .slds-dropdown-trigger_click').toggleClass('slds-is-open');
+          });
+
+            //LOCALES
+            $('#trigger-us').click(function() {
+                $('#language-selecta li').removeClass('slds-is-selected');
+                $(this).closest('li').addClass('slds-is-selected');
+            });
+            $('#trigger-fr').click(function() {
+                $('#language-selecta li').removeClass('slds-is-selected');
+                $(this).closest('li').addClass('slds-is-selected');
+                $('#locale-warning').toggleClass('slds-hide');
+
+            });
+            $('#trigger-de').click(function() {
+                $('#language-selecta li').removeClass('slds-is-selected');
+                $(this).closest('li').addClass('slds-is-selected');
+            });
+
+          $('#locale-warning .js-trigger-close').click(function() {
+              $('#locale-warning').toggleClass('slds-hide');
+          });
+
             //create tags as you type - page SETTINGS
             /*
             $('#meta-keywords').tagEditor({
@@ -1517,6 +1604,8 @@
           $('#panel_editor .component_properties').addClass('slds-hide');
           $('#editor_' + component_type).removeClass('slds-hide');
           $('#editor_' + component_type).addClass('slds-show');
+          $('#string_editor').html('Banner');
+
 
           //activate tab general
           $('#editor_' + component_type + ' .tab_general').addClass('slds-active');
