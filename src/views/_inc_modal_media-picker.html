@@ -11,9 +11,35 @@
                 </button>
                 <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Images</h2>
             </header>
-            <div class="slds-modal__content slds-p-around_medium modal-content-id-4 slds-grow">
+            <div class="slds-modal__content slds-p-around_none modal-content-id-4 slds-grow">
+                <!-- SEARCH -->
+                <div class="slds-p-vertical_x-small slds-p-horizontal_small slds-shrink-none slds-theme_shade">
+                  <div class="slds-form-element"><label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-2">Search</label>
+                    <div class="slds-form-element__control">
+                      <div class="slds-combobox_container">
+                        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                          <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none"><input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-2" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Images"><span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right"><svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use></svg></span></div>
+                          <div
+                            id="listbox-unique-id" role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option"><span class="slds-media__figure"><span class="slds-icon_container slds-icon-standard-account"><svg class="slds-icon slds-icon_small" aria-hidden="true"><use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use></svg></span></span>
+                                  <span
+                                    class="slds-media__body"><span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span><span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account •  San Francisco</span></span>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-text-title slds-m-top_x-small slds-hide" aria-live="polite">0 Item(s) Selected</div>
+                </div>
+                <!-- END SEARCH -->
+
                 <!--  EDITOR CONTENT-->
-                    <div class="editor">
+                    <div class="editor" class="">
                         <div class="slds-tabs_default">
                             <ul class="slds-hide slds-tabs_default__nav" role="tablist">
                                 <li class="slds-tabs_default__item 2slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Content</a></li>
@@ -21,7 +47,7 @@
                                 <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Localization</a></li>
                             </ul>
 
-                            <div id="tab-default-391" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+                            <div id="tab-default-391" class="slds-tabs_default__content slds-show slds-p-left_small slds-p-right_small" role="tabpanel" aria-labelledby="tab-default-1__item">
                               <!-- ASSET LIBRARY TREE -->
                                 {% include "_inc_gallery.html"  %}
                               <!-- /ASSET LIBRARY TREE -->
