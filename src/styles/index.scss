@@ -762,17 +762,18 @@ div.ring {
   }
 
   .title {
-    font-weight: bold;
-    text-transform: uppercase;
+    font-family: neutra,Helvetica,sans-serif;
+    font-weight: 500;
+    text-transform: none;
 
-    margin-top: 20%;
+    /*margin-top: 20%;*/
     text-align: left;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
-    background-color: $color-background-notification-badge-focus;
+    /*background-color: $color-background-notification-badge-focus;*/
     display: inline-block;
     letter-spacing: 1px;
-    float: left;
+    /*float: left;*/
 
     @include mq-medium-min {
       font-size: $font-size-heading-x-large;
@@ -786,7 +787,7 @@ div.ring {
     padding-right: $spacing-small;
     background-color: $color-background-notification-badge-focus;
     display: inline-block;
-    float: left;
+    /*float: left;*/
   }
 }
 
@@ -924,10 +925,10 @@ div.ring {
     text-align: left;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    background-color: #005fb2;
+    /*background-color: #005fb2;*/
     display: inline-block;
     letter-spacing: 1px;
-    float: left;
+    /*float: left;*/
 }
 
 
@@ -1157,4 +1158,33 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
       background-color: white;
     }
   }
+}
+
+
+@font-face {
+    font-family: neutra;
+    src: url("/assets/NeutraText-Book.woff") format("opentype");
+}
+
+
+.callout-tile{
+  text-align: center;
+  background-image: url('/assets/HolidayShop_SubCategory_OurHistory.jpg');
+  background-repeat: no-repeat;
+  min-height: 260px;
+  /* padding-bottom: 50%; */
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+
+.banner-header {
+    font-size: 58px !important;
+    color: #fff;
+}
+
+.callout-back{
+  background-image: url('/assets/HolidayShop_SubCategory_OurHistory.jpg');
+  background-repeat: no-repeat;
+  min-height: 260px;
 }
