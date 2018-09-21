@@ -1162,9 +1162,15 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
 
 
 @font-face {
+    font-family: hooligan-jf;
+    src: url("/assets/HOOLRGJ_.woff") format("opentype");
+}
+
+@font-face {
     font-family: neutra;
     src: url("/assets/NeutraText-Book.woff") format("opentype");
 }
+
 
 
 .callout-tile{
@@ -1181,6 +1187,7 @@ input:not(:checked).is-inhereted + .slds-checkbox--faux {
 .banner-header {
     font-size: 58px !important;
     color: #fff;
+    font-family: hooligan-jf;
 }
 
 .callout-back{
