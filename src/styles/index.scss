@@ -2380,3 +2380,79 @@ ul#component_list li li {
   background: #fff;
   min-height: 90px;
 }
+
+
+
+//DRAGULA
+#left .menu-component {
+  display: block;
+}
+#left .placeholder-component {
+  display: none;
+}
+#left .structure-component {
+  display: none;
+}
+#center .menu-component {
+  display: none;
+}
+#center .placeholder-component {
+  display: block;
+}
+#center .structure-component {
+  display: none;
+}
+#right .menu-component {
+  display: none;
+}
+#right .placeholder-component {
+  display: none;
+}
+#right .structure-component {
+  display: block;
+}
+
+.gu-mirror .menu-component {
+  display: block;
+}
+.gu-mirror .placeholder-component {
+  display: none;
+}
+.gu-mirror .structure-component {
+  display: none;
+}
+
+.gu-mirror {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.hover{
+  background: red;
+}
+
+
+/**/
+
+.drag-elements > li {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.drag-elements > li, .gu-mirror {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease-in-out;
+}
+.gu-transit {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+}

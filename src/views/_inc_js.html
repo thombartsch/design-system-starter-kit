@@ -1471,13 +1471,22 @@
         },
         onMove: function(evt){
           console.log('moving now');
+
+          if (evt.from == evt.to){
+            console.log('is the same');
+            $(evt.to).toggleClass('hover');
           //HOVER OVER REGION SHOW HIDE
-          $('#region1').hover(function(){
+        }else{
+          console.log('over');
+          //$(evt.to).toggleClass('off');
+          //$('#region1').hover(function(){
             console.log('hover over region in');
             $('#dropzone1').addClass('slds-drop-zone');
             $('#dropzone1').addClass('slds-drop-zone_drag');
             return false;
-          });
+          //});
+        }
+
         },
         onEnd: function (evt){
           console.log('tools finished');

@@ -1,0 +1,75 @@
+<script>
+$(document).ready(function(){
+  //-> SCRIPT
+  var countess = 0;
+
+
+  dragula([
+    document.querySelector('#drag-elements'),
+    document.querySelector('#drop-target'),
+    document.querySelector('#page-structure')
+  ], {
+    /*
+    revertOnSpill: true,
+    copy: true
+    */
+    copy: function (el, source) {
+      return source === document.getElementById('drag-elements')
+    },
+    accepts: function (el, target) {
+      return target !== document.getElementById('drag-elements')
+    }
+  }).on('drop', function (el) {
+    if (document.querySelector('#drop-target').children.length > 0) {
+        // check if no class
+        if (el.classList.contains('initial')) {
+          console.log('no countess');
+          //add count class
+          el.classList.remove('initial');
+          el.classList.add('component-' + countess);
+          el.classList.remove('gu-transit');
+          //
+        }else{
+          console.log('class exists already');
+          el.classList.remove('gu-transit');
+        }
+
+        //copy content to both canvas and page structure
+        //console.log('attribute is:' +el.classList.attr);
+        document.querySelector('#page-structure').innerHTML = document.querySelector('#drop-target').innerHTML;
+        console.log('align both content sides');
+
+        //hover component and page structure
+        $('#center li, #right li')
+        .mouseover(function() {
+          var hovered_component = $(this).attr('class');
+          $('#center li.'+hovered_component).addClass('hover');
+          $('#right  li.'+hovered_component).addClass('hover');
+        })
+        .mouseout(function() {
+          $('#center li').removeClass('hover');
+          $('#right  li').removeClass('hover');
+        });
+
+
+
+      //now add 1 to count
+      countess++
+    } else {
+      /*
+      document.querySelector('#page-structure').innerHTML = "Display";
+      document.querySelector('#drop-target').innerHTML = 'Region 1';
+      */
+      console.log('no components in region');
+    }
+  });
+
+
+
+
+
+
+
+  //<- SCRIPT
+});
+</script>
