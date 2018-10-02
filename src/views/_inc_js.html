@@ -1775,9 +1775,23 @@
           countess++
         },
         onEnd: function (evt){
-          document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;          
+          document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;
         }
     });
+
+
+    //add items from section 2 in tools
+
+    Sortable.create(navigator_list, {
+        animation: 200,
+        group: "list-group",
+        sort: true,
+        onEnd: function (evt){
+          document.querySelector('#listEditor').innerHTML = document.querySelector('#navigator_list').innerHTML;
+        }
+
+    });
+
 
 
 

@@ -2456,3 +2456,41 @@ ul#component_list li li {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     filter: alpha(opacity=20);
 }
+
+
+
+//show hide elements in the three zones
+
+//component-palette-menu
+
+#component-palette-menu .tool{
+  display: flex;
+}
+#component-palette-menu .placeholder{
+  display: none;
+}
+#component-palette-menu .navigator{
+  display: none;
+}
+
+
+.dropzone .tool{
+  display: none;
+}
+.dropzone .placeholder{
+  display: block;
+}
+.dropzone .navigator{
+  display: none;
+}
+
+
+#navigator_list .tool{
+  display: none;
+}
+#navigator_list .placeholder{
+  display: none;
+}
+#navigator_list .navigator{
+  display: block;
+}
