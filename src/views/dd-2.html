@@ -23,9 +23,9 @@
     <!-- DROPBOX INTEGRATION -->
     <!--script src='https://www.dropbox.com/static/api/2/dropins.js' id="dropboxjs" data-app-key="ug0ns8z2dvqvxvi"></script-->
 
-    <div class="container slds-grid slds-col">
+    <div class="meta-container slds-grid slds-col">
       <!-- CONTAINER -->
-      <div class="slds-col" id="left">
+      <div class="slds-col slds-size_2-of-12" id="left">
         <ul id="drag-elements">
           <li class="initial">
             <div class="menu-component">
@@ -51,17 +51,10 @@
           </li>
         </ul>
       </div>
-      <!--div class="slds-col" id="center">
-        <div class="">
-          <div class="slds-canvas_list slds-drop-zone" style="">
-            <ul class="" id="drop-target" style="min-height:20rem"></ul>
-          </div>
-        </div>
-      </div-->
 
 
-      <div class="slds-col" style="padding-top:2rem" id="center">
-        <div class="2slds-drop-zone 2slds-drop-zone_drag">
+      <div class="slds-col slds-size_8-of-12 container  hide-dropzone" style="padding-top:2rem;" id="center">
+        <div class="slds-drop-zone slds-drop-zone_drag">
           <div class="slds-drop-zone__label">
             <div class="slds-media slds-media_center">
               <div class="slds-media__figure">
@@ -76,8 +69,8 @@
               </div>
             </div>
           </div>
-          <div class="" style="width:100%;height:10rem">
-            <ul class="" id="drop-target" style="min-height:20rem; background: orange"></ul>
+          <div class="slds-col" style="height:10rem">
+            <ul class="slds-col" id="drop-target" style="min-height:2rem; background: #fff; height:100%; width:100%"></ul>
           </div>
         </div>
       </div>
@@ -85,7 +78,7 @@
 
 
 
-      <div class="slds-col" id="right">
+      <div class="slds-col slds-size_2-of-12" id="right">
         <ul id="page-structure"></ul>
       </div>
       <!-- /CONTAINER -->
@@ -97,22 +90,31 @@
       //-> SCRIPT
       var countess = 0;
 
-
       dragula([
         document.querySelector('#drag-elements'),
         document.querySelector('#drop-target')
       ], {
-        /*
-        revertOnSpill: true,
-        copy: true
-        */
         copy: function (el, source) {
           return source === document.getElementById('drag-elements')
         },
         accepts: function (el, target) {
           return target !== document.getElementById('drag-elements')
         }
-      }).on('drop', function (el) {
+      })
+      .on('over', function (el, container) {
+          container.className += 'ex-over';
+          var parenter = container.classList;
+          console.log('class:'+container.classList);
+          //$('.'+parenter).closest('.container').toggleClass('hide-dropzone show-dropzone');
+          $('#center').removeClass('hide-dropzone');
+
+        }).on('out', function (el, container) {
+          console.log('out');
+          container.className = container.className.replace('ex-over', '');
+          $('#center').addClass('hide-dropzone');
+
+        })
+      .on('drop', function (el) {
         if (document.querySelector('#drop-target').children.length > 0) {
             // check if no class
             if (el.classList.contains('initial')) {
@@ -142,25 +144,16 @@
             .mouseout(function() {
               $('#center li').removeClass('hover');
               $('#right  li').removeClass('hover');
-            });
-
-
-
+            })
           //now add 1 to count
           countess++
         } else {
-          /*
-          document.querySelector('#page-structure').innerHTML = "Display";
-          document.querySelector('#drop-target').innerHTML = 'Region 1';
-          */
           console.log('no components in region');
         }
       });
 
 
-
-
-
+      dragula([document.querySelector('#drop-target')]);
 
 
       //<- SCRIPT
@@ -170,6 +163,35 @@
 
   </body>
 
+
+<style>
+/*
+.gu-mirror {
+  position: fixed;
+  width: 100px;
+  height: 50px;
+}
+.menu-component{
+  background: #fff;
+  padding: 2px;
+  border: 1px solid gray;
+  list-style-type: none;
+  list-style: none;
+}
+*/
+
+.hide-dropzone .slds-drop-zone.slds-drop-zone_drag:after {
+    border: none;
+    outline: 0;
+}
+.hide-dropzone .slds-drop-zone__label{
+  display: none;
+}
+
+
+
+
+</style>
 
 
 

@@ -1453,13 +1453,15 @@
 <script>
     var countess = 0;
 
+    //add items from section 1 in tools
+
     Sortable.create(listTools, {
         animation: 200,
         group: {
-          name: "shared",
-          pull: "clone",
+          name: 'shared',
+          pull: 'clone',
           put: false,
-          ghostClass: "sortable-ghost",
+          ghostClass: 'sortable-ghost',
           revertClone: true,
           handle: '.my-handle'
         },
@@ -1470,38 +1472,20 @@
           var cloneEl = evt.clone;
         },
         onMove: function(evt){
-          console.log('moving now');
-
-          if (evt.from == evt.to){
-            console.log('is the same');
-            $(evt.to).toggleClass('hover');
-          //HOVER OVER REGION SHOW HIDE
-        }else{
-          console.log('over');
-          //$(evt.to).toggleClass('off');
-          //$('#region1').hover(function(){
-            console.log('hover over region in');
-            $('#dropzone1').addClass('slds-drop-zone');
-            $('#dropzone1').addClass('slds-drop-zone_drag');
-            return false;
-          //});
-        }
-
+          //console.log('id is: #'+evt.to.id);
+          $('#listEditor').closest('.dropzone').addClass('slds-drop-zone');
         },
+        onRemove: function (/**Event*/evt) {
+        		// same properties as onEnd
+            $('.list-group').removeClass('hover');
+        	},
         onEnd: function (evt){
-          console.log('tools finished');
-          console.log('tools old index is: '+evt.oldIndex)
-          console.log('tools new index is: '+evt.newIndex)
-          $('#region1').hover(function(){
-            $('#dropzone1').removeClass('slds-drop-zone');
-            $('#dropzone1').removeClass('slds-drop-zone_drag');
-            return false;
-          });
+          $('.list-group').removeClass('hover');
+          $('.dropzone').removeClass('slds-drop-zone');
         }
     });
 
-    /*
-    */
+    //add items from section 2 in tools
 
     Sortable.create(listToolsB, {
         animation: 200,
@@ -1519,59 +1503,26 @@
           var origEl = evt.item;
           var cloneEl = evt.clone;
         },
-        /*
-        onMove: function(evt){
-          console.log('moving now');
-          //HOVER OVER REGION SHOW HIDE
-          $('#listEditor').hover(function(){
-            console.log('hover over region in');
-            $('#dropzone1').addClass('slds-drop-zone');
-            $('#dropzone1').addClass('slds-drop-zone_drag');
-            return false;
-          });
-
-        },
-        */
-
         onMove: function (evt) {
-          /*
-          $(".list").removeClass('hover');
-          $(evt.to).addClass('hover');
-          */
-          $('#dropzone1').removeClass('slds-drop-zone');
-          $('#dropzone1').removeClass('slds-drop-zone_drag');
-
-          $('#dropzone1').hover(
-            function() {
-             //$(this).addClass('hover');
-             console.log('mouseenter !');
-           },
-           function() {
-             //$(this).removeClass('hover');
-             $('#dropzone1').addClass('slds-drop-zone');
-             $('#dropzone1').addClass('slds-drop-zone_drag');
-              console.log('mouseleave !');
-           }
-          );
+          //console.log('id is: #'+evt.to.id);
+          $('#listEditor').closest('.dropzone').addClass('slds-drop-zone');
         },
-
-
+        onRemove: function (/**Event*/evt) {
+        		// same properties as onEnd
+            $('.list-group').removeClass('hover');
+        	},
         onEnd: function (evt){
-          console.log('toolsb finished');
-          console.log('toolsb old index is: '+evt.oldIndex)
-          console.log('toolsb new index is: '+evt.newIndex)
-
-          $('#listEditor').hover(function(){
-            $('#dropzone1').removeClass('slds-drop-zone');
-            $('#dropzone1').removeClass('slds-drop-zone_drag');
-            return false;
-          });
+          $('.list-group').removeClass('hover');
+          $('.dropzone').removeClass('slds-drop-zone');
 
           $('.js-component-palette-button').removeClass('is-active');
           $('#component-palette-menu').addClass('slds-hide');
         }
 
     });
+
+
+    //what happens when you add items into editor
 
     Sortable.create(listEditor, {
         group: "shared",
@@ -1580,17 +1531,26 @@
           placeholder = evt.item;
           placeholder.id = 'component-' + countess;
           placeholder_id = 'component-' + countess;
+
           //now change display
+          /*
           $('#' + placeholder_id + ' .tool').addClass('slds-hide');
           $('#' + placeholder_id + ' .placeholder').removeClass('slds-hide');
+          */
 
           //now clone element to right side
+          /*
           var itm = document.querySelector('#component-' + countess);
           var nav = itm.cloneNode(true);
           nav.id = 'navigator-' + countess;
           var nav_id = 'navigator-' + countess;
 
           document.querySelector('#navigator_list').appendChild(nav);
+          */
+
+
+          //document.querySelector('#page-structure').innerHTML = document.querySelector('#drop-target').innerHTML;
+          document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;
 
           console.log('finished');
           console.log('placed on index is: '+evt.newIndex)
@@ -1600,12 +1560,10 @@
           savingAnimation();
 
           /*
-          document.getElementById(nav_id).querySelector('.tool').className.replace('slds-hide', '');
-          document.getElementById(nav_id).querySelector('.navigator').className.replace('slds-hide', '');
-          */
           $('#' + nav_id + ' .tool').addClass('slds-hide');
           $('#' + nav_id + ' .placeholder').addClass('slds-hide');
           $('#' + nav_id + ' .navigator').removeClass('slds-hide');
+          */
 
           //show banner
           var component_type = 'banner';
@@ -1813,21 +1771,16 @@
           });
 
 
-
-
-
-
-
           //now count up
           countess++
         },
-    });
-        /*
-        document.getElementsByClassName('hoverme').onclick = function() {
-          //_this.innerFunction();
-          alert('clicked');
+        onEnd: function (evt){
+          document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;          
         }
-        */
+    });
+
+
+
 
 
 
