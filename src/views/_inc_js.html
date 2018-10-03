@@ -1529,7 +1529,11 @@
         sort: true,
         onAdd: function(evt) {
           placeholder = evt.item;
+          /*
           placeholder.id = 'component-' + countess;
+          placeholder_id = 'component-' + countess;
+          */
+          placeholder.class += 'component-' + countess;
           placeholder_id = 'component-' + countess;
 
           //now change display
