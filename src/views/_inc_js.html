@@ -3,331 +3,6 @@
 
 <script>
     $(document).ready(function() {
-        //HOVER NAV ITEM
-        //navigator
-        /*
-            //DRAG DROP MOVE AROUND
-            var count = 0;
-
-            //START DRAG DROP JQUERY
-            $('.draggable').draggable({
-                revert: true,
-                connectToSortable: '.list',
-                helper: 'clone',
-                start: function(event, ui) {
-                    //console.log('start');
-
-                },
-                stop: function(event, ui) {
-                    var navtxt = $(ui.helper).attr('title');
-                    //console.log('navtxt:' + navtxt);
-
-                    savingAnimation();
-
-                    ui.helper.css('width', '100%');
-
-                    ui.helper.children('.add-component').fadeOut(600);
-                    ui.helper.children('div.component').fadeToggle().toggleClass('slds-hide slds-show');
-
-                    //add navigator item
-                    var get_case = $(this).closest('li').attr('id');
-                    var nav_item = '<li role="treeitem" aria-level="3" class="slds-item nav slds-padding_n" id="navigator_placeholder_' + count + '"><div class="slds-tree__item"><span class="slds-tree__item-label slds-truncate" title="' + navtxt + '"><button class="slds-button slds-button__small hoverme button-trigger-action--edit-component-' + get_case + ' ">' + navtxt + '</button><button class="slds-button slds-button__small slds-float_right trash"><svg class="slds-button__icon slds-button__icon_left" aria-hidden="true"><use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use></svg></button></span></div></li>';
-
-
-                    $(nav_item).attr('id', 'navigator_placeholder_' + count);
-                    $(nav_item).addClass('listItem' + count);
-                    $(nav_item).attr('indexer', 'listItem' + count);
-                    ui.helper.addClass('listItem' + count);
-                    ui.helper.attr('indexer', 'listItem' + count);
-                    $('#navigator_list').append(nav_item);
-
-
-                    //add id to placeholder
-                    $(this).addClass('ui-draggable-dragged');
-                    ui.helper.attr('id', 'component_placeholder_' + count);
-                    //$('#emptyRegion').fadeOut(600);
-
-
-
-                    count++;
-
-
-                    $('.button-trigger-action--edit-component-row').click(function() {
-                        var component_type = 'row';
-                        $('#string_editor').html('Row');
-
-                        $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
-                        $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                        var activeComponent = $(this).closest('.draggable').attr('id');
-
-                        var str = $(this).closest('li').attr('id');
-                        var editstring = str.split('placeholder_');
-                        var editit = editstring[1];
-                        //console.log('check for editing: ' + editit);
-
-                        $('#panel_editor .slds-panel').removeClass('slds-size_x-large');
-                        $('#panel_editor .slds-panel').addClass('slds-size_medium');
-                        showProperties(component_type, activeComponent);
-                    });
-
-
-                    $('.button-trigger-action--edit-component-banner').click(function() {
-                        var component_type = 'banner';
-                        $('#string_editor').html('Banner');
-
-                        $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
-                        $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                        var activeComponent = $(this).closest('.draggable').attr('id');
-
-                        var str = $(this).closest('li').attr('id');
-                        var editstring = str.split('placeholder_');
-                        var editit = editstring[1];
-                        //console.log('check for editing: ' + editit);
-
-                        var banner_value = $('#component_placeholder_' + editit + ' .image-holder').attr('src');
-                        //console.log('image ist: ' + banner_value);
-
-                        if (typeof banner_value === 'undefined') {
-                            $('.image-figure-thumb').attr('src', '/assets/placeholder.png');
-                            $('.file-name').text('Please select an image');
-                        } else {
-                            $('.image-figure-thumb').attr('src', '' + banner_value + '');
-                            $('.file-name').text(banner_value);
-                        }
-
-                        var header1_value = $('#component_placeholder_' + editit + ' .banner-header').html();
-                        //console.log('header 1 ist: ' + header1_value);
-                        $('input.text-banner-header').val(header1_value);
-
-                        var header2_value = $('#component_placeholder_' + editit + ' .banner-sub').html();
-                        //console.log('header 2 ist: ' + header2_value);
-                        $('input.text-banner-sub').val(header2_value);
-
-
-
-                        $('#panel_editor .slds-panel').removeClass('slds-size_x-large');
-                        $('#panel_editor .slds-panel').addClass('slds-size_medium');
-                        showProperties(component_type, activeComponent);
-                    });
-
-                    $('.button-trigger-action--edit-component-category').click(function() {
-                        var component_type = 'category';
-                        $('#string_editor').html('Category');
-
-
-                        $('input.text-banner-header-product').val('');
-                        $('input.product-link').val('');
-
-                        $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
-                        $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                        var activeComponent = $(this).closest('.draggable').attr('id');
-
-                        var str = $(this).closest('li').attr('id');
-                        var editstring = str.split('placeholder_');
-                        var editit = editstring[1];
-                        //console.log('check for editing: ' + editit);
-
-                        var banner_value = $('#component_placeholder_' + editit + ' .image-holder').attr('src');
-                        //console.log('image ist: ' + banner_value);
-
-                        if (typeof banner_value === 'undefined') {
-                            $('.image-figure-thumb').attr('src', '/assets/placeholder.png');
-                            $('.file-name').text('Please select a category');
-                        } else {
-                            $('.image-figure-thumb').attr('src', '' + banner_value + '');
-                            $('.file-name').text(banner_value);
-                        }
-
-                        var call_button = $('#component_placeholder_' + editit + ' .call-to-action').html();
-                        //console.log('button ist: ' + call_button);
-                        $('input.text-banner-header-product').val(call_button);
-
-
-
-
-                        $('#panel_editor .slds-panel').removeClass('slds-size_x-large');
-                        $('#panel_editor .slds-panel').addClass('slds-size_medium');
-                        showProperties(component_type, activeComponent);
-                    });
-
-
-                    $('.button-trigger-action--edit-component-rtf').click(function() {
-                        var component_type = 'rtf';
-                        $('#string_editor').html('Rich Text');
-
-                        $('.draggable .slds-drop-zone__container').removeClass('slds-is-hovered');
-                        $(this).closest('.draggable .slds-drop-zone__container').toggleClass('slds-is-hovered');
-                        var activeComponent = $(this).closest('li').attr('id');
-                        //console.log('active component is: ' + activeComponent);
-
-                        var str = $(this).closest('li').attr('id');
-                        var editstring = str.split('placeholder_');
-                        var editit = editstring[1];
-                        //console.log('check for editing: ' + editit);
-
-                        $('#panel_editor .slds-panel').addClass('slds-size_x-large');
-                        $('#panel_editor .slds-panel').removeClass('slds-size_medium');
-                        showProperties(component_type, activeComponent);
-                    });
-
-
-
-
-                    $('#canvas_list .slds-drop-zone').mouseenter(function() {
-                        var str = $(this).closest('#canvas_list li.draggable').attr('id');
-                        var listitem = str.split('component_placeholder_');
-                        var item = listitem[1];
-                        $('#navigator_placeholder_' + item).removeClass('nav');
-                        $('#navigator_placeholder_' + item).addClass('nav-hover');
-                    });
-                    $('#canvas_list .slds-drop-zone').mouseout(function() {
-                        var str = $(this).closest('#canvas_list li.draggable').attr('id');
-                        var listitem = str.split('component_placeholder_');
-                        var item = listitem[1];
-                        $('#navigator_placeholder_' + item).removeClass('nav-hover');
-                        $('#navigator_placeholder_' + item).addClass('nav');
-                    });
-
-
-
-
-
-                    $('#navigator_list li .slds-tree__item').mouseenter(function() {
-                        //on hover show the sub menu and change the background color
-                        $(this).closest('#navigator_list li.slds-item').removeClass('nav');
-                        $(this).closest('#navigator_list li.slds-item').addClass('nav-hover');
-                        //now get the id and then highlight the related component
-                        var str = $(this).closest('#navigator_list li.slds-item').attr('id');
-                        var listitem = str.split('navigator_placeholder_');
-                        var item = listitem[1];
-                        $('#canvas_list #component_placeholder_' + item + ' .slds-drop-zone__container').addClass('slds-is-hovered');
-                    });
-
-
-
-                    $('#navigator_list li').mouseout(function() {
-                        //on hover show the sub menu and change the background color
-                        $(this).closest('#navigator_list li.slds-item').addClass('nav');
-                        $(this).closest('#navigator_list li.slds-item').removeClass('nav-hover');
-                        $('#canvas_list .slds-drop-zone__container').removeClass('slds-is-hovered');
-                    });
-
-                    $('.hoverme').click(function() {
-                        //scroll to div in canvas
-                    });
-
-
-
-
-                    $('.list button.button-trigger-action--delete-component , .trash').click(function() {
-                        var activeComponentPlaceholder = undefined;
-                        var activeNavigationPlaceholder = undefined;
-
-                        var activeComponentPlaceholder = $(this).closest('li').attr('id');
-                        if (activeComponentPlaceholder.match('navigator_placeholder_')) {
-
-                            arr = activeComponentPlaceholder.split('navigator_placeholder_');
-                            var activeNavigationPlaceholder = 'navigator_placeholder_' + arr[1];
-                            var activeComponentPlaceholder = 'component_placeholder_' + arr[1];
-                            arr = undefined;
-                        }
-                        if (activeComponentPlaceholder.match('component_placeholder_')) {
-                            arr = activeComponentPlaceholder.split('component_');
-                            var activeNavigationPlaceholder = 'navigator_' + arr[1];
-                            arr = undefined;
-                        }
-                        $('#modal-id-4-delete').removeClass('slds-hide');
-                        //DELETE ANY COMPONENT
-                        $('.js-trigger-delete-component, .action-delete-component').click(function() {
-                            $('#' + activeComponentPlaceholder).remove();
-                            $('#' + activeNavigationPlaceholder).remove();
-
-                            $('#modal-id-4-delete').addClass('slds-hide');
-                            activeComponentPlaceholder = undefined;
-                            activeNavigationPlaceholder = undefined;
-
-
-                            if ($('#canvas_list > li.draggable').length != 0) {} else {
-                                $('.component_properties').addClass('slds-hide');
-                                $('.component_properties .placeholder').toggleClass('slds-hide');
-                            }
-                            return false;
-                        });
-                    });
-                }
-            });
-            $('.draggable').disableSelection();
-
-            $('#navigator_list').sortable({
-
-                start: function(event, ui) {
-                    oldIndex = ui.item.index();
-                    $(this).addClass('sortable-hover');
-                },
-                stop: function(event, ui) {
-                    newIndex = ui.item.index();
-                    newIndex = newIndex - 1;
-                    var str = ui.item.attr('id');
-                    var listitem = str.split("navigator_placeholder_");
-                    var moveitem = listitem[1];
-                    if (oldIndex > newIndex) {
-                        $('#component_placeholder_' + moveitem).insertBefore('#canvas_list li:eq(' + newIndex + ')');
-                        //console.log('insertBefore: ' + newIndex);
-                    } else {
-                        $('#component_placeholder_' + moveitem).insertAfter('#canvas_list li:eq(' + newIndex + ')');
-                        //console.log('insertAfter: ' + newIndex);
-
-                    };
-                    $('#navigator_list').removeClass('sortable-hover');
-                    savingAnimation();
-
-                }
-            });
-            $('#navigator_list').disableSelection();
-
-
-
-            $('.list').sortable({
-                revert: true,
-                placeholder: 'ui-sortable-helper',
-                start: function(event, ui) {
-                    list_width = $('#canvas_list, #static_header').width();
-                    oldIndex = ui.item.index();
-                    //console.log('old index was: ' + oldIndex);
-                    ui.helper.css('height', 'auto');
-                    ui.helper.css('width', list_width);
-                    $('ul,li').disableSelection();
-                },
-                stop: function(event, ui, ) {
-                    newIndex = ui.item.index();
-                    newIndex = newIndex - 1;
-                    //console.log('new index is: ' + newIndex);
-                    var str = ui.item.attr('id');
-                    var listitem = str.split("component_placeholder_");
-                    var moveitem = listitem[1];
-                    //console.log('move item is: ' + moveitem);
-
-
-                    if (oldIndex > newIndex) {
-                        //console.log('insertBefore: ' + newIndex);
-                        $('#navigator_placeholder_' + moveitem).insertBefore('#navigator_list li:eq(' + newIndex + ')');
-                    } else {
-                        //console.log('insertAfter: ' + newIndex);
-                        $('#navigator_placeholder_' + moveitem).insertAfter('#navigator_list li:eq(' + newIndex + ')');
-                    }
-                    savingAnimation();
-                },
-
-            });
-            $('.list').disableSelection();
-
-
-            //END WORKING SORTING JQUERY
-
-        }
-
-        */
-
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
             //console.log('trigger desktop resolution');
@@ -387,7 +62,10 @@
         //NAVIGATOR
         function showNavigation() {}
 
+        //function showProperties(component_type, activeComponent) {
         function showProperties(component_type, activeComponent) {
+
+            alert('called show properties');
 
             //console.log('called editor and now the activeComponent is: ' + activeComponent);
             //console.log('called editor and now the component_type is: ' + component_type);
@@ -703,116 +381,7 @@
 
 
 
-        /*
 
-        //BANNER COMPONENT EDIT
-        $('.placeholder-component-37 .js-trigger-edit-component, .js-trigger-media-edit-component').click(function() {
-            alert();
-            activeComponent = undefined;
-            activeComponent = $(this).closest('li').attr('id');
-
-            $('#banner-checkbox_everyone').prop('checked', false);
-            $('#banner-checkbox_customergroupa').prop('checked', false);
-            $('#banner-checkbox_customergroupb').prop('checked', false);
-
-
-            //SET CHECKBOX VALUES
-            if ($('#' + activeComponent).hasClass('Everyone')) {
-                $('#banner-checkbox_everyone').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupA')) {
-                $('#banner-checkbox_customergroupa').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupB')) {
-                $('#banner-checkbox_customergroupb').prop('checked', true);
-            }
-
-
-
-            //GET IMAGE
-            //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
-            imgUrl = $('#' + activeComponent).find('.image-holder').css('background-image');
-
-            patt = /\"|\'|\)/g;
-            selected_image = '/assets/' + imgUrl.split('/').pop().replace(patt, '');
-
-            //GET TEXTS
-            banner_header = $('#' + activeComponent).find('.title').text();
-            banner_sub = $('#' + activeComponent).find('.sub').text();
-
-            $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
-
-            //SET TAB
-            $('.modal-content-id-37 .tab_general').addClass('slds-active');
-            $('.mediaselector-component-editor .text-banner-header').val(banner_header);
-            $('.mediaselector-component-editor .text-banner-sub').val(banner_sub);
-            $('.mediaselector-component-editor').toggleClass('slds-hide');
-        });
-
-
-
-        $('.js-trigger-media-edit-rules').click(function() {
-            activeComponent = undefined;
-            activeComponent = $(this).closest('li').attr('id');
-
-            if (activeComponent.match('_links')) {
-                arr = activeComponent.split('_');
-                activeComponent = arr[0];
-                arr = undefined;
-            }
-
-            $('#banner-checkbox_everyone').prop('checked', false);
-            $('#banner-checkbox_customergroupa').prop('checked', false);
-            $('#banner-checkbox_customergroupb').prop('checked', false);
-
-
-            //SET CHECKBOX VALUES
-            if ($('#' + activeComponent).hasClass('Everyone')) {
-                $('#banner-checkbox_everyone').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupA')) {
-                $('#banner-checkbox_customergroupa').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupB')) {
-                $('#banner-checkbox_customergroupb').prop('checked', true);
-            }
-
-
-
-            //GET IMAGE
-            //imgUrl = $(this).closest('.placeholder').find('.image-holder').css('background-image');
-            imgUrl = $('#' + activeComponent).find('.image-holder').css('background-image');
-
-            patt = /\"|\'|\)/g;
-            selected_image = '/assets/' + imgUrl.split('/').pop().replace(patt, '');
-
-            //GET TEXTS
-            banner_header = $('#' + activeComponent).find('.title').text();
-            banner_sub = $('#' + activeComponent).find('.sub').text();
-
-            $('.mediaselector-component-editor .image-figure-thumb').attr('src', selected_image);
-
-            //SET TAB
-            $('.modal-content-id-37 .tab_rules').addClass('slds-active');
-            $('.mediaselector-component-editor .text-banner-header').val(banner_header);
-            $('.mediaselector-component-editor .text-banner-sub').val(banner_sub);
-            $('.mediaselector-component-editor').toggleClass('slds-hide');
-
-            //SET CHECKBOX VALUES
-            if ($('#' + activeComponent).hasClass('Everyone')) {
-                $('#banner-checkbox_everyone').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupA')) {
-                $('#banner-checkbox_customergroupa').prop('checked', true);
-            }
-            if ($('#' + activeComponent).hasClass('CustomergroupB')) {
-                $('#banner-checkbox_customergroupb').prop('checked', true);
-            }
-
-
-        });
-
-*/
 
 
 
@@ -1348,68 +917,6 @@
             });
 
 
-            /*
-
-            $(function() {
-                $win.on('click.Bst', function(event) {
-                    //MAIN COMPONENT SELECT
-                    if (
-                        $box.has(event.target).length == 0 //checks if descendants of $box was clicked
-                        &&
-                        !$box.is(event.target) //checks if the $box itself was clicked
-                        &&
-                        $($box).hasClass('slds-is-open')
-                    ) {
-                        $($box).toggleClass('slds-is-open')
-                    }
-                    //LOCALIZATION SELECT
-                    if (
-                        $boxb.has(event.target).length == 0 //checks if descendants of $box was clicked
-                        &&
-                        !$boxb.is(event.target) //checks if the $box itself was clicked
-                        &&
-                        $($boxb).hasClass('slds-is-open')
-                    ) {
-                        $($boxb).toggleClass('slds-is-open')
-                    }
-                    //DEVICE SELECT
-                    if (
-                        $boxc.has(event.target).length == 0 //checks if descendants of $box was clicked
-                        &&
-                        !$boxc.is(event.target) //checks if the $box itself was clicked
-                        &&
-                        $($boxc).hasClass('slds-is-open')
-                    ) {
-                        $($boxc).toggleClass('slds-is-open')
-                    }
-                    //SUB LEFT SELECT
-                    if (
-                        $boxd.has(event.target).length == 0 //checks if descendants of $box was clicked
-                        &&
-                        !$boxd.is(event.target) //checks if the $box itself was clicked
-                        &&
-                        $($boxd).hasClass('slds-is-open')
-                    ) {
-                        $($boxd).toggleClass('slds-is-open')
-                    }
-                    //SUB RIGHT SELECT
-                    if (
-                        $boxe.has(event.target).length == 0 //checks if descendants of $box was clicked
-                        &&
-                        !$boxe.is(event.target) //checks if the $box itself was clicked
-                        &&
-                        $($boxe).hasClass('slds-is-open')
-                    ) {
-                        $($boxe).toggleClass('slds-is-open')
-                    }
-
-
-                });
-
-                return false;
-            });
-            */
-
           $('#locale-switch').click(function() {
               $('#locale-switch .slds-dropdown-trigger_click').toggleClass('slds-is-open');
           });
@@ -1433,6 +940,8 @@
           $('#locale-warning .js-trigger-close').click(function() {
               $('#locale-warning').toggleClass('slds-hide');
           });
+
+
 
             //create tags as you type - page SETTINGS
             /*
@@ -1482,6 +991,15 @@
         onEnd: function (evt){
           $('.list-group').removeClass('hover');
           $('.dropzone').removeClass('slds-drop-zone');
+
+          $('.js-component-palette-button').removeClass('is-active');
+          $('#component-palette-menu').addClass('slds-hide');
+          var component_type = $(evt.item).attr('data-type');
+          $('#string_editor').html(component_type);
+
+          if (component_type === 'row') {
+            $('#string_editor').html('Row');
+          }
         }
     });
 
@@ -1517,6 +1035,18 @@
 
           $('.js-component-palette-button').removeClass('is-active');
           $('#component-palette-menu').addClass('slds-hide');
+          var component_type = $(evt.item).attr('data-type');
+
+          //console.log('dropped element is kind of: '+component_type);
+          if (component_type === 'banner'){
+            $('#string_editor').html('Banner');
+          }
+          if (component_type === 'rtf'){
+            $('#string_editor').html('Rich Text Editor');
+          }
+          if (component_type === 'category') {
+            $('#string_editor').html('Category');
+          }
         }
 
     });
@@ -1524,17 +1054,25 @@
 
     //what happens when you add items into editor
 
-    Sortable.create(listEditor, {
+    Sortable.create(listEditor,{
         group: "shared",
         sort: true,
         onAdd: function(evt) {
           placeholder = evt.item;
+
+          var component_type = $(evt.item).attr('data-type');
+          $('#string_editor').html(component_type);
+          console.log('dropped element is kind of: '+component_type);
+
           /*
           placeholder.id = 'component-' + countess;
           placeholder_id = 'component-' + countess;
           */
           placeholder.class += 'component-' + countess;
           placeholder_id = 'component-' + countess;
+
+          $(evt.item).attr('data-group-type','component-' + countess);
+
 
           //now change display
           /*
@@ -1556,11 +1094,6 @@
           //document.querySelector('#page-structure').innerHTML = document.querySelector('#drop-target').innerHTML;
           document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;
 
-          console.log('finished');
-          console.log('placed on index is: '+evt.newIndex)
-
-
-
           savingAnimation();
 
           /*
@@ -1570,12 +1103,12 @@
           */
 
           //show banner
-          var component_type = 'banner';
+          //var component_type = 'banner';
           var activeComponent = 'component-' + countess;
           $('#panel_editor .component_properties').addClass('slds-hide');
           $('#editor_' + component_type).removeClass('slds-hide');
           $('#editor_' + component_type).addClass('slds-show');
-          $('#string_editor').html('Banner');
+          //$('#string_editor').html('Banner');
 
 
           //activate tab general
@@ -1612,43 +1145,48 @@
           //HOVER NAV ITEM AND HIGHLIGHT
           $('.navigator').mouseenter(function() {
             //on hover show the sub menu and change the background color
-            $(this).closest('.list-group-item').removeClass('nav');
-            $(this).closest('list-group-item').addClass('nav-hover');
+            $(this).closest('.list-group-item').addClass('nav-hover');
 
             //now get the id and then highlight the related component
-            var get_id = $(this).closest('.list-group-item').attr('id');
-            var listitem = get_id.split('navigator-');
-            var highlight_item = listitem[1];
+            var get_id = $(this).closest('.list-group-item').attr('data-group-type');
+            //alert(get_id);
+            //$('#component-' + highlight_item + ' .slds-drop-zone__container').addClass('slds-is-hovered');
+            $('div[data-group-type="'+get_id+'"] .slds-drop-zone__container').addClass('slds-is-hovered');
+            //var listitem = get_id.split('navigator-');
+            //var highlight_item = listitem[1];
             /*
             $('#component-' + highlight_item).removeClass('nav');
             $('#component-' + highlight_item).addClass('nav-hover');
             */
-            $('#component-' + highlight_item + ' .slds-drop-zone__container').addClass('slds-is-hovered');
+            //$('#component-' + highlight_item + ' .slds-drop-zone__container').addClass('slds-is-hovered');
             return false;
           });
 
           $('.navigator').mouseout(function() {
               //on hover show the sub menu and change the background color
-              $(this).closest('.list-group-item').addClass('nav');
-              $(this).closest('.list-group-item').removeClass('nav-hover');
+              $('div .list-group-item').removeClass('nav-hover');
               $('.slds-drop-zone__container').removeClass('slds-is-hovered');
           });
 
 
-          //HOVER COMPONETN PLACEHOLDER AND HIGHLIGHT
+          //HOVER COMPONENT PLACEHOLDER AND HIGHLIGHT
           $('.list-group-item .slds-drop-zone').mouseenter(function() {
               var get_id = $(this).closest('.list-group-item').attr('id');
+              /*
               var listitem = get_id.split('component-');
               var highlight_item = listitem[1];
               $('#navigator-' + highlight_item).removeClass('nav');
               $('#navigator-' + highlight_item).addClass('nav-hover');
+              */
           });
           $('.list-group-item .slds-drop-zone').mouseout(function() {
               var get_id = $(this).closest('.list-group-item').attr('id');
+              /*
               var listitem = get_id.split('component-');
               var highlight_item = listitem[1];
               $('#navigator-' + highlight_item).removeClass('nav-hover');
               $('#navigator-' + highlight_item).addClass('nav');
+              */
           });
 
 
@@ -1683,7 +1221,7 @@
           //DELETE COMPONENT
           $('.js-trigger-delete-component, .action-delete-component').click(function() {
 
-              var get_case = $(this).closest('.list-group-item').attr('id');
+              var get_case = $(this).closest('.list-group-item').attr('data-group-type');
               //console.log('call delete:' +listitem);
 
               /*
@@ -1705,8 +1243,21 @@
 
 
           //BANNER HANDLING
+          $('.button-trigger-action--edit-component-row').click(function() {
+            var component_type = 'row';
+          });
+
+          $('.button-trigger-action--edit-component-rtf').click(function() {
+            var component_type = 'rtf';
+          });
+
+          $('.button-trigger-action--edit-component-category').click(function() {
+            var component_type = 'category';
+          });
+
           $('.button-trigger-action--edit-component-banner').click(function() {
               var component_type = 'banner';
+              /*
               $('#string_editor').html('Banner');
               $('.slds-drop-zone__container').removeClass('slds-is-hovered');
               $(this).closest('.slds-drop-zone__container').toggleClass('slds-is-hovered');
@@ -1734,36 +1285,64 @@
               $('#panel_editor .slds-panel').removeClass('slds-size_x-large');
               $('#panel_editor .slds-panel').addClass('slds-size_medium');
               showProperties(component_type, activeComponent);
+              */
           });
 
 
           //TRIGGER COMPONENT DELETION
           $('.button-trigger-action--delete-component').click(function() {
-              var get_case = $(this).closest('.list-group-item').attr('id');
-              var listitem = get_case.split('component-');
+              //var get_case = $(this).closest('.list-group-item').attr('id');
+              var get_case = $(this).closest('.list-group-item').attr('data-group-type');
+              //var listitem = get_case.split('component-');
               //console.log('call delete'+listitem);
-              $('#listitem').val(listitem[1]);
+              //$('#listitem').val(listitem[1]);
+              $('#listitem').val(get_case);
               $('#modal-id-4-delete').removeClass('slds-hide');
               return false;
           });
 
 
+          $('.component_name').click(function() {
+              var get_id = $(this).closest('.list-group-item').attr('data-group-type');
+              var component_type = $(this).closest('.list-group-item').attr('data-type');
+
+
+              $('.component_properties').removeClass('slds-show');
+              $('.component_properties').addClass('slds-hide');
+
+
+
+              if (component_type === 'row') {
+                $('#string_editor').html('Row');
+              }
+              if (component_type === 'banner'){
+                $('#string_editor').html('Banner');
+              }
+              if (component_type === 'rtf'){
+                $('#string_editor').html('Rich Text Editor');
+              }
+              if (component_type === 'category') {
+                $('#string_editor').html('Category');
+              }
+
+              $('#editor_'+component_type).removeClass('slds-hide');
+              $('#editor_'+component_type).addClass('slds-show');
+          });
+
+
+
           $('.trash').click(function() {
-              var get_case = $(this).closest('.list-group-item').attr('id');
-              var listitem = get_case.split('navigator-');
-              //console.log('call delete'+listitem);
-              $('#listitem').val(listitem[1]);
+              var get_case = $(this).closest('.list-group-item').attr('data-group-type');
+              $('#listitem').val(get_case);
               $('#modal-id-4-delete').removeClass('slds-hide');
               return false;
           });
 
 
           //DELETE COMPONENT
-          $('.js-trigger-delete-component, .action-delete-component').click(function(listitem) {
+          $('.js-trigger-delete-component, .action-delete-component').click(function() {
               var deleteitem = $('#listitem').val();
-              //console.log('now delete: '+deleteitem);
-              $('#navigator-'+deleteitem).fadeOut(500,function(){$(this).remove();});
-              $('#component-'+deleteitem).fadeOut(500,function(){$(this).remove();});
+              $('div[data-group-type="'+deleteitem+'"]').fadeOut(500,function(){$(this).remove();});
 
               $('#listitem').val('');
               $('#panel_editor').addClass('slds-hide');
@@ -1774,6 +1353,36 @@
               return false;
           });
 
+          //EDITOR HANDLING
+          $('#canvas .list-group-item').click(function() {
+              var component_type = $(this).closest('.list-group-item').attr('data-type');
+              var activeComponent = $(this).closest('.list-group-item').attr('data-group-type');
+
+              $('.component_properties').removeClass('slds-show');
+              $('.component_properties').addClass('slds-hide');
+
+              if (component_type === 'row') {
+                $('#string_editor').html('Row');
+              }
+              if (component_type === 'banner'){
+                $('#string_editor').html('Banner');
+              }
+              if (component_type === 'rtf'){
+                $('#string_editor').html('Rich Text Editor');
+              }
+              if (component_type === 'category') {
+                $('#string_editor').html('Category');
+              }
+
+
+              $('#editor_'+component_type).removeClass('slds-hide');
+              $('#editor_'+component_type).addClass('slds-show');
+
+
+              //$('#locale-warning').toggleClass('slds-hide');
+          });
+
+
 
           //now count up
           countess++
@@ -1781,19 +1390,6 @@
         onEnd: function (evt){
           document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;
         }
-    });
-
-
-    //add items from section 2 in tools
-
-    Sortable.create(navigator_list, {
-        animation: 200,
-        group: "list-group",
-        sort: true,
-        onEnd: function (evt){
-          document.querySelector('#listEditor').innerHTML = document.querySelector('#navigator_list').innerHTML;
-        }
-
     });
 
 

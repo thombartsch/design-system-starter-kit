@@ -1946,12 +1946,39 @@ ul#component_list li li {
   cursor: pointer;
 }
 
+
+
+/*
 .sortable-ghost{
-  background: green;
+
   height: 2px;
   margin-top: 4px;
   margin-bottom: 4px;
+  width:200px;
+  min-height: 10px;
 }
+
+.sortable-ghost div{
+  display:none;
+}
+
+
+.sortable-chosen {
+  height: 20px;
+  width:200px;
+  position: relative;
+}
+
+
+.sortable-ghost:before {
+  content: '';
+  bottom: 50%;
+  border-bottom: 2px green solid;
+  width: 100%;
+  z-index:0;
+}
+*/
+
 
 .list-group-item .ghost-dummy{
   display: none;
@@ -1959,6 +1986,7 @@ ul#component_list li li {
 
 .sortable-ghost .ghost-dummy{
   display: block;
+  background: #fff;
 }
 .sortable-ghost .tool{
   display: none;
@@ -2484,6 +2512,10 @@ ul#component_list li li {
   display: none;
 }
 
+
+.slds-drop-zone__container{
+  /*background: #fff;*/
+}
 
 #navigator_list .tool{
   display: none;
