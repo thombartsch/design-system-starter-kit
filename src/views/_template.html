@@ -54,7 +54,7 @@
                     <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->
                     <div class="2slds-align_absolute-center slds-col slds-grid">
                         <!-- EDITOR REGION 1 -->
-                        <div id="region1" style="width:100%">
+                        <div class="region" id="region1" style="width:100%">
                           <!-- CANVAS -->
                           <div class="demo-only" style="padding-top:2rem">
                             <div class="dropzone" id="dropzone1">
@@ -79,7 +79,34 @@
                           </div>
                           <!-- /CANVAS -->
                         </div>
-                        <!-- EDITOR REGION 1 -->
+                        <!-- /EDITOR REGION 1 -->
+                        <!-- EDITOR REGION 2 -->
+                        <div class="region" id="region2" style="width:100%">
+                          <!-- CANVAS -->
+                          <div class="demo-only" style="padding-top:2rem">
+                            <div class="dropzone" id="dropzone2">
+                              <div class="slds-drop-zone__label">
+                                <div class="slds-media slds-media_center">
+                                  <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
+                                      <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div class="slds-media__body">
+                                    <h2>Region 1</h2>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div id="listEditorB" class="list-group slds-col slds-align_absolute-center slds-grid_vertical edit-mode" style=""></div>
+
+                            </div>
+                          </div>
+                          <!-- /CANVAS -->
+                        </div>
+                        <!-- /EDITOR REGION 2 -->
                       </div>
                     <!--/div-->
                     {% include "_inc_footer-editor.html" %}

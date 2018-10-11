@@ -25,14 +25,17 @@
         </ul>
       </div>
 
-      <div class="slds-grid slds-col">
-        <ul class="list slds-list slds-col" id="listEditor" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
-
+      <div class="slds-grid slds-col" id="canvas">
+        <ul class="list slds-list slds-col region" id="listEditor" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
+          region 1
+        </ul>
+        <ul class="list slds-list slds-col region" id="listEditor2" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
+          region 2
         </ul>
       </div>
 
       <div class="slds-grid slds-col">
-        <ul class="list" id="page-structure">
+        <ul class="list" id="page_structure">
 
         </ul>
       </div>
@@ -70,6 +73,7 @@
       },
       onEnd: function (evt) {
         //$(".list").removeClass('hover');
+        document.querySelector('#page_structure').innerHTML = document.querySelector('#listEditor').innerHTML;
         console.log('end');
       }
     }
@@ -83,8 +87,22 @@
       onEnd: function (evt) {
         $(".list").removeClass('hover');
         console.log('end');
+        document.querySelector('#page_structure').innerHTML = document.querySelector('#listEditor').innerHTML;
       }
     }
+
+    var optsC = {
+      animation: 200,
+      sort: true,
+      onMove: function(evt){
+      },
+      onRemove: function (/**Event*/evt) {
+      },
+      onEnd: function (evt){
+        document.querySelector('#listEditor').innerHTML = document.querySelector('#page_structure').innerHTML;
+      }
+    }
+
 
 
     $('.slds-grid').hover(
@@ -105,9 +123,8 @@
     var el = document.getElementById('listEditor');
     Sortable.create(el, optsB);
 
-    var el = document.getElementById('page-structure');
-    Sortable.create(el);
-
+    var el = document.getElementById('page_structure');
+    Sortable.create(el, optsC);
 
     </script>
 

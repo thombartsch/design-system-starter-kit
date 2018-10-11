@@ -961,8 +961,13 @@
 <script src = "/scripts/Sortable.js"></script>
 <script>
     var countess = 0;
+    var counterr = 0;
 
     //add items from section 1 in tools
+    var id = function(id) {
+      return document.getElementById(id);
+    }
+    var col_id = 1;
 
     Sortable.create(listTools, {
         animation: 200,
@@ -970,6 +975,7 @@
           name: 'shared',
           pull: 'clone',
           put: false,
+          ghosting: true,
           ghostClass: 'sortable-ghost',
           revertClone: true,
           handle: '.my-handle'
@@ -1000,6 +1006,23 @@
           if (component_type === 'row') {
             $('#string_editor').html('Row');
           }
+
+            $(evt.item).attr('id','listRows_'+counterr);
+
+            /*
+            Sortable.create(listRows_+counterr,{
+                group: 'shared',
+                //name: 'shared',
+                sort: true,
+                onAdd: function(evt) {
+                  // handling onAdd
+                },
+                onEnd: function (evt){
+                  // handling onEnd
+                }
+            });
+            */
+            counterr++
         }
     });
 
@@ -1055,7 +1078,8 @@
     //what happens when you add items into editor
 
     Sortable.create(listEditor,{
-        group: "shared",
+        group: 'shared',
+        //name: 'shared',
         sort: true,
         onAdd: function(evt) {
           placeholder = evt.item;
@@ -1091,8 +1115,10 @@
           */
 
 
-          //document.querySelector('#page-structure').innerHTML = document.querySelector('#drop-target').innerHTML;
           document.querySelector('#navigator_list').innerHTML = document.querySelector('#listEditor').innerHTML;
+
+
+
 
           savingAnimation();
 
