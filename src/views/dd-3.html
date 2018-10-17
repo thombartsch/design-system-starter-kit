@@ -18,20 +18,59 @@
     <div class="slds-grid slds-col">
       <div class="slds-grid slds-col">
         <ul class="list" id="listTools">
-          <li id="num1">item 111</li>
-          <li id="num2">item 222</li>
-          <li id="num3">item 333</li>
-          <li id="num4">item 444</li>
+          <li 1id="num1">
+            <div class="component">
+              component -1
+            </div>
+            <div class="placeholder">
+              placeholder -1
+            </div>
+            <div class="structure">
+              structure -1
+            </div>
+          </li>
+          <li 1id="num2">
+            <div class="component">
+              component -2
+            </div>
+            <div class="placeholder">
+              placeholder -2
+            </div>
+            <div class="structure">
+              structure -2
+            </div>
+          </li>
+          <li 1id="num3">
+            <div class="component">
+              component -3
+            </div>
+            <div class="placeholder">
+              placeholder -3
+            </div>
+            <div class="structure">
+              structure -3
+            </div>
+
+          </li>
+          <li 1id="num4">
+            <div class="component">
+              component -4
+            </div>
+            <div class="placeholder">
+              placeholder -4
+            </div>
+            <div class="structure">
+              structure -4
+            </div>
+
+          </li>
         </ul>
       </div>
 
-      <div class="slds-grid slds-col" id="canvas">
-        <ul class="list slds-list slds-col region" id="listEditor" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
-          region 1
-        </ul>
-        <ul class="list slds-list slds-col region" id="listEditor2" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
-          region 2
-        </ul>
+      <div class="slds-grid slds-col" 2id="canvas">
+          <ul class="list slds-list slds-col region" id="listEditor" 2style="background:#fff; min-height:100px; border:1px dashed #ccc;">
+
+          </ul>
       </div>
 
       <div class="slds-grid slds-col">
@@ -128,11 +167,22 @@
 
     </script>
 
-<style>
-  .hover{
-    background: red !important;
-  }
-</style>
+    <style>
+      #listEditor .component, #listEditor .structure{
+        display: none;
+      }
+      #listTools .placeholder, #listTools .structure{
+        display: none;
+      }
+      #page_structure .placeholder, #page_structure .component{
+        display: none;
+      }
+      #listTools li:hover,
+      .region li:hover,
+      #page_structure li:hover{
+        cursor: grab;
+      }
+    </style>
 
   </body>
 
