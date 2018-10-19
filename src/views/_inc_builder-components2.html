@@ -32,7 +32,57 @@
       <div>
           <!--ul id="component_list" class="slds-tree slds-p-top_small" role="tree" aria-labelledby="treeheading" id="tree-header"-->
             <ul class="list" id="listTools">
-              <li 1id="num1">
+              <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                  <div class="slds-tree__item">
+                      <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                          </svg>
+                          <span class="slds-assistive-text">Expand</span>
+                      </button>
+                      <span class="slds-size_1-of-1">
+                          <span class="slds-tree__item-label slds-truncate" title="Layout (1)">Layout (1)</span>
+                      </span>
+                  </div>
+              </li>
+              <li data-component-type="row" class="slds-p-around_xx-small">
+                <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
+                    {% include "_inc_builder-component-row.html" %}
+                </div>
+              </li>
+              <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                  <div class="slds-tree__item">
+                      <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                          </svg>
+                          <span class="slds-assistive-text">Expand</span>
+                      </button>
+                      <span class="slds-size_1-of-1">
+                          <span class="slds-tree__item-label slds-truncate" title="Content (3)">Content (3)</span>
+                      </span>
+                  </div>
+              </li>
+              <li data-component-type="banner" class="slds-p-around_xx-small">
+                <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
+                  {% include "_inc_builder-component-banner.html" %}
+                </div>
+              </li>
+              <li data-component-type="category" class="slds-p-around_xx-small">
+                <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
+                  {% include "_inc_builder-component-category.html" %}
+                </div>
+              </li>
+              <li data-component-type="rtf" class="slds-p-around_xx-small">
+                <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
+                  {% include "_inc_builder-component-rtf.html" %}
+                </div>
+              </li>
+
+
+
+
+              <!--li 1id="num1">
                 <div class="component">
                   component -1
                 </div>
@@ -42,42 +92,8 @@
                 <div class="structure">
                   structure -1
                 </div>
-              </li>
-              <li 1id="num2">
-                <div class="component">
-                  component -2
-                </div>
-                <div class="placeholder">
-                  placeholder -2
-                </div>
-                <div class="structure">
-                  structure -2
-                </div>
-              </li>
-              <li 1id="num3">
-                <div class="component">
-                  component -3
-                </div>
-                <div class="placeholder">
-                  placeholder -3
-                </div>
-                <div class="structure">
-                  structure -3
-                </div>
+              </li-->
 
-              </li>
-              <li 1id="num4">
-                <div class="component">
-                  component -4
-                </div>
-                <div class="placeholder">
-                  placeholder -4
-                </div>
-                <div class="structure">
-                  structure -4
-                </div>
-
-              </li>
             </ul>
 
               {#
@@ -94,7 +110,7 @@
                       </span>
                   </div>
 
-                  <div class="slds-panel__body slds-m-left_small listTools" style="" id="listTools">
+                  <div class="2slds-panel__body slds-m-left_small listTools" style="" id="listTools">
                       {% include "_inc_builder-component-row.html" %}
                   </div>
               </li>
@@ -111,7 +127,7 @@
                       </span>
                   </div>
 
-                  <div class="slds-panel__body slds-m-left_small listTools" style="" id="listToolsB">
+                  <div class="2slds-panel__body slds-m-left_small listTools" style="" id="listToolsB">
                       {% include "_inc_builder-component-banner.html" %}
                       {% include "_inc_builder-component-category.html" %}
                       {% include "_inc_builder-component-rtf.html" %}

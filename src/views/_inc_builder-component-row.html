@@ -31,7 +31,7 @@
     </div>
 
 
-    <div class="slds-drop-zone component placeholder">
+    <div class="slds-drop-zone placeholder">
         <div class="slds-drop-zone__container" tabindex="-1">
             <div class="slds-drop-zone__label slds-drop-zone__label_container">
                 <div class="slds-media slds-media_center">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div class="navigator">
+    <div class="structure">
         <!-- Navigator Row -->
         {#
         <div class="slds-tree__item nav slds-p-left_large">
@@ -167,169 +167,3 @@
         <!-- /Navigator Row -->
     </div>
 </div>
-
-
-{#
-<li class="slds-dropdown__item draggable handle 2slds-p-bottom_small" id="Row" title="Row" role="presentation">
-    <div class="slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component">
-        <div class="slds-p-right_small">
-            <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Row">
-                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                </svg>
-                <span class="slds-assistive-text">Row</span>
-            </span>
-        </div>
-        <div class="">
-            <span class="slds-truncate component_name" title="Banner">Banner</span>
-        </div>
-    </div>
-
-    <div class="slds-drop-zone component slds-hide">
-        <div class="slds-drop-zone__container" tabindex="-1">
-            <div class="slds-drop-zone__label slds-drop-zone__label_container">
-                <div class="slds-media slds-media_center">
-                    <div class="slds-media__figure">
-                        <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color button-trigger-action--edit-component-banner">
-                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
-                            </svg>
-                          </span>
-                    </div>
-                    <div class="slds-media__body">
-                        <h2>
-                            <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-banner">
-                                <span class="slds-assistive-text">Edit: </span>
-                                <span>Banner</span>
-                              </button>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <!-- COMPONENT -->
-            <div class="slds-p-around_small placeholder">
-                <h1 class="slds-heading_medium slds-p-top_small">Banner</h1>
-                <p>
-                    <span class="slds-icon_container null slds-icon__svg--default">
-                          <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                          </svg>
-                      </span>
-                </p>
-            </div>
-            <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
-                <div class="content">
-                    <div class="slds-text-heading_medium title banner-header"></div>
-                    <div class="slds-text-heading_small sub banner-sub"></div>
-                </div>
-                <img src="" class="slds-hide image-holder" style="width:100%;">
-            </div>
-
-            <!-- /COMPONENT -->
-            <div class="slds-drop-zone__actions">
-                <div class="slds-button-group" role="group">
-                    <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
-                        <svg class="slds-button__icon" aria-hidden="true">
-                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
-                        </svg>
-                        <span class="slds-assistive-text">Move</span>
-                      </button>
-                    <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Remove Component">
-                        <svg class="slds-button__icon" aria-hidden="true">
-                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                        </svg>
-                        <span class="slds-assistive-text">Remove Component</span>
-                      </button>
-                </div>
-            </div>
-        </div>
-</li>
-#}
-
-
-
-{#
-<li class="slds-dropdown__item draggable handle 2slds-p-bottom_small" id="row" title="Row" role="presentation">
-    <div class="slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component">
-        <div class="slds-p-right_small">
-            <span class="slds-icon_container 2slds-icon-custom-custom7 slds-m-left_small" title="Row">
-                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#layout"></use>
-                </svg>
-                <span class="slds-assistive-text">Row</span>
-            </span>
-        </div>
-        <div class="">
-            <span class="slds-truncate component_name" title="Row">Row</span>
-        </div>
-    </div>
-
-    <div class="2slds-drop-zone component slds-hide">
-        <div class="2slds-drop-zone__container" tabindex="-1">
-            <div class="slds-drop-zone__label slds-drop-zone__label_container">
-                <div class="slds-media slds-media_center">
-                    <div class="slds-media__figure">
-                        <span class="slds-icon_container slds-current-color button-trigger-action--edit-component-row">
-                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
-                            </svg>
-                          </span>
-                    </div>
-                    <div class="slds-media__body">
-                        <h2>
-                            <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-row">
-                                <span class="slds-assistive-text">Edit: </span>
-                                <span>Row</span>
-                              </button>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <!-- COMPONENT -->
-            <div class="slds-p-around_small placeholder">
-                <h1 class="slds-heading_medium slds-p-top_small">Row</h1>
-            </div>
-            <div class="slds-grid slds-gutters">
-                <div class="slds-col">
-                    <ul class="list slds-drop-zone slds-list_vertical-space white ui-sortable" style="min-height:200px; background: red">
-                        <li class="ui-sortable-handle" style="border:1px solid green">Sample</li>
-                    </ul>
-                </div>
-                <div class="slds-col">
-                    <ul class="list slds-list_vertical-space ui-sortable slds-drop-zone white desktop" style="min-height:20px">
-                        <li class="ui-sortable-handle"></li>
-                    </ul>
-                </div>
-                <div class="slds-col">
-                    <ul class="list slds-list_vertical-space ui-sortable slds-drop-zone white desktop" style="min-height:20px">
-                        <li class="ui-sortable-handle"></li>
-                    </ul>
-                </div>
-                <div class="slds-col">
-                    <ul class="list slds-list_vertical-space ui-sortable slds-drop-zone white desktop" style="min-height:20px">
-                        <li class="ui-sortable-handle"></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <!-- /COMPONENT -->
-            <div class="slds-drop-zone__actions">
-                <div class="slds-button-group" role="group">
-                    <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
-                        <svg class="slds-button__icon" aria-hidden="true">
-                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
-                        </svg>
-                        <span class="slds-assistive-text">Move</span>
-                      </button>
-                    <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Close">
-                        <svg class="slds-button__icon" aria-hidden="true">
-                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                        </svg>
-                        <span class="slds-assistive-text">Remove Component</span>
-                      </button>
-                </div>
-            </div>
-        </div>
-</li>
-#}

@@ -387,7 +387,6 @@
 
 
 
-
         //PRODUCT PICKER SELECT COMPONENT
         $('.add-product').click(function() {
             $('.product-component-editor').toggleClass('slds-hide');
@@ -958,8 +957,9 @@
 
 
 <!-- Latest Sortable -->
-<script src = "/scripts/Sortable.js"></script>
+<script src = '/scripts/Sortable.js'></script>
 <script>
+var countess = 0;
 
 $('.list').removeClass('hover');
 
@@ -969,29 +969,93 @@ var optsA = {
     name: 'child',
     pull: 'clone',
     put: false,
+    copy: true,
     ghostClass: 'sortable-ghost',
     revertClone: true,
     handle: '.my-handle'
   },
   onMove: function (evt) {
-    $(".list").removeClass('hover');
+    $('.list').removeClass('hover');
     $(evt.to).addClass('hover');
+
   },
   onEnd: function (evt) {
     //$(".list").removeClass('hover');
+    $(evt.item).closest('li').attr('data-component-id', 'component'+countess);
+    activeComponent = $(evt.item).closest('li').attr('data-component-type');
     document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
-    console.log('end');
+
+    console.log('dropped '+activeComponent);
+
+    $('#editor_banner').addClass('slds-hide');
+    $('#editor_category').addClass('slds-hide');
+    $('#editor_row').addClass('slds-hide');
+
+    if (activeComponent === 'banner'){
+        $('#string_editor').text('Banner');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_banner').removeClass('slds-hide');
+    }
+
+    if (activeComponent === 'category'){
+        $('#string_editor').text('Category');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_category').removeClass('slds-hide');
+    }
+
+    if (activeComponent === 'row'){
+        $('#string_editor').text('Row');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_row').removeClass('slds-hide');
+    }
+
+
+    $('#component-palette-menu').addClass('slds-hide');
+    $('.js-component-palette-button').removeClass('is-active');
+
+    countess ++
+
+
+    //DELETE FROM PAGE Structure
+    $('.trash').click(function() {
+      var get_case = $(this).closest('li').attr('data-component-id');
+      $('#listitem').val(get_case);
+      $('#modal-id-4-delete').removeClass('slds-hide');
+      return false;
+    });
+
+    //DELETE COMPONENT
+    $('.js-trigger-delete-component, .action-delete-component').click(function() {
+        var deleteitem = $('#listitem').val();
+        $('li[data-component-id="'+deleteitem+'"]').fadeOut(500,function(){$(this).remove();});
+        $('#listitem').val('');
+        $('#panel_editor').addClass('slds-hide');
+        $('#modal-id-4-delete').addClass('slds-hide');
+        //savingAnimation();
+        return false;
+    });
+
+    //TRIGGER COMPONENT DELETION
+    $('.button-trigger-action--delete-component').click(function() {
+        var get_case = $(this).closest('li').attr('data-component-id');
+        $('#listitem').val(get_case);
+        $('#modal-id-4-delete').removeClass('slds-hide');
+        return false;
+    });
+
+
+
   }
 }
 var optsB = {
   group: 'child',
   sort: true,
   onMove: function (evt) {
-    $(".list").removeClass('hover');
+    $('.list').removeClass('hover');
     $(evt.to).addClass('hover');
   },
   onEnd: function (evt) {
-    $(".list").removeClass('hover');
+    $('.list').removeClass('hover');
     console.log('end');
     document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
   }
@@ -1001,6 +1065,7 @@ var optsC = {
   animation: 200,
   sort: true,
   onMove: function(evt){
+    console.log('sort page structure');
   },
   onRemove: function (/**Event*/evt) {
   },
@@ -1014,13 +1079,24 @@ var optsC = {
 $('.slds-grid').hover(
   function() {
    //$(this).addClass('hover');
-   console.log('mouseenter !');
+   //console.log('mouseenter !');
  },
  function() {
    //$(this).removeClass('hover');
-   console.log('mouseleave !');
+   //console.log('mouseleave !');
  }
 );
+
+
+$('#listEditor li').hover(
+  function(){
+    //hover list element in editor
+    //hoverme = $(this).data('data-component-id');
+    //alert(hoverme);
+    alert('something');
+  }
+);
+
 
 
 var el = document.getElementById('listTools');
@@ -1031,5 +1107,42 @@ Sortable.create(el, optsB);
 
 var el = document.getElementById('listStructure');
 Sortable.create(el, optsC);
+
+
+$('.slds-drop-zone__label_button').click(function() {
+    activeComponent = $(this).closest('li').attr('data-component-type');
+    console.log('clicked '+activeComponent);
+
+    $('#editor_banner').addClass('slds-hide');
+    $('#editor_category').addClass('slds-hide');
+    $('#editor_row').addClass('slds-hide');
+    $('.tab_general').addClass('slds-active');
+
+    if (activeComponent === 'banner'){
+        $('#string_editor').text('Banner');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_banner').removeClass('slds-hide');
+    }
+
+    if (activeComponent === 'category'){
+        $('#string_editor').text('Category');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_category').removeClass('slds-hide');
+    }
+
+    if (activeComponent === 'row'){
+        $('#string_editor').text('Row');
+        $('#panel_editor').removeClass('slds-hide');
+        $('#editor_row').removeClass('slds-hide');
+    }
+
+
+    $('#component-palette-menu').addClass('slds-hide');
+    $('.js-component-palette-button').removeClass('is-active');
+    return false;
+});
+
+
+
 
 </script>

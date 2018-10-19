@@ -2406,7 +2406,6 @@ ul#component_list li li {
 .edit-mode{
   border: 1px dashed #eee;
   background: #fff;
-  min-height: 90px;
 }
 
 
@@ -2484,43 +2483,18 @@ ul#component_list li li {
 }
 
 
-
-//show hide elements in the three zones
-
-//component-palette-menu
-
-#component-palette-menu .tool{
-  display: flex;
-}
-#component-palette-menu .placeholder{
-  display: none;
-}
-#component-palette-menu .navigator{
+#listTools .placeholder,
+#listTools .structure{
   display: none;
 }
 
-
-.dropzone .tool{
-  display: none;
-}
-.dropzone .placeholder{
-  display: block;
-}
-.dropzone .navigator{
+#listStructure .component,
+#listStructure .tool,
+#listStructure .placeholder{
   display: none;
 }
 
-
-.slds-drop-zone__container{
-  /*background: #fff;*/
-}
-
-#navigator_list .tool{
+#listEditor .tool,
+#listEditor .structure{
   display: none;
-}
-#navigator_list .placeholder{
-  display: none;
-}
-#navigator_list .navigator{
-  display: block;
 }
