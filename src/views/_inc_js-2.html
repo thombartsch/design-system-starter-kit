@@ -3,6 +3,11 @@
 
 <script>
     $(document).ready(function() {
+
+
+      //$('.text-activeComponent').removeClass('slds-hide');
+      //$('.text-componentType').removeClass('slds-hide');
+
         //PREVIEW HANDLING
         $('#trigger-preview-desktop').click(function() {
             //console.log('trigger desktop resolution');
@@ -64,9 +69,6 @@
 
         //function showProperties(component_type, activeComponent) {
         function showProperties(component_type, activeComponent) {
-
-            alert('called show properties');
-
             //console.log('called editor and now the activeComponent is: ' + activeComponent);
             //console.log('called editor and now the component_type is: ' + component_type);
 
@@ -289,8 +291,8 @@
             activeComponent = $('.text-active-component').val();
             selected_text = $('.slds-rich-text-area__content').html();
             selected_header = $('.slds-input-header').val();
-            $('#' + activeComponent + ' .text-holder').html(selected_text);
-            $('#' + activeComponent + ' .header-holder').html(selected_header);
+            $('.' + activeComponent + ' .text-holder').html(selected_text);
+            $('.' + activeComponent + ' .header-holder').html(selected_header);
             //console.log('the active component: ' + activeComponent);
             savingAnimation();
             return false;
@@ -299,7 +301,6 @@
         //IMAGE SELECT
         $('.image-thumb').click(function() {
             selected_image = $(this).closest('a').find('img').attr('src');
-            //alert(selected_image);
 
             //console.log('selected image: ' + selected_image);
             $('.slds-file_card').removeClass('selected');
@@ -341,37 +342,52 @@
             component_type = $('.text-componentType').val()
 
             if (component_type === 'banner') {
+
                 //console.log('component type is: ' + component_type);
                 var activeComponent = $('#editor_banner .text-activeComponent').val();
                 var selected_image = $('#editor_banner .file-name').text();
 
-                $('#' + activeComponent + ' .component .placeholder').addClass('slds-hide');
-                $('#' + activeComponent + ' .component .image-holder').removeClass('slds-hide');
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').removeClass('slds-hide');
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').css('background-image', 'url(' + selected_image + ')');
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').attr('src', selected_image);
 
-                $('#' + activeComponent + ' .component .image-holder').css('background-image', 'url(' + selected_image + ')');
-                $('#' + activeComponent + ' .component .image-holder').attr('src', selected_image);
+                $('li[data-component-id="'+activeComponent+'"] .placeholder .empty').addClass('slds-hide');
+
+
+                /*
+                $('.' + activeComponent + ' .component .placeholder').addClass('slds-hide');
+                $('.' + activeComponent + ' .component .image-holder').removeClass('slds-hide');
+
+                $('.' + activeComponent + ' .component .image-holder').css('background-image', 'url(' + selected_image + ')');
+                $('.' + activeComponent + ' .component .image-holder').attr('src', selected_image);
+                */
+
 
                 banner_header = $('#editor_banner .text-banner-header').val();
                 banner_sub = $('#editor_banner .text-banner-sub').val();
-                $('#' + activeComponent + ' .banner-header').html(banner_header);
-                $('#' + activeComponent + ' .banner-sub').html(banner_sub);
+                /*
+                $('.' + activeComponent + ' .banner-header').html(banner_header);
+                $('.' + activeComponent + ' .banner-sub').html(banner_sub);
+                */
+                $('li[data-component-id="'+activeComponent+'"]  .banner-header').html(banner_header);
+                $('li[data-component-id="'+activeComponent+'"]  .banner-sub').html(banner_sub);
             }
             if (component_type === 'category') {
                 //console.log('component type is: ' + component_type);
                 var activeComponent = $('#editor_category .text-activeComponent').val();
                 var selected_image = $('#editor_category .file-name').text();
 
-                $('#' + activeComponent + ' .component .placeholder').addClass('slds-hide');
-                $('#' + activeComponent + ' .component .image-holder').removeClass('slds-hide');
+                $('li[data-component-id="'+activeComponent+'"] .empty').addClass('slds-hide');
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').removeClass('slds-hide');
 
-                $('#' + activeComponent + ' .component .image-holder').css('background-image', 'url(' + selected_image + ')');
-                $('#' + activeComponent + ' .component .image-holder').attr('src', selected_image);
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').css('background-image', 'url(' + selected_image + ')');
+                $('li[data-component-id="'+activeComponent+'"] .image-holder').attr('src', selected_image);
 
                 call_button = $('#editor_category .text-banner-header-product').val();
 
-                //console.log('button text should be: ' + call_button);
+                console.log('button text should be: ' + call_button);
 
-                $('#' + activeComponent + ' button.call-to-action').html(call_button);
+                $('li[data-component-id="'+activeComponent+'"] button.call-to-action').html(call_button);
 
             }
             if (component_type === 'row') {}
@@ -845,7 +861,6 @@
             $('.image_chooser').toggleClass('slds-hide');
             options = {
                 success: function(files) {
-                    //alert("Here's the file link: " + files[0].link)
                     //$('.image-figure-thumb').appendChild(li).appendChild(a).appendChild(img);
                     var selected_image = files[0].link;
 
@@ -856,7 +871,6 @@
                         $('.file-name').html(selected_image);
                         $('.file-name').attr('title', selected_image);
 
-                        //alert(image);
                         //selected_image = undefined;
                     }
                     linkType: "preview";
@@ -983,6 +997,12 @@ var optsA = {
     //$(".list").removeClass('hover');
     $(evt.item).closest('li').attr('data-component-id', 'component'+countess);
     activeComponent = $(evt.item).closest('li').attr('data-component-type');
+    componentid = $(evt.item).closest('li').attr('data-component-id');
+
+    $('.text-activeComponent').val(componentid);
+    $('.text-componentType').val(activeComponent);
+
+
     document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
 
     console.log('dropped '+activeComponent);
@@ -995,6 +1015,7 @@ var optsA = {
         $('#string_editor').text('Banner');
         $('#panel_editor').removeClass('slds-hide');
         $('#editor_banner').removeClass('slds-hide');
+
     }
 
     if (activeComponent === 'category'){
@@ -1008,6 +1029,8 @@ var optsA = {
         $('#panel_editor').removeClass('slds-hide');
         $('#editor_row').removeClass('slds-hide');
     }
+
+    $('#panel_editor').removeClass('slds-hide');
 
 
     $('#component-palette-menu').addClass('slds-hide');
@@ -1044,6 +1067,18 @@ var optsA = {
     });
 
 
+    $('#listStructure li').click(function() {
+        //console.log('show code view');
+        var get_case = $(this).closest('li').attr('data-component-id');
+        var get_type = $(this).closest('li').attr('data-component-type');
+
+        $('.text-activeComponent').val(get_case);
+        $('.text-componentType').val(get_type);
+
+        $('#listitem').val(get_case);
+    });
+
+
 
   }
 }
@@ -1075,6 +1110,22 @@ var optsC = {
 }
 
 
+var optsD = {
+  group: 'child',
+  sort: true,
+  onMove: function (evt) {
+    $('.list').removeClass('hover');
+    $(evt.to).addClass('hover');
+  },
+  onEnd: function (evt) {
+    $('.list').removeClass('hover');
+    console.log('end');
+    document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
+  }
+}
+
+
+
 
 $('.slds-grid').hover(
   function() {
@@ -1092,8 +1143,6 @@ $('#listEditor li').hover(
   function(){
     //hover list element in editor
     //hoverme = $(this).data('data-component-id');
-    //alert(hoverme);
-    alert('something');
   }
 );
 
@@ -1108,6 +1157,21 @@ Sortable.create(el, optsB);
 var el = document.getElementById('listStructure');
 Sortable.create(el, optsC);
 
+//versuch drop areas zu duplizieren
+/*
+for (var i = 0; i < $('.subsection').length; i++) {
+  Sortable.create(document.getElementsByClassName("listSub")[i], {
+    animation: 150,
+    group: 'child',
+    sort: true,
+    onMove: function (evt) {
+    },
+    onEnd: function (evt) {
+      document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
+    }
+  });
+}
+*/
 
 $('.slds-drop-zone__label_button').click(function() {
     activeComponent = $(this).closest('li').attr('data-component-type');

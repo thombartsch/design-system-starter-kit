@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!-- Prototype styles -->
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="/styles/index.css"/>
+    <!-- Simple List -->
+
+    <ul class="sortable1">
+      <li class="box box-2">Block 2</li>
+      <li class="box box-5">Block 3
+        <ul class="sortable3">here</ul>
+      </li>
+    </ul>
+
+
+    <ul class="sortable2">
+      <li class="box box-1">Block 1</li>
+    </ul>
+
+
+
+
+
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    <script src='/scripts/utils.js'></script>
+    <script src='/scripts/tether.min.js'></script>
+    <script src='/scripts/dragula.min.js'></script>
+
+    <script src = "/scripts/html5sortable.js"></script>
+    <script>
+
+    sortable('.sortable2',  {
+      forcePlaceholderSize: true,
+      placeholderClass: 'sortable-placeholder',
+      hoverClass: 'is-hovered',
+      acceptFrom: '.sortable1'
+    });
+
+    sortable('.sortable1', {
+      copy:true // default to false
+    });
+
+    </script>
+
+    <style>
+      #listEditor .component, #listEditor .structure{
+        display: none;
+      }
+      #listTools .placeholder, #listTools .structure{
+        display: none;
+      }
+      #page_structure .placeholder, #page_structure .component{
+        display: none;
+      }
+      #listTools li:hover,
+      .region li:hover,
+      #page_structure li:hover{
+        cursor: grab;
+      }
+
+      .sortable1{
+        width: 300px;
+        float: left;
+      }
+
+      .sortable2{
+        width: 300px;
+        float: left;
+      }
+
+      li{
+        margin-left: 10px;
+      }
+
+      ul{
+        margin-left: 20px;
+      }
+
+
+
+
+    </style>
+
+  </body>
+
+
+
+
+</html>
