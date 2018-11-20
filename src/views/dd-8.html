@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!-- Prototype styles -->
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="/styles/index.css"/>
+
+
+    <div class="container">
+      <ul>
+        <li data-id="1">
+          <span>Item 1</span>
+          <ul>
+            <li data-id="4">
+              <span>Item 4</span>
+              <ul>
+                <li data-id="7">
+                  <span>Item 7</span>
+                  <ul></ul>
+                </li>
+                <li data-id="8">
+                  <span>Item 8</span>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li data-id="5">
+              <span>Item 5</span>
+              <ul></ul>
+            </li>
+            <li data-id="6">
+              <span>Item 6</span>
+              <ul></ul>
+            </li>
+          </ul>
+        </li>
+        <li data-id="2">
+          <span>Item 2</span>
+          <ul></ul>
+        </li>
+        <li data-id="3">
+          <span>Item 3</span>
+          <ul></ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pageStructure">
+
+    </div>
+
+
+
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    <script src='/scripts/utils.js'></script>
+    <script src='/scripts/dragula.min.js'></script>
+    <script src='/scripts/tether.min.js'></script>
+    <script>
+
+    function getChildren(elem) {
+      var parent = [];
+      $(elem).children('ul').children('li').each(function() {
+        if($(this).data('id')) {
+          parent.push($(this).data('id'));
+        }
+        if($(this).children('ul').children('li').length) {
+          parent.push(getChildren(this));
+        }
+      });
+      return parent;
+    }
+
+    $(document).ready(function() {
+      var drake = dragula($(".container ul").toArray(), {
+        mirrorContainer: $(".container")[0]
+      });
+      drake.on("drop", function(el, target, source, sibling) {
+        console.log(getChildren($(".container")));
+        //document.querySelector('.container').innerHTML = document.querySelector('.pageStructure').innerHTML;        
+      });
+
+    });
+    </script>
+
+    <style>
+    body {
+      background: #f6f9fb;
+      font-family: Arial;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 420px;
+      margin: 0 auto;
+    }
+
+    .container > ul {
+      padding: 0;
+    }
+
+    .container > ul > li {
+      padding-left: 0;
+    }
+
+    .container ul {
+      padding: 0 0 0 20px;
+      margin: 0;
+      min-height: 10px;
+    }
+
+    .container li > span {
+      cursor: move;
+      background: #fff;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 3px;
+      box-shadow: 0 2px 6px rgba(170, 185, 200, 0.4);
+    }
+
+    .container li:first-child {
+      padding-top: 10px;
+    }
+
+    .container li {
+      list-style: none;
+    }
+
+    </style>
+
+  </body>
+
+
+
+
+</html>

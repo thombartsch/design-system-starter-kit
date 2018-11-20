@@ -30,54 +30,8 @@
         <!-- /BUILDER HEADER -->
 
         <div id="builder" class="slds-grid slds-col">
-            <div id="pd-menu">
+            <div id="pd-menu" class="slds-hide">
               {% include "_inc_pd-menu.html" %}
-
-              <!--ul id="listTools" class="connected sortable listLeft">
-                 <li>
-                  <span>::</span>
-                  <span>ROW</span>
-                   <div class="component">
-                     ROW
-                   </div>
-                   <div class="placeholder">
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                     <ul class="connected sortable listSub"></ul>
-                   </div>
-                   <div class="structure">
-                     :: ROW
-                   </div>
-                 </li>
-                 <li>
-                   <div class="component">
-                     BANNER
-                   </div>
-                   <div class="placeholder">
-                     banner image placeholder
-                   </div>
-                   <div class="structure">
-                     :: Banner
-                   </div>
-                 </li>
-                 <li>
-                   <div class="component">
-                     RTF
-                   </div>
-                   <div class="placeholder">
-                     rich text placeholder
-                   </div>
-                   <div class="structure">
-                     :: RTF
-                   </div>
-                 </li>
-              </ul-->
-
-
             </div>
             <div id="panel_editor" class="slds-hide modal">
                 <!-- PANEL EDITOR RIGHT -->
@@ -86,7 +40,7 @@
             </div>
 
 
-            <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+            <div id="canvas" class="slds-hide slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
                   <!--div class="slds-drop-zone_drag__slot"-->
                     {% include "_inc_header-editor.html" %}
                     <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->

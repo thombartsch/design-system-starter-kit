@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang='en' class='list-view'>
+
+  <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>.: Page Designer :.</title>
+    <meta name='robots' content='noindex, nofollow'/>
+    <link rel='icon' type='image/png' href='/favicon.png'/>
+    <link rel='stylesheet' href='/styles/index.css'/>
+    <!-- Prototype styles -->
+  </head>
+
+  <body>
+
+    {% include "_inc_builder-popover-previewsettings.html" %}
+    <main class="app-wrapper">
+        {% include "_inc_modal-delete-component-4.html" %}
+        {% include "_inc_modal_media-picker.html" %}
+        {% include "_inc_modal_category-picker.html" %}
+        {% include "_inc_modal_page-settings.html" %}
+        {% include "_inc_modal_page-publish.html" %}
+
+        {% include "_inc_modal_code-view.html" %}
+        {% include "_inc_locale-warning.html" %}
+
+        <!-- BUILDER HEADER -->
+        {% include "_inc_builder-header.html" %}
+        <!-- /BUILDER HEADER -->
+
+        <div id="builder" class="slds-grid slds-col">
+          <div id="pd-menu">
+            <ol class="simple_with_no_drop vertical components">
+              <li>
+                Banner
+              </li>
+              <li>
+                Row
+                <ol>
+                  1
+                </ol>
+                <ol>
+                  2
+                </ol>
+              </li>
+            </ol>
+          </div>
+          <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+            <ol class="simple_with_drop vertical">
+              Drop
+            </ol>
+            <ol class="simple_with_drop vertical">
+              Drop 2
+            </ol>
+          </div>
+        </div>
+
+
+
+    <div class="slds-grid">
+      <div class="slds-col slds-size_1-of-3">
+      </div>
+
+      <div class="slds-col slds-size_2-of-3" id="pageEditor">
+      </div>
+    </div>
+
+
+
+    <div class="slds-col" id="pageOutline">
+      <ol class="vertical" id="pageStructure">
+        Structure
+      </ol>
+    </div>
+
+
+
+
+
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    <script src='/scripts/utils.js'></script>
+    <script src='/scripts/tether.min.js'></script>
+    <script src='/scripts/jquery-sortable.js'></script>
+
+    <script>
+      //page editor
+      $("ol.simple_with_drop").sortable({
+        group: 'drop',
+        onDragStart: function ($item, container, _super) {
+          var offset = $item.offset(),
+              pointer = container.rootGroup.pointer;
+
+          adjustment = {
+            left: pointer.left - offset.left,
+            top: pointer.top - offset.top
+          };
+          // Duplicate items of the no drop area
+          if(!container.options.drop)
+            $item.clone().insertAfter($item);
+            console.log('start');
+          _super($item, container);
+        },
+        onDrag: function ($item, position) {
+          $item.css({
+            left: position.left - adjustment.left,
+            top: position.top - adjustment.top
+          });
+        },
+        onDrop: function ($item, container, _super) {
+          console.log('end 1');
+          _super($item, container);
+          document.querySelector('#pageStructure').innerHTML = document.querySelector('#pageEditor').innerHTML;
+        }
+      });
+      //components
+      $("ol.components").sortable({
+        group: 'drop',
+        drop: false
+      });
+    </script>
+
+    <style>
+
+      body.dragging,
+      body.dragging * {
+        cursor: move !important;
+      }
+      .dragged {
+        position: absolute;
+        opacity: 0.5;
+        z-index: 2000;
+      }
+
+      #pageEditor ol,
+      #pageStructure ol{
+        border: 1px dashed #666;
+        margin-bottom: 4px;
+      }
+
+      ol.example li.placeholder {
+        position: relative;
+        /** More li styles **/
+      }
+      ol.example li.placeholder:before {
+        position: absolute;
+        /** Define arrowhead **/
+      }
+      ol.vertical li {
+        display: block;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #cccccc;
+        color: #0088cc;
+        background: #eeeeee;
+      }
+      .grabber {
+        cursor: grabbing;
+      }
+      ol li.highlight {
+          background: #333333;
+          color: #999999;
+      }
+      ol.vertical li.placeholder {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      ol.vertical li.placeholder:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        margin-top: -5px;
+        left: -5px;
+        top: -4px;
+        border: 5px solid transparent;
+        border-left-color: red;
+        border-right: none;
+      }
+
+    </style>
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<div style="position: relative; height: 9px;">
+<div>
     <div class="slds-builder-header_container">
         <header class="slds-builder-header">
             <div class="slds-builder-header__item">
@@ -15,22 +15,6 @@
             </div>
             <nav class="slds-builder-header__item slds-builder-header__nav">
                 <ul class="slds-builder-header__nav-list">
-                    {#
-                    <li class="slds-builder-header__nav-item">
-                        <a href="javascript:void(0);" class="slds-builder-header__item-action slds-media slds-media_center" id="js-trigger-page-settings">
-                            <span class="slds-media__figure">
-                                <span class="slds-icon_container slds-icon-utility-settings slds-current-color">
-                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"/>
-                                    </svg>
-                                </span>
-                            </span>
-                            <span class="slds-media__body">
-                                <span class="slds-truncate" title="Settings">Page Settings</span>
-                            </span>
-                        </a>
-                    </li>
-                    #}
                     <li class="slds-builder-header__nav-item">
                         <button class="slds-button slds-builder-header__item-action slds-media slds-media_center" aria-haspopup="true" id="js-trigger-page-list" title="Click to open menu">
                             <span class="slds-media__figure">
@@ -48,11 +32,8 @@
                                 </svg>
                                 </span>
                             </span>
-                        </button> {% include "_inc_builder-popover_page-list.html"%}
-
-
-
-
+                        </button>
+                        {% include "_inc_builder-popover_page-list.html"%}
                     </li>
                 </ul>
             </nav>
@@ -87,24 +68,11 @@
             </div>
         </header>
         <div class="slds-builder-toolbar" role="toolbar">
-            <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions">
+            <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions"></div>
+            <div class="slds-p-right_small slds-p-top_xx-small">
+              <span class="slds-badge">Site Genesis</span>
             </div>
-            <!--div class="slds-builder-toolbar__item-group slds-m-left_none" aria-label="Edit actions">
-                <div class="slds-button-group">
-                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Toggle Page Structure Panel" tabindex="-1" id="button-navigator">
-                      <svg class="slds-button__icon" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#list"/>
-                      </svg>
-                        <span class="slds-assistive-text">Toggle Page Structure Panel</span>
-                    </button>
-                </div>
-            </div-->
-            <div class="slds-col 2slds-text-align_center">
-                <!--button class="slds-button slds-button_neutral">en-US
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button-->
+            <div class="slds-col">
                 <div class="slds-float_left slds-p-right_small">
                 <div class="slds-form-element__control">
                       <div class="slds-combobox_container slds-size_xx-small" id="locale-switch">
@@ -191,29 +159,25 @@
                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait"></use>
                         </svg><!-- Desktop -->
                     </button>
-                    <!--
-                    <button id="trigger-show-customer-groups" class="trigger-tether slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customer Groups">
-                      <svg class="slds-button__icon" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#groups" />
-                      </svg>
-                      <span class="slds-assistive-text">Customer Groups</span>
-                    </button>
-                    <button id="trigger-show-date" class="trigger-tetherB slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customer Groups">
-                      <svg class="slds-button__icon" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#dayview" />
-                      </svg>
-                      <span class="slds-assistive-text">Display Date</span>
-                    </button>
-                    -->
-                    <button id="trigger-show-more" class="trigger-tetherC slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customize Preview">
+                    <!-- button id="trigger-show-more" class="trigger-tetherC slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Customize Preview">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#more" />
                       </svg>
                       <span class="slds-assistive-text">Customize Preview</span>
-                    </button>
-
+                    </button -->
                 </div>
-
+                <div class="slds-button-group" role="group">
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" 2aria-pressed="false"  id="trigger-customergroups">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#groups"></use>
+                        </svg><!-- Customer Groups -->
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" id="trigger-schedule">
+                        <svg class="slds-button__icon slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#dayview"></use>
+                        </svg><!-- Tablet -->
+                    </button>
+                  </div>
 
             </div>
             <div class="slds-text-align_right slds-p-right_small" style="width:200px;">

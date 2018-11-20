@@ -14,14 +14,53 @@
   <body>
     <link rel="stylesheet" href="/styles/index.css"/>
 
-    <ul id="tools" class="connected sortable listLeft">
-       <li>ROW
-         <ul class="connected sortable listSub">
-
-         </ul>
-       <li>Banner
-       <li>RTF
+    <ul id="listTools" class="connected sortable listLeft">
+       <li>
+        <span>::</span>
+        <span>ROW</span>
+         <div class="component">
+           ROW
+         </div>
+         <div class="placeholder">
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+           <ul class="connected sortable listSub"></ul>
+         </div>
+         <div class="structure">
+           :: ROW
+         </div>
+       </li>
+       <li>
+         <div class="component">
+           BANNER
+         </div>
+         <div class="placeholder">
+           banner image placeholder
+         </div>
+         <div class="structure">
+           :: Banner
+         </div>
+       </li>
+       <li>
+         <div class="component">
+           RTF
+         </div>
+         <div class="placeholder">
+           rich text placeholder
+         </div>
+         <div class="structure">
+           :: RTF
+         </div>
+       </li>
     </ul>
+
+
+
+
     <ul id="listEditor" class="connected sortable listCenter">
     </ul>
 
@@ -51,32 +90,29 @@
         },
         receive: function (event, ui) {
             //only when dropped from one to another!
-            /*
             if (before.length) before.after(clone);
             else parent.prepend(clone);
-            */
-            parent.prepend(clone);
+            console.log('dropped something in the center');
             document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
         }
 
     }).disableSelection();
 
+    /*
+
     $('.listCenter').sortable({
       stop: function( event, ui ) {
-        console.log('dropped in the center');
+        console.log('sorted in the center');
         document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
       }
     }).disableSelection();
 
     $('.listSub').sortable({
       stop: function( event, ui ) {
-        console.log('dropped sub elements in the center');
+        console.log('sorted sub elements in the center');
         //document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
       }
     }).disableSelection();
-
-
-
 
     $('#listStructure').sortable({
       stop: function( event, ui ) {
@@ -85,8 +121,7 @@
       }
     }).disableSelection();
 
-
-
+    */
     </script>
 
     <style>
@@ -101,10 +136,10 @@
       #listEditor .component, #listEditor .structure{
         display: none;
       }
-      #listTools .placeholder, #listTools .structure{
+      #listTools ., #listTools .structure{
         display: none;
       }
-      #page_structure .placeholder, #page_structure .component{
+      #page_structure ., #page_structure .component{
         display: none;
       }
       #listTools li:hover,
@@ -120,6 +155,13 @@
 
       .sortable2{
         width: 300px;
+        float: left;
+      }
+
+      #tools .listSub{
+        display: none;
+      }
+      #listEditor .listSub{
         float: left;
       }
 
