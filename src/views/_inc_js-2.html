@@ -611,6 +611,7 @@
         //POPOVER PREVIEW SETTINGS
         $('#trigger-show-customer-groups').click(function() {
             $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-schedule').addClass('slds-hide');
             $('#popover-date').addClass('slds-hide');
             $('#popover-more').addClass('slds-hide');
 
@@ -627,6 +628,7 @@
         });
         $('#trigger-show-date').click(function() {
             $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-schedule').addClass('slds-hide');
             $('#popover-date').addClass('slds-hide');
             $('#popover-more').addClass('slds-hide');
 
@@ -645,6 +647,7 @@
 
         $('#trigger-show-more').click(function() {
             $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-schedule').addClass('slds-hide');
             $('#popover-date').addClass('slds-hide');
             $('#popover-more').addClass('slds-hide');
 
@@ -660,7 +663,40 @@
             return false;
         });
 
+        $('#trigger-customergroups').click(function() {
+            $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-schedule').addClass('slds-hide');
+            $('#popover-date').addClass('slds-hide');
+            $('#popover-more').addClass('slds-hide');
+            new Tether({
+                element: '.tether-box',
+                target: '.trigger-tether',
+                attachment: 'bottom left',
+                targetAttachment: 'bottom left',
+                targetModifier: 'visible',
+                offset: '-10px 6px',
+            });
+            $('#popover-customer-groups').toggleClass('slds-hide');
+            return false;
+        });
 
+        $('#trigger-schedule').click(function() {
+            $('#popover-customer-groups').addClass('slds-hide');
+            $('#popover-schedule').addClass('slds-hide');
+            $('#popover-date').addClass('slds-hide');
+            $('#popover-more').addClass('slds-hide');
+
+            new Tether({
+                element: '.tether-boxB',
+                target: '.trigger-tetherB',
+                attachment: 'bottom left',
+                targetAttachment: 'bottom left',
+                targetModifier: 'visible',
+                offset: '-10px 6px',
+            });
+            $('#popover-schedule').toggleClass('slds-hide');
+            return false;
+        });
 
 
         $('#trigger-preview').click(function() {
