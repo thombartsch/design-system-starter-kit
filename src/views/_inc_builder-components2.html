@@ -32,7 +32,7 @@
       <div>
           <!--ul id="component_list" class="slds-tree slds-p-top_small" role="tree" aria-labelledby="treeheading" id="tree-header"-->
 
-          <ol id="listTools" class="connected sortable listLeft simple_with_no_drop vertical components">
+          <!--ol id="listTools" class="connected sortable listLeft simple_with_no_drop vertical components">
              <li class="slds-col">
               <span>::</span>
               <span>ROW</span>
@@ -73,12 +73,12 @@
                  :: RTF
                </div>
              </li>
-          </ol>
+          </ol-->
 
 
 
-            <!--ul class="list" id="listTools"-->
-            <ul class="connected sortable listLeft" id="listTools">
+            <!--ul class="connected sortable listLeft" id="listTools"-->
+            <ol id="listTools" class="connected sortable listLeft simple_with_no_drop vertical components">
               <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
                   <div class="slds-tree__item">
                       <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
@@ -125,63 +125,8 @@
                   {% include "_inc_builder-component-rtf.html" %}
                 </div>
               </li>
+            </ol>
 
-
-
-
-              <!--li 1id="num1">
-                <div class="component">
-                  component -1
-                </div>
-                <div class="placeholder">
-                  placeholder -1
-                </div>
-                <div class="structure">
-                  structure -1
-                </div>
-              </li-->
-
-            </ul>
-
-              {#
-              <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
-                  <div class="slds-tree__item">
-                      <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Expand</span>
-                      </button>
-                      <span class="slds-size_1-of-1">
-                          <span class="slds-tree__item-label slds-truncate" title="Layout (1)">Layout (1)</span>
-                      </span>
-                  </div>
-
-                  <div class="2slds-panel__body slds-m-left_small listTools" style="" id="listTools">
-                      {% include "_inc_builder-component-row.html" %}
-                  </div>
-              </li>
-              <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
-                  <div class="slds-tree__item">
-                      <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Expand</span>
-                      </button>
-                      <span class="slds-size_1-of-1">
-                          <span class="slds-tree__item-label slds-truncate" title="Content (1)">Content (1)</span>
-                      </span>
-                  </div>
-
-                  <div class="2slds-panel__body slds-m-left_small listTools" style="" id="listToolsB">
-                      {% include "_inc_builder-component-banner.html" %}
-                      {% include "_inc_builder-component-category.html" %}
-                      {% include "_inc_builder-component-rtf.html" %}
-                  </div>
-              </li>
-              #}
-          </ul>
       </div>
 
 
