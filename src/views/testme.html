@@ -29,32 +29,6 @@
         {% include "_inc_builder-header.html" %}
         <!-- /BUILDER HEADER -->
 
-        <div id="builder" class="slds-grid slds-col">
-          <div id="pd-menu">
-            <ol class="simple_with_no_drop vertical components">
-              <li>
-                Banner
-              </li>
-              <li>
-                Row
-                <ol>
-                  1
-                </ol>
-                <ol>
-                  2
-                </ol>
-              </li>
-            </ol>
-          </div>
-          <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
-            <ol class="simple_with_drop vertical">
-              Drop
-            </ol>
-            <ol class="simple_with_drop vertical">
-              Drop 2
-            </ol>
-          </div>
-        </div>
 
 
 
@@ -75,6 +49,27 @@
     </div>
 
 
+
+    <div id="builder" class="slds-grid slds-col">
+        <div id="pd-menu">
+          {% include "_inc_pd-menu.html" %}
+        </div>
+        <div id="panel_editor" class="slds-hide modal">
+            <!-- PANEL EDITOR RIGHT -->
+            {% include "_inc_builder-panel-editor.html" %}
+            <!-- /PANEL EDITOR  RIGHT -->
+        </div>
+        <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+          <ol class="simple_with_drop vertical">
+            Drop
+          </ol>
+          <ol class="simple_with_drop vertical">
+            Drop 2
+          </ol>
+        </div>
+    </div>
+
+</main>
 
 
 
