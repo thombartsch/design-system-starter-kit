@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="/styles/index.css"/>
+    <!-- Prototype styles -->
+  </head>
+
+  <body>
+
+
+
+<div class="slds-grid">
+  <ul class="slds-col sortable vertical" id="components">
+    <li class="slds-col">
+      Component A
+    </li>
+    <li class="slds-col">
+      Component B
+    </li>
+  </ul>
+
+  <div class="slds-col" id="canvas">
+    <ul class="slds-col sortable vertical">
+    </ul
+  </div>
+
+  <div class="slds-col sortable" id="structure">
+  </div>
+
+</div>
+
+
+<script src='/scripts/jquery-3.2.1.min.js'></script>
+<script src='/scripts/jquery-ui.min.js'></script>
+<script src='/scripts/utils.js'></script>
+<script src='/scripts/tether.min.js'></script>
+<script src='/scripts/jquery-sortable.js'></script>
+
+<script>
+$(function  () {
+  $('.sortable').sortable({
+    group: 'no-drop',
+    onDragStart: function ($item, container, _super) {
+       // Duplicate items of the no drop area
+       if(!container.options.drop)
+         $item.clone().insertAfter($item);
+       _super($item, container);
+     }
+  });
+});
+
+</script>
+
+<style>
+
+.gu-transit{
+  pointer: cursor;
+  opacity: 1;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.nested {
+  padding: 4px 0;
+  border: 1px dotted #bbb;
+}
+
+.item {
+  padding: 8px;
+}
+
+.gu-transit {
+  pointer-events: none;
+}
+</style>
+
+
+  </body>
+</html>

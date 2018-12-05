@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>.: Drag Sample :.</title>
+  <meta name='robots' content='noindex, nofollow'/>
+  <link rel='icon' type='image/png' href='/favicon.png'/>
+  <link rel='stylesheet' href='/styles/index.css'/>
+  <!-- Prototype styles -->
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <div class="row slds-grid">
+      <div class="slds-col column" style="width:200px">
+        <ul class="connected-sortable components" id="components">
+          <li class="draggable-item">
+            <div class="component">Banner</div>
+            <div class="placeholder">Banner Placeholder</div>
+            <div class="pagestructure">Banner Structure</div>
+          </li>
+          <li class="draggable-item">
+            <div class="component">Rich Text</div>
+            <div class="placeholder">Rich Text Placeholder</div>
+            <div class="pagestructure">Rich Text Structure</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slds-col column" id="canvas">
+        <ul class="connected-sortable region region1">
+          1
+        </ul>
+        <ul class="connected-sortable region region2">
+          2
+        </ul>
+      </div>
+
+      <div class="column slds-col" id="pageStructure" style="width:200px">
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <script src='/scripts/jquery-3.2.1.min.js'></script>
+  <script src='/scripts/jquery-ui.min.js'></script>
+  <script src='/scripts/utils.js'></script>
+  <script src='/scripts/tether.min.js'></script>
+
+<script>
+  var srcId;
+  $('.connected-sortable').sortable({
+      connectWith: '.connected-sortable',
+      helper: "clone",
+      start: function (event, ui) {
+          $(ui.item).show();
+          clone = $(ui.item).clone();
+          before = $(ui.item).prev();
+          parent = $(ui.item).parent();
+          srcId = $(this).closest(".components").attr('id');
+      },
+      receive: function (event, ui) {
+          //check if moved within regions or dragged in from components
+
+          /*
+          if(srcId =='components'){
+            if (before.length){
+              before.after(clone)
+            }else{
+              parent.prepend(clone)
+            };
+          }
+          srcI = "none";
+          */
+
+
+          parent.prepend(clone)          
+          document.querySelector('#pageStructure').innerHTML = document.querySelector('#canvas').innerHTML;
+
+
+
+          /*
+          //check if canvas or page structure
+          if($(this).closest('#canvas').length){
+            console.log(srcI);
+            document.querySelector('#pageStructure').innerHTML = document.querySelector('#canvas').innerHTML;
+          }
+          */
+      }
+  }).disableSelection();
+
+
+
+
+
+
+
+</script>
+
+
+<style>
+  li.draggable-item {
+    -webkit-transition: transform .25s ease-in-out;
+    -moz-transition: transform .25s ease-in-out;
+    -o-transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+
+    -webkit-transition: box-shadow .25s ease-in-out;
+    -moz-transition: box-shadow .25s ease-in-out;
+    -o-transition: box-shadow .25s ease-in-out;
+    transition: box-shadow .25s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background-color: #eaeaea;
+    }
+  }
+  /* styles during drag */
+  li.draggable-item.ui-sortable-helper {
+    background-color: #e5e5e5;
+    -webkit-box-shadow: 0 0 8px rgba(53,41,41, .8);
+    -moz-box-shadow: 0 0 8px rgba(53,41,41, .8);
+    box-shadow: 0 0 8px rgba(53,41,41, .8);
+    transform: scale(1.015);
+    z-index: 100;
+  }
+  li.draggable-item.ui-sortable-placeholder {
+    background-color: #ddd;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+     -webkit-box-shadow: inset 0 0 10px #000000;
+     box-shadow:         inset 0 0 10px #000000;
+  }
+
+  /* show hide component details */
+  #components .pagestructure,
+  #components .component{
+    display: none;
+  }
+  #canvas .pagestructure,
+  #canvas .component{
+    display: none;
+  }
+  #pageStructure .placeholder,
+  #pageStructure .component{
+    display: none;
+  }
+
+
+
+</style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>.: Drag Sample :.</title>
+  <meta name='robots' content='noindex, nofollow'/>
+  <link rel='icon' type='image/png' href='/favicon.png'/>
+  <link rel='stylesheet' href='/styles/index.css'/>
+  <!-- Prototype styles -->
+</head>
+
+<body>
+
+<div class="slds-grid">
+  <div class="slds-col" id="components">
+    <ul class="slds-has-dividers_around-space components" style="width:200px;">
+  		<li class="slds-item component slds-size__max" id="image1">
+          <div>component 1</div>
+      </li>
+    </ul>
+  </div>
+  <div class="slds-col" id="canvas">
+    <div class="">
+      <ul class="sortable" id="pageEditor">
+        <li>
+          <div class="slds-hide">1</div>
+          <ul class="slds-drop-zone dropcontainer" id="region1">region 1</ul>
+        </li>
+        <li>
+          <div class="slds-hide">2</div>
+          <ul class="slds-drop-zone dropcontainer" id="region2">region 2</ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="slds-col" id="pageStructure">
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src='/scripts/jquery-3.2.1.min.js'></script>
+  <script src='/scripts/jquery-ui.min.js'></script>
+  <script src='/scripts/utils.js'></script>
+  <script src='/scripts/tether.min.js'></script>
+
+  <script>
+$(function () {
+//->
+    $(".components, .slds-drop-zone").sortable({
+        connectWith: ".dropcontainer",
+        remove: function (e, li) {
+            copyHelper = li.item.clone().insertAfter(li.item);
+            $(this).sortable('cancel');
+            return li.item.clone();
+        }
+        stop: function(){
+          $('#region1').sortable({
+            connectWith: '.slds-drop-zone'
+          });
+
+        }
+    }).disableSelection();
+
+
+    //NESTED SORTING IN CANVAS
+    $('#region1').sortable({
+      connectWith: '.slds-drop-zone'
+    });
+    $('#region2').sortable({
+      connectWith: '.slds-drop-zone'
+    });
+
+
+//<-
+});
+
+
+
+
+
+  </script>
+
+
+<style></style>
+
+</body>
+</html>
