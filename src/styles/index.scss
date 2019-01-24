@@ -57,7 +57,8 @@ html.list-view {
 
 #tools {
     background: #f7f9fb;
-    height: 100vh;
+    /*height: 100vh;*/
+    height: auto;
 }
 
 // Style the Contextbar Color CC style
@@ -136,14 +137,14 @@ html.list-view {
     /*background: rgba(0, 0, 0, 0.01);*/
     /*border: 1px solid rgba(255, 165, 0, 0.1);*/
     /*border: rgba(221, 219, 218,1);*/
-    border: 1px dashed rgba(100, 100, 100, 0.5);
+    /*border: 1px dashed rgba(100, 100, 100, 0.5);*/
 }
 
 .region:hover {
     /*border: 1px solid rgba(255, 165, 0, 1);*/
     /*background: rgba(0, 0, 0, 0.2);*/
     /*border: rgba(221, 219, 218,1);*/
-    border: 1px dashed rgba(100, 100, 100, 1);
+    /*border: 1px dashed rgba(100, 100, 100, 1);*/
 }
 
 .region-off {
@@ -744,15 +745,6 @@ div.ring {
 
 //BANNER TEXT
 
-/*
-.banner-header, .banner-sub{
-  color: #fff;
-  background: blue;
-  padding: 10px;
-  text-align: left;
-}
-*/
-
 .content {
     position: absolute;
     top: 0;
@@ -1239,12 +1231,10 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 .slds-drop-zone_drag__slot,
 .ui-sortable-placeholder,
 .ui-state-highlight {
-    border: 1px solid white;
-    border-left-width: 2px;
-    border-right-width: 2px;
+    /* green */
     background: #04844b;
     width: 100%;
-    height: 0.25rem;
+    height: 1px;
     overflow: hidden;
 }
 
@@ -1396,10 +1386,6 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
     transition: all 0.2s ease-in-out;
 }
 
-#canvas {
-    /*z-index: 1;*/
-    background: #eee;
-}
 
 .slds-image_card,
 .slds-image--card,
@@ -1417,26 +1403,19 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 
 .ui-sortable-helper {
-    height: auto;
+  /*display: table;*/
+  overflow: hidden;
+  position: absolute;
+  background:red;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.ui-sortable-helper .add-component,
-.ui-sortable-helper .component {
-    /*
-    display: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    */
-}
 
-#component_list li.ui-draggable-handle:hover {
-    /*height: 20px;*/
-    /*background: green;*/
-    cursor: grab;
-}
+
 
 .slds-is-hovered {
     -webkit-transition: all 0.2s ease-in-out;
@@ -1447,59 +1426,26 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 }
 
 
-/*
-#canvas>ul {
-    list-style: none;
-    float: left;
-    width: 200px;
-    padding: 0 10px 0 0;
-}
 
-#canvas li {
-    text-decoration: none;
-    display: block;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-}
-
-#canvas:hover li {
-    opacity: 0.2;
-}
-
-#canvas:hover ul:hover li {
-    opacity: 0.5;
-}
-
-#canvas:hover ul:hover li:hover {
-    opacity: 1;
-}
-*/
 
 #navigator_placeholder_:hover {}
 
 #canvas,
 #canvas_list {
-    height: 100%;
-    width: 100%;
-    min-height: 30px;
+  min-height: 30px;
 }
 
 #builder {
     height: 100%;
+    background: #fff;
 }
-
 
 /*
-.sortable-hover {
-    background: lightblue;
-}
-*/
-
 .ui-sortable-helper>div.component {
     display: none !important;
     transition: visibility 0s, opacity 0.5s linear;
 }
+*/
 
 .slds-icon-utility-connected_apps:hover,
 #navigator_list li.slds-item:hover {
@@ -2217,11 +2163,13 @@ ul#component_list li li {
 
 .cb-AppNav-button:before {
   transform: scaleY(-1);
-  top: 11px
+  top: 11px;
+  /*top: -6px;*/
 }
 
 .cb-AppNav-button:after {
-  bottom: 11px
+  bottom: 11px;
+  /*bottom: -6px;*/
 }
 
 .cb-AppNav-button:hover {

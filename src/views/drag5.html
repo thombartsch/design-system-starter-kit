@@ -22,10 +22,6 @@
     </ul>
   </div>
 
-  <div class="slds-col">
-    <ul id="sortable2" class="connectedSortable"></ul>
-    </div>
-
     <div class="slds-col" id="canvas">
     <ul class="connectedSortable">
       <ul id="region1" class="moveable">
@@ -35,6 +31,9 @@
         region 2
       </ul>
     </ul>
+    </div>
+    <div class="slds-col" id="pagestructure">
+      pagestructure
     </div>
 </div>
 
@@ -46,6 +45,7 @@
 
 <script>
 //simply use 1 nested list instead of multiple ones, use the slds classes to align the list cells vertical and horizontal
+//sorting in pagestructure not working yet
 $("#components").sortable({
     helper:"clone",
     connectWith: ".connectedSortable",
@@ -55,16 +55,36 @@ $("#components").sortable({
         return li.clone();
     },
     stop: function () {
+        console.log('sortable drop');
         copyHelper && copyHelper.remove();
     }
 }).disableSelection();
 
-$(".connectedSortable").sortable({
-    $("#pageStructure").innerHTML == "done";
-    receive: function (e, ui) {
-      console.log('clone done');
+$("#canvas .connectedSortable").sortable({
+      helper: "clone",
+      receive: function (e, ui) {
+      console.log('canvas receive');
+      document.querySelector('#pagestructure').innerHTML = document.querySelector('#canvas').innerHTML;
       copyHelper = null;
-    }
+    },
+    stop:  function (e, ui) {
+      console.log('stop');
+      //$("#pagestructure").innerHTML = $("#canvas").innerHTML;
+      document.querySelector('#pagestructure').innerHTML = document.querySelector('#canvas').innerHTML;
+    },
+}).disableSelection();
+
+
+$("#pagestructure .connectedSortable").sortable({
+    receive: function (e, ui) {
+      console.log('pagestructure A');
+      copyHelper = null;
+    },
+    stop:  function (e, ui) {
+      console.log('pagestructure B');
+      //$("#pagestructure").innerHTML = $("#canvas").innerHTML;
+      document.querySelector('#canvas').innerHTML = document.querySelector('#pagestructure').innerHTML;
+    },
 }).disableSelection();
 </script>
 
