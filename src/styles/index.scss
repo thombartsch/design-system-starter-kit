@@ -1247,7 +1247,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 
 .slds-drop-zone__container {
     position: relative;
-    z-index: 3;
+    z-index: 8000;
     /**
     * @name item-hovered
     * @summary Hover state for a component within a drop zone
@@ -1340,7 +1340,7 @@ input:not(:checked).is-inhereted+.slds-checkbox--faux {
 /* SIDE PANEL EDITOR */
 
 #panel_editor {
-    z-index: 8000;
+    z-index: 800000;
     position: absolute;
     right: 0;
     height: 100%;
@@ -2098,7 +2098,7 @@ ul#component_list li li {
 .cb-AppNav {
   position: absolute;
   top: 10px;
-  z-index: 11
+  z-index: 10000000;
 }
 
 .cb-AppNav-button {

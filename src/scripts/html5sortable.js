@@ -438,7 +438,7 @@ var sortable = (function () {
         if (!(draggedElement instanceof HTMLElement)) {
             throw new Error('setDragImage requires the dragged element as the second argument.');
         }
-        // set default function of none provided
+        // set default function of  provided
         if (!customDragImage) {
             customDragImage = defaultDragImage;
         }
