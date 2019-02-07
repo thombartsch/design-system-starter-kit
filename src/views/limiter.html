@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+
+<body>
+
+<div id="wrapper">
+  <div id="initial-list" class='sort-container'>
+    initial container
+    <div class="item-initial" id="item_1">1</div>
+    <div class="item-initial" id="item_2">2</div>
+    <div class="item-initial" id="item_3">3</div>
+    <div class="item-initial" id="item_4">4</div>
+  </div>
+  <div id="sortable-list" class="sort-container">sortable container</div>
+</div>
+
+</body>
+
+
+<style>
+  .item-initial,
+  .item-selected {
+    width: 200px;
+    height: 30px;
+    border: 1px dashed;
+    margin: 10px 10px;
+    cursor: move;
+    text-align: center;
+  }
+
+  .item-initial {
+    border-color: red;
+  }
+
+  .item-selected {
+    border-color: green;
+  }
+
+  .sort-container {
+    height: 200px;
+    border: 1px dashed black;
+  }
+
+</style>
+
+
+<script>
+  $("#sortable-list").sortable();
+  $("#initial-list div").draggable({
+    revert: true,
+    revertDuration: 0
+  });
+
+  $("#initial-list").droppable({
+    accept: ".item-selected",
+    drop: function(e, ui) {
+      var dropped = ui.draggable;
+      var droppedOn = $(this);
+      var itemInOtherList = $(this).children("#" + dropped.attr('id'));
+      itemInOtherList.removeClass('ui-state-disabled').draggable({ disabled: false });
+      dropped.remove();
+    }
+  });
+  $("#sortable-list").droppable({
+    accept: ".item-initial",
+    drop: function(e, ui) {
+      var dropped = ui.draggable;
+      var droppedOn = $(this);
+      droppedOn.append(dropped.clone()
+        .removeAttr('style')
+        .removeClass("item-initial")
+        .addClass("item-selected"));
+      dropped.animate(dropped.data().origPosition, {
+        complete: function() {
+          $(this).addClass('ui-state-disabled').draggable({ disabled: true });
+        }
+      });
+    }
+  });
+  $("#sortable-list").sortable();
+  $("#initial-list div").draggable({
+    revert: true,
+    revertDuration: 0
+  });
+
+  $("#initial-list").droppable({
+    accept: ".item-selected",
+    drop: function(e, ui) {
+      var dropped = ui.draggable;
+      var droppedOn = $(this);
+      var itemInOtherList = $(this).children("#" + dropped.attr('id'));
+      itemInOtherList.removeClass('ui-state-disabled').draggable({ disabled: false });
+      dropped.remove();
+    }
+  });
+  $("#sortable-list").droppable({
+    accept: ".item-initial",
+    drop: function(e, ui) {
+      var dropped = ui.draggable;
+      var droppedOn = $(this);
+      droppedOn.append(dropped.clone()
+        .removeAttr('style')
+        .removeClass("item-initial")
+        .addClass("item-selected"));
+      dropped.animate(dropped.data().origPosition, {
+        complete: function() {
+          $(this).addClass('ui-state-disabled').draggable({ disabled: true });
+        }
+      });
+    }
+  });
+</script>
+</html>
