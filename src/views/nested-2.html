@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="/styles/index.css"/>
+    <!-- Prototype styles -->
+  </head>
+
+  <body>
+
+    {% include "_inc_builder-popovers-toolbar.html" %}
+    <main class="app-wrapper">
+
+      <!-- BUILDER HEADER -->
+      {% include "_inc_builder-header.html" %}
+      <!-- /BUILDER HEADER -->
+
+      <div id="builder" class="slds-grid slds-col">
+
+
+        <div id="pd-menu">
+          <div id="drag-elements">
+            <div class="item">
+              <div class="insert"></div>
+              <div class="component">component 1</div>
+              <div class="placeholder">placeholder 1</div>
+              <div class="nav">nav 1</div>
+            </div>
+            <div class="item">
+              <div class="insert"></div>
+              <div class="component">component 2</div>
+              <div class="placeholder">placeholder 2</div>
+              <div class="nav">nav 2</div>
+            </div>
+          </div>
+
+
+
+
+            <!-- COMPONENTS -->
+            <div class="cb-LeftPanel-container js-left-panel-container 2slds-hide" id="component-palette-menu">
+              <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+                <div class="slds-panel__header slds-p-left_small">
+                  <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate slds-text-align_left slds-p-left_none slds-m-left_none"
+                  style="text-align:left;" title="Components">Components</h2>
+                  <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close js-trigger-close" title="Collapse Panel Header">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Collapse Panel Header</span>
+                  </button>
+                </div>
+                <div class="slds-panel__body slds-p-around_none">
+
+                  <div class="slds-form-element slds-p-left_small slds-p-top_small slds-p-right_small">
+                      <!--label class="slds-form-element__label" for="text-input-id-1">Input Label</label-->
+                      <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+                          <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                          </svg>
+                          <input type="text" id="text-input-id-1" class="slds-input" placeholder="Search Components" />
+                          <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon slds-hide">
+                              <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear" />
+                              </svg>
+                              <span class="slds-assistive-text">Clear</span>
+                          </button>
+                      </div>
+                  </div>
+
+
+                  <div>
+                      <ol id="listTools" class="connected sortable listLeft simple_with_no_drop vertical components">
+                         <li class="slds-col">
+                           <div class="component">
+                             ROW
+                           </div>
+                           <div class="placeholder  slds-grid">
+                             <ol>
+                               1
+                             </ol>
+                             <ol>
+                               2
+                             </ol>
+                           </div>
+                           <div class="structure">
+                             :: ROW
+                           </div>
+                         </li>
+                         <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                             <div class="slds-tree__item">
+                                 <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                                     <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                                     </svg>
+                                     <span class="slds-assistive-text">Expand</span>
+                                 </button>
+                                 <span class="slds-size_1-of-1">
+                                     <span class="slds-tree__item-label slds-truncate" title="Content (3)">Content (3)</span>
+                                 </span>
+                             </div>
+                         </li>
+                         <li data-component-type="banner" class="slds-p-around_xx-small">
+                           <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
+                             {% include "_inc_builder-component-banner.html" %}
+                           </div>
+                         </li>
+
+                         <li class="slds-col">
+                           <div class="component">
+                             BANNER
+                           </div>
+                           <div class="placeholder">
+                             banner image placeholder
+                           </div>
+                           <div class="structure">
+                             :: Banner
+                           </div>
+                         </li>
+                         <li class="slds-col">
+                           <div class="component">
+                             RTF
+                           </div>
+                           <div class="placeholder">
+                             rich text placeholder
+                           </div>
+                           <div class="structure">
+                             :: RTF
+                           </div>
+                         </li>
+                      </ol>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <!-- /COMPONENTS -->
+
+
+
+            <div class="cb-AppNav js-app-nav">
+              <span class="cb-AppNav-button js-component-palette-button" data-type="component-palette">
+                <span class="cb-AppNav-buttonIcon">
+                  <svg aria-hidden="true" class="slds-icon--x-small">
+                    <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use-->
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                  </svg>
+                </span>
+                <span class="cb-AppNav-buttonLabel">Components</span>
+              </span>
+              {% include "_inc_builder-components2.html" %}
+
+              <span class="cb-AppNav-button js-page-structure-button" data-type="page-structure">
+                <span class="cb-AppNav-buttonIcon">
+                  <svg aria-hidden="true" class="slds-icon--x-small">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#list"></use>
+                  </svg>
+                </span>
+                <span class="cb-AppNav-buttonLabel">Page Structure</span>
+              </span>
+              {% include "_inc_builder-page-structure.html" %}
+
+              <span class="cb-AppNav-button js-page-settings-button" data-type="settings">
+                <span class="cb-AppNav-buttonIcon">
+                  <svg aria-hidden="true" class="slds-icon--x-small">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                  </svg>
+                </span>
+                <span class="cb-AppNav-buttonLabel">Page Settings</span>
+              </span>
+            </div>
+
+
+
+
+
+
+          </div>
+          <div id="panel_editor" class="slds-hide modal">
+              <!-- PANEL EDITOR RIGHT -->
+              {% include "_inc_builder-panel-editor.html" %}
+              <!-- /PANEL EDITOR  RIGHT -->
+          </div>
+
+
+          <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+                <!--div class="slds-drop-zone_drag__slot"-->
+                  {% include "_inc_header-editor.html" %}
+                  <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->
+                  <div class="2slds-align_absolute-center slds-col slds-grid">
+                      <!-- EDITOR REGION 1 -->
+                      {#
+                      <div class="region" id="region1" style="width:100%">
+                        <!-- CANVAS -->
+                        <div class="demo-only" style="padding-top:2rem">
+                          <div class="dropzone" id="dropzone1">
+                            <div class="slds-drop-zone__label">
+                              <div class="slds-media slds-media_center">
+                                <div class="slds-media__figure">
+                                  <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
+                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+                                <div class="slds-media__body">
+                                  <h2>Region 1</h2>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="list-group slds-col slds-grid_vertical edit-mode" style="">
+                                <ul id="listEditor" class="connected sortable listCenter slds-grid slds-grid_vertical slds-col ui-sortable"  style="min-height:40px;">
+                                  1
+                                </ul>
+                            </div>
+
+                          </div>
+                        </div>
+                        <!-- /CANVAS -->
+                      </div>
+                      #}
+                      <!-- /EDITOR REGION 1 -->
+
+
+
+                        <div id="drop-target">1</div>
+
+
+                    </div>
+                  <!--/div-->
+                  {% include "_inc_footer-editor.html" %}
+              </div>
+
+
+
+
+
+              <div class="right">
+                <div id="display">Display</div>
+              </div>
+
+
+
+
+
+    </main>
+
+
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    <script src='/scripts/utils.js'></script>
+    <script src='/scripts/tether.min.js'></script>
+    <script src='/scripts/dragula.min.js'></script>
+    {% include '_inc_js-2.html' %}
+
+
+    <script>
+    /*
+    (function(){
+      dragula([].slice.apply(document.querySelectorAll('.nested')));
+    })();
+    */
+    /* not working */
+    /*
+    var containers = $('.container').toArray();
+    dragula(containers);
+    */
+
+    function $(id) {
+      return document.getElementById(id);
+    }
+
+    dragula([$('drag-elements'), $('drop-target'), $('display')], {
+      revertOnSpill: true,
+      copy: function (el, source) {
+        return source === document.getElementById("drag-elements")
+      },
+    }).on('drop', function(el, target, source, sibling) {
+      if ($('drop-target').children.length > 0) {
+        //console.log("hello"+target.id);
+        if(target.id == 'drop-target'){
+          console.log("left");
+          $('display').innerHTML = $('drop-target').innerHTML;
+        };
+        if(target.id == 'display'){
+          console.log("right");
+          $('drop-target').innerHTML = $('display').innerHTML;
+        }
+
+      } else {
+        $('drop-target').innerHTML = "Region 1";
+        $('display').innerHTML = "Navigation";
+      }
+
+    });
+    </script>
+
+    <style>
+
+    /*
+    #display {
+      background: #2d2d2d;
+      border: 10px solid #000000;
+
+      font-size: 2em;
+      color: white;
+      height: 100px;
+      min-width:200px;
+      text-align: center;
+      display:table-cell;
+      vertical-align:middle;
+    }
+
+    #drag-elements {
+      display: block;
+      background-color: #dfdfdf;
+
+      margin: 0 auto;
+    }
+
+    #drag-elements > div {
+      text-align: center;
+      float: left;
+      border: 2px solid #ececec;
+      background: #F7F7F7;
+      transition: all .5s ease;
+    }
+
+    #drag-elements > div:active {
+      -webkit-animation: wiggle 0.3s 0s infinite ease-in;
+      animation: wiggle 0.3s 0s infinite ease-in;
+      opacity: .6;
+      border: 2px solid #000;
+    }
+
+    #drag-elements > div:hover {
+      border: 2px solid gray;
+      background-color: #e5e5e5;
+    }
+
+    #drop-target {
+      border: 2px dashed #D9D9D9;
+      min-height: 20px;
+      margin: 0 auto;
+      margin-top: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    #drop-target > div {
+      transition: all .5s;
+      text-align: center;
+      background: #fff;
+      transition: all .5s ease;
+    }
+
+    #drop-target > div:active {
+      -webkit-animation: wiggle 0.3s 0s infinite ease-in;
+      animation: wiggle 0.3s 0s infinite ease-in;
+      opacity: .6;
+      border: 2px solid #000;
+    }
+
+    @-webkit-keyframes wiggle {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      25% {
+        -webkit-transform: rotate(2deg);
+      }
+      75% {
+        -webkit-transform: rotate(-2deg);
+      }
+      100% {
+        -webkit-transform: rotate(0deg);
+      }
+    }
+
+    @keyframes wiggle {
+      0% {
+        transform: rotate(-2deg);
+      }
+      25% {
+        transform: rotate(2deg);
+      }
+      75% {
+        transform: rotate(-2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .gu-mirror {
+      position: fixed !important;
+      margin: 0 !important;
+      z-index: 9999 !important;
+      padding: 1em;
+    }
+    .gu-hide {
+      display: none !important;
+    }
+    .gu-unselectable {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+    #drop-target .gu-transit {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      filter: alpha(opacity=50);
+      background: green !important;
+      height: 12px;
+      border-top: 4px solid #fff !important;
+      border-bottom: 4px solid #fff !important;
+    }
+    .gu-mirror {
+      opacity: 0.5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      filter: alpha(opacity=50);
+    }
+
+    .item{
+      padding: 0;
+    }
+
+    #drop-target div.gu-transit{
+      border: none;
+      background: none;
+    }
+    #drop-target div.gu-transit .nav,
+    #drop-target div.gu-transit .component,
+    #drop-target div.gu-transit .placeholder{
+      display: none;
+    }
+
+    #drop-target div.gu-transit .insert{
+      height: 2px;
+      background: red;
+    }
+
+    */
+
+    /*hide first child */
+
+    /*
+    #drop-target div{
+        display:none;
+
+    }
+    #drop-target div:first-child{
+        display:block;
+    }
+    */
+
+
+    #drag-elements .insert{
+      display: none;
+    }
+    #drag-elements .nav{
+      display: none;
+    }
+    #drag-elements .placeholder{
+      display: none;
+    }
+
+
+    #drop-target .insert{
+      display: none;
+    }
+    #drop-target .nav{
+      display: none;
+    }
+    #drop-target .component{
+      display: none;
+    }
+
+    #display .insert{
+      display: none;
+    }
+    #display .placeholder{
+      display: none;
+    }
+    #display .component{
+      display: none;
+    }
+
+
+    .gu-mirror .nav{
+      display: none;
+    }
+    .gu-mirror .placeholder{
+      display: none;
+    }
+    .gu-mirror .insert{
+      display: none;
+    }
+
+
+
+
+    </style>
+
+    <style>
+
+      .listLeft, .listCenter, .listRight{
+        /*
+        width: 200px;
+        float: left;
+        margin-right: 20px;
+        border: 1px solid red;
+        */
+      }
+
+      #listEditor .component, #listEditor .structure{
+        display: none;
+      }
+      #listTools ., #listTools .structure{
+        display: none;
+      }
+      #page_structure ., #page_structure .component{
+        display: none;
+      }
+      #listTools li:hover,
+      .region li:hover,
+      #page_structure li:hover{
+        cursor: grab;
+      }
+
+      .sortable1{
+        width: 300px;
+        float: left;
+      }
+
+      .sortable2{
+        width: 300px;
+        float: left;
+      }
+
+      #tools .listSub{
+        display: none;
+      }
+      #listEditor .listSub{
+        float: left;
+      }
+
+      li{
+        /*margin-left: 10px;*/
+      }
+
+      ul{
+        /*margin-left: 20px;*/
+        min-height: 20px;
+        /*border: 1px solid blue;*/
+      }
+      .listSub{
+        background: green;
+        min-width: 20px;
+      }
+    </style>
+
+
+
+
+
+  </body>
+
+
+
+
+</html>
