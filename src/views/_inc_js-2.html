@@ -313,7 +313,16 @@
         $('.image-thumb').click(function() {
             selected_image = $(this).closest('a').find('img').attr('src');
 
-            //console.log('selected image: ' + selected_image);
+            console.log('selected image: ' + selected_image);
+
+            $('.image-preview').addClass('slds-show');
+            $('.image-preview').removeClass('slds-hide');
+
+            $('.slds-file__text').html(selected_image);
+            $('#image-acc').val(selected_image);
+            $('.image-figure-thumb').attr('src', selected_image);
+
+
             $('.slds-file_card').removeClass('selected');
             $(this).closest('.slds-file_card').addClass('selected');
             $('li').removeClass('selected');
