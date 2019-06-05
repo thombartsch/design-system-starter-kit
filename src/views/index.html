@@ -797,6 +797,34 @@
   }
 
 
+  h2.sectionheader {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2.sectionheader:before,
+h2.sectionheader:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+h2.sectionheader:after {
+    margin: 0 0 0 20px;
+}
+
+h2.sectionheader {
+    margin: 30px 0;
+    font: 700 2em/1.4 'Salesforce Sans', sans-serif;
+    color: #000;
+}
+
+
+
 </style>
 
 
@@ -843,10 +871,18 @@
   <div class="container-fixed">
     <div class="col-md-4 text-left">
       <p>
-        
+
       </p>
     </div>
   </div>
+</div>
+
+<div class="row m-t-xl">
+    <div class="container-fixed">
+        <div class="col-md-12 text-center">
+          <h2 class="sectionheader">Section Header</h2>
+        </div>
+      </div>
 </div>
 
 
@@ -890,6 +926,14 @@
     </div>
 </div>
 
+
+<div class="row m-t-xl">
+    <div class="container-fixed">
+        <div class="col-md-12 text-center">
+          <h2 class="sectionheader">Section Header</h2>
+        </div>
+      </div>
+</div>
 
 
 <div class="row m-t-xl">
@@ -950,6 +994,49 @@
       </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+<style>
+  .text_banner{
+    color: #fff;
+    background-size: cover;
+    background: url(/assets/food1.png);
+    background-repeat: no-repeat;
+
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    width: 100%;
+    height: auto;
+    min-height: 10em;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+
+<div class="container-fixed m-t-xl m-b-md">
+    <div class="col-md-12 text_banner">
+      <div class="col-md-4 text-center" style="margin-top:5%">
+          <div class="m-b-md"><h2>Title</h2></div>
+      </div>
+      <div class="col-md-8 text-center" style="margin-top: 5%">
+          <p class="m-b-md">The cast brass and cast stainless steel burners have the smallest burrs — by far. This will mean less chaos in the gas flow, fewer trapped particulate matter in the burner and a cleaner burning grill. The following comparison shows how the ports are formed.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
 
 {#
     <div class="row">
