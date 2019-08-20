@@ -208,6 +208,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                 <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid" id="page_list">
                                     <thead>
                                         <tr class="slds-line-height--reset">
+                                            {#
                                             <th scope="col" style="width:3.25rem;" class="slds-text-align--right">
                                                 <div class="slds-th__action slds-th__action--form">
                                                     <span class="slds-checkbox">
@@ -219,6 +220,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                                     </span>
                                                 </div>
                                             </th>
+                                            #}
                                             <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:40%;" id="th_name" data-sort="string">
                                                 <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0"> <span class="slds-assistive-text">Sort </span> <span class="slds-truncate" title="Name">Name</span>
                                                     <div class="slds-icon_container">
@@ -280,15 +282,75 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                         </tr>
                                     </thead>
                                     <tbody id="tbody">
+                                      <tr class="slds-hide slds-hint-parent" id="duped-row">
+                                        {#
+                                          <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
+                                              <input type="checkbox" name="options" id="id-2">
+                                              <label class="slds-checkbox__label" for="id-2">
+                                                  <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
+                                              </span>
+                                          </td>
+                                          #}
+                                          <td scope="row">
+                                              <div class="slds-truncate" title="test.adidas.de"><a href="#" id="duped-name">Summer Campaign 2019</a>
+                                                  <div class="slds-form-element__icon">
+                                                      <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
+                                                          <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                                          </svg>
+                                                          <span class="slds-assistive-text">Help</span>
+                                                      </button>
+                                                  </div>
+
+
+                                              </div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="Site 2 / en_EN" id="duped-id">Summer-Campaign-2019-ID</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="Site 2 / en_EN">online</div>
+                                          </td>
+                                          <td role="gridcell">
+                                              <div class="slds-truncate" title="Site 2 / en_EN">12.31.2019 22:22 PM</div>
+                                          </td>
+                                          <td role="gridcell" style="width:3.25rem;">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                                                  <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                                                      <svg class="slds-button__icon" aria-hidden="true">
+                                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                                      </svg> <span class="slds-assistive-text">Show More</span> </button>
+                                                  <div class="slds-dropdown slds-dropdown--right">
+                                                      <ul class="slds-dropdown__list" role="menu">
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="#" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Edit">Edit</span> </a>
+                                                          </li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate"> <span class="slds-truncate" title="Edit">Duplicate</span> </a>
+                                                          </li>
+                                                          <li class="slds-has-divider_top-space" role="separator"></li>
+                                                          <li class="slds-dropdown__item" role="presentation">
+                                                              <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Delete">Delete</span> </a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
                                         <tr class="slds-hint-parent">
+                                          {#
                                             <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
                                                 <input type="checkbox" name="options" id="id-1">
                                                 <label class="slds-checkbox__label" for="id-1">
                                                     <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
                                                 </span>
                                             </td>
+                                          #}
                                             <td scope="row">
-                                                <div class="slds-truncate" title="test.adidas.de"><a href="#">Spring Campaign 2019</a>
+                                                <div class="slds-truncate" title="Spring Campaign 2019"><a href="#">Spring Campaign 2019</a>
                                                     <div class="slds-form-element__icon">
                                                         <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipA">
                                                             <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -304,62 +366,6 @@ https://www.lightningdesignsystem.com/components/global-navigation/
                                             </td>
                                             <td role="gridcell">
                                                 <div class="slds-truncate" title="Site 2 / en_EN">Spring-Campaign-2019-ID</div>
-                                            </td>
-                                            <td role="gridcell">
-                                                <div class="slds-truncate" title="Site 2 / en_EN">online</div>
-                                            </td>
-                                            <td role="gridcell">
-                                                <div class="slds-truncate" title="Site 2 / en_EN">12.31.2019 21:21 PM</div>
-                                            </td>
-                                            <td role="gridcell" style="width:3.25rem;">
-                                                <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
-                                                    <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
-                                                        <svg class="slds-button__icon" aria-hidden="true">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                                                        </svg> <span class="slds-assistive-text">Show More</span> </button>
-                                                    <div class="slds-dropdown slds-dropdown--right">
-                                                        <ul class="slds-dropdown__list" role="menu">
-                                                            <li class="slds-dropdown__item" role="presentation">
-                                                                <a href="#" role="menuitem" tabindex="0" class="trigger-edit"> <span class="slds-truncate" title="Edit">Edit</span> </a>
-                                                            </li>
-                                                            <li class="slds-dropdown__item" role="presentation">
-                                                                <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate"> <span class="slds-truncate" title="Edit">Duplicate</span> </a>
-                                                            </li>
-                                                            <li class="slds-has-divider_top-space" role="separator"></li>
-                                                            <li class="slds-dropdown__item" role="presentation">
-                                                                <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Delete">Delete</span> </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="slds-hide slds-hint-parent" id="duped-row">
-                                            <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <span class="slds-checkbox">
-                                                <input type="checkbox" name="options" id="id-2">
-                                                <label class="slds-checkbox__label" for="id-2">
-                                                    <span class="slds-checkbox--faux"></span> <span class="slds-form-element__label slds-assistive-text">Select item 1</span> </label>
-                                                </span>
-                                            </td>
-                                            <td scope="row">
-                                                <div class="slds-truncate" title="test.adidas.de"><a href="#" id="duped-name">Summer Campaign 2019</a>
-                                                    <div class="slds-form-element__icon">
-                                                        <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
-                                                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
-                                                            </svg>
-                                                            <span class="slds-assistive-text">Help</span>
-                                                        </button>
-                                                    </div>
-
-
-                                                </div>
-                                            </td>
-                                            <td role="gridcell">
-                                                <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
-                                            </td>
-                                            <td role="gridcell">
-                                                <div class="slds-truncate" title="Site 2 / en_EN" id="duped-id">Summer-Campaign-2019-ID</div>
                                             </td>
                                             <td role="gridcell">
                                                 <div class="slds-truncate" title="Site 2 / en_EN">online</div>
@@ -1026,6 +1032,7 @@ https://www.lightningdesignsystem.com/components/global-navigation/
               $('#duped-id').text(duped_id);
 
               $('#duped-row').removeClass('slds-hide');
+              $('.slds-page-header__info').html('2 pages • sorted by date');
             });
 
         </script>
