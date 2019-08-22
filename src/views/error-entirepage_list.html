@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.: Page List :.</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <!-- Prototype styles -->
+    <link rel="stylesheet" href="/styles/index.css"/>
+  </head>
+
+  <body>
+    <script id="__bs_script__">
+      //<![CDATA[
+      document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.24.5'><\/script>".replace("HOST", location.hostname));
+      //]]></script>
+
+      <!--
+Base Global Header component
+https://www.lightningdesignsystem.com/components/global-header/
+-->
+
+      <header class="slds-global-header_container">
+        <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Navigation</a>
+        <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">Skip to Main Content</a>
+        <div class="slds-global-header slds-grid slds-grid--align-spread">
+          <div class="slds-global-header__item">
+            <div class="slds-global-header__logo">
+              <img src="/assets/images/logo-noname.svg" alt=""/>
+            </div>
+          </div>
+          <div class="slds-global-header__item slds-global-header__item--search">
+            <div class="slds-form-element slds-lookup">
+              <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+              <div class="slds-form-element slds-form-element__control slds-form-element lookup__search-control slds-input-has-icon slds-input-has-icon--left">
+                <svg aria-hidden="true" class="slds-input__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                </svg>
+                <input id="global-search-01" class="slds-input slds-lookup__search-input" type="search" placeholder="Search"/>
+              </div>
+            </div>
+          </div>
+          <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+            <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
+              <button class="slds-button" title="peredleten name" aria-haspopup="true">
+                <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
+                  <img src="/assets/images/avatar2.jpg" alt="peredleten name"/>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- Navigation Bar component https://www.lightningdesignsystem.com/components/global-navigation/ -->
+        <div class="slds-context-bar">
+          <div class="slds-context-bar__primary slds-context-bar__item_divider-right">
+            <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+              <div class="slds-context-bar__icon-action">
+                <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                  <span class="slds-icon-waffle">
+                    <span class="slds-r1"></span>
+                    <span class="slds-r2"></span>
+                    <span class="slds-r3"></span>
+                    <span class="slds-r4"></span>
+                    <span class="slds-r5"></span>
+                    <span class="slds-r6"></span>
+                    <span class="slds-r7"></span>
+                    <span class="slds-r8"></span>
+                    <span class="slds-r9"></span>
+                  </span>
+                  <span class="slds-assistive-text">Open App Launcher</span>
+                </button>
+              </div>
+              <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                <span class="slds-truncate" title="Commerce Cloud">Commerce Cloud</span>
+              </span>
+            </div>
+          </div>
+          <nav class="slds-context-bar__secondary" role="navigation">
+            <ul class="slds-grid">
+              <li class="slds-context-bar__item">
+                <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                  <span class="slds-truncate">Business Manager</span>
+                </a>
+              </li>
+              <li class="slds-context-bar__item slds-is-active">
+                <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                  <span class="slds-truncate">Pages</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--click app-trigger">
+            <a href="javascript:void(0);" title="Object" class="slds-context-bar__label-action">
+              <span class="slds-truncate">Site Genesis</span>
+            </a>
+            <div class="slds-context-bar__icon-action">
+              <button class="slds-button slds-button--icon-container slds-button--icon-x-small" aria-haspopup="true" title="Open object switcher menu">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                </svg>
+                <span class="slds-assistive-text">Open object switcher menu</span>
+              </button>
+            </div>
+            <div class="slds-dropdown slds-dropdown--right">
+              <ul class="slds-dropdown__list" role="menu">
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate">
+                      <svg class="slds-icon slds-icon--small slds-icon-standard-case slds-m-right--small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+                      </svg>Site Genesis</span>
+                  </a>
+                </li>
+                <li class="slds-dropdown__item" role="presentation">
+                  <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate">
+                      <svg class="slds-icon slds-icon--small slds-icon-custom-custom93 slds-m-right--small" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom93"></use>
+                      </svg>Site Genesis Global</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </header>
+      <main class="app-wrapper">
+
+        <div class="slds-brand-band slds-brand-band_medium slds-template_default">
+          <div class="slds-card slds-has-bottom-magnet">
+            <div class="slds-page-header slds-page-header--object-home">
+              <div>
+                <div class="slds-grid">
+                  <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-no-space slds-media_center slds-grow">
+                      <div class="slds-media__figure">
+
+                        <span class="slds-icon_container slds-icon-standard-cms">
+                          <svg class="slds-icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#cms"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="slds-media__body">
+                        <div>
+                          <nav role="navigation" aria-label="Breadcrumbs">
+                            <ol class="slds-breadcrumb slds-line-height_reset">
+                              <li class="slds-breadcrumb__item">
+                                <span>Page Designer</span></li>
+                            </ol>
+                          </nav>
+                          <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Meta Tag Rules">Pages</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+                    <div class="slds-button-group" role="group">
+                      <button class="slds-button slds-button--neutral trigger-add" id="js-open-modal-id-2">New</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-grid">
+                  <div class="slds-col slds-align-bottom">
+                    <p class="slds-page-header__info">1 page •
+                      <span id="sorted_txt">sorted by date</span></p>
+                  </div>
+                  <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                    <div class="slds-form-element__control">
+                      <div class="slds-input-has-icon slds-input-has-icon--right">
+                        <svg aria-hidden="true" class="slds-input__icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                        <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Editor Pages" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
+                      </div>
+                    </div>
+                    <div>
+                      <button class="slds-button slds-button--icon-border slds-m-left--xx-small delete-trigger slds-button--last js-open-modal-id-1">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Delete</span>
+                      </button>
+                      <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-button--last" id="HkBUxsHK3x">
+                        <button aria-expanded="false" aria-haspopup="true" class="slds-hide slds-button slds-button--icon-more ignore-click-HkBUxsHK3x" tabindex="0">
+                          <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+                          </svg>
+                          <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small" viewBox="0 0 24 24" name="down">
+                            <path d="M3.8 6.5h16.4c.4 0 .8.6.4 1l-8 9.8c-.3.3-.9.3-1.2 0l-8-9.8c-.4-.4-.1-1 .4-1z"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PAGES LIST -->
+
+          <div class="slds-has-top-magnet slds-grid slds-grow">
+            <div class="slds-grow slds-grid layout-table-fix">
+              <div class="slds-scrollable_y">
+                <div class="slds-text-align_center">
+
+                  <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_striped" role="grid" id="page_list">
+                    <thead>
+                      <tr class="slds-line-height--reset">
+                        {# <th scope = "col" style = "width:3.25rem;" class = "slds-text-align--right" > <div class="slds-th__action slds-th__action--form">
+                            <span class="slds-checkbox">
+                              <input type="checkbox" name="options" id="checkbox-170">
+                              <label class="slds-checkbox__label" for="checkbox-170">
+                                <span class="slds-checkbox--faux"></span>
+                                <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                              </label>
+                            </span>
+                          </div>
+                        </th>
+                          #}
+                        <th class="" scope="col" style="width:3.75rem">
+                          <div class="slds-truncate slds-assistive-text" title="Errors">Errors</div>
+                        </th>
+                        <th class="slds-is-sortable slds-text-title--caps" scope="col" style="width:40%;" id="th_name" data-sort="string">
+                          <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                            <span class="slds-assistive-text">Sort
+                            </span>
+                            <span class="slds-truncate" title="Name">Name</span>
+                            <div class="slds-icon_container">
+                              <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </div>
+                            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                          </a>
+                          <div>
+                            <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0">
+                          </div>
+                        </th>
+                        <th class="slds-is-sortable   slds-text-title--caps" scope="col" id="th_pagetype" data-sort="string">
+                          <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                            <span class="slds-assistive-text">Sort
+                            </span>
+                            <span class="slds-truncate" title="Type">Type</span>
+                            <div class="slds-icon_container">
+                              <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </div>
+                            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                          </a>
+                          <div>
+                            <label for="cell-resize-handle-568" class="slds-assistive-text">Account Name column width</label>
+                            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-568" tabindex="0">
+                          </div>
+                        </th>
+                        <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:20%;" id="th_id" data-sort="string">
+                          <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                            <span class="slds-assistive-text">Sort
+                            </span>
+                            <span class="slds-truncate" title="ID">ID</span>
+                            <div class="slds-icon_container">
+                              <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </div>
+                            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                          </a>
+                          <div>
+                            <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0">
+                          </div>
+                        </th>
+                        <th class="2slds-is-sortable   slds-text-title--caps" scope="col">
+                          <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                            <span class="slds-assistive-text">Sort
+                            </span>
+                            <span class="slds-truncate" title="Status">Status</span>
+                            <div class="slds-icon_container">
+                              <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </div>
+                            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                          </a>
+                          <div>
+                            <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0">
+                          </div>
+                        </th>
+                        <th class="slds-is-sortable   slds-text-title--caps" scope="col" style="width:16em" id="th_created" data-sort="string">
+                          <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset" tabindex="0">
+                            <span class="slds-assistive-text">Sort
+                            </span>
+                            <span class="slds-truncate" title="Date Created">Date Created</span>
+                            <div class="slds-icon_container">
+                              <svg class="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                              </svg>
+                            </div>
+                            <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                          </a>
+                          <div>
+                            <label for="cell-resize-handle-569" class="slds-assistive-text">Close Date column width</label>
+                            <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-569" tabindex="0">
+                          </div>
+                        </th>
+                        <th scope="col" style="width:3.25rem;">
+                          <div class="slds-th__action">
+                            <span class="slds-assistive-text">Actions</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody">
+                      <tr class="slds-hint-parent" id="duped-row">
+                        {# < td role = "gridcell" class = "slds-text-align--right" style = "width:3.25rem;" > <span class="slds-checkbox">
+                            <input type="checkbox" name="options" id="id-2">
+                            <label class="slds-checkbox__label" for="id-2">
+                              <span class="slds-checkbox--faux"></span>
+                              <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                            </label>
+                          </span>
+                        </td>
+                          #}
+                        <td class="slds-cell-edit slds-cell-error" role="gridcell">
+                          <button id="error-01" class="slds-button slds-button_icon slds-button_icon-error slds-m-horizontal_xxx-small" tabindex="0" title="Item 1 has errors">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Item 1 has error</span>
+                          </button>
+                        </td>
+                        <td scope="row">
+                          <div class="slds-truncate" title="Summer Campaign 2019">
+                            <!--a href="#" id="duped-name">Summer Campaign 2019</a-->
+                            <span class="PALETTE_GRAY_9" id="duped-name">Summer Campaign 2019</span>
+                            <div class="slds-form-element__icon">
+                              <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipB">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Help</span>
+                              </button>
+                            </div>
+
+                          </div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate PALETTE_GRAY_9" title="Campaign">Campaign</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate PALETTE_GRAY_9" title="Summer-Campaign-2019-ID" id="duped-id">Summer-Campaign-2019-ID</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate PALETTE_GRAY_9" title="online">online</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate PALETTE_GRAY_9" title="12.31.2019 22:22 PM">12.31.2019 22:22 PM</div>
+                        </td>
+                        <td role="gridcell" style="width:3.25rem;">
+                          <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                              <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown--right">
+                              <ul class="slds-dropdown__list" role="menu">
+                                {#
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-edit">
+                                    <span class="slds-truncate" title="Edit">Edit</span>
+                                  </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate">
+                                    <span class="slds-truncate" title="Edit">Duplicate</span>
+                                  </a>
+                                </li>
+                                <li class="slds-has-divider_top-space" role="separator"></li>
+                                #}
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1">
+                                    <span class="slds-truncate" title="Delete">Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="slds-hint-parent">
+                        {# < td role = "gridcell" class = "slds-text-align--right" style = "width:3.25rem;" > <span class="slds-checkbox">
+                            <input type="checkbox" name="options" id="id-1">
+                            <label class="slds-checkbox__label" for="id-1">
+                              <span class="slds-checkbox--faux"></span>
+                              <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                            </label>
+                          </span>
+                        </td>
+                          #}
+                        <td class="slds-cell-error" role="gridcell"></td>
+
+                        <td scope="row">
+                          <div class="slds-truncate" title="Spring Campaign 2019">
+                            <a href="#">Spring Campaign 2019</a>
+                            <div class="slds-form-element__icon">
+                              <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipA">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Help</span>
+                              </button>
+                            </div>
+                          </div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="Campaign">Campaign</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="Spring-Campaign-2019-ID">Spring-Campaign-2019-ID</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="online">online</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="12.31.2019 21:21 PM">12.31.2019 21:21 PM</div>
+                        </td>
+                        <td role="gridcell" style="width:3.25rem;">
+                          <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                              <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown--right">
+                              <ul class="slds-dropdown__list" role="menu">
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-edit">
+                                    <span class="slds-truncate" title="Edit">Edit</span>
+                                  </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate">
+                                    <span class="slds-truncate" title="Edit">Duplicate</span>
+                                  </a>
+                                </li>
+                                <li class="slds-has-divider_top-space" role="separator"></li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1">
+                                    <span class="slds-truncate" title="Delete">Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      {# < tr class = "slds-hint-parent" > <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;">
+                          <span class="slds-checkbox">
+                            <input type="checkbox" name="options" id="id-3">
+                            <label class="slds-checkbox__label" for="id-3">
+                              <span class="slds-checkbox--faux"></span>
+                              <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                            </label>
+                          </span>
+                        </td>
+                        <td scope="row">
+                          <div class="slds-truncate" title="test.adidas.de">
+                            <a href="#">Fall Campaign 2019</a>
+
+                            <div class="slds-form-element__icon">
+                              <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipC">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Help</span>
+                              </button>
+                            </div>
+
+                          </div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="staging.adidas.de">Campaign</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="Site 2 / en_EN">Fall-Campaign-2019-ID</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="Site 2 / en_EN">online</div>
+                        </td>
+                        <td role="gridcell">
+                          <div class="slds-truncate" title="Site 2 / en_EN">12.31.2019 21:21 PM</div>
+                        </td>
+                        <td role="gridcell" style="width:3.25rem;">
+                          <div class="slds-dropdown-trigger slds-dropdown-trigger--click">
+                            <button class="slds-button slds-button--icon slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                              <svg class="slds-button__icon" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                            <div class="slds-dropdown slds-dropdown--right">
+                              <ul class="slds-dropdown__list" role="menu">
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-edit">
+                                    <span class="slds-truncate" title="Edit">Edit</span>
+                                  </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate">
+                                    <span class="slds-truncate" title="Edit">Duplicate</span>
+                                  </a>
+                                </li>
+                                <li class="slds-has-divider_top-space" role="separator"></li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                  <a href="javascript:void(0);" role="menuitem" tabindex="-1" class="js-open-modal-id-1">
+                                    <span class="slds-truncate" title="Delete">Delete</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                        #}
+                      <!--tr class="slds-hint-parent"> <td role="gridcell" class="slds-text-align--right" style="width:3.25rem;"> <div class="slds-form-element__icon"> <button aria-describedby="help" class="slds-button slds-button_icon" id="list_tooltipC"> <svg
+                      class="slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-error" aria-hidden="true"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use> </svg> <span
+                      class="slds-assistive-text">Help</span> </button> </div> </td> <td scope="row"> <div class="slds-truncate" title="Error Page"> </div> </td> <td role="gridcell"> <div class="slds-truncate" title="staging.adidas.de"> </div> </td> <td role="gridcell">
+                      <div class="slds-truncate slds-text-color_error" title="Site 2 / en_EN">Error-Campaign-2019-ID</div> </td> <td role="gridcell"> <div class="slds-truncate" title="Site 2 / en_EN"> </div> </td> <td role="gridcell"> <div class="slds-truncate"
+                      title="Site 2 / en_EN"> </div> </td> <td role="gridcell" style="width:3.25rem;"> <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-hide"> <button class="slds-button slds-button--icon slds-button--icon-border-filled
+                      slds-button--icon-x-small" aria-haspopup="true" title="Show More"> <svg class="slds-button__icon" aria-hidden="true"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use> </svg> <span
+                      class="slds-assistive-text">Show More</span> </button> <div class="slds-dropdown slds-dropdown--right"> <ul class="slds-dropdown__list" role="menu"> <li class="slds-dropdown__item" role="presentation"> <a href="javascript:void(0);" role="menuitem"
+                      tabindex="-1" class="js-open-modal-id-1"> <span class="slds-truncate" title="Menu Item Two">Delete</span> </a> </li> </ul> </div> </div> </td> </tr-->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- /PAGES LIST -->
+
+
+      <!-- ERROR POPOVER -->
+      <section aria-describedby="dialog-body-id-10" aria-labelledby="dialog-heading-id-2" class="slds-popover slds-popover_error slds-nubbin_bottom-left" role="dialog" style="position: absolute;top: 150px;left: 5px;">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span></button>
+        <header class="slds-popover__header">
+          <div class="slds-media slds-media_center slds-has-flexi-truncate ">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-utility-error">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                </svg></span></div>
+            <div class="slds-media__body">
+              <h2 class="slds-truncate slds-text-heading_medium" id="dialog-heading-id-2" title="Resolve error">Resolve error</h2>
+            </div>
+          </div>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-10">
+          <p>Here a short error description</p>
+        </div>
+      </section>
+      <!-- /ERROR POPOVER -->
+
+
+
+      <!-- MODAL DUPLICATE -->
+      <div class="slds-hide" id="container-modal-duplicate">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" id="modal-duplicate">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse js-trigger-close" title="Close" id="">
+                <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close</span>
+              </button>
+              <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Duplicate Page</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+              <div class="slds-form-element slds-p-bottom_small">
+                <label class="slds-form-element__label" for="duplicate-page-name">
+                  <abbr class="slds-required" title="required">*
+                  </abbr>Page Name</label>
+                <div class="slds-form-element__control">
+                  <input type="text" id="duplicate-page-name" placeholder="Spring Campaign 2019 -" required="" class="slds-input"/>
+                </div>
+              </div>
+
+              <div class="slds-form-element slds-p-bottom_small">
+                <label class="slds-form-element__label" for="duplicate-page-id">
+                  <abbr class="slds-required" title="required">*
+                  </abbr>Page ID (URL Suffix)</label>
+                <div class="slds-form-element__control">
+                  <input type="text" id="duplicate-page-id" placeholder="Spring-Campaign-2019-ID" required="" class="slds-input"/>
+                </div>
+              </div>
+
+              <div class="slds-form-element slds-p-bottom_small">
+                <label class="slds-form-element__label" for="duplicate-page-description">Page Description</label>
+                <div class="slds-form-element__control">
+                  <textarea id="duplicate-page-description" class="slds-textarea" placeholder="Placeholder Text"></textarea>
+                </div>
+              </div>
+
+            </div>
+            <footer class="slds-modal__footer">
+              <button class="slds-button slds-button_neutral js-trigger-close">Cancel</button>
+              <button class="slds-button slds-button_brand slds-trigger js-trigger-save">Save</button>
+            </footer>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+      </div>
+      <!-- /MODAL DUPLICATE -->
+
+
+
+      <!-- MODAL DELETE PAGE -->
+      <div class="slds-hide modal-id-1">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-1">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-id-1" title="Close" id="button-page-cancel">
+                <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close</span>
+              </button>
+              <h2 id="header43" class="slds-text-heading--medium">Delete Page</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around--medium slds-text-align_center" id="modal-content-id-1">
+              <p>Are you sure you want to delete the page</p>
+              <p>Page Name?</p>
+              <p>This page will also be removed from all sites sharing this library!</p>
+              <p>Sites:</p>
+              <p>Site Name A</p>
+              <p>Site Name B</p>
+            </div>
+            <footer class="slds-modal__footer">
+              <button class="slds-button slds-button--neutral js-close-modal-id-1" id="button-page-cancel">Cancel</button>
+              <button class="slds-button slds-button_destructive js-close-modal-id-1" id="button-page-delete">Delete</button>
+            </footer>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+      </div>
+      <!-- /MODAL DELETE PAGE -->
+
+      <div class="slds-hide modal-id-2">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-slide-up-open" aria-labelledby="header43" aria-describedby="modal-content-id-1">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-id-2" title="Close">
+                <svg class="slds-button__icon slds-button__icon--large" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Close</span>
+              </button>
+              <h2 id="header43" class="slds-text-heading--medium">New Page</h2>
+            </header>
+
+            <div class="slds-modal__content slds-p-around--medium slds-p-bottom--large" id="modal-content-id-2">
+              <!-- FORM 1 -->
+              <div class="slds-form slds-form_compound">
+                <fieldset class="slds-form-element">
+                  <div class="slds-form-element__group">
+                    <div class="slds-form-element__row">
+                      <div class="slds-form-element slds-size_1-of-2">
+                        <label class="slds-form-element__label" for="input-013">
+                          <abbr class="slds-required" title="required">*</abbr>Page Name</label>
+                        <div class="slds-form-element__icon">
+                          <button aria-describedby="help" class="slds-button slds-button_icon">
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Help</span>
+                          </button>
+                        </div>
+                        <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
+                      </div>
+                      <div class="slds-form-element slds-size_1-of-2">
+                        <label class="slds-form-element__label" for="input-013">
+                          <abbr class="slds-required" title="required">*</abbr>ID (URL Suffix)</label>
+                        <div class="slds-form-element__icon">
+                          <button aria-describedby="help" class="slds-button slds-button_icon">
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Help</span>
+                          </button>
+                        </div>
+                        <input type="text" id="input-02" class="slds-input" placeholder="ID">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+              <!-- /FORM 1 -->
+              <!-- FORM 2 -->
+              <div class="slds-form slds-form_stacked slds-scrollable_y" id="form_step-1">
+                <label>Select a Design</label>
+                <fieldset class="slds-form-element slds-p-top_small">
+                  <!-- legend class="slds-form-element__legend slds-form-element__label">Select a Page Type</legend -->
+                  <div class="slds-form-element__control">
+                    <div class="slds-visual-picker slds-visual-picker_medium 2slds-m-right--small">
+                      <input type="radio" id="visual-picker-301" name="options">
+                      <label for="visual-picker-301">
+                        <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                          <span class="">
+                            <img src="/assets/layout_0.svg" alt="layout text" width="120">
+                          </span>
+                        </span>
+                        <span class="slds-visual-picker__body">
+                          <span class="slds-text-heading_small">1 Region Campaign Page</span>
+                          <span class="slds-text-title">Full-width single region template.</span>
+                        </span>
+                        <span class="slds-icon_container slds-visual-picker__text-check">
+                          <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="slds-visual-picker slds-visual-picker_medium 2slds-m-right--small">
+                      <input type="radio" id="visual-picker-302" name="options">
+                      <label for="visual-picker-302">
+                        <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                          <span class="">
+                            <img src="/assets/layout_2.svg" alt="layout text" width="120">
+                          </span>
+                        </span>
+                        <span class="slds-visual-picker__body">
+                          <span class="slds-text-heading_small">Category Landing Page</span>
+                          <span class="slds-text-title">Full-width header above a right sidebar and main column.</span>
+                        </span>
+                        <span class="slds-icon_container slds-visual-picker__text-check">
+                          <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="slds-visual-picker slds-visual-picker_medium">
+                      <input type="radio" id="visual-picker-303" name="options">
+                      <label for="visual-picker-303">
+                        <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                          <span class="">
+                            <img src="/assets/layout_3.svg" alt="layout text" width="120">
+                          </span>
+                        </span>
+                        <span class="slds-visual-picker__body">
+                          <span class="slds-text-heading_small">Product Details Page</span>
+                          <span class="slds-text-title">Full-width header with a subheader above a right sidebar and main column.</span>
+                        </span>
+                        <span class="slds-icon_container slds-visual-picker__text-check">
+                          <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+              <!-- /FORM 2 -->
+            </div>
+            <footer class="slds-modal__footer">
+              <button class="slds-button slds-button_neutral js-close-modal-id-2">Cancel</button>
+              <a href="#">
+                <button class="slds-button slds-button--brand  2js-save-modal-id-2">Save &amp; Create</button>
+              </a>
+            </footer>
+
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+      </div>
+
+      <div class="slds-notify_container slds-hide" id="toast-id-1">
+        <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+          <span class="slds-assistive-text">success</span>
+          <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+            </svg>
+          </span>
+          <div class="slds-notify__content">
+            <h2 class="slds-text-heading_small ">The page has been deleted.</h2>
+          </div>
+          <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" id="js-close-toast-id-1" title="Close">
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="slds-notify_container slds-hide" id="created-toast">
+        <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+          <span class="slds-assistive-text">success</span>
+          <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+            </svg>
+          </span>
+          <div class="slds-notify__content">
+            <h2 class="slds-text-heading_small ">The page
+              <a href="#">Page Name</a>
+              has been successfully created.</h2>
+          </div>
+          <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse close-toast-2" title="Close">
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+        </div>
+      </div>
+
+      <script src="/scripts/app.js"></script>
+      <script src="/scripts/vendor/svg4everybody.min.js"></script>
+      <script>
+        svg4everybody();
+      </script>
+      <!-- JAVASCRIPT -->
+      <script src='/scripts/jquery-3.2.1.min.js'></script>
+      <script src='/scripts/jquery-ui.min.js'></script>
+      <script src='/scripts/stupidtable.min.js'></script>
+
+      <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinA">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Spring Campaign 2019</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+          <div>
+            <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+              <label>
+                <strong>Library:
+                </strong>
+              </label>
+              Library Name
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-p-around_small slds-border_bottom">
+              <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                <thead>
+                  <tr class="slds-text-title_caps">
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Sites</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Status</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Is Searchable</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinB">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Summer Campaign 2019</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+          <div>
+            <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+              <label>
+                <strong>Library:
+                </strong>
+              </label>
+              Library Name
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-p-around_small slds-border_bottom">
+              <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                <thead>
+                  <tr class="slds-text-title_caps">
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Sites</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Status</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Is Searchable</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="slds-hide slds-popover slds-nubbin_left list-element-popover" role="dialog" aria-describedby="dialog-body-id-6" aria-labelledby="dialog-heading-id-6" id="poppinC">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <header class="slds-popover__header">
+          <h2 id="dialog-heading-id-6" class="slds-text-heading_small">Fall Campaign 2019</h2>
+        </header>
+        <div class="slds-popover__body" id="dialog-body-id-6">
+          <div>
+            <div class="slds-p-around_small 2slds-border_bottom slds-size-1-of-1">
+              <label>
+                <strong>Library:
+                </strong>
+              </label>
+              Library Name
+            </div>
+          </div>
+          <div class="slds-grid">
+            <div class="slds-p-around_small slds-border_bottom">
+              <table class="slds-table slds-table_bordered 2slds-table_cell-buffer" width="100%">
+                <thead>
+                  <tr class="slds-text-title_caps">
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Sites</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Status</div>
+                    </th>
+                    <th scope="col">
+                      <div class="slds-truncate" title="">Is Searchable</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td data-label="">
+                      Site Name
+                    </td>
+                    <td data-label="">
+                      Online
+                    </td>
+                    <td data-label="">
+                      YES
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <script>
+
+        $('.trigger-duplicate').click(function() {
+
+                $('#container-modal-duplicate').toggleClass('slds-hide');
+                //$(this).closest('.slds-popover').toggleClass('slds-hide');
+                var dt = new Date();
+                var dupname = 'Spring Campaign 2019 ' + dt.getHours() + "-" + dt.getMinutes() + "-" + dt.getSeconds();
+                var dupid = 'Spring-Campaign-2019-' + dt.getHours() + "-" + dt.getMinutes() + "-" + dt.getSeconds();
+                //alert(time);
+                $('#duplicate-page-name').val(dupname);
+                $('#duplicate-page-id').val(dupid);
+                $('#duplicate-page-description').val('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor.');
+                //slds-dropdown-trigger slds-dropdown-trigger--click slds-is-closed
+
+                //$(this).parents('.slds-dropdown-trigger').addClass('slds-is-closed');
+                $(this).closest('.slds-dropdown-trigger--click').removeClass('slds-is-open');
+            });
+
+
+            $('.js-trigger-close').click(function() {
+              $('#container-modal-duplicate').toggleClass('slds-hide');
+            });
+
+
+            $('.js-trigger-save').click(function() {
+              $('#duped-name').text("duped-name");
+              $('#duped-id').text("duped-id");
+              duped_id = $('#duplicate-page-id').val();
+              duped_name = $('#duplicate-page-name').val();
+
+
+              $('#container-modal-duplicate').toggleClass('slds-hide');
+              $('#duped-name').text(duped_name);
+              $('#duped-id').text(duped_id);
+
+              $('#duped-row').removeClass('slds-hide');
+              $('.slds-page-header__info').html('2 pages • sorted by date');
+            });
+    </script>
+
+    <style>
+      #poppinA {
+        top: 145px;
+        left: 230px;
+      }
+      #poppinB {
+        left: 250px;
+        top: 175px;
+      }
+      #poppinC {
+        left: 215px;
+        top: 208px;
+      }
+      #page_list {
+        display: table;
+      }
+    </style>
+
+  </body>
+
+</html>
