@@ -2806,8 +2806,23 @@
               </div>
             </div>
           </div>
+<style>
+  .notification{
+    width: 20px;
+    position: absolute;
+    z-index: 200000;
+    left: 45px;
+    top:95px;
+    text-align: center;
+    border-radius: 10px;
+  }
+</style>
 
-
+<div class="slds-theme_error notification" id="notification">
+  <svg class="slds-button__icon" aria-hidden="true" style="margin-top: -3px">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+  </svg>
+</div>
           <span class="cb-AppNav-button js-page-structure-button" data-type="page-structure">
             <span class="cb-AppNav-buttonIcon">
               <svg aria-hidden="true" class="slds-icon--x-small">
@@ -2885,11 +2900,61 @@
                     <ul role="tree" class="slds-has-dividers_bottom-space" id="listStructure">
                     </ul>
                     -->
-
-                    <div id="structure" class="slds-col 2slds-p-left_xx-large">structure</div>
-
-
                   </li>
+
+
+<!-- COMPONENT WITH ERROR -->
+
+<div class="slds-grid structure">
+  <!-- Navigator Catalog -->
+  <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
+    <div class="">
+      <span class="slds-icon_container slds-m-left_small" title="Sort Component">
+        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+          <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use-->
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag_and_drop"></use>
+        </svg>
+        <span class="slds-assistive-text">Sort Component</span>
+      </span>
+    </div>
+
+    <div class="my-handle">
+      <span class="slds-icon_container slds-m-left_small" title="Banner Icon">
+        <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-error" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+        </svg>
+        <span class="slds-assistive-text">Banner Icon</span>
+      </span>
+    </div>
+
+    <div class="slds-col hoverme">
+      <span class="slds-truncate slds-p-left_small component_name" title="Banner">Banner</span>
+      <span class="slds-assistive-text">Banner</span>
+    </div>
+
+    <div class="slds-hide">
+      <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Component">
+        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+        </svg>
+        <span class="slds-assistive-text">Edit Component</span>
+      </span>
+    </div>
+
+    <div class="slds-m-right_small">
+      <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
+        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+        </svg>
+        <span class="slds-assistive-text">Delete Component</span>
+      </span>
+    </div>
+  </div>
+  <!-- /Navigator Catalog -->
+</div>
+
+
+<!-- COMPONENT WITH ERROR -->
                 </ul>
 
                 <ul class="slds-tree" role="tree" aria-labelledby="treeheading" id="tree-footer">
@@ -5313,4 +5378,23 @@
      display: block;
  }
  */
+</style>
+<style>
+.badge1 {
+   position:relative;
+}
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-10px;
+   right:-10px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
 </style>
