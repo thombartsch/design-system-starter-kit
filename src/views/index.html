@@ -1275,7 +1275,7 @@
     </div>
 
     <div id="modal-page-settings" class="2slds-hide modal">
-      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header100" aria-describedby="modal-content-id-3" style="height: 35rem;">
+      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header100" aria-describedby="modal-content-id-3" style="height: 45rem;">
         <div class="slds-modal__container">
           <header class="slds-modal__header">
             <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse trigger-close-modal" title="Close">
@@ -1290,7 +1290,7 @@
             <div class="">
               <div class="slds-tabs_default">
                 <ul class="slds-tabs_default__nav" role="tablist">
-                  <li class="slds-tabs_default__item" title="Item One" role="presentation" id="page-settings-general"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-default-11"
+                  <li class="slds-tabs_default__item   slds-is-active" title="Item One" role="presentation" id="page-settings-general"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-default-11"
                       id="tab-default-11__item">General</a></li>
                   <li class="slds-tabs_default__item" title="Item Two" role="presentation" id="page-settings-shared"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-21"
                       id="tab-default-21__item">Localization</a></li>
@@ -1298,21 +1298,34 @@
                       id="tab-default-31__item">SEO</a></li>
                   <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-32"
                       id="tab-default-41__item">Targeting</a></li>
-                  <li class="slds-tabs_default__item  slds-is-active" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-42"
+                  <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-42"
                           id="tab-default-42__item">Site Search</a></li>
                 </ul>
-                <div id="tab-default-11" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-11__item">
+                <div id="tab-default-11" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-11__item">
                   <!-- GENERAL -->
-                  <div class=" slds-hide slds-form slds-form_compound">
+                  <div class="slds-form slds-form_compound">
+                    <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                      <div class="slds-form-element__control">
+                        <div class="slds-form-element__control">
+                          <div class="slds-form-element__row">
+                            <span class="slds-badge slds-badge_lightest slds-m-bottom_medium">
+                              <span class="slds-badge__icon slds-badge__icon_left">
+                                <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                                  <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                  </svg>
+                                </span>
+                              </span>Localization: Default</span>
+
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
                     <fieldset class="slds-form-element">
                       <div class="slds-form-element__group">
                         <div class="slds-form-element__row">
                           <div class="slds-form-element slds-size_1-of-2">
-                            <label class="slds-form-element__label" for="input-013">Page Type</label>
-                            <input type="text" id="input-01" class="slds-input" readonly="" placeholder="Selected Page Type">
-                          </div>
-                          <div class="slds-form-element slds-size_1-of-2">
-                            <label class="slds-form-element__label" for="input-013"><abbr class="slds-required" title="required">*</abbr>Name</label>
+                            <label class="slds-form-element__label" for="input-013"><abbr class="slds-required" title="required">*</abbr>ID (URL Suffix)</label>
                             <div class="slds-form-element__icon">
                               <button aria-describedby="help" class="slds-button slds-button_icon">
                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -1323,14 +1336,21 @@
                             </div>
                             <input type="text" id="input-02" class="slds-input" placeholder="Given Page Name">
                           </div>
+                          <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-013">Page Type</label>
+                            <input type="text" id="input-01" class="slds-input" disabled="" placeholder="Selected Page Type">
+                          </div>
                         </div>
                       </div>
                     </fieldset>
+
+
+                    <!-- START TAGS -->
                     <fieldset class="slds-form-element">
                       <div class="slds-form-element__group">
                         <div class="slds-form-element__row">
                           <div class="slds-form-element slds-size_1-of-1">
-                            <label class="slds-form-element__label" for="input-03">ID (URL Suffix)</label>
+                            <label class="slds-form-element__label" for="input-03">Tags</label>
                             <div class="slds-form-element__icon">
                               <button aria-describedby="help" class="slds-button slds-button_icon">
                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -1340,7 +1360,34 @@
                               </button>
                             </div>
 
-                            <input type="text" id="input-03" class="slds-input">
+                            <!--input type="text" id="tags" class="slds-input"-->
+
+
+                            {#
+
+                                <div class="slds-pill_container" id="pill_container" contenteditable="true">
+                                  <span class="slds-pill slds-pill_link" contenteditable="false">
+                                    <a href="javascript:void(0);" class="slds-pill__action" title="Full pill label verbiage mirrored here">
+                                      <span class="slds-pill__label">Pill Label</span>
+                                    </a>
+                                    <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+                                      <svg class="slds-button__icon" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Remove</span>
+                                    </button>
+                                  </span>
+                                </div>
+                            #}
+
+
+                            <div class="slds-pill_container">
+                              <!--ul class="slds-listbox slds-listbox_horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal"  id="myTags"></ul-->
+			                        <input id="form-tags-4" name="tags-4" type="text" value="">
+
+                            </div>
+
+
                           </div>
                         </div>
                         <div class="slds-form-element__row slds-hide">
@@ -1350,7 +1397,7 @@
                           </div>
                         </div>
                         <div class="slds-form-element__row">
-                          <div class="slds-form-element slds-size_1-of-2">
+                          <div class="slds-hide slds-form-element slds-size_1-of-2">
                             <span class="slds-checkbox">
                               <input type="checkbox" name="options" id="checkbox-1" value="on">
                               <label class="slds-checkbox__label" for="checkbox-1">
@@ -1394,38 +1441,26 @@
                   <!-- /GENERAL -->
                 </div>
 
+
+
+                <!-- LIBRARY -->
                 <div id="tab-default-21" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-21__item">
-
-
-
-
                   <h3 class="slds-text-heading--small slds-m-bottom--x-small">Library</h3>
-
                   <ul class="slds-has-dividers_bottom-space">
                     <li class="slds-item">Shared Library Name</li>
                   </ul>
-
-
                   <div class="slds-p-around_small">
-
                   </div>
-
-
-
                   <h3 class="slds-text-heading--small slds-m-bottom--x-small">Shared Sites</h3>
-
                   <ul class="slds-has-dividers_bottom-space">
                     <li class="slds-item">Site Genesis - Global</li>
                     <li class="slds-item">Shared Site Name</li>
                   </ul>
-
-
-
-
                 </div>
+                <!-- /LIRBARY -->
 
+                <!-- SEO -->
                 <div id="tab-default-31" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
-                  <!-- SEO -->
                   <div class="slds-form slds-form_compound">
                     <fieldset class="slds-form-element">
                       <div class="slds-form-element__group">
@@ -1460,12 +1495,11 @@
                       </div>
                     </fieldset>
                   </div>
-                  <!-- /SEO -->
                 </div>
+                <!-- /SEO -->
 
+                <!-- RULES -->
                 <div id="tab-default-32" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
-                  <!-- RULES -->
-
                   <div>
                     <div class="slds-popover__body" id="dialog-body-id-preview-settings">
                       <p>
@@ -1560,18 +1594,13 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
-
-                  <!-- /RULES -->
                 </div>
-
-                <div id="tab-default-42" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-42__item">
-
+                <!-- /RULES -->
 
 
-
-
+                <!-- Site Search -->
+                <div id="tab-default-42" class="slds-hide slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-42__item">
                     <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
                       <div class="slds-form-element__control">
                         <div class="slds-form-element__control">
@@ -1680,6 +1709,7 @@
 
 
                 </div>
+                <!-- /Site Search -->
 
 
 
@@ -4191,14 +4221,27 @@
 
 
 
-
-
+    {#
     <script src='/scripts/jquery-3.2.1.min.js'></script>
     <script src='/scripts/jquery-ui.min.js'></script>
+    #}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+
     <script src='/scripts/utils.js'></script>
     <script src='/scripts/tether.min.js'></script>
     <script src='/scripts/jquery.caret.min.js'></script>
     <script src='/scripts/jquery.tag-editor.js'></script>
+
+
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    {# TAGS #}
+    <script src="/scripts/jquery.tagsinput-revisited.js" type="text/javascript" charset="utf-8"></script>
 
     <script>
     $(document).ready(function() {
@@ -4710,6 +4753,8 @@
           $(this).removeClass('is-inhereted');
         });
 
+
+        /*
         $('#picker-tabs .checker').on('change', function() {
           if (this.checked) {
             $('#picker-tabs .checker').prop('disabled', true);
@@ -4723,6 +4768,7 @@
             $('#assign-success').prop('disabled', true);
           }
         })
+        */
 
         $('#assign-success, .hrhr-1').click(function() {
           $('#picker-tabs .checker').prop('checked', false);
@@ -5111,120 +5157,38 @@
         });
 
 
-
-
-
+      //PILL HANDLING
+      $('.slds-pill__remove').click(function() {
+        //$('#locale-warning').toggleClass('slds-hide');
+        $(this).closest('.slds-pill').remove();
       });
+      $('#form-tags-4').tagsInput({
+				'autocomplete': {
+					source: [
+						'apple',
+						'banana',
+						'orange',
+						'pizza'
+					]
+				}
+			});
+
+      $('#autocomplete').autocomplete({
+          open: function(){
+              setTimeout(function () {
+                  $('.ui-autocomplete').css('z-index', 99999999999999);
+              }, 0);
+          }
+      });
+
+
+
+
+});
     </script>
 
 
-    <!--script>
-      var countess = 0;
 
-      $('.slds-drop-zone__label_button').click(function() {
-        activeComponent = $(this).closest('li').attr('data-component-type');
-        console.log('clicked ' + activeComponent);
-
-        $('#editor_banner').addClass('slds-hide');
-        $('#editor_category').addClass('slds-hide');
-        $('#editor_row').addClass('slds-hide');
-        $('.tab_general').addClass('slds-active');
-
-        if (activeComponent === 'banner') {
-          $('#string_editor').text('Banner');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_banner').removeClass('slds-hide');
-        }
-
-        if (activeComponent === 'category') {
-          $('#string_editor').text('Category');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_category').removeClass('slds-hide');
-        }
-
-        if (activeComponent === 'row') {
-          $('#string_editor').text('Row');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_row').removeClass('slds-hide');
-        }
-
-
-        $('#component-palette-menu').addClass('slds-hide');
-        $('.js-component-palette-button').removeClass('is-active');
-        return false;
-      });
-    </script-->
-
-
-
-{#
-    <style>
-      .listLeft,
-      .listCenter,
-      .listRight {
-        /*
-        width: 200px;
-        float: left;
-        margin-right: 20px;
-        border: 1px solid red;
-        */
-      }
-
-      #listEditor .component,
-      #listEditor .structure {
-        display: none;
-      }
-
-      #listTools .,
-      #listTools .structure {
-        display: none;
-      }
-
-      #page_structure .,
-      #page_structure .component {
-        display: none;
-      }
-
-      #listTools li:hover,
-      .region li:hover,
-      #page_structure li:hover {
-        cursor: grab;
-      }
-
-      .sortable1 {
-        width: 300px;
-        float: left;
-      }
-
-      .sortable2 {
-        width: 300px;
-        float: left;
-      }
-
-      #tools .listSub {
-        display: none;
-      }
-
-      #listEditor .listSub {
-        float: left;
-      }
-
-      li {
-        /*margin-left: 10px;*/
-      }
-
-      ul {
-        /*margin-left: 20px;*/
-        min-height: 20px;
-        /*border: 1px solid blue;*/
-      }
-
-      .listSub {
-        background: green;
-        min-width: 20px;
-      }
-    </style>
-#}
 
 
 
@@ -5237,63 +5201,12 @@
 </html>
 
 
-<script src='/scripts/Sortable.min.js'></script>
 
 
-<script>
-  new Sortable(components, {
-      group: {
-          name: 'shared',
-          pull: 'clone',
-          put: false
-      },
-      animation: 150,
-      sort: false,
-    	onEnd: function (evt) {
-        if (evt.to.id == 'canvas'){
-          document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
-        }
-        if (evt.to.id == 'structure'){
-          console.log('structure');
-          document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
-        }
-    	}
-  });
-  new Sortable(canvas, {
-      group: {
-          name: 'shared',
-          pull: false
-      },
-      animation: 150,
-      onEnd: function (evt) {
-        if (evt.to.id == 'canvas'){
-          document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
-        }
-        if (evt.to.id == 'structure'){
-          console.log('structure');
-          document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
-        }
-    	}
-  });
 
-  new Sortable(structure, {
-      group: {
-          name: 'shared',
-          pull: false,
-          put: false
-      },
-      animation: 150,
-      onEnd: function (evt) {
-        if (evt.to.id == 'canvas'){
-          document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
-        }
-        if (evt.to.id == 'structure'){
-          console.log('structure');
-          document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
-        }
-    	}
-  });
- </script>
+
+
+
 
 
 <style>
@@ -5333,60 +5246,12 @@
    display: none;
  }
 
-{#
-<style>
-/* case 1: side by side 50% width each */
- #canvas .placeholder{
-   width: 50%;
-   float:left;
- }
 
- #canvas .sortable-ghost{
-   background: green;
-   border-top: 4px solid #fff;
-   border-bottom: 4px solid #fff;
-   width: 1px;
-   height: auto;
-   overflow:hidden;
- }
- #structure .sortable-ghost{
-   background: green;
-   height: 1px;
-   overflow:hidden;
- }
-</style>
-#}
-
-
-{#
-<style>
- /* case 2: vertical 100% width each */
- #canvas .placeholder{
- }
- #canvas .sortable-ghost{
-   background: green;
-   height: 2px;
-   overflow:hidden;
- }
- #structure .sortable-ghost{
-   background: green;
-   height: 1px;
-   overflow:hidden;
- }
-</style>
-#}
 
 <style>
  /* case 3: vertical 100% width each | only show 1 */
  #canvas .placeholder{
  }
- /*
- #canvas .sortable-ghost{
-   background: green;
-   height: 2px;
-   overflow:hidden;
- }
- */
  #canvas .item{
    max-width: 200px
  }
@@ -5408,23 +5273,146 @@
  }
 
 
- /*
- #canvas div.item:first-child {
-     display:block;
- }
- */
 
- /*
- #canvas div.item:nth-child(+2) {
-    display: none;
+
+
+
+
+
+
+
+
+
+ .tagsinput {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background: #fff;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #556270;
+	padding: 5px 5px 0 5px;
+  /*
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+  */
+  border: none;
 }
-*/
-/*
- #canvas div {
-     display: none;
- }
- #canvas div:first-child {
-     display: block;
- }
- */
+
+.tagsinput.focus {
+	border-color: #ccc;
+}
+
+.tagsinput * {
+	box-sizing: border-box;
+}
+
+.tagsinput .tag {
+	position: relative;
+	background: #556270;
+	display: block;
+	max-width: 100%;
+	word-wrap: break-word;
+	color: #fff;
+	padding: 5px 30px 5px 5px;
+	border-radius: 2px;
+	margin: 0 5px 5px 0;
+}
+
+.tagsinput .tag .tag-remove {
+	position: absolute;
+	background: none;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #ff6b6b;
+	line-height: 30px;
+	padding: 0;
+	border: 0;
+}
+
+.tagsinput .tag .tag-remove:before,
+.tagsinput .tag .tag-remove:after {
+	background: #ff6b6b;
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 2px;
+	top: 14px;
+	left: 10px;
+	content: '';
+}
+
+.tagsinput .tag .tag-remove:before {
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.tagsinput .tag .tag-remove:after {
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+
+.tagsinput div {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.tagsinput div input {
+	background: transparent;
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 5px;
+	border: 0 none;
+	margin: 0 5px 5px 0;
+}
+
+.tagsinput div input.error {
+	color: #ff6b6b;
+}
+
+.tagsinput div input::-ms-clear {
+	display: none;
+}
+
+.tagsinput div input::-webkit-input-placeholder {
+	color: #ccc;
+	opacity: 1.0;
+}
+
+.tagsinput div input:-moz-placeholder {
+	color: #ccc;
+	opacity: 1.0;
+}
+
+.tagsinput div input::-moz-placeholder {
+	color: #ccc;
+	opacity: 1.0;
+}
+
+.tagsinput div input:-ms-input-placeholder {
+	color: #ccc;
+	opacity: 1.0;
+}
+
+.ui-autocomplete{
+  z-index: 20000000000;
+  display: block;
+}
+
 </style>
