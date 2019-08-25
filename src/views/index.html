@@ -5272,15 +5272,47 @@
    overflow:hidden;
  }
 
+ .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+     border: 1px solid #003eff;
+     /*
+     background: #007fff;
+     font-weight: normal;
+     color: #ffffff;
+     */
+     color: #888;
+     border: none;
+     background-color: #f3f2f2;
+ }
 
 
 
+ .ui-widget {
+     font-family: 'Salesforce Sans';
+     font-size: 1em;
+ }
 
 
+ .ui-widget.ui-widget-content {
+     border: 1px solid #c5c5c5;
+     border-radius: 3px;
+     padding: 5px;
+ }
+
+ .ui-menu .ui-menu-item {
+     margin: 0;
+     cursor: pointer;
+     padding: 3px 0;
+ }
 
 
+.tag{
+  padding-right: 5px;
+}
 
 
+.tag-text{
+  padding-left: 3px;
+}
 
 
  .tagsinput {
@@ -5293,16 +5325,20 @@
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	background: #fff;
-	font-family: sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	color: #556270;
-	padding: 5px 5px 0 5px;
+  padding: 5px;
+	/*padding: 5px 5px 0 5px;*/
   /*
 	border: 1px solid #e6e6e6;
 	border-radius: 2px;
   */
   border: none;
+}
+
+*:focus {
+    outline: none;
 }
 
 .tagsinput.focus {
@@ -5312,6 +5348,10 @@
 .tagsinput * {
 	box-sizing: border-box;
 }
+
+
+/*
+
 
 .tagsinput .tag {
 	position: relative;
@@ -5364,6 +5404,8 @@
 	transform: rotateZ(-45deg);
 }
 
+*/
+
 .tagsinput div {
 	-webkit-box-flex: 1;
 	-webkit-flex-grow: 1;
@@ -5409,6 +5451,7 @@
 	color: #ccc;
 	opacity: 1.0;
 }
+
 
 .ui-autocomplete{
   z-index: 20000000000;
