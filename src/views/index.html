@@ -382,6 +382,11 @@ https://www.lightningdesignsystem.com/components/global-header/
                                       </a>
                                     </li>
                                     <li class="slds-dropdown__item" role="presentation">
+                                      <a href="#" role="menuitem" tabindex="0" class="trigger-tags">
+                                        <span class="slds-truncate" title="Tags">Tags</span>
+                                      </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
                                       <a href="#" role="menuitem" tabindex="0" class="trigger-duplicate">
                                         <span class="slds-truncate" title="Edit">Duplicate</span>
                                       </a>
@@ -412,7 +417,7 @@ https://www.lightningdesignsystem.com/components/global-header/
                               </div>
                             </td>
                             <td scope="row">
-                              <div class="slds-truncate" title="Spring Campaign 2019" style="padding:3px;">
+                              <div class="slds-truncate" title="Spring Campaign 2019" style="padding-top:3px; padding-bottom:3px;">
                                 <span class="slds-badge slds-badge_lightest">Spring</span>
                                 <span class="slds-badge slds-badge_lightest">Campaign</span>
                               </div>
@@ -443,6 +448,11 @@ https://www.lightningdesignsystem.com/components/global-header/
                                     <li class="slds-dropdown__item" role="presentation">
                                       <a href="#" role="menuitem" tabindex="0" class="trigger-edit">
                                         <span class="slds-truncate" title="Edit">Edit</span>
+                                      </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                      <a href="#" role="menuitem" tabindex="0" class="trigger-tags">
+                                        <span class="slds-truncate" title="Tags">Tags</span>
                                       </a>
                                     </li>
                                     <li class="slds-dropdown__item" role="presentation">
@@ -478,7 +488,7 @@ https://www.lightningdesignsystem.com/components/global-header/
                               </div>
                             </td>
                             <td scope="row">
-                              <div class="slds-truncate" title="Tags" style="padding:3px;">
+                              <div class="slds-truncate" title="Tags" style="padding-top:3px; padding-bottom:3px;">
                                 <span class="slds-badge slds-badge_lightest">Fall</span>
                               </div>
                             </td>
@@ -509,6 +519,11 @@ https://www.lightningdesignsystem.com/components/global-header/
                                     <li class="slds-dropdown__item" role="presentation">
                                       <a href="#" role="menuitem" tabindex="0" class="trigger-edit">
                                         <span class="slds-truncate" title="Edit">Edit</span>
+                                      </a>
+                                    </li>
+                                    <li class="slds-dropdown__item" role="presentation">
+                                      <a href="#" role="menuitem" tabindex="0" class="trigger-tags">
+                                        <span class="slds-truncate" title="Tags">Tags</span>
                                       </a>
                                     </li>
                                     <li class="slds-dropdown__item" role="presentation">
@@ -1155,6 +1170,102 @@ https://www.lightningdesignsystem.com/components/global-header/
 
       </section>
 
+
+
+      <div class="slds-hide" style="height:640px" id="tag-modal">
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+      <header class="slds-modal__header">
+      <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse tags-toggle" title="Close">
+      <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+      </svg>
+      <span class="slds-assistive-text">Close</span>
+      </button>
+      <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Tags</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+        <fieldset class="slds-form-element">
+          <div class="slds-form-element__group">
+            <div class="slds-form-element__row">
+              <div class="slds-form-element slds-size_1-of-1">
+                <label class="slds-form-element__label" for="input-03">Tags</label>
+                <div class="slds-form-element__icon">
+                  <button aria-describedby="help" class="slds-button slds-button_icon">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Help</span>
+                  </button>
+                </div>
+                <div class="slds-pill_container">
+                  <!--ul class="slds-listbox slds-listbox_horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal"  id="myTags"></ul-->
+                  <input id="form-tags-4" name="tags-4" type="text" value="">
+                </div>
+
+
+              </div>
+            </div>
+            <div class="slds-form-element__row slds-hide">
+              <div class="slds-form-element slds-size_1-of-1">
+                <label class="slds-form-element__label" for="input-03">Comment</label>
+                <textarea id="textarea-id-01" class="slds-textarea" placeholder=""></textarea>
+              </div>
+            </div>
+            <div class="slds-form-element__row">
+              <div class="slds-hide slds-form-element slds-size_1-of-2">
+                <span class="slds-checkbox">
+                  <input type="checkbox" name="options" id="checkbox-1" value="on">
+                  <label class="slds-checkbox__label" for="checkbox-1">
+                    <span class="slds-checkbox_faux"></span>
+                    <span class="slds-form-element__label">Searchable in Storefront</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="slds-form-element__row slds-m-left_large slds-m-right_largebtw slds-hide">
+              <div class="slds-form-element slds-size_1-of-2">
+                <label class="slds-form-element__label" for="input-013">Change Frequency</label>
+                <select class="slds-select" id="select-01">
+                  <option selected="">Please select</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="slds-form-element slds-size_1-of-2">
+                <label class="slds-form-element__label" for="input-013">Priority</label>
+                <input type="text" id="input-02" class="slds-input" placeholder="0.00">
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+
+
+
+      </div>
+      <footer class="slds-modal__footer">
+      <button class="slds-button slds-button_neutral tags-toggle">Cancel</button>
+      <button class="slds-button slds-button_brand" id="show_list">Save</button>
+      </footer>
+      </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+      </div>
+
+
+
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      {# TAGS #}
+      <script src="/scripts/jquery.tagsinput-revisited.js" type="text/javascript" charset="utf-8"></script>
+
+
       <script>
 
         $('.trigger-duplicate').click(function() {
@@ -1208,6 +1319,53 @@ https://www.lightningdesignsystem.com/components/global-header/
               });
             });
 
+
+
+            //PILL HANDLING
+            $('.js-trigger-filters').click(function() {
+              $('#tag-modal').toggleClass('slds-hide');
+            });
+
+            $('.slds-pill__remove').click(function() {
+              //$('#locale-warning').toggleClass('slds-hide');
+              $(this).closest('.slds-pill').remove();
+            });
+            $('#form-tags-4').tagsInput({
+      				'autocomplete': {
+      					source: [
+      						'Spring',
+      						'Summer',
+      						'Fall',
+      						'Winter'
+      					]
+      				}
+      			});
+
+            $('#autocomplete').autocomplete({
+                open: function(){
+                    setTimeout(function () {
+                        $('.ui-autocomplete').css('z-index', 99999999999999);
+                    }, 0);
+                }
+            });
+
+            $('#show_list').click(function() {
+              $('#tag-modal').toggleClass('slds-hide');
+              window.location = 'index_show.html';
+            });
+
+            $('.tags-toggle').click(function() {
+              $('#tag-modal').toggleClass('slds-hide');
+            });
+
+            $('.trigger-tags').click(function() {
+              console.log('trigger tags');
+              $('#tag-modal').toggleClass('slds-hide');
+              $(this).closest('.slds-dropdown-trigger--click').removeClass('slds-is-open');
+            });
+
+
+
     </script>
 
     <style>
@@ -1226,7 +1384,199 @@ https://www.lightningdesignsystem.com/components/global-header/
       #page_list {
         display: table;
       }
-    </style>
+
+
+
+
+      .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+          border: 1px solid #003eff;
+          /*
+          background: #007fff;
+          font-weight: normal;
+          color: #ffffff;
+          */
+          color: #888;
+          border: none;
+          background-color: #f3f2f2;
+      }
+
+
+
+      .ui-widget {
+          font-family: 'Salesforce Sans';
+          font-size: 1em;
+      }
+
+
+      .ui-widget.ui-widget-content {
+          border: 1px solid #c5c5c5;
+          border-radius: 3px;
+          padding: 5px;
+      }
+
+      .ui-menu .ui-menu-item {
+          margin: 0;
+          cursor: pointer;
+          padding: 3px 0;
+      }
+
+
+      .tag{
+       padding-right: 5px;
+      }
+
+
+      .tag-text{
+       padding-left: 3px;
+      }
+
+
+      .tagsinput {
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-flex-wrap: wrap;
+       -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+       box-sizing: border-box;
+       background: #fff;
+       font-size: 14px;
+       line-height: 20px;
+       color: #556270;
+       padding: 5px;
+       /*padding: 5px 5px 0 5px;*/
+       /*
+       border: 1px solid #e6e6e6;
+       border-radius: 2px;
+       */
+       border: none;
+      }
+
+      *:focus {
+         outline: none;
+      }
+
+      .tagsinput.focus {
+       border-color: #ccc;
+      }
+
+      .tagsinput * {
+       box-sizing: border-box;
+      }
+
+
+      /*
+
+
+      .tagsinput .tag {
+       position: relative;
+       background: #556270;
+       display: block;
+       max-width: 100%;
+       word-wrap: break-word;
+       color: #fff;
+       padding: 5px 30px 5px 5px;
+       border-radius: 2px;
+       margin: 0 5px 5px 0;
+      }
+
+      .tagsinput .tag .tag-remove {
+       position: absolute;
+       background: none;
+       display: block;
+       width: 30px;
+       height: 30px;
+       top: 0;
+       right: 0;
+       cursor: pointer;
+       text-decoration: none;
+       text-align: center;
+       color: #ff6b6b;
+       line-height: 30px;
+       padding: 0;
+       border: 0;
+      }
+
+      .tagsinput .tag .tag-remove:before,
+      .tagsinput .tag .tag-remove:after {
+       background: #ff6b6b;
+       position: absolute;
+       display: block;
+       width: 10px;
+       height: 2px;
+       top: 14px;
+       left: 10px;
+       content: '';
+      }
+
+      .tagsinput .tag .tag-remove:before {
+       -webkit-transform: rotateZ(45deg);
+       transform: rotateZ(45deg);
+      }
+
+      .tagsinput .tag .tag-remove:after {
+       -webkit-transform: rotateZ(-45deg);
+       transform: rotateZ(-45deg);
+      }
+
+      */
+
+      .tagsinput div {
+       -webkit-box-flex: 1;
+       -webkit-flex-grow: 1;
+       -ms-flex-positive: 1;
+       flex-grow: 1;
+      }
+
+      .tagsinput div input {
+       background: transparent;
+       display: block;
+       width: 100%;
+       font-size: 14px;
+       line-height: 20px;
+       padding: 5px;
+       border: 0 none;
+       margin: 0 5px 5px 0;
+      }
+
+      .tagsinput div input.error {
+       color: #ff6b6b;
+      }
+
+      .tagsinput div input::-ms-clear {
+       display: none;
+      }
+
+      .tagsinput div input::-webkit-input-placeholder {
+       color: #ccc;
+       opacity: 1.0;
+      }
+
+      .tagsinput div input:-moz-placeholder {
+       color: #ccc;
+       opacity: 1.0;
+      }
+
+      .tagsinput div input::-moz-placeholder {
+       color: #ccc;
+       opacity: 1.0;
+      }
+
+      .tagsinput div input:-ms-input-placeholder {
+       color: #ccc;
+       opacity: 1.0;
+      }
+
+
+      .ui-autocomplete{
+       z-index: 20000000000;
+       display: block;
+      }
+
+      </style>
+
+
 
   </body>
 
