@@ -1035,6 +1035,19 @@ https://www.lightningdesignsystem.com/components/global-navigation/
               $('.slds-page-header__info').html('2 pages • sorted by date');
             });
 
+
+
+
+            $('#duplicate-page-name').keyup(function(){
+              //$('#duplicate-page-id').val($(this).val());
+              var myStr = $(this).val();
+              myStr=myStr.replace(/(^\s+|[^a-zA-Z0-9 ]+|\s+$)/g,"");   //this one
+              myStr=myStr.replace(/\s+/g, "-");
+              console.log(myStr);
+              $('#duplicate-page-id').val(myStr);
+            });
+
+
         </script>
 
 
