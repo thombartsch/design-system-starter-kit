@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Prototype styles -->
+    <link rel="stylesheet" href="/styles/index.css" />
+
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ug0ns8z2dvqvxvi"></script>
+
+</head>
+
+<body>
+    {% include "_inc_builder-popovers-toolbar.html" %}
+    <main class="app-wrapper">
+        {% include "_inc_modal-delete-component-4.html" %}
+        {% include "_inc_modal_media-picker.html" %}
+        {% include "_inc_modal_category-picker.html" %}
+        {% include "_inc_modal_page-settings.html" %}
+        {% include "_inc_modal_page-publish.html" %}
+
+        {% include "_inc_modal_code-view.html" %}
+        {% include "_inc_locale-warning.html" %}
+
+        <!-- BUILDER HEADER -->
+        {% include "_inc_builder-header.html" %}
+        <!-- /BUILDER HEADER -->
+
+        <div id="builder" class="slds-grid slds-col">
+            <div id="pd-menu">
+              {% include "_inc_pd-menu.html" %}
+            </div>
+            <div id="panel_editor" class="slds-hide modal">
+                <!-- PANEL EDITOR RIGHT -->
+                {% include "_inc_builder-panel-editor.html" %}
+                <!-- /PANEL EDITOR  RIGHT -->
+            </div>
+
+            <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+                  <!--div class="slds-drop-zone_drag__slot"-->
+                    <div class="2slds-align_absolute-center slds-col slds-grid">
+                        <!-- EDITOR REGION 1 -->
+                        <div class="region" id="region1" style="width:100%; background: red; height: 100px">
+                          <!-- CANVAS -->
+
+                          <!-- /CANVAS -->
+                        </div>
+                        <!-- /EDITOR REGION 1 -->
+                      </div>
+                    <!--/div-->
+                </div>
+            </div>
+
+            <div id="panel_right">
+                <!-- PANEL RIGHT -->
+                {% include "_inc_builder-panel-right.html" %}
+                <!-- /PANEL RIGHT -->
+            </div>
+        </div>
+    </main>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/vendor/svg4everybody.min.js"></script>
+    <script>
+        svg4everybody();
+    </script>
+
+
+    <!-- JAVASCRIPT -->
+    <script src='/scripts/jquery-3.2.1.min.js'></script>
+    <script src='/scripts/jquery-ui.min.js'></script>
+    <script src='/scripts/utils.js'></script>
+    <script src='/scripts/tether.min.js'></script>
+    <!--script src='/scripts/repos.js'></script-->
+    {% include '_inc_js-2.html' %}
+    <!-- /JAVASCRIPT -->
+
+</body>
+
+</html>
