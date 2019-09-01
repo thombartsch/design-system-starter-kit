@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="list-view">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.: Page Designer :.</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Prototype styles -->
+    <link rel="stylesheet" href="/styles/index.css" />
+
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ug0ns8z2dvqvxvi"></script>
+
+</head>
+
+<body>
+  {% include "_inc_builder-header.html" %}
+  <main class="app-wrapper">
+    <div id="builder" class="slds-grid slds-col">
+      <div id="pd-menu">
+        <div class="cb-AppNav js-app-nav">
+          <span class="cb-AppNav-button js-component-palette-button" data-type="component-palette">
+            <span class="cb-AppNav-buttonIcon">
+              <svg aria-hidden="true" class="slds-icon--x-small">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+              </svg>
+            </span>
+            <span class="cb-AppNav-buttonLabel">Components</span>
+          </span>
+
+          <!-- COMPONENTS -->
+          <div class="cb-LeftPanel-container js-left-panel-container slds-hide" id="component-palette-menu">
+            <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+              <div class="slds-panel__header slds-p-left_small">
+                <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate slds-text-align_left slds-p-left_none slds-m-left_none"
+                style="text-align:left;" title="Components">Components</h2>
+                <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close js-trigger-close" title="Collapse Panel Header">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Collapse Panel Header</span>
+                </button>
+              </div>
+              <div class="slds-panel__body slds-p-around_none">
+
+                <div class="slds-form-element slds-p-left_small slds-p-top_small slds-p-right_small">
+                    <!--label class="slds-form-element__label" for="text-input-id-1">Input Label</label-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+                        <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                        </svg>
+                        <input type="text" id="text-input-id-1" class="slds-input" placeholder="Search Components" />
+                        <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon slds-hide">
+                            <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear" />
+                            </svg>
+                            <span class="slds-assistive-text">Clear</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div>
+                    <!--ul id="component_list" class="slds-tree slds-p-top_small" role="tree" aria-labelledby="treeheading" id="tree-header"-->
+
+                    <ol id="listTools" class="connected sortable listLeft simple_with_no_drop vertical components">
+                       <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
+                           <div class="slds-tree__item">
+                               <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
+                                   <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+                                   </svg>
+                                   <span class="slds-assistive-text">Expand</span>
+                               </button>
+                               <span class="slds-size_1-of-1">
+                                   <span class="slds-tree__item-label slds-truncate" title="Content (1)">Content (1)</span>
+                               </span>
+                           </div>
+                       </li>
+                       <li data-component-type="banner" class="slds-p-around_xx-small">
+                         <div class="slds-m-left_small item" style="" id="">
+                           <div class="list-group-item slds-col slds-size_1-of-1" data-type="banner" style="">
+                               <div class="ghost-dummy">
+                                 banner
+                                 <!-- here should be the dummy display while mouse moving around -->
+                               </div>
+                               <div class="slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component tool component">
+                                   <div class="slds-p-right_small my-handle">
+                                     <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Banner">
+                                         <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                                           <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                                         </svg>
+                                         <span class="slds-assistive-text">Banner</span>
+                                     </span>
+                                   </div>
+                                   <div class="">
+                                       <span class="slds-truncate component_name" title="Banner">Banner</span>
+                                   </div>
+                               </div>
+                               <div class="slds-drop-zone placeholder">
+                                   <div class="slds-drop-zone__container" tabindex="-1">
+                                       <div class="slds-drop-zone__label slds-drop-zone__label_container">
+                                           <div class="slds-media slds-media_center">
+                                               <div class="slds-media__figure">
+                                                   <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color button-trigger-action--edit-component-banner">
+                                                       <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                                                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                                                       </svg>
+                                                   </span>
+                                               </div>
+                                               <div class="slds-media__body">
+                                                   <h2>
+                                                       <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-banner">
+                                                           <span class="slds-assistive-text">Edit: </span>
+                                                           <span>Banner</span>
+                                                       </button>
+                                                   </h2>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <!-- COMPONENT -->
+                                       <div class="slds-p-around_small empty">
+                                           <h1 class="slds-heading_medium slds-p-top_small">Banner</h1>
+                                           <p>
+                                               <span class="slds-icon_container null slds-icon__svg--default">
+                                                     <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                                                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                                                     </svg>
+                                               </span>
+                                           </p>
+                                       </div>
+                                       <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
+                                           <div class="content">
+                                               <div class="slds-text-heading_medium title banner-header"></div>
+                                               <div class="slds-text-heading_small sub banner-sub"></div>
+                                           </div>
+                                           <img src="" class="slds-hide image-holder" style="width:100%;">
+                                       </div>
+
+                                       <!-- /COMPONENT -->
+                                       <div class="slds-drop-zone__actions">
+                                           <div class="slds-button-group" role="group">
+                                               <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
+                                                   <svg class="slds-button__icon" aria-hidden="true">
+                                                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
+                                                   </svg>
+                                                   <span class="slds-assistive-text">Move</span>
+                                               </button>
+                                               <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Remove Component">
+                                                   <svg class="slds-button__icon" aria-hidden="true">
+                                                       <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                                   </svg>
+                                                   <span class="slds-assistive-text">Remove Component</span>
+                                               </button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="slds-grid structure">
+                                   <!-- Navigator Catalog -->
+                                   <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
+                                     <div class="">
+                                       <span class="slds-icon_container slds-m-left_small" title="Sort Component">
+                                           <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
+                                             <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag_and_drop"></use-->
+                                           </svg>
+                                           <span class="slds-assistive-text">Sort Component</span>
+                                       </span>
+                                     </div>
+
+                                     <div class="my-handle">
+                                       <span class="slds-icon_container slds-m-left_small" title="Banner">
+                                           <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
+                                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
+                                           </svg>
+                                           <span class="slds-assistive-text">Banner</span>
+                                       </span>
+                                     </div>
+
+                                     <div class="slds-col hoverme">
+                                       <span class="slds-truncate slds-p-left_small component_name" title="Banner">Banner</span>
+                                     </div>
+
+                                     <div class="slds-hide">
+                                       <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
+                                           <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                           </svg>
+                                           <span class="slds-assistive-text">Banner</span>
+                                       </span>
+                                     </div>
+
+                                     <div class="slds-m-right_small">
+                                       <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
+                                           <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                                             <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                           </svg>
+                                           <span class="slds-assistive-text">Banner</span>
+                                       </span>
+                                     </div>
+                                   </div>
+                                   <!-- /Navigator Catalog -->
+                               </div>
+                           </div>
+                         </div>
+                       </li>
+                    </ol>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <!-- /COMPONENTS -->
+
+
+
+
+
+
+          <span class="cb-AppNav-button js-page-structure-button" data-type="page-structure">
+            <span class="cb-AppNav-buttonIcon">
+              <svg aria-hidden="true" class="slds-icon--x-small">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#list"></use>
+              </svg>
+            </span>
+            <span class="cb-AppNav-buttonLabel">Page Structure</span>
+          </span>
+          {% include "_inc_builder-page-structure.html" %}
+          <span class="cb-AppNav-button js-page-settings-button" data-type="settings">
+            <span class="cb-AppNav-buttonIcon">
+              <svg aria-hidden="true" class="slds-icon--x-small">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+              </svg>
+            </span>
+            <span class="cb-AppNav-buttonLabel">Page Settings</span>
+          </span>
+        </div>
+
+      </div>
+      <div id="canvas" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+        <!-- REGION -->
+        <div class="slds-drop-zone">
+          <div class="region sortable" style="background: red; width:100%;height:10rem">a</div>
+        </div>
+      </div>
+      <div id="panel_editor" class="slds-hide modal">
+          {% include "_inc_builder-panel-editor.html" %}
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+<!-- JAVASCRIPT -->
+<script src='/scripts/jquery-3.2.1.min.js'></script>
+<script src='/scripts/jquery-ui.min.js'></script>
+<script src='/scripts/utils.js'></script>
+<script src='/scripts/tether.min.js'></script>
+
+<script src="/scripts/jquery.caret.min.js"></script>
+<script src="/scripts/jquery.tag-editor.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+    //<--MENU
+    $('.js-component-palette-button').click(function() {
+      $('.js-component-palette-button').removeClass('is-active');
+      $('#component-palette-menu').addClass('slds-hide');
+      $('.js-page-structure-button').removeClass('is-active');
+      $('#page-structure-menu').addClass('slds-hide');
+      $('#modal-page-settings').addClass('slds-hide');
+      $('.js-component-palette-button').addClass('is-active');
+      $('#component-palette-menu').removeClass('slds-hide');
+    });
+    $('.js-page-structure-button').click(function() {
+      $('.js-component-palette-button').removeClass('is-active');
+      $('#component-palette-menu').addClass('slds-hide');
+      $('.js-page-structure-button').removeClass('is-active');
+      $('#page-structure-menu').addClass('slds-hide');
+      $('#modal-page-settings').addClass('slds-hide');
+      $('.js-page-structure-button').toggleClass('is-active');
+      $('#page-structure-menu').toggleClass('slds-hide');
+    });
+    $('.js-page-settings-button').click(function() {
+      $('.js-component-palette-button').removeClass('is-active');
+      $('#component-palette-menu').addClass('slds-hide');
+      $('.js-page-structure-button').removeClass('is-active');
+      $('#page-structure-menu').addClass('slds-hide');
+      $('#modal-page-settings').addClass('slds-hide');
+      $('#page-settings-general').addClass('slds-active');
+      $('#modal-page-settings').toggleClass('slds-hide');
+    });
+    //-->MENU
+
+
+
+    //CLOSE PD Panels
+    $('#component-palette-menu .js-trigger-close').click(function(e) {
+        console.log('close component palette now');
+        $('.js-component-palette-button').removeClass('is-active');
+        $('#component-palette-menu').addClass('slds-hide');
+    });
+
+    $('#page-structure-menu .js-trigger-close').click(function(e) {
+        //console.log('close component palette now');
+        $('.js-page-structure-button').removeClass('is-active');
+        $('#page-structure-menu').addClass('slds-hide');
+    });
+
+
+
+
+    //DRAG DROP HANDLING 1
+    /*
+        $('.item').draggable({
+            cancel: "a.ui-icon",
+            // clicking an icon won't initiate dragging
+            //revert: "invalid",
+            // when not dropped, the item will revert back to its initial position
+            revert: true,
+            containment: 'document',
+            appendTo: '#canvas',
+            // bounce back when dropped
+            helper: 'clone',
+            // create "copy" with original properties, but not a true clone
+            cursor: 'move'
+            , revertDuration: 0
+            // immediate snap
+        });
+
+        //var $container
+        $('.region').droppable({
+            accept: "#listTools .item",
+            activeClass: "ui-state-highlight",
+            drop: function( event, ui ) {
+                // clone item to retain in original "list"
+                var $canvas_item = ui.draggable.clone();
+                var $pagestructure_item = ui.draggable.clone();
+                $(this).addClass('has-drop').html($canvas_item);
+                $('#pageStructure').html($pagestructure_item);
+                $('#panel_editor').removeClass('slds-hide');
+                $('.js-component-palette-button').removeClass('is-active');
+                $('#component-palette-menu').addClass('slds-hide');
+
+            }
+        });
+        */
+
+        var clone, before, parent
+        $('.sortable').sortable({
+            connectWith: '.sortable',
+            helper: "clone",
+            appendTo: '#canvas',
+            start: function (event, ui) {
+                $(ui.item).show();
+                clone = $(ui.item).clone();
+
+                before = $(ui.item).prev();
+                parent = $(ui.item).parent();
+            },
+            receive: function (event, ui) {
+                //only when dropped from one to another!
+                if (before.length) before.after(clone);
+                else parent.prepend(clone);
+                console.log('dropped something in the center');
+                document.querySelector('#listStructure').innerHTML = document.querySelector('#listEditor').innerHTML;
+            }
+
+        }).disableSelection();
+
+  });
+</script>
+
+<style>
+/*
+.ui-draggable-dragging{
+  background: green;
+  z-index: 200000000;
+
+}
+*/
+
+
+.ui-droppable-hover{
+  background: white;
+  border: 1px solid green;
+}
+
+#canvas div.region div.ghost-dummy,
+#canvas div.region div.structure,
+#canvas div.region div.component{
+  display: none;
+}
+
+#pageStructure div.ghost-dummy,
+#pageStructure div.placeholder,
+#pageStructure div.component{
+  display: none;
+}
+
+
+.ui-draggable-dragging .placeholder,
+.ui-draggable-dragging .structure,
+.ui-draggable-dragging .component{
+  display:none;
+}
+
+</style>

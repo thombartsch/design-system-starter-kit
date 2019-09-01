@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>.: Case 1 :.</title>
+  <title>.: Page Designer - Breakout Component :.</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="/styles/index.css" />
@@ -14,6 +14,7 @@
 
 <body>
 
+{#
   <section id="popover-customer-groups" class="editor slds-hide tether-box slds-popover slds-nubbin_top-left modal" role="dialog" aria-labelledby="dialog-heading-id-preview-settings" aria-describedby="dialog-body-id-preview-settings">
     <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon trigger-close-modal" title="Close settings">
       <svg class="slds-button__icon" aria-hidden="true">
@@ -74,13 +75,6 @@
       <button class="slds-button slds-button_brand trigger-close-modal">Apply</button>
     </footer>
   </section>
-
-
-
-
-
-
-
   <section id="popover-schedule" class="slds-hide tether-boxB slds-popover slds-nubbin_top-left modal" role="dialog" aria-labelledby="dialog-heading-id-preview-settings" aria-describedby="dialog-body-id-preview-settings">
     <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon trigger-close-modal" title="Close settings">
       <svg class="slds-button__icon" aria-hidden="true">
@@ -111,10 +105,6 @@
       <button class="slds-button slds-button_brand trigger-close-modal">Apply</button>
     </footer>
   </section>
-
-
-
-
   <section id="popover-more" class="slds-hide tether-boxC slds-popover slds-nubbin_top-left modal" role="dialog" aria-labelledby="dialog-heading-id-preview-settings" aria-describedby="dialog-body-id-preview-settings">
     <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon trigger-close-modal" title="Close settings">
       <svg class="slds-button__icon" aria-hidden="true">
@@ -156,8 +146,159 @@
       <button class="slds-button slds-button_brand trigger-close-modal">Apply</button>
     </footer>
   </section>
+#}
 
   <main class="app-wrapper">
+
+    <!-- BREAKOUT MODAL -->
+    <div id="breakout-modal" style="" class="slds-hide">
+      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+              <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+              </svg>
+              <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="breakout-modal-heading" class="slds-text-heading_medium slds-hyphenate">Custom Object Selector</h2>
+          </header>
+          <div class="slds-modal__content  slds-grow slds-p-around_medium" id="breakout-modal-content">
+
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?nature" alt="https://source.unsplash.com/random/120x60?nature" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="slds-p-bottom_small">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+          <footer class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral">Cancel</button>
+            <button class="slds-button slds-button_brand" disabled>Select</button>
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+    <!-- /BREAKOUT MODAL -->
+
+
 
     <div class="slds-hide delete-component modal" id="modal-id-4-delete">
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-4-delete">
@@ -185,7 +326,6 @@
       </section>
       <div class="slds-backdrop slds-backdrop--open"></div>
     </div>
-
     <!-- EDITOR -->
     <div class="modal-editor-39 slds-hide modal media-picker picker">
       <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-4" class="slds-modal slds-modal_small slds-fade-in-open">
@@ -967,7 +1107,6 @@
       <div class="slds-backdrop slds-backdrop_open"></div>
     </div>
     <!-- /EDITOR -->
-
     <div id="cat-pick" class="slds-hide editor">
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-list-builder" aria-labelledby="id-of-modalheader-h2" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
@@ -1266,7 +1405,6 @@
       </section>
       <div class="slds-backdrop slds-backdrop_open "></div>
     </div>
-
     <div id="modal-page-settings" class="slds-hide modal">
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-labelledby="header100" aria-describedby="modal-content-id-3" style="height: 35rem;">
         <div class="slds-modal__container">
@@ -1586,7 +1724,6 @@
       </section>
       <div class="slds-backdrop slds-backdrop_open"></div>
     </div>
-
     <div class="modal slds-hide" id="modal-publish">
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-3">
         <div class="slds-modal__container">
@@ -1660,8 +1797,6 @@
       </section>
       <div class="slds-backdrop slds-backdrop--open"></div>
     </div>
-
-
     <div class="modal slds-hide" id="modal-code">
       <section role="dialog" tabindex="-1" class="slds-modal slds-modal_large slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-3">
         <div class="slds-modal__container">
@@ -1693,7 +1828,6 @@
       </section>
       <div class="slds-backdrop slds-backdrop--open"></div>
     </div>
-
     <div class="slds-hide" id="locale-warning">
       <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-50" aria-modal="true" aria-describedby="modal-content-50" class="slds-modal slds-fade-in-open">
         <div class="slds-modal__container">
@@ -1911,16 +2045,16 @@
 
 
 
-<!-- Locale Marker -->
-<div class="slds-button-group" role="group">
-  <button class="slds-button slds-button_neutral">Default
-    <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-    </svg>
-  </button>
-  <button class="slds-button slds-button_neutral">Visible for this Locale</button>
-</div>
-<!-- /Locale Marker -->
+            <!-- Locale Marker -->
+            <div class="slds-button-group" role="group">
+              <button class="slds-button slds-button_neutral">Default
+                <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+              </button>
+              <button class="slds-button slds-button_neutral">Visible for this Locale</button>
+            </div>
+            <!-- /Locale Marker -->
 
 
 
@@ -2076,7 +2210,6 @@
 
       </div>
     </div>
-
     <!-- /BUILDER HEADER -->
 
     <div id="builder" class="slds-grid slds-col">
@@ -2105,7 +2238,6 @@
               <div class="slds-panel__body slds-p-around_none">
 
                 <div class="slds-form-element slds-p-left_small slds-p-top_small slds-p-right_small">
-                  <!--label class="slds-form-element__label" for="text-input-id-1">Input Label</label-->
                   <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
                     <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
@@ -2140,410 +2272,7 @@
                         </span>
                       </div>
                     </li>
-                    {#
-                    <li role="treeitem" aria-level="1" aria-expanded="true" aria-label="Tree Branch">
-                      <div class="slds-tree__item">
-                        <button class="slds-button slds-button_icon slds-button_icon slds-m-right_x-small" aria-hidden="true" tabindex="-1" title="Expand Tree Branch">
-                          <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
-                          </svg>
-                          <span class="slds-assistive-text">Expand</span>
-                        </button>
-                        <span class="slds-size_1-of-1">
-                          <span class="slds-tree__item-label slds-truncate" title="Content (3)">Content (3)</span>
-                        </span>
-                      </div>
-                    </li>
-                    <li data-component-type="banner" class="slds-p-around_xx-small">
-                      <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
-                        <div class="list-group-item slds-col slds-size_1-of-1" data-type="banner" style="">
-                          <div class="ghost-dummy">
-                            <!-- here should be the dummy display while mouse moving around -->
-                          </div>
-                          <div class=" slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component tool slds-p-around_x-small">
-                            <div class="slds-p-right_small my-handle">
-                              <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Banner">
-                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                                </svg>
-                                <span class="slds-assistive-text">Custom Component</span>
-                              </span>
-                            </div>
-                            <div class="">
-                              <span class="slds-truncate component_name" title="Custom Component">Custom Component</span>
-                            </div>
-                          </div>
 
-
-                          <div class="slds-drop-zone placeholder">
-                            <div class="slds-drop-zone__container" tabindex="-1">
-                              <div class="slds-drop-zone__label slds-drop-zone__label_container">
-                                <div class="slds-media slds-media_center">
-                                  <div class="slds-media__figure">
-                                    <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color button-trigger-action--edit-component-banner">
-                                      <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                  <div class="slds-media__body">
-                                    <h2>
-                                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-banner">
-                                        <span class="slds-assistive-text">Edit: </span>
-                                        <span>Custom Component</span>
-                                      </button>
-                                    </h2>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- COMPONENT -->
-                              <div class="slds-p-around_small empty">
-                                <h1 class="slds-heading_medium slds-p-top_small">Custom Component</h1>
-                                <p>
-                                  <span class="slds-icon_container null slds-icon__svg--default">
-                                    <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                                    </svg>
-                                  </span>
-                                </p>
-                              </div>
-                              <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
-                                <div class="content">
-                                  <div class="slds-text-heading_medium title banner-header"></div>
-                                  <div class="slds-text-heading_small sub banner-sub"></div>
-                                </div>
-                                <img src="" class="slds-hide image-holder" style="width:100%;">
-                              </div>
-
-                              <!-- /COMPONENT -->
-                              <div class="slds-drop-zone__actions">
-                                <div class="slds-button-group" role="group">
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Move</span>
-                                  </button>
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Remove Component">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Remove Component</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="slds-grid structure">
-                            <!-- Navigator Catalog -->
-                            <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
-                              <div class="">
-                                <span class="slds-icon_container slds-m-left_small" title="Sort Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
-                                    <!--use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#drag_and_drop"></use-->
-                                  </svg>
-                                  <span class="slds-assistive-text">Sort Component</span>
-                                </span>
-                              </div>
-
-                              <div class="my-handle">
-                                <span class="slds-icon_container slds-m-left_small" title="Banner">
-                                  <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Custom Component</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-col hoverme">
-                                <span class="slds-truncate slds-p-left_small component_name" title="Banner">Custom Component</span>
-                              </div>
-
-                              <div class="slds-hide">
-                                <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Custom Component</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-m-right_small">
-                                <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Custom Component</span>
-                                </span>
-                              </div>
-                            </div>
-                            <!-- /Navigator Catalog -->
-                          </div>
-                        </div>
-
-                      </div>
-                    </li>
-                    <li data-component-type="category" class="slds-p-around_xx-small">
-                      <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
-                        <div class="list-group-item slds-col slds-size_1-of-1" data-type="category" style="">
-                          <div class="ghost-dummy">
-                            <!-- here should be the dummy display while mouse moving around -->
-                          </div>
-                          <div class=" slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component tool slds-p-around_x-small">
-                            <div class="slds-p-right_small my-handle">
-                              <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Category">
-                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product_item"></use>
-                                </svg>
-                                <span class="slds-assistive-text">Category</span>
-                              </span>
-                            </div>
-                            <div class="">
-                              <span class="slds-truncate component_name" title="Category">Category</span>
-                            </div>
-                          </div>
-
-
-                          <div class="slds-drop-zone component placeholder">
-                            <div class="slds-drop-zone__container" tabindex="-1">
-                              <div class="slds-drop-zone__label slds-drop-zone__label_container">
-                                <div class="slds-media slds-media_center">
-                                  <div class="slds-media__figure">
-                                    <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color button-trigger-action--edit-component-category">
-                                      <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                  <div class="slds-media__body">
-                                    <h2>
-                                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-category">
-                                        <span class="slds-assistive-text">Edit: </span>
-                                        <span>Category</span>
-                                      </button>
-                                    </h2>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- COMPONENT -->
-                              <div class="slds-p-around_small empty">
-                                <h1 class="slds-heading_medium slds-p-top_small">Category</h1>
-                                <p>
-                                  <span class="slds-icon_container null slds-icon__svg--default">
-                                    <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product_item"></use>
-                                    </svg>
-                                  </span>
-                                </p>
-                              </div>
-                              <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
-                                <div class="content">
-                                  <div class="slds-text-heading_medium title banner-header"></div>
-                                  <div class="slds-text-heading_small sub banner-sub"></div>
-                                </div>
-                                <img src="" class="slds-hide image-holder" style="width:100%;">
-                              </div>
-
-                              <!-- /COMPONENT -->
-                              <div class="slds-drop-zone__actions">
-                                <div class="slds-button-group" role="group">
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Move</span>
-                                  </button>
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Remove Component">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Remove Component</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="slds-grid structure">
-                            <!-- Navigator Catalog -->
-                            <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
-                              <div class="">
-                                <span class="slds-icon_container slds-m-left_small" title="Sort Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Sort Component</span>
-                                </span>
-                              </div>
-
-                              <div class="my-handle">
-                                <span class="slds-icon_container slds-m-left_small" title="Banner">
-                                  <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product_item"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Category</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-col hoverme">
-                                <span class="slds-truncate slds-p-left_small component_name" title="Banner">Category</span>
-                              </div>
-
-                              <div class="slds-hide">
-                                <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Category</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-m-right_small">
-                                <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Category</span>
-                                </span>
-                              </div>
-                            </div>
-                            <!-- /Navigator Catalog -->
-                          </div>
-                        </div>
-
-                      </div>
-                    </li>
-                    <li data-component-type="rtf" class="slds-p-around_xx-small">
-                      <div class="2slds-panel__body slds-m-left_small listTools" style="" id="">
-                        <div class="list-group-item slds-col slds-size_1-of-1" data-type="rtf" style="">
-                          <div class="ghost-dummy">
-                            <!-- here should be the dummy display while mouse moving around -->
-                          </div>
-                          <div class=" slds-grid slds-grid_vertical-align-center add-mediaselector-dummy add-component tool slds-p-around_x-small">
-
-                            <div class="slds-p-right_small my-handle">
-                              <span class="slds-icon_container 2slds-icon-custom-custom5 slds-m-left_small" title="Rich Text">
-                                <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#description"></use>
-                                </svg>
-                                <span class="slds-assistive-text">Rich Text</span>
-                              </span>
-                            </div>
-                            <div class="">
-                              <span class="slds-truncate component_name" title="Rich Text">Rich Text</span>
-                            </div>
-                          </div>
-
-
-                          <div class="slds-drop-zone component placeholder">
-                            <div class="slds-drop-zone__container" tabindex="-1">
-                              <div class="slds-drop-zone__label slds-drop-zone__label_container">
-                                <div class="slds-media slds-media_center">
-                                  <div class="slds-media__figure">
-                                    <span class="slds-icon_container slds-icon-utility-connected_apps slds-current-color button-trigger-action--edit-component-banner">
-                                      <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                  <div class="slds-media__body">
-                                    <h2>
-                                      <button class="slds-drop-zone__label_button slds-button_reset button-trigger-action--edit-component-banner">
-                                        <span class="slds-assistive-text">Edit: </span>
-                                        <span>Rich Text</span>
-                                      </button>
-                                    </h2>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- COMPONENT -->
-                              <div class="slds-p-around_small placeholder">
-                                <h1 class="slds-heading_medium slds-p-top_small">Rich Text</h1>
-                                <p>
-                                  <span class="slds-icon_container null slds-icon__svg--default">
-                                    <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#description"></use>
-                                    </svg>
-                                  </span>
-                                </p>
-                              </div>
-                              <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
-                                <div class="content">
-                                  <div class="slds-text-heading_medium title banner-header"></div>
-                                  <div class="slds-text-heading_small sub banner-sub"></div>
-                                </div>
-                                <img src="" class="slds-hide image-holder" style="width:100%;">
-                              </div>
-
-                              <!-- /COMPONENT -->
-                              <div class="slds-drop-zone__actions">
-                                <div class="slds-button-group" role="group">
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small" title="Move">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#move"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Move</span>
-                                  </button>
-                                  <button class="slds-button slds-button_icon slds-button_icon-brand slds-button_icon-x-small button-trigger-action--delete-component" title="Remove Component">
-                                    <svg class="slds-button__icon" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                    </svg>
-                                    <span class="slds-assistive-text">Remove Component</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="slds-grid structure">
-                            <!-- Navigator Catalog -->
-                            <div class="slds-tree__item nav slds-p-left_large slds-grid slds-col">
-                              <div class="">
-                                <span class="slds-icon_container slds-m-left_small" title="Sort Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Sort Component</span>
-                                </span>
-                              </div>
-
-                              <div class="my-handle">
-                                <span class="slds-icon_container slds-m-left_small" title="Banner">
-                                  <svg class="slds-icon slds-icon slds-icon_small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#description"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Rich Text</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-col hoverme">
-                                <span class="slds-truncate slds-p-left_small component_name" title="Rich Text">Rich Text</span>
-                              </div>
-
-                              <div class="slds-hide">
-                                <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Rich Text</span>
-                                </span>
-                              </div>
-
-                              <div class="slds-m-right_small">
-                                <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Rich Text</span>
-                                </span>
-                              </div>
-                            </div>
-                            <!-- /Navigator Catalog -->
-                          </div>
-                        </div>
-
-                      </div>
-                    </li>
-                    #}
                   </ol>
 
                   <div id="components" class="slds-col">
@@ -2899,12 +2628,8 @@
                         <span class="slds-tree__item-label slds-truncate" title="Tree Branch">Content</span>
                       </span>
                     </div>
-                    <!--
-                    <ul role="tree" class="slds-has-dividers_bottom-space" id="listStructure">
-                    </ul>
-                    -->
 
-                    <div id="structure" class="slds-col 2slds-p-left_xx-large">structure</div>
+                    <div id="structure" class="slds-col 2slds-p-left_xx-large"></div>
 
 
                   </li>
@@ -2968,6 +2693,26 @@
 
 
       </div>
+      <div id="canvas-area" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
+        <!--div class="slds-drop-zone_drag__slot"-->
+        <div class="2slds-align_absolute-center slds-col slds-grid">
+          <!-- EDITOR REGION 1 -->
+          <div class="region" id="region1" style="width:100%; margin-top:30px;">
+
+              <div class="slds-grid slds-col">
+                <div id="canvas" class="slds-col slds-grid slds-text-align_center slds-grid_vertical"><!--region--></div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
       <div id="panel_editor" class="slds-hide modal">
         <!-- PANEL EDITOR RIGHT -->
         <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false">
@@ -2975,17 +2720,17 @@
           <div class="slds-panel__header slds-p-top_none 2slds-hide slds-p-left_none slds-p-right_none slds-p-bottom_none slds-grid">
             <div class="slds-col">
               <!--h2 class="slds-panel__header-title slds-text-heading_small slds-p-around_small slds-p-left_none slds-float_left slds-text-align--left" id="string_editor">Editor</h2-->
-              <h2 class="slds-text-align_left slds-p-around_small">Editor</h2>
+              <h2 class="slds-text-align_left slds-p-around_small">Custom Component</h2>
             </div>
             <div class="slds-grid slds-float_left">
               <div class="slds-col slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
                 <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
-                  <svg class="slds-button__icon" aria-hidden="true">
+                  <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                   </svg>
                   <span class="slds-assistive-text">Show More</span>
                 </button>
-                <div class="slds-dropdown slds-dropdown_right">
+                <div class="slds-hide slds-dropdown slds-dropdown_right">
                   <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
                     <li class="slds-dropdown__item" role="presentation">
                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
@@ -3025,6 +2770,55 @@
 
           </div>
           <div class="slds-panel__body">
+
+
+
+            <!-- BREAKOUT FORM ELEMENT -->
+            <div class="slds-form-element" id="button-breakout_container">
+              <label class="slds-form-element__label" for="custom-component">Custom Component Label</label>
+              <div class="slds-form-element__control">
+                <button class="slds-button slds-button_neutral slds-button_stretch" id="button-breakout">Add ...</button>
+              </div>
+            </div>
+            <!-- /BREAKOUT FORM ELEMENT -->
+
+            {#
+            <div class="slds-hide slds-p-bottom_small" id="button-breakout_content">
+              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
+                </div>
+                <div class="slds-media__body slds-border_left slds-p-around_small">
+                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
+                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                </div>
+              </a>
+            </div>
+            #}
+
+
+            <div class="slds-box slds-hide"  id="button-breakout_content">
+              <div class="slds-inline_icon_text slds-grid">
+                <img src="https://source.unsplash.com/random/60x60?sun" alt="https://source.unsplash.com/random/60x60?sun" />
+                  <div class="slds-p-left_small slds-col slds-align-middle">
+                    <p>Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
+                  </div>
+                  <div class="slds-col slds-align-middle">
+                    <button class="slds-button slds-button_icon" title="Settings">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Delete</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            {#
+            <!-- BANNER EDITOR -->
             <div class="component_properties slds-hide" id="editor_banner">
               <!--  MEDIA SELECTION CONTENT-->
               <div class="editor">
@@ -3208,7 +3002,8 @@
 
               <!--  /MEDIA SELECTION CONTENT-->
             </div>
-
+            <!-- /BANNER EDITOR -->
+            <!-- CAT EDITOR -->
             <div class="component_properties slds-hide" id="editor_category">
               <!--  MEDIA SELECTION CONTENT-->
               <div class="editor">
@@ -3371,7 +3166,8 @@
 
               <!--  /MEDIA SELECTION CONTENT-->
             </div>
-
+            <!-- /CAT EDITOR -->
+            <!-- ROW EDITOR -->
             <div class="component_properties slds-hide" id="editor_row">
               <!--  ROW SELECTION CONTENT-->
               <div class="editor">
@@ -3450,7 +3246,8 @@
 
               <!--  /ROW SELECTION CONTENT-->
             </div>
-
+            <!-- /ROW EDITOR -->
+            <!-- RTE EDITOR -->
             <div class="component_properties slds-hide" id="editor_rtf">
               <!--  MEDIA SELECTION CONTENT-->
               <div class="editor">
@@ -3781,7 +3578,8 @@
 
               <!--  /MEDIA SELECTION CONTENT-->
             </div>
-
+            <!-- /RTE EDITOR -->
+            #}
           </div>
           <div class="slds-panel__header slds-panel__header_custom action_footer">
             <button class="slds-button slds-button_neutral slds-col_bump-right trigger-close-modal">Close</button>
@@ -3791,291 +3589,11 @@
 
         <!-- /PANEL EDITOR  RIGHT -->
       </div>
-
-
-      <div id="canvas-area" class="slds-col slds-text-align_top slds-p-around_small slds-scrollable_y slds-grid_vertical-align-top">
-        <!--div class="slds-drop-zone_drag__slot"-->
-        <!-- EDITOR HEADER -->
-        <div class="slds-align_absolute-center transparent" 3class="slds-col slds-size_1-of-1 slds-align_absolute-center" id="static_header" style="height: 170px">
-          <div class="slds-grid slds-col slds-grid_vertical slds-text-align_center" 2style="opacity:0.2">
-            <div class="slds-grid header-banner" id="static-banner">
-              <div class="slds-col">
-                FREE 2-Day SHIPPING FOR ORDERS OVER $300
-              </div>
-            </div>
-            <div class="slds-grid slds-wrap slds-p-around--small  slds-grid_vertical-align-center" id="editor-header">
-              <div class="slds-p-horizontal_small">
-                <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                  <img src="/assets/sign-in.svg" style="height:20px;" />
-                  <span class="slds-assistive-text">Login</span>
-                </span>
-                Login</div>
-              <div class="slds-p-horizontal_small slds-hide">
-                <img src="/assets/flag-usa.svg" style="height:20px; width:auto" />
-                USA
-              </div>
-              <div class="slds-p-horizontal_small slds-col slds-text-align--center"><img src="/assets/2016sf_CommerceCloud_logo_RGB.png" style="height:50px" /></div>
-              <div class="slds-p-horizontal_small">
-                <div class="slds-form-element__control">
-                  <div class="slds-input-has-icon slds-input-has-icon--right">
-                    <svg aria-hidden="true" class="slds-input__icon">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                    </svg>
-                    <input id="lookup-330" class="slds-lookup__search-input slds-input" type="search" placeholder="Search Keywords, Brands etc" aria-owns="lookup-330" role="combobox" aria-activedescendent="" aria-expanded="false" aria-autocomplete="list">
-                  </div>
-                </div>
-              </div>
-              <div class="region slds-hide" id="region-header" style="
-                                  width: 6rem;
-                                  text-align: center;
-                                  height: 4rem;
-                                  padding-top: 1rem;
-                                  ">
-                <button class="slds-button slds-button_neutral slds-button--icon-more toggle-tooltip orange" aria-describedby="title" title="Add Component" id="trigger-minibasket">
-                  <svg class="slds-button__icon" aria-hidden="true">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                  </svg>
-                  <span class="slds-assistive-text">Add Component</span>
-                </button>
-              </div>
-              <div class="slds-p-horizontal_small 2slds-size_1-of-5 2slds-large-size_1-of-6 2slds-hide" id="mini-cart">
-                <img src="/assets/shopping-bag.svg" style="height:20px; width:auto" />
-                No Items.
-              </div>
-            </div>
-            <div class="slds-grid main-menu">
-              <div class="slds-p-around_small">
-                <button class="slds-button 2slds-button_neutral">New Arrivals
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="slds-p-around_small">
-                <button class="slds-button 2slds-button_neutral">Womens
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="slds-p-around_small">
-                <button class="slds-button 2slds-button_neutral">Mens
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="slds-p-around_small">
-                <button class="slds-button 2slds-button_neutral">Electronics
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button>
-
-              </div>
-              <div class="slds-p-around_small">
-                <button class="slds-button 2slds-button_neutral">Top Sellers
-                  <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                  </svg>
-                </button>
-
-              </div>
-              <div class="slds-col">
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /EDITOR HEADER -->
-
-        <!--div 3class="slds-align_absolute-center slds-col slds-grid slds-grid_vertical-align-start" class="2slds-align_absolute-center slds-m-top_medium slds-m-left_none"-->
-        <div class="2slds-align_absolute-center slds-col slds-grid">
-          <!-- EDITOR REGION 1 -->
-          <div class="region" id="region1" style="width:100%">
-
-              <div class="slds-grid slds-col">
-                <div id="canvas" class="slds-col slds-grid slds-text-align_center slds-grid_vertical"><!--region--></div>
-              </div>
-
-
-
-
-
-
-
-            <!-- CANVAS -->
-            {#
-            <!--div class="demo-only" style="padding-top:2rem">
-              <div class="dropzone" id="dropzone1">
-                <div class="slds-drop-zone__label">
-                  <div class="slds-media slds-media_center">
-                    <div class="slds-media__figure">
-                      <span class="slds-icon_container slds-icon-utility-builder slds-current-color">
-                        <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
-                        </svg>
-                      </span>
-                    </div>
-                    <div class="slds-media__body">
-                      <h2>Region 1</h2>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="list-group slds-col slds-grid_vertical edit-mode" style="">
-                  <!--
-                  <ul id="listEditor" class="connected sortable listCenter slds-grid slds-grid_vertical slds-col ui-sortable" style="min-height:40px;">
-                  </ul>
-                -->
-
-                  <!--div id="left">
-                    <div class="item">
-                      <div class="insert"></div>
-                      <div class="component">component 1</div>
-                      <div class="placeholder">placeholder 1</div>
-                      <div class="nav">nav 1</div>
-                    </div>
-                    <div class="item">
-                      <div class="insert"></div>
-                      <div class="component">component 2</div>
-                      <div class="placeholder">placeholder 2</div>
-                      <div class="nav">nav 2</div>
-                    </div>
-                  </div-->
-
-
-<style>
-#drag-elements .insert{
-  display: none;
-}
-#drag-elements .nav{
-  display: none;
-}
-#drag-elements .placeholder{
-  display: none;
-}
-
-
-#drop-target .insert{
-  display: none;
-}
-#drop-target .nav{
-  display: none;
-}
-#drop-target .component{
-  display: none;
-}
-
-#display .insert{
-  display: none;
-}
-#display .placeholder{
-  display: none;
-}
-#display .component{
-  display: none;
-}
-
-
-.gu-mirror .nav{
-  display: none;
-}
-.gu-mirror .placeholder{
-  display: none;
-}
-.gu-mirror .insert{
-  display: none;
-}
-
-</style>
-
-
-
-                </div>
-
-              </div>
-            </div-->
-            <!-- /CANVAS -->
-          </div>
-          <!-- /EDITOR REGION 1 -->
-
-
-        </div>
-        <!--/div-->
-        #}
-        <div class="slds-grid slds-col slds-grid_vertical slds-text-align_center transparent" 3class="slds-col slds-size_1-of-1 slds-align_absolute-center" style="height: 200px;" id="static_footer">
-          <div class="slds-grid 2slds-align_absolute-center slds-border_bottom">
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <h4>Locate Store</h4>
-              <p>The Store Locator is designed to help you find the closest store near you.</p>
-            </div>
-
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <h4>Account</h4>
-              <p>
-                <ul>
-                  <li>My Account</li>
-                  <li>Check Order</li>
-                  <li>Wish List</li>
-                  <li>Gift Registry</li>
-                </ul>
-              </p>
-            </div>
-
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <h4>Customer Service</h4>
-              <p>
-                <ul>
-                  <li>Contact Us</li>
-                  <li>Gift Certificates</li>
-                  <li>Help</li>
-                  <li>Site Map</li>
-                </ul>
-              </p>
-            </div>
-
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <h4>About Us/h4>
-                <p>
-                  <ul>
-                    <li>About Us</li>
-                    <li>Privacy</li>
-                    <li>Terms</li>
-                    <li>Jobs</li>
-                  </ul>
-                </p>
-            </div>
-
-          </div>
-          <div class="slds-grid slds-align_absolute-center">
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <ul class="slds-list_horizontal">
-                <li class="slds-p-right_small"><img src="/assets/linkedin-brands.svg" width="32" /></li>
-                <li class="slds-p-right_small"><img src="/assets/facebook-brands.svg" width="32" /></li>
-                <li class="slds-p-right_small"><img src="/assets/twitter-square-brands.svg" width="32" /></li>
-                <li><img src="/assets/arrow-alt-circle-up-solid.svg" width="32" /></li>
-              </ul>
-            </div>
-            <div class="slds-p-around_small slds-text-align_left slds-align-top">
-              <p>© 2004-2018 Commerce Cloud, a Salesforce company. All Rights Reserved.</p>
-              <p>This is a demo store only. Orders made will NOT be processed.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
 
 
 
-    <!--ul id="listEditor" class="connected sortable listCenter">
-    </ul-->
-
-
-    <ul id="listStructure" class="sortable listRight">
-    </ul>
+    <!--ul id="listStructure" class="sortable listRight">List Structure?</ul-->
 
 
 
@@ -4999,6 +4517,27 @@
         });
 
 
+        //BREAKOUT HANDLING
+        $('#button-breakout').click(function() {
+          //show breakout modal
+          $('#breakout-modal').toggleClass('slds-hide');
+        });
+
+        $('#breakout-modal .slds-box_link').click(function() {
+          $('#breakout-modal-trigger-save').removeAttr("disabled");
+        });
+
+        $('#breakout-modal-trigger-save').click(function() {
+          $('#breakout-modal').addClass("slds-hide");
+          $('#breakout-modal-trigger-save').addAttr("disabled");
+
+          $('#button-breakout_container').removeClass("slds-hide");
+          $('#button-breakout').addClass("slds-hide");
+        });
+
+
+
+
 
 
 
@@ -5006,113 +4545,11 @@
     </script>
 
 
-    <!--script>
-      var countess = 0;
-
-      $('.slds-drop-zone__label_button').click(function() {
-        activeComponent = $(this).closest('li').attr('data-component-type');
-        console.log('clicked ' + activeComponent);
-
-        $('#editor_banner').addClass('slds-hide');
-        $('#editor_category').addClass('slds-hide');
-        $('#editor_row').addClass('slds-hide');
-        $('.tab_general').addClass('slds-active');
-
-        if (activeComponent === 'banner') {
-          $('#string_editor').text('Banner');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_banner').removeClass('slds-hide');
-        }
-
-        if (activeComponent === 'category') {
-          $('#string_editor').text('Category');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_category').removeClass('slds-hide');
-        }
-
-        if (activeComponent === 'row') {
-          $('#string_editor').text('Row');
-          $('#panel_editor').removeClass('slds-hide');
-          $('#editor_row').removeClass('slds-hide');
-        }
-
-
-        $('#component-palette-menu').addClass('slds-hide');
-        $('.js-component-palette-button').removeClass('is-active');
-        return false;
-      });
-    </script-->
 
 
 
-{#
-    <style>
-      .listLeft,
-      .listCenter,
-      .listRight {
-        /*
-        width: 200px;
-        float: left;
-        margin-right: 20px;
-        border: 1px solid red;
-        */
-      }
 
-      #listEditor .component,
-      #listEditor .structure {
-        display: none;
-      }
 
-      #listTools .,
-      #listTools .structure {
-        display: none;
-      }
-
-      #page_structure .,
-      #page_structure .component {
-        display: none;
-      }
-
-      #listTools li:hover,
-      .region li:hover,
-      #page_structure li:hover {
-        cursor: grab;
-      }
-
-      .sortable1 {
-        width: 300px;
-        float: left;
-      }
-
-      .sortable2 {
-        width: 300px;
-        float: left;
-      }
-
-      #tools .listSub {
-        display: none;
-      }
-
-      #listEditor .listSub {
-        float: left;
-      }
-
-      li {
-        /*margin-left: 10px;*/
-      }
-
-      ul {
-        /*margin-left: 20px;*/
-        min-height: 20px;
-        /*border: 1px solid blue;*/
-      }
-
-      .listSub {
-        background: green;
-        min-width: 20px;
-      }
-    </style>
-#}
 
 
 
@@ -5140,10 +4577,18 @@
     	onEnd: function (evt) {
         if (evt.to.id == 'canvas'){
           document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
+          console.log('1a');
+          //now close components menu
+          $('.js-component-palette-button').removeClass('is-active');
+          $('#component-palette-menu').addClass('slds-hide');
+
+          //now open component properties
+          $('#panel_editor').removeClass('slds-hide');
         }
         if (evt.to.id == 'structure'){
           console.log('structure');
           document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
+          console.log('1b');
         }
     	}
   });
@@ -5156,10 +4601,12 @@
       onEnd: function (evt) {
         if (evt.to.id == 'canvas'){
           document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
+          console.log('2a');
         }
         if (evt.to.id == 'structure'){
           console.log('structure');
           document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
+          console.log('2b');
         }
     	}
   });
@@ -5174,10 +4621,12 @@
       onEnd: function (evt) {
         if (evt.to.id == 'canvas'){
           document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
+          console.log('3a');
         }
         if (evt.to.id == 'structure'){
           console.log('structure');
           document.getElementById("canvas").innerHTML = document.getElementById("structure").innerHTML;
+          console.log('3b');
         }
     	}
   });
@@ -5221,60 +4670,14 @@
    display: none;
  }
 
-{#
-<style>
-/* case 1: side by side 50% width each */
- #canvas .placeholder{
-   width: 50%;
-   float:left;
- }
-
- #canvas .sortable-ghost{
-   background: green;
-   border-top: 4px solid #fff;
-   border-bottom: 4px solid #fff;
-   width: 1px;
-   height: auto;
-   overflow:hidden;
- }
- #structure .sortable-ghost{
-   background: green;
-   height: 1px;
-   overflow:hidden;
- }
-</style>
-#}
 
 
-{#
-<style>
- /* case 2: vertical 100% width each */
- #canvas .placeholder{
- }
- #canvas .sortable-ghost{
-   background: green;
-   height: 2px;
-   overflow:hidden;
- }
- #structure .sortable-ghost{
-   background: green;
-   height: 1px;
-   overflow:hidden;
- }
-</style>
-#}
+
 
 <style>
- /* case 3: vertical 100% width each | only show 1 */
  #canvas .placeholder{
  }
- /*
- #canvas .sortable-ghost{
-   background: green;
-   height: 2px;
-   overflow:hidden;
- }
- */
+
  #canvas .sortable-ghost {
      background: green;
      height: auto;
@@ -5290,23 +4693,12 @@
    overflow:hidden;
  }
 
- /*
- #canvas div.item:first-child {
-     display:block;
- }
- */
-
- /*
- #canvas div.item:nth-child(+2) {
-    display: none;
+ #canvas:empty:after {
+    content: 'Region';
 }
-*/
-/*
- #canvas div {
-     display: none;
- }
- #canvas div:first-child {
-     display: block;
- }
- */
+#canvas .sortable-ghost{
+  background: red;
+  width: 100%;
+}
+
 </style>
