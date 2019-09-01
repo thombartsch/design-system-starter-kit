@@ -290,7 +290,7 @@
           </div>
           <footer class="slds-modal__footer">
             <button class="slds-button slds-button_neutral">Cancel</button>
-            <button class="slds-button slds-button_brand" disabled>Select</button>
+            <button class="slds-button slds-button_brand" id="breakout-modal-trigger-save" disabled="disabled">Select</button>
           </footer>
         </div>
       </section>
@@ -4525,14 +4525,17 @@
 
         $('#breakout-modal .slds-box_link').click(function() {
           $('#breakout-modal-trigger-save').removeAttr("disabled");
+          console.log('call remove');
         });
 
         $('#breakout-modal-trigger-save').click(function() {
           $('#breakout-modal').addClass("slds-hide");
-          $('#breakout-modal-trigger-save').addAttr("disabled");
+          $('#breakout-modal-trigger-save').attr("disabled");
 
           $('#button-breakout_container').removeClass("slds-hide");
           $('#button-breakout').addClass("slds-hide");
+          $('#button-breakout_content').removeClass("slds-hide");
+          console.log('now show results');
         });
 
 
@@ -4697,7 +4700,8 @@
     content: 'Region';
 }
 #canvas .sortable-ghost{
-  background: red;
+  /*background: red;*/
+  
   width: 100%;
 }
 
