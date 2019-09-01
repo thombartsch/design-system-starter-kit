@@ -155,7 +155,7 @@
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
           <header class="slds-modal__header">
-            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse breakout-modal-trigger-close" title="Close">
               <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
               </svg>
@@ -289,7 +289,7 @@
 
           </div>
           <footer class="slds-modal__footer">
-            <button class="slds-button slds-button_neutral">Cancel</button>
+            <button class="slds-button slds-button_neutral breakout-modal-trigger-close">Cancel</button>
             <button class="slds-button slds-button_brand" id="breakout-modal-trigger-save" disabled="disabled">Select</button>
           </footer>
         </div>
@@ -4538,6 +4538,11 @@
           console.log('now show results');
         });
 
+        $('.breakout-modal-trigger-close').click(function() {
+          console.log('now close modal');
+          $('#breakout-modal').addClass("slds-hide");
+        });
+
 
 
 
@@ -4577,9 +4582,17 @@
       },
       animation: 150,
       sort: false,
+      onMove: function (evt) {
+         //$(".list").removeClass('hover');
+         $(evt.to).addClass('uber');
+         console.log('moving');
+
+       },
     	onEnd: function (evt) {
         if (evt.to.id == 'canvas'){
           document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
+          //add hover class to canvas
+          $(evt.to).removeClass('uber');
           console.log('1a');
           //now close components menu
           $('.js-component-palette-button').removeClass('is-active');
@@ -4682,7 +4695,6 @@
  }
 
  #canvas .sortable-ghost {
-     background: green;
      height: auto;
      overflow: hidden;
      max-width: 10px;
@@ -4701,8 +4713,10 @@
 }
 #canvas .sortable-ghost{
   /*background: red;*/
-  
+
   width: 100%;
 }
-
+.uber{
+  border: 1px solid green;
+}
 </style>
