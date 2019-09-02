@@ -2294,7 +2294,7 @@
                               </span>
                             </div>
                             <div class="">
-                              <span class="slds-truncate component_name" title="Banner">Custom Component</span>
+                              <span class="slds-truncate component_name" title="Custom Component">Custom Component</span>
                             </div>
                           </div>
 
@@ -2385,21 +2385,23 @@
                               </div>
 
                               <div class="slds-hide">
-                                <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Properties">
+                                <span class="slds-icon_container slds-m-left_small button-trigger-action--edit-component-" title="Edit Component">
                                   <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
                                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
                                   </svg>
-                                  <span class="slds-assistive-text">Custom Component</span>
+                                  <span class="slds-assistive-text">Edit Component</span>
                                 </span>
                               </div>
 
                               <div class="slds-m-right_small">
-                                <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
-                                  <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                  </svg>
-                                  <span class="slds-assistive-text">Custom Component</span>
-                                </span>
+                                <button class="slds-button slds-button_icon button-trigger-action--delete-component" title="Delete Component">
+                                  <span class="slds-icon_container slds-m-left_small trash" title="Delete Component">
+                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-light" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Delete Component</span>
+                                  </span>
+                                </button>
                               </div>
                             </div>
                             <!-- /Navigator Catalog -->
@@ -2781,21 +2783,6 @@
               </div>
             </div>
             <!-- /BREAKOUT FORM ELEMENT -->
-
-            {#
-            <div class="slds-hide slds-p-bottom_small" id="button-breakout_content">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-            #}
-
 
             <div class="slds-box slds-hide"  id="button-breakout_content">
               <div class="slds-inline_icon_text slds-grid">
@@ -3626,8 +3613,8 @@
           $('#static_header').addClass('desktop');
           return false;
         });
-        $('#trigger-preview-tablet_portrait').click(function() {
-          //console.log('trigger tablet portrait resolution');
+        $('#trigger-preview-tablet').click(function() {
+          console.log('trigger tablet portrait resolution');
           $('#listEditor').removeClass('desktop');
           $('#listEditor').removeClass('tablet_portrait');
           $('#listEditor').removeClass('phone_portrait');
@@ -3639,8 +3626,8 @@
           $('#static_header').addClass('tablet_portrait');
           return false;
         });
-        $('#trigger-preview-phone_portrait').click(function() {
-          //console.log('trigger phone portrait resolution');
+        $('#trigger-preview-phone').click(function() {
+          console.log('trigger phone portrait resolution');
           $('#listEditor').removeClass('desktop');
           $('#listEditor').removeClass('tablet_portrait');
           $('#listEditor').removeClass('phone_portrait');
@@ -4544,6 +4531,17 @@
         });
 
 
+        $('.placeholder').click(function() {
+          $('#panel_editor').removeClass("slds-hide");
+        });
+
+        $('.button-trigger-action--delete-component').click(function() {
+          remover = $(this).closest('.item').attr('data-ident');
+          console.log('delete');
+          console.log(remover);
+          //$('#panel_editor').removeClass("slds-hide");
+        });
+
 
 
 
@@ -4574,6 +4572,7 @@
 
 
 <script>
+  var identy = 0;
   new Sortable(components, {
       group: {
           name: 'shared',
@@ -4589,9 +4588,11 @@
 
        },
     	onEnd: function (evt) {
+        identy++;
         if (evt.to.id == 'canvas'){
+          $(evt.item).attr('data-ident', identy);
           document.getElementById("structure").innerHTML = document.getElementById("canvas").innerHTML;
-          //add hover class to canvas
+          //remove hover class to canvas
           $(evt.to).removeClass('uber');
           console.log('1a');
           //now close components menu
@@ -4697,9 +4698,11 @@
  #canvas .sortable-ghost {
      height: auto;
      overflow: hidden;
-     max-width: 10px;
+     /*max-width: 10px;*/
      border-right: 4px solid #fff;
      border-left: 4px solid #fff;
+     cursor: grabbing;
+     width: 100%;
  }
 
  #structure .sortable-ghost{
@@ -4711,12 +4714,10 @@
  #canvas:empty:after {
     content: 'Region';
 }
-#canvas .sortable-ghost{
-  /*background: red;*/
-
-  width: 100%;
-}
 .uber{
   border: 1px solid green;
+}
+.item:hover{
+  cursor: grab;
 }
 </style>
