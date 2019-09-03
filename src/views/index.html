@@ -9,6 +9,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="/styles/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
   <!-- Prototype styles -->
 </head>
 
@@ -2507,12 +2508,12 @@
                                   </span>
                                 </p>
                               </div>
-                              <div class="slds-p-around_small placed_content slds-hide image-holder focal-holder">
+                              <div class="placed_content slds-hide image-holder focal-holder">
                                 <div class="content">
-                                  <div class="slds-text-heading_medium title banner-header"></div>
-                                  <div class="slds-text-heading_small sub banner-sub"></div>
+                                  <div class="slds-text-heading_medium title banner-header">A walk in the park</div>
+                                  <div class="slds-text-heading_small sub banner-sub">Check our gear. We are the designer of outdoor clothing and gear for the silent sports: climbing, surfing, skiing and snowboarding, fly fishing, and trail running.</div>
                                 </div>
-                                <img src="" class="slds-hide image-holder" style="width:100%;">
+                                <img src="/assets/banner.png" class="" style="width:100%;">
                               </div>
 
                               <!-- /COMPONENT -->
@@ -3032,7 +3033,7 @@
                         <figure>
                           <a href="javascript:void(0);" class="slds-file__crop">
                             <span class="slds-assistive-text">Preview:</span>
-                            <img src="https://source.unsplash.com/random/290x160?water" alt="Description of the image"/>
+                            <img src="/assets/banner.png" id="thumb_source" alt="Description of the image"/>
                           </a>
                           <figcaption class="slds-file__title slds-file__title_card slds-file-has-actions">
                             <div class="slds-media slds-media_small slds-media_center">
@@ -3045,7 +3046,7 @@
                                 </span>
                               </div>
                               <div class="slds-media__body" style="width:10rem">
-                                <span class="slds-file__text slds-truncate" title="290x160?water.jpg">290x160?water.jpg</span>
+                                <span class="slds-file__text slds-truncate" title="/assets/banner.png">290x160?water.jpg</span>
                               </div>
                             </div>
                           </figcaption>
@@ -3080,7 +3081,7 @@
                     Copy
                   </label>
                   <div class="slds-form-element__control">
-                    <textarea id="stacked-input-id-02" style="min-height:10rem" placeholder="A walk in the park Check out our gear. We are the designer of outdoor clothing and gear for the silent sports: climbing, surfing, skiing and snowboarding, fly fishing and trail running." class="slds-textarea"></textarea>
+                    <textarea id="stacked-input-id-02" style="min-height:10rem" placeholder="Check out our gear. We are the designer of outdoor clothing and gear for the silent sports: climbing, surfing, skiing and snowboarding, fly fishing and trail running." class="slds-textarea"></textarea>
                   </div>
                 </div>
               </div>
@@ -4202,10 +4203,15 @@
         //NOW SET IMAGE TO PLACEHOLDER
         $('#panel_editor .trigger-save-modal').click(function(selected_image) {
 
-          component_type = $('.text-componentType').val()
+          console.log('saved to page');
+          //component_type = $('.text-componentType').val()
+          component_type = 'banner';
+          $('#canvas .empty').addClass('slds-hide');
+          $('#canvas .placed_content').removeClass('slds-hide');
 
+
+          /*
           if (component_type === 'banner') {
-
             //console.log('component type is: ' + component_type);
             var activeComponent = $('#editor_banner .text-activeComponent').val();
             var selected_image = $('#editor_banner .file-name').text();
@@ -4213,21 +4219,15 @@
             $('li[data-component-id="' + activeComponent + '"] .image-holder').removeClass('slds-hide');
             $('li[data-component-id="' + activeComponent + '"] .image-holder').css('background-image', 'url(' + selected_image + ')');
             $('li[data-component-id="' + activeComponent + '"] .image-holder').attr('src', selected_image);
-
             $('li[data-component-id="' + activeComponent + '"] .placeholder .empty').addClass('slds-hide');
-
-
 
 
             banner_header = $('#editor_banner .text-banner-header').val();
             banner_sub = $('#editor_banner .text-banner-sub').val();
-            /*
-            $('.' + activeComponent + ' .banner-header').html(banner_header);
-            $('.' + activeComponent + ' .banner-sub').html(banner_sub);
-            */
             $('li[data-component-id="' + activeComponent + '"]  .banner-header').html(banner_header);
             $('li[data-component-id="' + activeComponent + '"]  .banner-sub').html(banner_sub);
           }
+
           if (component_type === 'category') {
             //console.log('component type is: ' + component_type);
             var activeComponent = $('#editor_category .text-activeComponent').val();
@@ -4247,7 +4247,7 @@
 
           }
           if (component_type === 'row') {}
-
+          */
 
         });
 
