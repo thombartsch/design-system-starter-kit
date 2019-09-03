@@ -2960,7 +2960,7 @@
 
             <!-- BREAKOUT FORM ELEMENT -->
             <div class="slds-form-element slds-p-bottom_small" id="button-breakout_container">
-              <label class="slds-form-element__label" for="custom-component">Campaign Content Label</label>
+              <!--label class="slds-form-element__label" for="custom-component">Campaign Content Label</label -->
               <div class="slds-form-element__control">
                 <button class="slds-button slds-button_neutral slds-button_stretch" id="button-breakout">Select CMS Content</button>
               </div>
@@ -2969,6 +2969,45 @@
 
             <div class="slds-hide"  id="button-breakout_content">
 
+              <div class="slds-grid slds-cols">
+                <div class="slds-col">
+                  <legend class="slds-form-element__legend slds-form-element__label">Campaign Content Label</legend>
+                </div>
+                <div class="">
+
+
+                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click 2slds-is-open" id="dropdown-cms">
+                    <button class="slds-button slds-button_icon-border-filled slds-button__icon_small" id="button-dropdown-cms" aria-haspopup="true" title="Show More">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                    <div class="slds-dropdown slds-dropdown_right slds-dropdown_small">
+                      <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                        <li class="slds-dropdown__item" role="presentation">
+                          <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                            <span class="slds-truncate" title="Select CMS content">Select CMS content</span>
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#insert_template"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="slds-dropdown__item slds-hide" role="presentation">
+                          <a href="javascript:void(0);" role="menuitem" tabindex="-1" disabled="disabled">
+                            <span class="slds-truncate" title="Save to CMS">Save to CMS</span>
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#save"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
 
               <div class="slds-form">
                 <div class="slds-form-element slds-form-element_stacked">
@@ -3125,7 +3164,7 @@
                                               </svg> Select Source
                                               <span class="slds-assistive-text">Select Source</span>
                                             </button>
-                                            <button class="slds-button 2slds-hide slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
+                                            <button class="slds-button slds-hide slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
                                               <svg class="slds-button__icon" aria-hidden="true">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
                                               </svg>
@@ -4770,8 +4809,7 @@
           $('#breakout-modal').addClass("slds-hide");
           $('#breakout-modal-trigger-save').attr("disabled");
 
-          $('#button-breakout_container').removeClass("slds-hide");
-          $('#button-breakout').addClass("slds-hide");
+          $('#button-breakout_container').addClass("slds-hide");
           $('#button-breakout_content').removeClass("slds-hide");
           console.log('now show results');
         });
