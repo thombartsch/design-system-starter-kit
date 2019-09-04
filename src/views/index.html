@@ -152,6 +152,168 @@
   <main class="app-wrapper">
 
     <!-- BREAKOUT MODAL -->
+
+    <div class="" id="breakout-modal">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
+    <div class="slds-modal__container">
+    <header class="slds-modal__header">
+    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse breakout-modal-trigger-close" title="Close">
+    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+    </svg>
+    <span class="slds-assistive-text">Close</span>
+    </button>
+    <h2 id="id-of-modalheader-h2" class="slds-text-heading_medium">Products</h2>
+    </header>
+    <div class="slds-modal__content slds-grid slds-nowrap" id="modal-content-id-1">
+    <div class="slds-col slds-grid slds-grid_vertical slds-nowrap">
+    <div class="slds-p-vertical_x-small slds-p-horizontal_large slds-shrink-none slds-theme_shade">
+    <div class="slds-form-element">
+    <label class="slds-form-element__label slds-assistive-text" for="combobox-unique-id-5">Search</label>
+    <div class="slds-form-element__control">
+    <div class="slds-combobox_container">
+    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+    <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-5" aria-autocomplete="list" aria-controls="listbox-unique-id" autoComplete="off" role="textbox" placeholder="Search" />
+    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+    </svg>
+    </span>
+    </div>
+    <div id="listbox-unique-id" role="listbox" class="slds-dropdown slds-dropdown_fluid">
+    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+    <li role="presentation" class="slds-listbox__item">
+    <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+    <span class="slds-media__figure">
+    <span class="slds-icon_container slds-icon-standard-account">
+    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+    </svg>
+    </span>
+    </span>
+    <span class="slds-media__body">
+    <span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
+    <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+    </span>
+    </div>
+    </li>
+    <li role="presentation" class="slds-listbox__item">
+    <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+    <span class="slds-media__figure">
+    <span class="slds-icon_container slds-icon-standard-account">
+    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+    </svg>
+    </span>
+    </span>
+    <span class="slds-media__body">
+    <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
+    <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+    </span>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="slds-pill_container slds-pill_container_bare">
+    <ul class="slds-listbox slds-listbox_horizontal" role="listbox" aria-label="Selected Options:" aria-orientation="horizontal">
+    <li class="slds-listbox-item" role="presentation">
+    <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+    <span class="slds-pill__label" title="Fishing Rods">Fishing Rods</span>
+    <span class="slds-icon_container slds-pill__remove" title="Remove">
+    <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+    </svg>
+    <span class="slds-assistive-text">Press delete or backspace to remove</span>
+    </span>
+    </span>
+    </li>
+    </ul>
+    </div>
+    <div class="slds-text-title slds-m-top_x-small" aria-live="polite">1 Item(s) Selected</div>
+    </div>
+    <div class="slds-scrollable slds-grow">
+    <div class="slds-scrollable_none">
+    <table aria-multiselectable="true" class="slds-table slds-no-row-hover slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+    <thead>
+    <tr class="slds-line-height_reset">
+    <th aria-label="Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="-1">
+    <span class="slds-assistive-text">Sort by: </span>
+    <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+    <span class="slds-truncate" title="Name">Name</span>
+    <span class="slds-icon_container slds-icon-utility-arrowdown">
+    <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+    </svg>
+    </span>
+    </div>
+    </a>
+    <div class="slds-resizable">
+    <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-17" max="1000" min="20" tabindex="-1" />
+    <span class="slds-resizable__handle">
+    <span class="slds-resizable__divider"></span>
+    </span>
+    </div>
+    </th>
+    <th class="" scope="col" style="width:3.75rem"></th>
+
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr aria-selected="true" class="slds-hint-parent slds-is-selected">
+      <th scope="row">
+      <div class="slds-truncate" title="Analytics">Analytics</div>
+      </th>
+    <td class="slds-text-align_right" role="gridcell" tabindex="0">
+    <div class="slds-checkbox_add-button">
+    <input type="checkbox" class="slds-assistive-text" id="add-checkbox-33" value="add-checkbox-33" tabindex="-1" checked="" />
+    <label for="add-checkbox-33" class="slds-checkbox_faux">
+    <span class="slds-assistive-text">Select item 1</span>
+    </label>
+    </div>
+    </td>
+    </tr>
+    <tr aria-selected="false" class="slds-hint-parent">
+      <th scope="row">
+      <div class="slds-truncate" title="Analytics">Analytics</div>
+      </th>
+
+    <td class="slds-text-align_right" role="gridcell">
+    <div class="slds-checkbox_add-button">
+    <input type="checkbox" class="slds-assistive-text" id="add-checkbox-34" value="add-checkbox-34" tabindex="-1" />
+    <label for="add-checkbox-34" class="slds-checkbox_faux">
+    <span class="slds-assistive-text">Select item 2</span>
+    </label>
+    </div>
+    </td>
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer class="slds-modal__footer">
+    <button class="slds-button slds-button_neutral breakout-modal-trigger-close">Cancel</button>
+    <button class="slds-button slds-button_brand" id="breakout-modal-trigger-save">Next</button>
+    </footer>
+    </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+
+
+  {#
     <div id="breakout-modal" style="" class="slds-hide">
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
@@ -165,129 +327,6 @@
             <h2 id="breakout-modal-heading" class="slds-text-heading_medium slds-hyphenate">CMS - Asset Selector</h2>
           </header>
           <div class="slds-modal__content  slds-grow 2slds-p-around_medium" id="breakout-modal-content">
-
-            {#
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?nature" alt="https://source.unsplash.com/random/120x60?nature" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-            #}
-
 
             <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
               <thead>
@@ -473,6 +512,7 @@
       </section>
       <div class="slds-backdrop slds-backdrop_open"></div>
     </div>
+  #}
     <!-- /BREAKOUT MODAL -->
 
 
@@ -553,9 +593,9 @@
             <div class="editor" class="">
               <div class="slds-tabs_default">
                 <ul class="slds-hide slds-tabs_default__nav" role="tablist">
-                  <li class="slds-tabs_default__item 2slds-is-active" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Properties</a></li>
-                  <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Rules</a></li>
-                  <li class="slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Localization</a></li>
+                  <li class="slds-tabs_default__item 2slds-is-active" title="Properties" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Properties</a></li>
+                  <li class="slds-tabs_default__item" title="Rules" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Rules</a></li>
+                  <li class="slds-tabs_default__item" title="Localization" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Localization</a></li>
                 </ul>
 
                 <div id="tab-default-391" class="slds-tabs_default__content slds-show slds-p-left_small slds-p-right_small" role="tabpanel" aria-labelledby="tab-default-1__item">
@@ -1975,7 +2015,7 @@
       <div class="slds-backdrop slds-backdrop--open"></div>
     </div>
     <div class="modal slds-hide" id="modal-code">
-      <section role="dialog" tabindex="-1" class="slds-modal slds-modal_large slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-3">
+      <section role="dialog" tabindex="-1" class="slds-modal slds-modal_medium slds-fade-in-open " aria-labelledby="header44" aria-describedby="modal-content-id-3">
         <div class="slds-modal__container">
           <header class="slds-modal__header">
             <button class="slds-button slds-button--icon slds-modal__close slds-button--icon-inverse js-close-modal-id-101 trigger-close trigger-close-modal js-close-modal-id-101 trigger-cancel" title="Close" id="">
@@ -2910,6 +2950,7 @@
                   <span class="slds-assistive-text">Show More</span>
                 </button>
                 <div class="slds-hide slds-dropdown slds-dropdown_right">
+                  {#
                   <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
                     <li class="slds-dropdown__item" role="presentation">
                       <a href="javascript:void(0);" role="menuitem" tabindex="0">
@@ -2933,6 +2974,7 @@
                       </a>
                     </li>
                   </ul>
+                  #}
                 </div>
               </div>
               <div class="slds-col">
@@ -2955,11 +2997,11 @@
 
             <div class="slds-tabs_default">
               <ul class="slds-tabs_default__nav" role="tablist">
-                <li class="slds-tabs_default__item slds-is-active" title="General" role="presentation">
-                  <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-general" id="tab-default-general__item">Item One</a>
+                <li class="slds-tabs_default__item slds-is-active" title="General" role="presentation" id="tab-default-general__list">
+                  <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-general" id="tab-default-general__item">General</a>
                 </li>
-                <li class="slds-tabs_default__item" title="Design" role="presentation">
-                  <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-design" id="tab-default-design__item">Item Two</a>
+                <li class="slds-tabs_default__item" title="Design" role="presentation" id="tab-default-design__list">
+                  <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-design" id="tab-default-design__item">Design</a>
                 </li>
               </ul>
               <div id="tab-default-general" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-general__item">
@@ -3039,7 +3081,68 @@
 
                 <!-- /GENERAL -->
               </div>
-              <div id="tab-default-design" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-design__item">Item Two Content</div>
+              <div id="tab-default-design" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-design__item">
+
+
+
+                <fieldset class="slds-form-element">
+                  <legend class="slds-form-element__legend slds-form-element__label">Select an app</legend>
+                  <div class="slds-form-element__control">
+                    <div class="slds-visual-picker slds-visual-picker_small">
+                      <input type="radio" id="visual-picker-75" value="visual-picker-75" name="options" />
+                      <label for="visual-picker-75">
+                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                          <span class="slds-is-selected">
+                            <span class="slds-icon_container">
+                              <svg class="slds-icon slds-icon_small slds-icon-action-check" aria-hidden="true">
+                                <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-is-not-selected">
+                            <span class="slds-icon_container">
+                              <svg class="slds-icon slds-icon-utility-connected_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="slds-visual-picker__body">
+                          <span class="slds-text-title">Connected App</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="slds-visual-picker slds-visual-picker_medium">
+                      <input type="radio" id="visual-picker-76" value="visual-picker-76" name="options" />
+                      <label for="visual-picker-76">
+                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                          <span class="slds-is-selected">
+                            <span class="slds-icon_container">
+                              <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
+                                <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="slds-is-not-selected">
+                            <span class="slds-icon_container">
+                              <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#custom_apps"></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="slds-visual-picker__body">
+                          <span class="slds-text-title">Custom App</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+
+
+
+              </div>
             </div>
 
 
@@ -4810,6 +4913,29 @@
 
 
       });
+
+
+
+
+      //PROPERTIES GENERAL AND DESIGN TABS
+      $('#tab-default-general__item').click(function() {
+        $('#tab-default-design__list').removeClass("slds-is-active");
+        $('#tab-default-general__list').addClass("slds-is-active");
+
+        $('#tab-default-general').removeClass("slds-hide");
+        $('#tab-default-design').addClass("slds-hide");
+      });
+      $('#tab-default-design__item').click(function() {
+        $('#tab-default-general__list').removeClass("slds-is-active");
+        $('#tab-default-design__list').addClass("slds-is-active");
+
+        $('#tab-default-design').removeClass("slds-hide");
+        $('#tab-default-general').addClass("slds-hide");
+
+      });
+
+
+
     </script>
 
 
