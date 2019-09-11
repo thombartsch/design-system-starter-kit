@@ -153,7 +153,7 @@
 
     <!-- BREAKOUT MODAL -->
 
-    <div class="" id="breakout-modal">
+    <div class="slds-hide" id="breakout-modal">
     <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="id-of-modalheader-h2" aria-modal="true" aria-describedby="modal-content-id-1">
     <div class="slds-modal__container">
     <header class="slds-modal__header">
@@ -3023,7 +3023,7 @@
                 </div>
                 <!-- /BREAKOUT FORM ELEMENT -->
 
-                <div class="slds-hide2 slds-grid slds-grid_vertical"  id="button-breakout_content">
+                <div class="slds-hide slds-grid slds-grid_vertical"  id="button-breakout_content">
                   <legend class="slds-form-element__legend slds-form-element__label">Slides</legend>
                   <div class="slds-grid slds-grid_vertical slds-col" id="slide_list">
                       <div class="slds-col slds-grid slds-box slds-p-around_small slds-m-bottom_small item">
@@ -3086,837 +3086,126 @@
 
 
                 <fieldset class="slds-form-element">
-                  <legend class="slds-form-element__legend slds-form-element__label">Select an app</legend>
-                  <div class="slds-form-element__control">
-                    <div class="slds-visual-picker slds-visual-picker_small">
-                      <input type="radio" id="visual-picker-75" value="visual-picker-75" name="options" />
-                      <label for="visual-picker-75">
-                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
-                          <span class="slds-is-selected">
-                            <span class="slds-icon_container">
-                              <svg class="slds-icon slds-icon_small slds-icon-action-check" aria-hidden="true">
-                                <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
-                              </svg>
+
+                  <legend class="slds-form-element__legend slds-form-element__label">Carousel Style</legend>
+                    <div class="slds-form-element__control slds-grid">
+                      <div class="slds-visual-picker slds-visual-picker_small">
+                        <input type="radio" id="layout-slideshow" value="layout-slideshow" name="options" />
+                        <label for="layout-slideshow">
+                          <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center slds-p-around_medium">
+                            <span>
+                              <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <!--svg class="slds-icon slds-icon-text-default slds-icon_medium" aria-hidden="true">
+                                  <use xlink:href="/assets/layout_carousel.svg"></use>
+                                </svg-->
+                                <img src="/assets/layout_slideshow.svg" border="0" width="48" alt="Slideshow layout" />
+                                <span class="slds-assistive-text">Slideshow layout</span>
+                              </span>
+                              <span class="slds-text-title">Slideshow</span>
                             </span>
                           </span>
-                          <span class="slds-is-not-selected">
-                            <span class="slds-icon_container">
-                              <svg class="slds-icon slds-icon-utility-connected_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
-                              </svg>
+                          <span class="slds-icon_container slds-visual-picker__text-check">
+                            <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="slds-visual-picker slds-visual-picker_small">
+                        <input type="radio" id="layout-carousel" value="layout-carousel" name="options" />
+                        <label for="layout-carousel">
+                          <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center slds-p-around_medium">
+                            <span>
+                              <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <!--svg class="slds-icon slds-icon-text-default slds-icon_medium" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#carousel"></use>
+                                </svg-->
+                                <img src="/assets/layout_carousel.svg" border="0" width="48" alt="Carousel layout" />
+                                <span class="slds-assistive-text">Description of icon when needed</span>
+                              </span>
+
+                              <span class="slds-text-title">Carousel</span>
                             </span>
                           </span>
-                        </span>
-                        <span class="slds-visual-picker__body">
-                          <span class="slds-text-title">Connected App</span>
-                        </span>
-                      </label>
+                          <span class="slds-icon_container slds-visual-picker__text-check">
+                            <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="slds-visual-picker slds-visual-picker_small">
+                        <input type="radio" id="layout-grid" value="layout-grid" name="options" />
+                        <label for="layout-grid">
+                          <span class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center slds-p-around_medium">
+                            <span>
+                              <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                <img src="/assets/layout_stacked.svg" border="0" width="48" alt="Stacked layout" />
+                                <!--svg class="slds-icon slds-icon-text-default slds-icon_medium" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#carousel"></use>
+                                </svg-->
+                                <span class="slds-assistive-text">Stacked Layout</span>
+                              </span>
+
+                              <span class="slds-text-title">Stacked</span>
+                            </span>
+                          </span>
+                          <span class="slds-icon_container slds-visual-picker__text-check">
+                            <svg class="slds-icon slds-icon-text-check slds-icon_x-small" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                            </svg>
+                          </span>
+                        </label>
+                      </div>
                     </div>
-                    <div class="slds-visual-picker slds-visual-picker_medium">
-                      <input type="radio" id="visual-picker-76" value="visual-picker-76" name="options" />
-                      <label for="visual-picker-76">
-                        <span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
-                          <span class="slds-is-selected">
-                            <span class="slds-icon_container">
-                              <svg class="slds-icon slds-icon_large slds-icon-action-check" aria-hidden="true">
-                                <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
-                              </svg>
-                            </span>
-                          </span>
-                          <span class="slds-is-not-selected">
-                            <span class="slds-icon_container">
-                              <svg class="slds-icon slds-icon-utility-custom_apps slds-icon_large slds-icon-text-default" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#custom_apps"></use>
-                              </svg>
-                            </span>
-                          </span>
-                        </span>
-                        <span class="slds-visual-picker__body">
-                          <span class="slds-text-title">Custom App</span>
-                        </span>
-                      </label>
+
+                    <div class="slds-form-element slds-p-top_small">
+                      <label class="slds-form-element__label" for="select-01">Content alignment</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                          <select class="slds-select" id="select-01">
+                            <option>Left</option>
+                            <option>Center</option>
+                            <option>Right</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+
                 </fieldset>
 
 
-
+                <fieldset class="slds-form-element slds-p-top_small">
+                  <legend class="slds-hide slds-form-element__legend slds-form-element__label">Further settings</legend>
+                  <div class="slds-form-element__control">
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-unique-id-71" value="checkbox-unique-id-71" checked=""/>
+                      <label class="slds-checkbox__label" for="checkbox-unique-id-71">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Automatically transition between slides</span>
+                      </label>
+                    </div>
+                    <div class="slds-checkbox">
+                      <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72"/>
+                      <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Show Next and Previous controls</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="slds-checkbox">
+                    <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73"/>
+                    <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                      <span class="slds-checkbox_faux"></span>
+                      <span class="slds-form-element__label">Open links in new window</span>
+                    </label>
+                  </div>
+                </div>
+                </fieldset>
 
               </div>
-            </div>
-
-
             <!-- /TABS -->
 
-
-
-
-
-
-
-            {#
-            <!-- BANNER EDITOR -->
-            <div class="component_properties slds-hide" id="editor_banner">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-371" id="tab-default-371__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-372" id="tab-default-372__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-373" id="tab-default-373__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-371" class="slds-tabs_default__content tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-371__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Text Blocks</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Campaign Content Text Header</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-header" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Campaign Content Text Sub</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-sub" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Image</legend>
-                          <label class="slds-form-element__label" for="text-input-id-1">Media</label>
-                          <div style="width: 18rem;">
-                            <div class="slds-file slds-file_card">
-                              <figure class="">
-                                <div class="slds-file__crop set-focal-point">
-                                  <div class="circle">
-                                    <div class="circle-in" class="circle"></div>
-                                  </div>
-                                  <img src="/assets/placeholder.png" alt="" class="image-figure-thumb" style="font-size: 39px;" />
-                                </div>
-
-
-
-                                <figcaption class="slds-file__title slds-file__title_card">
-                                  <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
-                                    <div class="slds-media__body slds-col slds-media__body slds-col slds-truncate slds-truncate_container_25">
-                                      <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
-                                    </div>
-                                    <div class="slds-media__figure slds-p-left--large">
-                                      <div class="slds-text-align_center">
-
-
-                                        <div class="slds-file__actions-menu">
-                                          <div class="slds-button-group" role="group">
-                                            <button class="slds-button slds-button_icon 2slds-button_icon-x-medium open-menu-select" title="Select Image">
-                                              <svg class="slds-button__icon slds-hide" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                              </svg> Select Source
-                                              <span class="slds-assistive-text">Select Source</span>
-                                            </button>
-                                            <button class="slds-button slds-hide slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
-                                              <svg class="slds-button__icon" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                              </svg>
-                                              <span class="slds-assistive-text">Select Source</span>
-                                            </button>
-
-
-
-
-                                            <div class="slds-dropdown slds-dropdown_right slds-dropdown_small image_chooser slds-hide">
-                                              <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
-                                                <li class="slds-dropdown__item" role="presentation">
-                                                  <a href="javascript:void(0);" class="add-image" role="menuitem" tabindex="0">
-                                                    <span class="slds-truncate" title="Commerce Cloud">
-                                                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#campaign"></use>
-                                                      </svg>Commerce Cloud</span>
-                                                  </a>
-                                                </li>
-                                                <li class="slds-dropdown__item" role="presentation">
-                                                  <a href="javascript:void(0);" class="dropbox_chooser" role="menuitem" tabindex="-1">
-                                                    <span class="slds-truncate" title="Dropbox">
-
-                                                      <img src="/assets/Dropbox_Icon.svg.png" class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" width="16" style="opacity: 1;">
-                                                      Dropbox</span>
-                                                  </a>
-                                                </li>
-                                              </ul>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </figcaption>
-
-
-
-
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-
-                      </li>
-
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Media Alt Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-372" class="slds-tabs_default__content tab_rules_content slds-hide" role="tabpanel" aria-labelledby="tab-default-372__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="banner-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /BANNER EDITOR -->
-            <!-- CAT EDITOR -->
-            <div class="component_properties slds-hide" id="editor_category">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-category-1"
-                        id="tab-default-category-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-category-2"
-                        id="tab-default-category-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-category-3"
-                        id="tab-default-category-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-category-1" class="slds-tabs_default__content  tab_general_content  tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-category-1__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Category</legend>
-                      <li class="slds-p-bottom_small">
-                        <!--legend>Category</legend-->
-                        <div class="slds-form-element__group">
-                          <div class="slds-form-element__row slds-grid">
-                            <div class="slds-form-element slds-size_10-of-12">
-                              <input type="text" id="" class="slds-input product-link" placeholder="">
-                            </div>
-                            <div class="slds-form-element slds-size_2-of-12 slds-text-align_right">
-                              <button class="slds-button slds-button_neutral add-product slds-p-left_small">...<span class="slds-assistive-text">Select</span></button>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <legend>Category Image</legend>
-                        <div class="slds-form-element__group">
-                          <div style="width: 18rem;">
-                            <div class="slds-file slds-file_card">
-                              <figure class="">
-                                <div class="slds-file__crop set-focal-point">
-                                  <div class="circle">
-                                    <div class="circle-in"></div>
-                                  </div>
-                                  <img src="/assets/placeholder.png" alt="" class="image-figure-thumb" style="font-size: 39px; opacity: 1;">
-                                </div>
-                                <figcaption class="slds-file__title slds-file__title_card">
-                                  <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
-                                    <div class="slds-media__body slds-col">
-                                      <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
-                                    </div>
-                                    <div class="slds-media__figure slds-p-left--large">
-                                      <div class="slds-text-align_center">
-                                        <button class="slds-button icon-add slds-button_icon 2slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Image</span>
-                                        </button>
-
-                                        <button class="slds-hide icon-edit slds-button slds-button_icon slds-button_icon slds-button_icon-x-small select-image" title="Select Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Edit Image</span>
-                                        </button>
-                                        <button class="slds-hide icon-clear slds-button slds-button_icon slds-button_icon slds-button_icon-x-small remove-image" title="Remove Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Clear Image</span>
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </figcaption>
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Call to Action</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Button Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-header-product" placeholder="">
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="slds-p-bottom_small slds-hide">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Media Alt Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="">
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-category-2" class="slds-tabs_default__content  tab_general_rules  tab_general_rules slds-hide" role="tabpanel" aria-labelledby="tab-default-category-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="category-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="category-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="category-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /CAT EDITOR -->
-            <!-- ROW EDITOR -->
-            <div class="component_properties slds-hide" id="editor_row">
-              <!--  ROW SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-row-1" id="tab-default-row-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-2" id="tab-default-row-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-3" id="tab-default-row-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-row-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-row-1__item">
-                    <!-- CONTENT -->
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-row-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-row-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="row-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="row-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="row-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-
-
-                </div>
-              </div>
-
-
-              <!--  /ROW SELECTION CONTENT-->
-            </div>
-            <!-- /ROW EDITOR -->
-            <!-- RTE EDITOR -->
-            <div class="component_properties slds-hide" id="editor_rtf">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-rtf-1" id="tab-default-rtf-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-rtf-2" id="tab-default-rtf-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-rtf-3" id="tab-default-rtf-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-rtf-1" class="slds-tabs_default__content  tab_general_content  tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-rtf-1__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Content</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <div class="slds-form-element__control">
-                            <div class="demo-only" style="min-height: 180px;">
-                              <div class="slds-form-element">
-                                <div class="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap">
-                                  <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
-                                    <div class="slds-grid slds-rich-text-editor__spacing-wrapper" role="group" aria-label="Format font family &amp; size">
-                                      <div class="slds-rich-text-editor__select">
-                                        <div class="slds-form-element">
-                                          <label class="slds-form-element__label slds-assistive-text" for="font-family">Choose a Font</label>
-                                          <div class="slds-form-element__control">
-                                            <div class="slds-combobox_container">
-                                              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_x-small" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                                  <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="font-family" aria-controls="family-listbox" autocomplete="off" role="textbox" placeholder="Select an Option"
-                                                    readonly="" value="Font" />
-                                                  <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                                    </svg>
-                                                    <span class="slds-assistive-text">Description of icon when needed</span>
-                                                  </span>
-                                                </div>
-                                                <div id="family-listbox" role="listbox">
-                                                  <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="Times New Roman"> Times New Roman</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="Arial"> Arial</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                  </ul>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="slds-rich-text-editor__select">
-                                        <div class="slds-form-element">
-                                          <label class="slds-form-element__label slds-assistive-text" for="font-size">Choose a Font Size</label>
-                                          <div class="slds-form-element__control">
-                                            <div class="slds-combobox_container">
-                                              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_xx-small" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                                  <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="font-size" aria-controls="size-listbox" autocomplete="off" role="textbox" placeholder="Select an Option"
-                                                    readonly="" tabindex="-1" value="Size" />
-                                                  <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                                    </svg>
-                                                    <span class="slds-assistive-text">Description of icon when needed</span>
-                                                  </span>
-                                                </div>
-                                                <div id="size-listbox" role="listbox">
-                                                  <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="12px"> 12px</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="14px"> 14px</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                  </ul>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <ul aria-label="Format text" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#bold" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Bold</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#italic" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Italic</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#underline" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Underline</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Strike Through</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Format background &amp; text color" class="slds-button-group-list">
-                                      <li>
-                                        <button tabindex="-1" class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled" aria-haspopup="true">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color" />
-                                          </svg>
-                                          <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Background Color</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button tabindex="-1" class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled" aria-haspopup="true">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_color" />
-                                          </svg>
-                                          <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Text Color</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Format body" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextbulletedlist" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Bulleted List</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextnumberedlist" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Numbered List</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextindent" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Indent</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextoutdent" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Outdent</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Align text" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Left Align Text</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#center_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Center Align Text</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Right Align Text</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Insert content" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#emoji" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Emoji</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Image</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#link" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Link</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Remove Formatting" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#remove_formatting" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Remove Formatting</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                  <div class="slds-rich-text-editor__textarea slds-grid">
-                                    <div aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-rtf-2" class="slds-tabs_default__content  tab_general_rules  tab_general_rules slds-hide" role="tabpanel" aria-labelledby="tab-default-rtf-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /RTE EDITOR -->
-            #}
           </div>
           <div class="slds-panel__header slds-panel__header_custom action_footer">
             <button class="slds-button slds-button_neutral slds-col_bump-right trigger-close-modal">Close</button>

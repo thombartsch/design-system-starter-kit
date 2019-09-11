@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>layout_carousel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="layout_carousel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LAYOUT/1COL" opacity="0.495605469" transform="translate(13.000000, 3.000000)" fill="#D8D8D8" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="21" height="41"></rect>
+        </g>
+        <g id="LAYOUT/1COL" opacity="0.495605469" transform="translate(0.000000, 3.000000)" fill="#D8D8D8" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="9" height="41"></rect>
+        </g>
+        <g id="LAYOUT/1COL" opacity="0.495605469" transform="translate(38.000000, 3.000000)" fill="#D8D8D8" stroke="#979797">
+            <rect id="Rectangle" x="0.5" y="0.5" width="9" height="41"></rect>
+        </g>
+        <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="47" y="3" width="1" height="42"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="3" width="1" height="42"></rect>
+    </g>
+</svg>
