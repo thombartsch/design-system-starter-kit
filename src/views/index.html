@@ -1296,10 +1296,12 @@
                       id="tab-default-21__item">Localization</a></li>
                   <li class="slds-tabs_default__item" title="Item Three" role="presentation" id="page-settings-seo"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-31"
                       id="tab-default-31__item">SEO</a></li>
-                  <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-32"
+                  <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-41"
                       id="tab-default-41__item">Targeting</a></li>
-                  <li class="slds-tabs_default__item  slds-is-active" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-42"
-                          id="tab-default-42__item">Site Search</a></li>
+                  <li class="slds-tabs_default__item  slds-is-active" title="Item Four" role="presentation" id="site-search"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-51"
+                      id="tab-default-51__item">Site Search</a></li>
+                  <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="custom-attributes"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-61"
+                      id="tab-default-61__item">Custom Attributes</a></li>
                 </ul>
                 <div id="tab-default-11" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-11__item">
                   <!-- GENERAL -->
@@ -1463,7 +1465,7 @@
                   <!-- /SEO -->
                 </div>
 
-                <div id="tab-default-32" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
+                <div id="tab-default-41" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-41__item">
                   <!-- RULES -->
 
                   <div>
@@ -1566,7 +1568,7 @@
                   <!-- /RULES -->
                 </div>
 
-                <div id="tab-default-42" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-42__item">
+                <div id="tab-default-51" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-51__item">
 
 
 
@@ -1620,59 +1622,7 @@
 
 
 
-                    <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address slds-p-top_small">
-                      <legend class="slds-form-element__legend slds-form-element__label">Custom page search attributes</legend>
-                      <div class="slds-form-element__control">
 
-                        <div class="slds-form-element__row">
-                          <div class="slds-size_3-of-6">
-                            <div class="slds-form-element">
-                              <label class="slds-form-element__label" for="form-element-id-05">Page thumbnail</label>
-                              <div class="slds-form-element__control">
-                                <button class="slds-button slds-button_neutral">
-                                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
-                                </svg>Upload
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="slds-size_3-of-6">
-                            <div class="slds-form-element">
-                              <label class="slds-form-element__label" for="form-element-id-06">Page thumbnail alt text</label>
-                              <div class="slds-form-element__control">
-                                <input type="text" id="form-element-id-06" required="" class="slds-input" value=""/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                        <div class="slds-form-element__row">
-                          <div class="slds-size_1-of-1">
-                            <div class="slds-form-element">
-                              <label class="slds-form-element__label" for="form-element-id-04">Header</label>
-                              <div class="slds-form-element__control">
-                                <input type="text" id="form-element-id-06" required="" class="slds-input" value="Header text"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element__row">
-                          <div class="slds-size_1-of-1">
-                            <div class="slds-form-element">
-                              <label class="slds-form-element__label" for="form-element-id-04">Page description</label>
-                              <div class="slds-form-element__control">
-                                <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="Placeholder Text">Page description</textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
-                    </fieldset>
 
 
 
@@ -1681,6 +1631,109 @@
 
                 </div>
 
+                <div id="tab-default-61" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-61__item">
+                  <!-- RULES -->
+
+                    <div class="slds-popover__body slds-p-around_none" id="dialog-body-id-preview-settings">
+                      <div class="slds-form">
+                        <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                                              <legend class="slds-form-element__legend slds-form-element__label">Custom page search attributes</legend>
+                                              <div class="slds-form-element__control">
+
+                                                <div class="slds-form-element__row">
+                                                  <div class="slds-size_3-of-6">
+                                                    <div class="slds-form-element">
+                                                      <label class="slds-form-element__label" for="form-element-id-05">Page thumbnail</label>
+                                                      <div class="slds-form-element__control">
+                                                        <button class="slds-button slds-button_neutral">
+                                                          <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                                                        </svg>Upload
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+                                                <div class="slds-form-element__row">
+                                                  <div class="slds-size_1-of-1">
+                                                    <div class="slds-form-element">
+                                                      <label class="slds-form-element__label" for="form-element-id-06">Page thumbnail alt text</label>
+                                                      <div class="slds-form-element__control">
+                                                        <input type="text" id="form-element-id-06" required="" class="slds-input" value="">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+
+                                                <div class="slds-form-element__row">
+                                                  <div class="slds-size_1-of-1">
+                                                    <div class="slds-form-element">
+                                                      <label class="slds-form-element__label" for="form-element-id-04">Header</label>
+                                                      <div class="slds-form-element__control">
+                                                        <input type="text" id="form-element-id-06" required="" class="slds-input" value="Header text">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+                                                <div class="slds-form-element__row">
+                                                  <div class="slds-size_1-of-1">
+                                                    <div class="slds-form-element">
+                                                      <label class="slds-form-element__label" for="form-element-id-04">Page description</label>
+                                                      <div class="slds-form-element__control">
+                                                        <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="Placeholder Text">Page description</textarea>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+
+                                              </div>
+                                            </fieldset>
+
+                    </div>
+                  </div>
+
+                  <div class="slds-hide slds-p-bottom_small">
+                    <div class="slds-form slds-form_compound">
+                      <div class="slds-form-element__row slds-grid">
+                        <div class="slds-form-element">
+                          <label class="slds-form-element__label" for="select-01">
+                            <!--abbr class="slds-required" title="required">*</abbr-->Customer Groups:</label>
+                          <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                              <select class="slds-select" id="select-01">
+                                <option selected="selected">Everyone</option>
+                                <option>Customer Group A</option>
+                                <option>Customer Group B</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="slds-form-element">
+                          <label class="slds-form-element__label" for="select-01">
+                            Display from:</label>
+                          <div class="slds-form-element__control">
+                            <input type="text" id="page-rule-from" class="slds-input" placeholder="--/--/----">
+                          </div>
+                        </div>
+                        <div class="slds-form-element">
+                          <label class="slds-form-element__label" for="select-01">
+                            Display to:</label>
+                          <div class="slds-form-element__control">
+                            <input type="text" id="page-rule-to" class="slds-input" placeholder="--/--/----">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- /RULES -->
+                </div>
 
 
 
@@ -5111,6 +5164,54 @@
         });
 
 
+        //TAB HANDLING
+
+        $('#page-settings-general').click(function() {
+          console.log('show tab general');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-11').removeClass('slds-hide');
+          $('#page-settings-general').addClass('slds-is-active');
+        });
+        $('#page-settings-shared').click(function() {
+          console.log('show tab localization');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-21').removeClass('slds-hide');
+          $('#page-settings-shared').addClass('slds-is-active');
+        });
+
+        $('#page-settings-seo').click(function() {
+          console.log('show tab seo');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-31').removeClass('slds-hide');
+          $('#page-settings-seo').addClass('slds-is-active');
+        });
+
+        $('#page-settings-rules').click(function() {
+          console.log('show tab rules');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-41').removeClass('slds-hide');
+          $('#page-settings-rules').addClass('slds-is-active');
+        });
+
+        $('#site-search').click(function() {
+          console.log('show tab site search');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-51').removeClass('slds-hide');
+          $('#site-search').addClass('slds-is-active');
+        });
+
+        $('#custom-attributes').click(function() {
+          console.log('show custom attributes');
+          $('li.slds-is-active').removeClass('slds-is-active');
+          $('div.slds-tabs_default__content').addClass('slds-hide');
+          $('#tab-default-61').removeClass('slds-hide');
+          $('#custom-attributes').addClass('slds-is-active');
+        });
 
 
 
