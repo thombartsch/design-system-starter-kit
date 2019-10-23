@@ -1294,10 +1294,10 @@
                       id="tab-default-11__item">General</a></li>
                   <li class="slds-tabs_default__item" title="Item Two" role="presentation" id="page-settings-shared"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-21"
                       id="tab-default-21__item">Localization</a></li>
-                  <li class="slds-tabs_default__item" title="Item Three" role="presentation" id="page-settings-seo"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-31"
-                      id="tab-default-31__item">SEO</a></li>
                   <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="page-settings-rules"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-41"
                       id="tab-default-41__item">Targeting</a></li>
+                  <li class="slds-tabs_default__item" title="Item Three" role="presentation" id="page-settings-seo"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-31"
+                      id="tab-default-31__item">SEO</a></li>
                   <li class="slds-tabs_default__item  slds-is-active" title="Item Four" role="presentation" id="site-search"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-51"
                       id="tab-default-51__item">Site Search</a></li>
                   <li class="slds-tabs_default__item" title="Item Four" role="presentation" id="custom-attributes"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-2    " aria-selected="false" aria-controls="tab-default-61"
@@ -1305,8 +1305,12 @@
                 </ul>
                 <div id="tab-default-11" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-11__item">
                   <!-- GENERAL -->
-                  <div class=" slds-hide slds-form slds-form_compound">
-                    <fieldset class="slds-form-element">
+                  <div class="slds-form-element slds-p-bottom_small">
+                    <legend class="slds-form-element__legend slds-form-element__label">NO ADJUSTMENT HERE</legend>
+                  </div>
+
+
+                    <fieldset class="slds-hide slds-form-element">
                       <div class="slds-form-element__group">
                         <div class="slds-form-element__row">
                           <div class="slds-form-element slds-size_1-of-2">
@@ -1328,11 +1332,11 @@
                         </div>
                       </div>
                     </fieldset>
-                    <fieldset class="slds-form-element">
+                    <fieldset class="slds-hide slds-form-element">
                       <div class="slds-form-element__group">
                         <div class="slds-form-element__row">
                           <div class="slds-form-element slds-size_1-of-1">
-                            <label class="slds-form-element__label" for="input-03">ID (URL Suffix)</label>
+                            <label class="slds-form-element__label" for="input-03">Tags</label>
                             <div class="slds-form-element__icon">
                               <button aria-describedby="help" class="slds-button slds-button_icon">
                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -1345,6 +1349,33 @@
                             <input type="text" id="input-03" class="slds-input">
                           </div>
                         </div>
+
+
+                        <div class="slds-form-element__row slds-p-top_small">
+                          <div class="slds-form-element slds-size_1-of-1">
+                            <h3 class="slds-text-heading--small slds-m-bottom--x-small">Library</h3>
+                            <ul class="slds-has-dividers_bottom-space">
+                              <li class="slds-item">Shared Library Name</li>
+                            </ul>
+                            <div class="slds-p-around_small">
+                            </div>
+                          </div>
+                          <div class="slds-form-element slds-size_1-of-1">
+                            <h3 class="slds-text-heading--small slds-m-bottom--x-small">Shared Sites</h3>
+                            <ul class="slds-has-dividers_bottom-space">
+                              <li class="slds-item">Site Genesis - Global</li>
+                              <li class="slds-item">Shared Site Name</li>
+                            </ul>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                        {#
                         <div class="slds-form-element__row slds-hide">
                           <div class="slds-form-element slds-size_1-of-1">
                             <label class="slds-form-element__label" for="input-03">Comment</label>
@@ -1362,6 +1393,7 @@
                             </span>
                           </div>
                         </div>
+                        #}
 
 
                         <div class="slds-form-element__row">
@@ -1392,42 +1424,127 @@
 
                       </div>
                     </fieldset>
+
                   </div>
                   <!-- /GENERAL -->
                 </div>
-
                 <div id="tab-default-21" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-21__item">
+                  <!-- CUSTOM ATTRIBUTES -->
+                  <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error alert-fallback slds-m-bottom_small" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                      <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                      </svg>
+                    </span>
+                    <h2>This page contains settings displaying according to fallback hierarchy: <strong>default</strong>
+                    </h2>
+                    <div class="slds-notify__close">
+                      <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="slds-popover__body slds-p-around_none" id="dialog-body-id-preview-settings">
+
+                    <div class="slds-form">
+                      <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                        <div class="slds-form-element__control">
+
+                          <div class="slds-form-element__control">
+                            <div class="slds-form-element__row">
+                              <span class="slds-badge slds-badge_lightest slds-m-bottom_medium">
+                                <span class="slds-badge__icon slds-badge__icon_left">
+                                  <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                    </svg>
+                                  </span>
+                                </span>Localization: en-US</span>
+                            </div>
+                          </div>
+
+                          <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-1">
+                                <div class="slds-form-element">
+                                <label class="slds-checkbox_toggle slds-grid">
+                                <span class="slds-form-element__label slds-m-bottom_none">Page visible for this locale</span>
+                                <input type="checkbox" name="checkbox-toggle-6" value="checkbox-toggle-6" aria-describedby="checkbox-toggle-6" checked="" />
+                                <span id="checkbox-toggle-6" class="slds-checkbox_faux_container" aria-live="assertive">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-checkbox_on">Visible</span>
+                                <span class="slds-checkbox_off">Not visible</span>
+                                </span>
+                                </label>
+                                </div>
+                              </div>
+                          </div>
 
 
+                          <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-1 localization">
+                              <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                <span class="slds-form-element__label">Page Name (default locale)</span>
+                                  <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">Page Name</div>
+                                    <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                      <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Edit: Status</span>
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="slds-form-element slds-hide override">
+                                <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">Page Name</label>
+                                <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                  <span class="slds-form-element__addon" nowrap id="" style="min-width:3rem">en-US</span>
+                                  <input type="text" id="" placeholder="Page Name" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" />
+                                  <span class="slds-form-element__addon" id="f"><a href="#" class="override_reset">reset</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
+                          <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-1 localization">
+                              <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                <span class="slds-form-element__label">Page Description (default locale)</span>
+                                  <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">Page Description</div>
+                                    <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                      <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Edit: Status</span>
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="slds-form-element slds-hide override">
+                                <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">Page Description</label>
+                                <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                  <span class="slds-form-element__addon" nowrap id="fixed-text-addon-pre" style="min-width:3rem">en-US</span>
+                                  <!--input type="text" id="text-input-id-1" placeholder="Placeholder Text" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" /-->
+                                  <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="Page Header">Page description</textarea>
+                                  <span class="slds-form-element__addon" id="fixed-text-addon-post"><a href="#" class="override_reset">reset</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
-                  <h3 class="slds-text-heading--small slds-m-bottom--x-small">Library</h3>
-
-                  <ul class="slds-has-dividers_bottom-space">
-                    <li class="slds-item">Shared Library Name</li>
-                  </ul>
-
-
-                  <div class="slds-p-around_small">
+                        </div>
+                      </fieldset>
 
                   </div>
-
-
-
-                  <h3 class="slds-text-heading--small slds-m-bottom--x-small">Shared Sites</h3>
-
-                  <ul class="slds-has-dividers_bottom-space">
-                    <li class="slds-item">Site Genesis - Global</li>
-                    <li class="slds-item">Shared Site Name</li>
-                  </ul>
-
-
-
-
+                  </div>
+                  <!-- /CUSTOM ATTRIBUTES -->
                 </div>
-
                 <div id="tab-default-31" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-31__item">
                   <!-- SEO -->
+                  {#
                   <div class="slds-form slds-form_compound">
                     <fieldset class="slds-form-element">
                       <div class="slds-form-element__group">
@@ -1462,12 +1579,159 @@
                       </div>
                     </fieldset>
                   </div>
+                  #}
                   <!-- /SEO -->
-                </div>
 
+                  <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error alert-fallback slds-m-bottom_small" role="alert">
+                                      <span class="slds-assistive-text">error</span>
+                                      <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                                        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                        </svg>
+                                      </span>
+                                      <h2>This page contains settings displaying according to fallback hierarchy: <strong>default</strong>
+                                      </h2>
+                                      <div class="slds-notify__close">
+                                        <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                                          <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                          </svg>
+                                          <span class="slds-assistive-text">Close</span>
+                                        </button>
+                                      </div>
+                                    </div>
+
+                  <div class="slds-form">
+                                        <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                                          <div class="slds-form-element__control">
+
+                                            <div class="slds-form-element__control">
+                                              <div class="slds-form-element__row">
+                                                <span class="slds-badge slds-badge_lightest slds-m-bottom_medium">
+                                                  <span class="slds-badge__icon slds-badge__icon_left">
+                                                    <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                                                      <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                                      </svg>
+                                                    </span>
+                                                  </span>Localization: en-US</span>
+                                              </div>
+                                            </div>
+
+
+
+                                            <div class="slds-form-element__row slds-p-top_small">
+                                              <div class="slds-size_1-of-1 localization">
+                                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                                  <span class="slds-form-element__label">SEO URL (default locale)</span>
+                                                    <div class="slds-form-element__control">
+                                                      <div class="slds-form-element__static">SEO URL</div>
+                                                      <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Edit: Status</span>
+                                                      </button>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-form-element slds-hide override">
+                                                  <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">SEO URL</label>
+                                                  <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                    <span class="slds-form-element__addon" nowrap="" id="" style="min-width:3rem">en-US</span>
+                                                    <input type="text" id="" placeholder="SEO URL" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input">
+                                                    <span class="slds-form-element__addon" id="f"><a href="#" class="override_reset">reset</a></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="slds-form-element__row slds-p-top_small">
+                                              <div class="slds-size_1-of-1 localization">
+                                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                                  <span class="slds-form-element__label">SEO Title (default locale)</span>
+                                                    <div class="slds-form-element__control">
+                                                      <div class="slds-form-element__static">SEO Title</div>
+                                                      <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Edit: Status</span>
+                                                      </button>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-form-element slds-hide override">
+                                                  <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">SEO Title</label>
+                                                  <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                    <span class="slds-form-element__addon" nowrap="" id="" style="min-width:3rem">en-US</span>
+                                                    <input type="text" id="" placeholder="SEO Title" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input">
+                                                    <span class="slds-form-element__addon" id="f"><a href="#" class="override_reset">reset</a></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="slds-form-element__row">
+                                              <div class="slds-size_1-of-1 localization">
+                                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                                  <span class="slds-form-element__label">SEO Description (default locale)</span>
+                                                    <div class="slds-form-element__control">
+                                                      <div class="slds-form-element__static">SEO Description</div>
+                                                      <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Edit: Status</span>
+                                                      </button>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-form-element slds-hide override">
+                                                  <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">SEO Description</label>
+                                                  <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                    <span class="slds-form-element__addon" nowrap="" id="fixed-text-addon-pre" style="min-width:3rem">en-US</span>
+                                                    <!--input type="text" id="text-input-id-1" placeholder="Placeholder Text" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" /-->
+                                                    <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="">SEO Description</textarea>
+                                                    <span class="slds-form-element__addon" id="fixed-text-addon-post"><a href="#" class="override_reset">reset</a></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="slds-form-element__row">
+                                              <div class="slds-size_1-of-1 localization">
+                                                <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                                  <span class="slds-form-element__label">SEO Keywords (default locale)</span>
+                                                    <div class="slds-form-element__control">
+                                                      <div class="slds-form-element__static">SEO Keywords</div>
+                                                      <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                                        <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">Edit: Status</span>
+                                                      </button>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-form-element slds-hide override">
+                                                  <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">SEO Keywords</label>
+                                                  <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                    <span class="slds-form-element__addon" nowrap="" id="fixed-text-addon-pre" style="min-width:3rem">en-US</span>
+                                                    <!--input type="text" id="text-input-id-1" placeholder="Placeholder Text" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" /-->
+                                                    <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="">SEO Keywords</textarea>
+                                                    <span class="slds-form-element__addon" id="fixed-text-addon-post"><a href="#" class="override_reset">reset</a></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                        </fieldset>
+
+                                    </div>
+
+
+                </div>
                 <div id="tab-default-41" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-41__item">
                   <!-- RULES -->
-
                   <div>
                     <div class="slds-popover__body" id="dialog-body-id-preview-settings">
                       <p>
@@ -1475,7 +1739,8 @@
                       </p>
                       <div class="slds-form" id="content-customer-groups">
                         <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Show this page only to members of Customer Groups:</legend>
+                          <legend class="slds-form-element__legend slds-form-element__label">NO ADJUSTMENT HERE</legend>
+                          {#
                           <div class="slds-form-element__control">
                             <span class="slds-checkbox">
                               <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_everyone" value="Everyone" checked="">
@@ -1499,21 +1764,12 @@
                               </label>
                             </span>
                           </div>
+                          #}
                         </div>
                       </div>
 
 
-                      <div class="slds-form" id="content-from">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <div class="slds-form-element__control">
-                            <div class="slds-form-element 1slds-p-bottom_small">
-                              <label class="slds-form-element__label" for="select-01">Show page from:</label>
-                              <div class="slds-form-element__control">
-                                <input type="text" class="slds-input input-rules-from 2display-filter" placeholder="∞"> </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      {#
                       <div class="slds-form" id="content-to">
                         <div class="slds-form-element slds-p-bottom_small">
                           <div class="slds-form-element__control">
@@ -1525,10 +1781,10 @@
                           </div>
                         </div>
                       </div>
+                      #}
                       <p></p>
                     </div>
                   </div>
-
                   <div class="slds-hide slds-p-bottom_small">
                     <div class="slds-form slds-form_compound">
                       <div class="slds-form-element__row slds-grid">
@@ -1564,16 +1820,14 @@
                     </div>
 
                   </div>
-
                   <!-- /RULES -->
                 </div>
-
                 <div id="tab-default-51" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-51__item">
 
 
 
 
-
+                  {#
                     <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
                       <div class="slds-form-element__control">
                         <div class="slds-form-element__control">
@@ -1585,7 +1839,7 @@
                                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
                                   </svg>
                                 </span>
-                              </span>Localization: Default</span>
+                              </span>Localization: en-US</span>
 
                           </div>
                         </div>
@@ -1617,7 +1871,128 @@
 
                       </div>
                     </fieldset>
+                  #}
 
+                  <!-- CUSTOM ATTRIBUTES -->
+                  <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error alert-fallback slds-m-bottom_small" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                      <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                      </svg>
+                    </span>
+                    <h2>This page contains settings displaying according to fallback hierarchy: <strong>default</strong>
+                    </h2>
+                    <div class="slds-notify__close">
+                      <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="slds-popover__body slds-p-around_none" id="dialog-body-id-preview-settings">
+
+                    <div class="slds-form">
+                      <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                        <div class="slds-form-element__control">
+
+                          <div class="slds-form-element__control">
+                            <div class="slds-form-element__row">
+                              <span class="slds-badge slds-badge_lightest slds-m-bottom_medium">
+                                <span class="slds-badge__icon slds-badge__icon_left">
+                                  <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                    </svg>
+                                  </span>
+                                </span>Localization: en-US</span>
+                            </div>
+                          </div>
+
+                          <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                              <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-1" value="on" checked="">
+                                <label class="slds-checkbox__label" for="checkbox-1">
+                                  <span class="slds-checkbox_faux"></span>
+                                  <span class="slds-form-element__label">Include in Sitemap</span>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                              <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-1" value="on" checked="">
+                                <label class="slds-checkbox__label" for="checkbox-1">
+                                  <span class="slds-checkbox_faux"></span>
+                                  <span class="slds-form-element__label">Page searchable in storefront</span>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+
+
+                          <div class="slds-form-element__row slds-p-top_small">
+                            <div class="slds-size_1-of-1 localization">
+                              <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                <span class="slds-form-element__label">System attribute for site search (default locale)</span>
+                                  <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">System attribute for site search</div>
+                                    <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                      <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Edit: Status</span>
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="slds-form-element slds-hide override">
+                                <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">System Attribute for site search</label>
+                                <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                  <span class="slds-form-element__addon" nowrap id="" style="min-width:3rem">en-US</span>
+                                  <input type="text" id="" placeholder="Page Name" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" />
+                                  <span class="slds-form-element__addon" id="f"><a href="#" class="override_reset">reset</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-1 localization">
+                              <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                                <span class="slds-form-element__label">Page Search Words (default locale)</span>
+                                  <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">Page Search Words</div>
+                                    <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                      <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                      </svg>
+                                      <span class="slds-assistive-text">Edit: Status</span>
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="slds-form-element slds-hide override">
+                                <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">Page Search Words</label>
+                                <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                  <span class="slds-form-element__addon" nowrap id="fixed-text-addon-pre" style="min-width:3rem">en-US</span>
+                                  <!--input type="text" id="text-input-id-1" placeholder="Placeholder Text" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" /-->
+                                  <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="Page Header">Page Search Words</textarea>
+                                  <span class="slds-form-element__addon" id="fixed-text-addon-post"><a href="#" class="override_reset">reset</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                  </div>
+                  </div>
+                  <!-- /CUSTOM ATTRIBUTES -->
 
 
 
@@ -1630,11 +2005,44 @@
 
 
                 </div>
-
                 <div id="tab-default-61" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-61__item">
+                  <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error alert-fallback slds-m-bottom_small" role="alert">
+                                      <span class="slds-assistive-text">error</span>
+                                      <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                                        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                        </svg>
+                                      </span>
+                                      <h2>This page contains settings displaying according to fallback hierarchy: <strong>default</strong>
+                                      </h2>
+                                      <div class="slds-notify__close">
+                                        <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                                          <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                          </svg>
+                                          <span class="slds-assistive-text">Close</span>
+                                        </button>
+                                      </div>
+                                    </div>
+
                   <!-- RULES -->
 
                     <div class="slds-popover__body slds-p-around_none" id="dialog-body-id-preview-settings">
+
+                      <div class="slds-form-element__control">
+                                                  <div class="slds-form-element__row">
+                                                    <span class="slds-badge slds-badge_lightest slds-m-bottom_medium">
+                                                      <span class="slds-badge__icon slds-badge__icon_left">
+                                                        <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                                                          <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                                                          </svg>
+                                                        </span>
+                                                      </span>Localization: en-US</span>
+                                                  </div>
+                                                </div>
+
+                      {#
                       <div class="slds-form">
                         <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
                                               <legend class="slds-form-element__legend slds-form-element__label">Custom page search attributes</legend>
@@ -1692,10 +2100,88 @@
 
                                               </div>
                                             </fieldset>
+                      </div>
+                      #}
+
+                      <div class="slds-form-element__row slds-p-top_small">
+                        <div class="slds-form-element__row">
+                          <div class="slds-size_3-of-6">
+                            <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="form-element-id-05">Page thumbnail</label>
+                              <div class="slds-form-element__control">
+                                <button class="slds-button slds-button_neutral">
+                                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                                </svg>Upload
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="slds-form-element__row slds-p-top_small">
+                        <div class="slds-size_1-of-1 localization">
+                          <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                            <span class="slds-form-element__label">Image Alt Text (default locale)</span>
+                              <div class="slds-form-element__control">
+                                <div class="slds-form-element__static">Image Alt Text</div>
+                                <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Edit: Status</span>
+                                </button>
+                              </div>
+                          </div>
+                          <div class="slds-form-element slds-hide override">
+                            <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">Image Alt Text</label>
+                            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                              <span class="slds-form-element__addon" nowrap="" id="" style="min-width:3rem">en-US</span>
+                              <input type="text" id="" placeholder="" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input">
+                              <span class="slds-form-element__addon" id="f"><a href="#" class="override_reset">reset</a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="slds-form-element__row">
+                        <div class="slds-size_1-of-1 localization">
+                          <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent fallback">
+                            <span class="slds-form-element__label">Short Description (default locale)</span>
+                              <div class="slds-form-element__control">
+                                <div class="slds-form-element__static">Short Description</div>
+                                <button class="slds-button slds-button_icon trigger-override" title="Edit: Status">
+                                  <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+                                  </svg>
+                                  <span class="slds-assistive-text">Edit: Status</span>
+                                </button>
+                              </div>
+                          </div>
+                          <div class="slds-form-element slds-hide override">
+                            <label class="slds-form-element__label" for="text-input-id-1" id="fixed-text-label">Short Description</label>
+                            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                              <span class="slds-form-element__addon" nowrap="" id="fixed-text-addon-pre" style="min-width:3rem">en-US</span>
+                              <!--input type="text" id="text-input-id-1" placeholder="Placeholder Text" aria-labelledby="fixed-text-label fixed-text-addon-pre fixed-text-addon-post" class="slds-input" /-->
+                              <textarea id="form-element-id-04" required="" class="slds-textarea" placeholder="">Short Description</textarea>
+                              <span class="slds-form-element__addon" id="fixed-text-addon-post"><a href="#" class="override_reset">reset</a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
 
                     </div>
-                  </div>
 
+
+                  {#
                   <div class="slds-hide slds-p-bottom_small">
                     <div class="slds-form slds-form_compound">
                       <div class="slds-form-element__row slds-grid">
@@ -1731,17 +2217,11 @@
                     </div>
 
                   </div>
-
+                  #}
                   <!-- /RULES -->
                 </div>
 
-
-
               </div>
-            </div>
-
-
-
 
 
 
@@ -2080,12 +2560,50 @@
             <div class="slds-builder-toolbar__item-group" aria-label="Canvas Actions"></div>
             <div class="slds-p-right_small slds-p-top_xx-small slds-float_left">
               <span class="slds-badge">Site Genesis</span>
+
+              <span class="slds-badge slds-badge_lightest">
+                <span class="slds-badge__icon slds-badge__icon_left">
+                  <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                    <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#world"></use>
+                    </svg>
+                  </span>
+                </span>
+                <!--
+                <a href="">en-US</a>
+                <button class="slds-button slds-button__icon slds-button__icon_x-small" title="Settings">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Default Locale</span>
+                </button>
+              -->
+
+              <button class="slds-button">en-US (visible)
+                <svg class="slds-button__icon slds-button__icon_right" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+              </button>
+
+
+                <!--span class="slds-badge">Visible
+                  <span class="slds-badge__icon slds-badge__icon_right">
+                    <span class="slds-icon_container slds-icon-utility-moneybag slds-current-color" title="Description of icon when needed">
+                      <svg class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#eye"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </span-->
+
+              </span>
+
             </div>
             <div class="slds-float_left slds-p-right_small">
               <div class="slds-form-element__control">
                 <div class="slds-combobox_container slds-size_xx-small" id="locale-switch">
                   <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-picklist" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                    <div class="slds-hide slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
                       <input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id-26" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="en-US" readonly="">
                       <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
                         <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
@@ -5215,6 +5733,21 @@
 
 
 
+        //fallback HANDLING
+        $('.trigger-override').click(function() {
+          console.log('show fallback');
+          $(this).parents('.fallback').addClass('slds-hide');
+          $(this).parents('.localization').find('.override').removeClass('slds-hide');
+        });
+
+        $('.override_reset').click(function() {
+          console.log('hide fallback');
+          $(this).parents('.override').addClass('slds-hide');
+          $(this).parents('.localization').find('.fallback').removeClass('slds-hide');
+        });
+
+
+
       });
     </script>
 
@@ -5528,4 +6061,8 @@
      display: block;
  }
  */
-</style>
+   .alert-fallback{
+     color: white;
+     background-color: #CF358D;
+   }
+ </style>
