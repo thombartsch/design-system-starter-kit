@@ -153,7 +153,7 @@
 
     <!-- BREAKOUT MODAL -->
     <div id="breakout-modal" style="" class="slds-hide">
-      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+      <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
         <div class="slds-modal__container">
           <header class="slds-modal__header">
             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse breakout-modal-trigger-close" title="Close">
@@ -162,310 +162,109 @@
               </svg>
               <span class="slds-assistive-text">Close</span>
             </button>
-            <h2 id="breakout-modal-heading" class="slds-text-heading_medium slds-hyphenate">CMS - Asset Selector</h2>
+            <h2 id="breakout-modal-heading" class="slds-text-heading_medium slds-hyphenate">Content Type: News</h2>
+            <p class="slds-p-top_small">Salesforce CMS Channel: NTO B2C Commerce</p>
           </header>
           <div class="slds-modal__content  slds-grow 2slds-p-around_medium" id="breakout-modal-content">
+            {# START dynamic loop #}
 
-            {#
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?nature" alt="https://source.unsplash.com/random/120x60?nature" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?water" alt="https://source.unsplash.com/random/120x60?water" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?flower" alt="https://source.unsplash.com/random/120x60?flower" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="slds-p-bottom_small">
-              <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
-                <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
-                  <img src="https://source.unsplash.com/random/120x60?sun" alt="https://source.unsplash.com/random/120x60?sun" />
-                </div>
-                <div class="slds-media__body slds-border_left slds-p-around_small">
-                  <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Share the knowledge</h2>
-                  <p class="slds-m-top_small">Harness your team&#x27;s collective know-how with our powerful knowledge base</p>
-                </div>
-              </a>
-            </div>
-            #}
-
-
-            <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
-              <thead>
-                <tr class="slds-line-height_reset">
-                  <th class="slds-text-align_right" scope="col" style="width:3.25rem">
-                    <span id="column-group-header" class="slds-assistive-text">Choose a row to select</span>
-                  </th>
-                  <th aria-label="Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col" style="width:50%">
-                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
-                      <span class="slds-assistive-text">Sort by:
-                      </span>
-                      <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
-                        <span class="slds-truncate" title="title">Title</span>
-                        <span class="slds-icon_container slds-icon-utility-arrowdown">
-                          <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
+              <table aria-multiselectable="true" class="fixed_header slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
+                role="grid" id="cmsAssets">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th class="slds-text-align_right" scope="col" style="width:3.25rem">
+                      <div class="slds-truncate slds-assistive-text" id="column-group-header" title="Choose a row to select">Choose a row to select</div>
+                    </th>
+                    <th aria-label="Name" aria-sort="ascending"     width="" class="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" id="sort_title" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                          <span class="slds-truncate" title="Title">Title</span>
+                          <span class="slds-icon_container slds-icon-utility-arrowdown">
+                            <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                      <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true">Sorted ascending</span>
+                      <div class="slds-resizable">
+                        <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-540" max="1000" min="20" tabindex="0" />
+                        <span class="slds-resizable__handle">
+                          <span class="slds-resizable__divider"></span>
                         </span>
                       </div>
-                    </a>
-                    <div class="slds-resizable">
-                      <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-71" max="1000" min="20" tabindex="0"/>
-                      <span class="slds-resizable__handle">
-                        <span class="slds-resizable__divider"></span>
-                      </span>
-                    </div>
-                  </th>
-                  <th aria-label="Account Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col" style="width:40%">
-                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
-                      <span class="slds-assistive-text">Sort by:
-                      </span>
-                      <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
-                        <span class="slds-truncate" title="Topics">Topics</span>
-                        <span class="slds-icon_container slds-icon-utility-arrowdown">
-                          <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
+                    </th>
+                    <th aria-label="Account Name" aria-sort="none"  style="width:10rem" class="slds-col slds-is-resizable slds-is-sortable" scope="col">
+                      <a class="slds-th__action slds-text-link_reset" id="sort_date" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                          <span class="slds-truncate" title="Published">Published</span>
+                          <span class="slds-icon_container slds-icon-utility-arrowdown">
+                            <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </a>
+                      <div class="slds-resizable">
+                        <input type="range" aria-label="Account Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-541" max="1000" min="20" tabindex="0" />
+                        <span class="slds-resizable__handle">
+                          <span class="slds-resizable__divider"></span>
                         </span>
                       </div>
-                    </a>
-                    <div class="slds-resizable">
-                      <input type="range" aria-label="Account Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-72" max="1000" min="20" tabindex="0"/>
-                      <span class="slds-resizable__handle">
-                        <span class="slds-resizable__divider"></span>
-                      </span>
-                    </div>
-                  </th>
-
-                  <th aria-label="Confidence" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col" style="width:10%">
-                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
-                      <span class="slds-assistive-text">Sort by:
-                      </span>
-                      <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
-                        <span class="slds-truncate" title="Published">Published</span>
-                        <span class="slds-icon_container slds-icon-utility-arrowdown">
-                          <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
-                          </svg>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for account in accounts %}
+                    <tr>
+                      <td class="slds-text-align_right" role="gridcell">
+                        <span class="slds-radio">
+                          <input type="radio" id="radio-{{ account.id }}" value="radio-01" name="options" tabindex="-1" aria-labelledby="radio-button-label-{{ account.id }} column-group-header" />
+                          <label class="slds-radio__label" for="radio-{{ account.id }}" id="radio-button-label-{{ account.id }}">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                          </label>
                         </span>
-                      </div>
-                    </a>
-                    <div class="slds-resizable">
-                      <input type="range" aria-label="Confidence column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-75" max="1000" min="20" tabindex="0"/>
-                      <span class="slds-resizable__handle">
-                        <span class="slds-resizable__divider"></span>
-                      </span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr aria-selected="false" class="slds-hint-parent">
-                  <td class="slds-text-align_right" role="gridcell">
-                    <span class="slds-radio">
-                      <input type="radio" id="radio-01" value="radio-01" name="options" tabindex="-1" aria-labelledby="radio-button-label-01 column-group-header" />
-                      <label class="slds-radio__label" for="radio-01" id="radio-button-label-01">
-                        <span class="slds-radio_faux"></span>
-                        <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
-                      </label>
-                    </span>
-                  </td>
-                  <th scope="row">
-                    <div class="slds-truncate" title="An interesting read">
-                      <a href="javascript:void(0);" tabindex="0">An interesting read</a>
-                    </div>
-                  </th>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Summer, Campaign"><div class="slds-p-top_xx-small slds-p-bottom_xx-small">
-                      <span class="slds-badge">Summer</span><span class="slds-badge">Campaign</span>
-                    </div></div>
-                  </td>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Sept 17, 2020">Sept 17, 2020</div>
-                  </td>
-                </tr>
-                <tr aria-selected="false" class="slds-hint-parent">
-                  <td class="slds-text-align_right" role="gridcell">
-                    <span class="slds-radio">
-                      <input type="radio" id="radio-02" value="radio-02" name="options" tabindex="-1" aria-labelledby="radio-button-label-01 column-group-header" />
-                      <label class="slds-radio__label" for="radio-02" id="radio-button-label-02">
-                        <span class="slds-radio_faux"></span>
-                        <span class="slds-form-element__label slds-assistive-text">Select item 2</span>
-                      </label>
-                    </span>
-                  </td>
-                  <th scope="row">
-                    <div class="slds-truncate" title="A somewhat amazing fragment">
-                      <a href="javascript:void(0);" tabindex="0">A somewhat amazing fragment</a>
-                    </div>
-                  </th>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Fragments, Amazement"><div class="slds-p-top_xx-small slds-p-bottom_xx-small">
-                      <span class="slds-badge">Fragments</span><span class="slds-badge">Amazement</span>
-                    </div></div>
-                  </td>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Sept 17, 2020">Sept 17, 2020</div>
-                  </td>
-                </tr>
-                <tr aria-selected="false" class="slds-hint-parent">
-                  <td class="slds-text-align_right" role="gridcell">
-                    <span class="slds-radio">
-                      <input type="radio" id="radio-03" value="radio-03" name="options" tabindex="-1" aria-labelledby="radio-button-label-01 column-group-header" />
-                      <label class="slds-radio__label" for="radio-03" id="radio-button-label-03">
-                        <span class="slds-radio_faux"></span>
-                        <span class="slds-form-element__label slds-assistive-text">Select item 3</span>
-                      </label>
-                    </span>
-                  </td>
-                  <th scope="row">
-                    <div class="slds-truncate" title="All kinds of text and images">
-                      <a href="javascript:void(0);" tabindex="0">All kinds of text and images</a>
-                    </div>
-                  </th>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Media"><div class="slds-p-top_xx-small slds-p-bottom_xx-small">
-                      <span class="slds-badge">Media</span>
-                    </div></div>
-                  </td>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Sept 17, 2020">Sept 17, 2020</div>
-                  </td>
-                </tr>
-                <tr aria-selected="false" class="slds-hint-parent">
-                  <td class="slds-text-align_right" role="gridcell">
-                    <span class="slds-radio">
-                      <input type="radio" id="radio-04" value="radio-04" name="options" tabindex="-1" aria-labelledby="radio-button-label-01 column-group-header" />
-                      <label class="slds-radio__label" for="radio-04" id="radio-button-label-04">
-                        <span class="slds-radio_faux"></span>
-                        <span class="slds-form-element__label slds-assistive-text">Select item 4</span>
-                      </label>
-                    </span>
-                  </td>
-                  <th scope="row">
-                    <div class="slds-truncate" title="A walk in the park">
-                      <a href="javascript:void(0);" tabindex="0">A walk in the park</a>
-                    </div>
-                  </th>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Park, Summer, Hiking"><div class="slds-p-top_xx-small slds-p-bottom_xx-small">
-                      <span class="slds-badge">Park</span>
-                      <span class="slds-badge">Summer</span>
-                      <span class="slds-badge">Hiking</span>
-                    </div></div>
-                  </td>
-                  <td role="gridcell">
-                    <div class="slds-truncate" title="Sept 17, 2020">Sept 17, 2020</div>
-                  </td>
-                </tr>
-
-              </tbody>
+                      </td>
+                      <td>{{ account.title }}</td>
+                      <td>{{ account.published }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
+
+            <div class="slds-col slds-grid slds-p-around_small slds-grid_align-center" id="btShowmore">
+              <button id="show" class="slds-button slds-button_neutral">Load more ...</button>
+            </div>
+
+
+            <div id="showLoader" class="slds-hide slds-p-around_medium">
+              <div>
+                <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-6">
+                  <span>Copying CMS data to local library ...</span>
+                  <span aria-hidden="true">
+                    <!--strong>25% Complete</strong-->
+                  </span>
+                </div>
+                <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-labelledby="progress-bar-label-id-6" role="progressbar">
+                  <span class="slds-progress-bar__value" style="width:0%" id="progressbar">
+                    <span class="slds-assistive-text">Progress: 25%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+
+            {# END DYNAMIC LOOP #}
 
 
 
 
           </div>
-          <footer class="slds-modal__footer">
+          <footer class="slds-modal__footer" id="assetsFooter">
             <button class="slds-button slds-button_neutral breakout-modal-trigger-close">Cancel</button>
             <button class="slds-button slds-button_brand" id="breakout-modal-trigger-save" disabled="disabled">Select</button>
           </footer>
@@ -2882,23 +2681,13 @@
                 <div id="canvas" class="slds-col slds-grid slds-text-align_center slds-grid_vertical"><!--region--></div>
               </div>
 
-
-
-
-
-
-
-
-
-
       </div>
       <div id="panel_editor" class="slds-hide modal">
         <!-- PANEL EDITOR RIGHT -->
         <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false">
 
-          <div class="slds-panel__header slds-p-top_none slds-hide slds-p-left_none slds-p-right_none slds-p-bottom_none slds-grid">
+          <div class="slds-panel__header slds-p-top_none slds-p-left_none slds-p-right_none slds-p-bottom_none slds-grid">
             <div class="slds-col">
-              <!--h2 class="slds-panel__header-title slds-text-heading_small slds-p-around_small slds-p-left_none slds-float_left slds-text-align--left" id="string_editor">Editor</h2-->
               <h2 class="slds-text-align_left slds-p-around_small">Campaign Content</h2>
             </div>
             <div class="slds-grid slds-float_left">
@@ -2909,6 +2698,7 @@
                   </svg>
                   <span class="slds-assistive-text">Show More</span>
                 </button>
+                {#
                 <div class="slds-hide slds-dropdown slds-dropdown_right">
                   <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
                     <li class="slds-dropdown__item" role="presentation">
@@ -2934,6 +2724,7 @@
                     </li>
                   </ul>
                 </div>
+                #}
               </div>
               <div class="slds-col">
                 <button class="slds-button slds-button_icon slds-panel__close slds-button_icon-small trigger-close-modal" title="Close Panel">
@@ -2951,7 +2742,7 @@
           <div class="slds-panel__body">
 
 
-            <div class="slds-form-element slds-p-bottom_small">
+            <div class="slds-hide slds-form-element slds-p-bottom_small">
               <label class="slds-form-element__label" for="form-element-01">Header</label>
               <div class="slds-form-element__control">
                 <input type="text" id="form-element-01" placeholder="Sample Header Text" class="slds-input" />
@@ -2961,7 +2752,6 @@
 
             <!-- BREAKOUT FORM ELEMENT -->
             <div class="slds-form-element slds-p-bottom_small" id="button-breakout_container">
-              <!--label class="slds-form-element__label" for="custom-component">Campaign Content Label</label -->
               <div class="slds-form-element__control">
                 <button class="slds-button slds-button_neutral slds-button_stretch" id="button-breakout">Select CMS Content</button>
               </div>
@@ -2970,14 +2760,32 @@
 
             <div class="slds-hide"  id="button-breakout_content">
 
+              <!-- MESSAGE -->
+              <div class="slds-scoped-notification slds-scoped-notification_light slds-m-bottom_large site" role="status">
+                <div class="slds-media">
+                  <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-utility-info" title="information">
+                      <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                      </svg>
+                      <span class="slds-assistive-text">information</span>
+                    </span>
+                  </div>
+                  <div class="slds-media__body">
+                    <p>Your content is loading. This could take a few minutes.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- /MESSAGE -->
+
+
+
               <div class="slds-grid slds-cols">
                 <div class="slds-col">
                   <legend class="slds-form-element__legend slds-form-element__label">Campaign Content Label</legend>
                 </div>
-                <div class="">
-
-
-                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click 2slds-is-open" id="dropdown-cms">
+                <div>
+                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click" id="dropdown-cms">
                     <button class="slds-button slds-button_icon-border-filled slds-button__icon_small" id="button-dropdown-cms" aria-haspopup="true" title="Show More">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
@@ -2987,7 +2795,7 @@
                     <div class="slds-dropdown slds-dropdown_right slds-dropdown_small">
                       <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
                         <li class="slds-dropdown__item" role="presentation">
-                          <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                          <a href="javascript:void(0);" role="menuitem" tabindex="0" id="reloadCMS">
                             <span class="slds-truncate" title="Select CMS content">Select CMS content</span>
                             <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
                               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#insert_template"></use>
@@ -3005,9 +2813,40 @@
                       </ul>
                     </div>
                   </div>
-
-
                 </div>
+                {#
+                <div class="">
+                  <div class="slds-dropdown-trigger slds-dropdown-trigger_click 2slds-is-open" id="dropdown-cms">
+                    <button class="slds-button slds-button_icon-border-filled slds-button__icon_small" id="button-dropdown-cms" aria-haspopup="true" title="Show More">
+                      <svg class="slds-button__icon" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                    <div class="slds-dropdown slds-dropdown_right slds-dropdown_small">
+                      <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                        <li class="slds-dropdown__item" role="presentation">
+                          <a href="javascript:void(0);" role="menuitem" tabindex="0" id="reloadCMS">
+                            <span class="slds-truncate" title="Select CMS content">Select CMS content</span>
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#insert_template"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="slds-dropdown__item slds-hide" role="presentation">
+                          <a href="javascript:void(0);" role="menuitem" tabindex="-1" disabled="disabled">
+                            <span class="slds-truncate" title="Save to CMS">Save to CMS</span>
+                            <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_small slds-shrink-none" aria-hidden="true">
+                              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#save"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                #}
               </div>
 
               <div class="slds-form">
@@ -3067,7 +2906,7 @@
 
                   </div>
                 </div>
-                <div class="slds-form-element slds-form-element_stacked">
+                <div class="slds-hide slds-form-element slds-form-element_stacked">
                   <label class="slds-form-element__label" for="stacked-input-id-01">
                     Image Alt Text
                   </label>
@@ -3081,10 +2920,12 @@
                     Copy
                   </label>
                   <div class="slds-form-element__control">
-                    <textarea id="stacked-input-id-02" style="min-height:10rem" placeholder="Check out our gear. We are the designer of outdoor clothing and gear for the silent sports: climbing, surfing, skiing and snowboarding, fly fishing and trail running." class="slds-textarea"></textarea>
+                    <textarea id="stacked-input-id-02" style="min-height:6rem" placeholder="Check out our gear. We are the designer of outdoor clothing and gear for the silent sports: climbing, surfing, skiing and snowboarding, fly fishing and trail running." class="slds-textarea"></textarea>
                   </div>
                 </div>
               </div>
+
+
 
 
 
@@ -3093,769 +2934,6 @@
 
 
 
-            {#
-            <!-- BANNER EDITOR -->
-            <div class="component_properties slds-hide" id="editor_banner">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-371" id="tab-default-371__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-372" id="tab-default-372__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-373" id="tab-default-373__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-371" class="slds-tabs_default__content tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-371__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Text Blocks</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Campaign Content Text Header</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-header" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Campaign Content Text Sub</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-sub" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Image</legend>
-                          <label class="slds-form-element__label" for="text-input-id-1">Media</label>
-                          <div style="width: 18rem;">
-                            <div class="slds-file slds-file_card">
-                              <figure class="">
-                                <div class="slds-file__crop set-focal-point">
-                                  <div class="circle">
-                                    <div class="circle-in" class="circle"></div>
-                                  </div>
-                                  <img src="/assets/placeholder.png" alt="" class="image-figure-thumb" style="font-size: 39px;" />
-                                </div>
-
-
-
-                                <figcaption class="slds-file__title slds-file__title_card">
-                                  <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
-                                    <div class="slds-media__body slds-col slds-media__body slds-col slds-truncate slds-truncate_container_25">
-                                      <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
-                                    </div>
-                                    <div class="slds-media__figure slds-p-left--large">
-                                      <div class="slds-text-align_center">
-
-
-                                        <div class="slds-file__actions-menu">
-                                          <div class="slds-button-group" role="group">
-                                            <button class="slds-button slds-button_icon 2slds-button_icon-x-medium open-menu-select" title="Select Image">
-                                              <svg class="slds-button__icon slds-hide" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                              </svg> Select Source
-                                              <span class="slds-assistive-text">Select Source</span>
-                                            </button>
-                                            <button class="slds-button slds-hide slds-button_icon slds-button_icon slds-button_icon-x-small open-menu-select" aria-haspopup="true" title="More Actions">
-                                              <svg class="slds-button__icon" aria-hidden="true">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                              </svg>
-                                              <span class="slds-assistive-text">Select Source</span>
-                                            </button>
-
-
-
-
-                                            <div class="slds-dropdown slds-dropdown_right slds-dropdown_small image_chooser slds-hide">
-                                              <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
-                                                <li class="slds-dropdown__item" role="presentation">
-                                                  <a href="javascript:void(0);" class="add-image" role="menuitem" tabindex="0">
-                                                    <span class="slds-truncate" title="Commerce Cloud">
-                                                      <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#campaign"></use>
-                                                      </svg>Commerce Cloud</span>
-                                                  </a>
-                                                </li>
-                                                <li class="slds-dropdown__item" role="presentation">
-                                                  <a href="javascript:void(0);" class="dropbox_chooser" role="menuitem" tabindex="-1">
-                                                    <span class="slds-truncate" title="Dropbox">
-
-                                                      <img src="/assets/Dropbox_Icon.svg.png" class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" width="16" style="opacity: 1;">
-                                                      Dropbox</span>
-                                                  </a>
-                                                </li>
-                                              </ul>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </figcaption>
-
-
-
-
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-
-                      </li>
-
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Media Alt Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="" />
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-372" class="slds-tabs_default__content tab_rules_content slds-hide" role="tabpanel" aria-labelledby="tab-default-372__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="banner-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="banner-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="banner-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /BANNER EDITOR -->
-            <!-- CAT EDITOR -->
-            <div class="component_properties slds-hide" id="editor_category">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-category-1"
-                        id="tab-default-category-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-category-2"
-                        id="tab-default-category-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-category-3"
-                        id="tab-default-category-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-category-1" class="slds-tabs_default__content  tab_general_content  tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-category-1__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Category</legend>
-                      <li class="slds-p-bottom_small">
-                        <!--legend>Category</legend-->
-                        <div class="slds-form-element__group">
-                          <div class="slds-form-element__row slds-grid">
-                            <div class="slds-form-element slds-size_10-of-12">
-                              <input type="text" id="" class="slds-input product-link" placeholder="">
-                            </div>
-                            <div class="slds-form-element slds-size_2-of-12 slds-text-align_right">
-                              <button class="slds-button slds-button_neutral add-product slds-p-left_small">...<span class="slds-assistive-text">Select</span></button>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </li>
-                      <li class="slds-p-bottom_small">
-                        <legend>Category Image</legend>
-                        <div class="slds-form-element__group">
-                          <div style="width: 18rem;">
-                            <div class="slds-file slds-file_card">
-                              <figure class="">
-                                <div class="slds-file__crop set-focal-point">
-                                  <div class="circle">
-                                    <div class="circle-in"></div>
-                                  </div>
-                                  <img src="/assets/placeholder.png" alt="" class="image-figure-thumb" style="font-size: 39px; opacity: 1;">
-                                </div>
-                                <figcaption class="slds-file__title slds-file__title_card">
-                                  <div class="slds-media slds-media_small slds-media_center slds-grid slds-col">
-                                    <div class="slds-media__body slds-col">
-                                      <span class="slds-file__text slds-truncate file-name" title="No Image assigned">No Image assigned</span>
-                                    </div>
-                                    <div class="slds-media__figure slds-p-left--large">
-                                      <div class="slds-text-align_center">
-                                        <button class="slds-button icon-add slds-button_icon 2slds-button_icon-border-filled slds-button_icon-x-small add-image" title="Add Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Image</span>
-                                        </button>
-
-                                        <button class="slds-hide icon-edit slds-button slds-button_icon slds-button_icon slds-button_icon-x-small select-image" title="Select Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Edit Image</span>
-                                        </button>
-                                        <button class="slds-hide icon-clear slds-button slds-button_icon slds-button_icon slds-button_icon-x-small remove-image" title="Remove Image">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
-                                          </svg>
-                                          <span class="slds-assistive-text">Clear Image</span>
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </figcaption>
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Call to Action</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Button Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input text-banner-header-product" placeholder="">
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="slds-p-bottom_small slds-hide">
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="text-input-id-1">Media Alt Text</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" class="slds-input" placeholder="">
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-category-2" class="slds-tabs_default__content  tab_general_rules  tab_general_rules slds-hide" role="tabpanel" aria-labelledby="tab-default-category-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="category-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="category-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="category-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="category-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /CAT EDITOR -->
-            <!-- ROW EDITOR -->
-            <div class="component_properties slds-hide" id="editor_row">
-              <!--  ROW SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-row-1" id="tab-default-row-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-2" id="tab-default-row-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-row-3" id="tab-default-row-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-row-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-row-1__item">
-                    <!-- CONTENT -->
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-row-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-row-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="row-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="row-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="row-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="row-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-
-
-                </div>
-              </div>
-
-
-              <!--  /ROW SELECTION CONTENT-->
-            </div>
-            <!-- /ROW EDITOR -->
-            <!-- RTE EDITOR -->
-            <div class="component_properties slds-hide" id="editor_rtf">
-              <!--  MEDIA SELECTION CONTENT-->
-              <div class="editor">
-                <div class="slds-tabs_default">
-                  <ul class="slds-tabs_default__nav" role="tablist">
-                    <li class="slds-tabs_default__item tab_general" title="Item One" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-rtf-1" id="tab-default-rtf-1__item">Properties</a></li>
-                    <li class="slds-tabs_default__item tab_rules" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-rtf-2" id="tab-default-rtf-2__item">Rules</a></li>
-                    <li class="slds-hide slds-tabs_default__item" title="Item Two" role="presentation"><a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-rtf-3" id="tab-default-rtf-3__item">Localization</a></li>
-                  </ul>
-
-                  <div id="tab-default-rtf-1" class="slds-tabs_default__content  tab_general_content  tab_general_content slds-show" role="tabpanel" aria-labelledby="tab-default-rtf-1__item">
-                    <!-- CONTENT -->
-                    <input type="text" class="slds-input slds-hide text-activeComponent" placeholder="" />
-                    <input type="text" class="slds-input slds-hide text-componentType" placeholder="" />
-                    <ul>
-                      <li class="slds-p-bottom_small slds-text-align_right">
-                        <button class="slds-button 2slds-button_neutral code-view">
-                          < /> Code View
-                        </button>
-                      </li>
-                      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Content</legend>
-                      <li class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                          <div class="slds-form-element__control">
-                            <div class="demo-only" style="min-height: 180px;">
-                              <div class="slds-form-element">
-                                <div class="slds-rich-text-editor slds-grid slds-grid_vertical slds-nowrap">
-                                  <div role="toolbar" class="slds-rich-text-editor__toolbar slds-shrink-none">
-                                    <div class="slds-grid slds-rich-text-editor__spacing-wrapper" role="group" aria-label="Format font family &amp; size">
-                                      <div class="slds-rich-text-editor__select">
-                                        <div class="slds-form-element">
-                                          <label class="slds-form-element__label slds-assistive-text" for="font-family">Choose a Font</label>
-                                          <div class="slds-form-element__control">
-                                            <div class="slds-combobox_container">
-                                              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_x-small" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                                  <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="font-family" aria-controls="family-listbox" autocomplete="off" role="textbox" placeholder="Select an Option"
-                                                    readonly="" value="Font" />
-                                                  <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                                    </svg>
-                                                    <span class="slds-assistive-text">Description of icon when needed</span>
-                                                  </span>
-                                                </div>
-                                                <div id="family-listbox" role="listbox">
-                                                  <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="Times New Roman"> Times New Roman</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="Arial"> Arial</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                  </ul>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="slds-rich-text-editor__select">
-                                        <div class="slds-form-element">
-                                          <label class="slds-form-element__label slds-assistive-text" for="font-size">Choose a Font Size</label>
-                                          <div class="slds-form-element__control">
-                                            <div class="slds-combobox_container">
-                                              <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-size_xx-small" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-                                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                                  <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="font-size" aria-controls="size-listbox" autocomplete="off" role="textbox" placeholder="Select an Option"
-                                                    readonly="" tabindex="-1" value="Size" />
-                                                  <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-                                                    <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-                                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                                    </svg>
-                                                    <span class="slds-assistive-text">Description of icon when needed</span>
-                                                  </span>
-                                                </div>
-                                                <div id="size-listbox" role="listbox">
-                                                  <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-03" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="12px"> 12px</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                    <li role="presentation" class="slds-listbox__item">
-                                                      <div id="listbox-option-unique-id-04" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
-                                                        <span class="slds-media__body">
-                                                          <span class="slds-truncate" title="14px"> 14px</span>
-                                                        </span>
-                                                      </div>
-                                                    </li>
-                                                  </ul>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <ul aria-label="Format text" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#bold" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Bold</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#italic" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Italic</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#underline" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Underline</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Strike Through</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Format background &amp; text color" class="slds-button-group-list">
-                                      <li>
-                                        <button tabindex="-1" class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled" aria-haspopup="true">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color" />
-                                          </svg>
-                                          <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Background Color</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button tabindex="-1" class="slds-button slds-button_icon slds-button_icon-more slds-button_icon-more-filled" aria-haspopup="true">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_color" />
-                                          </svg>
-                                          <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Text Color</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Format body" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextbulletedlist" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Bulleted List</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextnumberedlist" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Numbered List</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextindent" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Indent</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#richtextoutdent" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Outdent</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Align text" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Left Align Text</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#center_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Center Align Text</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right_align_text" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Right Align Text</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Insert content" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#emoji" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Emoji</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#image" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Image</span>
-                                        </button>
-                                      </li>
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#link" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Add Link</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                    <ul aria-label="Remove Formatting" class="slds-button-group-list">
-                                      <li>
-                                        <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1">
-                                          <svg class="slds-button__icon" aria-hidden="true">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#remove_formatting" />
-                                          </svg>
-                                          <span class="slds-assistive-text">Remove Formatting</span>
-                                        </button>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                  <div class="slds-rich-text-editor__textarea slds-grid">
-                                    <div aria-label="Compose text" contenteditable="true" class="slds-rich-text-area__content slds-text-color_weak slds-grow"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                    <!-- /CONTENT -->
-                  </div>
-                  <div id="tab-default-rtf-2" class="slds-tabs_default__content  tab_general_rules  tab_general_rules slds-hide" role="tabpanel" aria-labelledby="tab-default-rtf-2__item">
-                    <!-- RULES -->
-
-                    <div class="slds-p-bottom_small">
-                      <div class="slds-form">
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <legend class="slds-form-element__legend slds-form-element__label">Customer Groups:</legend>
-                          <div class="slds-form-element__control">
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_everyone" value="Everyone">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_everyone">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Everyone</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_customergroupa" value="CustomergroupA">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_customergroupa">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Registered Users</span>
-                              </label>
-                            </span>
-                            <span class="slds-checkbox">
-                              <input type="checkbox" class="cg" name="options[]" id="rtf-checkbox_customergroupb" value="CustomergroupB">
-                              <label class="slds-checkbox__label" for="rtf-checkbox_customergroupb">
-                                <span class="slds-checkbox_faux"></span>
-                                <span class="slds-form-element__label">Unregistered Users</span>
-                              </label>
-                            </span>
-                          </div>
-                        </div>
-
-                        <div class="slds-form-element slds-p-bottom_small">
-                          <label class="slds-form-element__label" for="select-01"> Display from:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-from display-from" placeholder="--/--/----"> </div>
-                        </div>
-                        <div class="slds-form-element">
-                          <label class="slds-form-element__label" for="select-02"> Display to:</label>
-                          <div class="slds-form-element__control">
-                            <input type="text" class="slds-input input-rules-to display-to" placeholder="--/--/----"> </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <!-- /RULES -->
-                  </div>
-                </div>
-              </div>
-
-
-              <!--  /MEDIA SELECTION CONTENT-->
-            </div>
-            <!-- /RTE EDITOR -->
-            #}
           </div>
           <div class="slds-panel__header slds-panel__header_custom action_footer">
             <button class="slds-button slds-button_neutral slds-col_bump-right trigger-close-modal">Close</button>
@@ -3881,9 +2959,71 @@
     <script src='/scripts/tether.min.js'></script>
     <script src='/scripts/jquery.caret.min.js'></script>
     <script src='/scripts/jquery.tag-editor.js'></script>
+    <script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
 
     <script>
+    var totalrowshidden;
+    var rows2display = 50;
+    var rem = 0;
+    var rowCount = 0;
+    var forCntr;
+    var forCntr1;
+    var MaxCntr = 0;
+    $('#hide').click(function() {
+      var rowCount = $('#cmsAssets tr').length;
+
+      rowCount = rowCount / 2;
+      rowCount = Math.round(rowCount)
+
+      for (var i = 0; i < rowCount; i++) {
+        $('tr:nth-child(' + i + ')').hide(300);
+      }
+    });
+
+    $('#show').click(function() {
+      rowCount = $('#cmsAssets tr').length;
+      MaxCntr = forStarter + rows2display;
+      if (forStarter <= $('#cmsAssets tr').length) {
+        for (var i = forStarter; i < MaxCntr; i++) {
+          $('tr:nth-child(' + i + ')').show(200);
+        }
+        forStarter = forStarter + rows2display
+      } else {
+        $('#show').hide();
+      }
+    });
+
+
+
+
+
+
+
+
+
     $(document).ready(function() {
+      var rowCount = $('#cmsAssets tr').length;
+      for (var i = $('#cmsAssets tr').length; i > rows2display; i--) {
+        rem = rem + 1
+        $('tr:nth-child(' + i + ')').hide(200);
+      }
+      forCntr = $('#cmsAssets tr').length - rem;
+      forStarter = forCntr + 1
+
+      //SHOW submenu cms
+      $('#button-dropdown-cms').click(function() {
+        $('#dropdown-cms').addClass('slds-is-open');
+        return false;
+      });
+
+      //RELOAD CMS Asset
+      $('#reloadCMS').click(function() {
+        $('#breakout-modal').toggleClass('slds-hide');
+        $('#dropdown-cms').toggleClass('slds-is-open');
+        return false;
+      });
+
+
 
         //$('.text-activeComponent').removeClass('slds-hide');
         //$('.text-componentType').removeClass('slds-hide');
@@ -4806,12 +3946,39 @@
         */
 
         $('#breakout-modal-trigger-save').click(function() {
-          $('#breakout-modal').addClass("slds-hide");
-          $('#breakout-modal-trigger-save').attr("disabled");
+          console.log("now show animation");
+          $('#cmsAssets').toggleClass("slds-hide");
+          $('#btShowmore').toggleClass("slds-hide");
+          $('#showLoader').toggleClass("slds-hide");
+          $('#assetsFooter').toggleClass("slds-hide");
 
-          $('#button-breakout_container').addClass("slds-hide");
-          $('#button-breakout_content').removeClass("slds-hide");
-          console.log('now show results');
+
+
+            $('#button-breakout_container').addClass("slds-hide");
+            $('#button-breakout_content').removeClass("slds-hide");
+
+              $("#progressbar").animate({
+                  width: "100%"
+              },
+              {
+                  duration: 5000,
+                  complete: function() {
+                    console.log('thanks!');
+                    setTimeout(
+                      function()
+                      {
+                        console.log("animation done");
+                        $('#btShowmore').toggleClass("slds-hide");
+                        $('#showLoader').toggleClass("slds-hide");
+
+                        $('#breakout-modal').addClass("slds-hide");
+                        $('#breakout-modal-trigger-save').attr("disabled");
+                        $('#assetsFooter').toggleClass("slds-hide");
+                        //do something special
+                      }, 5000);
+
+                  }
+              });
         });
 
         $('.breakout-modal-trigger-close').click(function() {
