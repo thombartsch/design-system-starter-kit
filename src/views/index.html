@@ -165,8 +165,46 @@
             <h2 id="breakout-modal-heading" class="slds-text-heading_medium slds-hyphenate">Content Type: News</h2>
             <p class="slds-p-top_small">Salesforce CMS Channel: NTO B2C Commerce</p>
           </header>
-          <div class="slds-modal__content  slds-grow 2slds-p-around_medium" id="breakout-modal-content">
+          <div class="slds-modal__content 2slds-grow 2slds-p-around_medium" id="breakout-modal-content">
             {# START dynamic loop #}
+
+
+<style>
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+thead, tbody, tr, th, td { display: block; }
+
+thead tr {
+    /* fallback */
+    width: 97%;
+    /* minus scroll bar width */
+    width: -webkit-calc(100% - 16px);
+    width:    -moz-calc(100% - 16px);
+    width:         calc(100% - 16px);
+}
+
+tr:after {  /* clearing float */
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+tbody {
+    height: 15rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tbody td, thead th {
+    width: 50%;  /* 19% is less than (100% / 5 cols) = 20% */
+    float: left;
+}
+</style>
+
 
               <table aria-multiselectable="true" class="fixed_header slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
                 role="grid" id="cmsAssets">
