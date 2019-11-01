@@ -172,9 +172,11 @@
                 role="grid" id="cmsAssets">
                 <thead>
                   <tr class="slds-line-height_reset">
+                    {#
                     <th class="slds-text-align_right" scope="col" style="width:3.25rem">
                       <div class="slds-truncate slds-assistive-text" id="column-group-header" title="Choose a row to select">Choose a row to select</div>
                     </th>
+                    #}
                     <th aria-label="Name" aria-sort="ascending"     width="" class="slds-is-resizable slds-is-sortable slds-is-sorted slds-is-sorted_asc" scope="col">
                       <a class="slds-th__action slds-text-link_reset" id="sort_title" href="javascript:void(0);" role="button" tabindex="0">
                         <span class="slds-assistive-text">Sort by: </span>
@@ -218,7 +220,8 @@
                 </thead>
                 <tbody>
                     {% for account in accounts %}
-                    <tr>
+                    <tr aria-selected="false" class="slds-hint-parent">
+                      {#
                       <td class="slds-text-align_right" role="gridcell">
                         <span class="slds-radio">
                           <input type="radio" id="radio-{{ account.id }}" value="radio-01" name="options" tabindex="-1" aria-labelledby="radio-button-label-{{ account.id }} column-group-header" />
@@ -228,6 +231,7 @@
                           </label>
                         </span>
                       </td>
+                      #}
                       <td>{{ account.title }}</td>
                       <td>{{ account.published }}</td>
                     </tr>
@@ -3945,6 +3949,12 @@
         });
         */
 
+        $('.slds-hint-parent').click(function() {
+          $('tr').removeClass("slds-is-selected");
+          $(this).toggleClass("slds-is-selected");
+          $('#breakout-modal-trigger-save').removeAttr("disabled");
+        });
+
         $('#breakout-modal-trigger-save').click(function() {
           console.log("now show animation");
           $('#cmsAssets').toggleClass("slds-hide");
@@ -3974,6 +3984,7 @@
                         $('#breakout-modal').addClass("slds-hide");
                         $('#breakout-modal-trigger-save').attr("disabled");
                         $('#assetsFooter').toggleClass("slds-hide");
+                        $('#cmsAssets').toggleClass("slds-hide");
                         //do something special
                       }, 5000);
 
