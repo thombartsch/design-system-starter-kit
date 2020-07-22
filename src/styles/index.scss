@@ -2437,7 +2437,7 @@ ul#component_list li li {
 
        body {
             /*margin: 0;*/
-            background-color: #bbb;
+            background-color: #F8F8F8;
         }
         a {
             color: #000;
@@ -2447,7 +2447,7 @@ ul#component_list li li {
 
 
         .header {
-            background-color: #fff;
+            background-color: #F8F8F8;
             box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
             position: fixed;
             width: 100%;
@@ -2460,13 +2460,11 @@ ul#component_list li li {
             padding: 0;
             list-style: none;
             overflow: hidden;
-            background-color: #fff;
         }
 
         .header li a {
             display: block;
-            padding: 20px 20px;
-            /*border-right: 1px solid #f4f4f4;*/
+            padding: 1em;
             text-decoration: none;
         }
 
@@ -2727,4 +2725,9 @@ ul#component_list li li {
 }
 .w3-badge{
     border-radius:50%
+}
+
+/* banner */
+.dark{
+    background: rgba(0,0,0,0.5);
 }

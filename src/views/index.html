@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>.:3:.</title>
+    <title>.:index:.</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="/styles/index.css" />
@@ -96,7 +96,13 @@
             min-width: 100vw;
             display: inline-flex;
             align-items: center;
-            text-align: center;
+            text-align: center;            
+        }
+        .banner-tagline{
+            width: 100%;
+            align-self: center;
+            background: rgba(0,0,0,0.3);
+            padding: 0.5em;
         }
     </style>
     
@@ -106,8 +112,10 @@
     <main class="app-wrapper">
         <div class="slds-grid">
             <div class="slds-col ad-banner-static">
-                <p><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></p>
-                <p><h1>Nature at its best.</h1></p>
+                <div class="banner-tagline">
+                    <p><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" /></p>
+                    <p><h1 class="slds-text-heading--large font-white">Nature at it's best.</h1></p>
+                </div>
             </div>
         </div>
     </main>
