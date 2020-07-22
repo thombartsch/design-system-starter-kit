@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.:5:.</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/index.css" />
+    
+    <style>
+        .app-wrapper{
+        }
+        .logo{
+            padding: 0 2em;
+        }
+        #header {
+            display: flex;
+            position: relative;
+            width: 100%;
+            padding: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10;
+            /*transition: opacity .3s cubic-bezier(.38,.41,.27,1),height .3s cubic-bezier(.38,.41,.27,1),visibility .3s;*/
+            background: #fff;
+        }
+        header div div{
+            /*border: 1px solid #000;*/
+        }
+        #categories{
+            width:100%;
+            text-align: center;
+        }
+        #categories ul{
+            width: auto;
+            display: inline-flex;
+        }
+        #categories .icon {
+            display: none;
+        }
+    
+        /* When the screen is less than 768 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 768px) {
+          #header #categories li.categories{
+            display: none;
+            }
+          #header .icon {
+            float: left;
+            display: block;
+          }
+            #categories{
+                order: -1;
+                width:auto;
+            }
+            #logo{
+                width:100%;
+                display:contents;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+            
+            
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        @media screen and (max-width: 600px) {
+          #header.responsive {position: relative;}
+          #header.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          #header.responsive .icon {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }    
+    
+    </style>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("header");
+      if (x.className == "navigation") {
+        x.className += " responsive";
+      } else {
+        x.className = "navigation";
+      }
+    }
+    </script>
+    
+</head>
+<body>
+
+            
+            
+            <header>
+                <div class="navigation" id="header">
+                    <div class="" id="logo">
+                        <a href="/" class="logo"><img src="/assets/logo-alpine-group.svg" /></a>    
+                    </div>
+                    <div class="" id="categories">
+                        <ul class="nav-items slds-list_horizontal">
+                            <li class="categories slds-p-right_small"><a href="#">Alpine Nutrition</a></li>
+                            <li class="categories slds-p-right_small"><a href="#">Alpine Energy</a></li>
+                            <li class="categories slds-p-right_small"><a href="#">Alpine Blends</a></li>
+                            <li class="categories"><a href="#">Alpine Machinery</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="" id="user">
+                        <ul class="slds-list_horizontal">
+                            <li class="slds-p-right_small">
+                                <a href="#dont">
+                                    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Description of icon when needed</span>
+                                    </span>						
+                                </a>
+                            </li>
+                            <li class="slds-p-right_small">
+                                <a href="#dont">
+                                    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Description of icon when needed</span>
+                                    </span>						
+                                </a>
+                            </li>
+                            <li><a href="#forget">
+                                    <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Description of icon when needed</span>
+                                    </span>						
+                            </a></li>                        
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            
+            {#
+            <nav class="slds-grid">
+                <div id="/nav-bar-wrapper" class="">
+                    <a href="/" class="logo"><img src="/assets/logo-alpine-group.svg" /></a>
+                </div>
+                <div class="slds-col">
+                    <ul class="nav-items slds-list_horizontal">
+                        <li><a href="#dont">Alpine Nutrition</a></li>
+                        <li><a href="#forget">Alpine Energy</a></li>
+                        <li><a href="#forget">Alpine Blends</a></li>
+                        <li><a href="#forget">Alpine Machinery</a></li>
+                    </ul>
+                </div>    
+            </nav>
+            #}
+            
+            
+            
+            {#
+	        <header class="header">
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+				<a href="/" class="logo"><img src="/assets/logo-alpine-group.svg" /></a>
+				<ul class="menu">
+	                <li><a href="#dont">Alpine Nutrition</a></li>
+	                <li><a href="#forget">Alpine Energy</a></li>
+					<li><a href="#forget">Alpine Blends</a></li>
+					<li><a href="#forget">Alpine Machinery</a></li>
+	            </ul>
+                
+				<ul class="user">
+	                <li>
+						<a href="#dont">
+							<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+							<svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon when needed</span>
+							</span>						
+						</a>
+					</li>
+	                <li>
+						<a href="#dont">
+							<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+							<svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon when needed</span>
+							</span>						
+						</a>
+					</li>
+	                <li><a href="#forget">
+							<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+							<svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon when needed</span>
+							</span>						
+					</a></li>
+	            </ul>
+                
+                
+	        </header>
+            #}
+        <main class="app-wrapper">
+            <div>
+                something for the content in here
+            </div>
+        </main>
+
+</body>
+</html>

@@ -155,20 +155,36 @@
 	        <link rel="stylesheet" href="menu.css">
 	    </head>
 	    <body>
-
+            
 	        <header class="header">
-							<input class="menu-btn" type="checkbox" id="menu-btn_left" />
-							<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-	            <a href="/" class="logo"><img src="/assets/logo-alpine-group.svg" /></a>
-							<input class="menu-btn" type="checkbox" id="menu-btn" />
-							<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-							<ul class="menu">
-	                <li><a href="#dont">User</a></li>
-	                <li><a href="#forget">Stuff</a></li>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+				<a href="/" class="logo"><img src="/assets/logo-alpine-group.svg" /></a>
+				<ul class="menu">
+	                <li>
+						<a href="#dont">
+							<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+							<svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon when needed</span>
+							</span>						
+						</a>
+					</li>
+	                <li><a href="#forget">
+							<span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+							<svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon when needed</span>
+							</span>						
+					</a></li>
 	            </ul>
-							<ul class="menu">
-	                <li><a href="#dont">Main Link A</a></li>
-	                <li><a href="#forget">Main Link B</a></li>
+				<ul class="menu">
+	                <li><a href="#dont">Alpine Nutrition</a></li>
+	                <li><a href="#forget">Alpine Energy</a></li>
+					<li><a href="#forget">Alpine Blends</a></li>
+					<li><a href="#forget">Alpine Machinery</a></li>
 	            </ul>
 	        </header>
 					<main class="app-wrapper">
