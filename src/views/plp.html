@@ -42,7 +42,7 @@
 
 </head>
 
-<body onload="checkCookies()">
+<body>
     <!-- ADVERTISEMENT BANNER -->
     <section class="banner dark full-width">
         <div class="slds-col slds-p-around_small slds-align_absolute-center">
@@ -109,62 +109,22 @@
     <main class="app-wrapper">
         <!-- HERO BANNER -->
         <div class="slds-grid">
-            <div class="slds-col ad-banner-static banner-home">
+            <div class="slds-col ad-banner-static banner-cats categories-home_energy" style>
                 <div class="banner-tagline rellax" data-rellax-speed="-7">
-                    <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
-                    <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
+                    <img src="/assets/logo-energy.svg" alt="Alpine Group Logo" />
+                    <h1 class="slds-p-top_medium slds-text-heading--medium font-white">For the extra kick</h1>
                 </div>
             </div>
         </div>
         <!-- //HERO BANNER -->
-        
-        <!-- MAIN CATEGORIES -->
-        <div class="slds-grid slds-wrap">
-            
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_energy">
-                <div class="cat-tile-overlay" onclick="goPLP()">
-                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                </div>
-                <div class="banner-tagline">
-                    <img src="/assets/logo-energy.svg" alt="Alpine Group Logo" />
-                    <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
-                </div>
-            </div>
-            
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_blends">
-                <div class="cat-tile-overlay" onclick="goPLP()">
-                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                </div>
-                <a href="plp.html" class="cat-tile-link">
-                    <div class="banner-tagline">
-                        <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
-                        <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
-                    </div>
-                </a>
-            </div>
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_nutrition">
-                <div class="cat-tile-overlay" onclick="goPLP()">            
-                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                </div>
-                <a href="plp.html" class="cat-tile-link">
-                    <div class="banner-tagline">
-                        <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
-                        <!--h5 class="slds-text-heading--small font-white">See more</h5-->
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- //MAIN CATEGORIES -->
-        
-        
         
         <!-- AD PRODUCTS -->
         <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
             <div class="slds-align-">
                 <div class="section-divider">
                     <div class="title">
-                        <h2 class="slds-text-heading--large"><b>Energy for any activity!</b></h2>
-                        <h5 class="slds-text-heading--small">Find your fuel</h5>
+                        <h2 class="slds-text-heading--large"><b>Latest Products</b></h2>
+                        <!--h5 class="slds-text-heading--small">Find your fuel</h5-->
                     </div>
                 </div>
             </div>
@@ -174,8 +134,8 @@
         
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
-                {% if loop.index0 < 6 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                {% if loop.index0 < 4 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
                             <div class="producttile slds-m-bottom_small" style="text-align:center">
                                 <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
                                 <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -189,13 +149,13 @@
         <!-- //AD PRODUCTS -->
 
 
-        <!-- POPULAR PRODUCTS -->
+        <!-- PRODUCTS -->
         <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
             <div class="slds-align-">
                 <div class="section-divider">
                     <div class="title">
-                        <h2 class="slds-text-heading--large"><b>Most Popular!</b></h2>
-                        <h5 class="slds-text-heading--small">Find your fuel</h5>
+                        <h2 class="slds-text-heading--large"><b>All Products</b></h2>
+                        <h5 class="slds-text-heading--small">12 products found.</h5>
                     </div>
                 </div>
             </div>
@@ -205,8 +165,8 @@
         
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
-                {% if loop.index0 < 8 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                {% if loop.index0 < 12 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
                             <div class="producttile slds-m-bottom_small" style="text-align:center">
                                 <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
                                 <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -217,59 +177,44 @@
                 {% endif %}
             {% endfor %}        
         </div>
-        <!-- //POPULAR PRODUCTS -->
+        <!-- //PRODUCTS -->
     
     
     
-        <!-- HERO BANNER -->
-        <div class="slds-grid">
-            <div class="slds-col ad-banner-static banner-about_us">
-                <div class="banner-tagline">
-                    <h2 class="slds-text-heading--medium font-white slds-p-bottom_medium">OUR JOURNEY</h2>
-                    <h1 class="slds-text-heading--large font-white slds-p-bottom_medium"><b>Know all about the alpine process</b></h1>
-                    <h3 class="slds-text-heading--small font-white slds-p-bottom_medium">LEARN MORE</h3>                    
+    
+    
+        <!-- OTHER CATEGORIES -->
+        <div class="slds-grid slds-wrap slds-p-bottom_large">
+            
+            <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
+                <div class="cat-tile-overlay" onclick="goPLP()">
+                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                 </div>
-            </div>
-        </div>
-        <!-- //HERO BANNER -->
-    
-
-    
-        <!-- BLOG POSTS -->
-        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
-            <div class="slds-align-">
-                <div class="section-divider">
-                    <div class="title">
-                        <h2 class="slds-text-heading--large"><b>alpine Stories</b></h2>
-                        <h5 class="slds-text-heading--small">Insight views from our members.</h5>
+                <a href="plp.html" class="cat-tile-link">
+                    <div class="banner-tagline">
+                        <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
+                        <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
                     </div>
+                </a>
+            </div>
+            <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
+                <div class="cat-tile-overlay" onclick="goPLP()">            
+                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                 </div>
+                <a href="plp.html" class="cat-tile-link">
+                    <div class="banner-tagline">
+                        <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
+                        <!--h5 class="slds-text-heading--small font-white">See more</h5-->
+                    </div>
+                </a>
             </div>
         </div>
+        <!-- //OTHER CATEGORIES -->
         
+    
 
-        
-        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
-            {% for product in products %}
-                {% if loop.index0 < 6 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
-                            <div class="blogtile slds-m-bottom_small" style="text-align:center;">
-                                <!--div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/blog/{{ product.image }}.jpg" /></div-->
-                                <div class="blog-image-tile" style="background:url(/assets/products/blog/{{ product.image }}.jpg); background-repeat: no-repeat; min-height: 20rem; background-size: cover;"></div>
-                                
-                                <div class="slds-truncate_container_75 slds-p-around_medium">
-                                    <h4 class="slds-text-heading--medium slds-truncate">{{ product.product_description }}</h4>
-                                </div>
-                                <div class="slds-truncate_container_752 slds-p-left_medium slds-p-right_medium slds-p-bottom_medium">
-                                    <p class="slds-p-top_medium slds-truncate"><span>{{ product.product_description_long }}</span></p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                {% endif %}
-            {% endfor %}        
-        </div>
-        <!-- //BLOG POSTS -->
+    
+      
     
     
         <!-- FOOTER -->
