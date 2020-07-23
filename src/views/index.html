@@ -200,7 +200,7 @@
             {% for product in products %}
                 {% if loop.index0 < 4 %}
                         <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
-                            <div class="producttile slds-m-bottom_small" style="text-align:center">
+                            <div class="blogtile slds-m-bottom_small" style="text-align:center">
                                 <div class="producttile-image slds-p-bottom_medium"><img src="/assets/blog/{{ product.image }}.jpg" /></div>
                                 <h4 class="slds-text-heading--medium"><b>{{ product.product_description }}</b></h4>
                                 <p class="slds-p-top_medium"><span>{{ product.product_description_long }}</span></p>
@@ -212,22 +212,63 @@
         <!-- //BLOG POSTS -->
     
     
+        <!-- FOOTER -->
+
+        <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
+            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
+                <p class="slds-p-bottom_small">Privacy Notice</p>
+                <p class="slds-p-bottom_small">Cookie Preferences</p>
+                <p class="slds-p-bottom_large">Terms & Conditions</p>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
+                <p class="slds-p-bottom_small">Categories</p>
+                <p class="slds-p-bottom_small">About Us</p>
+                <p class="slds-p-bottom_small">Blog</p>
+                
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
+
+            
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
+                <p class="slds-p-bottom_small">sign up for our newsletter</p>
+                <form class="slds-p-bottom_small">
+                    <div class="slds-form-element">
+                      <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-1" placeholder="Enter your email address" required="" class="slds-input" />
+                      </div>
+                    </div>                
+                </form>
+                <div class="slds-grid">
+                    <ul class="slds-list_horizontal slds-has-inline-block-links_space">
+                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/facebook.svg" class="social-footer-icons" /></li>
+                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/instagram.svg"  class="social-footer-icons" /></li>
+                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/pinterest.svg"  class="social-footer-icons" /></li>
+                        <li class="slds-item"><img src="/assets/social-media/twitter.svg"  class="social-footer-icons" /></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //FOOTER -->
         
+
+
+
+
+
+
         
-        
-<!--        
-{"id":1,"product_name":"Glass Clear 8 Oz","package":"XL","weight":"84","old_price":"27","new_price":"44","image":1,"product_description":"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.","product_description_long":"Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."},        
--->        
         
         
     <style>
-        .producttile{
-            /*background: #F5F5F5;*/
-            background: #fff;
-            min-height: 20rem;
+        .social-footer-icons{
+            max-height: 1.5em;
+            filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
         }
-        .tile-price{
-            font-size: 2em;
+        footer .small{
+            max-width: 50%;
         }
     </style>
     
