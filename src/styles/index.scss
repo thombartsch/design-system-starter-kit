@@ -2540,7 +2540,8 @@ a {
     display: block;
     /*float: left;*/
     font-size: 2em;
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
+    padding: 0.6em;
     text-decoration: none;
 }
 
@@ -2725,8 +2726,25 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 }
 */
 
-/* 48em = 768px @ 16pt font */
+/*BADGE*/
+.badge-green {
+    position: absolute;
+    background: #4BCA81;
+    width: 12px;
+    height: 12px;
+    top: 35px;
+    right: 45px;
+    border-radius: 100%;
+    /* content: '1'; */
+    /* text-align: center; */
+    display: inline-flex;
+    align-items: center;        
+    padding-left: 3px;
+}
 
+
+
+/* 48em = 768px @ 16pt font */
 @media (min-width: 48em) {
     .header li a {
         /*padding: 20px 30px;*/
@@ -2768,6 +2786,12 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
         padding: 0.5rem;
     }
 
+    /*BADGE*/
+    .badge-green {
+        top: 43px;
+        right: 53px;
+        padding-left: 3px;
+    }
     
     
     

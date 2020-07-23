@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="/styles/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-    <script src="/scripts/lax.js"></script>
+    <script src="/scripts/rellax.min.js"></script>
 
     <script>
         // Open the full screen search box
@@ -19,12 +19,22 @@
         function closeSearch() {
             document.getElementById("searchOverlay").style.display = "none";
         }
+        
+        
+        // Show consent modal
+        function checkCookies() {
+            //document.getElementById("cookieConsent").style.display = "block";
+            document.getElementById("cookieConsent").style.opacity='1';
+        }
+        function closeCookies() {
+            document.getElementById("cookieConsent").style.display = "none";        
+        }
     </script>
 
 
 </head>
 
-<body>
+<body onload="checkCookies()">
     <!-- ADVERTISEMENT BANNER -->
     <section class="banner dark full-width">
         <div class="slds-col slds-p-around_small slds-align_absolute-center">
@@ -61,8 +71,8 @@
                 </li>
                 <li>
                 <li>
+                    <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" /></span>
                     <a href="#">
-                        <!--span class="w3-badge w3-green">6</span-->
                         <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
                             <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
@@ -91,7 +101,7 @@
     <main class="app-wrapper">
         <!-- HERO BANNER -->
         <div class="slds-grid">
-            <div class="slds-col ad-banner-static banner-home lax" data-lax-preset="zoomIn">
+            <div class="slds-col ad-banner-static banner-home">
                 <div class="banner-tagline">
                     <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
                     <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
@@ -268,28 +278,6 @@
         
         
     <style>
-        
-        /*PARALLAX*/
-        
-        .parallax::after {
-          /* Display and position the pseudo-element */
-          content: " ";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-
-          /* Move the pseudo-element back away from the camera,
-           * then scale it back up to fill the viewport.
-           * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-          transform: translateZ(-1px) scale(1.5);
-          /* Force the background image to fill the whole element. */
-          background-size: 100%;
-          /* Keep the image from overlapping sibling elements. */ 
-          z-index: -1;
-        }
-
         /*FOOTER*/
         .social-footer-icons{
             max-height: 1.5em;
@@ -304,6 +292,19 @@
             max-height: 10rem;
         }
         
+        /*COOKIE CONSENT*/
+        #cookieConsent {
+            z-index: 200;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100vw;
+            background: #fff;
+            padding: 1rem;
+            opacity: 0;
+        }
+        body{ 
+        }
     </style>
     
     
@@ -319,6 +320,21 @@
     
     
 
+   <!-- COOKIE CONSENT -->
+    <div id="cookieConsent">
+        <div class="cookie-content">
+            <h1 class="slds-text-heading--medium slds-p-bottom_medium"><b>About Cookies On This Site</b></h1>
+            <p class="1slds-text-heading--small slds-p-bottom_medium">We use cookies and other technologies to collect data about your browser, device, and location. 
+                We share this data with advertising, social media and analytics partners to help us understand how the site is used and to personalize our content and the advertising you see on this and other sites. 
+                For more information see our <a>Privacy Policy</a></p>
+            <div class="slds-grid slds-gutters slds-gutters_x-medium">
+                <div><button class="slds-button slds-button_brand slds-m-right_small" onclick="closeCookies()">OK</button></div>    
+                <div><button class="slds-button">Cookie Settings</button></div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- //COOKIE CONSENT -->
 
 
 
@@ -360,15 +376,5 @@
 
 </body>
 
-<script>
-window.onload = function() {
-	lax.setup() // init
-	const updateLax = () => {
-		lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
-	}
-	window.requestAnimationFrame(updateLax)
-}
-</script>
 
 </html>
