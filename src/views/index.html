@@ -10,6 +10,8 @@
     <script src="/scripts/rellax.min.js"></script>
 
     <script>
+        var rellax = new Rellax('.rellax');
+        
         // Open the full screen search box
         function openSearch() {
             document.getElementById("searchOverlay").style.display = "block";
@@ -102,7 +104,7 @@
         <!-- HERO BANNER -->
         <div class="slds-grid">
             <div class="slds-col ad-banner-static banner-home">
-                <div class="banner-tagline">
+                <div class="banner-tagline rellax" data-rellax-speed="-7">
                     <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
                     <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
                 </div>
@@ -110,6 +112,28 @@
         </div>
         <!-- //HERO BANNER -->
         
+        <!-- MAIN CATEGORIES -->
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_energy">
+                <div class="banner-tagline">
+                    <img src="/assets/logo-energy.svg" alt="Alpine Group Logo" />
+                    <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
+                </div>
+            </div>
+            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_blends">
+                <div class="banner-tagline">
+                    <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
+                    <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
+                </div>
+            </div>
+            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_nutrition">
+                <div class="banner-tagline">
+                    <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
+                    <!--h5 class="slds-text-heading--small font-white">See more</h5-->
+                </div>
+            </div>
+        </div>
+        <!-- //MAIN CATEGORIES -->
         
         
         
