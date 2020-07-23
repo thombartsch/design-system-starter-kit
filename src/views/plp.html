@@ -11,7 +11,7 @@
 
     <script>
         var rellax = new Rellax('.rellax');
-        
+
         // Open the full screen search box
         function openSearch() {
             document.getElementById("searchOverlay").style.display = "block";
@@ -21,28 +21,28 @@
         function closeSearch() {
             document.getElementById("searchOverlay").style.display = "none";
         }
-        
-        
+
+
         // Show consent modal
         function checkCookies() {
             //document.getElementById("cookieConsent").style.display = "block";
-            document.getElementById("cookieConsent").style.opacity='1';
+            document.getElementById("cookieConsent").style.opacity = '1';
         }
+
         function closeCookies() {
-            document.getElementById("cookieConsent").style.display = "none";        
+            document.getElementById("cookieConsent").style.display = "none";
         }
-        
-        
+
+
         //Load PLP - needs to be removed
-        function goPLP(){        
+        function goPLP() {
             window.open('plp.html', '_self');
         }
-        
+
         //Load PDP - needs to be removed
-        function goPDP(){        
+        function goPDP() {
             window.open('pdp.html', '_self');
         }
-        
     </script>
 
 
@@ -123,7 +123,7 @@
             </div>
         </div>
         <!-- //HERO BANNER -->
-        
+
         <!-- AD PRODUCTS -->
         <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
             <div class="slds-align-">
@@ -135,22 +135,22 @@
                 </div>
             </div>
         </div>
-        
 
-        
+
+
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
-                {% if loop.index0 < 4 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
-                            <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
-                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
-                                <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
-                                <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                                <p><span class="tile-price">$ {{ product.new_price }}</span></p>
-                            </div>
-                        </div>
-                {% endif %}
-            {% endfor %}        
+            {% if loop.index0 < 4 %}
+            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
+                    <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
+                    <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
+                    <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                    <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
         <!-- //AD PRODUCTS -->
 
@@ -166,144 +166,214 @@
                 </div>
             </div>
         </div>
-        
 
-        
+
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
-            {% for product in products %}
-                {% if loop.index0 < 12 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
-                            <div class="producttile slds-m-bottom_small" style="text-align:center">
-                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
-                                <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
-                                <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                                <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+            <div class="slds-col slds-grid slds-wrap slds-gutters slds-gutters_x-small slds-size_1-of-1 slds-large-size_3-of-12 slds-p-around_medium">
+
+                <div class="slds-col slds-grid slds-p-around_small">
+                    <div class="slds-col slds-text-heading--medium"><b>Filters</b></div>
+                    <div><button class="slds-button">Clear all</button></div>
+                </div>
+                <ul class="slds-accordion" style="width:100%">
+                    <li class="slds-accordion__list-item">
+                        <section class="slds-accordion__section slds-is-open">
+                            <div class="slds-accordion__summary">
+                                <h3 class="slds-accordion__summary-heading">
+                                    <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+                                        <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                        </svg>
+                                        <span class="slds-accordion__summary-content" title="Accordion summary">Filter Group</span>
+                                    </button>
+                                </h3>
                             </div>
-                        </div>
+                            <div class="slds-accordion__content" id="accordion-details-01">
+                                <div class="slds-form-element slds-p-left_medium">
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-checkbox">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-3" value="checkbox-unique-id-3" checked="" />
+                                            <label class="slds-checkbox__label" for="checkbox-unique-id-3">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-form-element__label">Filter Label</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="slds-accordion__list-item">
+                        <section class="slds-accordion__section">
+                            <div class="slds-accordion__summary">
+                                <h3 class="slds-accordion__summary-heading">
+                                    <button aria-controls="accordion-details-02" aria-expanded="false" class="slds-button slds-button_reset slds-accordion__summary-action">
+                                        <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                        </svg>
+                                        <span class="slds-accordion__summary-content" title="Accordion summary">Filter Group</span>
+                                    </button>
+                                </h3>
+                            </div>
+                            <div hidden="" class="slds-accordion__content" id="accordion-details-02">Filter content</div>
+                        </section>
+                    </li>
+                    <li class="slds-accordion__list-item">
+                        <section class="slds-accordion__section">
+                            <div class="slds-accordion__summary">
+                                <h3 class="slds-accordion__summary-heading">
+                                    <button aria-controls="accordion-details-03" aria-expanded="false" class="slds-button slds-button_reset slds-accordion__summary-action">
+                                        <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                        </svg>
+                                        <span class="slds-accordion__summary-content" title="Accordion summary">Filter Group</span>
+                                    </button>
+                                </h3>
+                            </div>
+                            <div hidden="" class="slds-accordion__content" id="accordion-details-03">Filter content</div>
+                        </section>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="slds-col slds-grid slds-wrap slds-gutters slds-gutters_x-small slds-size_1-of-1 slds-large-size_9-of-12">
+                {% for product in products %}
+                {% if loop.index0 < 12 %}
+                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                    <div class="producttile slds-m-bottom_small" style="text-align:center">
+                        <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
+                        <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
+                        <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                        <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                    </div>
+                </div>
                 {% endif %}
-            {% endfor %}        
-        </div>
-        <!-- //PRODUCTS -->
-    
-    
-    
-    
-    
-        <!-- OTHER CATEGORIES -->
-        <div class="slds-grid slds-wrap slds-p-bottom_large">
-            
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
-                <div class="cat-tile-overlay" onclick="goPLP()">
-                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                </div>
-                <a href="plp.html" class="cat-tile-link">
-                    <div class="banner-tagline">
-                        <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
-                        <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
-                    </div>
-                </a>
-            </div>
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
-                <div class="cat-tile-overlay" onclick="goPLP()">            
-                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                </div>
-                <a href="plp.html" class="cat-tile-link">
-                    <div class="banner-tagline">
-                        <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
-                        <!--h5 class="slds-text-heading--small font-white">See more</h5-->
-                    </div>
-                </a>
+                {% endfor %}
             </div>
         </div>
-        <!-- //OTHER CATEGORIES -->
-        
-    
-
-    
-      
-    
-    
-        <!-- FOOTER -->
-
-        <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
-                <p class="slds-p-bottom_small">Privacy Notice</p>
-                <p class="slds-p-bottom_small">Cookie Preferences</p>
-                <p class="slds-p-bottom_large">Terms & Conditions</p>
-            </div>
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
-                <p class="slds-p-bottom_small">Categories</p>
-                <p class="slds-p-bottom_small">About Us</p>
-                <p class="slds-p-bottom_small">Blog</p>
-                
-            </div>
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
-
             
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
-                <p class="slds-p-bottom_small">sign up for our newsletter</p>
-                <form class="slds-p-bottom_small">
-                    <div class="slds-form-element">
-                      <div class="slds-form-element__control">
-                        <input type="text" id="text-input-id-1" placeholder="Enter your email address" required="" class="slds-input" />
-                      </div>
-                    </div>                
-                </form>
-                <div class="slds-grid">
-                    <ul class="slds-list_horizontal slds-has-inline-block-links_space">
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/facebook.svg" class="social-footer-icons" /></li>
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/instagram.svg"  class="social-footer-icons" /></li>
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/pinterest.svg"  class="social-footer-icons" /></li>
-                        <li class="slds-item"><img src="/assets/social-media/twitter.svg"  class="social-footer-icons" /></li>
-                    </ul>
+                <!-- //PRODUCTS -->
+
+
+
+
+                <!-- OTHER CATEGORIES -->
+                <div class="slds-grid slds-wrap slds-p-bottom_large">
+
+                    <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
+                        <div class="cat-tile-overlay" onclick="goPLP()">
+                            <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
+                        </div>
+                        <a href="plp.html" class="cat-tile-link">
+                            <div class="banner-tagline">
+                                <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
+                                <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
+                        <div class="cat-tile-overlay" onclick="goPLP()">
+                            <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
+                        </div>
+                        <a href="plp.html" class="cat-tile-link">
+                            <div class="banner-tagline">
+                                <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
+                                <!--h5 class="slds-text-heading--small font-white">See more</h5-->
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- //FOOTER -->
-        
+                <!-- //OTHER CATEGORIES -->
 
 
 
 
 
 
-        
-        
-        
-    <style>
-        /*FOOTER*/
-        .social-footer-icons{
-            max-height: 1.5em;
-            filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
-        }
-        footer .small{
-            max-width: 50%;
-        }
-        
-        /*BLOG TILE*/
-        .blog-image-tile{
-            max-height: 10rem;
-        }
-        
-        /*COOKIE CONSENT*/
-        #cookieConsent {
-            z-index: 200;
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            width: 100vw;
-            background: #fff;
-            padding: 1rem;
-            opacity: 0;
-        }
-        body{ 
-        }
-    </style>
-    
-    
+
+                <!-- FOOTER -->
+
+                <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+                        <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
+                        <p class="slds-p-bottom_small">Privacy Notice</p>
+                        <p class="slds-p-bottom_small">Cookie Preferences</p>
+                        <p class="slds-p-bottom_large">Terms & Conditions</p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+                        <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
+                        <p class="slds-p-bottom_small">Categories</p>
+                        <p class="slds-p-bottom_small">About Us</p>
+                        <p class="slds-p-bottom_small">Blog</p>
+
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
+
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                        <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
+                        <p class="slds-p-bottom_small">sign up for our newsletter</p>
+                        <form class="slds-p-bottom_small">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <input type="text" id="text-input-id-1" placeholder="Enter your email address" required="" class="slds-input" />
+                                </div>
+                            </div>
+                        </form>
+                        <div class="slds-grid">
+                            <ul class="slds-list_horizontal slds-has-inline-block-links_space">
+                                <li class="slds-item slds-m-right_small"><img src="/assets/social-media/facebook.svg" class="social-footer-icons" /></li>
+                                <li class="slds-item slds-m-right_small"><img src="/assets/social-media/instagram.svg" class="social-footer-icons" /></li>
+                                <li class="slds-item slds-m-right_small"><img src="/assets/social-media/pinterest.svg" class="social-footer-icons" /></li>
+                                <li class="slds-item"><img src="/assets/social-media/twitter.svg" class="social-footer-icons" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+                <!-- //FOOTER -->
+
+
+
+
+
+
+
+
+
+
+                <style>
+                    /*FOOTER*/
+                    .social-footer-icons {
+                        max-height: 1.5em;
+                        filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
+                    }
+
+                    footer .small {
+                        max-width: 50%;
+                    }
+
+                    /*BLOG TILE*/
+                    .blog-image-tile {
+                        max-height: 10rem;
+                    }
+
+                    /*COOKIE CONSENT*/
+                    #cookieConsent {
+                        z-index: 200;
+                        position: fixed;
+                        bottom: 0px;
+                        left: 0px;
+                        width: 100vw;
+                        background: #fff;
+                        padding: 1rem;
+                        opacity: 0;
+                    }
+
+                    body {}
+                </style>
+
+
     </main>
     <!-- //MAIN PAGE -->
 
@@ -311,23 +381,23 @@
 
 
 
-    
-    
-    
-    
 
-   <!-- COOKIE CONSENT -->
+
+
+
+
+    <!-- COOKIE CONSENT -->
     <div id="cookieConsent">
         <div class="cookie-content">
             <h1 class="slds-text-heading--medium slds-p-bottom_medium"><b>About Cookies On This Site</b></h1>
-            <p class="1slds-text-heading--small slds-p-bottom_medium">We use cookies and other technologies to collect data about your browser, device, and location. 
-                We share this data with advertising, social media and analytics partners to help us understand how the site is used and to personalize our content and the advertising you see on this and other sites. 
+            <p class="1slds-text-heading--small slds-p-bottom_medium">We use cookies and other technologies to collect data about your browser, device, and location.
+                We share this data with advertising, social media and analytics partners to help us understand how the site is used and to personalize our content and the advertising you see on this and other sites.
                 For more information see our <a>Privacy Policy</a></p>
             <div class="slds-grid slds-gutters slds-gutters_x-medium">
-                <div><button class="slds-button slds-button_brand slds-m-right_small" onclick="closeCookies()">OK</button></div>    
+                <div><button class="slds-button slds-button_brand slds-m-right_small" onclick="closeCookies()">OK</button></div>
                 <div><button class="slds-button">Cookie Settings</button></div>
             </div>
-            
+
         </div>
     </div>
     <!-- //COOKIE CONSENT -->
