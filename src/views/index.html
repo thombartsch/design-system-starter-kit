@@ -33,6 +33,17 @@
         }
         
         
+        // Show user menu
+        function openUsermenu() {
+            document.getElementById("user-menu-dropdown").style.display = "block";
+        }
+
+        // Close user menu
+        function closeUsermenu() {
+            document.getElementById("user-menu-dropdown").style.display = "none";
+        }
+        
+        
         //Load PLP - needs to be removed
         function goPLP(){        
             window.open('plp.html', '_self');
@@ -80,7 +91,7 @@
                 <li>
                 <li>
                     <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" /></span>
-                    <a href="account.html">
+                    <a href="javascript:openUsermenu();">
                         <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
                             <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
@@ -88,6 +99,39 @@
                             <span class="slds-assistive-text">All information related to your account</span>
                         </span>
                     </a>
+
+                    <div class="slds-dropdown slds-dropdown_left slds-dropdown_small" id="user-menu-dropdown">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div><h3 class="slds-text-heading--small slds-p-left_small slds-p-top_small" onclick="closeUsermenu()">Welcome Carl!</h3></div>
+                            <div class="slds-hide">
+                                <a href="javascript:closeUsermenu();" role="menuitem" tabindex="0">
+                                  <span class="slds-truncate" title="Menu Item One">
+                                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                    </svg></span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                              <span class="slds-truncate" title="Menu Item One">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+                                </svg>Cart</span>
+                            </a>
+                          </li>
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                              <span class="slds-truncate" title="Menu Item Two">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                </svg>My Account</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>                    
+                    
                 </li>
                 <li><a href="cart.html">
                         <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
@@ -121,7 +165,7 @@
         <!-- MAIN CATEGORIES -->
         <div class="slds-grid slds-wrap">
             
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_energy">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_energy">
                 <div class="cat-tile-overlay" onclick="goPLP()">
                     <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                 </div>
@@ -131,7 +175,7 @@
                 </div>
             </div>
             
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_blends">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_blends">
                 <div class="cat-tile-overlay" onclick="goPLP()">
                     <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                 </div>
@@ -142,7 +186,7 @@
                     </div>
                 </a>
             </div>
-            <div class="slds-col  slds-size_1-of-1 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_nutrition">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_4-of-12 ad-banner-static categories-home categories-home_nutrition">
                 <div class="cat-tile-overlay" onclick="goPLP()">            
                     <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                 </div>
@@ -175,7 +219,7 @@
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
                 {% if loop.index0 < 6 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12  slds-large-size_2-of-12">
                             <div class="producttile slds-m-bottom_small" style="text-align:center">
                                 <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
                                 <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -206,7 +250,7 @@
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
                 {% if loop.index0 < 8 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12  slds-large-size_3-of-12">
                             <div class="producttile slds-m-bottom_small" style="text-align:center">
                                 <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
                                 <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -252,7 +296,7 @@
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
                 {% if loop.index0 < 6 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12  slds-large-size_4-of-12">
                             <div class="blogtile slds-m-bottom_small" style="text-align:center;">
                                 <!--div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/blog/{{ product.image }}.jpg" /></div-->
                                 <div class="blog-image-tile" style="background:url(/assets/products/blog/{{ product.image }}.jpg); background-repeat: no-repeat; min-height: 20rem; background-size: cover;"></div>
@@ -275,23 +319,23 @@
         <!-- FOOTER -->
 
         <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+            <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-5 slds-large-size_2-of-12">
                 <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
                 <p class="slds-p-bottom_small">Privacy Notice</p>
                 <p class="slds-p-bottom_small">Cookie Preferences</p>
                 <p class="slds-p-bottom_large">Terms & Conditions</p>
             </div>
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+            <div class="slds-col slds-size_1-of-2  slds-medium-size_1-of-5 slds-large-size_2-of-12">
                 <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
                 <p class="slds-p-bottom_small">Categories</p>
                 <p class="slds-p-bottom_small">About Us</p>
                 <p class="slds-p-bottom_small">Blog</p>
                 
             </div>
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
+            <div class="slds-col slds-size_1-of-1  slds-medium-size_2-of-5 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
 
             
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+            <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-5 slds-large-size_4-of-12">
                 <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
                 <p class="slds-p-bottom_small">sign up for our newsletter</p>
                 <form class="slds-p-bottom_small">

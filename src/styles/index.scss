@@ -2618,6 +2618,17 @@ a {
     display: inline-flex;
 }
 
+#usermenu ul ul{
+    display: block;
+}
+
+#user-menu-dropdown{
+    position: absolute;
+    top: 60px;
+    left: calc(100% - 250px);    
+    display: none;
+}
+
 
 /*icons*/
 svg.slds-icon.slds-icon-text-default.slds-icon_small {
