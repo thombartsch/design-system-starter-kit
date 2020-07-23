@@ -117,8 +117,8 @@
 
 
         {% for product in products %}
-        {% if loop.index0 < 1 %}
-            <div class="slds-grid slds-wrap">
+            {% if loop.index0 < 1 %}
+                <div class="slds-grid slds-wrap">
                 <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
                     <img src="/assets/products/energy/{{ product.image }}.jpg" />
                     <div class="slds-grid slds-wrap">
@@ -191,7 +191,7 @@
 
             </div>
             {% endif %}
-            {% endfor %}
+        {% endfor %}
 
 
             <style>
@@ -229,7 +229,7 @@
             <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
                 {% for product in products %}
                 {% if loop.index0 < 4 %}
-                <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-large-size_3-of-12">
                     <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
                         <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
                         <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -260,7 +260,7 @@
             <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
                 {% for product in products %}
                 {% if loop.index0 < 12 %}
-                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-4 slds-large-size_2-of-12">
                     <div class="producttile slds-m-bottom_small" style="text-align:center">
                         <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
                         <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
@@ -280,7 +280,7 @@
             <!-- OTHER CATEGORIES -->
             <div class="slds-grid slds-wrap slds-p-bottom_large">
 
-                <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
+                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
                     <div class="cat-tile-overlay" onclick="goPLP()">
                         <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                     </div>
@@ -291,7 +291,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="slds-col  slds-size_1-of-1 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
+                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
                     <div class="cat-tile-overlay" onclick="goPLP()">
                         <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
                     </div>
