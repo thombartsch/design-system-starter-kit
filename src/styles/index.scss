@@ -2527,7 +2527,7 @@ a {
 
 .header li a {
     display: block;
-    padding: 1em;
+    padding: 1.5em 0.8em;
     text-decoration: none;
 }
 
@@ -2565,7 +2565,7 @@ a {
 .header .menu-icon {
     cursor: pointer;
     float: left;
-    padding: 2em 1em;
+    padding: 2.4em 1em;
     position: relative;
     user-select: none;
 }
@@ -2610,6 +2610,9 @@ a {
             */
 }
 
+#usermenu{
+    display: inline-flex;
+}
 #usermenu ul {
     display: inline-flex;
 }
@@ -2617,7 +2620,7 @@ a {
 
 /*icons*/
 svg.slds-icon.slds-icon-text-default.slds-icon_small {
-    max-width: 1em;
+    max-width: 1.5em;
 }
 
 
@@ -2727,7 +2730,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 @media (min-width: 48em) {
     .header li a {
         /*padding: 20px 30px;*/
-        padding: 1em;
+        padding: 1.5em 0.8em;
     }
 
     #categories {
@@ -2765,6 +2768,9 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
         padding: 0.5rem;
     }
 
+    
+    
+    
 }
 
 
@@ -2801,7 +2807,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 
 /* banner */
 .dark {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .section-divider {
@@ -2843,14 +2849,25 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 /* AD BANNER */
 
 .ad-banner-static {
-    background: url(/assets/ad.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    min-height: 60vh;
-    min-width: 100vw;
     display: inline-flex;
     align-items: center;
     text-align: center;
+}
+
+.banner-home{
+    min-height: 80vh;
+    min-width: 100vw;
+    background: url(/assets/ad.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner-about_us{
+    min-height: 60vh;
+    min-width: 100vw;
+    background: url(/assets/about-us.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .banner-tagline {

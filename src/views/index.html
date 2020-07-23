@@ -91,17 +91,22 @@
 
     <!-- MAIN PAGE -->
     <main class="app-wrapper">
+        <!-- HERO BANNER -->
         <div class="slds-grid">
-            <div class="slds-col ad-banner-static">
+            <div class="slds-col ad-banner-static banner-home">
                 <div class="banner-tagline">
                     <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
                     <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
                 </div>
             </div>
         </div>
-    
-    
-        <div class="slds-grid slds-m-top_medium slds-align_absolute-center">
+        <!-- //HERO BANNER -->
+        
+        
+        
+        
+        <!-- AD PRODUCTS -->
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
             <div class="slds-align-">
                 <div class="section-divider">
                     <div class="title">
@@ -111,25 +116,118 @@
                 </div>
             </div>
         </div>
-    
-    
-        <div class="slds-grid slds-wrap slds-gutters slds-gutters_medium">
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
-                <div class="producttile">
-                    <div class="producttile-image"><img src="" /></div>
-                    <h4 class="slds-text-heading--medium"><b>Product Name</b></h4>
-                    <p><span>Tart Cherry / 2oz.</span></p>
-                    <p><span class="tile-price">$ 99.99</span></p>
+        
+
+        
+        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+            {% for product in products %}
+                {% if loop.index0 < 6 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+                            <div class="producttile slds-m-bottom_small" style="text-align:center">
+                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
+                                <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
+                                <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                                <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                            </div>
+                        </div>
+                {% endif %}
+            {% endfor %}        
+        </div>
+        <!-- //AD PRODUCTS -->
+
+
+        <!-- POPULAR PRODUCTS -->
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
+            <div class="slds-align-">
+                <div class="section-divider">
+                    <div class="title">
+                        <h2 class="slds-text-heading--large"><b>Most Popular!</b></h2>
+                        <h5 class="slds-text-heading--small">Find your fuel</h5>
+                    </div>
                 </div>
             </div>
         </div>
         
-        cool stuff
-            
+
+        
+        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+            {% for product in products %}
+                {% if loop.index0 < 8 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                            <div class="producttile slds-m-bottom_small" style="text-align:center">
+                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
+                                <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
+                                <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                                <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                            </div>
+                        </div>
+                {% endif %}
+            {% endfor %}        
+        </div>
+        <!-- //POPULAR PRODUCTS -->
+    
+    
+    
+        <!-- HERO BANNER -->
+        <div class="slds-grid">
+            <div class="slds-col ad-banner-static banner-about_us">
+                <div class="banner-tagline">
+                    <h2 class="slds-text-heading--medium font-white slds-p-bottom_medium">OUR JOURNEY</h2>
+                    <h1 class="slds-text-heading--large font-white slds-p-bottom_medium"><b>Know all about the alpine process</b></h1>
+                    <h3 class="slds-text-heading--small font-white slds-p-bottom_medium">LEARN MORE</h3>                    
+                </div>
+            </div>
+        </div>
+        <!-- //HERO BANNER -->
+    
+
+    
+        <!-- BLOG POSTS -->
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
+            <div class="slds-align-">
+                <div class="section-divider">
+                    <div class="title">
+                        <h2 class="slds-text-heading--large"><b>alpine Stories</b></h2>
+                        <h5 class="slds-text-heading--small">Insight views from our members.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+            {% for product in products %}
+                {% if loop.index0 < 4 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                            <div class="producttile slds-m-bottom_small" style="text-align:center">
+                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/blog/{{ product.image }}.jpg" /></div>
+                                <h4 class="slds-text-heading--medium"><b>{{ product.product_description }}</b></h4>
+                                <p class="slds-p-top_medium"><span>{{ product.product_description_long }}</span></p>
+                            </div>
+                        </div>
+                {% endif %}
+            {% endfor %}        
+        </div>
+        <!-- //BLOG POSTS -->
+    
+    
+        
+        
+        
+<!--        
+{"id":1,"product_name":"Glass Clear 8 Oz","package":"XL","weight":"84","old_price":"27","new_price":"44","image":1,"product_description":"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.","product_description_long":"Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."},        
+-->        
+        
+        
     <style>
         .producttile{
-            background: #F5F5F5;
-            min-height: 40rem;
+            /*background: #F5F5F5;*/
+            background: #fff;
+            min-height: 20rem;
+        }
+        .tile-price{
+            font-size: 2em;
         }
     </style>
     
