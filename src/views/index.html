@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="/styles/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <script src="/scripts/lax.js"></script>
 
     <script>
         // Open the full screen search box
@@ -60,9 +61,6 @@
                 </li>
                 <li>
                 <li>
-
-
-
                     <a href="#">
                         <!--span class="w3-badge w3-green">6</span-->
                         <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
@@ -93,7 +91,7 @@
     <main class="app-wrapper">
         <!-- HERO BANNER -->
         <div class="slds-grid">
-            <div class="slds-col ad-banner-static banner-home">
+            <div class="slds-col ad-banner-static banner-home lax" data-lax-preset="zoomIn">
                 <div class="banner-tagline">
                     <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
                     <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
@@ -198,12 +196,19 @@
         
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}
-                {% if loop.index0 < 4 %}
-                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
-                            <div class="blogtile slds-m-bottom_small" style="text-align:center">
-                                <div class="producttile-image slds-p-bottom_medium"><img src="/assets/blog/{{ product.image }}.jpg" /></div>
-                                <h4 class="slds-text-heading--medium"><b>{{ product.product_description }}</b></h4>
-                                <p class="slds-p-top_medium"><span>{{ product.product_description_long }}</span></p>
+                {% if loop.index0 < 6 %}
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                            <div class="blogtile slds-m-bottom_small" style="text-align:center;">
+                                <!--div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/blog/{{ product.image }}.jpg" /></div-->
+                                <div class="blog-image-tile" style="background:url(/assets/products/blog/{{ product.image }}.jpg); background-repeat: no-repeat; min-height: 20rem; background-size: cover;"></div>
+                                
+                                <div class="slds-truncate_container_75 slds-p-around_medium">
+                                    <h4 class="slds-text-heading--medium slds-truncate">{{ product.product_description }}</h4>
+                                </div>
+                                <div class="slds-truncate_container_752 slds-p-left_medium slds-p-right_medium slds-p-bottom_medium">
+                                    <p class="slds-p-top_medium slds-truncate"><span>{{ product.product_description_long }}</span></p>
+                                </div>
+                                
                             </div>
                         </div>
                 {% endif %}
@@ -263,6 +268,29 @@
         
         
     <style>
+        
+        /*PARALLAX*/
+        
+        .parallax::after {
+          /* Display and position the pseudo-element */
+          content: " ";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          /* Move the pseudo-element back away from the camera,
+           * then scale it back up to fill the viewport.
+           * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+          transform: translateZ(-1px) scale(1.5);
+          /* Force the background image to fill the whole element. */
+          background-size: 100%;
+          /* Keep the image from overlapping sibling elements. */ 
+          z-index: -1;
+        }
+
+        /*FOOTER*/
         .social-footer-icons{
             max-height: 1.5em;
             filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
@@ -270,6 +298,12 @@
         footer .small{
             max-width: 50%;
         }
+        
+        /*BLOG TILE*/
+        .blog-image-tile{
+            max-height: 10rem;
+        }
+        
     </style>
     
     
@@ -325,5 +359,16 @@
 
 
 </body>
+
+<script>
+window.onload = function() {
+	lax.setup() // init
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+	window.requestAnimationFrame(updateLax)
+}
+</script>
 
 </html>
