@@ -147,18 +147,33 @@
     </header>
 
 
+    
+    <embed src="/assets/video.mp4"></embed>
+    
+    
 
 
     <!-- MAIN PAGE -->
     <main class="app-wrapper">
         <!-- HERO BANNER -->
         <div class="slds-grid">
+            {#
             <div class="slds-col ad-banner-static banner-home">
                 <div class="banner-tagline" style="align-self: center">
                     <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
                     <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
                 </div>
             </div>
+            #}
+            <!-- The video -->
+            <video autoplay muted loop id="myVideo">
+              <source src="/assets/video.mp4" type="video/mp4">
+            </video>            
+            <div class="banner-tagline" style="align-self: center;z-index: 1000;position: absolute;text-align: center;">
+                <img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" />
+                <h1 class="slds-text-heading--large font-white">Nature at it's best.</h1>
+            </div>
+            
         </div>
         <!-- //HERO BANNER -->
         
