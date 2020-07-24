@@ -2986,3 +2986,52 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 .producttile:hover{
     cursor: pointer;
 }
+
+
+
+
+/*from pages*/
+
+
+.fill-black {
+    filter: brightness(0%)
+}
+
+.pdp-brand {
+    max-width: 12em;
+}
+
+.star-small{
+    max-height: 1.2em;
+}
+
+
+
+
+/*FOOTER*/
+.social-footer-icons {
+    max-height: 1.5em;
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
+}
+
+footer .small {
+    max-width: 50%;
+}
+
+/*BLOG TILE*/
+.blog-image-tile {
+    max-height: 10rem;
+}
+
+/*COOKIE CONSENT*/
+#cookieConsent {
+    z-index: 200;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    background: #fff;
+    padding: 1rem;
+    opacity: 0;
+}
+
