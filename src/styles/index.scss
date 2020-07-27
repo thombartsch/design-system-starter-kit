@@ -2971,9 +2971,12 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 
 .banner-tagline {
     width: 100%;
-    align-self: center;
     background: rgba(0, 0, 0, 0.3);
     padding: 0.5em;
+    
+    align-self: center;
+    position: absolute;
+    text-align: center;    
 }
 
 
