@@ -126,7 +126,7 @@
             </div>
         
         
-            <div class="slds-col slds-grid slds-wrap">
+            <div class="slds-col slds-grid slds-wrap slds-p-around_medium">
                 <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_8-of-12">
                     <!-- CART ITEMS -->
                         <!-- PRODUCTS LOOP -->
@@ -140,7 +140,11 @@
                                         <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_2-of-4 slds-large-size_8-of-12">
                                             <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
                                             <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                                            <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                                            <p>
+                                                <select class="slds-select">
+                                                    <option>1</option>
+                                                </select>
+                                            </p>
                                         </div>
                                         <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
                                             <h4 class="slds-text-heading--medium slds-float_right"><b><span class="tile-price">$ {{ product.new_price }}</span></b></h4>
@@ -190,36 +194,7 @@
 
 
 
-            {#
-            <!-- OTHER CATEGORIES -->
-            <div class="slds-grid slds-wrap slds-p-bottom_large">
-
-                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
-                    <div class="cat-tile-overlay" onclick="goPLP()">
-                        <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                    </div>
-                    <a href="plp.html" class="cat-tile-link">
-                        <div class="banner-tagline">
-                            <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
-                            <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
-                        </div>
-                    </a>
-                </div>
-                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
-                    <div class="cat-tile-overlay" onclick="goPLP()">
-                        <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                    </div>
-                    <a href="plp.html" class="cat-tile-link">
-                        <div class="banner-tagline">
-                            <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
-                            <!--h5 class="slds-text-heading--small font-white">See more</h5-->
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- //OTHER CATEGORIES -->
-            #}
-
+            
 
 
 
