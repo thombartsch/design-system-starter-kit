@@ -43,17 +43,28 @@
             document.getElementById("user-menu-dropdown").style.display = "none";
         }
         
-        
+        /*
         //Load PLP - needs to be removed
         function goPLP(){        
             window.open('plp.html', '_self');
         }
+        
+        //detect click outside my account menu
+        document.getElementById('body').addEventListener('click', function(){
+          alert('clicked outer div...');
+        });
+
+        document.getElementById('user-menu-dropdown').addEventListener('click', function(e){
+          e.stopPropagation()
+          alert('clicked inner div...');
+        });        
+        */
     </script>
 
 
 </head>
 
-<body onload="checkCookies()">
+<body onload="checkCookies()" id="body">
     <!-- ADVERTISEMENT BANNER -->
     <section class="banner dark full-width">
         <div class="slds-col slds-p-around_small slds-align_absolute-center">
@@ -114,19 +125,19 @@
                         </div>
                         <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
                           <li class="slds-dropdown__item" role="presentation">
-                            <a href="cart.html" role="menuitem" tabindex="0">
-                              <span class="slds-truncate" title="Menu Item One">
-                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
-                                </svg>Cart</span>
-                            </a>
-                          </li>
-                          <li class="slds-dropdown__item" role="presentation">
-                            <a href="acount.html" role="menuitem" tabindex="-1">
+                            <a href="account.html" role="menuitem" tabindex="-1">
                               <span class="slds-truncate" title="Menu Item Two">
                                 <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
                                   <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
-                                </svg>My Account</span>
+                                </svg>My Profile</span>
+                            </a>
+                          </li>
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="#signout" role="menuitem" tabindex="0">
+                              <span class="slds-truncate" title="Menu Item One">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#logout"></use>
+                                </svg>Sign Out</span>
                             </a>
                           </li>
                         </ul>
