@@ -140,11 +140,12 @@
                                         <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_2-of-4 slds-large-size_8-of-12">
                                             <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
                                             <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                                            <p>
-                                                <select class="slds-select">
-                                                    <option>1</option>
+                                            <div class="slds-grid slds-size_1-of-12">
+                                                                                                <select class="slds-select">
+                                                    <option>Qty: 1</option>
                                                 </select>
-                                            </p>
+
+                                            </div>
                                         </div>
                                         <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
                                             <h4 class="slds-text-heading--medium slds-float_right"><b><span class="tile-price">$ {{ product.new_price }}</span></b></h4>
@@ -162,7 +163,7 @@
                         <div class="slds-p-around_small"  style="background:#eee;">
                         <h4 class="slds-text-heading--medium slds-m-bottom_small"><b><span class="tile-price">Cart Summary</span></b></h4>
                     
-                        <div class="slds-col slds-grid slds-wrap slds-clearfix slds-gutter">
+                        <div class="slds-col slds-grid slds-wrap slds-clearfix slds-gutter s">
                             <div class="slds-size_9-of-12 slds-m-bottom_small"><b>Sub Total</b></div>
                             <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
 
