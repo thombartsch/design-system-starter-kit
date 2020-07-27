@@ -49,65 +49,8 @@
 </head>
 
 <body>
-    <!-- ADVERTISEMENT BANNER -->
-    <section class="banner dark full-width">
-        <div class="slds-col slds-p-around_small slds-align_absolute-center">
-            <h4 class="slds-text-heading--small font-white">COVID-19 Update</h4>
-        </div>
-    </section>
-    <!-- //ADVERTISEMENT BANNER -->
 
-    <header class="header">
-        <div id="logo">
-            <a href="index.html" class="logo"><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></a>
-        </div>
-        <div id="categories">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-            <ul class="menu">
-                <li><a href="plp.html">Alpine Nutrition</a></li>
-                <li><a href="plp.html">Alpine Energy</a></li>
-                <li><a href="plp.html">Alpine Blends</a></li>
-                <li><a href="plp.html">Alpine Machinery</a></li>
-            </ul>
-        </div>
-        <div id="usermenu">
-            <ul class="shortcuts">
-                <li>
-                    <a onclick="openSearch();">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                            </svg>
-                            <span class="slds-assistive-text">Search in our site</span>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                <li>
-                    <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" /></span>
-                    <a href="account.html">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
-                            </svg>
-                            <span class="slds-assistive-text">All information related to your account</span>
-                        </span>
-                    </a>
-                </li>
-                <li><a href="cart.html">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
-                            </svg>
-                            <span class="slds-assistive-text">Your cart</span>
-                        </span>
-                    </a></li>
-            </ul>
-
-        </div>
-    </header>
-
+    {% include "_header.html" %}
 
 
 
@@ -287,51 +230,12 @@
         <!-- //OTHER CATEGORIES -->
 
 
+    {% include "_footer.html" %}
 
 
 
 
 
-        <!-- FOOTER -->
-
-        <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
-                <p class="slds-p-bottom_small">Privacy Notice</p>
-                <p class="slds-p-bottom_small">Cookie Preferences</p>
-                <p class="slds-p-bottom_large">Terms & Conditions</p>
-            </div>
-            <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
-                <p class="slds-p-bottom_small">Categories</p>
-                <p class="slds-p-bottom_small">About Us</p>
-                <p class="slds-p-bottom_small">Blog</p>
-
-            </div>
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
-
-
-            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
-                <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
-                <p class="slds-p-bottom_small">sign up for our newsletter</p>
-                <form class="slds-p-bottom_small">
-                    <div class="slds-form-element">
-                        <div class="slds-form-element__control">
-                            <input type="text" id="text-input-id-1" placeholder="Enter your email address" required="" class="slds-input" />
-                        </div>
-                    </div>
-                </form>
-                <div class="slds-grid">
-                    <ul class="slds-list_horizontal slds-has-inline-block-links_space">
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/facebook.svg" class="social-footer-icons" /></li>
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/instagram.svg" class="social-footer-icons" /></li>
-                        <li class="slds-item slds-m-right_small"><img src="/assets/social-media/pinterest.svg" class="social-footer-icons" /></li>
-                        <li class="slds-item"><img src="/assets/social-media/twitter.svg" class="social-footer-icons" /></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!-- //FOOTER -->
     </main>
     <!-- //MAIN PAGE -->
 
@@ -344,58 +248,7 @@
 
 
 
-    <!-- COOKIE CONSENT -->
-    <div id="cookieConsent">
-        <div class="cookie-content">
-            <h1 class="slds-text-heading--medium slds-p-bottom_medium"><b>About Cookies On This Site</b></h1>
-            <p class="1slds-text-heading--small slds-p-bottom_medium">We use cookies and other technologies to collect data about your browser, device, and location.
-                We share this data with advertising, social media and analytics partners to help us understand how the site is used and to personalize our content and the advertising you see on this and other sites.
-                For more information see our <a>Privacy Policy</a></p>
-            <div class="slds-grid slds-gutters slds-gutters_x-medium">
-                <div><button class="slds-button slds-button_brand slds-m-right_small" onclick="closeCookies()">OK</button></div>
-                <div><button class="slds-button">Cookie Settings</button></div>
-            </div>
 
-        </div>
-    </div>
-    <!-- //COOKIE CONSENT -->
-
-
-
-
-    <!-- SEARCH MODAL -->
-    <div id="searchOverlay" class="overlay">
-        <a href="#" class="closebtn" onclick="closeSearch()" title="Close Overlay">
-            <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                <svg class="slds-icon slds-icon-text-weak slds-icon_medium" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                </svg>
-                <span class="slds-assistive-text">All information related to your account</span>
-            </span>
-        </a>
-        <div class="overlay-content">
-            <form>
-                <div class="slds-form-element">
-                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right slds-text-heading--medium">
-                        <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                        </svg>
-                        <input type="text" id="text-input-id-1" placeholder="What are you looking for?" class="slds-input" />
-                    </div>
-                </div>
-                <div class="slds-text-align_left slds-p-top_medium slds-p-bottom_medium">
-                    <h3 class="slds-text-heading--medium font-grey slds-p-bottom_medium">Popular Searches</h3>
-                    <ul>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Energy Drinks</a></li>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Energy</a></li>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Bars</a></li>
-                    </ul>
-                </div>
-            </form>
-
-        </div>
-    </div>
-    <!-- //SEARCH MODAL -->
 
 
 </body>

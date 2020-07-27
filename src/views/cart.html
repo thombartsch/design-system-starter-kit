@@ -49,198 +49,178 @@
 </head>
 
 <body>
-    <!-- ADVERTISEMENT BANNER -->
-    <section class="banner dark full-width">
-        <div class="slds-col slds-p-around_small slds-align_absolute-center">
-            <h4 class="slds-text-heading--small font-white">COVID-19 Update</h4>
-        </div>
-    </section>
-    <!-- //ADVERTISEMENT BANNER -->
 
-    <header class="header">
-        <div id="logo">
-            <a href="index.html" class="logo"><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></a>
-        </div>
-        <div id="categories">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-            <ul class="menu">
-                <li><a href="plp.html">Alpine Nutrition</a></li>
-                <li><a href="plp.html">Alpine Energy</a></li>
-                <li><a href="plp.html">Alpine Blends</a></li>
-                <li><a href="plp.html">Alpine Machinery</a></li>
-            </ul>
-        </div>
-        <div id="usermenu">
-            <ul class="shortcuts">
-                <li>
-                    <a onclick="openSearch();">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                            </svg>
-                            <span class="slds-assistive-text">Search in our site</span>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                <li>
-                    <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" /></span>
-                    <a href="account.html">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
-                            </svg>
-                            <span class="slds-assistive-text">All information related to your account</span>
-                        </span>
-                    </a>
-                </li>
-                <li><a href="cart.html">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
-                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
-                            </svg>
-                            <span class="slds-assistive-text">Your cart</span>
-                        </span>
-                    </a></li>
-            </ul>
-
-        </div>
-    </header>
-
-
+    {% include "_header.html" %}
 
 
     <!-- MAIN PAGE -->
     <main class="app-wrapper">
 
-            <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
-                <div class="slds-align-">
-                    <div class="section-divider">
-                        <div class="title">
-                            <h2 class="slds-text-heading--large"><b>Your Cart</b></h2>
-                            <h5 class="slds-text-heading--small">4 products</h5>
-                        </div>
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
+            <div class="slds-align-">
+                <div class="section-divider">
+                    <div class="title">
+                        <h2 class="slds-text-heading--large"><b>Your Cart</b></h2>
+                        <h5 class="slds-text-heading--small">4 products</h5>
                     </div>
                 </div>
             </div>
-        
-        
-            <div class="slds-col slds-grid slds-wrap slds-p-around_medium">
-                <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_8-of-12">
-                    <!-- CART ITEMS -->
-                        <!-- PRODUCTS LOOP -->
-                        <div class="slds-col slds-grid slds-wrap">
-                            {% for product in products %}
-                                {% if loop.index0 < 4 %}
-                                    <div class="slds-col slds-grid">
-                                        <div class="slds-p-around_small slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
-                                            <div class="producttile-image slds-p-bottom_medium"><a href="pdp.html"><img src="/assets/products/energy/{{ product.image }}.jpg" /></a></div>
-                                        </div>
-                                        <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_2-of-4 slds-large-size_8-of-12">
-                                            <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
-                                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                                            <div class="slds-grid slds-size_1-of-12">
-                                                                                                <select class="slds-select">
-                                                    <option>Qty: 1</option>
-                                                </select>
+        </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
-                                            <h4 class="slds-text-heading--medium slds-float_right"><b><span class="tile-price">$ {{ product.new_price }}</span></b></h4>
+
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_error" role="status">
+            <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-utility-error" title="error">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                    </svg>
+                    <span class="slds-assistive-text">error</span>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <p>It looks as if duplicates exist for this lead.
+                    <a href="javascript:void(0);">View Duplicates.</a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_success" role="status">
+            <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-utility-success" title="success">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#success"></use>
+                    </svg>
+                    <span class="slds-assistive-text">success</span>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <p>Success! Your entry has been duplicated.
+                    <a href="javascript:void(0);">View Duplicates.</a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="slds-scoped-notification slds-media slds-media_center slds-theme_warning" role="status">
+            <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-utility-warning" title="warning">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#warning"></use>
+                    </svg>
+                    <span class="slds-assistive-text">warning</span>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <p>It looks as if duplicates exist for this lead.
+                    <a href="javascript:void(0);">View Duplicates.</a>
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_dark" role="status">
+            <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-utility-info" title="information">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                    </svg>
+                    <span class="slds-assistive-text">information</span>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <p>It looks as if duplicates exist for this lead.
+                    <a href="javascript:void(0);">View Duplicates.</a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="slds-col slds-grid slds-wrap slds-p-around_medium">
+            <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_8-of-12">
+                <!-- CART ITEMS -->
+                <!-- PRODUCTS LOOP -->
+                <div class="slds-col slds-grid slds-wrap">
+                    {% for product in products %}
+                    {% if loop.index0 < 4 %}
+                    <div class="slds-col slds-grid">
+                        <div class="slds-p-around_small slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
+                            <div class="producttile-image slds-p-bottom_medium"><a href="pdp.html"><img src="/assets/products/energy/{{ product.image }}.jpg" /></a></div>
+                        </div>
+                        <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_2-of-4 slds-large-size_8-of-12">
+                            <h4 class="slds-text-heading--medium"><b>{{ product.product_name }}</b></h4>
+                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                            <div class="slds-grid slds-size_1-of-12">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="select-01">Qty.</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-select_container">
+                                            <select class="slds-select" id="select-01">
+                                                <option value="">Please select</option>
+                                                <option>1</option>
+                                                <option>Option Two</option>
+                                                <option>Option Three</option>
+                                            </select>
                                         </div>
                                     </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                        <!-- //PRODUCTS LOOP -->
-                    <!-- //CART ITEMS -->
-                        
-                </div>
-                <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_4-of-12">
-                    <!-- CART DETAILS -->
-                        <div class="slds-p-around_small"  style="background:#eee;">
-                        <h4 class="slds-text-heading--medium slds-m-bottom_small"><b><span class="tile-price">Cart Summary</span></b></h4>
-                    
-                        <div class="slds-col slds-grid slds-wrap slds-clearfix slds-gutter s">
-                            <div class="slds-size_9-of-12 slds-m-bottom_small"><b>Sub Total</b></div>
-                            <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
+                                </div>
 
-                            <div class="slds-size_9-of-12 slds-m-bottom_small">Est. Shipping</div>
-                            <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 4</span></div>
-                            
-                            <div class="slds-size_9-of-12 slds-m-bottom_small">Est. Tax</div>
-                            <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
-
-                            <div class="slds-size_9-of-12 slds-m-bottom_small">Delivery & Tax based on <a href="">01803</a></div>
-                            <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 4</span></div>
-
-                            <div class="slds-size_9-of-12 slds-m-bottom_small"><b>Estimated Total</b></div>
-                            <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
-                            
-                            <div class="slds-size_1-of-1 slds-col">
-                                <button class="slds-button slds-button_brand">Proceed to Checkout</button>
-                            </div>    
-                        </div>    
-                            
-                        </div>
-                    <!-- //CART DETAILS -->
-                </div>
-            </div>
-        
-
-
-
-
-
-
-            
-
-
-
-
-
-            <!-- FOOTER -->
-
-            <footer class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-wrap slds-gutters slds-gutters_medium slds- slds-p-around_large" style="background: #000; color: #fff">
-                <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                    <h3 class="slds-text-heading--medium slds-p-bottom_medium">Information</h3>
-                    <p class="slds-p-bottom_small">Privacy Notice</p>
-                    <p class="slds-p-bottom_small">Cookie Preferences</p>
-                    <p class="slds-p-bottom_large">Terms & Conditions</p>
-                </div>
-                <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
-                    <h3 class="slds-text-heading--medium slds-p-bottom_medium">Site</h3>
-                    <p class="slds-p-bottom_small">Categories</p>
-                    <p class="slds-p-bottom_small">About Us</p>
-                    <p class="slds-p-bottom_small">Blog</p>
-
-                </div>
-                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center slds-p-around_large"><img src="/assets/logo-group_white.svg" alt="Alpine Group Logo" class="logo small" /></div>
-
-
-                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
-                    <h3 class="slds-text-heading--medium slds-p-bottom_small">Subscribe now!</h3>
-                    <p class="slds-p-bottom_small">sign up for our newsletter</p>
-                    <form class="slds-p-bottom_small">
-                        <div class="slds-form-element">
-                            <div class="slds-form-element__control">
-                                <input type="text" value="" id="text-input-id-1" placeholder="Enter your email address" required="" class="slds-input" />
                             </div>
                         </div>
-                    </form>
-                    <div class="slds-grid">
-                        <ul class="slds-list_horizontal slds-has-inline-block-links_space">
-                            <li class="slds-item slds-m-right_small"><img src="/assets/social-media/facebook.svg" class="social-footer-icons" /></li>
-                            <li class="slds-item slds-m-right_small"><img src="/assets/social-media/instagram.svg" class="social-footer-icons" /></li>
-                            <li class="slds-item slds-m-right_small"><img src="/assets/social-media/pinterest.svg" class="social-footer-icons" /></li>
-                            <li class="slds-item"><img src="/assets/social-media/twitter.svg" class="social-footer-icons" /></li>
-                        </ul>
+                        <div class="slds-p-around_small slds-col slds-size_1-of-3 slds-medium-size_1-of-4 slds-large-size_2-of-12">
+                            <h4 class="slds-text-heading--medium slds-float_right"><b><span class="tile-price">$ {{ product.new_price }}</span></b></h4>
+                        </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-            </footer>
-            <!-- //FOOTER -->
+                <!-- //PRODUCTS LOOP -->
+                <!-- //CART ITEMS -->
+
+            </div>
+            <div class="slds-col slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_4-of-12">
+                <!-- CART DETAILS -->
+                <div class="slds-p-around_small" style="background:#eee;">
+                    <h4 class="slds-text-heading--medium slds-m-bottom_small"><b><span class="tile-price">Cart Summary</span></b></h4>
+
+                    <div class="slds-col slds-grid slds-wrap slds-clearfix slds-gutter s">
+                        <div class="slds-size_9-of-12 slds-m-bottom_small"><b>Sub Total</b></div>
+                        <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
+
+                        <div class="slds-size_9-of-12 slds-m-bottom_small">Est. Shipping</div>
+                        <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 4</span></div>
+
+                        <div class="slds-size_9-of-12 slds-m-bottom_small">Est. Tax</div>
+                        <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
+
+                        <div class="slds-size_9-of-12 slds-m-bottom_small">Delivery & Tax based on <a href="">01803</a></div>
+                        <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 4</span></div>
+
+                        <div class="slds-size_9-of-12 slds-m-bottom_small"><b>Estimated Total</b></div>
+                        <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
+
+                        <div class="slds-size_1-of-1 slds-col">
+                            <button class="slds-button slds-button_brand">Proceed to Checkout</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //CART DETAILS -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        {% include "_footer.html" %}
+
+
 
 
 
@@ -259,60 +239,6 @@
 
 
 
-
-
-    <!-- COOKIE CONSENT -->
-    <div id="cookieConsent">
-        <div class="cookie-content">
-            <h1 class="slds-text-heading--medium slds-p-bottom_medium"><b>About Cookies On This Site</b></h1>
-            <p class="1slds-text-heading--small slds-p-bottom_medium">We use cookies and other technologies to collect data about your browser, device, and location.
-                We share this data with advertising, social media and analytics partners to help us understand how the site is used and to personalize our content and the advertising you see on this and other sites.
-                For more information see our <a>Privacy Policy</a></p>
-            <div class="slds-grid slds-gutters slds-gutters_x-medium">
-                <div><button class="slds-button slds-button_brand slds-m-right_small" onclick="closeCookies()">OK</button></div>
-                <div><button class="slds-button">Cookie Settings</button></div>
-            </div>
-
-        </div>
-    </div>
-    <!-- //COOKIE CONSENT -->
-
-
-
-
-    <!-- SEARCH MODAL -->
-    <div id="searchOverlay" class="overlay">
-        <a href="#" class="closebtn" onclick="closeSearch()" title="Close Overlay">
-            <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
-                <svg class="slds-icon slds-icon-text-weak slds-icon_medium" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                </svg>
-                <span class="slds-assistive-text">All information related to your account</span>
-            </span>
-        </a>
-        <div class="overlay-content">
-            <form>
-                <div class="slds-form-element">
-                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right slds-text-heading--medium">
-                        <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-                        </svg>
-                        <input type="text" id="text-input-id-1" placeholder="What are you looking for?" class="slds-input" />
-                    </div>
-                </div>
-                <div class="slds-text-align_left slds-p-top_medium slds-p-bottom_medium">
-                    <h3 class="slds-text-heading--medium font-grey slds-p-bottom_medium">Popular Searches</h3>
-                    <ul>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Energy Drinks</a></li>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Energy</a></li>
-                        <li class="slds-p-bottom_small"><a href="" class="slds-text-heading--small font-white">Bars</a></li>
-                    </ul>
-                </div>
-            </form>
-
-        </div>
-    </div>
-    <!-- //SEARCH MODAL -->
 
 
 </body>
