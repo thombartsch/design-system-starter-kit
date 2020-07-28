@@ -1,0 +1,69 @@
+<script>
+        var rellax = new Rellax('.rellax');
+        
+        // Open the full screen search box
+        function openSearch() {
+            document.getElementById("searchOverlay").style.display = "block";
+        }
+
+        // Close the full screen search box
+        function closeSearch() {
+            document.getElementById("searchOverlay").style.display = "none";
+        }
+        
+        
+        // Show consent modal
+        function checkCookies() {
+            //document.getElementById("cookieConsent").style.display = "block";
+            document.getElementById("cookieConsent").style.opacity='1';
+        }
+        function closeCookies() {
+            document.getElementById("cookieConsent").style.display = "none";        
+        }
+        
+        
+        // Show user menu
+        function openUsermenu() {
+            document.getElementById("user-menu-dropdown").style.display = "block";
+        }
+
+        // Close user menu
+        function closeUsermenu() {
+            document.getElementById("user-menu-dropdown").style.display = "none";
+        }
+        
+        //Load PLP - needs to be removed
+        function goPLP(){        
+            window.open('plp.html', '_self');
+        }
+
+        //Load PDP - needs to be removed
+        function goPDP(){        
+            window.open('pdp.html', '_self');
+        }
+        
+        //detect click outside my account menu
+        document.getElementById('body').addEventListener('click', function(){
+            //alert('clicked outer div...');
+            document.getElementById("user-menu-dropdown").style.display = "none";    
+        });
+        
+        /*
+        document.getElementById('user-menu-dropdown').addEventListener('click', function(e){
+          e.stopPropagation()
+          alert('clicked inner div...');
+        });        
+        */
+        
+        //VIDEO HANDLING
+        var vid = document.getElementById("myVideo");
+
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+        
+    </script>
