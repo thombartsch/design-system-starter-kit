@@ -15,7 +15,8 @@
 
     {% include "_header.html" %}
     {% include "_script.html" %}
-    
+    {% include "_modal-address.html" %}
+
 
 
 
@@ -107,7 +108,7 @@
                                 </h2>
                             </div>
                             <div class="slds-no-flex">
-                                <button class="slds-button slds-button_neutral">New</button>
+                                <button class="slds-button slds-button_neutral" onclick="openNewAddress()">New</button>
                             </div>
                         </header>
                     </div>
@@ -120,9 +121,9 @@
                                             <h3 class="slds-tile__title slds-truncate slds-text-heading--medium slds-m-bottom_small" title="Related Record Title 1">
                                                 <a href="javascript:void(0);">Home</a>
 
-                                            <span class="slds-badge">Default</span>    
-                                                
-                                                
+                                                <span class="slds-badge">Default</span>
+
+
                                             </h3>
                                             <div class="slds-shrink-none">
                                                 <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options">
@@ -151,13 +152,38 @@
                                             <h3 class="slds-tile__title slds-truncate slds-text-heading--medium slds-m-bottom_small" title="Related Record Title 1">
                                                 <a href="javascript:void(0);">Office</a>
                                             </h3>
-                                            <div class="slds-shrink-none">
+                                            <div class="slds-shrink-none slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
                                                 <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options">
                                                     <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
                                                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                                     </svg>
+                                                    <span class="slds-assistive-text">Show More</span>
                                                 </button>
+                                                <div class="slds-dropdown slds-dropdown_right">
+                                                    <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                                                <span class="slds-truncate" title="Menu Item One">Edit</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                                <span class="slds-truncate" title="Menu Item Three">Set as default address</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="slds-has-divider_top-space" role="separator"></li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                                <span class="slds-truncate" title="Menu Item Four">Delete Address</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
                                             </div>
+
+
+
                                         </div>
                                         <div class="slds-tile__detail">
 
@@ -165,9 +191,6 @@
                                             Leutraggraben 2-4<br>
                                             Jena, 07743<br>
                                             +49-152-5801000000<br>
-
-
-
                                             <!--dl class="slds-list_horizontal slds-wrap">
                                                 <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
                                                 <dd class="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
@@ -180,11 +203,13 @@
                             </li>
                         </ul>
                     </div>
+                    {#
                     <footer class="slds-card__footer">
                         <a class="slds-card__footer-action" href="javascript:void(0);">View All
                             <span class="slds-assistive-text">Contacts</span>
                         </a>
                     </footer>
+                    #}
                 </article>
 
 
