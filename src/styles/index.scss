@@ -3053,7 +3053,18 @@ video {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-}        
+}
+
+#videoControls{
+    display: inline-flex;
+    top: 2em;
+    left: 2em;    
+}
+
+#video_playIcon{
+    display: none;
+}
+
 
 /*MODAL NEW ADDRESS*/
 #newAddress{

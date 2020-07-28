@@ -56,16 +56,17 @@
         */
         
         //VIDEO HANDLING
-        var vid = document.getElementById("myVideo");
-
         function playVid() {
-            vid.play();
+            document.getElementById("myVideo").play();
+            document.getElementById("video_pauseIcon").style.display = "inline-flex";
+            document.getElementById("video_playIcon").style.display = "none";
         }
-
         function pauseVid() {
-            vid.pause();
+            //vid.pause();
+            document.getElementById("myVideo").pause();
+            document.getElementById("video_pauseIcon").style.display = "none";
+            document.getElementById("video_playIcon").style.display = "inline-flex";
         }
-    
 
     
         // Open the new address box
