@@ -24,6 +24,13 @@ $static-font-path: '/assets/fonts/webfonts';
     height: $height-header;
 }
 
+//accessible hover color for links
+a:hover{
+    color: red;
+}
+
+
+
 html.list-view {
     background-color: #afc5de;
 }
@@ -153,7 +160,8 @@ a {
 
 
 .header {
-    background-color: #F8F8F8;
+    /*background-color: #F8F8F8;*/
+    background-color: #F5F5F5;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
@@ -174,11 +182,12 @@ a {
     text-decoration: none;
 }
 
+/*
 .header li a:hover,
 .header .menu-btn:hover {
     background-color: #f4f4f4;
 }
-
+*/
 .header .logo {
     display: block;
     /*float: left;*/
@@ -678,6 +687,11 @@ video {
 
 /*MODAL NEW ADDRESS*/
 #newAddress{
+    display: none;
+}
+
+/*MODAL PROFILE*/
+#myProfile{
     display: none;
 }
 

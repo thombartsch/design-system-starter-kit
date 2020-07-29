@@ -1,0 +1,73 @@
+<div id="myProfile">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="newAddress" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="closeProfile();">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate slds-text-heading--large">Edit Profile</h2>
+                <p class="slds-m-top_x-small">
+                    <!-- info text -->
+                </p>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+
+                <!-- FORM -->
+                <fieldset class="slds-form-element slds-form-element_compound slds-form-element_address">
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-05">First Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" id="form-first-name" required="" class="slds-input" value="Carl" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-05">Last Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" id="form-first-name" required="" class="slds-input" value="Shopper" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-05">Phone</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" id="form-first-name" required="" class="slds-input" value="+49-15258049000" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_6-of-6">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-id-05">Email</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" id="form-first-name" required="" class="slds-input" value="carl.shopper@shopping.com" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- //FORM -->
+
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="closeProfile()">Cancel</button>
+                <button class="slds-button slds-button_brand" onclick="closeProfile();alert('show toast');">Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
