@@ -124,27 +124,47 @@
                                         <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
                                             <h3 class="slds-tile__title slds-truncate slds-text-heading--medium slds-m-bottom_small" title="Related Record Title 1">
                                                 <a href="javascript:void(0);">Home</a>
-
                                                 <span class="slds-badge">Default</span>
-
-
                                             </h3>
-                                            <div class="slds-shrink-none">
-                                                <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options">
+                                            <div class="slds-shrink-none slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed"  id="submenuA">
+                                                <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options" onclick="open_submenuA();">
                                                     <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
                                                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                                     </svg>
-                                                    <span class="slds-assistive-text">More options</span>
+                                                    <span class="slds-assistive-text">Show More</span>
                                                 </button>
+                                                <div class="slds-dropdown slds-dropdown_right">
+                                                    <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                                                                <span class="slds-truncate" title="Menu Item One">Edit</span>
+                                                            </a>
+                                                        </li>
+                                                        <!--li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                                <span class="slds-truncate" title="Menu Item Three">Set as default address</span>
+                                                            </a>
+                                                        </li-->
+                                                        <li class="slds-has-divider_top-space" role="separator"></li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                            <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                                                                <span class="slds-truncate" title="Menu Item Four">Delete Address</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
                                             </div>
+
+
+
                                         </div>
                                         <div class="slds-tile__detail">
 
                                             Carl Shopper<br>
-                                            Preussenstr. 52<br>
-                                            Berlin, 12524<br>
+                                            Preussenstr. 2-4<br>
+                                            Berlin, 12520<br>
                                             +49-152-5801000000<br>
-
                                         </div>
                                     </div>
                                 </article>
@@ -156,8 +176,8 @@
                                             <h3 class="slds-tile__title slds-truncate slds-text-heading--medium slds-m-bottom_small" title="Related Record Title 1">
                                                 <a href="javascript:void(0);">Office</a>
                                             </h3>
-                                            <div class="slds-shrink-none slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
-                                                <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options">
+                                            <div class="slds-shrink-none slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed" id="submenuB">
+                                                <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More options" onclick="open_submenuB();">
                                                     <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
                                                         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                                                     </svg>
