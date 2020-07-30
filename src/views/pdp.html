@@ -125,12 +125,14 @@
                 {% for product in products %}
                 {% if loop.index0 < 4 %}
                 <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-large-size_3-of-12">
-                    <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
-                        <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
-                        <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
-                        <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                        <p><span class="tile-price">$ {{ product.new_price }}</span></p>
-                    </div>
+                    <a href="pdp.html">
+                        <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
+                            <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
+                            <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
+                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                            <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                        </div>
+                    </a>    
                 </div>
                 {% endif %}
                 {% endfor %}
@@ -156,12 +158,14 @@
                 {% for product in products %}
                 {% if loop.index0 < 12 %}
                 <div class="slds-col slds-size_1-of-2  slds-medium-size_1-of-4 slds-large-size_2-of-12">
-                    <div class="producttile slds-m-bottom_small" style="text-align:center">
-                        <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
-                        <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
-                        <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                        <p><span class="tile-price">$ {{ product.new_price }}</span></p>
-                    </div>
+                    <a href="pdp.html">
+                        <div class="producttile slds-m-bottom_small" style="text-align:center">
+                            <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
+                            <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
+                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                            <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                        </div>
+                    </a>    
                 </div>
                 {% endif %}
                 {% endfor %}
