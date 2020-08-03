@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="/styles/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-    <script src="/scripts/rellax.min.js"></script>
+    <script>
+        //console.log(urlParams.getAll('id'));    
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const page_id = urlParams.get('id')
+        console.log(page_id);
+    </script>    
 
 </head>
     
@@ -58,7 +64,9 @@
             </div>
         </div>
         <!-- //HERO BANNER -->
+        
 
+        
         <!-- MAIN CATEGORIES -->
         <div class="slds-grid slds-wrap">
 
@@ -105,6 +113,9 @@
         </div>
 
 
+        
+        
+        
 
         <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
             {% for product in products %}

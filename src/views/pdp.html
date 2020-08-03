@@ -14,41 +14,37 @@
 
     {% include "_header.html" %}
     {% include "_script.html" %}
+    {% include "_url-parameter.html" %}
+
 
     
-<script>
-    //console.log(urlParams.getAll('id'));    
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const page_id = urlParams.get('id')
-    console.log(page_id);
-</script>    
-    
 
+    
+    
     <!-- MAIN PAGE -->
     <main class="app-wrapper">
         <!-- PRODUCT DETAIL -->
 
 
         {% for product in products %}
-            {% if loop.index0 < 1 %}                     
-                <div class="slds-grid slds-wrap">
-                <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
-                    <div class="slds-col slds-grid slds-wrap">
-                        <div class="slds-size_2-of-12 slds-p-around_small white">
-                            <ul>
-                                <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
-                                <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
-                                <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
-                            </ul>
-                        </div>    
-                        <div class="slds-size_10-of-12">
-                            <img src="/assets/products/energy/{{ product.image }}.jpg" />
-                        </div>
+        {% if loop.index0 < 1 %}
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                <div class="slds-col slds-grid slds-wrap">
+                    <div class="slds-size_2-of-12 slds-p-around_small white">
+                        <ul>
+                            <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
+                            <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
+                            <li class="slds-p-around_small"><img src="/assets/products/energy/{{ product.image }}.jpg" /></li>
+                        </ul>
+                    </div>
+                    <div class="slds-size_10-of-12">
+                        <img src="/assets/products/energy/{{ product.image }}.jpg" />
                     </div>
                 </div>
+            </div>
 
-                <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_2-of-3 slds-p-around_x-large">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_2-of-3 slds-p-around_x-large">
                 <img src="/assets/logo-energy.svg" class="fill-black pdp-brand slds-p-bottom_large" />
                 <h2 class="slds-text-heading--large slds-p-bottom_large"><strong>{{ product.product_name }}</strong></h2>
                 <div class="slds-p-bottom_large">
@@ -56,7 +52,7 @@
                     <img src="/assets/star-empty.svg" class="star-small" />
                     <img src="/assets/star-empty.svg" class="star-small" />
                     <img src="/assets/star-empty.svg" class="star-small" />
-                    <img src="/assets/star-empty.svg" class="star-small" />                
+                    <img src="/assets/star-empty.svg" class="star-small" />
                 </div>
                 <p class="slds-text-heading--small slds-p-bottom_medium"><i>pack of 16 Oz.</i></p>
                 <p class="slds-text-heading--small">{{ product.product_description_long }}</p>
@@ -64,7 +60,7 @@
                 <p class="slds-text-heading--large">
                     <span class="slds-text-heading--small slds-m-right_small">
                         <span style="text-decoration: line-through">$ {{ product.new_price }}</span>
-                    </span> 
+                    </span>
                     <strong>$ {{ product.old_price }}</strong>
                 </p>
                 <div class="slds-grid slds-p-top_medium">
@@ -105,118 +101,124 @@
                     </li>
                 </ul>
 
-        </div>        
-        
-        
-
             </div>
-            {% endif %}
+
+
+
+        </div>
+        {% endif %}
         {% endfor %}
 
 
-            <!-- //PRODUCT DETAIL -->
+        <!-- //PRODUCT DETAIL -->
 
-            <!-- AD PRODUCTS -->
-            <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
-                <div class="slds-align-">
-                    <div class="section-divider">
-                        <div class="title">
-                            <h2 class="slds-text-heading--large"><strong>You might also like</strong></h2>
-                            <h5 class="slds-text-heading--small">4 products found</h5>
-                        </div>
+
+
+
+
+
+
+        <!-- AD PRODUCTS -->
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
+            <div class="slds-align-">
+                <div class="section-divider">
+                    <div class="title">
+                        <h2 class="slds-text-heading--large"><strong>You might also like</strong></h2>
+                        <h5 class="slds-text-heading--small">4 products found</h5>
                     </div>
                 </div>
             </div>
+        </div>
 
 
 
-            <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
-                {% for product in products %}
-                {% if loop.index0 < 4 %}
-                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-large-size_3-of-12">
-                    <a href="pdp.html?id={{ product.id }}">
-                        <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
-                            <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
-                            <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
-                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                            <p><span class="tile-price">$ {{ product.new_price }}</span></p>
-                        </div>
-                    </a>    
-                </div>
-                {% endif %}
-                {% endfor %}
+        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+            {% for product in products %}
+            {% if loop.index0 < 4 %}
+            <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4 slds-large-size_3-of-12">
+                <a href="pdp.html?id={{ product.id }}">
+                    <div class="producttile slds-m-bottom_small" style="text-align:center" onclick="goPDP()">
+                        <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/energy/{{ product.image }}.jpg" /></div>
+                        <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
+                        <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                        <p><span class="tile-price">$ {{ product.new_price }}</span></p>
+                    </div>
+                </a>
             </div>
-            <!-- //AD PRODUCTS -->
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- //AD PRODUCTS -->
 
 
-            <!-- PRODUCTS -->
-            <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
-                <div class="slds-align-">
-                    <div class="section-divider">
-                        <div class="title">
-                            <h2 class="slds-text-heading--large"><strong>Other Products in the same category</strong></h2>
-                            <h5 class="slds-text-heading--small">12 products found.</h5>
-                        </div>
+        <!-- PRODUCTS -->
+        <div class="slds-grid slds-m-top_large slds-m-bottom_large slds-align_absolute-center">
+            <div class="slds-align-">
+                <div class="section-divider">
+                    <div class="title">
+                        <h2 class="slds-text-heading--large"><strong>Other Products in the same category</strong></h2>
+                        <h5 class="slds-text-heading--small">12 products found.</h5>
                     </div>
                 </div>
             </div>
+        </div>
 
 
 
-            <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
-                {% for product in products %}
-                {% if loop.index0 < 12 %}
-                <div class="slds-col slds-size_1-of-2  slds-medium-size_1-of-4 slds-large-size_2-of-12">
-                    <a href="pdp.html?id={{ product.id }}">
-                        <div class="producttile slds-m-bottom_small" style="text-align:center">
-                            <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
-                            <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
-                            <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                            <p><span class="tile-price">$ {{ product.new_price }}</span></p>
-                        </div>
-                    </a>    
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <!-- //PRODUCTS -->
-
-
-
-
-
-            <!-- OTHER CATEGORIES -->
-            <div class="slds-grid slds-wrap slds-p-bottom_large">
-
-                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
-                    <div class="cat-tile-overlay" onclick="goPLP()">
-                        <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
+        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+            {% for product in products %}
+            {% if loop.index0 < 12 %}
+            <div class="slds-col slds-size_1-of-2  slds-medium-size_1-of-4 slds-large-size_2-of-12">
+                <a href="pdp.html?id={{ product.id }}">
+                    <div class="producttile slds-m-bottom_small" style="text-align:center">
+                        <div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/drinks/{{ product.image }}.jpg" /></div>
+                        <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
+                        <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                        <p><span class="tile-price">$ {{ product.new_price }}</span></p>
                     </div>
-                    <a href="plp.html" class="cat-tile-link">
-                        <div class="banner-tagline">
-                            <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
-                            <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
-                        </div>
-                    </a>
-                </div>
-                <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
-                    <div class="cat-tile-overlay" onclick="goPLP()">
-                        <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
-                    </div>
-                    <a href="plp.html" class="cat-tile-link">
-                        <div class="banner-tagline">
-                            <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
-                            <!--h5 class="slds-text-heading--small font-white">See more</h5-->
-                        </div>
-                    </a>
-                </div>
+                </a>
             </div>
-            <!-- //OTHER CATEGORIES -->
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- //PRODUCTS -->
 
 
 
 
-    {% include "_footer.html" %}
+
+        <!-- OTHER CATEGORIES -->
+        <div class="slds-grid slds-wrap slds-p-bottom_large">
+
+            <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_blends">
+                <div class="cat-tile-overlay" onclick="goPLP()">
+                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
+                </div>
+                <a href="plp.html" class="cat-tile-link">
+                    <div class="banner-tagline">
+                        <img src="/assets/logo-blends.svg" alt="Alpine Group Logo" />
+                        <!--h1 class="slds-text-heading--large font-white">Nature at it's best.</h1-->
+                    </div>
+                </a>
+            </div>
+            <div class="slds-col  slds-size_1-of-1  slds-medium-size_1-of-2 slds-large-size_6-of-12 ad-banner-static categories-home categories-home_nutrition">
+                <div class="cat-tile-overlay" onclick="goPLP()">
+                    <div class="slds-text-heading--large" style="color: #fff;">Discover</div>
+                </div>
+                <a href="plp.html" class="cat-tile-link">
+                    <div class="banner-tagline">
+                        <img src="/assets/logo-nutrition.svg" alt="Alpine Group Logo" />
+                        <!--h5 class="slds-text-heading--small font-white">See more</h5-->
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- //OTHER CATEGORIES -->
+
+
+
+
+        {% include "_footer.html" %}
 
 
 
@@ -236,8 +238,6 @@
 
 
 
-
-   
 
 </body>
 
