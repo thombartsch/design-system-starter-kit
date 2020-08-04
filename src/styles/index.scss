@@ -25,15 +25,15 @@ $static-font-path: '/assets/fonts/webfonts';
 }
 
 //accessible hover color for links
-a:hover{
+a:hover {
     color: #000;
 }
 
 
-footer>a:hover{
-    color:"#fff";
+footer a.font-white:hover {
+    color: #fff;
+    text-decoration: underline;
 }
-
 
 html.list-view {
     background-color: #afc5de;
@@ -269,21 +269,22 @@ a {
             */
 }
 
-#usermenu{
+#usermenu {
     display: inline-flex;
 }
+
 #usermenu ul {
     display: inline-flex;
 }
 
-#usermenu ul ul{
+#usermenu ul ul {
     display: block;
 }
 
-#user-menu-dropdown{
+#user-menu-dropdown {
     position: absolute;
     top: 60px;
-    left: calc(100% - 250px);    
+    left: calc(100% - 250px);
     display: none;
 }
 
@@ -376,7 +377,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     /* content: '1'; */
     /* text-align: center; */
     display: inline-flex;
-    align-items: center;        
+    align-items: center;
     padding-left: 3px;
 }
 
@@ -430,9 +431,9 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
         right: 53px;
         padding-left: 3px;
     }
-    
-    
-    
+
+
+
 }
 
 
@@ -516,7 +517,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     text-align: center;
 }
 
-.banner-home{
+.banner-home {
     min-height: 80vh;
     min-width: 100vw;
     background: url(/assets/ad.jpg);
@@ -525,23 +526,23 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 }
 
 
-.banner-cats{
+.banner-cats {
     min-height: 40vh;
     min-width: 100vw;
 }
 
 
 
-.categories-home{
+.categories-home {
     min-height: 40vh;
     position: relative
 }
 
-.cat-tile-link{
+.cat-tile-link {
     width: 100%;
 }
 
-.cat-tile-overlay{
+.cat-tile-overlay {
     width: 100%;
     height: 100%;
     background: black;
@@ -556,31 +557,31 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     align-content: baseline;
 }
 
-.cat-tile-overlay div{
+.cat-tile-overlay div {
     margin-top: 8em;
 }
 
-.cat-tile-overlay:hover{
+.cat-tile-overlay:hover {
     opacity: 0.8;
 }
 
 
 
-.categories-home_energy{
+.categories-home_energy {
     background: url(/assets/categories/cat-energy.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-.categories-home_blends{
+.categories-home_blends {
     background: url(/assets/categories/cat-blends.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
-.categories-home_nutrition{
+.categories-home_nutrition {
     background: url(/assets/categories/cat-nutrition.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -588,7 +589,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
 }
 
 
-.banner-about_us{
+.banner-about_us {
     min-height: 60vh;
     min-width: 100vw;
     background: url(/assets/about-us.png);
@@ -600,20 +601,20 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
     padding: 0.5em;
-    
+
     align-self: center;
     position: absolute;
-    text-align: center;    
+    text-align: center;
 }
 
 
-.blogtile{
+.blogtile {
     /*background: #F5F5F5;*/
     background: #fff;
     min-height: 20rem;
 }
 
-.producttile:hover{
+.producttile:hover {
     cursor: pointer;
 }
 
@@ -629,7 +630,7 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     max-width: 12em;
 }
 
-.star-small{
+.star-small {
     max-height: 1.2em;
 }
 
@@ -665,39 +666,77 @@ footer .small {
 
 /*VIDEO*/
 .video-container {
-    height: 40vw;
+    height: 60vh;
     width: 100vw;
     overflow: hidden;
     position: relative;
 }
 
 video {
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
-#videoControls{
+#videoControls {
     display: inline-flex;
     top: 2em;
-    left: 2em;    
+    left: 2em;
 }
 
-#video_playIcon{
+#video_playIcon {
     display: none;
 }
 
 
 /*MODAL NEW ADDRESS*/
-#newAddress{
+#newAddress {
     display: none;
 }
 
 /*MODAL PROFILE*/
-#myProfile{
+#myProfile {
     display: none;
 }
 
+
+
+/*SCROLL*/
+html {
+    scroll-behavior: smooth;
+}
+
+#in_page {
+    position: sticky;
+    top: 0.4rem;
+    background: #fafaf9;
+}
+
+#mobile-nav {
+    display: block;
+}
+
+#desktop-nav {
+    display: none;
+}
+
+
+@media (min-width: 48em) {
+
+    #mobile-nav {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: block;
+    }
+
+    .video-container {
+    height: 60vh;
+    }
+
+
+}

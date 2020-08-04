@@ -2,13 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>.:index:.</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-    <script src="/scripts/rellax.min.js"></script>
-
+    <title>.:acccount:.</title>
+    {% include "_include_sources.html" %}
 </head>
 
 <body id="body">
@@ -37,9 +32,9 @@
         </div>
 
 
-        <div class="slds-grid slds-wrap slds-align_absolute-center slds-p-bottom--medium">
+        <div class="slds-grid slds-wrap //slds-align_absolute-center slds-p-bottom--medium">
 
-            <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_4-of-12">
+            <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_3-of-12">
                 <article class="slds-card">
                     <div class="slds-card__header slds-grid">
                         <header class="slds-media slds-media_center slds-has-flexi-truncate">
@@ -99,7 +94,6 @@
             </div>
 
             <!-- ADDRESSES not mvp -->
-            {#
             <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_9-of-12">
 
 
@@ -266,7 +260,6 @@
                     </footer>
                 </article-->
             </div>
-            #}
             <!-- //ADDRESSES -->
 
 
@@ -280,6 +273,7 @@
 
 
         {% include "_footer.html" %}
+        {% include "_search_modal.html" %}
 
 
 
