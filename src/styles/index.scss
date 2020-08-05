@@ -711,7 +711,7 @@ html {
 
 #in_page {
     position: sticky;
-    top: 0.4rem;
+    top: 0;
     background: #fafaf9;
 }
 
@@ -723,8 +723,25 @@ html {
     display: none;
 }
 
+    #CartSummary{
+        /*
+        position: fixed;
+        */
+    }
+
 
 @media (min-width: 48em) {
+    
+    #CartSummary{
+        /*position: relative;*/
+    }
+    
+
+    #in_page {
+        top: 0.4rem;
+    }
+
+
 
     #mobile-nav {
         display: none;
@@ -735,7 +752,7 @@ html {
     }
 
     .video-container {
-    height: 60vh;
+        height: 60vh;
     }
 
 
