@@ -10,7 +10,6 @@
 
     {% include "_header.html" %}
     {% include "_script.html" %}
-
     <!-- MAIN PAGE -->
     <main class="app-wrapper">
 
@@ -39,7 +38,7 @@
                 <div class="slds-col slds-grid slds-wrap">
                     {% for product in products %}
                     {% if loop.index0 < 4 %}
-                    <div class="slds-col slds-grid">
+                    <div class="slds-col slds-grid slds-border_bottom">
                         <div class="slds-p-around_small slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_2-of-12">
                             <div class="producttile-image slds-p-bottom_medium"><a href="pdp.html"><img src="/assets/products/energy/{{ product.image }}.jpg" /></a></div>
                         </div>
@@ -103,7 +102,7 @@
                         <div class="slds-size_3-of-12 slds-m-bottom_small"><span class="slds-float_right">$ 23</span></div>
 
                         <div class="slds-size_1-of-1 slds-col">
-                            <button class="slds-button slds-button_brand">Proceed to Checkout</button>
+                            <button class="slds-button slds-button_brand slds-button_stretch">Proceed to Checkout</button>
                         </div>
                     </div>
 
@@ -113,7 +112,10 @@
         </div>
 
 
-
+        <div class="slds-p-around_small" id="sticky" style="background: #222; bottom:0;">
+            <!--span   class="slds-badge 2slds-float_left">4 Items | Total $23</span-->
+            <button class="slds-button slds-button--brand slds-button_stretch 2slds-float_right">Proceed to Checkout</button>
+        </div>
 
 
 
@@ -125,26 +127,43 @@
 
 
 
-
-
-
-
-
-
-
     </main>
     <!-- //MAIN PAGE -->
 
 
-
-
-
-
-
-
-
-
 </body>
+
+<script>
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    $('main').on('resize scroll', function(responsive) {
+        if ($('#CartSummary').isInViewport()) {
+                if ($(window).width() <= 700) {  
+                    // is mobile device
+                    $('#sticky').hide();
+                }else{
+                    $('#sticky').hide();
+                }                 
+        } else {
+            // do something else
+            
+                if ($(window).width() <= 700) {  
+                    // is mobile device
+                    $('#sticky').show();
+                }else{
+                    $('#sticky').hide();
+                }                 
+            
+        }
+    });
+</script>
 
 
 </html>

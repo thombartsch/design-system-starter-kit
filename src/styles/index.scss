@@ -432,8 +432,6 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
         padding-left: 3px;
     }
 
-
-
 }
 
 
@@ -756,4 +754,28 @@ html {
     }
 
 
+}
+
+
+/*PRODUCT TILE*/
+.tile-hover{
+    display:block;
+    z-index: 100;
+    position: absolute;
+    background: red;
+}
+/*
+.producttile:hover .tile-hover{
+    display: block;
+    background: red;
+}
+*/
+
+
+/* STICKY BUTTON SECTION */
+#sticky{
+    position: sticky;
+    display: none;
+    bottom: 0;
+    background: #222;
 }
