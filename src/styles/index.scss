@@ -381,58 +381,26 @@ svg.slds-icon.slds-icon-text-default.slds-icon_small {
     padding-left: 3px;
 }
 
-
-
-/* 48em = 768px @ 16pt font */
-@media (min-width: 48em) {
-    .header li a {
-        /*padding: 20px 30px;*/
-        padding: 1.5em 0.8em;
-    }
-
-    #categories {
-        text-align: center;
-        width: 100%;
-        float: none;
-    }
-
-    .header .menu {
-        clear: none;
-        max-height: none;
-        display: inline-flex;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-
-    #logo {
-        order: 1;
-        width: auto;
-        text-align: left;
-    }
-
-    #categories {
-        text-align: center;
-        width: 100%;
-        max-width: 90vw;
-        order: 2;
-        padding: 0.5rem;
-    }
-
-    #usermenu {
-        order: 3;
-        padding: 0.5rem;
-    }
-
-    /*BADGE*/
-    .badge-green {
-        top: 43px;
-        right: 53px;
-        padding-left: 3px;
-    }
-
+.badge-blue {
+    position: absolute;
+    background: #0070d2;
+    width: 12px;
+    height: 12px;
+    top: 20px;
+    right: 5px;
+    border-radius: 100%;
+    /* content: '1'; */
+    /* text-align: center; */
+    display: inline-flex;
+    align-items: center;
+    padding-left: 3px;
+    color: #fff;
+    font-size: 0.2em
 }
+
+
+
+
 
 
 
@@ -721,19 +689,98 @@ html {
     display: none;
 }
 
-    #CartSummary{
-        /*
+#CartSummary {
+    /*
         position: fixed;
         */
+}
+
+
+/*PRODUCT TILE*/
+.tile-hover {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    background: red;
+}
+
+/*
+.producttile:hover .tile-hover{
+    display: block;
+    background: red;
+}
+*/
+
+
+/* STICKY BUTTON SECTION */
+#sticky {
+    position: sticky;
+    display: block;
+    bottom: 0;
+    background: #222;
+}
+
+
+/* 48em = 768px @ 16pt font */
+@media (min-width: 48em) {
+    .header li a {
+        /*padding: 20px 30px;*/
+        padding: 1.5em 0.8em;
+    }
+
+    #categories {
+        text-align: center;
+        width: 100%;
+        float: none;
+    }
+
+    .header .menu {
+        clear: none;
+        max-height: none;
+        display: inline-flex;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    #logo {
+        order: 1;
+        width: auto;
+        text-align: left;
+    }
+
+    #categories {
+        text-align: center;
+        width: 100%;
+        max-width: 90vw;
+        order: 2;
+        padding: 0.5rem;
+    }
+
+    #usermenu {
+        order: 3;
+        padding: 0.5rem;
+    }
+
+    /*BADGE*/
+    .badge-green {
+        top: 43px;
+        right: 53px;
+        padding-left: 3px;
+    }
+
+    .badge-blue {
+        top: 25px;
+        right: 10px;
     }
 
 
-@media (min-width: 48em) {
-    
-    #CartSummary{
+
+    #CartSummary {
         /*position: relative;*/
     }
-    
+
 
     #in_page {
         top: 0.4rem;
@@ -753,29 +800,10 @@ html {
         height: 60vh;
     }
 
-
-}
-
-
-/*PRODUCT TILE*/
-.tile-hover{
-    display:block;
-    z-index: 100;
-    position: absolute;
-    background: red;
-}
-/*
-.producttile:hover .tile-hover{
-    display: block;
-    background: red;
-}
-*/
+    #sticky {
+        display: none;
+    }
 
 
-/* STICKY BUTTON SECTION */
-#sticky{
-    position: sticky;
-    display: none;
-    bottom: 0;
-    background: #222;
+
 }
