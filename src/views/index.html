@@ -182,10 +182,10 @@
 
 
 
-        <div class="slds-grid slds-wrap slds-gutters slds-gutters_x-small">
+        <div class="slds-grid slds-col slds-wrap slds-gutters slds-gutters_x-small">
                 {% for product in products %}
                 {% if loop.index0 < 12 %}
-                    <div class="blogtile slds-m-bottom_small" style="text-align:center;">
+                    <div class="blogtile slds-size_1-of-1 slds-medium-size_1-of-2  slds-large-size_4-of-12">
                         <!--div class="producttile-image slds-p-bottom_medium"><img src="/assets/products/blog/{{ product.image }}.jpg" /></div-->
                         <div class="blog-image-tile" style="background:url(/assets/products/blog/{{ product.image }}.jpg); background-repeat: no-repeat; min-height: 20rem; background-size: cover;"></div>
 
@@ -197,7 +197,7 @@
                         </div>
 
                     </div>
-            </div>
+                
             {% endif %}
             {% endfor %}
         </div>
