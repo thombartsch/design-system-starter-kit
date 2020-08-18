@@ -63,7 +63,7 @@
                     </span>
                     <strong>$ {{ product.old_price }}</strong>
                 </p>
-                <div class="slds-grid slds-p-top_medium">
+                <div class="slds-grid slds-p-top_medium" id="desktop-action">
                     <div><input type="text" value="1" class="slds-input" style="text-align: right; width:5rem; margin-right: 0.5em;"></div>
                     <div class="slds-col">
                         <a href="cart.html">
@@ -218,6 +218,39 @@
         </div>
         <!-- //OTHER CATEGORIES -->
 
+        <!-- link to check out -->
+        <div class="slds-p-around_small" id="sticky">
+            <div class="slds-col slds-grid slds-grid slds-grid_vertical-align-center">
+                <div class="slds-col2 slds-p-right_medium">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                                <select class="slds-select" id="select-01">
+                                    <option value="">1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <a href="cart.html">
+                        <button class="slds-button slds-button_brand slds-button_stretch">
+                            <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+                            </svg>
+                            Add to Cart
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- //link to check out -->
+
+
 
 
 
@@ -235,15 +268,42 @@
     <!-- //MAIN PAGE -->
 
 
-
-
-
-
-
-
-
-
 </body>
+
+
+<script>
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    $('main').on('resize scroll', function(responsive) {
+        if ($('#CartSummary').isInViewport()) {
+            if ($(window).width() <= 700) {
+                // is mobile device
+                $('#sticky').hide();
+                $('#desktop-action').hide();                
+            } else {
+                $('#sticky').hide();
+            }
+        } else {
+            // do something else
+
+            if ($(window).width() <= 700) {
+                // is mobile device
+                $('#sticky').show();
+                $('#desktop-action').hide();                
+            } else {
+                $('#sticky').hide();
+            }
+
+        }
+    });
+</script>
 
 
 </html>
