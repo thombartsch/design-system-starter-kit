@@ -48,11 +48,18 @@
                 <img src="/assets/logo-energy.svg" class="fill-black pdp-brand slds-p-bottom_large" />
                 <h2 class="slds-text-heading--large slds-p-bottom_large"><strong>{{ product.product_name }}</strong></h2>
                 <div class="slds-p-bottom_large">
-                    <img src="/assets/star-half.svg" class="star-small" />
-                    <img src="/assets/star-empty.svg" class="star-small" />
-                    <img src="/assets/star-empty.svg" class="star-small" />
-                    <img src="/assets/star-empty.svg" class="star-small" />
-                    <img src="/assets/star-empty.svg" class="star-small" />
+                    <span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom11"></use>
+                        </svg></span>
+                    <span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom11"></use>
+                        </svg></span>
+                    <span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom11"></use>
+                        </svg></span>
+                    <span class="slds-icon_container null slds-icon__svg--default"><svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom11"></use>
+                        </svg></span>
                 </div>
                 <p class="slds-text-heading--small slds-p-bottom_medium"><i>pack of 16 Oz.</i></p>
                 <p class="slds-text-heading--small">{{ product.product_description_long }}</p>
@@ -63,7 +70,7 @@
                     </span>
                     <strong>$ {{ product.old_price }}</strong>
                 </p>
-                <div class="slds-grid slds-p-top_medium" id="desktop-action">
+                <div class="slds-grid slds-p-top_medium" id="desktop_action">
                     <div><input type="text" value="1" class="slds-input" style="text-align: right; width:5rem; margin-right: 0.5em;"></div>
                     <div class="slds-col">
                         <a href="cart.html">
@@ -282,26 +289,15 @@
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
     $('main').on('resize scroll', function(responsive) {
-        if ($('#CartSummary').isInViewport()) {
-            if ($(window).width() <= 700) {
-                // is mobile device
-                $('#sticky').hide();
-                $('#desktop-action').hide();                
-            } else {
-                $('#sticky').hide();
-            }
+
+        if ($(window).width() <= 700) {
+            // is mobile device
+            $('#sticky').show();
+            $('#desktop_action').hide();
         } else {
-            // do something else
-
-            if ($(window).width() <= 700) {
-                // is mobile device
-                $('#sticky').show();
-                $('#desktop-action').hide();                
-            } else {
-                $('#sticky').hide();
-            }
-
+            $('#sticky').hide();
         }
+
     });
 </script>
 
