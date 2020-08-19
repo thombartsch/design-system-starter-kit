@@ -38,24 +38,96 @@
                 <div class="slds-col slds-grid slds-wrap">
                     {% for product in products %}
                     {% if loop.index0 < 4 %}
-                    <div class="slds-col slds-grid slds-border_bottom">
+                    <div class="slds-col slds-grid  slds-gutters slds-border_bottom">
+
+                        <div class="slds-col slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_4-of-12"><a href="pdp.html"><img src="/assets/products/energy/{{ product.image }}.jpg" /></a></div>
+                        <div class="slds-col slds-size_1-of-2 slds-medium-size_4-of-6 slds-large-size_8-of-12">
+                            <div class="slds-col slds-grid">
+                                <div>
+                                    <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
+                                    <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
+                                </div>
+                                <div>
+                                    <button class="slds-button slds-button_icon  slds-float_right slds-p-right--medium" title="Remove Item">
+                                        <svg class="slds-button__icon" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                        </svg>
+                                        <span class="slds-assistive-text">Remove Item</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-grid">
+
+                                <div class="slds-form-element__control slds-input-has-fixed-addon slds-col">
+                                    <span class="slds-form-element__addon" id="fixed-text-addon-pre">Qty.</span>
+                                    <div class="slds-grid">
+                                        <div class="slds-form-element slds-text-align_center slds-col2">
+                                            <div class="slds-form-element__control">
+                                                <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_decrement" title="Decrement counter">
+                                                    <svg class="slds-button__icon" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#dash"></use>
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Decrement counter</span>
+                                                </button>
+                                                <input type="number" id="example-centered" placeholder="1" class="slds-input slds-input_counter" />
+                                                <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_increment" title="Increment counter">
+                                                    <svg class="slds-button__icon" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Increment counter</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div><h4 class="slds-text-heading--medium slds-float_right slds-col"><strong><span class="tile-price">$ {{ product.new_price }}</span></strong></h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <!--
                         <div class="slds-p-around_small slds-size_1-of-3 slds-medium-size_1-of-6 slds-large-size_2-of-12">
                             <div class="producttile-image slds-p-bottom_medium"><a href="pdp.html"><img src="/assets/products/energy/{{ product.image }}.jpg" /></a></div>
                         </div>
                         <div class="slds-p-around_small slds-col slds-size_1-of-4 slds-medium-size_2-of-6 slds-large-size_6-of-12">
                             <h4 class="slds-text-heading--medium"><strong>{{ product.product_name }}</strong></h4>
                             <p class="slds-p-top_medium"><span>flavor / {{ product.image }} oz</span></p>
-                            <div class="slds-grid slds-size_1-of-12">
-                                <div class="slds-form-element slds-grid">
-                                    <label class="slds-form-element__label" for="select-01">Qty.</label>
-                                    <div class="slds-form-element__control" style="min-width:4em">
-                                        <div class="slds-select_container">
-                                            <select class="slds-select" id="select-qty-{{ product.id }}">
-                                                <option>1</option>
-                                                <option>2</option>
-                                            </select>
+                            <div class="slds-grid slds-size_4-of-12">
+                                <div class="slds-form-element slds-grid slds-col">
+
+                                    <div class="slds-col">
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                                                <span class="slds-form-element__addon" id="fixed-text-addon-pre">Qty.</span>
+                                                <div class="slds-select_container">
+                                                    <div class="slds-form-element slds-text-align_center">
+                                                        <div class="slds-form-element__control">
+                                                            <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_decrement" title="Decrement counter">
+                                                                <svg class="slds-button__icon" aria-hidden="true">
+                                                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#dash"></use>
+                                                                </svg>
+                                                                <span class="slds-assistive-text">Decrement counter</span>
+                                                            </button>
+                                                            <input type="number" id="example-centered" placeholder="1" class="slds-input slds-input_counter" />
+                                                            <button class="slds-button slds-button_icon slds-button_icon-small slds-input__button_increment" title="Increment counter">
+                                                                <svg class="slds-button__icon" aria-hidden="true">
+                                                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                                                                </svg>
+                                                                <span class="slds-assistive-text">Increment counter</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+
                                 </div>
 
                             </div>
@@ -72,6 +144,8 @@
                             </button>
 
                         </div>
+                    
+                    -->
                     </div>
                     {% endif %}
                     {% endfor %}
@@ -116,7 +190,7 @@
             <div class="slds-col slds-grid slds-grid slds-grid_vertical-align-center">
                 <div class="slds-col2 slds-p-right_medium"><span class="slds-badge 2slds-float_left">4 Items | Total $23</span></div>
                 <div class="slds-col">
-                        <button class="slds-button slds-button--brand slds-button_stretch 2slds-float_right">Proceed to Checkout</button>
+                    <button class="slds-button slds-button--brand slds-button_stretch 2slds-float_right">Proceed to Checkout</button>
                 </div>
             </div>
         </div>
