@@ -1,0 +1,91 @@
+    <!-- ADVERTISEMENT BANNER -->
+    <section class="banner dark full-width">
+        <div class="slds-col slds-p-around_small slds-align_absolute-center">
+            <h4 class="slds-text-heading--small font-white"><!--COVID-19 Update: -->Free Shipping On Orders Over $ 100<i class="slds-hide">(Version: MVP 230)</i></h4>
+        </div>
+    </section>
+    <!-- //ADVERTISEMENT BANNER -->
+
+    <header class="header">
+        <div id="logo">
+            <a href="index.html" class="logo"><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></a>
+        </div>
+        <div id="categories">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="plp.html">Alpine Nutrition</a></li>
+                <li><a href="plp.html">Alpine Energy</a></li>
+                <li><a href="plp.html">Alpine Blends</a></li>
+                <li><a href="plp.html">Alpine Machinery</a></li>
+            </ul>
+        </div>
+        <div id="usermenu">
+            <ul class="shortcuts">
+                <li>
+                    <a onclick="openSearch();">
+                        <span class="slds-icon_container slds-icon-utility-announcement" title="Search">
+                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Search in our site</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" alt="User is logged in" /></span>
+                    <a href="javascript:openUsermenu();">
+                        <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                            </svg>
+                            <span class="slds-assistive-text">All information related to your account</span>
+                        </span>
+                    </a>
+
+                    <div class="slds-dropdown slds-dropdown_left slds-dropdown_small" id="user-menu-dropdown">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div><h3 class="slds-text-heading--small slds-p-left_small slds-p-top_small">Welcome Carl!</h3></div>
+                            <div class="slds-hide">
+                                <a href="javascript:closeUsermenu();" role="menuitem" tabindex="0">
+                                  <span class="slds-truncate" title="Menu Item One">
+                                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                    </svg></span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="account.html" role="menuitem" tabindex="-1">
+                              <span class="slds-truncate" title="Menu Item Two">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                </svg>My Profile</span>
+                            </a>
+                          </li>
+                          <li class="slds-dropdown__item" role="presentation">
+                            <a href="index.html" role="menuitem" tabindex="0">
+                              <span class="slds-truncate" title="Menu Item One">
+                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#logout"></use>
+                                </svg>Sign Out</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>                    
+                    
+                </li>
+                <li><a href="cart.html">
+                        <span class="badge-blue">4</span>                    
+                        <span class="slds-icon_container slds-icon-utility-announcement" title="Cart">
+                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Your cart</span>
+                        </span>
+                    </a></li>
+            </ul>
+
+        </div>
+    </header>

@@ -1,36 +1,44 @@
     <!-- ADVERTISEMENT BANNER -->
     <section class="banner dark full-width">
         <div class="slds-col slds-p-around_small slds-align_absolute-center">
-            <h4 class="slds-text-heading--small font-white"><!--COVID-19 Update: -->Free Shipping On Orders Over $ 100<i class="slds-hide">(Version: MVP 230)</i></h4>
+            <h4 class="slds-text-heading--small font-white">
+                <!--COVID-19 Update: -->Free Shipping On Orders Over $ 100<i class="slds-hide">(Version: MVP 230)</i></h4>
         </div>
     </section>
     <!-- //ADVERTISEMENT BANNER -->
 
-    <header class="header">
-        <div id="logo">
-            <a href="index.html" class="logo"><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></a>
+    <header class="header2 slds-grid slds-grid_vertical-align-center">
+        <div class="slds-size_1-of-4    slds-large-size_9-of-12">
+            <div class="slds-col slds-grid slds-grid_vertical-align-center">
+                <div class="slds-size_3-of-4 slds-large-size_4-of-12 slds-order_1 slds-order_2 slds-order_1 slds-large-order_1">
+                    <a href="index.html" class="logo slds-is-static"><img src="/assets/logo-alpine-group.svg" alt="Alpine Group Logo" /></a>
+                </div>
+                <div class="slds-size_1-of-4 slds-large-size_8-of-12 slds-order_1 slds-large-order_2">
+                    <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                    <ul class="menu slds-float--left">
+                        <li>
+                            <a href="plp.html">Alpine Nutrition</a>
+                        </li>
+                        <li><a href="plp.html">Alpine Energy</a></li>
+                        <li><a href="plp.html">Alpine Blends</a></li>
+                        <li><a href="plp.html">Alpine Machinery</a></li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
-        <div id="categories">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-            <ul class="menu">
-                <li><a href="plp.html">Alpine Nutrition</a></li>
-                <li><a href="plp.html">Alpine Energy</a></li>
-                <li><a href="plp.html">Alpine Blends</a></li>
-                <li><a href="plp.html">Alpine Machinery</a></li>
-            </ul>
-        </div>
-        <div id="usermenu">
-            <ul class="shortcuts">
-                <li>
-                    <a onclick="openSearch();">
-                        <span class="slds-icon_container slds-icon-utility-announcement" title="Search">
-                            <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
+        <div class="slds-size_3-of-4    slds-large-size_3-of-12">
+            <ul class="shortcuts slds-list_horizontal slds-float_right">
+                <li class="slds-grid slds-grid_vertical-align-center">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                            <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
                             </svg>
-                            <span class="slds-assistive-text">Search in our site</span>
-                        </span>
-                    </a>
+                            <input type="text" id="text-input-id-1" placeholder="Search our site" class="slds-input" />
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <span class="badge-green"><img src="/assets/checkmark.svg" style="width: 6px; height: auto" alt="User is logged in" /></span>
@@ -45,39 +53,41 @@
 
                     <div class="slds-dropdown slds-dropdown_left slds-dropdown_small" id="user-menu-dropdown">
                         <div class="slds-grid slds-grid_vertical-align-center">
-                            <div><h3 class="slds-text-heading--small slds-p-left_small slds-p-top_small">Welcome Carl!</h3></div>
+                            <div>
+                                <h3 class="slds-text-heading--small slds-p-left_small slds-p-top_small">Welcome Carl!</h3>
+                            </div>
                             <div class="slds-hide">
                                 <a href="javascript:closeUsermenu();" role="menuitem" tabindex="0">
-                                  <span class="slds-truncate" title="Menu Item One">
-                                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                    </svg></span>
+                                    <span class="slds-truncate" title="Menu Item One">
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                        </svg></span>
                                 </a>
                             </div>
                         </div>
                         <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
-                          <li class="slds-dropdown__item" role="presentation">
-                            <a href="account.html" role="menuitem" tabindex="-1">
-                              <span class="slds-truncate" title="Menu Item Two">
-                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
-                                </svg>My Profile</span>
-                            </a>
-                          </li>
-                          <li class="slds-dropdown__item" role="presentation">
-                            <a href="index.html" role="menuitem" tabindex="0">
-                              <span class="slds-truncate" title="Menu Item One">
-                                <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
-                                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#logout"></use>
-                                </svg>Sign Out</span>
-                            </a>
-                          </li>
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="account.html" role="menuitem" tabindex="-1">
+                                    <span class="slds-truncate" title="Menu Item Two">
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+                                        </svg>My Profile</span>
+                                </a>
+                            </li>
+                            <li class="slds-dropdown__item" role="presentation">
+                                <a href="index.html" role="menuitem" tabindex="0">
+                                    <span class="slds-truncate" title="Menu Item One">
+                                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#logout"></use>
+                                        </svg>Sign Out</span>
+                                </a>
+                            </li>
                         </ul>
-                      </div>                    
-                    
+                    </div>
+
                 </li>
                 <li><a href="cart.html">
-                        <span class="badge-blue">4</span>                    
+                        <span class="badge-blue">4</span>
                         <span class="slds-icon_container slds-icon-utility-announcement" title="Cart">
                             <svg class="slds-icon slds-icon-text-default slds-icon_small" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cart"></use>
@@ -86,6 +96,322 @@
                         </span>
                     </a></li>
             </ul>
-
         </div>
     </header>
+
+
+
+
+    <style>
+        .header2 {
+            /*background-color: #F8F8F8;*/
+            /*background-color: #F5F5F5;*/
+            background: #fff;
+            box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+            position: fixed;
+            width: 100%;
+            z-index: 3;
+            display: flex;
+        }
+
+        .header2 ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .header2 li a {
+            display: block;
+            padding: 1.5em 0.8em;
+            text-decoration: none;
+        }
+
+        /*
+.header2 li a:hover,
+.header2 .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+*/
+        .header2 .logo {
+            display: block;
+            font-size: 2em;
+            padding: 0.2em 0.6em;
+            text-decoration: none;
+            min-width: 4.5em;
+        }
+
+        /* menu */
+
+        #logo {
+            width: 100%;
+            text-align: center;
+        }
+
+        #logo img {
+            max-width: 8em;
+        }
+
+        .header2 .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+
+        /* menu icon */
+        .header2 .menu-icon {
+            cursor: pointer;
+            float: left;
+            padding: 2.4em 1em;
+            position: relative;
+            user-select: none;
+        }
+
+        .header2 .menu-icon .nav-icon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .header2 .menu-icon .nav-icon:before,
+        .header2 .menu-icon .nav-icon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .header2 .menu-icon .nav-icon:before {
+            top: 5px;
+        }
+
+        .header2 .menu-icon .nav-icon:after {
+            top: -5px;
+        }
+
+
+        #categories {
+            width: auto;
+            max-width: 2em;
+            order: -1;
+            /*
+            align-items: center;
+            justify-content: space-between;
+            display: flex
+            */
+        }
+
+        #usermenu {
+            display: inline-flex;
+        }
+
+        #usermenu ul {
+            display: inline-flex;
+        }
+
+        #usermenu ul ul {
+            display: block;
+        }
+
+        #user-menu-dropdown {
+            position: absolute;
+            top: 60px;
+            left: calc(100% - 250px);
+            display: none;
+        }
+
+
+        /*icons*/
+        svg.slds-icon.slds-icon-text-default.slds-icon_small {
+            max-width: 1.5em;
+        }
+
+
+        /* menu btn */
+
+        .header2 .menu-btn {
+            display: none;
+        }
+
+        .header2 .menu-btn:checked~.menu {
+            /*max-height: 240px;*/
+            width: 100vw;
+            max-height: 90vh;
+        }
+
+
+        .header2 .logo {
+            position: absolute;
+            top: 0.2em;
+            max-width: 4.5em;
+        }
+
+        .header2 .shortcuts {
+            position: absolute;
+            top: 0.8em;
+            right: 0.2em;
+        }
+
+
+
+
+        .header2 .menu-btn:checked~.menu-icon .nav-icon {
+            background: transparent;
+        }
+
+        .header2 .menu-btn:checked~.menu-icon .nav-icon:before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .header2 .menu-btn:checked~.menu-icon .nav-icon:after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+
+
+
+        .header2 ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+
+        /* menu */
+
+        .header2 .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+
+        /* menu icon */
+
+        .header2 .menu-icon {
+            cursor: pointer;
+        }
+
+        .header2 .menu-icon .navicon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .header2 .menu-icon .navicon:before,
+        .header2 .menu-icon .navicon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .header2 .menu-icon .navicon:before {
+            top: 5px;
+        }
+
+        .header2 .menu-icon .navicon:after {
+            top: -5px;
+        }
+
+        /* menu btn */
+
+        .header2 .menu-btn {
+            display: none;
+        }
+
+        .header2 .menu-btn:checked~.menu {
+            max-height: 240px;
+        }
+
+        .header2 .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+
+        .header2 .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .header2 .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .header2 .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        .header2 .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+        
+        
+        .header2 .shortcuts{
+            top:0;
+        }
+
+        /* 48em = 768px */
+
+        @media (min-width: 48em) {
+            .header2 li {
+                float: left;
+            }
+
+            .header2 li a {
+                /*padding: 20px 30px;*/
+                padding: 1em;
+            }
+
+            .header2 .menu {
+                clear: none;
+                max-height: none;
+            }
+
+            .header2 .menu-icon {
+                display: none;
+            }
+
+            .header2 .logo {
+                display: block;
+                /*float: left;*/
+                font-size: 2em;
+                /*padding: 10px 20px;*/
+                padding: 0.6em;
+                text-decoration: none;
+                max-width: 8em;
+                position: relative;
+
+            }
+
+            .badge-green {
+                top: 25px;
+                right: 53px;
+                padding-left: 3px;
+            }
+
+            .badge-blue {
+                top: 10px;
+                right: 10px;
+            }
+
+            .header2 .logo{
+                top: 0;
+            }
+
+            .header2 .shortcuts{
+                top: 0.8em;
+            }
+
+        }
+    </style>

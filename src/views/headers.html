@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>.:pdp:.</title>
+    {% include "_include_sources.html" %}
+</head>
+
+<body id="body">
+
+    {% include "_header.html" %}
+    
+    <!-- SPACER -->
+    <div style="height: 200px"></div>
+    <!-- //SPACER -->
+    
+    {% include "_header2.html" %}
+    {% include "_script.html" %}
+
+
+    <script>
+        //console.log(urlParams.getAll('id'));    
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const page_id = urlParams.get('id')
+        console.log(page_id);
+    </script>
+
+
+
+
+</body>
+
+
+<script>
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+    $('main').on('resize scroll', function(responsive) {
+
+        if ($(window).width() <= 700) {
+            // is mobile device
+            $('#sticky').show();
+            $('#desktop_action').hide();
+        } else {
+            $('#sticky').hide();
+        }
+
+    });
+</script>
+
+
+</html>
